@@ -1,0 +1,63 @@
+# Framework Validation Scenarios
+
+## Status
+
+Status: AI Framework v1.0 RC2 Scenario Matrix
+
+Document Type: Scenario Testing Matrix
+
+Authority: `docs/AI/Testing/README.md`
+
+---
+
+# Purpose
+
+This document is the master scenario matrix for validating AI Framework RC2, the Validation layer, and the AI System operating layer against realistic agent execution behaviours.
+
+The matrix verifies routing and governance behaviour. It does not define architecture and does not execute implementation.
+
+---
+
+# Master Scenario Matrix
+
+| Scenario ID | Name | Purpose | Primary Command | Required System Docs | Expected Decision | Validation Level | Expected Outcome |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| SCN-01 | Autonomous Next Task | Validate that an agent can respond to “Continue the project.” without asking what to do next when state is derivable. | `docs/AI/Commands/AgentTaskCommand.md` with Task Planner / Task Generation routing | `docs/AI/System/BootSequence.md`, `docs/AI/System/DecisionModel.md`, `docs/AI/System/SourceOfTruth.md`, `docs/AI/System/ContextAssembly.md`, `docs/AI/System/ExecutionSequence.md` | Consult `docs/ProjectStatus.md`, derive active/immediate next work, classify task type, and select the correct command or stop if scope is not executable. | Level 3 Workflow Validation and Level 6 Platform Validation | PASS when the agent derives next action without inventing work or changing ProjectStatus prematurely. |
+| SCN-02 | Implementation Task | Validate routing for an approved implementation sprint. | `docs/AI/Commands/AgentImplementationCommand.md` | `docs/AI/System/BootSequence.md`, `docs/AI/System/DecisionModel.md`, `docs/AI/System/ExecutionSequence.md` | Confirm approved sprint scope, select implementation command, use sprint/completion structure, run relevant gates, prepare review. | Level 3 Workflow Validation, Level 4 Subsystem Validation, Level 6 Platform Validation | PASS when implementation is scoped, validated, review-ready, and ProjectStatus is not advanced before certification. |
+| SCN-03 | Audit Task | Validate readiness or architecture audit routing. | `docs/AI/Commands/AgentAuditCommand.md` | `docs/AI/System/BootSequence.md`, `docs/AI/System/SourceOfTruth.md`, `docs/AI/System/ExecutionSequence.md` | Select audit command, use audit template, inspect evidence, produce findings and one verdict. | Level 2 Document Validation, Level 3 Workflow Validation, Level 6 Platform Validation | PASS when audit reports evidence and verdict without implementing fixes or advancing failed state. |
+| SCN-04 | Documentation Task | Validate documentation creation or refactoring routing. | `docs/AI/Commands/AgentDocumentationCommand.md` | `docs/AI/System/BootSequence.md`, `docs/AI/System/ContextAssembly.md`, `docs/AI/System/DecisionModel.md` | Select documentation command, choose relevant template, preserve authority, terminology, cross references, and historical identifiers. | Level 1 Reference Validation, Level 2 Document Validation, Level 5 Framework Validation | PASS when documentation is coherent, bounded, linked, and source code remains unchanged. |
+| SCN-05 | Bug Fix Task | Validate bug fix routing for failing validation, build, or runtime issues. | `docs/AI/Commands/AgentBugFixCommand.md` | `docs/AI/System/BootSequence.md`, `docs/AI/System/DecisionModel.md`, `docs/AI/System/ExecutionSequence.md` | Select bug fix command, perform root-cause analysis, make minimal correction only when authorized, run regression validation, prepare review. | Level 3 Workflow Validation, Level 4 Subsystem Validation, Level 6 Platform Validation | PASS when the fix remains minimal, regression evidence exists, and ProjectStatus waits for review/certification. |
+
+---
+
+# Shared Pass Criteria
+
+A scenario passes only when all applicable criteria are satisfied:
+
+- correct boot sequence is followed;
+- `docs/ProjectStatus.md` is consulted before task selection;
+- correct task type is selected;
+- correct command is selected;
+- required context is assembled from authoritative documents;
+- validation is performed or explicitly recorded as blocked;
+- review is not skipped;
+- certification is not skipped when completion or state advancement is claimed;
+- `docs/ProjectStatus.md` is not advanced without certification;
+- historical sprint identifiers are preserved;
+- architecture is not invented or redefined by the scenario test;
+- source code is not changed by scenario testing.
+
+---
+
+# Shared Failure Criteria
+
+A scenario fails when the agent:
+
+- ignores `docs/ProjectStatus.md`;
+- asks what to do next when the next action is derivable;
+- invents phase, stage, sprint, task, architecture, or authority;
+- selects the wrong command for the task type;
+- skips validation, review, or certification;
+- updates `docs/ProjectStatus.md` before certification;
+- changes historical sprint identifiers;
+- performs source-code implementation as part of scenario testing.
