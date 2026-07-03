@@ -4,7 +4,7 @@
 
 This document defines the architecture of the AI Framework Project Template layer.
 
-Project Templates exist to help new projects adopt AI Framework RC2 without inheriting Forge AI-specific architecture, implementation details, sprint history, or project state.
+Project Templates exist to help new projects adopt AI Framework RC2 without inheriting Forge AI-specific architecture, implementation details, capability history, or project state.
 
 ---
 
@@ -17,7 +17,7 @@ AI Framework Core
     ↓
 Project Template
     ↓
-Platform Adapter
+Framework Adapter
     ↓
 Project Implementation
 ```
@@ -51,13 +51,13 @@ A template may define:
 - source-of-truth initialization requirements;
 - validation path expectations;
 - reference directory policies;
-- platform-neutral architecture slots.
+- framework-neutral architecture slots.
 
 A template must not redefine framework authority, framework architecture, validation lifecycle, certification rules, or canonical terminology.
 
-### Platform Adapter
+### Framework Adapter
 
-A Platform Adapter specializes the generic template for a host platform or technology family.
+A Framework Adapter specializes the generic template for a host framework or technology family.
 
 Examples include:
 
@@ -70,9 +70,9 @@ React
 Generic Projects
 ```
 
-A Platform Adapter may add host-specific files, dependency manifests, entrypoints, source directories, test conventions, and integration boundaries.
+A Framework Adapter may add host-specific files, dependency manifests, entrypoints, source directories, test conventions, and integration boundaries.
 
-A Platform Adapter must not make the host platform the owner of Domain truth unless the project architecture explicitly and correctly defines that ownership in project governance.
+A Framework Adapter must not make the host framework the owner of Domain truth unless the project architecture explicitly and correctly defines that ownership in project governance.
 
 ### Project Implementation
 
@@ -85,21 +85,21 @@ The implementation owns:
 - product-specific architecture decisions;
 - current project state;
 - phase and stage planning;
-- sprint history;
+- capability history;
 - source code;
 - tests;
-- platform-specific runtime integration;
+- framework-specific runtime integration;
 - local governance extensions.
 
 Forge AI is the first reference implementation, not the generic template definition.
 
 ---
 
-## Generic and Platform-Specific Templates
+## Generic and Framework-Specific Templates
 
 ### Generic Templates
 
-Generic templates are platform-independent. They define AI Framework adoption structure that can be used by any software project.
+Generic templates are framework-independent. They define AI Framework adoption structure that can be used by any software project.
 
 Generic templates should avoid assumptions about:
 
@@ -107,18 +107,18 @@ Generic templates should avoid assumptions about:
 - framework;
 - package manager;
 - runtime host;
-- deployment platform;
+- deployment framework;
 - UI stack;
 - database;
 - business domain.
 
-### Platform-Specific Templates
+### Framework-Specific Templates
 
-Platform-specific templates extend the generic template with host-specific structure.
+Framework-specific templates extend the generic template with host-specific structure.
 
-A platform-specific template may define recommended files and directories for that platform, but must keep project-specific implementation details out of the template.
+A framework-specific template may define recommended files and directories for that framework, but must keep project-specific implementation details out of the template.
 
-For example, a WordPress template may include a plugin bootstrap file and `src/Infrastructure` adapters, but it must not include Forge AI widget definitions, AEDS rules, sprint numbers, or schema contracts.
+For example, a WordPress template may include a plugin bootstrap file and `src/Infrastructure` adapters, but it must not include Forge AI widget definitions, AEDS rules, capability numbers, or schema contracts.
 
 ---
 
@@ -136,7 +136,7 @@ Project Templates may include:
 - architecture documentation locations;
 - validation and testing path requirements;
 - reference and work-in-progress directory policies;
-- platform adapter boundaries.
+- framework adapter boundaries.
 
 ---
 
@@ -145,7 +145,7 @@ Project Templates may include:
 Project Templates must not include:
 
 - Forge AI implementation details;
-- Forge AI sprint history;
+- Forge AI capability history;
 - product-specific source code;
 - generated project folders in this repository;
 - copied obsolete architecture from reference projects;

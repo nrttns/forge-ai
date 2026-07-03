@@ -13,7 +13,7 @@ Extends: `docs/AI/Commands/AgentTaskCommand.md`
 
 This command governs defect resolution.
 
-A bug fix restores the platform to its approved architectural or functional state.
+A bug fix restores the framework to its approved architectural or functional state.
 
 A bug fix is not a redesign opportunity.
 
@@ -105,7 +105,7 @@ The fix must not:
 
 - redesign architecture;
 - introduce new public contracts unless explicitly approved;
-- implement future sprint work;
+- implement future capability work;
 - refactor unrelated systems;
 - hide feature development inside bug resolution.
 

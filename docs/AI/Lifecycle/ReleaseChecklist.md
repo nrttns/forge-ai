@@ -33,7 +33,7 @@ Completion of this checklist supports release readiness. It does not certify a r
 - [ ] Migration guidance added for breaking or potentially disruptive changes.
 - [ ] No source-code changes unless explicitly scoped.
 - [ ] `docs/ProjectStatus.md` unchanged unless project-state update authority exists.
-- [ ] Historical sprint identifiers unchanged.
+- [ ] Historical capability identifiers unchanged.
 - [ ] References valid.
 - [ ] Lifecycle documents aligned with Governance, Validation, Certification, and Project Templates.
 - [ ] CHANGELOG updated.

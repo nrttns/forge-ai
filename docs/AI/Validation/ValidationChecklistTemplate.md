@@ -39,12 +39,12 @@ This template does not define architecture. It verifies conformance to existing 
 | Validation ID |  |
 | Validation Title |  |
 | Validation Level | Level 1 / Level 2 / Level 3 / Level 4 / Level 5 / Level 6 |
-| Target Type | Document / Workflow / Command / Subsystem / Framework / Platform / Other |
+| Target Type | Document / Workflow / Command / Subsystem / Framework / Framework / Other |
 | Target Path or Scope |  |
-| Platform | AI Framework / Forge AI / Other |
+| Framework | AI Framework / Forge AI / Other |
 | Validator |  |
 | Date |  |
-| Related Task / Sprint / Stage / Phase |  |
+| Related Task / Capability / Stage / Phase |  |
 | Authority |  |
 | Status | Draft / In Progress / Complete / Blocked |
 
@@ -91,7 +91,7 @@ Record the documents read before validation.
 | Applicable workflow |  | [ ] |  |
 | Applicable command |  | [ ] |  |
 | Applicable template |  | [ ] |  |
-| Applicable phase / stage / sprint |  | [ ] |  |
+| Applicable phase / stage / capability |  | [ ] |  |
 
 ---
 
@@ -260,7 +260,7 @@ Select the most applicable certification type:
 Document Certification
 Workflow Certification
 Command Certification
-Sprint Certification
+Capability Certification
 Stage Certification
 Phase Certification
 Framework Certification

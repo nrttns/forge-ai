@@ -65,7 +65,7 @@ docs/ProjectStatus.md
 docs/DevelopmentPhases/ForgeAI2-DevelopmentPhases.md
 Current Phase document
 Current Stage document or Phase Stage README
-Related Historical Sprint documentation when available
+Related Historical Capability documentation when available
 ```
 
 ---
@@ -122,13 +122,13 @@ Completion Report Format
 Perform AXIS-V2.SPRINT-<ID> — <Title>
 
 Current Mapping:
-Platform
+Framework
     ↓
 Phase <XX> — <Phase Name>
     ↓
 Stage <XX.X> — <Stage Name>
     ↓
-Historical Sprint <YY.Y>
+Historical Capability <YY.Y>
 
 Task Type:
 <Implementation | Audit | Documentation | Bug Fix | Review | Validation>
@@ -178,7 +178,7 @@ If the generated task is an audit:
 If the generated task is implementation:
 
 - use `docs/AI/Commands/AgentImplementationCommand.md`;
-- use `docs/AI/Templates/SprintTemplate.md` when producing sprint documentation;
+- use `docs/AI/Templates/SprintTemplate.md` when producing capability documentation;
 - remain inside current Stage scope;
 - preserve ownership boundaries.
 
@@ -212,7 +212,7 @@ The workflow must stop if:
 
 - current phase is unknown;
 - current stage is unknown;
-- historical sprint is unknown;
+- historical capability is unknown;
 - ownership is unclear;
 - scope cannot be bounded;
 - required documents are missing;

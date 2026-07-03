@@ -14,7 +14,7 @@
 
 # Purpose
 
-The AI Framework provides a platform-independent operating model for AI-assisted software engineering.
+The AI Framework provides a framework-independent operating model for AI-assisted software engineering.
 
 It defines how humans, AI agents, automation systems, and future swarms plan, execute, validate, review, document, govern, and update project state through authoritative documentation.
 
@@ -30,7 +30,7 @@ This document is the master entry point. Detailed RC2 architecture is split into
 | Framework Specification | `docs/AI/Specification/FrameworkSpecification.md` | Core subsystems: planning, workflow, commands, templates, review, validation, documentation, and state. |
 | Runtime Model | `docs/AI/Specification/RuntimeModel.md` | Agent lifecycle, runtime coordination, context, memory, multi-agent, and swarm operating model. |
 | Governance Model | `docs/AI/Specification/GovernanceModel.md` | Quality gates, governance hierarchy, decision rules, evolution, and certification. |
-| Reference Architecture | `docs/AI/Specification/ReferenceArchitecture.md` | Layered architecture, information flow, platform integrations, roadmap, and Forge AI adapter position. |
+| Reference Architecture | `docs/AI/Specification/ReferenceArchitecture.md` | Layered architecture, information flow, framework integrations, roadmap, and Forge AI adapter position. |
 | Terminology | `docs/AI/Specification/Terminology.md` | Canonical framework vocabulary and shared definitions. |
 
 ---
@@ -95,15 +95,15 @@ The core rule remains unchanged from RC1: documentation and governance define au
 
 ---
 
-# Platform Independence
+# Framework Independence
 
-The AI Framework core language is platform-independent.
+The AI Framework core language is framework-independent.
 
-Platform implementations consume the framework through adapters and project-specific governance documents. They must not redefine framework principles.
+Framework implementations consume the framework through adapters and project-specific governance documents. They must not redefine framework principles.
 
-Forge AI is the first platform implementation and remains governed by `AGENTS.md`, `docs/ProjectStatus.md`, development phase documents, platform governance, and historical sprint records.
+Forge AI is the first framework implementation and remains governed by `AGENTS.md`, `docs/ProjectStatus.md`, development phase documents, framework governance, and historical capability records.
 
-Future platform adapters may include Laravel, Symfony, WordPress, React, Node.js, enterprise platforms, cloud-native environments, mobile ecosystems, embedded systems, and generic software projects.
+Future framework adapters may include Laravel, Symfony, WordPress, React, Node.js, enterprise platforms, cloud-native environments, mobile ecosystems, embedded systems, and generic software projects.
 
 ---
 
@@ -136,7 +136,7 @@ The RC2 structure reserves clear expansion points for future modules without cha
 - Capability Model;
 - Multi-Agent;
 - Swarm;
-- Platform Adapters.
+- Framework Adapters.
 
 New modules should extend the `docs/AI/Specification/` structure or a clearly named sibling specification area without duplicating canonical terminology.
 

@@ -54,7 +54,7 @@ Resolve authority
     ↓
 Read ProjectStatus
     ↓
-Identify current phase, stage, historical sprint, and immediate next work
+Identify current phase, stage, historical capability, and immediate next work
     ↓
 Consult AIOrchestrator and TaskPlanner
     ↓
@@ -88,7 +88,7 @@ Expected behaviour:
 3. Determine whether the prompt authorizes autonomous task generation or only next-action planning.
 4. Use `docs/AI/Workflows/TaskPlanner.md` to classify the task type.
 5. Use `docs/AI/Workflows/TaskGenerationWorkflow.md` only when enough scope exists to generate an executable task.
-6. Stop and report a blocker if the next action cannot be bounded to an approved phase, stage, sprint, or task.
+6. Stop and report a blocker if the next action cannot be bounded to an approved phase, stage, capability, or task.
 
 ---
 
@@ -110,9 +110,9 @@ Expected behaviour:
 
 - The agent does not ask what to do next when ProjectStatus and orchestration provide a derivable next action.
 - The agent cites or records `docs/ProjectStatus.md` as live operational Source of Truth.
-- The agent identifies current phase, stage, historical sprint, and immediate next work.
+- The agent identifies current phase, stage, historical capability, and immediate next work.
 - The agent selects the correct workflow and command for the derived task type.
-- The agent does not invent sprint scope or historical sprint identifiers.
+- The agent does not invent capability scope or historical capability identifiers.
 - The agent does not change `docs/ProjectStatus.md` before validation, review, and certification.
 
 ---
@@ -121,7 +121,7 @@ Expected behaviour:
 
 - Asks the user what next despite derivable state.
 - Ignores `docs/ProjectStatus.md`.
-- Invents a sprint, phase, stage, task, or immediate next work.
+- Invents a capability, phase, stage, task, or immediate next work.
 - Treats conversation or memory as a higher authority than ProjectStatus.
 - Changes `docs/ProjectStatus.md` prematurely.
 - Skips validation, review, or certification when claiming completion.

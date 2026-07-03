@@ -3,8 +3,8 @@
 Status: Live Project Status
 Project: Forge AI
 Document Type: Operational Status Dashboard
-Updated For: Historical Sprint 0
-Planning Model: Framework → Phase → Stage → Sprint → Task
+Updated For: Historical Capability 0
+Planning Model: Framework → Phase → Stage → Capability → Task
 
 ---
 
@@ -34,13 +34,13 @@ If conflicts exist, AGENTS.md wins.
 # Current Position
 
 ```text
-Platform
+Framework
     ↓
 Phase 00 — Foundation
     ↓
 Stage 00.00 — Project Bootstrap
     ↓
-Historical Sprint 0 — Repository Initialization
+Historical Capability 0 — Repository Initialization
 ```
 
 ---
@@ -70,7 +70,7 @@ Initialize the repository and establish the foundational documentation.
 
 ---
 
-# Active Historical Sprint
+# Active Historical Capability
 
 ```text
 SPRINT-0 — Repository Initialization
@@ -81,16 +81,16 @@ SPRINT-0 — Repository Initialization
 # Immediate Next Work
 
 ```text
-Historical Sprint 1 — Framework Generalization
+Historical Capability 1 — Framework Generalization
 ```
 
 ---
 
-# Historical Sprint Mapping
+# Historical Capability Mapping
 
-| Sprint | Status |
+| Capability | Status |
 | --- | --- |
-| Sprint 0 | Active |
+| Capability 0 | Active |
 
 ---
 
@@ -101,8 +101,8 @@ Historical Sprint 1 — Framework Generalization
 * Planning before execution.
 * Validation before completion.
 * Review before certification.
-* Platform-independent design.
-* Historical Sprint identifiers are immutable.
+* Framework-independent design.
+* Historical Capability identifiers are immutable.
 
 ---
 
@@ -119,7 +119,7 @@ npm test
 
 Update this document whenever:
 
-* the active Sprint changes;
+* the active Capability changes;
 * the active Stage changes;
 * the active Phase changes;
 * a milestone is completed.

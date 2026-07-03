@@ -83,7 +83,7 @@ Project Status update records live operational project state.
 Project Status answers:
 
 ```text
-Has certified work changed the live platform position, active phase, active stage, active historical sprint, milestone, or immediate next work?
+Has certified work changed the live framework position, active phase, active stage, active historical capability, milestone, or immediate next work?
 ```
 
 Project Status may advance only when certification has been completed and the governing workflow requires or permits the update.
@@ -123,8 +123,8 @@ Applies to:
 - checklists;
 - validation records;
 - audits;
-- phase, stage, and sprint documents;
-- platform documentation.
+- phase, stage, and capability documents;
+- framework documentation.
 
 Required evidence commonly includes document validation, reference checks, terminology review, and related-document synchronization.
 
@@ -150,23 +150,23 @@ Required evidence commonly includes command validation, scope verification, requ
 
 ---
 
-## Sprint Certification
+## Capability Certification
 
-Recognizes that a historical sprint has completed its required work, validation, review, documentation, and quality gates.
+Recognizes that a historical capability has completed its required work, validation, review, documentation, and quality gates.
 
-Sprint Certification must preserve historical sprint identifiers and may support Project Status advancement when the sprint changes live project state.
+Capability Certification must preserve historical capability identifiers and may support Project Status advancement when the capability changes live project state.
 
-Required evidence commonly includes sprint scope, implementation evidence, documentation updates, test and quality results, validation findings, review verdict, and completion report.
+Required evidence commonly includes capability scope, implementation evidence, documentation updates, test and quality results, validation findings, review verdict, and completion report.
 
 ---
 
 ## Stage Certification
 
-Recognizes that a stage has completed its planned sprint set or stage-level objectives and is ready to close or transition.
+Recognizes that a stage has completed its planned capability set or stage-level objectives and is ready to close or transition.
 
 Stage Certification may support Project Status advancement to a new stage only when governing documents allow the transition.
 
-Required evidence commonly includes certified sprint records, stage objectives, unresolved risks, documentation synchronization, quality gates, and review evidence.
+Required evidence commonly includes certified capability records, stage objectives, unresolved risks, documentation synchronization, quality gates, and review evidence.
 
 ---
 
@@ -176,7 +176,7 @@ Recognizes that a phase has completed its stage objectives and phase-level accep
 
 Phase Certification may support Project Status advancement to a new phase only when governing documents allow the transition.
 
-Required evidence commonly includes certified stage records, phase objectives, platform governance alignment, architecture validation, quality gates, and project-state readiness.
+Required evidence commonly includes certified stage records, phase objectives, framework governance alignment, architecture validation, quality gates, and project-state readiness.
 
 ---
 
@@ -186,7 +186,7 @@ Recognizes that an AI Framework version, release candidate, subsystem, or layer 
 
 Framework Certification may apply to AI Framework RC2 layers such as Specification, Validation, Commands, Workflows, Templates, Review, Governance, or future AI System operating layers.
 
-Required evidence commonly includes framework validation, reference resolution, governance conformance, review findings, and confirmation that platform-specific assumptions do not redefine framework authority.
+Required evidence commonly includes framework validation, reference resolution, governance conformance, review findings, and confirmation that framework-specific assumptions do not redefine framework authority.
 
 ---
 
@@ -210,8 +210,8 @@ Choose exactly one certification outcome.
 - certification outcome is `CERTIFIED` or `CERTIFIED WITH OBSERVATIONS`;
 - certified scope affects live operational project state;
 - governing workflow requires or permits a Project Status update;
-- active phase, stage, sprint, milestone, or immediate next work can be updated with evidence;
-- historical sprint identifiers are preserved;
+- active phase, stage, capability, milestone, or immediate next work can be updated with evidence;
+- historical capability identifiers are preserved;
 - no unresolved blocker would make the update misleading;
 - the update is performed through the approved project-state process.
 
@@ -234,8 +234,8 @@ A certification record should include:
 | Field | Description |
 | --- | --- |
 | Certification ID | Stable identifier for the certification record. |
-| Certification Type | Document, Workflow, Command, Sprint, Stage, Phase, Framework, or other approved type. |
-| Target | Document, workflow, command, subsystem, sprint, stage, phase, framework layer, or platform scope being certified. |
+| Certification Type | Document, Workflow, Command, Capability, Stage, Phase, Framework, or other approved type. |
+| Target | Document, workflow, command, subsystem, capability, stage, phase, framework layer, or framework scope being certified. |
 | Authority | Governing document or authority chain. |
 | Validation Evidence | Validation record, findings, decision, and evidence references. |
 | Review Evidence | Review checklist, verdict, observations, and evidence references. |
@@ -258,7 +258,7 @@ Certification must preserve these invariants:
 - Project Status records live operational state;
 - certification does not create architecture;
 - certification does not bypass governance;
-- certification does not renumber historical sprint identifiers;
+- certification does not renumber historical capability identifiers;
 - certification does not advance Project Status without sufficient evidence.
 
 ---

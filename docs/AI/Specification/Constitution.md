@@ -14,13 +14,13 @@
 
 The Constitution defines the permanent principles of the AI Framework.
 
-It establishes why the framework exists, what it protects, and which invariants every platform implementation, agent, workflow, command, template, validation process, and governance decision must preserve.
+It establishes why the framework exists, what it protects, and which invariants every framework implementation, agent, workflow, command, template, validation process, and governance decision must preserve.
 
 ---
 
 # Vision
 
-The AI Framework exists to become a platform-independent operating model for AI-assisted software engineering.
+The AI Framework exists to become a framework-independent operating model for AI-assisted software engineering.
 
 It provides a shared architectural language that allows humans, AI agents, automation systems, multi-agent groups, and future swarms to collaborate through documented planning, governance, validation, review, state, and knowledge.
 
@@ -110,7 +110,7 @@ When conflicts occur between implementation and documented architecture, documen
 
 AI agents should determine work from documented project state whenever possible.
 
-They derive tasks from current project status, planning hierarchy, phase definitions, stage definitions, and historical sprint specifications.
+They derive tasks from current project status, planning hierarchy, phase definitions, stage definitions, and historical capability specifications.
 
 Self-planning never bypasses governance.
 
@@ -142,7 +142,7 @@ The framework is invalid if any implementation violates these invariants:
 - Commands operationalize approved work; they do not invent work.
 - Templates define output structure; they do not define architecture.
 - Runtime consumes the framework; it does not redefine the framework.
-- Platform adapters extend the framework; they do not fork the framework.
+- Framework adapters extend the framework; they do not fork the framework.
 - Memory never overrides authoritative documentation.
 - Human authority remains supreme where governance requires it.
 
@@ -153,5 +153,5 @@ The framework is invalid if any implementation violates these invariants:
 - `FrameworkSpecification.md` defines core subsystem behaviour.
 - `RuntimeModel.md` defines agent and coordination behaviour.
 - `GovernanceModel.md` defines quality, authority, escalation, certification, and evolution.
-- `ReferenceArchitecture.md` shows the layered architecture and platform adapter model.
+- `ReferenceArchitecture.md` shows the layered architecture and framework adapter model.
 - `Terminology.md` defines shared vocabulary.

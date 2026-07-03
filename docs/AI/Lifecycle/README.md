@@ -114,4 +114,4 @@ Future Operational Validation documents may be added as a dedicated evidence lay
 
 Lifecycle governs framework evolution; it does not authorize implementation.
 
-Implementation authorization remains governed by `AGENTS.md`, `docs/AI/AIFramework.md`, `docs/AI/AIOrchestrator.md`, `docs/ProjectStatus.md`, current phase and stage documents, historical sprint specifications, commands, workflows, validation, review, and human direction.
+Implementation authorization remains governed by `AGENTS.md`, `docs/AI/AIFramework.md`, `docs/AI/AIOrchestrator.md`, `docs/ProjectStatus.md`, current phase and stage documents, historical capability specifications, commands, workflows, validation, review, and human direction.

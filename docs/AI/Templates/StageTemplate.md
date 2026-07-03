@@ -24,7 +24,7 @@ It does not own implementation.
 
 ## 1. Status
 
-Document status, parent Phase, Stage identifier, historical Sprint mapping, and planning hierarchy.
+Document status, parent Phase, Stage identifier, historical Capability mapping, and planning hierarchy.
 
 ## 2. Stage
 
@@ -34,9 +34,9 @@ Stage identifier, official name, parent Phase, and milestone.
 
 Relationship to parent Phase.
 
-## 4. Historical Sprint Mapping
+## 4. Historical Capability Mapping
 
-Sprint identifier(s) and migration notes.
+Capability identifier(s) and migration notes.
 
 ## 5. Current Status
 
@@ -127,7 +127,7 @@ Next architectural Stage.
 # Completion Checklist
 
 - [ ] Parent Phase identified
-- [ ] Historical Sprint mapped
+- [ ] Historical Capability mapped
 - [ ] Purpose defined
 - [ ] Scope documented
 - [ ] Responsibilities documented

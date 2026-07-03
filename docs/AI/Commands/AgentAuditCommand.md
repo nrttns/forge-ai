@@ -79,7 +79,7 @@ docs/AI/Templates/AuditTemplate.md
 docs/ProjectStatus.md
 Current Phase
 Current Stage
-Historical Sprint scope
+Historical Capability scope
 Related RFCs
 Previous audits
 Relevant source files

@@ -15,7 +15,7 @@ Before bootstrapping a project, collect these inputs from the project owner:
 | Input | Purpose |
 | --- | --- |
 | Project name | Human-readable project identity. |
-| Platform | Host platform or technology family, such as Generic, WordPress, Laravel, Node.js, or React. |
+| Framework | Host framework or technology family, such as Generic, WordPress, Laravel, Node.js, or React. |
 | Repository name | Repository slug or package identity. |
 | Primary architecture model | The main architectural pattern, dependency direction, or layering model for the project. |
 | Initial phase | The first planned project phase. |
@@ -51,11 +51,11 @@ Run validation
 
 Choose the smallest template that fits the project:
 
-- use `GenericProjectTemplate.md` for platform-independent or unknown-platform projects;
-- use a platform-specific template only when the host platform is known;
+- use `GenericProjectTemplate.md` for framework-independent or unknown-framework projects;
+- use a framework-specific template only when the host framework is known;
 - use `WordPressProjectTemplate.md` for WordPress-hosted plugin, theme, or application projects.
 
-Do not select a platform-specific template merely because an existing reference implementation uses that platform.
+Do not select a framework-specific template merely because an existing reference implementation uses that framework.
 
 ---
 
@@ -75,7 +75,7 @@ Replace template placeholders with project-specific identity:
 
 - project name;
 - repository name;
-- platform;
+- framework;
 - architecture model;
 - ownership model;
 - initial project purpose;
@@ -94,7 +94,7 @@ Initialize:
 - current project status;
 - active phase;
 - active stage;
-- current task or sprint model, if applicable;
+- current task or capability model, if applicable;
 - immediate next work;
 - quality gates;
 - update policy.

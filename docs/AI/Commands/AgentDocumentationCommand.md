@@ -45,7 +45,7 @@ Use this command for:
 
 - Phase specifications;
 - Stage specifications;
-- Sprint specifications;
+- Capability specifications;
 - audit reports;
 - RFCs;
 - governance documents;
@@ -75,7 +75,7 @@ Use the appropriate template:
 ```text
 Phase document      → PhaseTemplate.md
 Stage document      → StageTemplate.md
-Sprint document     → SprintTemplate.md
+Capability document     → SprintTemplate.md
 Audit document      → AuditTemplate.md
 ```
 
@@ -88,7 +88,7 @@ If no template exists, follow AIFramework structure and document the deviation.
 Documentation agents must not:
 
 - invent architecture;
-- change historical sprint identifiers;
+- change historical capability identifiers;
 - contradict AGENTS.md or AIFramework.md;
 - update ProjectStatus without completion evidence;
 - treat reference material as implementation authority.

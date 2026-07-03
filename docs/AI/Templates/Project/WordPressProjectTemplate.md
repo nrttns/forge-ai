@@ -70,7 +70,7 @@ It must not become the owner of Domain rules or project architecture.
 
 ### `src/Core/`
 
-`src/Core/` owns project bootstrap, kernel, service registration, container wiring, and shared platform contracts.
+`src/Core/` owns project bootstrap, kernel, service registration, container wiring, and shared framework contracts.
 
 Core should not own product business rules.
 
@@ -112,7 +112,7 @@ Presentation consumes approved contracts and must not define Domain truth.
 
 ## WordPress Boundary Rule
 
-WordPress is the adapter and platform host. WordPress is not automatically Domain truth.
+WordPress is the adapter and framework host. WordPress is not automatically Domain truth.
 
 WordPress APIs, hooks, post types, options, metadata, REST routes, database tables, and admin screens may be implementation mechanisms. They must not silently become the canonical owner of business rules unless the project governance explicitly defines that ownership and preserves clean dependency direction.
 
@@ -126,7 +126,7 @@ It must not include:
 
 - Forge AI schema rules;
 - Axis Enterprise Design System rules;
-- Axis sprint identifiers;
+- Axis capability identifiers;
 - Axis widget, runtime, builder, token, template, or theme contracts;
 - Axis source namespaces;
 - Axis implementation code;

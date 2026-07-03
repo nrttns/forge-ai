@@ -62,7 +62,7 @@ Before modifying files, verify:
 
 - current Phase;
 - current Stage;
-- Historical Sprint;
+- Historical Capability;
 - implementation objective;
 - subsystem ownership;
 - dependency direction;
@@ -88,7 +88,7 @@ Implementation must not:
 
 - redesign architecture;
 - introduce undocumented dependencies;
-- implement future sprint scope;
+- implement future capability scope;
 - bypass Application/Domain/API boundaries;
 - make Infrastructure, Runtime, Presentation, WordPress, or Builder a source of truth.
 
@@ -112,7 +112,7 @@ Completion report
 
 Run the relevant quality gates.
 
-Default platform gates:
+Default framework gates:
 
 ```bash
 composer dump-autoload

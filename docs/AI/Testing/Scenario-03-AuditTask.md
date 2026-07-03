@@ -11,7 +11,7 @@ Scenario tests validate agent behaviour, not source code.
 # Input Prompt
 
 ```text
-Perform a readiness and architecture audit for the current active sprint and determine whether it is ready for certification.
+Perform a readiness and architecture audit for the current active capability and determine whether it is ready for certification.
 ```
 
 ---
@@ -54,7 +54,7 @@ docs/AI/Validation/ValidationLevels.md
 docs/AI/Validation/ValidationCertification.md
 docs/AI/Checklists/AgentReviewChecklist.md
 docs/ProjectStatus.md
-Current phase, stage, historical sprint scope, related RFCs, previous audits, and validation results when available
+Current phase, stage, historical capability scope, related RFCs, previous audits, and validation results when available
 ```
 
 ---

@@ -77,7 +77,7 @@ Before an AI Framework version may advance beyond Draft, the following must be s
 - changelog is updated;
 - source-code changes are absent unless explicitly scoped;
 - `docs/ProjectStatus.md` is not modified unless project-state update authority exists;
-- historical sprint identifiers remain unchanged.
+- historical capability identifiers remain unchanged.
 
 ---
 

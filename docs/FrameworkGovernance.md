@@ -3,7 +3,7 @@
 Status: Governance Reference  
 Project: Forge AI  
 Document Type: Framework Governance  
-Planning Model: Platform → Phase → Stage → Capability → Task
+Planning Model: Framework → Phase → Stage → Capability → Task
 
 ---
 
@@ -30,7 +30,7 @@ AGENTS.md
     ↓
 AI Framework Constitution
     ↓
-Platform Governance
+Framework Governance
     ↓
 Project Status
     ↓
@@ -68,7 +68,7 @@ State before Context
 
 Explicit Ownership
 
-Platform Independence
+Framework Independence
 ```
 
 These principles should never be violated for implementation convenience.
@@ -113,7 +113,7 @@ Each subsystem has exactly one owner.
 | State | State Manager | Planning |
 | Knowledge | Knowledge Base | Runtime |
 | Memory | Memory Manager | Runtime |
-| Platform Integration | Platform Adapter | Target Platforms |
+| Framework Integration | Framework Adapter | Target Platforms |
 
 Ownership duplication is prohibited.
 
@@ -149,9 +149,9 @@ Reverse dependencies are forbidden.
 
 ---
 
-# Platform Independence
+# Framework Independence
 
-Forge AI must remain platform-independent.
+Forge AI must remain framework-independent.
 
 The Framework must never depend on:
 
@@ -163,7 +163,7 @@ The Framework must never depend on:
 - Any specific programming language
 - Any specific runtime
 
-Platform-specific behavior belongs only inside Platform Adapters.
+Framework-specific behavior belongs only inside Framework Adapters.
 
 ---
 
@@ -268,6 +268,6 @@ The following rules are permanent.
 - Certification precedes project state update.
 - State drives future planning.
 - Ownership is explicit.
-- Platform adapters never redefine the Framework.
+- Framework adapters never redefine the Framework.
 
 These invariants are considered constitutional and should remain stable across future versions of Forge AI.

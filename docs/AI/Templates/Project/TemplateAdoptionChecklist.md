@@ -28,8 +28,8 @@ This checklist verifies that a new project has adopted AI Framework RC2 through 
 - `docs/FrameworkGovernance.md` defines stable project governance below `AGENTS.md`.
 - `_wip/` is non-authoritative unless content is promoted into approved documentation.
 - Historical identifiers are not created until the project has a stable planning model.
-- Platform-specific template additions do not override generic AI Framework rules.
-- Platform host APIs are treated as adapters unless project governance explicitly defines otherwise.
+- Framework-specific template additions do not override generic AI Framework rules.
+- Framework host APIs are treated as adapters unless project governance explicitly defines otherwise.
 
 ---
 

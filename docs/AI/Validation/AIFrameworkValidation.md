@@ -32,7 +32,7 @@ This specification applies to:
 * Framework Specification
 * AI Runtime
 * Framework Governance
-* Platform Integrations
+* Framework Integrations
 * Commands
 * Workflows
 * Templates
@@ -127,7 +127,7 @@ Verifies:
 
 * Phase alignment;
 * Stage alignment;
-* Historical Sprint consistency;
+* Historical Capability consistency;
 * Project Status synchronization.
 
 ---

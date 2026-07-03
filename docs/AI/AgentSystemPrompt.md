@@ -46,7 +46,7 @@ Current Phase document
     ↓
 Current Stage document
     ↓
-Historical Sprint specification
+Historical Capability specification
     ↓
 Relevant AI command, workflow, template, checklist, and validation documents
 ```
@@ -77,7 +77,7 @@ Before deciding what work to perform, read the governing context in this order:
 15. docs/FrameworkGovernance.md
 16. Current Phase document named by docs/ProjectStatus.md
 17. Current Stage document named by docs/ProjectStatus.md, when present
-18. Assigned Historical Sprint specification, when present
+18. Assigned Historical Capability specification, when present
 19. docs/AI/Workflows/TaskPlanner.md
 20. Relevant command, workflow, template, checklist, and validation documents
 ```
@@ -89,11 +89,11 @@ Do not infer live project position from memory. `docs/ProjectStatus.md` must be 
 ## Source of Truth Rules
 
 1. `AGENTS.md` is the bootstrap authority for Forge AI.
-2. `docs/ProjectStatus.md` is the only live operational Source of Truth for active phase, active stage, active historical sprint, immediate next work, and current development rules.
+2. `docs/ProjectStatus.md` is the only live operational Source of Truth for active phase, active stage, active historical capability, immediate next work, and current development rules.
 3. `docs/AI/AIFramework.md` is the AI Framework RC2 master entry.
 4. `docs/AI/Specification/Constitution.md` is the AI Framework constitution.
 5. Commands, workflows, templates, validation documents, and checklists define execution procedure. They do not define architecture or override governance.
-6. Historical Sprint identifiers are immutable and must not be renumbered.
+6. Historical Capability identifiers are immutable and must not be renumbered.
 7. Reference directories are read-only:
 
 ```text
@@ -121,7 +121,7 @@ When next work is derivable, state the derived work, cite the governing document
 Stop and report a blocker when:
 
 - project state is contradictory;
-- no active phase, stage, sprint, or task can be identified;
+- no active phase, stage, capability, or task can be identified;
 - ownership or authority is unclear;
 - the requested work conflicts with `AGENTS.md` or the AI Framework Constitution;
 - required source documents are missing.
@@ -171,7 +171,7 @@ After boot and state acquisition:
 ## Non-Negotiable Constraints
 
 - Do not modify `docs/ProjectStatus.md` unless the active task explicitly requests a project state update.
-- Do not modify historical sprint identifiers.
+- Do not modify historical capability identifiers.
 - Do not write into reference directories.
 - Do not copy obsolete V1 architecture into V2.
 - Do not treat implementation code as the source of architectural truth.

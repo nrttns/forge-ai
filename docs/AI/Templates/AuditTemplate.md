@@ -15,7 +15,7 @@ This template defines the standard structure for every audit document.
 
 Audits are architectural validation milestones.
 
-An audit evaluates current platform state.
+An audit evaluates current framework state.
 
 An audit does not define new architecture and does not implement new functionality.
 
@@ -25,7 +25,7 @@ An audit does not define new architecture and does not implement new functionali
 
 ## 1. Audit Identification
 
-Audit identifier, name, type, status, date, reviewer, related Phase, Stage, and Historical Sprint.
+Audit identifier, name, type, status, date, reviewer, related Phase, Stage, and Historical Capability.
 
 ## 2. Audit Purpose
 
@@ -49,7 +49,7 @@ Architecture, ownership, dependencies, contracts, documentation, implementation,
 
 ## 7. Architecture Review
 
-Ownership, dependency direction, layer isolation, consistency, platform rules.
+Ownership, dependency direction, layer isolation, consistency, framework rules.
 
 ## 8. Ownership Review
 

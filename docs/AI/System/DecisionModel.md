@@ -42,7 +42,7 @@ Agents must decide next action from these sources, in order:
 6. docs/AI/Workflows/TaskPlanner.md
 7. Current Phase document
 8. Current Stage document, when present
-9. Active Historical Sprint specification, when present
+9. Active Historical Capability specification, when present
 10. Relevant command, workflow, template, checklist, and validation documents
 ```
 
@@ -57,7 +57,7 @@ Use this sequence:
 ```text
 1. Resolve authority.
 2. Resolve live state from ProjectStatus.
-3. Identify current phase, stage, sprint, and immediate next work.
+3. Identify current phase, stage, capability, and immediate next work.
 4. Determine whether the human request is within allowed scope.
 5. Select task type.
 6. Select workflow and command.
@@ -75,7 +75,7 @@ If any step fails, stop and report the blocker.
 
 | Task Type | Primary Command / Workflow | Required Validation |
 | --- | --- | --- |
-| Implementation | `docs/AI/Commands/AgentImplementationCommand.md` | Implementation, subsystem, or sprint validation as applicable. |
+| Implementation | `docs/AI/Commands/AgentImplementationCommand.md` | Implementation, subsystem, or capability validation as applicable. |
 | Audit | `docs/AI/Commands/AgentAuditCommand.md` | Document, subsystem, or framework validation as applicable. |
 | Documentation | `docs/AI/Commands/AgentDocumentationCommand.md` | Document validation and reference resolution. |
 | Bug Fix | `docs/AI/Commands/AgentBugFixCommand.md` | Bug evidence, regression verification, and relevant quality gates. |

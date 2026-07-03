@@ -67,7 +67,7 @@ Agents must begin in this order unless a higher-authority human instruction narr
 29. Development Constitution
 30. Current Phase document
 31. Current Stage document, when present
-32. Assigned Historical Sprint specification, when present
+32. Assigned Historical Capability specification, when present
 33. Relevant command, workflow, template, checklist, and validation documents
 ```
 
@@ -97,7 +97,7 @@ Stop and report a blocker when:
 - `AGENTS.md` is missing;
 - `docs/ProjectStatus.md` is missing or unreadable;
 - required AI Framework, System, Orchestrator, Workflow, or Validation documents are missing for the active task;
-- the active phase, stage, sprint, or task cannot be resolved when required;
+- the active phase, stage, capability, or task cannot be resolved when required;
 - authority or ownership conflicts cannot be resolved through the authority order;
 - the requested work conflicts with `AGENTS.md` or the AI Framework Constitution;
 - validation, review, or certification is being skipped for work that requires completion recognition;

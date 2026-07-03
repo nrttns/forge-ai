@@ -17,9 +17,9 @@
 
 ## Review Purpose
 
-This review audits whether the AI Framework Project Template layer is safe, reusable, platform-independent, and ready to support future project bootstrapping without redefining AI Framework authority or leaking Forge AI-specific implementation details.
+This review audits whether the AI Framework Project Template layer is safe, reusable, framework-independent, and ready to support future project bootstrapping without redefining AI Framework authority or leaking Forge AI-specific implementation details.
 
-The review determines whether the template layer can be used as a safe adoption mechanism for future projects while preserving AI Framework RC2 authority, validation expectations, project-state discipline, and platform adapter boundaries.
+The review determines whether the template layer can be used as a safe adoption mechanism for future projects while preserving AI Framework RC2 authority, validation expectations, project-state discipline, and framework adapter boundaries.
 
 ---
 
@@ -28,7 +28,7 @@ The review determines whether the template layer can be used as a safe adoption 
 In scope:
 
 - Template authority and relationship to AI Framework RC2.
-- Generic Project Template safety and platform independence.
+- Generic Project Template safety and framework independence.
 - WordPress Project Template extension boundaries.
 - Template Bootstrap Workflow completeness.
 - Template Adoption Checklist coverage.
@@ -41,7 +41,7 @@ Out of scope:
 - Generated project folder creation.
 - Splitting the AI Framework into a separate repository.
 - ProjectStatus advancement.
-- Historical sprint identifier changes.
+- Historical capability identifier changes.
 
 ---
 
@@ -89,7 +89,7 @@ PASS.
 
 The Project Template layer correctly presents templates as adoption artifacts that consume the AI Framework rather than defining it. The template index states that project templates bootstrap projects and must not define framework authority, replace the AI System operating layer, lower validation requirements, bypass scenario testing, or certify a project automatically.
 
-The architecture document reinforces the boundary by placing Project Templates below AI Framework Core and above Platform Adapter and Project Implementation. It also states that templates must not redefine framework authority, framework architecture, validation lifecycle, certification rules, or canonical terminology.
+The architecture document reinforces the boundary by placing Project Templates below AI Framework Core and above Framework Adapter and Project Implementation. It also states that templates must not redefine framework authority, framework architecture, validation lifecycle, certification rules, or canonical terminology.
 
 ### Evidence
 
@@ -110,7 +110,7 @@ The template layer is ready as an adoption layer, provided future adopters conti
 
 PASS.
 
-The Generic Project Template is platform-independent and avoids language, framework, runtime, package manager, deployment, UI, database, and business-domain assumptions.
+The Generic Project Template is framework-independent and avoids language, framework, runtime, package manager, deployment, UI, database, and business-domain assumptions.
 
 It includes the required adoption files and directories: `AGENTS.md`, `.cursorrules`, `README.md`, `docs/ProjectStatus.md`, `docs/FrameworkGovernance.md`, `docs/AI/`, `docs/DevelopmentPhases/`, `docs/Architecture/`, `src/`, `tests/`, `_reference/`, and `_wip/`.
 
@@ -138,16 +138,16 @@ PASS.
 
 The WordPress Project Template correctly extends the Generic Project Template and adds WordPress-oriented project structure without making WordPress Domain truth.
 
-It treats WordPress as an adapter and platform host. It keeps the bootstrap file thin, assigns WordPress integrations to Infrastructure, and requires Domain to remain independent of WordPress APIs, REST transport, persistence implementation, rendering, and presentation concerns.
+It treats WordPress as an adapter and framework host. It keeps the bootstrap file thin, assigns WordPress integrations to Infrastructure, and requires Domain to remain independent of WordPress APIs, REST transport, persistence implementation, rendering, and presentation concerns.
 
-The template explicitly states that it is not an Forge AI template and excludes Axis schema rules, AEDS rules, sprint identifiers, widget/runtime/builder/token/template/theme contracts, Axis namespaces, Axis implementation code, and Axis-specific ProjectStatus entries.
+The template explicitly states that it is not an Forge AI template and excludes Axis schema rules, AEDS rules, capability identifiers, widget/runtime/builder/token/template/theme contracts, Axis namespaces, Axis implementation code, and Axis-specific ProjectStatus entries.
 
 ### Evidence
 
 - WordPress template begins from the Generic Project Template structure.
 - WordPress-specific additions are limited to host structure and adapter boundaries.
 - Domain independence from WordPress is documented.
-- Forge AI-specific contracts, implementation details, namespaces, statuses, and sprint history are excluded.
+- Forge AI-specific contracts, implementation details, namespaces, statuses, and capability history are excluded.
 
 ### Observation
 
@@ -167,7 +167,7 @@ It includes ProjectStatus initialization, AGENTS initialization, AI Framework re
 
 ### Evidence
 
-- Required human inputs include project name, platform, repository name, primary architecture model, initial phase, and initial status.
+- Required human inputs include project name, framework, repository name, primary architecture model, initial phase, and initial status.
 - Lifecycle includes template selection, copying, identity setup, ProjectStatus initialization, AGENTS initialization, AI Framework references, first phase/stage, and validation.
 - Validation checks include referenced paths, `AGENTS.md`, `.cursorrules` when required, `docs/ProjectStatus.md`, AI Framework discoverability, planning documents or deferral, validation path, reference directory policy, and no hidden project-specific architecture in AI Framework core documents.
 
@@ -185,7 +185,7 @@ PASS.
 
 The Template Adoption Checklist covers the required adoption concerns: `AGENTS.md`, `.cursorrules`, ProjectStatus, AI docs, DevelopmentPhases, validation, references, and hidden architecture prevention.
 
-It also recommends README links, PlatformGovernance, `_wip/` non-authority, delayed historical identifiers until planning stabilizes, platform-specific non-override behaviour, and host APIs as adapters unless governance explicitly says otherwise.
+It also recommends README links, FrameworkGovernance, `_wip/` non-authority, delayed historical identifiers until planning stabilizes, framework-specific non-override behaviour, and host APIs as adapters unless governance explicitly says otherwise.
 
 ### Evidence
 
@@ -194,7 +194,7 @@ It also recommends README links, PlatformGovernance, `_wip/` non-authority, dela
 
 ### Observation
 
-The checklist is compact but adequate. Future platform templates may add platform-specific checklist extensions, but those should supplement this checklist rather than replace or weaken it.
+The checklist is compact but adequate. Future framework templates may add framework-specific checklist extensions, but those should supplement this checklist rather than replace or weaken it.
 
 ---
 
@@ -204,7 +204,7 @@ The checklist is compact but adequate. Future platform templates may add platfor
 
 PASS.
 
-This audit did not modify PHP, TS, TSX, JS, JSX, SCSS, or CSS source files. It did not create generated project folders, add runtime implementation, split the AI Framework into another repository, modify ProjectStatus, or change historical sprint identifiers.
+This audit did not modify PHP, TS, TSX, JS, JSX, SCSS, or CSS source files. It did not create generated project folders, add runtime implementation, split the AI Framework into another repository, modify ProjectStatus, or change historical capability identifiers.
 
 ### Evidence
 
@@ -219,13 +219,13 @@ This audit did not modify PHP, TS, TSX, JS, JSX, SCSS, or CSS source files. It d
 | ID | Severity | Finding | Status |
 | --- | --- | --- | --- |
 | F-01 | Positive | Project Templates are framed as adoption artifacts, not framework authority. | Passed |
-| F-02 | Positive | Generic Project Template is platform-independent and contains required adoption files. | Passed |
+| F-02 | Positive | Generic Project Template is framework-independent and contains required adoption files. | Passed |
 | F-03 | Positive | Generic Project Template defines `docs/ProjectStatus.md` as the live operational Source of Truth and prevents it from becoming architecture. | Passed |
-| F-04 | Positive | WordPress Project Template extends Generic and keeps WordPress as adapter/platform host. | Passed |
-| F-05 | Positive | WordPress Project Template excludes Forge AI-specific contracts, namespaces, statuses, sprint history, and implementation code. | Passed |
+| F-04 | Positive | WordPress Project Template extends Generic and keeps WordPress as adapter/framework host. | Passed |
+| F-05 | Positive | WordPress Project Template excludes Forge AI-specific contracts, namespaces, statuses, capability history, and implementation code. | Passed |
 | F-06 | Positive | Bootstrap Workflow requires human inputs, initializes ProjectStatus, and requires validation. | Passed |
 | F-07 | Positive | Adoption Checklist covers required governance, state, AI docs, validation, reference, and hidden architecture checks. | Passed |
-| F-08 | Observation | Future platform-specific templates should add extension checklists without weakening Generic template acceptance criteria. | Non-blocking |
+| F-08 | Observation | Future framework-specific templates should add extension checklists without weakening Generic template acceptance criteria. | Non-blocking |
 
 ---
 
@@ -234,7 +234,7 @@ This audit did not modify PHP, TS, TSX, JS, JSX, SCSS, or CSS source files. It d
 | Risk | Impact | Mitigation |
 | --- | --- | --- |
 | Adopters may copy project-specific rules from Forge AI into new projects. | Could leak Axis-specific architecture into unrelated projects. | Keep Generic and WordPress templates explicit that Forge AI is a reference implementation, not the generic definition. |
-| Platform-specific templates may grow into alternate framework definitions. | Could fragment AI Framework authority. | Require platform templates to reference AI Framework Core and preserve the boundary rule. |
+| Framework-specific templates may grow into alternate framework definitions. | Could fragment AI Framework authority. | Require framework templates to reference AI Framework Core and preserve the boundary rule. |
 | ProjectStatus may be overloaded as architecture in new projects. | Could weaken planning and governance separation. | Maintain the rule that ProjectStatus is live operational state only. |
 | WordPress adopters may treat host APIs as Domain truth by convenience. | Could violate clean dependency direction. | Preserve WordPress adapter boundary language and require project governance for any explicit exception. |
 
@@ -244,7 +244,7 @@ This audit did not modify PHP, TS, TSX, JS, JSX, SCSS, or CSS source files. It d
 
 PASS WITH OBSERVATIONS
 
-The Project Template layer is safe, reusable, platform-independent where required, and ready to support future project bootstrapping. Observations are non-blocking and relate to future adoption discipline rather than defects in the current template layer.
+The Project Template layer is safe, reusable, framework-independent where required, and ready to support future project bootstrapping. Observations are non-blocking and relate to future adoption discipline rather than defects in the current template layer.
 
 ---
 
@@ -257,8 +257,8 @@ Template Layer Ready with Observations
 ## Recommendations
 
 1. Use the Generic Project Template as the baseline for all new projects.
-2. Use the WordPress Project Template only for WordPress-hosted projects and preserve WordPress as adapter/platform host.
-3. Require every future platform-specific template to include an extension checklist that supplements, but does not replace, `docs/AI/Templates/Project/TemplateAdoptionChecklist.md`.
+2. Use the WordPress Project Template only for WordPress-hosted projects and preserve WordPress as adapter/framework host.
+3. Require every future framework-specific template to include an extension checklist that supplements, but does not replace, `docs/AI/Templates/Project/TemplateAdoptionChecklist.md`.
 4. Keep project-specific architecture in project governance, phase/stage documents, `docs/Architecture/`, or source documentation rather than AI Framework core files.
 5. Continue recording certification evidence under `docs/AI/Certification/` when framework layers are reviewed.
 
@@ -268,7 +268,7 @@ Template Layer Ready with Observations
 
 The AI Framework Project Template layer may be used for future project bootstrapping under AI Framework RC2 governance.
 
-No ProjectStatus update is required for this audit because the task creates review evidence and does not advance the active Forge AI phase, stage, historical sprint, milestone, or immediate next work.
+No ProjectStatus update is required for this audit because the task creates review evidence and does not advance the active Forge AI phase, stage, historical capability, milestone, or immediate next work.
 
 ---
 
@@ -298,7 +298,7 @@ No ProjectStatus update is required for this audit because the task creates revi
 
 Perform the next review when one of the following occurs:
 
-- a new platform-specific Project Template is added;
+- a new framework-specific Project Template is added;
 - the Generic Project Template structure changes;
 - the WordPress Project Template expands beyond adapter-level guidance;
 - AI Framework RC2 advances to a new release candidate or stable release;

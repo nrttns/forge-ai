@@ -12,7 +12,7 @@
 | Reviewer | AI Agent |
 | Related Phase | AI Framework v1.0 RC2 |
 | Related Stage | Certification Readiness |
-| Related Historical Sprint | Not applicable; audit-only framework readiness review |
+| Related Historical Capability | Not applicable; audit-only framework readiness review |
 
 ## 2. Audit Purpose
 
@@ -37,7 +37,7 @@ The audit verifies documented structure, governance, operating procedure, valida
 
 - PHP, TypeScript, JavaScript, SCSS, CSS, build output, and runtime implementation changes.
 - Project status advancement.
-- Historical sprint renumbering or reinterpretation.
+- Historical capability renumbering or reinterpretation.
 - Formal AI Framework v1.0 certification.
 
 ### Boundaries
@@ -116,9 +116,9 @@ The following documents were reviewed for this audit:
 
 ## 7. Architecture Review
 
-AI Framework RC2 is structurally ready for certification review. The master framework document is an index and entry point, while detailed architectural responsibilities are delegated to focused specification modules. The split supports the transition away from an RC1-style monolith and preserves platform independence.
+AI Framework RC2 is structurally ready for certification review. The master framework document is an index and entry point, while detailed architectural responsibilities are delegated to focused specification modules. The split supports the transition away from an RC1-style monolith and preserves framework independence.
 
-Forge AI is correctly positioned as the first platform implementation rather than the framework core. The framework language separates persistent knowledge, live state, temporary context, execution, validation, review, certification, project state update, and future memory.
+Forge AI is correctly positioned as the first framework implementation rather than the framework core. The framework language separates persistent knowledge, live state, temporary context, execution, validation, review, certification, project state update, and future memory.
 
 ## 8. Ownership Review
 

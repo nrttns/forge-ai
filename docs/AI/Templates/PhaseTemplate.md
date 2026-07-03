@@ -24,19 +24,19 @@ It does not own implementation.
 
 ## 1. Status
 
-Document status, phase identifier, platform, planning hierarchy, and authority.
+Document status, phase identifier, framework, planning hierarchy, and authority.
 
 ## 2. Phase
 
 Official Phase identifier, name, position, and architectural role.
 
-## 3. Historical Sprint Range
+## 3. Historical Capability Range
 
-Historical sprint range and immutable sprint mapping.
+Historical capability range and immutable capability mapping.
 
 ## 4. Current Status
 
-Current Stage, current Historical Sprint, progress, and upcoming milestone.
+Current Stage, current Historical Capability, progress, and upcoming milestone.
 
 ## 5. Purpose
 
@@ -52,13 +52,13 @@ How the Phase achieves its vision.
 
 ## 8. Architecture Position
 
-Where the Phase sits in platform evolution.
+Where the Phase sits in framework evolution.
 
 ## 9. Historical Context
 
 Migration context, architectural motivation, and legacy considerations.
 
-## 10. Platform Dependencies
+## 10. Framework Dependencies
 
 Required previous Phases and future consuming Phases.
 
@@ -92,11 +92,11 @@ Ownership matrix.
 
 ## 18. Stage Roadmap
 
-Stage list with objective and sprint mapping.
+Stage list with objective and capability mapping.
 
-## 19. Historical Sprint Mapping
+## 19. Historical Capability Mapping
 
-Complete Stage-to-Sprint mapping.
+Complete Stage-to-Capability mapping.
 
 ## 20. Allowed Work
 
@@ -153,7 +153,7 @@ Next Phase and how it consumes this one.
 - [ ] Boundaries documented
 - [ ] Dependencies documented
 - [ ] Stage roadmap complete
-- [ ] Sprint mapping complete
+- [ ] Capability mapping complete
 - [ ] Deliverables defined
 - [ ] Entry criteria defined
 - [ ] Exit criteria defined

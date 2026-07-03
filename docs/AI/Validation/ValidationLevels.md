@@ -43,7 +43,7 @@ Level 4 — Subsystem Validation
     ↓
 Level 5 — Framework Validation
     ↓
-Level 6 — Platform Validation
+Level 6 — Framework Validation
 ```
 
 Higher levels may include evidence from lower levels, but each level must preserve its own scope, evidence, outcome, and escalation rules.
@@ -56,7 +56,7 @@ Higher levels may include evidence from lower levels, but each level must preser
 
 Verify that an individual document conforms to its governing authority, declared purpose, terminology, scope, references, and required structure.
 
-Document Validation applies to specifications, commands, workflows, templates, checklists, validation records, sprint documents, phase documents, stage documents, audits, and project documentation.
+Document Validation applies to specifications, commands, workflows, templates, checklists, validation records, capability documents, phase documents, stage documents, audits, and project documentation.
 
 ## Evidence
 
@@ -91,7 +91,7 @@ Escalate when:
 - authority is missing or conflicts with higher authority;
 - referenced documents do not exist;
 - the document redefines architecture outside its scope;
-- terminology conflicts with the AI Framework or platform constitution;
+- terminology conflicts with the AI Framework or framework constitution;
 - the document implies Project Status advancement without certification.
 
 ---
@@ -102,7 +102,7 @@ Escalate when:
 
 Verify that a workflow describes a repeatable process that preserves planning, execution, validation, review, certification, and state-update boundaries.
 
-Workflow Validation applies to lifecycle workflows, planning workflows, project-state workflows, task-generation workflows, validation workflows, and future platform workflows.
+Workflow Validation applies to lifecycle workflows, planning workflows, project-state workflows, task-generation workflows, validation workflows, and future framework workflows.
 
 ## Evidence
 
@@ -192,9 +192,9 @@ Escalate when:
 
 ## Purpose
 
-Verify that a framework or platform subsystem conforms to its approved responsibilities, boundaries, interfaces, documentation, and quality gates.
+Verify that a framework or framework subsystem conforms to its approved responsibilities, boundaries, interfaces, documentation, and quality gates.
 
-Subsystem Validation may apply to AI Framework subsystems such as Commands, Workflows, Templates, Validation, Review, Governance, Runtime, Context, Memory, or future AI System modules. It may also apply to Axis Suite platform subsystems such as Schema, Domain, Application, API, Infrastructure, Runtime, Builder, Presentation, Tokens, Widgets, Templates, and Theme Parts.
+Subsystem Validation may apply to AI Framework subsystems such as Commands, Workflows, Templates, Validation, Review, Governance, Runtime, Context, Memory, or future AI System modules. It may also apply to Axis Suite framework subsystems such as Schema, Domain, Application, API, Infrastructure, Runtime, Builder, Presentation, Tokens, Widgets, Templates, and Theme Parts.
 
 ## Evidence
 
@@ -239,7 +239,7 @@ Escalate when:
 
 ## Purpose
 
-Verify that the AI Framework itself remains coherent, complete, governable, platform-independent, and aligned with its constitution and RC2 specification model.
+Verify that the AI Framework itself remains coherent, complete, governable, framework-independent, and aligned with its constitution and RC2 specification model.
 
 Framework Validation applies to the framework as a whole or to a release candidate milestone.
 
@@ -276,26 +276,26 @@ Escalate when:
 - framework documents conflict with the Constitution;
 - operational documents redefine framework architecture;
 - validation, review, certification, or state-update responsibilities are blurred;
-- platform-specific assumptions compromise platform independence;
-- Project Status or platform governance is treated as framework authority.
+- framework-specific assumptions compromise framework independence;
+- Project Status or framework governance is treated as framework authority.
 
 ---
 
-# Level 6 — Platform Validation
+# Level 6 — Framework Validation
 
 ## Purpose
 
-Verify that a platform implementation conforms to the AI Framework, platform constitution, live Project Status, architecture, active phase, active stage, historical sprint, and quality requirements.
+Verify that a framework implementation conforms to the AI Framework, framework constitution, live Project Status, architecture, active phase, active stage, historical capability, and quality requirements.
 
-For Forge AI, Platform Validation verifies conformance to `AGENTS.md`, `docs/ProjectStatus.md`, development phase documents, platform governance, and applicable stage or sprint documentation.
+For Forge AI, Framework Validation verifies conformance to `AGENTS.md`, `docs/ProjectStatus.md`, development phase documents, framework governance, and applicable stage or capability documentation.
 
 ## Evidence
 
 Typical evidence includes:
 
-- platform constitution or bootstrap authority;
+- framework constitution or bootstrap authority;
 - live Project Status;
-- current phase, stage, and sprint documents;
+- current phase, stage, and capability documents;
 - architecture and governance documents;
 - implementation artifacts;
 - tests, builds, quality gates, and audit results;
@@ -305,7 +305,7 @@ Typical evidence includes:
 
 ## Outcome
 
-Platform Validation determines whether a platform milestone, phase, stage, sprint, or task is conformant and eligible for review, certification, and possible Project Status advancement.
+Framework Validation determines whether a framework milestone, phase, stage, capability, or task is conformant and eligible for review, certification, and possible Project Status advancement.
 
 Possible outcomes:
 
@@ -320,9 +320,9 @@ FAILED
 
 Escalate when:
 
-- platform work conflicts with the AI Framework or platform constitution;
+- framework work conflicts with the AI Framework or framework constitution;
 - Project Status is stale, ambiguous, or contradicted by evidence;
-- historical sprint identifiers are changed or reinterpreted;
+- historical capability identifiers are changed or reinterpreted;
 - implementation violates architecture boundaries;
 - required quality gates fail;
 - certification would advance project state without sufficient evidence.

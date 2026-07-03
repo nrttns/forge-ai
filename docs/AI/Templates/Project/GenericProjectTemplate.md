@@ -2,7 +2,7 @@
 
 ## Purpose
 
-The Generic Project Template defines a platform-independent repository structure for projects adopting AI Framework RC2.
+The Generic Project Template defines a framework-independent repository structure for projects adopting AI Framework RC2.
 
 It is intended for new projects that need the framework's governance, planning, source-of-truth, validation, testing, certification, and agent operating model without adopting Forge AI implementation details.
 
@@ -77,10 +77,10 @@ It should define:
 
 It should define:
 
-- current platform or product position;
+- current framework or product position;
 - active phase;
 - active stage;
-- active sprint or task grouping, if used;
+- active capability or task grouping, if used;
 - immediate next work;
 - quality gates;
 - update policy.
@@ -111,7 +111,7 @@ Project-specific additions must not redefine the AI Framework core.
 
 `docs/DevelopmentPhases/` contains phase, stage, and planning documents for the project.
 
-It should define the planning hierarchy used by the project and preserve historical identifiers if historical sprint or milestone identifiers are introduced.
+It should define the planning hierarchy used by the project and preserve historical identifiers if historical capability or milestone identifiers are introduced.
 
 ### `docs/Architecture/`
 
@@ -129,7 +129,7 @@ The Generic Project Template does not prescribe a language, framework, or runtim
 
 `tests/` contains project tests.
 
-The project must define test categories and validation commands appropriate to its platform.
+The project must define test categories and validation commands appropriate to its framework.
 
 ### `_reference/`
 
@@ -169,7 +169,7 @@ Agents should not ask for the next task when it can be derived from documented p
 The Generic Project Template does not:
 
 - define a programming language;
-- define a runtime platform;
+- define a runtime framework;
 - define a package manager;
 - define product architecture;
 - include Forge AI-specific implementation details;

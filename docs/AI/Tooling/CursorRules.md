@@ -27,7 +27,7 @@ Use `.cursorrules` as the tool-facing runtime file. Use this document as the hum
 6. `docs/AI/AIFramework.md` is the AI Framework RC2 master entry.
 7. `docs/AI/Specification/Constitution.md` is the AI Framework constitution.
 8. Commands, workflows, templates, and checklists define execution procedure, not architecture.
-9. Historical Sprint identifiers are immutable.
+9. Historical Capability identifiers are immutable.
 10. Reference directories are read-only.
 11. No code changes are allowed unless explicitly requested by the active task.
 12. Agents must stop and report a blocker when authority, ownership, scope, or project state is unclear.

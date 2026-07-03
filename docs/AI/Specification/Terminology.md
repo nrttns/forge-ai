@@ -14,7 +14,7 @@
 
 This document is the canonical vocabulary for the AI Framework.
 
-Definitions are centralized here to reduce duplicated language across specification, runtime, governance, orchestration, workflow, validation, command, template, and platform adapter documents.
+Definitions are centralized here to reduce duplicated language across specification, runtime, governance, orchestration, workflow, validation, command, template, and framework adapter documents.
 
 ---
 
@@ -22,7 +22,7 @@ Definitions are centralized here to reduce duplicated language across specificat
 
 | Term | Definition |
 | --- | --- |
-| AI Framework | Platform-independent operating model for AI-assisted software engineering. |
+| AI Framework | Framework-independent operating model for AI-assisted software engineering. |
 | Agent | A human-governed AI execution participant that consumes authoritative documentation and performs scoped work. |
 | Architecture | Documented ownership, boundaries, contracts, dependency direction, and subsystem responsibilities. |
 | Authority | The documented source allowed to define decisions for a given scope. |
@@ -30,12 +30,12 @@ Definitions are centralized here to reduce duplicated language across specificat
 | Command | Operational procedure that defines how an approved task is executed. |
 | Context | Temporary working set assembled from authoritative sources for one execution cycle. |
 | Governance | Decision model that defines authority, ownership, escalation, quality gates, compliance, and human oversight. |
-| Historical Sprint | Immutable implementation history record tied to a planning stage. |
+| Historical Capability | Immutable implementation history record tied to a planning stage. |
 | Knowledge | Persistent documented information such as architecture, standards, templates, governance, RFCs, and implementation guidance. |
 | Memory | Derived reusable learning from approved work; never an authority source. |
-| Phase | Major architectural capability in a platform planning hierarchy. |
+| Phase | Major architectural capability in a framework planning hierarchy. |
 | Planning | Process that maps architecture and project state into approved executable work. |
-| Platform Adapter | Project- or ecosystem-specific implementation of the framework that consumes core principles without redefining them. |
+| Framework Adapter | Project- or ecosystem-specific implementation of the framework that consumes core principles without redefining them. |
 | Project State | Live operational state of a project, normally represented by a project status document. |
 | Review | Independent assessment of completed work before certification or state transition. |
 | Runtime | Operational AI behaviour layer that executes work while consuming framework authority. |
@@ -54,10 +54,10 @@ Definitions are centralized here to reduce duplicated language across specificat
 | State Category | Meaning | Typical Authority |
 | --- | --- | --- |
 | Architectural State | Permanent structure, ownership, dependency model, and governance rules. | Framework and architecture documentation. |
-| Planning State | Active roadmap position: phase, stage, sprint, objective, and planned milestones. | Development plans and stage documents. |
+| Planning State | Active roadmap position: phase, stage, capability, objective, and planned milestones. | Development plans and stage documents. |
 | Execution State | Temporary in-progress task status, validation state, review state, and blockers. | Workflow engine and command outputs. |
 | Project State | Live operational position of a project. | Project status document. |
-| Historical State | Immutable completed work and decisions. | Historical sprint records, audits, ADRs, release history. |
+| Historical State | Immutable completed work and decisions. | Historical capability records, audits, ADRs, release history. |
 | Knowledge State | Reusable documented knowledge. | Documentation repository. |
 | Context | Temporary execution working set. | Workflow engine. |
 | Memory | Derived reusable learning. | Memory strategy. |
@@ -71,13 +71,13 @@ The canonical planning hierarchy is:
 ```text
 Vision
     ↓
-Platform
+Framework
     ↓
 Phase
     ↓
 Stage
     ↓
-Historical Sprint
+Historical Capability
     ↓
 Task
 ```
@@ -107,10 +107,10 @@ Artifact / Execution
 
 ---
 
-# Platform Terms
+# Framework Terms
 
-A platform adapter is not a fork of the framework.
+A framework adapter is not a fork of the framework.
 
-It is a project-specific application of the framework that may define platform-specific authorities, project status files, phases, stages, historical sprints, commands, and quality gates while preserving framework-level terminology.
+It is a project-specific application of the framework that may define framework-specific authorities, project status files, phases, stages, historical sprints, commands, and quality gates while preserving framework-level terminology.
 
-Forge AI is the first platform adapter.
+Forge AI is the first framework adapter.

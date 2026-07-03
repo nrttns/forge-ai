@@ -115,7 +115,7 @@ Minor changes are backward-compatible additions or improvements. They may includ
 - new scenario tests that do not invalidate existing scenario contracts;
 - additional tooling guidance that remains compatible with existing rules;
 - expanded lifecycle support for new adoption contexts;
-- new platform-adapter guidance that does not fork framework authority.
+- new framework-adapter guidance that does not fork framework authority.
 
 Minor changes may add capabilities but must preserve compatibility for existing adopting projects.
 
@@ -146,10 +146,10 @@ Major changes require explicit migration guidance and must follow the Deprecatio
 
 ---
 
-## Historical Sprint Identifiers Are Not Framework Versions
+## Historical Capability Identifiers Are Not Framework Versions
 
-Historical Sprint identifiers belong to Forge AI implementation history.
+Historical Capability identifiers belong to Forge AI implementation history.
 
-Examples such as `AXIS-V2.SPRINT-67.12` are immutable historical sprint records. They are not AI Framework versions and must never be renumbered, reinterpreted, or used as substitutes for framework lifecycle versions.
+Examples such as `AXIS-V2.SPRINT-67.12` are immutable historical capability records. They are not AI Framework versions and must never be renumbered, reinterpreted, or used as substitutes for framework lifecycle versions.
 
-Framework versions describe AI Framework evolution. Historical Sprint identifiers describe project implementation history.
+Framework versions describe AI Framework evolution. Historical Capability identifiers describe project implementation history.

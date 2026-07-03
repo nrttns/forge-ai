@@ -1,22 +1,22 @@
-# Sprint Template
+# Capability Template
 
 ## Status
 
 Template Status: Canonical  
-Document Type: Historical Sprint Specification Template  
+Document Type: Historical Capability Specification Template  
 Authority: `docs/AI/AIFramework.md`
 
 ---
 
 # Purpose
 
-This template defines the standard structure for every Historical Sprint document.
+This template defines the standard structure for every Historical Capability document.
 
-A Historical Sprint represents implementation history.
+A Historical Capability represents implementation history.
 
-A Sprint implements an approved Stage objective.
+A Capability implements an approved Stage objective.
 
-A Sprint never defines architecture.
+A Capability never defines architecture.
 
 ---
 
@@ -24,21 +24,21 @@ A Sprint never defines architecture.
 
 ## 1. Status
 
-Document status, Sprint identifier, parent Phase, parent Stage, and implementation state.
+Document status, Capability identifier, parent Phase, parent Stage, and implementation state.
 
-## 2. Historical Sprint
+## 2. Historical Capability
 
-Sprint identifier, title, parent Stage, parent Phase.
+Capability identifier, title, parent Stage, parent Phase.
 
 ## 3. Parent Stage
 
-Stage objective and milestone implemented by this Sprint.
+Stage objective and milestone implemented by this Capability.
 
 ## 4. Parent Phase
 
 Phase capability and contribution.
 
-## 5. Sprint Objective
+## 5. Capability Objective
 
 Measurable implementation objective.
 
@@ -56,7 +56,7 @@ Implementation, documentation, tests, validation, migration, audit preparation.
 
 ## 9. Architecture Rules
 
-Ownership, dependency direction, contracts, sprint numbering, documentation consistency.
+Ownership, dependency direction, contracts, capability numbering, documentation consistency.
 
 ## 10. Allowed Work
 
@@ -64,7 +64,7 @@ Approved implementation categories.
 
 ## 11. Forbidden Work
 
-Future sprint implementation, redesign, ownership changes, undocumented behavior.
+Future capability implementation, redesign, ownership changes, undocumented behavior.
 
 ## 12. Implementation Notes
 
@@ -74,15 +74,15 @@ Technical reasoning and decisions.
 
 Applicable validation commands and checks.
 
-## 14. Sprint Completion Criteria
+## 14. Capability Completion Criteria
 
 Completion requirements.
 
 ## 15. Completion Report
 
-Summary, files changed, architecture notes, validation, risks, next sprint.
+Summary, files changed, architecture notes, validation, risks, next capability.
 
-## 16. Sprint Checklist
+## 16. Capability Checklist
 
 Checklist.
 
@@ -102,15 +102,15 @@ Relevant RFCs.
 
 References.
 
-## 21. Next Sprint
+## 21. Next Capability
 
-Next Historical Sprint.
+Next Historical Capability.
 
 ---
 
 # Completion Checklist
 
-- [ ] Sprint identifier correct
+- [ ] Capability identifier correct
 - [ ] Parent Phase identified
 - [ ] Parent Stage identified
 - [ ] Objective defined
@@ -120,4 +120,4 @@ Next Historical Sprint.
 - [ ] Completion report included
 - [ ] Risks documented
 - [ ] References verified
-- [ ] Next Sprint identified
+- [ ] Next Capability identified

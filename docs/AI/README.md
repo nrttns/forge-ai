@@ -16,7 +16,7 @@ Specification Directory: `docs/AI/Specification/`
 
 ## Purpose
 
-This directory contains the AI operational framework used by Forge AI and designed as a platform-independent model for AI-assisted software engineering.
+This directory contains the AI operational framework used by Forge AI and designed as a framework-independent model for AI-assisted software engineering.
 
 The AI Framework defines how AI agents plan, execute, validate, review, document, govern, and update project state while preserving architectural integrity.
 
@@ -236,7 +236,7 @@ docs/AI/Templates/Project/
 
 Project Templates bootstrap new projects with framework-compatible governance, source-of-truth, validation, testing, certification, and repository structure. They do not define AI Framework authority, replace the AI System operating layer, or embed Forge AI-specific implementation details.
 
-Forge AI remains the first reference implementation of the AI Framework. Generic and platform-specific Project Templates allow other projects to adopt the framework without copying Axis-specific architecture, sprint history, or source code.
+Forge AI remains the first reference implementation of the AI Framework. Generic and framework-specific Project Templates allow other projects to adopt the framework without copying Axis-specific architecture, capability history, or source code.
 
 ## Certification Layer
 
@@ -323,13 +323,13 @@ The framework separates:
 
 ---
 
-## Platform Position
+## Framework Position
 
-The AI Framework core language is platform-independent.
+The AI Framework core language is framework-independent.
 
-Forge AI is the first platform implementation of the framework.
+Forge AI is the first framework implementation of the framework.
 
-Future platform adapters may include:
+Future framework adapters may include:
 
 ```text
 Axis Suite

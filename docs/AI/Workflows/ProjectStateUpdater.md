@@ -54,7 +54,7 @@ It is not:
 
 - a roadmap;
 - a changelog;
-- a sprint archive;
+- a capability archive;
 - a replacement for Phase or Stage documents.
 
 It records where the project is now.
@@ -71,7 +71,7 @@ The updater consumes:
 - current `ProjectStatus.md`;
 - current Phase document;
 - current Stage document;
-- related Historical Sprint documentation.
+- related Historical Capability documentation.
 
 ---
 
@@ -97,7 +97,7 @@ AI agents may propose updates to:
 ```text
 Current Phase
 Current Stage
-Current Historical Sprint
+Current Historical Capability
 Current Objective
 Current Progress
 Next Milestone
@@ -112,20 +112,20 @@ AI agents must not automatically rewrite:
 - project vision;
 - governance rules;
 - roadmap structure;
-- historical sprint records;
+- historical capability records;
 - architectural principles.
 
 ---
 
-# Sprint Advancement Rule
+# Capability Advancement Rule
 
-If the assigned Historical Sprint is certified complete:
+If the assigned Historical Capability is certified complete:
 
 - record it as completed;
-- set active Historical Sprint to the next approved sprint only if the next sprint is already defined by planning;
-- do not renumber historical sprint identifiers.
+- set active Historical Capability to the next approved capability only if the next capability is already defined by planning;
+- do not renumber historical capability identifiers.
 
-Historical sprint identity is immutable.
+Historical capability identity is immutable.
 
 ---
 
@@ -133,7 +133,7 @@ Historical sprint identity is immutable.
 
 A Stage advances only when its completion criteria are satisfied.
 
-If the sprint completes but Stage completion criteria remain open, ProjectStatus.md must remain in the current Stage.
+If the capability completes but Stage completion criteria remain open, ProjectStatus.md must remain in the current Stage.
 
 Stage movement requires evidence.
 
@@ -148,7 +148,7 @@ A Phase changes only after:
 - certification criteria are satisfied;
 - governance permits transition.
 
-A single sprint completion must not advance a Phase by itself.
+A single capability completion must not advance a Phase by itself.
 
 ---
 
@@ -179,7 +179,7 @@ Progress must remain concise and factual.
 If blockers exist, record:
 
 - blocker summary;
-- affected Phase / Stage / Sprint;
+- affected Phase / Stage / Capability;
 - required follow-up;
 - whether work may continue.
 

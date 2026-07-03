@@ -45,7 +45,7 @@ docs/AI/Validation/ValidationLevels.md
 docs/AI/Validation/ValidationCertification.md
 docs/AI/Checklists/AgentReviewChecklist.md
 docs/ProjectStatus.md
-Failing command output, affected source or documentation, owning subsystem documentation, and active sprint scope
+Failing command output, affected source or documentation, owning subsystem documentation, and active capability scope
 ```
 
 ---
@@ -112,7 +112,7 @@ Recommended follow-up
 - Broad refactor.
 - Architecture redesign.
 - New public contracts unless explicitly approved.
-- Future sprint implementation.
+- Future capability implementation.
 - Hiding unresolved failures.
 - ProjectStatus update before review/certification.
 

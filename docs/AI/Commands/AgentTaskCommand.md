@@ -60,7 +60,7 @@ docs/AI/AIOrchestrator.md
 docs/ProjectStatus.md
 Current Phase
 Current Stage
-Assigned Historical Sprint or generated task
+Assigned Historical Capability or generated task
 ```
 
 The agent must then select the correct specialized command if one applies.
@@ -119,7 +119,7 @@ Before execution, verify:
 
 - current Phase;
 - current Stage;
-- current Historical Sprint;
+- current Historical Capability;
 - task objective;
 - ownership boundary;
 - allowed work;
@@ -137,8 +137,8 @@ The agent must not:
 
 - redefine architecture;
 - change ownership;
-- implement future sprint objectives;
-- modify historical sprint identifiers;
+- implement future capability objectives;
+- modify historical capability identifiers;
 - bypass documentation;
 - treat reference material as implementation truth.
 

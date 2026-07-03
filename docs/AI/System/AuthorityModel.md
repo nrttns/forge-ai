@@ -50,7 +50,7 @@ Current Phase document
     ↓
 Current Stage document
     ↓
-Historical Sprint specification
+Historical Capability specification
     ↓
 Generated Task
     ↓
@@ -68,7 +68,7 @@ When documents conflict:
 1. Follow the higher-authority document.
 2. Preserve `AGENTS.md` as bootstrap authority.
 3. Preserve `docs/ProjectStatus.md` as live operational state only, not architecture.
-4. Preserve historical sprint identifiers.
+4. Preserve historical capability identifiers.
 5. Do not let commands, workflows, templates, validation documents, checklists, generated tasks, or conversation redefine architecture.
 6. Stop and report a blocker if the conflict cannot be resolved safely.
 
@@ -78,7 +78,7 @@ When documents conflict:
 
 Humans govern Forge AI.
 
-A human instruction may narrow active task scope, select a task, or authorize a specific change. A human instruction must not be used by an agent to silently bypass non-negotiable governance, historical sprint identity, validation, review, certification, source-of-truth rules, or explicit file restrictions.
+A human instruction may narrow active task scope, select a task, or authorize a specific change. A human instruction must not be used by an agent to silently bypass non-negotiable governance, historical capability identity, validation, review, certification, source-of-truth rules, or explicit file restrictions.
 
 When a human override changes documented project direction, the change should be recorded in approved documentation through the relevant workflow so future agents can derive the same state without relying on conversation history.
 
@@ -91,7 +91,7 @@ Generated tasks are executable only when they are traceable to higher authority:
 ```text
 ProjectStatus
     ↓
-Phase / Stage / Sprint
+Phase / Stage / Capability
     ↓
 TaskPlanner or TaskGenerationWorkflow
     ↓

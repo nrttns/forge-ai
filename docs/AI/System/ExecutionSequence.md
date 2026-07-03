@@ -62,7 +62,7 @@ ProjectStatus update, only when permitted
 
 ## 1. State
 
-Read `docs/ProjectStatus.md` to determine current live project position, active phase, active stage, active historical sprint, blockers, and recommended next action.
+Read `docs/ProjectStatus.md` to determine current live project position, active phase, active stage, active historical capability, blockers, and recommended next action.
 
 ## 2. Context
 
@@ -119,7 +119,7 @@ Update `docs/ProjectStatus.md` only when all conditions are true:
 - certification outcome permits state advancement;
 - certified scope affects live operational project state;
 - the governing workflow requires or permits a ProjectStatus update;
-- the update preserves historical sprint identifiers;
+- the update preserves historical capability identifiers;
 - no unresolved blocker would make the update misleading.
 
 ProjectStatus updates must use `docs/AI/Workflows/ProjectStateUpdater.md`.

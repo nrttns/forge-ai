@@ -3,22 +3,51 @@
 These rules are mandatory for AI agents and automation operating in this repository.
 
 1. `AGENTS.md` is the bootstrap authority. Read it first.
-2. Follow the AI Framework RC2 boot sequence before choosing work:
+
+2. Follow the Forge AI boot sequence before choosing work:
    - `AGENTS.md`
    - `docs/AI/README.md`
    - `docs/AI/AIFramework.md`
-   - `docs/AI/Specification/Constitution.md`
+   - `docs/AI/Specification/Constitution.md` when present
    - `docs/AI/AIOrchestrator.md`
+   - `docs/FrameworkGovernance.md`
    - `docs/ProjectStatus.md`
-   - `docs/AI/Workflows/TaskPlanner.md`
-   - relevant command, workflow, template, checklist, validation, phase, stage, and sprint documents.
-3. `docs/ProjectStatus.md` is the only live operational Source of Truth.
+   - `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`
+   - current phase document
+   - current stage document
+   - assigned capability document
+   - relevant command, workflow, template, checklist, validation, phase, stage, and capability documents.
+
+3. `docs/ProjectStatus.md` is the only live operational project status document.
+
 4. Read `docs/ProjectStatus.md` before deciding next work.
+
 5. Do not ask “what should I do next?” when the answer is derivable from `docs/ProjectStatus.md`, `docs/AI/AIOrchestrator.md`, and `docs/AI/Workflows/TaskPlanner.md`.
-6. `docs/AI/AIFramework.md` is the AI Framework RC2 master entry.
-7. `docs/AI/Specification/Constitution.md` is the AI Framework constitution.
-8. Commands, workflows, templates, and checklists define execution procedure, not architecture.
-9. Historical Sprint identifiers are immutable. Never renumber or reinterpret them.
-10. Reference directories are read-only: `_reference/axis-suite-v1` and `_reference/feature-project`.
-11. Do not change source code unless explicitly requested by the active task.
-12. If authority, ownership, scope, or project state is unclear, stop and report the blocker.
+
+6. Forge AI uses this planning hierarchy:
+   `Framework → Phase → Stage → Capability → Task`.
+
+7. Capability identifiers are immutable after certification. Never renumber or reinterpret them.
+
+8. Commands, workflows, templates, checklists, and validation documents define execution procedure. They do not redefine architecture.
+
+9. Implementation must consume architecture. Implementation must never define architecture.
+
+10. Platform adapters consume Forge AI. Platform adapters must never redefine Forge AI.
+
+11. Keep Forge AI platform-independent. Do not introduce product-specific, framework-specific, language-specific, or runtime-specific assumptions into core framework documents.
+
+12. Platform-specific behavior belongs only in platform adapters or explicitly scoped capability documents.
+
+13. Reference material is read-only. It may be used for research, comparison, migration planning, and inspiration only.
+
+14. Do not import, execute, autoload, or copy reference implementation as current authority.
+
+15. Do not change source code unless explicitly requested by the active task.
+
+16. Do not advance `docs/ProjectStatus.md` unless validation, review, and certification requirements are satisfied.
+
+17. If authority, ownership, scope, required documentation, or project state is unclear, stop and report the blocker.
+
+18. Required lifecycle:
+   `Planning → Task Generation → Command Selection → Execution → Validation → Review → Certification → Project State Update`.

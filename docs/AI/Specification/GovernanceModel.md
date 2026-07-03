@@ -14,7 +14,7 @@
 
 This document defines how the AI Framework is governed.
 
-Governance preserves authority, ownership, quality, escalation, compliance, certification, and safe evolution across all platform implementations.
+Governance preserves authority, ownership, quality, escalation, compliance, certification, and safe evolution across all framework implementations.
 
 ---
 
@@ -60,7 +60,7 @@ No lower layer may redefine a higher layer.
 
 Humans remain the highest authority.
 
-Human roles may include architect, technical lead, product owner, maintainer, reviewer, and platform owner.
+Human roles may include architect, technical lead, product owner, maintainer, reviewer, and framework owner.
 
 Humans approve architectural evolution, resolve governance conflicts, accept breaking changes, and approve releases where required.
 
@@ -72,7 +72,7 @@ AI agents assist. Humans govern.
 
 | Decision Type | Examples | Authority |
 | --- | --- | --- |
-| Strategic | Framework evolution, architecture redesign, governance changes, platform direction. | Human approval required. |
+| Strategic | Framework evolution, architecture redesign, governance changes, framework direction. | Human approval required. |
 | Tactical | Stage sequencing, task planning, workflow selection, documentation updates. | Delegable to the framework. |
 | Operational | Execution order, template selection, validation sequencing, report generation. | Performed by agents within approved scope. |
 
@@ -141,7 +141,7 @@ Certification confirms that work may officially become part of the project state
 
 Certification requires successful validation, successful review, completed documentation, preserved architecture, satisfied quality gates, and no unresolved blocker preventing advancement.
 
-Certification may apply to historical sprints, stages, phases, releases, documentation architecture, platform adapters, or framework modules.
+Certification may apply to historical sprints, stages, phases, releases, documentation architecture, framework adapters, or framework modules.
 
 ---
 
@@ -192,7 +192,7 @@ Runtime
     ↓
 Governance
     ↓
-Platform Integrations
+Framework Integrations
 ```
 
 Evolution should extend before replacing, compose before duplicating, document before implementing, govern before executing, and validate before certifying.

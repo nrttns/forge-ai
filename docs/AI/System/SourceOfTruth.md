@@ -41,7 +41,7 @@ Agents must read it before deciding or recommending current work.
 
 - current phase;
 - current stage;
-- active historical sprint;
+- active historical capability;
 - current progress;
 - blockers;
 - next milestone;
@@ -58,7 +58,7 @@ Agents must read it before deciding or recommending current work.
 - architecture;
 - governance principles;
 - AI Framework constitution;
-- historical sprint identity or renumbering;
+- historical capability identity or renumbering;
 - code contracts;
 - schema contracts;
 - domain contracts;
@@ -74,7 +74,7 @@ Architecture belongs in the Development Constitution, AI Framework specification
 
 Conversation is non-authoritative for long-lived project state unless converted into approved documentation.
 
-Conversation may provide a valid active-task instruction when it does not conflict with higher authority. It must not be treated as the permanent source of truth for phase, stage, sprint, architecture, governance, validation, certification, or project-state advancement.
+Conversation may provide a valid active-task instruction when it does not conflict with higher authority. It must not be treated as the permanent source of truth for phase, stage, capability, architecture, governance, validation, certification, or project-state advancement.
 
 If conversation changes project direction, agents should record the needed documentation update path and use the approved workflow before future work depends on that change.
 
@@ -86,7 +86,7 @@ Agents must:
 
 1. Read `docs/ProjectStatus.md` before work selection.
 2. Use `AGENTS.md` and the AI Framework documents for authority and governance.
-3. Use phase, stage, and sprint documents for planned scope and historical traceability.
+3. Use phase, stage, and capability documents for planned scope and historical traceability.
 4. Use commands and workflows for execution procedure.
 5. Use validation documents for evidence-based conformance.
 6. Use review checklists for readiness evaluation.

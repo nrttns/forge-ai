@@ -18,7 +18,7 @@ The Project Template layer provides reusable starting structures for projects ad
 
 Project Templates help future projects bootstrap the same documented planning, execution, validation, testing, certification, and source-of-truth discipline used by Forge AI without copying Forge AI-specific implementation details.
 
-A Project Template is an adoption artifact. It gives a new repository the minimum document structure, governance placeholders, project-state model, and platform layout needed to consume the AI Framework safely.
+A Project Template is an adoption artifact. It gives a new repository the minimum document structure, governance placeholders, project-state model, and framework layout needed to consume the AI Framework safely.
 
 ---
 
@@ -81,7 +81,7 @@ Project Templates may initialize these directories and explain how a project use
 | Template | Document | Purpose |
 | --- | --- | --- |
 | Project Template Architecture | `ProjectTemplateArchitecture.md` | Defines the adoption-layer architecture and template boundaries. |
-| Generic Project Template | `GenericProjectTemplate.md` | Defines a platform-independent project structure for AI Framework adoption. |
+| Generic Project Template | `GenericProjectTemplate.md` | Defines a framework-independent project structure for AI Framework adoption. |
 | WordPress Project Template | `WordPressProjectTemplate.md` | Defines a WordPress-oriented extension of the generic template without Axis Suite-specific assumptions. |
 | Template Bootstrap Workflow | `TemplateBootstrapWorkflow.md` | Defines the lifecycle for creating a new AI Framework project from a template. |
 | Template Adoption Checklist | `TemplateAdoptionChecklist.md` | Provides acceptance checks for adopting the AI Framework in a new project. |

@@ -12,7 +12,7 @@
 
 # Purpose
 
-This document defines the platform-independent core subsystems of the AI Framework.
+This document defines the framework-independent core subsystems of the AI Framework.
 
 It preserves the RC1 intent while moving runtime, governance, reference architecture, and terminology into focused modules.
 
@@ -20,7 +20,7 @@ It preserves the RC1 intent while moving runtime, governance, reference architec
 
 # Core Architecture
 
-The Core layer contains the permanent capabilities of the framework regardless of target platform.
+The Core layer contains the permanent capabilities of the framework regardless of target framework.
 
 ```text
 Planning
@@ -36,7 +36,7 @@ Collaboration
 State Management
 ```
 
-Core represents the operating model. Runtime and platform adapters consume it.
+Core represents the operating model. Runtime and framework adapters consume it.
 
 ---
 
@@ -49,13 +49,13 @@ It transforms long-term architectural intent into executable work through a stru
 ```text
 Vision
     ↓
-Platform
+Framework
     ↓
 Phase
     ↓
 Stage
     ↓
-Historical Sprint
+Historical Capability
     ↓
 Task
 ```
@@ -71,7 +71,7 @@ Planning owns:
 - project planning hierarchy;
 - task derivation;
 - stage progression;
-- sprint mapping;
+- capability mapping;
 - execution planning;
 - traceability from task to architectural intent.
 
@@ -81,7 +81,7 @@ Planning never performs implementation.
 
 Project State represents the live operational state of a project.
 
-It records the current phase, stage, historical sprint, objective, progress, blockers, and next milestone.
+It records the current phase, stage, historical capability, objective, progress, blockers, and next milestone.
 
 Project State never replaces planning. It identifies the current position inside the planning hierarchy.
 
@@ -185,7 +185,7 @@ Artifact
 
 ## Template Categories
 
-- Planning Templates: phase, stage, historical sprint.
+- Planning Templates: phase, stage, historical capability.
 - Validation Templates: audit, review report, validation report.
 - Documentation Templates: RFC, ADR, project status, specification, README.
 - Operational Templates: completion report, implementation summary, bug report, migration report.

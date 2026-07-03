@@ -84,7 +84,7 @@ docs/AI/AIFramework.md
     ↓
 Development Constitution
     ↓
-Platform Governance
+Framework Governance
     ↓
 ProjectStatus.md
     ↓
@@ -92,7 +92,7 @@ Phase
     ↓
 Stage
     ↓
-Historical Sprint
+Historical Capability
     ↓
 Generated Task
 ```
@@ -170,8 +170,8 @@ The Orchestrator selects a workflow based on the current project state.
 | Determine next work | `Workflows/TaskPlanner.md` |
 | Generate executable task | `Workflows/TaskGenerationWorkflow.md` |
 | Update live project state | `Workflows/ProjectStateUpdater.md` |
-| Audit sprint | `Commands/AgentAuditCommand.md` |
-| Implementation sprint | `Commands/AgentImplementationCommand.md` |
+| Audit capability | `Commands/AgentAuditCommand.md` |
+| Implementation capability | `Commands/AgentImplementationCommand.md` |
 | Documentation work | `Commands/AgentDocumentationCommand.md` |
 | Bug resolution | `Commands/AgentBugFixCommand.md` |
 | Review | `Checklists/AgentReviewChecklist.md` |
@@ -226,7 +226,7 @@ The Orchestrator selects the required output contract.
 | --- | --- |
 | Phase specification | `Templates/PhaseTemplate.md` |
 | Stage specification | `Templates/StageTemplate.md` |
-| Historical Sprint specification | `Templates/SprintTemplate.md` |
+| Historical Capability specification | `Templates/SprintTemplate.md` |
 | Audit report | `Templates/AuditTemplate.md` |
 
 Templates define output structure.

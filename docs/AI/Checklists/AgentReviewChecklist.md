@@ -45,7 +45,7 @@ Verify:
 
 - [ ] Correct Phase identified
 - [ ] Correct Stage identified
-- [ ] Correct Historical Sprint identified
+- [ ] Correct Historical Capability identified
 - [ ] Task scope defined
 - [ ] Required documentation reviewed
 - [ ] Ownership clear
@@ -114,7 +114,7 @@ Verify:
 - [ ] No assumptions presented as facts
 - [ ] Architecture respected
 - [ ] Reference material treated as read-only
-- [ ] Historical Sprint identifiers preserved
+- [ ] Historical Capability identifiers preserved
 - [ ] Scope not exceeded
 - [ ] Project State is not advanced before certification
 

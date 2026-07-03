@@ -49,7 +49,7 @@ docs/AI/System/
 | `docs/AI/Validation/` | Defines evidence-based conformance, validation lifecycle, validation levels, checklist structure, and certification rules. |
 | `docs/AI/Commands/` | Defines bounded task execution commands for implementation, audit, documentation, bug fixes, and general tasks. |
 | `docs/AI/Workflows/` | Defines planning, task generation, and project-state update workflows. |
-| `docs/ProjectStatus.md` | Remains the only live operational Source of Truth for current phase, stage, active sprint, blockers, progress, and recommended next action. |
+| `docs/ProjectStatus.md` | Remains the only live operational Source of Truth for current phase, stage, active capability, blockers, progress, and recommended next action. |
 
 The System layer sits above these documents as a tool-facing operating layer. It tells agents how to use them in the correct order.
 
@@ -79,7 +79,7 @@ For execution in Forge AI, agents should use this tool-facing order:
 17. docs/AI/AIOrchestrator.md
 18. docs/ProjectStatus.md
 19. docs/AI/Workflows/TaskPlanner.md
-20. Relevant command, workflow, template, checklist, validation, phase, stage, and sprint documents
+20. Relevant command, workflow, template, checklist, validation, phase, stage, and capability documents
 ```
 
 When a higher-authority instruction provides a narrower required reading order, follow that instruction while preserving all required System responsibilities.

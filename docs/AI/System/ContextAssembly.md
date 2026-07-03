@@ -33,7 +33,7 @@ Context assembly prevents stale memory, conversational drift, and implementation
 
 ## Knowledge
 
-Knowledge is persistent documented information. It includes constitutions, specifications, governance documents, phase documents, stage documents, sprint records, commands, workflows, templates, checklists, and validation documents.
+Knowledge is persistent documented information. It includes constitutions, specifications, governance documents, phase documents, stage documents, capability records, commands, workflows, templates, checklists, and validation documents.
 
 ## State
 
@@ -62,7 +62,7 @@ docs/AI/AIOrchestrator.md
 docs/ProjectStatus.md
 Current Phase document
 Current Stage document, when present
-Active Sprint specification, when present
+Active Capability specification, when present
 Relevant Command document
 Relevant Validation documents
 ```
@@ -92,7 +92,7 @@ Use this procedure:
 3. Load System operating documents.
 4. Load Orchestrator and relevant workflows.
 5. Load ProjectStatus as live state.
-6. Resolve active phase, stage, and sprint documents.
+6. Resolve active phase, stage, and capability documents.
 7. Load the relevant command and checklist.
 8. Load relevant validation and certification documents.
 9. Inspect target files only after authority and state are understood.
@@ -107,7 +107,7 @@ Refresh context when:
 
 - a new task begins;
 - `docs/ProjectStatus.md` changes;
-- phase, stage, sprint, or recommended next action changes;
+- phase, stage, capability, or recommended next action changes;
 - validation, review, certification, or command documents change;
 - the agent resumes after interruption;
 - another actor may have changed files;

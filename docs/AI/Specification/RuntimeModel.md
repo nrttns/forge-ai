@@ -14,7 +14,7 @@
 
 This document defines how AI agents operate within the AI Framework.
 
-The runtime model is platform-independent and does not implement agents, providers, MCP, memory stores, tools, or swarm runtime code.
+The runtime model is framework-independent and does not implement agents, providers, MCP, memory stores, tools, or swarm runtime code.
 
 ---
 

@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Validate implementation task routing for an approved implementation sprint.
+Validate implementation task routing for an approved implementation capability.
 
 Scenario tests validate agent behaviour, not source code.
 
@@ -45,7 +45,7 @@ docs/AI/Validation/ValidationLevels.md
 docs/AI/Validation/ValidationCertification.md
 docs/AI/Checklists/AgentReviewChecklist.md
 docs/ProjectStatus.md
-Current phase, stage, and historical sprint documents where present
+Current phase, stage, and historical capability documents where present
 ```
 
 ---
@@ -62,7 +62,7 @@ Implementation may begin only after verifying:
 
 - active phase;
 - active stage;
-- historical sprint;
+- historical capability;
 - approved implementation objective;
 - subsystem ownership;
 - dependency direction;
@@ -73,9 +73,9 @@ Implementation may begin only after verifying:
 
 # Expected Use of SprintTemplate or Completion Report
 
-Use `docs/AI/Templates/SprintTemplate.md` when producing or maintaining sprint documentation.
+Use `docs/AI/Templates/SprintTemplate.md` when producing or maintaining capability documentation.
 
-If the task does not create or update sprint documentation, produce a completion report containing:
+If the task does not create or update capability documentation, produce a completion report containing:
 
 ```text
 Summary
@@ -110,9 +110,9 @@ Validation must be followed by review readiness and certification assessment bef
 # Forbidden Behaviours
 
 - Architecture redesign.
-- Future sprint scope.
+- Future capability scope.
 - Source changes outside task scope.
-- Changing historical sprint identifiers.
+- Changing historical capability identifiers.
 - Treating implementation as architecture authority.
 - Moving Schema, Domain, Runtime, Builder, Infrastructure, or Presentation ownership contrary to governance.
 - ProjectStatus update before certification.

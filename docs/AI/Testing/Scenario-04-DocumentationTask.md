@@ -59,7 +59,7 @@ Relevant template when applicable
 | --- | --- |
 | Phase document | `docs/AI/Templates/PhaseTemplate.md` |
 | Stage document | `docs/AI/Templates/StageTemplate.md` |
-| Historical Sprint document | `docs/AI/Templates/SprintTemplate.md` |
+| Historical Capability document | `docs/AI/Templates/SprintTemplate.md` |
 | Audit report | `docs/AI/Templates/AuditTemplate.md` |
 | No template applies | Follow AI Framework structure and document the deviation. |
 
@@ -74,7 +74,7 @@ The agent must verify:
 - cross references resolve to existing paths;
 - related framework documents remain synchronized;
 - documentation does not duplicate or redefine higher authority;
-- historical sprint identifiers are unchanged;
+- historical capability identifiers are unchanged;
 - `docs/ProjectStatus.md` remains the only live operational Source of Truth.
 
 ---
@@ -83,7 +83,7 @@ The agent must verify:
 
 - Inventing architecture.
 - Duplicating authority.
-- Changing sprint identifiers.
+- Changing capability identifiers.
 - Editing source code.
 - Treating reference material as implementation authority.
 - Updating ProjectStatus without completion evidence, review, and certification.

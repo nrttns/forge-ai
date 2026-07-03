@@ -45,7 +45,7 @@ The planner must answer:
 - Where is the project now?
 - Which Phase owns the work?
 - Which Stage owns the work?
-- Which Historical Sprint is active?
+- Which Historical Capability is active?
 - What type of work is required?
 - Which command should execute it?
 
@@ -60,18 +60,18 @@ The planner uses the canonical hierarchy:
 ```text
 Vision
     ↓
-Platform
+Framework
     ↓
 Phase
     ↓
 Stage
     ↓
-Historical Sprint
+Historical Capability
     ↓
 Task
 ```
 
-Historical Sprint identifiers are immutable.
+Historical Capability identifiers are immutable.
 
 They must never be renumbered.
 
@@ -89,7 +89,7 @@ docs/ProjectStatus.md
 docs/DevelopmentPhases/ForgeAI2-DevelopmentPhases.md
 Current Phase document
 Current Stage document or Phase Stage README
-Related Historical Sprint documentation when available
+Related Historical Capability documentation when available
 ```
 
 ---
@@ -103,7 +103,7 @@ Identify Current Phase
     ↓
 Identify Current Stage
     ↓
-Identify Historical Sprint
+Identify Historical Capability
     ↓
 Identify Objective
     ↓
@@ -126,7 +126,7 @@ The planner must identify:
 
 - Current Phase;
 - Current Stage;
-- Current Historical Sprint;
+- Current Historical Capability;
 - Current Objective;
 - Current Progress;
 - Next Milestone;
@@ -197,7 +197,7 @@ The selected command controls execution behaviour.
 | --- | --- |
 | Phase | `docs/AI/Templates/PhaseTemplate.md` |
 | Stage | `docs/AI/Templates/StageTemplate.md` |
-| Historical Sprint | `docs/AI/Templates/SprintTemplate.md` |
+| Historical Capability | `docs/AI/Templates/SprintTemplate.md` |
 | Audit | `docs/AI/Templates/AuditTemplate.md` |
 
 Templates define output contracts.
@@ -231,7 +231,7 @@ The planner must stop if:
 
 - Current Phase cannot be identified;
 - Current Stage cannot be identified;
-- Historical Sprint cannot be identified;
+- Historical Capability cannot be identified;
 - ProjectStatus.md conflicts with planning documents;
 - ownership is ambiguous;
 - required documents are missing;

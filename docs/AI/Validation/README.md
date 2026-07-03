@@ -64,7 +64,7 @@ docs/AI/Validation/
 | --- | --- |
 | `AIFrameworkValidation.md` | Defines validation philosophy, authority, objectives, evidence, outcomes, responsibilities, and relationship to framework components. |
 | `ValidationLifecycle.md` | Defines the operational lifecycle for planning, preparing, collecting evidence, executing validation, recording findings, supporting review, and determining certification readiness. |
-| `ValidationLevels.md` | Defines validation levels from individual document validation through platform validation. |
+| `ValidationLevels.md` | Defines validation levels from individual document validation through framework validation. |
 | `ValidationChecklistTemplate.md` | Provides a reusable checklist template for validating documents, commands, workflows, frameworks, platforms, and future implementations. |
 | `ValidationCertification.md` | Defines the relationship between validation, review, certification, and project state advancement. |
 
@@ -92,7 +92,7 @@ Review
 
 Validation verifies evidence-based conformance.
 
-Review independently evaluates readiness using `docs/AI/Checklists/AgentReviewChecklist.md` and any applicable command, workflow, sprint, stage, phase, or governance checklist.
+Review independently evaluates readiness using `docs/AI/Checklists/AgentReviewChecklist.md` and any applicable command, workflow, capability, stage, phase, or governance checklist.
 
 Validation findings support review. Review does not replace validation, and validation does not replace review.
 
