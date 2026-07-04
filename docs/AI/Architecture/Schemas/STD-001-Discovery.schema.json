@@ -1,0 +1,255 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forge-ai.local/schemas/std-001-discovery.schema.json",
+  "title": "Forge AI STD-001 Discovery Artifact",
+  "description": "Canonical JSON Schema for Forge AI Discovery artifacts.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "identity",
+    "classification",
+    "ownership",
+    "lifecycle",
+    "relationships",
+    "evidence",
+    "traceability",
+    "metadata"
+  ],
+  "properties": {
+    "identity": { "$ref": "#/$defs/identity" },
+    "classification": { "$ref": "#/$defs/classification" },
+    "ownership": { "$ref": "#/$defs/ownership" },
+    "lifecycle": { "$ref": "#/$defs/lifecycle" },
+    "relationships": { "$ref": "#/$defs/relationships" },
+    "evidence": { "$ref": "#/$defs/evidence" },
+    "aiProvenance": { "$ref": "#/$defs/aiProvenance" },
+    "traceability": { "$ref": "#/$defs/traceability" },
+    "validation": { "$ref": "#/$defs/validation" },
+    "metadata": { "$ref": "#/$defs/metadata" },
+    "extensions": { "$ref": "#/$defs/extensions" }
+  },
+  "$defs": {
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "version", "status", "createdAt", "updatedAt"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^DISC-[A-Z0-9]+-[0-9]{3,}$" },
+        "title": { "type": "string", "minLength": 3 },
+        "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(-[A-Za-z0-9.-]+)?$" },
+        "status": { "$ref": "#/$defs/lifecycleState" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      }
+    },
+    "classification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primaryDomain", "discoveryType", "severity", "confidence"],
+      "properties": {
+        "primaryDomain": {
+          "type": "string",
+          "enum": [
+            "DISC-ARCH",
+            "DISC-RUNTIME",
+            "DISC-GOV",
+            "DISC-PLAN",
+            "DISC-DOC",
+            "DISC-VAL",
+            "DISC-RISK",
+            "DISC-SEC",
+            "DISC-DEP",
+            "DISC-OWN",
+            "DISC-PERF",
+            "DISC-COMP",
+            "DISC-META",
+            "DISC-PLATFORM",
+            "DISC-API",
+            "DISC-AGENT",
+            "DISC-SWARM",
+            "DISC-KNOWLEDGE",
+            "DISC-MEMORY",
+            "DISC-CONTEXT"
+          ]
+        },
+        "secondaryTags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$" },
+          "default": []
+        },
+        "discoveryType": {
+          "type": "string",
+          "enum": [
+            "observation",
+            "gap",
+            "conflict",
+            "constraint",
+            "opportunity",
+            "weakness",
+            "defect",
+            "improvement",
+            "question",
+            "hypothesis"
+          ]
+        },
+        "severity": {
+          "type": "string",
+          "enum": ["SEV-0", "SEV-1", "SEV-2", "SEV-3", "SEV-4", "SEV-5", "SEV-6"]
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["CONF-0", "CONF-1", "CONF-2", "CONF-3", "CONF-4", "CONF-5"]
+        }
+      }
+    },
+    "ownership": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["owner", "authority"],
+      "properties": {
+        "owner": { "$ref": "#/$defs/actor" },
+        "authority": { "$ref": "#/$defs/actor" },
+        "steward": { "$ref": "#/$defs/actor" },
+        "maintainers": { "type": "array", "items": { "$ref": "#/$defs/actor" }, "default": [] },
+        "reviewers": { "type": "array", "items": { "$ref": "#/$defs/actor" }, "default": [] },
+        "consumers": { "type": "array", "items": { "$ref": "#/$defs/actor" }, "default": [] }
+      }
+    },
+    "actor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "type"],
+      "properties": {
+        "id": { "type": "string", "minLength": 2 },
+        "name": { "type": "string", "minLength": 2 },
+        "type": {
+          "type": "string",
+          "enum": ["human", "team", "governance-body", "ai-agent", "runtime-system", "platform-adapter"]
+        }
+      }
+    },
+    "lifecycle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "history"],
+      "properties": {
+        "state": { "$ref": "#/$defs/lifecycleState" },
+        "history": { "type": "array", "items": { "$ref": "#/$defs/lifecycleTransition" }, "default": [] }
+      }
+    },
+    "lifecycleState": {
+      "type": "string",
+      "enum": ["draft", "observed", "verified", "accepted", "consumed", "historical", "archived"]
+    },
+    "lifecycleTransition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["from", "to", "transitionedAt", "authority", "reason"],
+      "properties": {
+        "from": { "$ref": "#/$defs/lifecycleState" },
+        "to": { "$ref": "#/$defs/lifecycleState" },
+        "transitionedAt": { "type": "string", "format": "date-time" },
+        "authority": { "$ref": "#/$defs/actor" },
+        "reason": { "type": "string", "minLength": 3 },
+        "evidenceRefs": { "type": "array", "items": { "type": "string" }, "default": [] }
+      }
+    },
+    "relationships": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/relationship" },
+      "default": []
+    },
+    "relationship": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "target"],
+      "properties": {
+        "id": { "type": "string", "minLength": 2 },
+        "type": {
+          "type": "string",
+          "enum": [
+            "DISCOVERED_BY",
+            "SUPPORTED_BY",
+            "PRODUCES",
+            "IDENTIFIES",
+            "RECOMMENDS",
+            "RESULTS_IN",
+            "VALIDATED_BY",
+            "CERTIFIED_BY"
+          ]
+        },
+        "target": { "type": "string", "minLength": 2 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "authority": { "$ref": "#/$defs/actor" }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/evidenceItem" },
+      "default": []
+    },
+    "evidenceItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "source"],
+      "properties": {
+        "id": { "type": "string", "minLength": 2 },
+        "type": { "type": "string", "minLength": 2 },
+        "source": { "type": "string", "minLength": 2 },
+        "uri": { "type": "string", "format": "uri" },
+        "hash": { "type": "string" },
+        "capturedAt": { "type": "string", "format": "date-time" }
+      }
+    },
+    "aiProvenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "generatedBy": { "type": "string" },
+        "model": { "type": "string" },
+        "modelVersion": { "type": "string" },
+        "reasoningSummary": { "type": "string" },
+        "confidenceExplanation": { "type": "string" },
+        "generatedAt": { "type": "string", "format": "date-time" }
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["origin"],
+      "properties": {
+        "origin": { "type": "string", "minLength": 2 },
+        "parentDiscovery": { "type": "string" },
+        "derivedArtifacts": { "type": "array", "items": { "type": "string" }, "default": [] }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": { "type": "string", "enum": ["pending", "passed", "failed"] },
+        "validator": { "$ref": "#/$defs/actor" },
+        "validatedAt": { "type": "string", "format": "date-time" },
+        "failedChecks": { "type": "array", "items": { "type": "string" }, "default": [] }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "labels": { "type": "array", "items": { "type": "string" }, "default": [] },
+        "keywords": { "type": "array", "items": { "type": "string" }, "default": [] },
+        "component": { "type": "string" },
+        "repository": { "type": "string" },
+        "project": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    },
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "Reserved extension point for governance-approved schema extensions. Extensions shall not redefine canonical fields."
+    }
+  }
+}
