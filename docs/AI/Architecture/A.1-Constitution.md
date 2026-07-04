@@ -1364,3 +1364,23 @@ It contains 48 constitutional terms across 10 categories, cross-referenced with 
 The full constitutional case study collection is maintained as a standalone document: [Appendix B — Constitutional Case Studies](./Appendix/A.1-Constitution-Appendix-B-Constitutional-Case-Studies.md).
 
 It contains 6 illustrative case studies derived from the Constitution's principles, violation categories, amendment procedures, and compliance expectations, demonstrating how constitutional governance applies in realistic architectural scenarios.
+
+### Appendix C: Constitutional Decision Patterns
+
+The full constitutional decision patterns is maintained as a standalone document: [Appendix C — Constitutional Decision Patterns](./Appendix/A.1-Constitution-Appendix-C-Constitutional-Decision-Patterns.md).
+
+### Appendix D: Constitutional Compliance Matrix
+
+The full constitutional compliance matrix is maintained as a standalone document: [Appendix D — Constitutional Compliance Matrix](./Appendix/A.1-Constitution-Appendix-D-Constitutional-Compliance-Matrix.md).
+
+### Appendix E: Constitutional Anti-Patterns
+
+The full constitutional anti-patterns is maintained as a standalone document: [Appendix E — Constitutional Anti-Patterns](./Appendix/A.1-Constitution-Appendix-E-Constitutional-Anti-Patterns.md).
+
+### Appendix F: Amendment-Examples
+
+The full amendment examples is maintained as a standalone document: [Appendix F — Amendment Examples](./Appendix/A.1-Constitution-Appendix-F-Amendment-Examples.md).
+
+### Appendix G: Constitutional Compliance Checklist
+
+The full constitutional Compliance checklist is maintained as a standalone document: [Appendix G — Constitutional Compliance Checklist](./Appendix/A.1-Constitution-Appendix-G-Constitutional-Compliance-Checklist.md).

@@ -1,0 +1,10 @@
+A.0  Reality
+A.1  Law
+A.2  Philosophy
+A.3  Language
+A.4  Structure
+A.5  Behavior
+A.6  Intelligence
+A.7  Authority
+A.8  Ownership
+A.9  Lifecycle

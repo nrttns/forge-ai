@@ -1,6 +1,6 @@
 # Appendix A: Constitutional Glossary
 
-> **Parent Document:** [A.1 — Constitution](./A.1-Constitution.md) (`FORGE-ARCH-A.1`)
+> **Parent Document:** [A.1 — Constitution](../A.1-Constitution.md) (`FORGE-ARCH-A.1`)
 > **Version:** 3.0.0-beta
 > **Status:** Draft
 
