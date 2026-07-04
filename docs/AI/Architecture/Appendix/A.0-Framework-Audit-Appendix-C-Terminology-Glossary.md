@@ -1,6 +1,6 @@
 # Appendix C: Terminology Glossary Extract
 
-> **Parent Document:** [A.0 — Framework Audit](./A.0-Framework-Audit.md) (`FORGE-AUDIT-A.0`)
+> **Parent Document:** [A.0 — Framework Audit](../A.0-Framework-Audit.md) (`FORGE-AUDIT-A.0`)
 > **Version:** 3.0.0-beta
 > **Status:** Draft
 

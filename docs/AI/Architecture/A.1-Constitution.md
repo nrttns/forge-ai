@@ -1353,12 +1353,14 @@ The Next Document section formally closes the Constitution and authorizes the tr
 
 ## Appendices
 
-Appendices are reserved for future supporting materials, including expanded definitions, constitutional case studies, and governance templates.
+### Appendix A: Constitutional Glossary
 
-### Appendix A: Glossary (Placeholder)
+The full constitutional glossary is maintained as a standalone document: [Appendix A — Constitutional Glossary](./Appendix/A.1-Constitution-Appendix-A-Glossary.md).
 
-*Reserved for future content. A preliminary glossary is maintained in [Appendix C — Terminology Glossary Extract](./A.0-Framework-Audit-Appendix-C-Terminology-Glossary.md) of the A.0 Framework Audit.*
+It contains 48 constitutional terms across 10 categories, cross-referenced with the A.0 Terminology Glossary where applicable. Terms already canonicalized in A.0 are cross-referenced rather than redefined, preserving the single source of truth principle established in [Section 9 — Source of Truth](#9-source-of-truth).
 
-### Appendix B: Constitutional Case Studies (Placeholder)
+### Appendix B: Constitutional Case Studies
 
-*Reserved for future content.*
+The full constitutional case study collection is maintained as a standalone document: [Appendix B — Constitutional Case Studies](./Appendix/A.1-Constitution-Appendix-B-Constitutional-Case-Studies.md).
+
+It contains 6 illustrative case studies derived from the Constitution's principles, violation categories, amendment procedures, and compliance expectations, demonstrating how constitutional governance applies in realistic architectural scenarios.
