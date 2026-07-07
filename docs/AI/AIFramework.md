@@ -22,6 +22,18 @@ This document is the master entry point. Detailed RC2 architecture is split into
 
 ---
 
+# v3 Transitional Authority Notice
+
+RC2 remains the operational compatibility layer during Forge AI v3 migration. Existing RC2 operational documents, commands, workflows, templates, validation procedures, and specification mappings remain valid until approved replacements exist.
+
+Forge AI v3 is the target architecture. `docs/AI/Architecture/A.1-Constitution.md`, `docs/AI/Meta/M.0-Framework-Meta-Model.md`, `docs/AI/Meta/M.1-Artifact-Meta-Model.md`, and `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md` are target authority candidates until explicitly approved and promoted through governance.
+
+`docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md` is planning input and Blueprint RFC material only. It is not canonical authority until ratified.
+
+The existing RC2 Specification Map must remain in effect until replacement v3 documents are approved, operationally mapped, and explicitly promoted.
+
+---
+
 # RC2 Specification Map
 
 | Area | Document | Purpose |

@@ -48,6 +48,18 @@ Generated Task
 
 Capability identifiers are immutable after certification.
 
+## 0.1 Forge AI v3 Transitional Authority
+
+During Forge AI v3 migration, `AGENTS.md` remains the bootstrap authority before, during, and after transition.
+
+`docs/AI/Architecture/A.1-Constitution.md`, `docs/AI/Meta/M.0-Framework-Meta-Model.md`, `docs/AI/Meta/M.1-Artifact-Meta-Model.md`, and `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md` are target v3 authority candidates until explicitly approved and promoted through governance.
+
+No v3 architecture, meta model, standard, RFC, report, or blueprint supersedes this document unless this document is explicitly amended to recognize that promotion.
+
+The Forge AI Blueprint RFC remains transitional and non-canonical until ratified by Framework Governance and explicitly referenced by this document or another approved authority document.
+
+RC2 operational procedures remain valid until they are explicitly replaced by approved v3 operational procedures.
+
 ---
 
 # 1. Mission

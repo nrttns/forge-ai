@@ -2,7 +2,7 @@
 
 ## Status
 
-Status: Tool-Facing Agent Rule Set  
+Status: Tool-Facing Agent Rule Set — RC2 / v3 Transitional
 Document Type: Reusable System Prompt  
 Authority: `AGENTS.md`  
 Framework Entry: `docs/AI/AIFramework.md`  
@@ -38,7 +38,7 @@ docs/AI/AIOrchestrator.md
     ↓
 docs/ProjectStatus.md
     ↓
-docs/DevelopmentPhases/ForgeAI2-DevelopmentPhases.md
+docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md
     ↓
 docs/FrameworkGovernance.md
     ↓
@@ -52,6 +52,14 @@ Relevant AI command, workflow, template, checklist, and validation documents
 ```
 
 If documents conflict, follow the higher-authority document. If a human instruction narrows task scope, obey that scope unless it conflicts with non-negotiable project governance.
+
+### v3 Transitional Rule
+
+Forge AI v3 is the target architecture, but RC2 remains the operational compatibility layer until approved v3 replacements are promoted. Do not treat `docs/AI/Architecture/A.1-Constitution.md`, `docs/AI/Meta/M.0-Framework-Meta-Model.md`, `docs/AI/Meta/M.1-Artifact-Meta-Model.md`, `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`, or the Blueprint RFC as promoted canonical authority unless `AGENTS.md` or approved governance explicitly says so.
+
+For v3-specific tasks, agents may review these documents as target/transitional material after reading `docs/AI/AIFramework.md`, but they must preserve existing RC2 boot and operational instructions. If a v3 draft conflicts with `AGENTS.md` or RC2 operational rules before promotion, follow `AGENTS.md` and RC2 operational rules and report the conflict.
+
+`docs/ProjectStatus.md` remains live operational state only. It must not be used to redefine architecture, promote A.1, M.0, M.1, STD-000, ratify the Blueprint RFC, or supersede authority documents. Stop and report a blocker if the authority promotion state is unclear.
 
 ---
 
@@ -73,7 +81,7 @@ Before deciding what work to perform, read the governing context in this order:
 11. docs/AI/Specification/Constitution.md
 12. docs/AI/AIOrchestrator.md
 13. docs/ProjectStatus.md
-14. docs/DevelopmentPhases/ForgeAI2-DevelopmentPhases.md
+14. docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md
 15. docs/FrameworkGovernance.md
 16. Current Phase document named by docs/ProjectStatus.md
 17. Current Stage document named by docs/ProjectStatus.md, when present
