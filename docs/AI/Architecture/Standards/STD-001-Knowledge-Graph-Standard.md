@@ -5,7 +5,7 @@
 
 # STD-001 — Knowledge Graph Standard
 
-> **Authority:** [STD-000 — Framework Standards](../STD-000-Framework-Standards.md) (`FORGE-STD-000`), [M.0 — Framework Meta Model](../M.0-Framework-Meta-Model.md) (`FORGE-META-000`), [A.1 — Constitution](../A.1-Constitution.md) (`FORGE-A-001`)
+> **Authority:** Human Governance → `AGENTS.md` → [A.1 — Constitution](../A.1-Constitution.md) (`FORGE-A-001`) → Forge AI Blueprint RFC → [M.0 — Framework Meta Model](../../Meta/M.0-Framework-Meta-Model.md) (`FORGE-META-000`) → [M.1 — Artifact Meta Model](../../Meta/M.1-Artifact-Meta-Model.md) (`FORGE-META-001`) → [STD-000 — Framework Standards](STD-000-Framework-Standards.md) (`FORGE-STD-000`) → this standard. Runtime and Engine Architecture consume this standard; they do not supersede it.
 >
 > **Document Type:** Technical Graph Specification
 >
@@ -17,7 +17,7 @@
 >
 > **Certification Level:** Not yet certified
 >
-> **Version:** `3.0.0-beta`
+> **Version:** `3.1.0-beta`
 >
 > **Status:** Draft
 
@@ -30,7 +30,7 @@
 | Document ID | STD-001 |
 | Document Title | Knowledge Graph Standard |
 | Identifier | `FORGE-STD-001` |
-| Version | `3.0.0-beta` |
+| Version | `3.1.0-beta` |
 | Status | Draft |
 | Type | Technical Graph Specification |
 | Governance Classification | Core |
@@ -40,7 +40,7 @@
 | Maintainers | Framework Architecture Team |
 | Directory | `docs/AI/Architecture/Standards/` |
 | Created | 2026-07-04 |
-| Last Modified | 2026-07-06 |
+| Last Modified | 2026-07-07 |
 | Compliance Level | L1 — Draft |
 | Certification Level | Not yet certified |
 
@@ -54,6 +54,7 @@
 | `2.0.0-alpha` | 2026-07-05 | Framework Architecture Team | Structural revisions |
 | `3.0.0-beta`  | 2026-07-06 | Technical Editorial        | Publication-quality refactor |
 | `3.0.1-beta`  | 2026-07-06 | Standards Governance Remediation | Standards compliance remediation per AUD-001 against STD-000 v3.1.0 |
+| `3.1.0-beta`  | 2026-07-07 | Framework Architecture Team | Architectural realignment with A.3 Runtime Architecture RFC and A.4 Engine Architecture RFC while preserving approved graph semantics. |
 
 ---
 
@@ -61,9 +62,13 @@
 
 | Document | Relationship |
 |:---|:---|
-| [STD-000 — Framework Standards](../STD-000-Framework-Standards.md) (`FORGE-STD-000`) | Governing standard |
-| [M.0 — Framework Meta Model](../M.0-Framework-Meta-Model.md) (`FORGE-META-000`) | Conceptual type system |
+| [STD-000 — Framework Standards](STD-000-Framework-Standards.md) (`FORGE-STD-000`) | Governing standard |
+| [M.0 — Framework Meta Model](../../Meta/M.0-Framework-Meta-Model.md) (`FORGE-META-000`) | Conceptual type system |
 | [A.1 — Constitution](../A.1-Constitution.md) (`FORGE-A-001`) | Constitutional authority |
+| [M.1 — Artifact Meta Model](../../Meta/M.1-Artifact-Meta-Model.md) (`FORGE-META-001`) | Artifact participation and projection contract |
+| [STD-002 — Discovery Standard](STD-002-Discovery-Standard.md) (`FORGE-STD-002`) | Discovery consumer of Knowledge Graph semantics |
+| [A.3 — Runtime Architecture RFC](../../Runtime/A.3-Runtime-Architecture-RFC.md) | Runtime consumer of graph projections and traversal rules |
+| [A.4 — Engine Architecture RFC](../../Runtime/A.4-Engine-Architecture-RFC.md) | Engine Platform consumer of graph semantics |
 | STD-001 Discovery JSON Schema | Serialization projection |
 | STD-001 Discovery YAML Schema | Serialization projection |
 | Appendix A — Discovery Classification Catalog | Reference taxonomy |
@@ -124,6 +129,7 @@
 29. [References](#29-references)
 30. [Next Standard](#30-next-standard)
 31. [Compliance Remediation Record](#31-compliance-remediation-record)
+32. [Engine Platform Architectural Alignment](#32-engine-platform-architectural-alignment)
 - [Appendix A — Glossary of Terms](#appendix-a--glossary-of-terms)
 - [Appendix B — Relationship Reference Card](#appendix-b--relationship-reference-card)
 - [Appendix C — Node Reference Card](#appendix-c--node-reference-card)
@@ -147,7 +153,7 @@
 |:---|:---|
 | Document | STD-001 — Knowledge Graph Standard |
 | Identifier | `FORGE-STD-001` |
-| Version | `3.0.0-beta` |
+| Version | `3.1.0-beta` |
 | Status | Draft |
 | Governance Classification | Core |
 | Domain Taxonomy | Schema Standards |
@@ -5584,7 +5590,7 @@ All current and future Forge AI Standards shall treat this document as the autho
 | Property | Value |
 |:---|:---|
 | Document Status | Complete |
-| Version | `3.0.0-beta` |
+| Version | `3.1.0-beta` |
 | Classification | Normative Framework Standard |
 | Authority | Forge AI Architecture Board |
 | Lifecycle State | Approved for Framework Integration |
@@ -5625,7 +5631,7 @@ The following appendices provide reference material supporting the Forge AI Know
 
 ## 21.1 Overview
 
-This section declares the lifecycle state of STD-001 — Knowledge Graph Standard in accordance with [STD-000 §9 — Standards Lifecycle](../STD-000-Framework-Standards.md#9-standards-lifecycle) and [STD-000 §23 — Standard Lifecycle State Machine](../STD-000-Framework-Standards.md#23-standard-lifecycle-state-machine).
+This section declares the lifecycle state of STD-001 — Knowledge Graph Standard in accordance with [STD-000 §9 — Standards Lifecycle](STD-000-Framework-Standards.md#9-standards-lifecycle) and [STD-000 §23 — Standard Lifecycle State Machine](STD-000-Framework-Standards.md#23-standard-lifecycle-state-machine).
 
 ## 21.2 Current State
 
@@ -5639,7 +5645,7 @@ This section declares the lifecycle state of STD-001 — Knowledge Graph Standar
 
 ## 21.3 Lifecycle Model
 
-This standard follows the lifecycle model defined by [STD-000 §9](../STD-000-Framework-Standards.md#9-standards-lifecycle) and [STD-000 §23](../STD-000-Framework-Standards.md#23-standard-lifecycle-state-machine).
+This standard follows the lifecycle model defined by [STD-000 §9](STD-000-Framework-Standards.md#9-standards-lifecycle) and [STD-000 §23](STD-000-Framework-Standards.md#23-standard-lifecycle-state-machine).
 
 The expected progression for this standard is:
 
@@ -5661,7 +5667,7 @@ Proposed → Draft → Review → Validated → Certified → Canonical
 
 ## 21.5 Compliance Level Declaration
 
-Per [STD-000 §24](../STD-000-Framework-Standards.md#24-compliance-levels), this standard declares:
+Per [STD-000 §24](STD-000-Framework-Standards.md#24-compliance-levels), this standard declares:
 
 | Level | Name | Status |
 |:---|:---|:---|
@@ -5682,9 +5688,9 @@ This section is complete when the current lifecycle state, compliance level, cer
 
 ## 22.1 Overview
 
-This section defines the governance model for STD-001 — Knowledge Graph Standard in accordance with [STD-000 §13 — Governance](../STD-000-Framework-Standards.md#13-governance).
+This section defines the governance model for STD-001 — Knowledge Graph Standard in accordance with [STD-000 §13 — Governance](STD-000-Framework-Standards.md#13-governance).
 
-This standard is governed under the authority chain established by [STD-000 §5](../STD-000-Framework-Standards.md#5-authority):
+This standard is governed under the authority chain established by [STD-000 §5](STD-000-Framework-Standards.md#5-authority):
 
 - **Human Governance** — Final constitutional authority over all Framework Standards.
 - [A.1 — Constitution](../A.1-Constitution.md) — Supreme constitutional authority.
@@ -5702,7 +5708,7 @@ This standard is governed under the authority chain established by [STD-000 §5]
 
 ## 22.3 Governance Workflow
 
-This standard follows the governance workflow defined by [STD-000 §13](../STD-000-Framework-Standards.md#13-governance):
+This standard follows the governance workflow defined by [STD-000 §13](STD-000-Framework-Standards.md#13-governance):
 
 ```
 Proposal → Drafting → Validation → Governance Review → Certification → Canonical Publication → Maintenance & Evolution
@@ -5710,7 +5716,7 @@ Proposal → Drafting → Validation → Governance Review → Certification →
 
 ## 22.4 Change Management
 
-Every significant change to this standard shall include, per [STD-000 §13](../STD-000-Framework-Standards.md#13-governance):
+Every significant change to this standard shall include, per [STD-000 §13](STD-000-Framework-Standards.md#13-governance):
 
 - Rationale for the change
 - Supporting evidence
@@ -5721,7 +5727,7 @@ Every significant change to this standard shall include, per [STD-000 §13](../S
 
 ## 22.5 Decision Records
 
-Significant decisions made during the creation, evolution, or governance of this standard shall be documented as Standard Decision Records (SDRs) per [STD-000 §29](../STD-000-Framework-Standards.md#29-standard-decision-record). SDRs shall be referenced in the revision history of this standard.
+Significant decisions made during the creation, evolution, or governance of this standard shall be documented as Standard Decision Records (SDRs) per [STD-000 §29](STD-000-Framework-Standards.md#29-standard-decision-record). SDRs shall be referenced in the revision history of this standard.
 
 ## 22.6 Success Criteria
 
@@ -5733,11 +5739,11 @@ This section is complete when governance roles, workflow, change management, and
 
 ## 23.1 Overview
 
-This section defines the certification expectations for STD-001 — Knowledge Graph Standard in accordance with [STD-000 §15 — Certification](../STD-000-Framework-Standards.md#15-certification) and [STD-000 §27 — Certification Levels](../STD-000-Framework-Standards.md#27-certification-levels).
+This section defines the certification expectations for STD-001 — Knowledge Graph Standard in accordance with [STD-000 §15 — Certification](STD-000-Framework-Standards.md#15-certification) and [STD-000 §27 — Certification Levels](STD-000-Framework-Standards.md#27-certification-levels).
 
 ## 23.2 Certification Prerequisites
 
-Before certification, this standard shall satisfy the prerequisites defined by [STD-000 §15](../STD-000-Framework-Standards.md#15-certification):
+Before certification, this standard shall satisfy the prerequisites defined by [STD-000 §15](STD-000-Framework-Standards.md#15-certification):
 
 - Completed validation per STD-000 §14
 - Resolved all blocking findings
@@ -5748,7 +5754,7 @@ Before certification, this standard shall satisfy the prerequisites defined by [
 
 ## 23.3 Certification Workflow
 
-Certification shall follow the process defined by [STD-000 §15](../STD-000-Framework-Standards.md#15-certification):
+Certification shall follow the process defined by [STD-000 §15](STD-000-Framework-Standards.md#15-certification):
 
 ```
 Validation Complete → Governance Review → Independent Review → Certification Decision
@@ -5760,7 +5766,7 @@ Validation Complete → Governance Review → Independent Review → Certificati
 
 ## 23.4 Certification Record
 
-Upon certification, a record shall be created per [STD-000 §15](../STD-000-Framework-Standards.md#15-certification) containing:
+Upon certification, a record shall be created per [STD-000 §15](STD-000-Framework-Standards.md#15-certification) containing:
 
 - Certification ID
 - Standard Identifier
@@ -5774,7 +5780,7 @@ Upon certification, a record shall be created per [STD-000 §15](../STD-000-Fram
 
 ## 23.5 Certification Level
 
-Per [STD-000 §27](../STD-000-Framework-Standards.md#27-certification-levels):
+Per [STD-000 §27](STD-000-Framework-Standards.md#27-certification-levels):
 
 | Level | Status | Requirements |
 |:---|:---|:---|
@@ -5793,11 +5799,11 @@ This section is complete when certification prerequisites, workflow, record requ
 
 ## 24.1 Overview
 
-This section defines the versioning policy for STD-001 — Knowledge Graph Standard in accordance with [STD-000 §16 — Versioning](../STD-000-Framework-Standards.md#16-versioning).
+This section defines the versioning policy for STD-001 — Knowledge Graph Standard in accordance with [STD-000 §16 — Versioning](STD-000-Framework-Standards.md#16-versioning).
 
 ## 24.2 Version Format
 
-This standard uses Semantic Versioning per [STD-000 §16](../STD-000-Framework-Standards.md#16-versioning):
+This standard uses Semantic Versioning per [STD-000 §16](STD-000-Framework-Standards.md#16-versioning):
 
 ```
 MAJOR.MINOR.PATCH[-STATUS]
@@ -5816,7 +5822,7 @@ Current version: `3.0.1-beta`
 
 ## 24.4 Compatibility Rules
 
-Per [STD-000 §16](../STD-000-Framework-Standards.md#16-versioning):
+Per [STD-000 §16](STD-000-Framework-Standards.md#16-versioning):
 
 - Major releases may introduce breaking changes to the graph model.
 - Minor releases shall remain backward compatible with the graph model.
@@ -5848,11 +5854,11 @@ This section is complete when version format, semantics, compatibility rules, an
 
 ## 25.1 Overview
 
-This section defines the migration expectations for STD-001 — Knowledge Graph Standard in accordance with [STD-000 §17 — Migration](../STD-000-Framework-Standards.md#17-migration).
+This section defines the migration expectations for STD-001 — Knowledge Graph Standard in accordance with [STD-000 §17 — Migration](STD-000-Framework-Standards.md#17-migration).
 
 ## 25.2 Migration Principles
 
-This standard adheres to the migration principles defined by [STD-000 §17](../STD-000-Framework-Standards.md#17-migration):
+This standard adheres to the migration principles defined by [STD-000 §17](STD-000-Framework-Standards.md#17-migration):
 
 - Migration shall preserve history
 - Migration shall be governed
@@ -5865,7 +5871,7 @@ This standard adheres to the migration principles defined by [STD-000 §17](../S
 Migration of this standard may be initiated when:
 
 - A major version introduces breaking changes to the graph model
-- The [Meta Model](../M.0-Framework-Meta-Model.md) evolves
+- The [Meta Model](../../Meta/M.0-Framework-Meta-Model.md) evolves
 - Constitutional amendments affect this standard
 - This standard is superseded or merged
 
@@ -5875,7 +5881,7 @@ Graph-level migration paths (node type changes, relationship type changes, topol
 
 ## 25.5 Deprecation Rules
 
-Per [STD-000 §17](../STD-000-Framework-Standards.md#17-migration), if this standard is deprecated:
+Per [STD-000 §17](STD-000-Framework-Standards.md#17-migration), if this standard is deprecated:
 
 - It shall remain referenceable
 - It shall identify its successor
@@ -5892,14 +5898,14 @@ This section is complete when migration principles, triggers, and deprecation ru
 
 ## 26.1 Overview
 
-This section declares the normative and informative dependencies of STD-001 — Knowledge Graph Standard in accordance with [STD-000 §22 — Standard Dependency Matrix](../STD-000-Framework-Standards.md#22-standard-dependency-matrix).
+This section declares the normative and informative dependencies of STD-001 — Knowledge Graph Standard in accordance with [STD-000 §22 — Standard Dependency Matrix](STD-000-Framework-Standards.md#22-standard-dependency-matrix).
 
 ## 26.2 Normative Dependencies
 
 | Dependency | Identifier | Relationship |
 |:---|:---|:---|
-| [STD-000 — Framework Standards](../STD-000-Framework-Standards.md) | `FORGE-STD-000` | Governing standard; provides structure, lifecycle, governance, and validation requirements. |
-| [M.0 — Framework Meta Model](../M.0-Framework-Meta-Model.md) | `FORGE-META-000` | Provides conceptual type system: Artifact, Entity, Identity, Relationship, Lifecycle, Authority, Ownership, Evidence. |
+| [STD-000 — Framework Standards](STD-000-Framework-Standards.md) | `FORGE-STD-000` | Governing standard; provides structure, lifecycle, governance, and validation requirements. |
+| [M.0 — Framework Meta Model](../../Meta/M.0-Framework-Meta-Model.md) | `FORGE-META-000` | Provides conceptual type system: Artifact, Entity, Identity, Relationship, Lifecycle, Authority, Ownership, Evidence. |
 | [A.1 — Constitution](../A.1-Constitution.md) | `FORGE-A-001` | Constitutional authority; Human Governance supremacy. |
 
 ## 26.3 Informative Dependencies
@@ -5925,7 +5931,7 @@ This section is complete when all normative and informative dependencies are exp
 
 ## 27.1 Overview
 
-This section declares the capability matrix for STD-001 — Knowledge Graph Standard in accordance with [STD-000 §25 — Capability Matrix](../STD-000-Framework-Standards.md#25-capability-matrix).
+This section declares the capability matrix for STD-001 — Knowledge Graph Standard in accordance with [STD-000 §25 — Capability Matrix](STD-000-Framework-Standards.md#25-capability-matrix).
 
 ## 27.2 Capabilities Owned
 
@@ -5983,7 +5989,7 @@ This section is complete when capabilities owned, consumed, and produced are exp
 
 ## 28.1 Overview
 
-This section provides the canonical, machine-readable metadata for STD-001 — Knowledge Graph Standard in accordance with [STD-000 §26 — Canonical Metadata Schema](../STD-000-Framework-Standards.md#26-canonical-metadata-schema).
+This section provides the canonical, machine-readable metadata for STD-001 — Knowledge Graph Standard in accordance with [STD-000 §26 — Canonical Metadata Schema](STD-000-Framework-Standards.md#26-canonical-metadata-schema).
 
 ## 28.2 Structured Metadata
 
@@ -6035,8 +6041,8 @@ This section is complete when all required fields from STD-000 §26 are populate
 | Reference | Identifier | Description |
 |:---|:---|:---|
 | [A.1 — Constitution](../A.1-Constitution.md) | `FORGE-A-001` | The constitutional authority governing all Framework Standards. |
-| [M.0 — Framework Meta Model](../M.0-Framework-Meta-Model.md) | `FORGE-META-000` | The conceptual type system consumed by all Framework Standards. |
-| [STD-000 — Framework Standards](../STD-000-Framework-Standards.md) | `FORGE-STD-000` | The governing standard for the Standards Library. |
+| [M.0 — Framework Meta Model](../../Meta/M.0-Framework-Meta-Model.md) | `FORGE-META-000` | The conceptual type system consumed by all Framework Standards. |
+| [STD-000 — Framework Standards](STD-000-Framework-Standards.md) | `FORGE-STD-000` | The governing standard for the Standards Library. |
 
 ## 29.2 Informative References
 
@@ -6068,7 +6074,7 @@ STD-001 — Knowledge Graph Standard establishes the canonical graph model for r
 
 ## 30.3 Successor Standards
 
-Per [STD-000 §22 — Standard Dependency Matrix](../STD-000-Framework-Standards.md#22-standard-dependency-matrix), the following standards form the continuation of the Standards Library:
+Per [STD-000 §22 — Standard Dependency Matrix](STD-000-Framework-Standards.md#22-standard-dependency-matrix), the following standards form the continuation of the Standards Library:
 
 | Standard | Title | Relationship to STD-001 |
 |:---|:---|:---|
@@ -6140,9 +6146,152 @@ This section is complete when the remediation metadata, dispositions, and ration
 
 ---
 
+# 32. Engine Platform Architectural Alignment
+
+## 32.1 Executive Summary
+
+STD-001 remains the canonical Knowledge Graph Standard for Forge AI. This architectural realignment aligns STD-001 with the v3 Runtime Architecture and Engine Platform without changing approved graph semantics.
+
+The Knowledge Graph defines canonical architectural semantics. Nodes remain the canonical representation of architectural knowledge. Edges remain the canonical representation of architectural relationships. Graph topology remains the canonical architecture. Identity remains immutable. Traversal remains deterministic. Governance traceability remains mandatory.
+
+The Engine Platform introduced by [A.4 — Engine Architecture RFC](../../Runtime/A.4-Engine-Architecture-RFC.md) consumes graph semantics through governed runtime and engine interactions. It shall not redefine node types, relationship types, graph topology, identity, graph invariants, traceability, or canonical semantics.
+
+## 32.2 Architectural Alignment Report
+
+This section is an alignment layer only. It recognizes Runtime and Engine Architecture concepts so that future Engine RFCs can safely consume STD-001 without architectural conflict. It does not redesign the Knowledge Graph, Discovery, Runtime, Engine Architecture, Standards, or implementation mechanisms.
+
+### 32.2.1 Canonical Knowledge Graph Position
+
+The Knowledge Graph is the canonical semantic layer of Forge AI architectural knowledge.
+
+| Graph Element | Canonical Role | Alignment Rule |
+|:---|:---|:---|
+| Nodes | Canonical representation of architectural knowledge | Engine and Runtime artifacts may reference, project, validate, or traverse nodes; they shall not redefine node semantics. |
+| Edges | Canonical representation of architectural relationships | Engine and Runtime artifacts may consume relationship evidence; they shall not redefine relationship semantics. |
+| Graph topology | Canonical architecture of governed knowledge relationships | Engine coordination may consume topology for routing, planning, validation, review, and certification; it shall not replace topology. |
+| Identity | Immutable graph and artifact identity anchor | Engine registries may store identifiers and metadata; they shall not mint conflicting canonical identities. |
+| Traversal | Deterministic graph navigation governed by STD-001 | Runtime and Engines may execute traversal but shall preserve deterministic ordering and traceability. |
+| Traceability | Mandatory evidence chain across authority, artifacts, relationships, validation, review, and certification | Engine telemetry and records may enrich trace evidence; they shall not become canonical truth by themselves. |
+
+### 32.2.2 Recognized Engine Platform Concepts
+
+STD-001 recognizes the following Engine Platform concepts as Runtime / Engine Architecture concepts defined by [A.3 — Runtime Architecture RFC](../../Runtime/A.3-Runtime-Architecture-RFC.md), [A.4 — Engine Architecture RFC](../../Runtime/A.4-Engine-Architecture-RFC.md), and future governed Engine specifications. STD-001 defines only how these concepts interact with the Knowledge Graph.
+
+| Engine Concept | Knowledge Graph Interaction | Non-Redefinition Boundary |
+|:---|:---|:---|
+| Engine Platform | Consumes graph semantics for governed execution coordination. | Does not define canonical graph semantics. |
+| Engine Kernel | May coordinate controlled traversal and graph-derived context intake. | Does not alter graph invariants or topology. |
+| Engine Contract | May declare graph dependencies, graph inputs, graph outputs, validation evidence, and traceability expectations. | Does not create new node or relationship semantics unless approved by Standards governance. |
+| Engine Registry | Stores graph-related metadata, identifiers, projections, discoverability records, and engine capability references. | Does not become the semantic authority for the Knowledge Graph. |
+| Engine Lifecycle | May use graph state, evidence, validation, review, and certification relationships. | Does not replace STD-001 graph evolution rules. |
+| Engine Capability | May expose graph traversal, planning, validation, review, certification, or artifact capabilities. | Does not extend graph semantics without an approved Standard. |
+| Engine Communication | May exchange graph projections, records, reports, handoffs, and trace evidence. | Does not define graph relationship types. |
+| Engine Artifact | May be represented as, linked to, or supported by graph-governed artifacts according to M.1 and STD-001. | Does not bypass artifact identity, ownership, lifecycle, or traceability. |
+| Engine Ownership | Must preserve explicit ownership for graph-consuming engine responsibilities. | Does not duplicate Knowledge Graph ownership. |
+| Engine Validation | May validate graph compatibility, integrity, projections, traversal evidence, and graph-supported artifacts. | Does not redefine graph validation criteria owned by STD-001. |
+| Engine Governance | May route graph-related governance evidence and escalations. | Does not supersede Human Governance or Standards governance. |
+| Engine Certification | May prepare certification evidence for graph-governed artifacts. | Does not self-certify or replace governed certification authority. |
+| Engine Telemetry | May provide evidence for traversal, validation, review, audit, and governance traceability. | Does not become canonical semantics without governance approval. |
+| Engine Traceability | Must link engine action, artifact, validation, review, certification, and handoff records to graph authority and evidence. | Does not weaken mandatory graph traceability. |
+
+## 32.3 Graph Consumption Model
+
+The Runtime and Engine Platform consume the Knowledge Graph through governed projections and semantics.
+
+| Consumer | Consumption Responsibility | STD-001 Boundary |
+|:---|:---|:---|
+| Runtime | Consumes graph projections, traversal rules, and graph-governed context. | Runtime hosts execution and shall not redefine graph semantics. |
+| Engine Platform | Consumes graph semantics for coordinated execution across specialized Engines. | Engine Architecture defines engine responsibilities, not graph semantics. |
+| Knowledge Engine | Traverses the graph and assembles graph-derived knowledge. | Traversal must follow STD-001 deterministic traversal and traceability rules. |
+| Planning Engine | Consumes graph knowledge for planning inputs and dependency awareness. | Planning outputs must remain graph-compatible and authority-traceable. |
+| Validation Engine | Validates graph compatibility, graph integrity, graph projections, and graph-supported artifacts. | Validation criteria for graph structure and semantics remain owned by STD-001 and approved validation standards. |
+| Review Engine | Evaluates graph-supported artifacts, evidence, relationships, and readiness. | Review may assess but shall not redefine graph semantics. |
+| Certification Engine | Packages and routes certification evidence for graph-governed artifacts. | Certification authority remains governed and non-self-certifying. |
+| Registry | Stores graph-related metadata, identifiers, projections, capability references, and discoverability records. | Registry storage does not redefine canonical graph truth. |
+
+## 32.4 Graph Governance
+
+No Runtime component, Engine, Engine Contract, Engine Registry, Engine Capability, Engine Artifact, AI system, automation system, adapter, or implementation may redefine:
+
+- node types;
+- relationship types;
+- graph topology;
+- identity;
+- graph invariants;
+- traceability;
+- canonical semantics.
+
+Only approved Standards may evolve graph semantics. Proposed semantic changes must follow STD-000 governance, preserve A.1 constitutional principles, remain compatible with M.0 and M.1, and be reviewed against STD-002, A.3, and A.4 before publication.
+
+## 32.5 AI Governance
+
+AI systems may traverse the graph, query the graph, validate graph integrity, enrich graph-compatible artifacts, and recommend graph extensions.
+
+AI systems shall never redefine graph semantics, create canonical truth, bypass Human Governance, bypass Standards governance, promote graph extensions without approval, or treat generated projections as canonical architecture.
+
+AI-generated graph recommendations remain proposed evidence or candidate artifacts until reviewed, validated, and approved through governance.
+
+## 32.6 Consistency Findings
+
+| Authority / Standard | Finding | Result |
+|:---|:---|:---|
+| A.1 Constitution | Preserves Architecture before Code, Documentation before Implementation, Contracts before Implementation, Validation before Completion, Review before Certification, Human Governance, and Runtime consumption boundaries. | Consistent |
+| Forge AI Blueprint RFC | Preserves the Knowledge Graph as a framework-level semantic model consumed by downstream architecture. | Consistent |
+| M.0 Framework Meta Model | Preserves entity, relationship, authority, ownership, lifecycle, state, evidence, governance, and certification concepts as meta-model inputs. | Consistent |
+| M.1 Artifact Meta Model | Preserves artifact identity, ownership, lifecycle, traceability, validation, and graph participation expectations. | Consistent |
+| STD-000 Framework Standards | Preserves standards governance authority, lifecycle, validation, certification, and Engine Platform alignment boundaries. | Consistent |
+| STD-002 Discovery Standard | Preserves Discovery as a graph-consuming standard without redesigning Discovery. | Consistent |
+| A.3 Runtime Architecture RFC | Preserves Runtime as graph consumer and execution host. | Consistent |
+| A.4 Engine Architecture RFC | Preserves Engine Platform as graph consumer and execution coordinator without duplicating Engine responsibilities. | Consistent |
+
+## 32.7 Required Adjustments
+
+This realignment makes the following documentation adjustments to STD-001 only:
+
+1. Clarifies that STD-001 is the canonical semantic authority for Knowledge Graph nodes, edges, topology, identity, traversal, invariants, and traceability.
+2. Recognizes Engine Platform concepts from A.4 without redefining them.
+3. Defines graph interaction boundaries for Runtime, Engine Platform, specialized Engines, Registry, AI systems, validation, review, and certification.
+4. Adds governance prohibitions preventing Engines and AI systems from redefining graph semantics.
+5. Adds consistency, impact, and publication-readiness findings for enterprise review.
+
+No approved graph semantics are changed. No node type, relationship type, topology rule, identity rule, traversal rule, validation rule, extension rule, or Discovery semantic is redesigned.
+
+## 32.8 Cross-Document Impact
+
+| Document | Impact | Required Action |
+|:---|:---|:---|
+| A.1 Constitution | None. | No amendment required. |
+| Forge AI Blueprint RFC | None. | No amendment required. |
+| M.0 Framework Meta Model | None. | No amendment required. |
+| M.1 Artifact Meta Model | None. | No amendment required. |
+| STD-000 Framework Standards | None. | Already aligned with Engine Platform consumption boundaries. |
+| STD-002 Discovery Standard | None. | Discovery continues to consume STD-001 graph semantics. |
+| A.3 Runtime Architecture RFC | None. | Runtime continues to consume graph projections and traversal rules. |
+| A.4 Engine Architecture RFC | None. | Engine Platform continues to consume graph semantics through A.4 responsibilities. |
+| Future Engine RFCs | Positive alignment impact. | Future Engine RFCs shall reference STD-001 for graph semantics and shall not redefine them. |
+
+## 32.9 Publication Readiness
+
+STD-001 is publication-ready as an architecturally aligned draft when the following conditions are satisfied:
+
+- The Knowledge Graph remains the canonical semantic model of the Framework.
+- Engine Platform concepts are recognized without duplication of A.4.
+- Runtime and Engines are explicitly constrained to consume, traverse, validate, and produce evidence against graph semantics rather than redefine them.
+- Governance boundaries for Engines, Registries, AI systems, validation, review, certification, and future Engine RFCs are explicit.
+- Cross-document consistency with A.1, Blueprint RFC, M.0, M.1, STD-000, STD-002, A.3, and A.4 is documented.
+
+Publication readiness verdict: **Ready for governance review as STD-001 v3.1.0-beta architectural realignment**.
+
+## 32.10 Completion Statement
+
+STD-001 remains the canonical Knowledge Graph Standard. This realignment aligns STD-001 with Runtime Architecture, Engine Platform architecture, STD-000, the Meta Models, and the Constitution without duplicating Engine responsibilities or changing approved graph semantics. Future Engine RFCs shall consume STD-001 as the graph semantic authority.
+
+
+---
+
 ## Appendix A — Glossary of Terms
 
-This appendix provides definitions of key terms used throughout this standard. Terms inherited from [STD-000](../STD-000-Framework-Standards.md) §19 and [M.0 — Framework Meta Model](../M.0-Framework-Meta-Model.md) are referenced rather than redefined.
+This appendix provides definitions of key terms used throughout this standard. Terms inherited from [STD-000](STD-000-Framework-Standards.md) §19 and [M.0 — Framework Meta Model](../../Meta/M.0-Framework-Meta-Model.md) are referenced rather than redefined.
 
 | Term | Definition | Source |
 |:---|:---|:---|
@@ -6515,8 +6664,8 @@ This appendix provides normative and informative references.
 | Reference | Identifier | Description |
 |:---|:---|:---|
 | [A.1 — Constitution](../A.1-Constitution.md) | `FORGE-A-001` | Constitutional authority governing all Framework Standards |
-| [M.0 — Framework Meta Model](../M.0-Framework-Meta-Model.md) | `FORGE-META-000` | Conceptual type system consumed by all Framework Standards |
-| [STD-000 — Framework Standards](../STD-000-Framework-Standards.md) | `FORGE-STD-000` | Governing standard for the Standards Library |
+| [M.0 — Framework Meta Model](../../Meta/M.0-Framework-Meta-Model.md) | `FORGE-META-000` | Conceptual type system consumed by all Framework Standards |
+| [STD-000 — Framework Standards](STD-000-Framework-Standards.md) | `FORGE-STD-000` | Governing standard for the Standards Library |
 | STD-001 Discovery JSON Schema | — | Serialization projection of the Knowledge Graph |
 | STD-001 Discovery YAML Schema | — | Serialization projection of the Knowledge Graph |
 
@@ -6552,6 +6701,7 @@ This appendix provides additional change detail. The canonical revision history 
 | `2.0.0-alpha` | 2026-07-05 | Framework Architecture Team | Structural revisions |
 | `3.0.0-beta`  | 2026-07-06 | Technical Editorial        | Publication-quality refactor |
 | `3.0.1-beta`  | 2026-07-06 | Standards Governance Remediation | Standards compliance remediation per AUD-001 |
+| `3.1.0-beta`  | 2026-07-07 | Framework Architecture Team | Architectural realignment with A.3 Runtime Architecture RFC and A.4 Engine Architecture RFC while preserving approved graph semantics. |
 
 ---
 
@@ -6596,6 +6746,7 @@ This appendix verifies document completeness and quality.
 
 - All mandatory sections present
 - All referenced standards considered
+- Runtime Architecture and Engine Architecture alignment documented
 - All diagrams represented
 - All tables normalized
 - All examples provided
