@@ -47,6 +47,20 @@ Higher-level documents always override lower-level documents.
 
 ---
 
+# Forge AI v3 Transitional Governance
+
+During Forge AI v3 migration, `AGENTS.md` remains the bootstrap authority before, during, and after transition.
+
+The v3 architecture documents are target authority candidates until they are explicitly approved and promoted through governance. `docs/AI/Architecture/A.1-Constitution.md`, `docs/AI/Meta/M.0-Framework-Meta-Model.md`, `docs/AI/Meta/M.1-Artifact-Meta-Model.md`, and `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md` require approval before canonical promotion.
+
+The Forge AI Blueprint RFC remains non-canonical planning input until it is ratified through Framework Governance.
+
+`docs/ProjectStatus.md` records live operational state only and cannot promote architecture, ratify RFCs, or supersede authority documents.
+
+RC2 operational documents remain valid temporarily until approved v3 replacements exist.
+
+---
+
 # Core Governance Principles
 
 Forge AI is governed by the following permanent principles.

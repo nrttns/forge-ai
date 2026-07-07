@@ -28,6 +28,28 @@ docs/AI/AIFramework.md
 
 ---
 
+## Forge AI v3 Transitional Architecture
+
+Forge AI v3 is the target architecture for the framework migration. RC2 remains the operational compatibility layer until approved v3 operational replacements exist.
+
+The following are v3 architecture-track documents during transition:
+
+```text
+docs/AI/Architecture/A.1-Constitution.md
+docs/AI/Meta/M.0-Framework-Meta-Model.md
+docs/AI/Meta/M.1-Artifact-Meta-Model.md
+docs/AI/Architecture/Standards/STD-000-Framework-Standards.md
+docs/AI/Architecture/Standards/STD-001-Document-Authoring-Standard.md
+docs/AI/Architecture/Standards/STD-002-Traceability-Standard.md
+docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md
+```
+
+The Blueprint RFC is planning input only until ratified through governance.
+
+For operational tasks, agents must still follow `AGENTS.md`, `docs/AI/AIFramework.md`, `docs/AI/System/AuthorityModel.md`, `docs/ProjectStatus.md`, and the relevant Commands, Workflows, Templates, and Validation documents.
+
+---
+
 ## Framework Reading Order
 
 AI agents should read the AI framework in this order:
