@@ -5,23 +5,40 @@
 
 ---
 
-| | |
-|---|---|
-| **Document** | A.1 — Constitution |
-| **Identifier** | `FORGE-ARCH-A.1` |
-| **Version** | 3.0.0-beta |
-| **Status** | Draft |
-| **Type** | Constitutional Architecture Specification |
-| **Classification** | Framework Core |
-| **Authority** | [A.0 — Framework Audit](./A.0-Framework-Audit.md), Human Governance |
-| **Owner** | Forge AI Framework |
-| **Maintainers** | Framework Architecture Team |
-| **Phase** | Phase A — Framework Core |
-| **Stage** | A.1 — Constitution |
-| **Created** | 2026-07-04 |
-| **Last Updated** | 2026-07-04 |
+## Document Metadata
+
+| Field | Value |
+|:---|:---|
+| Identifier | `FORGE-ARCH-A.1` |
+| Title | A.1 — Constitution |
+| Version | 3.0.0-beta |
+| Status | Draft |
+| Canonical Status | Non-canonical until reviewed, approved, and promoted through Framework Governance |
+| Classification | Framework Core |
+| Document Type | Constitutional Architecture Specification |
+| Owner | Framework Governance |
+| Maintainers | Framework Architecture Team |
+| Review Authority | Enterprise Documentation Standards Board |
+| Approval Authority | Human Governance / Framework Governance |
+| Created | 2026-07-04 |
+| Last Updated | 2026-07-07 |
+| Lifecycle Phase | Draft |
+| Traceability ID | FORGE-ARCH-A.1 |
+| Scope | v3 constitutional architecture candidate |
+| Out of Scope | Canonical promotion, implementation, and project state updates |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/FrameworkGovernance.md` |
+| Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md` |
+| Dependencies | Governance authority, artifact identity, lifecycle governance, traceability model, and applicable upstream v3 architecture documents |
+| Consumes | A.0 audit findings and governance principles |
+| Produces | Constitutional architecture specification |
+| Related Specifications | M.0; M.1; STD-000; runtime RFC family |
+| Supersedes | None |
+| Superseded By | None |
+| Promotion Requirements | Framework Governance review, approval, traceability validation, metadata validation, and explicit promotion |
+| Certification Status | Not certified |
 
 ---
+
 
 ## Revision History
 

@@ -9,27 +9,36 @@
 
 | Field | Value |
 |:---|:---|
-| **Document** | STD-002 — Discovery Standard |
-| **Identifier** | `FORGE-STD-002` |
-| **Version** | `1.0.0-draft` |
-| **Status** | Draft; publication-ready pending governance approval |
-| **Type** | Framework Standard |
-| **Classification** | Core Standard |
-| **Domain Taxonomy** | Discovery |
-| **Compliance Level** | Standards Compliant Draft |
-| **Certification Level** | Review Ready |
-| **Lifecycle State** | Draft |
-| **Authority** | Human Governance → `AGENTS.md` → `A.1` → `M.0` → `M.1` → `STD-000` → `STD-001` → `STD-002` |
-| **Owner** | Framework Governance |
-| **Maintainers** | Framework Architecture Team |
-| **Created** | 2026-07-04 |
-| **Last Updated** | 2026-07-07 |
-| **Depends On** | `AGENTS.md`, `FORGE-A-001`, `FORGE-META-000`, `FORGE-META-001`, `FORGE-STD-000`, `FORGE-STD-001` |
-| **Consumes** | Artifact identity, lifecycle, ownership, authority, evidence, validation, certification, graph node, graph edge, graph traversal, and standard-governance contracts |
-| **Produces** | Discovery Artifact, Discovery Record, Discovery Registry Entry, Discovery Lifecycle, Discovery Metadata Schema, Discovery Graph Projection, AI Discovery Rules |
-| **Consumed By** | Findings, Evidence, Recommendations, Risks, Decisions, audits, architecture discovery, runtime analysis, governance review, migration analysis, AI agents, multi-agent systems, and swarm systems |
+| Identifier | `FORGE-STD-002` |
+| Title | STD-002 — Discovery Standard |
+| Version | 1.0.0-draft |
+| Status | Draft; publication-ready pending governance approval |
+| Canonical Status | Non-canonical until reviewed, approved, and promoted through Framework Governance |
+| Classification | Core Standard / Discovery |
+| Document Type | Framework Standard |
+| Owner | Framework Governance |
+| Maintainers | Framework Architecture Team |
+| Review Authority | Enterprise Documentation Standards Board |
+| Approval Authority | Human Governance / Framework Governance |
+| Created | 2026-07-04 |
+| Last Updated | 2026-07-07 |
+| Lifecycle Phase | Draft |
+| Traceability ID | FORGE-STD-002 |
+| Scope | Discovery artifact and discovery process standard |
+| Out of Scope | Implementation tooling and project state updates |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/FrameworkGovernance.md` |
+| Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md` |
+| Dependencies | Governance authority, artifact identity, lifecycle governance, traceability model, and applicable upstream v3 architecture documents |
+| Consumes | M.0; M.1; STD-000; STD-001 discovery and graph contracts |
+| Produces | Discovery artifacts, records, registry entries, lifecycle, metadata schema, graph projection, and AI discovery rules |
+| Related Specifications | Findings, Evidence, Recommendations, Risks, Decisions, audits, runtime analysis |
+| Supersedes | None |
+| Superseded By | None |
+| Promotion Requirements | Framework Governance review, approval, traceability validation, metadata validation, and explicit promotion |
+| Certification Status | Not certified |
 
 ---
+
 
 ## Revision History
 

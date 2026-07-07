@@ -5,21 +5,40 @@
 
 ---
 
-| Property | Value |
+## Document Metadata
+
+| Field | Value |
 |:---|:---|
-| **Document** | M.0 — Framework Meta Model |
-| **Identifier** | `FORGE-META-M.0` |
-| **Version** | 1.0.0-draft |
-| **Status** | Draft |
-| **Type** | Meta Architecture Specification |
-| **Classification** | Framework Meta Model |
-| **Authority** | A.1 — Constitution |
-| **Owner** | Framework Architecture Team |
-| **Maintainers** | Framework Governance |
-| **Created** | 2026-07-04 |
-| **Last Updated** | 2026-07-04 |
+| Identifier | `FORGE-META-M.0` |
+| Title | M.0 — Framework Meta Model |
+| Version | 1.0.0-draft |
+| Status | Draft |
+| Canonical Status | Non-canonical until reviewed, approved, and promoted through Framework Governance |
+| Classification | Framework Meta Model |
+| Document Type | Meta Architecture Specification |
+| Owner | Framework Governance |
+| Maintainers | Framework Architecture Team |
+| Review Authority | Enterprise Documentation Standards Board |
+| Approval Authority | Human Governance / Framework Governance |
+| Created | 2026-07-04 |
+| Last Updated | 2026-07-07 |
+| Lifecycle Phase | Draft |
+| Traceability ID | FORGE-META-M.0 |
+| Scope | Foundational Forge AI meta model |
+| Out of Scope | Runtime implementation and platform adapters |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/FrameworkGovernance.md` |
+| Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md` |
+| Dependencies | Governance authority, artifact identity, lifecycle governance, traceability model, and applicable upstream v3 architecture documents |
+| Consumes | A.1 constitutional model and standards governance |
+| Produces | Framework meta model concepts |
+| Related Specifications | M.1; STD-000; standards library; runtime RFC family |
+| Supersedes | None |
+| Superseded By | None |
+| Promotion Requirements | Framework Governance review, approval, traceability validation, metadata validation, and explicit promotion |
+| Certification Status | Not certified |
 
 ---
+
 
 ## 1. Status
 

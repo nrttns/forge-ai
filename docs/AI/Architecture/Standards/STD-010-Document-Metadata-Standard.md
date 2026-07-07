@@ -5,13 +5,13 @@
 
 ---
 
-## 1. Document Metadata
+## Document Metadata
 
 | Field | Value |
 |:---|:---|
 | Identifier | `FORGE-STD-010` |
 | Title | STD-010 — Document Metadata Standard |
-| Version | `0.1.0-draft` |
+| Version | 0.1.0-draft |
 | Status | Draft |
 | Canonical Status | Non-canonical until reviewed, approved, and promoted through Framework Governance |
 | Classification | Documentation Standard |
@@ -23,21 +23,22 @@
 | Created | 2026-07-07 |
 | Last Updated | 2026-07-07 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.V3.STD-010` |
-| Scope | Mandatory document metadata model for Forge AI documents |
-| Out of Scope | Normalizing existing documents, rewriting existing RFCs or Standards, updating ProjectStatus, implementing tooling |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/Architecture/A.1-Constitution.md` when approved; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md` |
-| Normative References | Engine Platform Consistency Review findings; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-001-Knowledge-Graph-Standard.md`; `docs/AI/Architecture/Standards/STD-002-Discovery-Standard.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md` |
-| Dependencies | Standards governance, artifact identity, authority hierarchy, lifecycle governance, traceability model |
-| Consumes | Authority model, standards lifecycle, artifact metadata expectations, Engine Platform consistency findings |
-| Produces | Mandatory metadata schema, relationship taxonomy, document class expectations, lifecycle model, migration strategy |
-| Related Specifications | A.4 Engine Architecture RFC family; future Engine RFCs; future metadata validation tooling |
+| Traceability ID | FORGE-STD-010 |
+| Scope | Mandatory metadata model for Forge AI documents |
+| Out of Scope | Normalizing documents, rewriting RFCs, updating ProjectStatus, and implementing tooling |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/FrameworkGovernance.md` |
+| Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md` |
+| Dependencies | Governance authority, artifact identity, lifecycle governance, traceability model, and applicable upstream v3 architecture documents |
+| Consumes | M.0; M.1; STD-000; STD-001; STD-002; Engine Platform consistency findings |
+| Produces | Metadata schema, relationship taxonomy, document class expectations, lifecycle model, and migration strategy |
+| Related Specifications | v3 architecture and runtime RFC family; future metadata validation tooling |
 | Supersedes | None |
 | Superseded By | None |
-| Promotion Requirements | Documentation standards review, governance approval, traceability validation, migration readiness assessment |
+| Promotion Requirements | Framework Governance review, approval, traceability validation, metadata validation, and explicit promotion |
 | Certification Status | Not certified |
 
 ---
+
 
 ## 2. Executive Summary
 

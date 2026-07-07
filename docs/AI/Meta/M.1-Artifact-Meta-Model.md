@@ -7,24 +7,38 @@
 
 ## Document Metadata
 
-| Property | Value |
+| Field | Value |
 |:---|:---|
-| **Document** | M.1 — Artifact Meta Model |
-| **Identifier** | `FORGE-META-001` |
-| **Version** | `3.0.0-beta` |
-| **Status** | Beta |
-| **Type** | Meta Model |
-| **Classification** | Canonical Artifact Model |
-| **Authority** | [A.1 — Constitution](../A.1-Constitution.md), [M.0 — Framework Meta Model](./M.0-Framework-Meta-Model.md), [STD-000 — Framework Standards](../Standards/STD-000-Framework-Standards.md) |
-| **Owner** | Framework Governance |
-| **Maintainers** | Framework Architecture Team |
-| **Created** | 2026-07-06 |
-| **Last Updated** | 2026-07-06 |
-| **Depends On** | `FORGE-A-001`, `FORGE-META-000`, `FORGE-STD-000`, `FORGE-STD-001` |
-| **Consumed By** | `FORGE-STD-002`, `FORGE-STD-003`, `FORGE-STD-004`, `FORGE-STD-005`, `FORGE-STD-006`, registries, validation engines, graph projections, AI agents, runtime governance |
-| **Produces** | Artifact Contract, Artifact Identity Model, Artifact Lifecycle Model, Artifact Relationship Contract, Artifact Metadata Contract, Artifact Projection Contract |
+| Identifier | `FORGE-META-001` |
+| Title | M.1 — Artifact Meta Model |
+| Version | 3.0.0-beta |
+| Status | Beta |
+| Canonical Status | Non-canonical until reviewed, approved, and promoted through Framework Governance |
+| Classification | Canonical Artifact Model |
+| Document Type | Meta Model |
+| Owner | Framework Governance |
+| Maintainers | Framework Architecture Team |
+| Review Authority | Enterprise Documentation Standards Board |
+| Approval Authority | Human Governance / Framework Governance |
+| Created | 2026-07-06 |
+| Last Updated | 2026-07-07 |
+| Lifecycle Phase | Draft |
+| Traceability ID | FORGE-META-001 |
+| Scope | Artifact contract model |
+| Out of Scope | Implementation APIs, storage schemas, and certification |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/FrameworkGovernance.md` |
+| Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md` |
+| Dependencies | Governance authority, artifact identity, lifecycle governance, traceability model, and applicable upstream v3 architecture documents |
+| Consumes | A.1; M.0; STD-000; STD-001 artifact and graph expectations |
+| Produces | Artifact contract, identity, lifecycle, relationship, metadata, and projection models |
+| Related Specifications | STD-001; STD-002; STD-010; runtime RFC family |
+| Supersedes | None |
+| Superseded By | None |
+| Promotion Requirements | Framework Governance review, approval, traceability validation, metadata validation, and explicit promotion |
+| Certification Status | Not certified |
 
 ---
+
 
 ## Revision History
 
@@ -103,7 +117,7 @@ graph TD
 
 ## 1.3 Classification
 
-M.1 is classified as a **Canonical Artifact Model** because it defines the shared contract inherited by all governed Artifact types. This classification distinguishes it from domain-specific standards (e.g., [STD-002 — Discovery Standard](../Standards/STD-002-Discovery-Standard.md)) that specialize the contract for particular Artifact types.
+M.1 is classified as a **Canonical Artifact Model** because it defines the shared contract inherited by all governed Artifact types. This classification distinguishes it from domain-specific standards (e.g., [STD-002 — Discovery Standard](../Architecture/Standards/STD-002-Discovery-Standard.md)) that specialize the contract for particular Artifact types.
 
 ## 1.4 Success Criteria
 
@@ -149,7 +163,7 @@ M.1 shall:
 - define universal Artifact lifecycle constraints;
 - define universal Artifact metadata expectations;
 - define universal Artifact relationship expectations;
-- define Artifact participation in the [STD-001 — Knowledge Graph Standard](../Standards/STD-001-Knowledge-Graph-Standard.md);
+- define Artifact participation in the [STD-001 — Knowledge Graph Standard](../Architecture/Standards/STD-001-Knowledge-Graph-Standard.md);
 - define how specialized standards extend the Artifact contract;
 - prevent repeated redefinition of Artifact concepts across standards;
 - support deterministic validation, registry indexing, AI reasoning, and runtime projection.
@@ -179,9 +193,9 @@ M.1 does not:
 - define Recommendation-specific semantics;
 - define Risk-specific semantics;
 - define Evidence-specific semantics;
-- define canonical graph semantics owned by [STD-001](../Standards/STD-001-Knowledge-Graph-Standard.md);
-- define framework standard governance owned by [STD-000](../Standards/STD-000-Framework-Standards.md);
-- define constitutional authority owned by [A.1 — Constitution](../A.1-Constitution.md);
+- define canonical graph semantics owned by [STD-001](../Architecture/Standards/STD-001-Knowledge-Graph-Standard.md);
+- define framework standard governance owned by [STD-000](../Architecture/Standards/STD-000-Framework-Standards.md);
+- define constitutional authority owned by [A.1 — Constitution](../Architecture/A.1-Constitution.md);
 - replace specialized standards.
 
 ## 3.5 Completion Statement
@@ -236,7 +250,7 @@ An Artifact standard shall not:
 - redefine M.1 identity invariants (see [Section 8.8 — Identity Invariants](#88-identity-invariants));
 - bypass Artifact ownership;
 - remove Artifact traceability;
-- redefine canonical graph semantics (owned by [STD-001](../Standards/STD-001-Knowledge-Graph-Standard.md));
+- redefine canonical graph semantics (owned by [STD-001](../Architecture/Standards/STD-001-Knowledge-Graph-Standard.md));
 - use serialization as source of truth;
 - treat Markdown files as canonical knowledge by themselves;
 - treat AI-generated claims as validated Artifact truth.
@@ -269,10 +283,10 @@ graph TD
 | Authority | Responsibility |
 |:---|:---|
 | Human Governance | Final escalation authority for Artifact model disputes. |
-| [A.1 — Constitution](../A.1-Constitution.md) | Defines constitutional invariants and human governance boundaries. |
+| [A.1 — Constitution](../Architecture/A.1-Constitution.md) | Defines constitutional invariants and human governance boundaries. |
 | [M.0 — Framework Meta Model](./M.0-Framework-Meta-Model.md) | Defines framework-level meta concepts consumed by M.1. |
-| [STD-000 — Framework Standards](../Standards/STD-000-Framework-Standards.md) | Defines governance rules for standards and standard-like Artifacts. |
-| [STD-001 — Knowledge Graph Standard](../Standards/STD-001-Knowledge-Graph-Standard.md) | Owns canonical graph semantics consumed by Artifact projections. |
+| [STD-000 — Framework Standards](../Architecture/Standards/STD-000-Framework-Standards.md) | Defines governance rules for standards and standard-like Artifacts. |
+| [STD-001 — Knowledge Graph Standard](../Architecture/Standards/STD-001-Knowledge-Graph-Standard.md) | Owns canonical graph semantics consumed by Artifact projections. |
 | M.1 — Artifact Meta Model | Defines common Artifact contract inherited by specialized Artifact standards. |
 | Specialized Standards | Define Artifact-specific semantics without redefining the common contract. |
 
@@ -336,7 +350,7 @@ The Relationship to M.0 section is complete when Artifact is derived from M.0 co
 | Lifecycle Is Governed | Artifact state shall be explicit and transition-controlled. |
 | Relationships Are First-Class | Artifact relationships shall be explicit, typed, directional, and traceable. |
 | Projection Is Derived | JSON, YAML, Markdown, Registry, DTO, and OpenAPI are derived projections. |
-| Graph Participation Is Mandatory | Every governed Artifact participates in the Knowledge Graph according to [STD-001](../Standards/STD-001-Knowledge-Graph-Standard.md). |
+| Graph Participation Is Mandatory | Every governed Artifact participates in the Knowledge Graph according to [STD-001](../Architecture/Standards/STD-001-Knowledge-Graph-Standard.md). |
 | Validation Is Structural Before Semantic | Artifact validity starts with contract compliance before domain-specific interpretation. |
 | Extension Is Controlled | Specialized standards may extend Artifacts but shall not break the common contract. |
 
@@ -443,13 +457,13 @@ Every Artifact shall declare exactly one canonical Artifact type.
 
 | Artifact Type | Owning Standard |
 |:---|:---|
-| `Standard` | [STD-000](../Standards/STD-000-Framework-Standards.md) |
-| `KnowledgeGraph` | [STD-001](../Standards/STD-001-Knowledge-Graph-Standard.md) |
-| `Discovery` | [STD-002](../Standards/STD-002-Discovery-Standard.md) |
-| `Finding` | [STD-003](../Standards/STD-003-Finding-Standard.md) |
-| `Recommendation` | [STD-004](../Standards/STD-004-Recommendation-Standard.md) |
-| `Risk` | [STD-005](../Standards/STD-005-Risk-Standard.md) |
-| `Evidence` | [STD-006](../Standards/STD-006-Evidence-Standard.md) |
+| `Standard` | [STD-000](../Architecture/Standards/STD-000-Framework-Standards.md) |
+| `KnowledgeGraph` | [STD-001](../Architecture/Standards/STD-001-Knowledge-Graph-Standard.md) |
+| `Discovery` | [STD-002](../Architecture/Standards/STD-002-Discovery-Standard.md) |
+| `Finding` | [STD-003](../Architecture/Standards/STD-003-Finding-Standard.md) |
+| `Recommendation` | [STD-004](../Architecture/Standards/STD-004-Recommendation-Standard.md) |
+| `Risk` | [STD-005](../Architecture/Standards/STD-005-Risk-Standard.md) |
+| `Evidence` | [STD-006](../Architecture/Standards/STD-006-Evidence-Standard.md) |
 
 Multiple Artifact types are prohibited. An Artifact may have labels or classifications, but labels and classifications shall not replace Artifact type.
 
@@ -1066,7 +1080,7 @@ The Metadata Model is complete when every Artifact exposes a consistent canonica
 
 ## 14.1 Purpose
 
-Define the canonical relationship contract shared by every governed Artifact. Relationship semantics are **owned by [STD-001](../Standards/STD-001-Knowledge-Graph-Standard.md)**. This section defines the reusable contract that every Artifact must follow when declaring relationships.
+Define the canonical relationship contract shared by every governed Artifact. Relationship semantics are **owned by [STD-001](../Architecture/Standards/STD-001-Knowledge-Graph-Standard.md)**. This section defines the reusable contract that every Artifact must follow when declaring relationships.
 
 ## 14.2 Principles
 
@@ -1108,7 +1122,7 @@ The following contract is shared across all Artifacts:
 - `APPROVED_BY`
 - `BLOCKED_BY`
 
-> **Note:** The meaning of these relationship types is defined by **[STD-001 — Knowledge Graph Standard](../Standards/STD-001-Knowledge-Graph-Standard.md)**. M.1 standardizes their usage as part of the Artifact contract.
+> **Note:** The meaning of these relationship types is defined by **[STD-001 — Knowledge Graph Standard](../Architecture/Standards/STD-001-Knowledge-Graph-Standard.md)**. M.1 standardizes their usage as part of the Artifact contract.
 
 ## 14.5 Cardinality Rules
 
@@ -1805,15 +1819,15 @@ The Compliance Model is complete when every Artifact can be assessed, certified,
 
 | Reference | Identifier | Description |
 |:---|:---|:---|
-| [A.1 — Constitution](../A.1-Constitution.md) | `FORGE-A-001` | Constitutional invariants and human governance boundaries for the Forge AI Framework. |
+| [A.1 — Constitution](../Architecture/A.1-Constitution.md) | `FORGE-A-001` | Constitutional invariants and human governance boundaries for the Forge AI Framework. |
 | [M.0 — Framework Meta Model](./M.0-Framework-Meta-Model.md) | `FORGE-META-000` | Framework-level meta concepts from which M.1 derives the Artifact specialization. |
-| [STD-000 — Framework Standards](../Standards/STD-000-Framework-Standards.md) | `FORGE-STD-000` | Governance rules for standards and standard-like Artifacts. |
-| [STD-001 — Knowledge Graph Standard](../Standards/STD-001-Knowledge-Graph-Standard.md) | `FORGE-STD-001` | Canonical graph semantics consumed by Artifact projections. |
-| [STD-002 — Discovery Standard](../Standards/STD-002-Discovery-Standard.md) | `FORGE-STD-002` | Specialized standard for Discovery Artifacts. |
-| [STD-003 — Finding Standard](../Standards/STD-003-Finding-Standard.md) | `FORGE-STD-003` | Specialized standard for Finding Artifacts. |
-| [STD-004 — Recommendation Standard](../Standards/STD-004-Recommendation-Standard.md) | `FORGE-STD-004` | Specialized standard for Recommendation Artifacts. |
-| [STD-005 — Risk Standard](../Standards/STD-005-Risk-Standard.md) | `FORGE-STD-005` | Specialized standard for Risk Artifacts. |
-| [STD-006 — Evidence Standard](../Standards/STD-006-Evidence-Standard.md) | `FORGE-STD-006` | Specialized standard for Evidence Artifacts. |
+| [STD-000 — Framework Standards](../Architecture/Standards/STD-000-Framework-Standards.md) | `FORGE-STD-000` | Governance rules for standards and standard-like Artifacts. |
+| [STD-001 — Knowledge Graph Standard](../Architecture/Standards/STD-001-Knowledge-Graph-Standard.md) | `FORGE-STD-001` | Canonical graph semantics consumed by Artifact projections. |
+| [STD-002 — Discovery Standard](../Architecture/Standards/STD-002-Discovery-Standard.md) | `FORGE-STD-002` | Specialized standard for Discovery Artifacts. |
+| [STD-003 — Finding Standard](../Architecture/Standards/STD-003-Finding-Standard.md) | `FORGE-STD-003` | Specialized standard for Finding Artifacts. |
+| [STD-004 — Recommendation Standard](../Architecture/Standards/STD-004-Recommendation-Standard.md) | `FORGE-STD-004` | Specialized standard for Recommendation Artifacts. |
+| [STD-005 — Risk Standard](../Architecture/Standards/STD-005-Risk-Standard.md) | `FORGE-STD-005` | Specialized standard for Risk Artifacts. |
+| [STD-006 — Evidence Standard](../Architecture/Standards/STD-006-Evidence-Standard.md) | `FORGE-STD-006` | Specialized standard for Evidence Artifacts. |
 
 ---
 

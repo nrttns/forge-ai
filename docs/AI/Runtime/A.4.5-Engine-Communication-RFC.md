@@ -5,28 +5,40 @@
 
 ---
 
-## 1. Status
+## Document Metadata
 
-| Property | Value |
+| Field | Value |
 |:---|:---|
-| Document | A.4.5 — Engine Communication RFC |
 | Identifier | `FORGE-A-004.5` |
-| Path | `docs/AI/Runtime/A.4.5-Engine-Communication-RFC.md` |
-| Version | `0.1.0-draft` |
+| Title | A.4.5 — Engine Communication RFC |
+| Version | 0.1.0-draft |
 | Status | RFC / Draft |
-| Type | Architecture RFC |
+| Canonical Status | Non-canonical until reviewed, approved, and promoted through Framework Governance |
 | Classification | Engine Runtime Communication Architecture |
-| Canonical Status | Draft / Non-canonical until reviewed, approved, and promoted through Framework Governance |
-| Authority | Human Governance → `AGENTS.md` → A.1 Constitution → M.0 Framework Meta Model → M.1 Artifact Meta Model → STD-000 Framework Standards → STD-001 Knowledge Graph Standard → STD-002 Discovery Standard → A.3 Runtime Architecture RFC → A.4 Engine Architecture RFC → A.4.1 Engine Kernel RFC → A.4.2 Engine Contract RFC → A.4.3 Engine Registry RFC → A.4.4 Engine Lifecycle RFC → this RFC |
-| Owner | Framework Architecture Team |
+| Document Type | Architecture RFC |
+| Owner | Framework Governance |
 | Maintainers | Framework Architecture Team |
-| Phase / Stage | Forge AI v3 Architecture / Engine Architecture |
+| Review Authority | Enterprise Documentation Standards Board |
+| Approval Authority | Human Governance / Framework Governance |
 | Created | 2026-07-07 |
 | Last Updated | 2026-07-07 |
-
-This RFC is documentation-only architecture work. It does not implement code, define APIs, define protocols, define transport mechanisms, define message serialization, define implementation classes, modify runtime behavior, update `docs/ProjectStatus.md`, certify this RFC, or modify A.4, A.4.1, A.4.2, A.4.3, A.4.4, STD-000, STD-001, or STD-002.
+| Lifecycle Phase | Draft |
+| Traceability ID | FORGE-A-004.5 |
+| Scope | Engine Communication RFC documentation-only architecture |
+| Out of Scope | Implementation, runtime behavior changes, certification, and ProjectStatus updates |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/FrameworkGovernance.md` |
+| Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md` |
+| Dependencies | Governance authority, artifact identity, lifecycle governance, traceability model, and applicable upstream v3 architecture documents |
+| Consumes | A.1; M.0; M.1; STD-000; STD-001; STD-002; related runtime and engine RFC inputs |
+| Produces | Engine Communication RFC architecture model and downstream RFC inputs |
+| Related Specifications | A.3/A.4 engine RFC family; STD-000; STD-001; STD-002 |
+| Supersedes | None |
+| Superseded By | None |
+| Promotion Requirements | Framework Governance review, approval, traceability validation, metadata validation, and explicit promotion |
+| Certification Status | Not certified |
 
 ---
+
 
 ## 2. Purpose
 

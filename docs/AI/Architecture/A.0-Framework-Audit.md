@@ -5,23 +5,40 @@
 
 ---
 
-| | |
-|---|---|
-| **Document** | A.0 — Framework Audit |
-| **Identifier** | `FORGE-AUDIT-A.0` |
-| **Version** | 3.0.0-beta |
-| **Status** | Draft |
-| **Type** | Master Architecture Audit |
-| **Classification** | Framework Core |
-| **Authority** | Constitution (Pending), Framework Governance |
-| **Owner** | Forge AI Framework |
-| **Maintainers** | Framework Architecture Team |
-| **Phase** | Phase A — Framework Core |
-| **Stage** | A.0 — Framework Audit |
-| **Created** | 2026-07-03 |
-| **Last Updated** | 2026-07-03 |
+## Document Metadata
+
+| Field | Value |
+|:---|:---|
+| Identifier | `FORGE-AUDIT-A.0` |
+| Title | A.0 — Framework Audit |
+| Version | 3.0.0-beta |
+| Status | Draft |
+| Canonical Status | Non-canonical until reviewed, approved, and promoted through Framework Governance |
+| Classification | Framework Core |
+| Document Type | Master Architecture Audit |
+| Owner | Framework Governance |
+| Maintainers | Framework Architecture Team |
+| Review Authority | Enterprise Documentation Standards Board |
+| Approval Authority | Human Governance / Framework Governance |
+| Created | 2026-07-03 |
+| Last Updated | 2026-07-07 |
+| Lifecycle Phase | Draft |
+| Traceability ID | FORGE-AUDIT-A.0 |
+| Scope | Framework Core architecture audit |
+| Out of Scope | Implementation, certification, and project state updates |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/FrameworkGovernance.md` |
+| Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md` |
+| Dependencies | Governance authority, artifact identity, lifecycle governance, traceability model, and applicable upstream v3 architecture documents |
+| Consumes | Audit findings and architecture inventory |
+| Produces | Framework audit report, recommendations, and follow-up architecture inputs |
+| Related Specifications | `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md` |
+| Supersedes | None |
+| Superseded By | None |
+| Promotion Requirements | Framework Governance review, approval, traceability validation, metadata validation, and explicit promotion |
+| Certification Status | Not certified |
 
 ---
+
 
 ## Revision History
 

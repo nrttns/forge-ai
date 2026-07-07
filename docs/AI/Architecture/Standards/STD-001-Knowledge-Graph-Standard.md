@@ -25,26 +25,38 @@
 
 ## Document Metadata
 
-| Property | Value |
+| Field | Value |
 |:---|:---|
-| Document ID | STD-001 |
-| Document Title | Knowledge Graph Standard |
 | Identifier | `FORGE-STD-001` |
-| Version | `3.1.0-beta` |
+| Title | STD-001 — Knowledge Graph Standard |
+| Version | 3.1.0-beta |
 | Status | Draft |
-| Type | Technical Graph Specification |
-| Governance Classification | Core |
-| Domain Taxonomy | Schema Standards |
-| Authority | STD-000 — Framework Standards (`FORGE-STD-000`), M.0 — Framework Meta Model, A.1 — Constitution |
-| Owner | Framework Architecture Team |
+| Canonical Status | Non-canonical until reviewed, approved, and promoted through Framework Governance |
+| Classification | Schema Standards |
+| Document Type | Technical Graph Specification |
+| Owner | Framework Governance |
 | Maintainers | Framework Architecture Team |
-| Directory | `docs/AI/Architecture/Standards/` |
+| Review Authority | Enterprise Documentation Standards Board |
+| Approval Authority | Human Governance / Framework Governance |
 | Created | 2026-07-04 |
-| Last Modified | 2026-07-07 |
-| Compliance Level | L1 — Draft |
-| Certification Level | Not yet certified |
+| Last Updated | 2026-07-07 |
+| Lifecycle Phase | Draft |
+| Traceability ID | FORGE-STD-001 |
+| Scope | Knowledge graph schema standard |
+| Out of Scope | Runtime implementation, engine behavior, and certification |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/FrameworkGovernance.md` |
+| Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md` |
+| Dependencies | Governance authority, artifact identity, lifecycle governance, traceability model, and applicable upstream v3 architecture documents |
+| Consumes | M.0; M.1; STD-000; graph governance inputs |
+| Produces | Knowledge graph node, edge, relationship, traversal, and validation semantics |
+| Related Specifications | STD-002; A.3; A.4 RFC family |
+| Supersedes | None |
+| Superseded By | None |
+| Promotion Requirements | Framework Governance review, approval, traceability validation, metadata validation, and explicit promotion |
+| Certification Status | Not certified |
 
 ---
+
 
 ## Revision History
 

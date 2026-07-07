@@ -5,21 +5,40 @@
 
 ---
 
-| | |
+## Document Metadata
+
+| Field | Value |
 |:---|:---|
-| **Document** | STD-000 — Framework Standards |
-| **Identifier** | `FORGE-STD-000` |
-| **Version** | 3.2.0 |
-| **Status** | Draft |
-| **Type** | Framework Standard |
-| **Classification** | Standards Library Governance |
-| **Authority** | [A.1 — Constitution](../A.1-Constitution.md), [M.0 — Framework Meta Model](../../Meta/M.0-Framework-Meta-Model.md) |
-| **Owner** | Framework Governance |
-| **Maintainers** | Framework Architecture Team |
-| **Created** | 2026-07-04 |
-| **Last Updated** | 2026-07-07 |
+| Identifier | `FORGE-STD-000` |
+| Title | STD-000 — Framework Standards |
+| Version | 3.2.0 |
+| Status | Draft |
+| Canonical Status | Non-canonical until reviewed, approved, and promoted through Framework Governance |
+| Classification | Standards Library Governance |
+| Document Type | Framework Standard |
+| Owner | Framework Governance |
+| Maintainers | Framework Architecture Team |
+| Review Authority | Enterprise Documentation Standards Board |
+| Approval Authority | Human Governance / Framework Governance |
+| Created | 2026-07-04 |
+| Last Updated | 2026-07-07 |
+| Lifecycle Phase | Draft |
+| Traceability ID | FORGE-STD-000 |
+| Scope | Standards library governance |
+| Out of Scope | Individual standard implementations and certification |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/FrameworkGovernance.md` |
+| Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md` |
+| Dependencies | Governance authority, artifact identity, lifecycle governance, traceability model, and applicable upstream v3 architecture documents |
+| Consumes | A.1 and M.0 governance and meta-model inputs |
+| Produces | Standards governance, lifecycle, identity, compliance, and certification model |
+| Related Specifications | STD-001; STD-002; STD-010 |
+| Supersedes | None |
+| Superseded By | None |
+| Promotion Requirements | Framework Governance review, approval, traceability validation, metadata validation, and explicit promotion |
+| Certification Status | Not certified |
 
 ---
+
 
 ## Revision History
 
