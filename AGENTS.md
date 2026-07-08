@@ -1,576 +1,250 @@
-# Forge AI — Project Constitution
+# AGENTS.md — Repository Bootloader
 
-This document is the bootstrap authority for all humans, AI agents, automation systems, multi-agent systems, swarm systems, and development tooling working on Forge AI.
+> **Forge AI — Repository Entry Point for AI Assistants**
 
-If any code, documentation, proposal, capability, implementation, automation, or agent output conflicts with this document, this document wins.
+This document is the repository bootloader. It tells an AI assistant how to safely
+begin work inside the Forge AI repository. It is not the Agent Architecture, the
+Runtime Architecture, or the Engine Architecture. It is a lightweight entry guide.
 
-Forge AI is a platform-independent, documentation-driven AI Development Operating System.
+Read this file in full before performing any task. Then follow the Mandatory Boot
+Sequence defined in Section 4.
 
 ---
 
-# 0. Authority
+## 1. Repository Mission
 
-Forge AI uses this authority model:
+Forge AI is a framework for building autonomous AI agent systems. It defines
+structured architectures, governing specifications, and development phases that
+enable AI agents to operate within a controlled, auditable, and incrementally
+evolving codebase. The framework prioritises architectural integrity, phase-gated
+development, and human governance over autonomous agent decision-making.
 
-```text
-AGENTS.md
-    ↓
-docs/AI/AIFramework.md
-    ↓
-docs/AI/Specification/Constitution.md
-    ↓
-docs/AI/AIOrchestrator.md
-    ↓
-docs/FrameworkGovernance.md
-    ↓
-docs/ProjectStatus.md
-    ↓
-docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md
-    ↓
-Current Phase Document
-    ↓
-Current Stage Document
-    ↓
-Current Capability Document
-    ↓
-Generated Task
+The repository contains constitutive documents (the Constitution, meta models,
+standards, and RFCs) that form the immutable governance layer. Development
+progresses through clearly defined phases — each with objectives, frozen areas,
+and exit criteria — tracked in ProjectStatus and DevelopmentPhases. No work may
+begin without first identifying the current phase, the current stage within that
+phase, and any frozen areas that are off-limits to modification.
+
+Forge AI is designed so that every participant — human or AI — operates within the
+same authority chain, reads from the same canonical sources, and respects the same
+safety boundaries. This bootloader ensures that every AI assistant enters the
+repository with the correct context, follows the correct sequence, and never
+exceeds its authority.
+
+---
+
+## 2. AI Role
+
+The AI is an **execution participant** within the Forge AI repository. It performs
+tasks, produces artifacts, and provides recommendations as directed.
+
+The AI is **never the architectural authority**. It does not define, modify, or
+override governing specifications. It does not skip phases, unfreeze areas, or
+change the authority chain. Architectural decisions and governance changes are
+exclusively the domain of Human Governance.
+
+When the AI encounters ambiguity, conflict, or a situation outside its defined
+authority, it must escalate (see Section 10). It must never silently resolve a
+governance conflict in its own favour.
+
+---
+
+## 3. Authority Chain
+
+The condensed authority chain is:
+
+```
+Constitution  →  Governing Specifications (M.0, M.1, STD-003, STD-010)
+                      →  RFCs (Runtime RFC, Engine Platform RFC)
+                            →  Development Phases & ProjectStatus
+                                  →  Task Execution (Human-Directed)
 ```
 
-`AGENTS.md` is the bootstrap and constitutional entry point.
+Human Governance sits above all layers and may override any decision at any time.
+The Constitution is the supreme governing document. All specifications, RFCs, and
+operational documents derive their authority from it.
 
-`docs/AI/AIFramework.md` is the AI Framework master entry point.
-
-`docs/AI/Specification/Constitution.md` defines the AI Framework Constitution when present.
-
-`docs/FrameworkGovernance.md` defines framework-level governance and decision policy.
-
-`docs/ProjectStatus.md` is the only live operational project status document.
-
-Capability identifiers are immutable after certification.
-
-## 0.1 Forge AI v3 Transitional Authority
-
-During Forge AI v3 migration, `AGENTS.md` remains the bootstrap authority before, during, and after transition.
-
-`docs/AI/Architecture/A.1-Constitution.md`, `docs/AI/Meta/M.0-Framework-Meta-Model.md`, `docs/AI/Meta/M.1-Artifact-Meta-Model.md`, and `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md` are target v3 authority candidates until explicitly approved and promoted through governance.
-
-No v3 architecture, meta model, standard, RFC, report, or blueprint supersedes this document unless this document is explicitly amended to recognize that promotion.
-
-The Forge AI Blueprint RFC remains transitional and non-canonical until ratified by Framework Governance and explicitly referenced by this document or another approved authority document.
-
-RC2 operational procedures remain valid until they are explicitly replaced by approved v3 operational procedures.
+Do not reproduce the Constitution here. Read it from its canonical location when
+required (see Section 7).
 
 ---
 
-# 1. Mission
+## 4. Mandatory Boot Sequence
 
-Forge AI is a platform-independent AI Development Operating System.
+Every AI assistant **must** complete this sequence before executing any task:
 
-Its mission is to provide a documentation-driven framework for planning, orchestrating, executing, validating, reviewing, certifying, and governing AI-assisted software development.
-
-Forge AI must remain independent of any specific programming language, runtime, framework, product, editor, platform, or host application.
-
-Forge AI supports:
-
-- architecture-first development;
-- documentation-first execution;
-- self-planning AI agents;
-- explicit command and workflow systems;
-- validation and review before completion;
-- project state management;
-- knowledge and memory management;
-- multi-agent collaboration;
-- swarm orchestration;
-- platform adapters.
-
-Forge AI is not a WordPress framework, Laravel framework, React framework, code generator, project template, or product-specific architecture.
-
-Platform-specific behavior belongs only in platform adapters.
-
----
-
-# 2. Core Principles
-
-Forge AI is governed by these permanent principles:
-
-```text
-Architecture before Code
-Documentation before Implementation
-Planning before Execution
-Contracts before Implementation
-Validation before Completion
-Review before Certification
-Certification before Project State Update
-State before Context
-Explicit Ownership
-Platform Independence
-Adapters Extend; Adapters Never Redefine
+```
+1.  Read AGENTS.md                          (this file)
+        ↓
+2.  Read ProjectStatus.md
+        ↓
+3.  Read ForgeAI-DevelopmentPhases.md
+        ↓
+4.  Identify the current Phase
+        ↓
+5.  Identify the current Stage within that Phase
+        ↓
+6.  Identify all Frozen Areas for the current Phase/Stage
+        ↓
+7.  Read only the governing specifications required by the task
+        ↓
+8.  Execute the task
 ```
 
-These principles must not be violated for implementation convenience, velocity, optimization, tool preference, or short-term productivity.
+**Rules for this sequence:**
+
+- Steps 1–6 are mandatory for every task, no exceptions.
+- Step 7 is scoped: read only the specifications directly relevant to the task.
+  Do not read the entire governance corpus for a trivial change.
+- Step 8 may begin only after all prior steps are complete.
+- If any step fails (file missing, phase unclear, frozen area ambiguous), stop
+  and escalate per Section 10.
 
 ---
 
-# 3. Planning Model
+## 5. ProjectStatus Policy
 
-Forge AI uses this canonical planning hierarchy:
+`ProjectStatus.md` is the **operational source of truth** for the repository. It
+defines what phase the project is in, what stage within that phase is active,
+what work has been completed, and what areas are frozen.
 
-```text
-Framework
-    ↓
-Phase
-    ↓
-Stage
-    ↓
-Capability
-    ↓
-Task
+**Rules:**
+
+- Never update `ProjectStatus.md` automatically.
+- Never modify `ProjectStatus.md` as part of a task unless explicitly instructed
+  by Human Governance.
+- When work is completed that affects project status, **recommend** an update
+  in the completion report. Include the specific fields that should change and
+  the proposed new values.
+- Only Human Governance may approve and apply status changes.
+
+---
+
+## 6. Roadmap Policy
+
+The development roadmap is defined in `ForgeAI-DevelopmentPhases.md`. It
+establishes a sequence of phases, each with objectives, deliverables, and
+freeze boundaries.
+
+**Rules:**
+
+- **Never skip phases.** Each phase must complete before the next begins.
+- **Never start future work.** Do not implement features, create artifacts, or
+  write specifications that belong to a later phase unless explicitly directed
+  by Human Governance.
+- **Respect frozen areas.** Frozen areas are locked for the duration specified
+  in ProjectStatus. No modifications — not even refactoring, renaming, or
+  reformatting — are permitted within frozen areas unless explicitly authorised.
+
+---
+
+## 7. Canonical Sources
+
+The following documents are the canonical sources for the Forge AI repository.
+They define the governance framework, data models, terminology, and platform
+contracts.
+
+| Document | Purpose |
+|----------|---------|
+| **Constitution** (A.1) | Supreme governing document. Defines principles, authority, and decision rights. |
+| **M.0 Framework Meta Model** | Defines the structural model of the framework itself. |
+| **M.1 Artifact Meta Model** | Defines the model for all artifacts produced within the framework. |
+| **STD-003 Terminology** | Canonical glossary. All terms used in governance documents are defined here. |
+| **STD-010 Metadata** | Metadata schema and requirements for all repository artifacts. |
+| **A.3 Runtime RFC** | Runtime architecture specification and requirements. |
+| **A.4 Engine Platform RFC** | Engine platform specification and requirements. |
+
+**Rules:**
+
+- These documents are authoritative. Do not redefine, paraphrase, or contradict
+  them in task outputs.
+- When a task requires knowledge from these documents, read them from their
+  canonical locations.
+- If a conflict is detected between a canonical source and a task instruction,
+  escalate per Section 10.
+
+---
+
+## 8. File Safety Rules
+
+These rules protect repository integrity. Violating them risks destabilising the
+codebase and breaking phase-gated development.
+
+**Rules:**
+
+1. **Modify only files required by the task.** Do not touch unrelated files,
+   even if they appear to need improvement.
+2. **Avoid unrelated refactoring.** Do not restructure, rename, or reformat
+   files outside the task scope.
+3. **Never move legacy files.** Legacy file locations are frozen unless
+   ProjectStatus explicitly indicates otherwise.
+4. **Never move RC2 files.** RC2 artifacts are locked in place.
+5. **Never change frozen areas.** Frozen areas are defined in ProjectStatus
+   and are inviolable without explicit Human Governance authorisation.
+6. **Never create new governance documents.** The AI does not draft new
+   constitutions, standards, meta models, or RFCs. It may only recommend them.
+
+---
+
+## 9. Completion Reports
+
+Every task **must** end with a completion report containing the following
+sections:
+
+| Section | Description |
+|---------|-------------|
+| **Summary** | What was done, in one to three sentences. |
+| **Files Modified** | List of every file changed, created, or deleted, with a brief note on the change. |
+| **Validation** | How the output was verified (tests passed, manual review, spec compliance check, etc.). |
+| **Risks** | Any risks introduced by the change, including potential regressions or ambiguities. |
+| **Recommendations** | Suggested follow-up actions, including recommended ProjectStatus updates. |
+| **Suggested Next Task** | A concrete next task that logically follows from this work, scoped to the current phase and stage. |
+
+The completion report is not optional. A task is not complete until the report
+is delivered.
+
+---
+
+## 10. Escalation
+
+When a conflict, ambiguity, or out-of-scope situation is encountered:
+
+```
+1.  Stop   —  Cease the current operation immediately.
+        ↓
+2.  Report  —  Describe the conflict clearly: what was expected, what was found,
+                and which canonical sources are in tension.
+        ↓
+3.  Recommend  —  Propose one or more resolutions, referencing the authority
+                  chain and the governing specifications.
+        ↓
+4.  Wait  —  Do not proceed. Await a decision from Human Governance.
 ```
 
-Planning uses Phase and Stage documents.
+**Escalation triggers include but are not limited to:**
 
-Capability documents describe approved executable increments.
-
-Tasks are generated from current project state and approved planning documents.
-
-Capability identifiers are immutable after completion and must not be renumbered.
+- A task instruction conflicts with a canonical source.
+- The current phase or stage cannot be determined from ProjectStatus.
+- A required governing document is missing or inaccessible.
+- A modification would affect a frozen area.
+- The scope of the task would require crossing a phase boundary.
 
 ---
 
-# 4. AI Boot Sequence
+## 11. Pointer to AGENTS v1
 
-Every AI agent must begin with this sequence:
+The complete Forge AI Agent Architecture is documented in:
 
-```text
-1. Read AGENTS.md
-2. Read docs/AI/README.md
-3. Read docs/AI/AIFramework.md
-4. Read docs/AI/Specification/Constitution.md when present
-5. Read docs/AI/AIOrchestrator.md
-6. Read docs/FrameworkGovernance.md
-7. Read docs/ProjectStatus.md
-8. Read docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md
-9. Read the current Phase document
-10. Read the current Stage document
-11. Read the assigned Capability document
-12. Select the correct command, workflow, template, checklist, and validation procedure
+```
+docs/AI/Architecture/Agents/AGENTS-v1-draft.md
 ```
 
-Agents should not ask what to do next when the next action can be derived from `docs/ProjectStatus.md`, `docs/AI/AIOrchestrator.md`, and `docs/AI/Workflows/TaskPlanner.md`.
-
----
-
-# 5. Framework Documentation Map
-
-AI operational documentation lives under:
-
-```text
-docs/AI/
-```
-
-Primary AI documents:
-
-```text
-docs/AI/README.md
-docs/AI/AIFramework.md
-docs/AI/AIOrchestrator.md
-docs/AI/Specification/
-docs/AI/System/
-```
-
-Commands:
-
-```text
-docs/AI/Commands/AgentTaskCommand.md
-docs/AI/Commands/AgentImplementationCommand.md
-docs/AI/Commands/AgentAuditCommand.md
-docs/AI/Commands/AgentDocumentationCommand.md
-docs/AI/Commands/AgentBugFixCommand.md
-```
-
-Workflows:
-
-```text
-docs/AI/Workflows/TaskPlanner.md
-docs/AI/Workflows/TaskGenerationWorkflow.md
-docs/AI/Workflows/ProjectStateUpdater.md
-```
-
-Validation, review, and templates:
-
-```text
-docs/AI/Validation/
-docs/AI/Checklists/AgentReviewChecklist.md
-docs/AI/Templates/PhaseTemplate.md
-docs/AI/Templates/StageTemplate.md
-docs/AI/Templates/CapabilityTemplate.md
-docs/AI/Templates/AuditTemplate.md
-```
-
-Tool-facing rule files:
-
-```text
-.cursorrules
-docs/AI/AgentSystemPrompt.md
-docs/AI/Tooling/CursorRules.md
-```
-
----
-
-# 6. Framework Subsystem Ownership
-
-Each subsystem has exactly one owner.
-
-| Subsystem | Owner | Consumers |
-| --- | --- | --- |
-| Constitution | Framework Constitution | All participants |
-| Governance | Framework Governance | Planning, Review, Certification |
-| Planning | Planning System | Orchestrator, Task Generation |
-| Workflow | Workflow System | Commands, Runtime |
-| Commands | Command System | AI Runtime |
-| Templates | Template System | Commands, Documentation |
-| Validation | Validation System | Review, Certification |
-| Review | Review System | Certification |
-| Certification | Certification System | Project State Updater |
-| State | State Management | Planning, Orchestrator |
-| Knowledge | Knowledge System | Runtime, Context Assembly |
-| Memory | Memory System | Runtime, Future Context |
-| Runtime | AI Runtime | Agents, Automation |
-| Multi-Agent | Collaboration System | Agent Runtime |
-| Swarm | Swarm Orchestration | Multi-Agent Runtime |
-| Platform Adapters | Adapter System | Target Platforms |
-
-Ownership duplication is prohibited.
-
-A subsystem may consume another subsystem, but it must not redefine that subsystem's authority.
-
----
-
-# 7. Dependency Flow
-
-Dependencies must flow from authority to execution:
-
-```text
-Constitution
-    ↓
-Governance
-    ↓
-Planning
-    ↓
-Workflow
-    ↓
-Commands
-    ↓
-Execution
-    ↓
-Validation
-    ↓
-Review
-    ↓
-Certification
-    ↓
-Project State Update
-```
-
-Forbidden examples:
-
-```text
-Implementation → Architecture
-Runtime → Governance
-Adapter → Framework Constitution
-Tooling → Planning Authority
-Validation → Implementation Scope
-Review → Undocumented Redesign
-Project State → Architecture Definition
-```
-
-Execution consumes planning.
-
-Implementation never defines architecture.
-
-Adapters consume the Framework.
-
-Adapters never redefine the Framework.
-
----
-
-# 8. Framework-First Rule
-
-The Framework is the authority.
-
-The Constitution defines permanent principles.
-
-Governance defines decision rules.
-
-Planning defines approved work.
-
-Commands define execution procedure.
-
-Validation verifies evidence.
-
-Review certifies readiness.
-
-State records current reality.
-
-Implementation consumes all of the above.
-
-Implementation must not become a source of architectural truth.
-
----
-
-# 9. Platform Independence Rule
-
-Forge AI must remain platform-independent.
-
-The Framework must not directly depend on:
-
-- WordPress;
-- Laravel;
-- Symfony;
-- React;
-- Node.js;
-- PHP;
-- TypeScript;
-- Python;
-- any specific programming language;
-- any specific application framework;
-- any specific database;
-- any specific runtime host;
-- any specific editor or IDE.
-
-Platform-specific behavior belongs only in platform adapters.
-
-A platform adapter may translate Forge AI concepts into a target platform, but it must not redefine Forge AI concepts.
-
----
-
-# 10. Adapter Rules
-
-Platform adapters are consumers.
-
-Adapters may:
-
-- map Forge AI workflows to platform-specific tasks;
-- define platform-specific validation commands;
-- adapt documentation templates;
-- connect to project files;
-- expose platform-specific integration points.
-
-Adapters must not:
-
-- change the Constitution;
-- change Framework Governance;
-- redefine the planning hierarchy;
-- bypass commands;
-- bypass validation;
-- bypass review;
-- advance project state without certification;
-- make a target platform the source of truth.
-
----
-
-# 11. Command and Workflow Rules
-
-Commands are operational procedures.
-
-Workflows define lifecycle movement.
-
-Commands and workflows must not invent work.
-
-They must consume:
-
-```text
-Project Status
-Current Phase
-Current Stage
-Current Capability
-Governance
-Relevant command document
-Relevant workflow document
-Relevant template
-Relevant validation rules
-```
-
-The required lifecycle is:
-
-```text
-Planning
-    ↓
-Task Generation
-    ↓
-Command Selection
-    ↓
-Execution
-    ↓
-Validation
-    ↓
-Review
-    ↓
-Certification
-    ↓
-Project State Update
-```
-
-No stage should be skipped.
-
----
-
-# 12. Validation and Review Rules
-
-Validation is evidence-based.
-
-Review is independent readiness assessment.
-
-A task is not complete until:
-
-- required work is done;
-- documentation is synchronized;
-- validation passes;
-- review passes;
-- certification is reached when applicable;
-- project state update is safe.
-
-Validation must report evidence honestly.
-
-Review must not implement new functionality.
-
-Certification must not occur after failed validation or failed review.
-
----
-
-# 13. Documentation Rules
-
-Documentation is a production artifact.
-
-Documentation must remain synchronized across:
-
-```text
-AGENTS.md
-    ↓
-docs/AI/AIFramework.md
-    ↓
-docs/FrameworkGovernance.md
-    ↓
-docs/ProjectStatus.md
-    ↓
-docs/DevelopmentPhases/
-    ↓
-Current Phase
-    ↓
-Current Stage
-    ↓
-Current Capability
-```
-
-Documentation must not duplicate authority unnecessarily.
-
-Lower-level documents may refine higher-level documents but must not contradict them.
-
----
-
-# 14. Reference Policy
-
-Reference material is read-only.
-
-Reference material may be used for:
-
-- research;
-- comparison;
-- migration planning;
-- architecture inspiration;
-- documentation style reference.
-
-Reference material must not become implementation authority.
-
-Reference material must not be imported, executed, autoloaded, copied blindly, or treated as current architecture.
-
-When reference material conflicts with Forge AI, Forge AI wins.
-
----
-
-# 15. Quality Gates
-
-Every capability must define its own relevant quality gates.
-
-Typical gates may include:
-
-```bash
-npm run build
-npm run typecheck
-npm test
-npm run lint
-```
-
-Other platform-specific gates may be defined only by a platform adapter or capability specification.
-
-Quality gates may include:
-
-- build checks;
-- tests;
-- static analysis;
-- linting;
-- documentation validation;
-- architecture validation;
-- dependency validation;
-- security checks;
-- review checklist completion.
-
-A successful task report must state which gates were run and which gates were not applicable.
-
----
-
-# 16. AI Self-Planning Rules
-
-Agents must derive work from Project Status and the AI Orchestrator whenever possible.
-
-Agents must preserve:
-
-- planning before execution;
-- workflow before command;
-- command before implementation;
-- template before artifact;
-- validation before review;
-- review before certification;
-- certification before project state update.
-
-Agents must stop and report a blocker when:
-
-- authority is unclear;
-- ownership is unclear;
-- project state is inconsistent;
-- scope is ambiguous;
-- required documentation is missing;
-- requested work exceeds the active capability;
-- validation fails;
-- review fails.
-
----
-
-# 17. Human Authority
-
-Humans remain the highest authority.
-
-AI agents assist.
-
-Humans govern.
-
-Human overrides should be documented and traceable when they affect architecture, governance, project state, or certified capability history.
-
----
-
-# 18. Completion Rule
-
-A Forge AI task is complete only when it has:
-
-- followed the required boot sequence;
-- identified the current project state;
-- selected the correct workflow and command;
-- stayed within approved scope;
-- completed required deliverables;
-- passed relevant validation;
-- passed review or is review-ready;
-- documented risks or blockers;
-- produced a completion report;
-- preserved project state integrity.
-
-Completion without validation and review is not certification.
+This repository bootloader intentionally remains concise and shall not duplicate
+the Agent Architecture. Topics including Agent Context, Agent Memory, Agent
+Knowledge, Agent Planning, Agent Decision, Agent Lifecycle, Reasoning, Prompt
+Engineering, Tool Selection, Swarm, Multi-Agent coordination, Operational Layer,
+Platform Adapters, Certification Workflows, and Validation Framework are all
+documented in AGENTS-v1 — not here.
+
+Refer to AGENTS-v1 for any architectural detail beyond what this bootloader covers.
