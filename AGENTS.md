@@ -14,7 +14,7 @@
 |:---|:---|
 | Identifier | `FORGE-BOOTLOADER-AGENTS` |
 | Title | AGENTS.md — Forge AI Repository Bootloader |
-| Version | 2.1.0-draft |
+| Version | 2.2.0-draft |
 | Status | Draft |
 | Canonical Status | Repository bootloader; canonical only as task entry point after Human Governance approval |
 | Classification | Repository Governance Bootloader |
@@ -34,7 +34,7 @@
 | Dependencies | Governance Atlas v2, Framework Governance, ProjectStatus, DevelopmentPhases, active task authority documents |
 | Consumes | Human task instruction, Governance Atlas navigation, ProjectStatus operational state, DevelopmentPhases roadmap state, task-specific authorities |
 | Produces | Boot decision, task classification, required-reading set, execution boundary, validation expectation, completion report |
-| Related Specifications | `docs/AI/Architecture/Agents/AGENTS-v1-draft.md`; `docs/AI/Architecture/Agents/AGENTS-V2-Roadmap.md`; `docs/AI/Architecture/Agents/AGENTS-V2-DevelopmentPhases.md`; `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md` |
+| Related Specifications | `docs/AI/Architecture/Agents/AGENTS-v2.md`; `docs/AI/Architecture/Agents/Reports/AGENTS-v2-Core-Freeze-Review.md`; `docs/AI/Architecture/Agents/AGENTS-v1-draft.md`; `docs/AI/Architecture/Agents/AGENTS-V2-Roadmap.md`; `docs/AI/Architecture/Agents/AGENTS-V2-DevelopmentPhases.md`; `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md` |
 | Supersedes | Prior AGENTS.md repository bootloader drafts |
 | Superseded By | None |
 | Promotion Requirements | Human Governance review, Governance Atlas alignment, FrameworkGovernance alignment, ProjectStatus policy validation, and boot-sequence validation |
@@ -241,18 +241,22 @@ AGENTS architecture is not owned by this bootloader.
 Use the following documents only when the task is specifically about agent architecture, multi-agent execution, collaboration, or swarm preparation:
 
 ```text
-docs/AI/Architecture/Agents/AGENTS-v1-draft.md
+docs/AI/Architecture/Agents/AGENTS-v2.md
+docs/AI/Architecture/Agents/Reports/AGENTS-v2-Core-Freeze-Review.md
 docs/AI/Architecture/Agents/AGENTS-V2-Roadmap.md
 docs/AI/Architecture/Agents/AGENTS-V2-DevelopmentPhases.md
+docs/AI/Architecture/Agents/AGENTS-v1-draft.md
 ```
 
 Boundary rules:
 
-- AGENTS v1 defines single-agent operating architecture.
+- `docs/AI/Architecture/Agents/AGENTS-v2.md` is the primary entry point for AGENTS v2 architecture tasks.
+- `docs/AI/Architecture/Agents/AGENTS-v1-draft.md` remains a historical / legacy single-agent reference, not the primary authority for new AGENTS v2 work.
 - AGENTS v2 roadmap defines future multi-agent capability direction.
 - AGENTS v2 development phases define future multi-agent delivery phases.
+- AGENTS v2 Core Freeze Review returned PASS WITH OBSERVATIONS, but that result does not imply canonical promotion, certification, implementation activation, swarm activation, or ProjectStatus update.
 - None of these documents replace this repository bootloader.
-- None of these documents activate future work by themselves.
+- AGENTS v2 planning documents do not activate multi-agent, swarm, enterprise, runtime, platform adapter, or implementation work by themselves.
 - AGENTS v2 shall consume AGENTS v1, Runtime, Engine Platform, and Operational Layer; it shall not redefine them.
 - Swarm or enterprise-agent work remains future scope unless Human Governance explicitly activates it and ProjectStatus permits it.
 
