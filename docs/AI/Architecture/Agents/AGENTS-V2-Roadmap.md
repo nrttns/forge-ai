@@ -1,231 +1,92 @@
 # Forge AI — AGENTS v2 Roadmap
 
-Version: 1.0.0-draft
-Status: Draft
+> Enterprise Edition v2.0.0-draft
 
----
+## Document Metadata
 
-# Strategic Goal
-
-Create a governed Multi-Agent AI Platform capable of autonomous collaboration while remaining under Human Governance.
-
----
+| Field | Value |
+|:---|:---|
+| Identifier | FORGE-AGENTS-ROADMAP |
+| Title | AGENTS v2 Roadmap |
+| Version | 2.0.0-draft |
+| Status | Draft |
+| Canonical Status | Non-canonical |
+| Classification | Strategic Roadmap |
+| Document Type | Roadmap |
+| Owner | Framework Governance |
+| Maintainers | Framework Architecture Team |
+| Review Authority | Framework Governance |
+| Approval Authority | Human Governance |
+| Created | 2026-07-08 |
+| Last Updated | 2026-07-08 |
+| Lifecycle Phase | Draft |
+| Traceability ID | FORGE-AGENTS-ROADMAP |
+| Scope | Strategic evolution of AGENTS v2 |
+| Out of Scope | Runtime implementation |
+| Normative Authority | AGENTS.md |
+| Normative References | STD-010; AGENTS-v2-Architecture.md |
+| Dependencies | Development Phases |
+| Consumes | Development phases |
+| Produces | Strategic roadmap |
+| Related Specifications | AGENTS v2 family |
+| Supersedes | None |
+| Superseded By | None |
+| Promotion Requirements | Governance approval |
+| Certification Status | Not certified |
 
 # Architecture Evolution
 
 Human Governance
-│
-▼
-AGENTS v1
-│
-▼
-Agent Runtime
-│
-▼
-AGENTS v2
-│
-▼
-Swarm Runtime
-│
-▼
-Enterprise AI Platform
-
----
+↓
+Repository Bootloader
+↓
+Agent Architecture
+↓
+Runtime Consumption
+↓
+Coordinator
+↓
+Planning
+↓
+Execution
+↓
+Merge
+↓
+Swarm
+↓
+Enterprise
 
 # Capability Roadmap
 
-Stage 1
-
-Agent Identity
-
-↓
-
-Agent Registry
-
-↓
-
-Capability Registry
-
-↓
-
-Shared Context
-
-↓
-
-Shared Memory
-
-↓
-
-Shared Knowledge
-
----
-
-Stage 2
-
-Coordinator Agent
-
-↓
-
-Planner Agent
-
-↓
-
-Executor Agent
-
-↓
-
-Validator Agent
-
-↓
-
-Reviewer Agent
-
-↓
-
-Merge Agent
-
----
-
-Stage 3
-
-Task Distribution
-
-↓
-
-Load Balancing
-
-↓
-
-Capability Routing
-
-↓
-
-Execution Queue
-
-↓
-
-Parallel Scheduling
-
----
-
-Stage 4
-
-Conflict Detection
-
-↓
-
-Conflict Resolution
-
-↓
-
-Merge Strategy
-
-↓
-
-Consensus
-
-↓
-
-Escalation
-
----
-
-Stage 5
-
-Dynamic Team Creation
-
-↓
-
-Adaptive Planning
-
-↓
-
-Cross-Agent Reasoning
-
-↓
-
-Knowledge Sharing
-
-↓
-
-Learning
-
----
-
-Stage 6
-
-Swarm Runtime
-
-↓
-
-Dynamic Swarms
-
-↓
-
-Mission Planning
-
-↓
-
-Mission Execution
-
-↓
-
-Mission Review
-
-↓
-
-Mission Certification
-
----
-
-Stage 7
-
-Enterprise Platform
-
-↓
-
-Repository Federation
-
-↓
-
-Distributed Agents
-
-↓
-
-Distributed Swarms
-
-↓
-
-Cross-Project Governance
-
-↓
-
-Enterprise Operations
-
----
+1. Foundation
+   - Architecture
+   - Identity
+   - Registry
+   - Capability
+   - Lifecycle
+   - Communication
+
+2. Collaboration
+   - Validation
+   - Review
+   - Workflow
+   - Runtime Consumption
+
+3. Coordination
+   - Coordinator
+   - Planning
+   - Execution
+   - Merge
+
+4. Swarm
+
+5. Enterprise
 
 # Success Criteria
 
-AGENTS v2 is considered complete when:
-
-- Multiple agents collaborate deterministically.
-- Every task is traceable.
-- Human Governance remains the final authority.
-- Agent communication is standardized.
-- Swarm execution is deterministic.
-- Merge conflicts are governed.
-- Enterprise deployment is supported.
-
----
-
-# Future
-
-AGENTS v3
-
-Planned focus:
-
-- Autonomous Organizations
-- Self-Optimizing Swarms
-- Cross-Organization Collaboration
-- AI Marketplace
-- Federated AI Networks
+- Architecture complete
+- Identity standardized
+- Registry governed
+- Communication contracts complete
+- Runtime consumes, never redefines Agent Architecture
+- Human Governance remains final authority
