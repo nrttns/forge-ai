@@ -114,7 +114,10 @@ docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md
     ↓
 docs/AI/Runtime/A.4-Engine-Architecture-RFC.md and Engine Specialization RFC family
     ↓
-Operational Core: docs/AI/AIFramework.md / docs/AI/AIOrchestrator.md / docs/AI/AgentSystemPrompt.md
+Operational Core
+├── docs/AI/AIFramework.md
+├── docs/AI/AIOrchestrator.md
+└── docs/AI/AgentSystemPrompt.md
     ↓
 Commands / Workflows / Templates / task-specific artifacts
 ```
@@ -129,9 +132,48 @@ Rules:
 - Runtime and Engine documents define architecture and specialization constraints; the Orchestrator routes work against them without redesigning them.
 - Commands, workflows, and templates are execution aids and output contracts; they do not define authority.
 
+Framework Governance owns governance decision policy, including decision priority, review expectations, approval boundaries, promotion rules, conflict handling, and escalation policy. The AI Orchestrator only routes operational execution according to that policy; it does not own, reinterpret, approve, or replace Framework Governance decisions.
+
 ---
 
-## 4. Orchestration Lifecycle
+## 4. Operational Responsibilities
+
+### 4.1 Owns
+
+The AI Orchestrator owns:
+
+- Orchestration lifecycle coordination
+- Workflow routing
+- Command routing
+- Template routing
+- Runtime interaction planning
+- Engine interaction planning
+- Blocker management
+- Completion cycle coordination
+- ProjectStatus update boundary handling
+
+### 4.2 Does Not Own
+
+The AI Orchestrator does not own:
+
+- Human Governance
+- Framework Governance
+- Governance Atlas
+- ProjectStatus
+- DevelopmentPhases
+- Constitution
+- Meta Models
+- Standards
+- Runtime Architecture
+- Engine Architecture
+- Engine RFCs
+- Certification authority
+- Canonical promotion
+- Implementation activation
+
+---
+
+## 5. Orchestration Lifecycle
 
 The Forge AI v2 orchestration lifecycle is:
 
@@ -177,7 +219,7 @@ No lifecycle step should be skipped when it is relevant to the task. Human Gover
 
 ---
 
-## 5. Workflow Routing
+## 6. Workflow Routing
 
 The Orchestrator selects workflow handling based on the task type, active ProjectStatus state, roadmap constraints, and task-specific authority set.
 
@@ -196,7 +238,7 @@ Only one primary workflow should own execution at a time. Supporting workflows m
 
 ---
 
-## 6. Command Routing
+## 7. Command Routing
 
 Command routing translates a classified task into execution behavior.
 
@@ -223,7 +265,7 @@ Command routing rules:
 
 ---
 
-## 7. Template Routing
+## 8. Template Routing
 
 The Orchestrator uses `docs/AI/Templates/README.md` as the current template category map. Templates are output contracts, not authority documents.
 
@@ -246,9 +288,13 @@ Template routing rules:
 4. Do not use obsolete top-level template paths.
 5. If no valid template exists for the requested artifact, report the gap and recommend a Human Governance or Framework Governance decision before inventing a new template path.
 
----
+1. The Orchestrator may map task execution to Runtime concepts for clarity and consistency.
+2. The Orchestrator shall not redesign Runtime Architecture or imply Runtime implementation activation.
+3. Runtime concepts help structure context assembly, execution coordination, validation, review, state handling, and memory handling.
+4. Runtime state and ProjectStatus are distinct: ProjectStatus is the repository operational state authority, while Runtime state is an architectural concept consumed by operational coordination.
+5. If a task requires executable Runtime behavior that is not authorized by ProjectStatus and Human Governance, the Orchestrator reports a blocker.
 
-## 8. Runtime Interaction
+## 9. Runtime Interaction
 
 The Orchestrator consumes `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md` to align operational execution with Runtime concepts, lifecycle boundaries, context handling, execution flow, validation, review, certification, state, and memory.
 
@@ -262,13 +308,25 @@ Runtime interaction rules:
 
 ---
 
-## 9. Engine Interaction
+## 10. Engine Interaction
 
 The Orchestrator consumes `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`, the Engine Platform RFC family, and `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md` to coordinate work against Engine Foundation constraints.
 
 Engine interaction rules:
 
-1. The Orchestrator may route specialized work conceptually to relevant Engine responsibilities such as context, knowledge, planning, decision, execution, validation, review, certification, memory, governance, workflow, and registry concerns.
+1. The Orchestrator may route specialized work conceptually to relevant Engine responsibilities:
+   - Context
+   - Knowledge
+   - Planning
+   - Decision
+   - Execution
+   - Validation
+   - Review
+   - Certification
+   - Memory
+   - Governance
+   - Workflow
+   - Registry
 2. The Orchestrator shall not create or modify Engine RFCs unless the active task explicitly authorizes Engine RFC work.
 3. The Orchestrator shall not redefine engine contracts, registry behavior, lifecycle behavior, communication behavior, state behavior, or capability behavior.
 4. Engine specialization follows the Engine Specialization RFC template and consumes Meta, Standards, Runtime, and Engine Platform authority without redefining them.
@@ -276,7 +334,7 @@ Engine interaction rules:
 
 ---
 
-## 10. ProjectStatus Update Boundaries
+## 11. ProjectStatus Update Boundaries
 
 `docs/DevelopmentPhases/ProjectStatus.md` is the operational source of truth for current phase, current stage, current objective, completed work, next queue, frozen areas, and status update policy.
 
@@ -297,7 +355,7 @@ ProjectStatus update recommendations must be separate from the actual artifact c
 
 ---
 
-## 11. Blocker Management
+## 12. Blocker Management
 
 The Orchestrator stops and reports a blocker when:
 
@@ -325,7 +383,7 @@ The Orchestrator recommends corrective action rather than guessing.
 
 ---
 
-## 12. Completion Cycle
+## 13. Completion Cycle
 
 A Forge AI v2 orchestration cycle is complete when the active task has:
 
@@ -367,7 +425,7 @@ A completion report is not approval, certification, canonical promotion, or Proj
 
 ---
 
-## 13. Relationship to AIFramework.md
+## 14. Relationship to AIFramework.md
 
 `docs/AI/AIFramework.md` is the Operational Core entry point. It defines how AI-assisted work begins, discovers authority, assembles context, executes within scope, validates, reports, and recommends next steps.
 
@@ -393,7 +451,7 @@ The Orchestrator is not a replacement for AIFramework. It is the coordinating la
 
 ---
 
-## 14. Historical Context and Version History
+## 15. Historical Context and Version History
 
 This file remains the permanent in-place AI Orchestrator document. The v2 refactor modernizes the existing file rather than replacing it, moving it into the Forge AI v2 Operational Core model while preserving its orchestration role.
 
