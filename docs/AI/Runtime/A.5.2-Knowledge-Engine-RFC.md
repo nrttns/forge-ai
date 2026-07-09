@@ -45,7 +45,7 @@ This document defines the architecture of the Knowledge Engine within the approv
 | Supersedes | None |
 | Superseded By | None |
 | Blocks | A.5.3 — Planning Engine RFC (Knowledge Engine must be certified before Planning Engine enters review) |
-| Blocked By | A.5.1 — Context Engine RFC (Context Engine must be certified before Knowledge Engine enters review) |
+| Blocked By | A.5.0 — Engine Specialization RFC Template (template must be approved before Knowledge Engine enters review); A.5.1 — Context Engine RFC (Context Engine must be certified before Knowledge Engine enters review) |
 | Promotion Requirements | Framework Governance review, STD-010 metadata validation, STD-003 terminology validation, Engine Platform alignment review, no implementation-scope confirmation, A.4.7 capability domain mapping, Context Engine alignment review, approval by Human Governance / Framework Governance, and explicit canonical promotion |
 | Certification Status | Not certified |
 | Review Status | Not Reviewed |
