@@ -288,7 +288,11 @@ Template routing rules:
 4. Do not use obsolete top-level template paths.
 5. If no valid template exists for the requested artifact, report the gap and recommend a Human Governance or Framework Governance decision before inventing a new template path.
 
----
+1. The Orchestrator may map task execution to Runtime concepts for clarity and consistency.
+2. The Orchestrator shall not redesign Runtime Architecture or imply Runtime implementation activation.
+3. Runtime concepts help structure context assembly, execution coordination, validation, review, state handling, and memory handling.
+4. Runtime state and ProjectStatus are distinct: ProjectStatus is the repository operational state authority, while Runtime state is an architectural concept consumed by operational coordination.
+5. If a task requires executable Runtime behavior that is not authorized by ProjectStatus and Human Governance, the Orchestrator reports a blocker.
 
 ## 9. Runtime Interaction
 
