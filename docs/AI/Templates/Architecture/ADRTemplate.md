@@ -52,35 +52,35 @@ The template consumes STD-010 and TPL-000. The produced document must declare it
 
 Every document produced from this template must begin with a STD-010-compliant `## Document Metadata` section using TPL-000 placeholders until values are resolved. Do not add template-specific metadata fields that compete with STD-010.
 
-| Field                  | Value                      |
-|:-----------------------|:---------------------------|
-| Identifier             | `{{IDENTIFIER}}`           |
-| Title                  | {{TITLE}}                  |
-| Version                | {{VERSION}}                |
-| Status                 | {{STATUS}}                 |
-| Canonical Status       | {{CANONICAL_STATUS}}       |
-| Classification         | {{CLASSIFICATION}}         |
-| Document Type          | {{DOCUMENT_TYPE}}          |
-| Owner                  | {{OWNER}}                  |
-| Maintainers            | {{MAINTAINERS}}            |
-| Review Authority       | {{REVIEW_AUTHORITY}}       |
-| Approval Authority     | {{APPROVAL_AUTHORITY}}     |
-| Created                | {{CREATED}}                |
-| Last Updated           | {{LAST_UPDATED}}           |
-| Lifecycle Phase        | {{LIFECYCLE_PHASE}}        |
-| Traceability ID        | {{TRACEABILITY_ID}}        |
-| Scope                  | {{SCOPE}}                  |
-| Out of Scope           | {{OUT_OF_SCOPE}}           |
-| Normative Authority    | {{NORMATIVE_AUTHORITY}}    |
-| Normative References   | {{NORMATIVE_REFERENCES}}   |
-| Dependencies           | {{DEPENDENCIES}}           |
-| Consumes               | {{CONSUMES}}               |
-| Produces               | {{PRODUCES}}               |
+| Field | Value |
+|:---|:---|
+| Identifier | `{{IDENTIFIER}}` |
+| Title | {{TITLE}} |
+| Version | {{VERSION}} |
+| Status | {{STATUS}} |
+| Canonical Status | {{CANONICAL_STATUS}} |
+| Classification | {{CLASSIFICATION}} |
+| Document Type | {{DOCUMENT_TYPE}} |
+| Owner | {{OWNER}} |
+| Maintainers | {{MAINTAINERS}} |
+| Review Authority | {{REVIEW_AUTHORITY}} |
+| Approval Authority | {{APPROVAL_AUTHORITY}} |
+| Created | {{CREATED}} |
+| Last Updated | {{LAST_UPDATED}} |
+| Lifecycle Phase | {{LIFECYCLE_PHASE}} |
+| Traceability ID | {{TRACEABILITY_ID}} |
+| Scope | {{SCOPE}} |
+| Out of Scope | {{OUT_OF_SCOPE}} |
+| Normative Authority | {{NORMATIVE_AUTHORITY}} |
+| Normative References | {{NORMATIVE_REFERENCES}} |
+| Dependencies | {{DEPENDENCIES}} |
+| Consumes | {{CONSUMES}} |
+| Produces | {{PRODUCES}} |
 | Related Specifications | {{RELATED_SPECIFICATIONS}} |
-| Supersedes             | {{SUPERSEDES}}             |
-| Superseded By          | {{SUPERSEDED_BY}}          |
+| Supersedes | {{SUPERSEDES}} |
+| Superseded By | {{SUPERSEDED_BY}} |
 | Promotion Requirements | {{PROMOTION_REQUIREMENTS}} |
-| Certification Status   | {{CERTIFICATION_STATUS}}   |
+| Certification Status | {{CERTIFICATION_STATUS}} |
 
 ## 5. Required Structure
 
@@ -111,9 +111,9 @@ Document the accepted or proposed decision, including the accountable document O
 
 ### 6.4 Alternatives Considered
 
-| Option               | Summary                   | Pros                   | Cons                   | Reason Rejected / Accepted |
-|:---------------------|:--------------------------|:-----------------------|:-----------------------|:---------------------------|
-| `{{ALTERNATIVE_ID}}` | `{{ALTERNATIVE_SUMMARY}}` | `{{ALTERNATIVE_PROS}}` | `{{ALTERNATIVE_CONS}}` | `{{ALTERNATIVE_REASON}}`   |
+| Option | Summary | Pros | Cons | Reason Rejected / Accepted |
+|:---|:---|:---|:---|:---|
+| `{{ALTERNATIVE_ID}}` | `{{ALTERNATIVE_SUMMARY}}` | `{{ALTERNATIVE_PROS}}` | `{{ALTERNATIVE_CONS}}` | `{{ALTERNATIVE_REASON}}` |
 
 ### 6.5 Consequences
 List positive, negative, and neutral consequences separately.
@@ -126,8 +126,8 @@ Describe migration requirements, compatibility concerns, deprecation needs, and 
 
 ### 6.8 Validation and Review Evidence
 
-| Evidence       | Source       | Result       | Notes       |
-|:---------------|:-------------|:-------------|:------------|
+| Evidence | Source | Result | Notes |
+|:---|:---|:---|:---|
 | `{{EVIDENCE}}` | `{{SOURCE}}` | `{{RESULT}}` | `{{NOTES}}` |
 
 ### 6.9 ProjectStatus Impact
