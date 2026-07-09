@@ -1522,7 +1522,7 @@ The following is the complete skeleton that every RFC template shall generate. D
 | Identifier | `{FORGE-{Prefix}-{Number}}` |
 | Title | {Identifier} — {Descriptive Title} |
 | Version | `{0.1.0-draft}` |
-| Status | {RFC / Draft}
+| Status | {RFC / Draft} |
 | Canonical Status | Non-canonical until reviewed, approved, and promoted through Framework Governance |
 | Classification | {Taxonomy Type} |
 | Document Type | {RFC or Architecture RFC} |
@@ -1714,16 +1714,16 @@ The following is the complete skeleton that every RFC template shall generate. D
 
 ### Appendix C: Lifecycle State Transition Matrix
 
-| From \ To | Draft | Review | Approved | Certified | Canonical | Deprecated | Archived | Retired |
-|:---|:---|:---|:---|:---|:---|:---|:---|:---|
-| **Draft** | — | Submit | — | — | — | — | — | — |
-| **Review** | Return | — | Pass | — | — | — | — | — |
-| **Approved** | Revise | — | — | Certify | — | — | — | — |
-| **Certified** | Revise | — | — | — | Promote | — | — | — |
-| **Canonical** | Revise | — | — | — | — | Deprecate | — | — |
-| **Deprecated** | — | — | — | — | — | — | Archive | Retire |
-| **Archived** | Reopen | — | — | — | — | — | — | — |
-| **Retired** | — | — | — | — | — | — | — | — |
+| From \ To      | Draft  | Review | Approved | Certified | Canonical | Deprecated | Archived | Retired |
+|:---------------|:-------|:-------|:---------|:----------|:----------|:-----------|:---------|:--------|
+| **Draft**      | —      | Submit | —        | —         | —         | —          | —        | —       |
+| **Review**     | Return | —      | Pass     | —         | —         | —          | —        | —       |
+| **Approved**   | Revise | —      | —        | Certify   | —         | —          | —        | —       |
+| **Certified**  | Revise | —      | —        | —         | Promote   | —          | —        | —       |
+| **Canonical**  | Revise | —      | —        | —         | —         | Deprecate  | —        | —       |
+| **Deprecated** | —      | —      | —        | —         | —         | —          | Archive  | Retire  |
+| **Archived**   | Reopen | —      | —        | —         | —         | —          | —        | —       |
+| **Retired**    | —      | —      | —        | —         | —         | —          | —        | —       |
 
 ### Appendix D: Validation Checklist
 
@@ -1773,6 +1773,6 @@ This checklist may be used for manual validation of RFC documents against TPL-00
 
 ## Version History
 
-| Version | Status | Notes |
-|:---|:---|:---|
-| `0.1.0-draft` | Draft | Initial TPL-001 creation. Defines RFC template structure, taxonomy, categories, lifecycle, ownership, authority consumption, metadata requirements, mandatory and optional sections, naming, identifiers, traceability, versioning, status model, review, approval, certification, promotion, validation, compliance matrix, validation matrix, examples, anti-patterns, best practices, success criteria, future evolution, glossary, and appendices. |
+| Version       | Status | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|:--------------|:-------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `0.1.0-draft` | Draft  | Initial TPL-001 creation. Defines RFC template structure, taxonomy, categories, lifecycle, ownership, authority consumption, metadata requirements, mandatory and optional sections, naming, identifiers, traceability, versioning, status model, review, approval, certification, promotion, validation, compliance matrix, validation matrix, examples, anti-patterns, best practices, success criteria, future evolution, glossary, and appendices. |
