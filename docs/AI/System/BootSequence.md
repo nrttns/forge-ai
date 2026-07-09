@@ -1,120 +1,219 @@
 # AI System Boot Sequence
 
-## Status
+---
 
-Status: AI Framework v1.0 RC2 Operating Procedure
+## Document Metadata
 
-Document Type: Tool-Facing Boot Procedure
+| Field | Value |
+|:---|:---|
+| Identifier | `FORGE-AI.SYSTEM.BOOT-SEQUENCE` |
+| Title | AI System Boot Sequence |
+| Version | `2.0.0-draft` |
+| Status | Draft |
+| Canonical Status | Non-canonical until reviewed, approved, and promoted through Framework Governance |
+| Classification | System Layer Boot Procedure |
+| Document Type | Tool-Facing Boot Procedure |
+| Owner | AI Operational Layer / Human Governance |
+| Maintainers | Framework Architecture Team |
+| Review Authority | Human Governance / Framework Governance |
+| Approval Authority | Human Governance |
+| Created | 2026-07-09 |
+| Last Updated | 2026-07-09 |
+| Lifecycle Phase | Draft Operational Core Alignment |
+| Traceability ID | `FORGE-AI.V2.OP-005B` |
+| Scope | Repository boot procedure, document loading order, context assembly order, boot validation, and boot failure handling for Forge AI agents. |
+| Out of Scope | Governance redesign, authority decisions, Runtime ownership, Engine ownership, command definitions, workflow definitions, template definitions, ProjectStatus updates, certification, promotion, and implementation. |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
+| Normative References | `docs/AI/System/AuthorityModel.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
+| Dependencies | Repository bootloader, AuthorityModel authority resolution, AIFramework operational entry point, AIOrchestrator execution routing, AgentSystemPrompt agent behavior rules, active ProjectStatus, DevelopmentPhases roadmap, and task-specific runtime, engine, command, workflow, and template documents when required. |
+| Consumes | Human task instruction, AGENTS.md bootloader rules, AuthorityModel authority procedure, AIFramework operational guidance, AIOrchestrator routing rules, AgentSystemPrompt behavior constraints, relevant runtime and engine authorities, commands, workflows, templates, validation expectations, ProjectStatus operational state, and DevelopmentPhases roadmap sequence. |
+| Produces | System Layer boot sequence, document loading order, context assembly order, boot validation expectations, boot failure handling, and completion-report expectations. |
+| Related Specifications | `docs/AI/System/SourceOfTruth.md`; `docs/AI/System/ContextAssembly.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md`; Commands; Workflows; Templates |
+| Supersedes | Prior AI System Boot Sequence operating-procedure drafts. |
+| Superseded By | None |
+| Promotion Requirements | Human Governance review, Framework Governance review, STD-010 metadata validation, authority-chain validation, ProjectStatus policy validation, roadmap validation, frozen-area validation, and explicit Human Governance promotion authorization. |
+| Certification Status | Not certified |
 
-Authority: `AGENTS.md`
+---
 
-Related Documents:
+## 1. Purpose
+
+This document defines the Forge AI v2 System Layer boot procedure used by AI agents before executing repository work.
+
+Boot establishes the task instruction, authority path, document loading order, context assembly order, execution boundary, validation expectation, and completion-report requirement. It prevents agents from relying on stale memory, conversational assumptions, undocumented authority, or lower-level execution aids that conflict with higher authority.
+
+This document consumes `docs/AI/System/AuthorityModel.md`. It does not redefine AuthorityModel, Governance, Framework Governance, ProjectStatus, Runtime, Engine, commands, workflows, or templates.
+
+---
+
+## 2. Scope
+
+### 2.1 In Scope
+
+This boot procedure covers:
+
+1. Repository boot procedure.
+2. Document loading order.
+3. Context assembly order.
+4. Boot validation.
+5. Boot failure handling.
+6. Completion-report expectations for boot-related execution.
+
+### 2.2 Out of Scope
+
+This boot procedure does not:
+
+1. Own governance.
+2. Make authority decisions.
+3. Redefine or own Runtime architecture.
+4. Redefine or own Engine architecture.
+5. Define commands.
+6. Define workflows.
+7. Define templates.
+8. Update or reinterpret ProjectStatus.
+9. Approve, certify, promote, or canonicalize any artifact.
+
+---
+
+## 3. Operational Responsibilities
+
+### 3.1 Owns
+
+The AI System Boot Sequence owns:
+
+- repository boot procedure;
+- document loading order;
+- context assembly order;
+- boot validation;
+- boot failure handling.
+
+### 3.2 Does Not Own
+
+The AI System Boot Sequence does not own:
+
+- governance;
+- authority decisions;
+- Runtime;
+- Engine;
+- commands;
+- workflows;
+- templates;
+- ProjectStatus.
+
+---
+
+## 4. Boot Sequence
+
+Agents shall use the following boot sequence for Forge AI v2 System Layer execution:
 
 ```text
-docs/AI/System/README.md
+Human Task
+    ↓
+AGENTS.md
+    ↓
 docs/AI/System/AuthorityModel.md
-docs/AI/System/SourceOfTruth.md
-docs/AI/System/ContextAssembly.md
+    ↓
 docs/AI/AIFramework.md
+    ↓
 docs/AI/AIOrchestrator.md
-docs/ProjectStatus.md
-docs/AI/Validation/README.md
+    ↓
+docs/AI/AgentSystemPrompt.md
+    ↓
+Relevant Runtime / Engine documents (only if required)
+    ↓
+Commands
+    ↓
+Workflows
+    ↓
+Templates
+    ↓
+Execution
+    ↓
+Validation
+    ↓
+Completion Report
 ```
 
----
+Rules:
 
-# Purpose
-
-This document defines the exact boot procedure AI agents must follow before deciding or executing work in Forge AI.
-
-Boot establishes authority, state, current scope, validation availability, and the execution path. It prevents agents from relying on stale memory, conversational assumptions, or undocumented task authority.
-
----
-
-# Required Boot Order
-
-Agents must begin in this order unless a higher-authority human instruction narrows scope without conflicting with project governance:
-
-```text
-1. AGENTS.md
-2. .cursorrules
-3. docs/AI/README.md
-4. docs/AI/System/README.md
-5. docs/AI/System/BootSequence.md
-6. docs/AI/System/AuthorityModel.md
-7. docs/AI/System/SourceOfTruth.md
-8. docs/AI/System/ContextAssembly.md
-9. docs/AI/System/DecisionModel.md
-10. docs/AI/System/ExecutionSequence.md
-11. docs/AI/AgentSystemPrompt.md
-12. docs/AI/AIFramework.md
-13. docs/AI/Specification/Constitution.md
-14. docs/AI/Specification/Terminology.md
-15. docs/AI/Specification/FrameworkSpecification.md
-16. docs/AI/Specification/RuntimeModel.md
-17. docs/AI/Specification/GovernanceModel.md
-18. docs/AI/AIOrchestrator.md
-19. docs/AI/Workflows/TaskPlanner.md
-20. docs/AI/Workflows/TaskGenerationWorkflow.md
-21. docs/AI/Workflows/ProjectStateUpdater.md
-22. docs/AI/Validation/README.md
-23. docs/AI/Validation/AIFrameworkValidation.md
-24. docs/AI/Validation/ValidationLifecycle.md
-25. docs/AI/Validation/ValidationLevels.md
-26. docs/AI/Validation/ValidationChecklistTemplate.md
-27. docs/AI/Validation/ValidationCertification.md
-28. docs/ProjectStatus.md
-29. Development Constitution
-30. Current Phase document
-31. Current Stage document, when present
-32. Assigned Historical Capability specification, when present
-33. Relevant command, workflow, template, checklist, and validation documents
-```
+1. Begin with the human task instruction and `AGENTS.md` repository bootloader.
+2. Use `docs/AI/System/AuthorityModel.md` to resolve tool-facing authority questions after the bootloader establishes the task boundary.
+3. Load `docs/AI/AIFramework.md`, `docs/AI/AIOrchestrator.md`, and `docs/AI/AgentSystemPrompt.md` in that order for Operational Core guidance.
+4. Load Runtime and Engine documents only when the active task requires Runtime or Engine authority.
+5. Load commands, workflows, and templates only as execution aids after higher authority and operational context are understood.
+6. Execute only within the active task boundary.
+7. Validate according to the task type and governing authorities.
+8. End with a completion report that records scope, modified files, validation, risks, and recommended next step.
 
 ---
 
-# Validation Availability Check
+## 5. Context Assembly Order
 
-Before execution, agents must verify that the required Validation layer is available:
+After reading the required boot documents, agents assemble context in this order:
 
-```text
-docs/AI/Validation/README.md
-docs/AI/Validation/AIFrameworkValidation.md
-docs/AI/Validation/ValidationLifecycle.md
-docs/AI/Validation/ValidationLevels.md
-docs/AI/Validation/ValidationChecklistTemplate.md
-docs/AI/Validation/ValidationCertification.md
-```
+1. Human task objective and explicit file restrictions.
+2. Repository bootloader requirements from `AGENTS.md`.
+3. Authority resolution requirements from `docs/AI/System/AuthorityModel.md`.
+4. Operational Core guidance from `docs/AI/AIFramework.md`.
+5. Execution routing from `docs/AI/AIOrchestrator.md`.
+6. Agent behavior constraints from `docs/AI/AgentSystemPrompt.md`.
+7. Operational state from `docs/DevelopmentPhases/ProjectStatus.md`.
+8. Roadmap sequence from `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`.
+9. Relevant Runtime or Engine authorities, only when required by the active task.
+10. Relevant commands, workflows, templates, checklists, and validation artifacts.
+11. Source files or documents explicitly in scope for the task.
 
-If any required validation document is missing or empty, the agent must stop ordinary task execution and create or complete the missing validation document first when the active task authorizes that work.
+Lower-level execution aids cannot override higher authority, ProjectStatus policy, roadmap order, frozen-area boundaries, or explicit human file restrictions.
 
 ---
 
-# Stop Conditions
+## 6. Boot Validation
+
+Before execution, agents shall validate that:
+
+1. The active task type is classified.
+2. Required boot documents are readable.
+3. The active ProjectStatus path is `docs/DevelopmentPhases/ProjectStatus.md`.
+4. The roadmap path is `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`.
+5. Frozen-area boundaries are known when relevant.
+6. Task-specific authority documents have been identified.
+7. File restrictions are understood.
+8. Validation commands or checks have been selected for the task type.
+9. No lower-level command, workflow, template, or generated task conflicts with higher authority.
+
+---
+
+## 7. Boot Failure Handling
 
 Stop and report a blocker when:
 
-- `AGENTS.md` is missing;
-- `docs/ProjectStatus.md` is missing or unreadable;
-- required AI Framework, System, Orchestrator, Workflow, or Validation documents are missing for the active task;
-- the active phase, stage, capability, or task cannot be resolved when required;
+- `AGENTS.md` is missing or unreadable;
+- `docs/AI/System/AuthorityModel.md` is missing or unreadable;
+- required Operational Core documents are missing or unreadable;
+- `docs/DevelopmentPhases/ProjectStatus.md` is missing or unreadable when operational state is required;
+- `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` is missing or unreadable when roadmap sequence is required;
+- the active task type cannot be classified;
 - authority or ownership conflicts cannot be resolved through the authority order;
-- the requested work conflicts with `AGENTS.md` or the AI Framework Constitution;
-- validation, review, or certification is being skipped for work that requires completion recognition;
-- a ProjectStatus update is requested before certification;
+- the requested work conflicts with explicit file restrictions, ProjectStatus policy, roadmap order, or frozen-area boundaries;
+- validation, review, certification, approval, promotion, or ProjectStatus update requirements are ambiguous;
 - source code changes are required but the active task does not authorize source code changes.
+
+The completion report shall identify the blocker, cite the governing boundary when possible, and recommend a Human Governance resolution path.
 
 ---
 
-# Do Not Ask What Next Rule
+## 8. Completion Report Expectations
 
-Agents must not ask what to do next when the next action can be derived from:
+A completion report for work governed by this boot sequence should include:
 
-```text
-docs/ProjectStatus.md
-docs/AI/AIOrchestrator.md
-docs/AI/Workflows/TaskPlanner.md
-docs/AI/System/DecisionModel.md
-```
+- summary;
+- files modified;
+- boot sequence confirmation;
+- authority validation;
+- roadmap validation;
+- ProjectStatus policy confirmation;
+- validation commands and results;
+- risks or blockers;
+- recommended next step.
 
-When the next action is derivable, the agent should state the derived action, cite the governing documents in the completion report when applicable, and proceed only within authorized scope.
+Agents may recommend a ProjectStatus update when operational state is affected, but shall not update ProjectStatus unless the task explicitly authorizes that change.
