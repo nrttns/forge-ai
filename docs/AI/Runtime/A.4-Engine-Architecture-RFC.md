@@ -1,93 +1,52 @@
 # FORGE-A-004 — Engine Architecture RFC
 
-| | |
-|:---|:---|
-| **Framework** | Forge AI v3 |
-| **Document Class** | Architecture RFC |
-| **Domain** | Engine Architecture |
+|                     |                     |
+|:--------------------|:--------------------|
+| **Framework**       | Forge AI v3         |
+| **Document Class**  | Architecture RFC    |
+| **Domain**          | Engine Architecture |
 | **Confidentiality** | Internal — Governed |
 
 ---
 
 ## Document Metadata
 
-| Field | Value |
-|:---|:---|
-| Identifier | `FORGE-A-004` |
-| Title | FORGE-A-004 — Engine Architecture RFC |
-| Version | 0.1.0-draft |
-| Status | RFC / Draft |
-| Canonical Status | Non-canonical until reviewed, approved, and promoted through Framework Governance |
-| Classification | Engine Architecture |
-| Document Type | Architecture RFC |
-| Owner | Framework Governance |
-| Maintainers | Framework Architecture Team |
-| Review Authority | Enterprise Documentation Standards Board |
-| Approval Authority | Human Governance / Framework Governance |
-| Created | 2026-07-07 |
-| Last Updated | 2026-07-07 |
-| Lifecycle Phase | Draft |
-| Traceability ID | FORGE-A-004 |
-| Scope | Engine Architecture RFC documentation-only architecture |
-| Out of Scope | Implementation, runtime behavior changes, certification, and ProjectStatus updates |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/FrameworkGovernance.md` |
-| Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md` |
-| Dependencies | Governance authority, artifact identity, lifecycle governance, traceability model, and applicable upstream v3 architecture documents |
-| Consumes | A.1; M.0; M.1; STD-000; STD-001; STD-002; related runtime and engine RFC inputs |
-| Produces | Engine Architecture RFC architecture model and downstream RFC inputs |
-| Related Specifications | A.3/A.4 engine RFC family; STD-000; STD-001; STD-002 |
-| Blocks | A.4.1 Engine Kernel RFC; A.4.2 Engine Contract RFC; A.4.3 Engine Registry RFC; A.4.4 Engine Lifecycle RFC; A.4.5 Engine Communication RFC; A.4.6 Engine State RFC; A.4.7 Engine Capability RFC |
-| Blocked By | A.1 Constitution; M.0 Framework Meta Model; M.1 Artifact Meta Model; STD-000 Framework Standards; STD-001 Knowledge Graph Standard; A.3 Runtime Architecture RFC |
-| Supersedes | None |
-| Superseded By | None |
-| Review Status | Pending Enterprise Documentation Standards Board review |
-| Certification Status | Not certified |
+| Field                  | Value                                                                                                                                                                                                                                                                                                                                               |
+|:-----------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Identifier             | `FORGE-A-004`                                                                                                                                                                                                                                                                                                                                       |
+| Title                  | FORGE-A-004 — Engine Architecture RFC                                                                                                                                                                                                                                                                                                               |
+| Version                | `0.1.1-draft`                                                                                                                                                                                                                                                                                                                                       |
+| Status                 | RFC / Draft                                                                                                                                                                                                                                                                                                                                         |
+| Canonical Status       | Non-canonical until reviewed, approved, and promoted through Framework Governance                                                                                                                                                                                                                                                                   |
+| Classification         | Engine Architecture                                                                                                                                                                                                                                                                                                                                 |
+| Document Type          | Architecture RFC                                                                                                                                                                                                                                                                                                                                    |
+| Owner                  | Framework Governance                                                                                                                                                                                                                                                                                                                                |
+| Maintainers            | Framework Architecture Team                                                                                                                                                                                                                                                                                                                         |
+| Review Authority       | Enterprise Documentation Standards Board                                                                                                                                                                                                                                                                                                            |
+| Approval Authority     | Human Governance / Framework Governance                                                                                                                                                                                                                                                                                                             |
+| Created                | 2026-07-07                                                                                                                                                                                                                                                                                                                                          |
+| Last Updated           | 2026-07-09                                                                                                                                                                                                                                                                                                                                          |
+| Lifecycle Phase        | Draft                                                                                                                                                                                                                                                                                                                                               |
+| Traceability ID        | `FORGE-AI.V3.A-004`                                                                                                                                                                                                                                                                                                                                 |
+| Scope                  | Engine Architecture RFC documentation-only architecture                                                                                                                                                                                                                                                                                             |
+| Out of Scope           | Implementation, runtime behavior changes, certification, and ProjectStatus updates                                                                                                                                                                                                                                                                  |
+| Normative Authority    | Human Governance; `AGENTS.md`; `docs/FrameworkGovernance.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/Architecture/A.1-Constitution.md`                                                                                                                                                                                                                   |
+| Normative References   | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md` |
+| Dependencies           | A.1 Constitution; M.0 Framework Meta Model; M.1 Artifact Meta Model; STD-000 Framework Standards; STD-001 Knowledge Graph Standard; STD-003 Terminology Standard; STD-010 Document Metadata Standard; A.3 Runtime Architecture RFC; Governance authority; artifact identity; lifecycle governance; traceability model                               |
+| Consumes               | A.1; M.0; M.1; STD-000; STD-001; STD-002; STD-003; STD-010; A.3; related runtime and engine RFC inputs                                                                                                                                                                                                                                              |
+| Produces               | Engine Architecture RFC architecture model and downstream RFC inputs                                                                                                                                                                                                                                                                                |
+| Related Specifications | A.3/A.4 engine RFC family; STD-000; STD-001; STD-002; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`                                                                                                                                                                                                                                         |
+| Blocks                 | A.4.1 Engine Kernel RFC; A.4.2 Engine Contract RFC; A.4.3 Engine Registry RFC; A.4.4 Engine Lifecycle RFC; A.4.5 Engine Communication RFC; A.4.6 Engine State RFC; A.4.7 Engine Capability RFC                                                                                                                                                      |
+| Blocked By             | A.1 Constitution; M.0 Framework Meta Model; M.1 Artifact Meta Model; STD-000 Framework Standards; STD-001 Knowledge Graph Standard; A.3 Runtime Architecture RFC                                                                                                                                                                                    |
+| Supersedes             | None                                                                                                                                                                                                                                                                                                                                                |
+| Superseded By          | None                                                                                                                                                                                                                                                                                                                                                |
+| Review Status          | Pending Enterprise Documentation Standards Board review                                                                                                                                                                                                                                                                                             |
+| Promotion Requirements | Framework Governance review, Enterprise Documentation Standards Board review, STD-010 metadata validation, TPL-001 compliance validation, terminology consistency validation, traceability validation, and explicit Human Governance promotion                                                                                                      |
+| Certification Status   | Not certified                                                                                                                                                                                                                                                                                                                                       |
 
 ---
 
-## Table of Contents
-
-1. Executive Summary
-2. Purpose
-3. Scope
-4. Core Principle
-5. Engine Stack Diagram
-6. Engine Responsibility Matrix
-7. Engine Dependency Graph
-8. Engine Communication Flow
-9. Engine Definitions
-   - 9.1 Context Engine
-   - 9.2 Knowledge Engine
-   - 9.3 Planning Engine
-   - 9.4 Decision Engine
-   - 9.5 Execution Engine
-   - 9.6 Validation Engine
-   - 9.7 Review Engine
-   - 9.8 Certification Engine
-   - 9.9 Memory Engine
-   - 9.10 Governance Engine
-   - 9.11 Registry Engine
-   - 9.12 Workflow Engine
-10. Runtime-to-Engine Lifecycle
-11. Agent-to-Engine Interaction Model
-12. Tool Adapter Model
-13. Engine Contract Model
-14. Engine Registry Model
-15. Engine Validation Model
-16. Certification Rules
-17. Governance Constraints
-18. Non-goals
-19. Migration Notes from RC2
-20. Open Questions
-21. Completion Checklist
-22. Stakeholder Impact Matrix
-23. Change Log
-24. Glossary
-A. Cross-Reference Index
-
----
-
-## 1. Executive Summary
+## Executive Summary
 
 The Forge AI v3 Engine Architecture RFC defines twelve governed engines that serve as the central execution backbone of the AI Development Operating System. This architecture establishes clear capability boundaries between context assembly, knowledge retrieval, planning resolution, decision governance, work execution, output validation, independent review, certification handoff, memory management, policy enforcement, registry operations, and lifecycle orchestration. By separating these concerns into discrete, contract-bound engines, the framework achieves platform independence: execution semantics reside in governed contracts rather than in tool-specific behavior, agent heuristics, or runtime coupling.
 
@@ -99,7 +58,7 @@ This RFC sits downstream of A.1 (Constitution), M.0 (Framework Meta Model), M.1 
 
 ---
 
-## 2. Purpose
+## Purpose
 
 This RFC defines the Forge AI v3 Engine Architecture as the central execution architecture of the AI Development Operating System.
 
@@ -109,7 +68,7 @@ This is documentation-only architecture work. It does not implement code, modify
 
 ---
 
-## 3. Scope
+## Scope
 
 This RFC defines the structural and contractual foundations of the Forge AI v3 engine-first execution architecture. It enumerates the required engines, their responsibility boundaries, and the models that govern how engines interact with each other, with the runtime, with the Knowledge Graph, with the Registry, and with AI agents.
 
@@ -139,9 +98,69 @@ Required engines:
 
 ---
 
-## 4. Core Principle
+## Out of Scope
+
+This section explicitly delineates what this RFC does not address. These exclusions are as important as the in-scope items because they prevent scope creep, set stakeholder expectations, and protect upstream governance documents from inadvertent redefinition.
+
+This RFC does not:
+
+1. Implement code, deploy infrastructure, or modify runtime behavior.
+2. Redefine the Constitution (A.1), Meta Models (M.0, M.1), Standards (STD-000, STD-001, STD-002, STD-003, STD-010), Knowledge Graph Standard, or Runtime Architecture (A.3).
+3. Certify any engine, adapter, or artifact.
+4. Update ProjectStatus, activate implementation, or change roadmap order.
+5. Define specific programming APIs, database schemas, REST endpoints, or message formats.
+6. Govern specific tool configurations, IDE extensions, or CLI integrations beyond the adapter model.
+7. Replace RC2 operational procedures before v3 engine procedures are approved.
+8. Define platform adapters, multi-agent runtime, swarm runtime, or enterprise governance.
+
+---
+
+## Normative Authority
+
+The following authorities govern this RFC. Each authority is consumed as governing input; this RFC does not redefine any of them.
+
+1. **Human Governance** — Ultimate authority for all Forge AI decisions. No engine, tool, agent, or runtime may override Human Governance.
+2. **`AGENTS.md`** — Repository bootstrap authority during the v3 transition. Defines initial task classification and boot behavior.
+3. **`docs/FrameworkGovernance.md`** — Governance decision policy including review, approval, promotion, conflict resolution, and escalation.
+4. **`docs/AI/GOVERNANCE.md`** — Governance Atlas providing authority navigation and ownership mapping.
+5. **`docs/AI/Architecture/A.1-Constitution.md`** — Permanent principles and invariants including planning, execution, review, certification, and lifecycle authority boundaries.
+
+---
+
+## Normative References
+
+The following documents provide normative design input or required conformance context for this RFC.
+
+- `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` — Metadata schema, relationship taxonomy, and lifecycle model governing this document's structure.
+- `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md` — Standard structure, validation lifecycle, governance expectations, and certification framework.
+- `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md` — Canonical terminology for framework vocabulary used in this RFC.
+- `docs/AI/Meta/M.0-Framework-Meta-Model.md` — Normative reference for State, Authority, Ownership, Evidence, Lifecycle, and Memory concepts consumed by engine definitions.
+- `docs/AI/Meta/M.1-Artifact-Meta-Model.md` — Normative reference for artifact identity, metadata, validation expectations, and traceability.
+- `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md` — Direct upstream RFC defining runtime architecture that this Engine Architecture extends.
+
+---
+
+## Dependencies
+
+This RFC depends on the following upstream documents and systems. It cannot be correctly interpreted, validated, or used without them.
+
+1. **A.1 Constitution** — Provides governance principles, planning constraints, execution boundaries, review independence, certification authority, and lifecycle rules that all engines must respect.
+2. **M.0 Framework Meta Model** — Defines State, Authority, Ownership, Evidence, Lifecycle, and Memory concepts that engine definitions consume.
+3. **M.1 Artifact Meta Model** — Defines artifact identity, metadata model, validation expectations, and traceability that engine outputs must satisfy.
+4. **STD-000 Framework Standards** — Defines standard structure, validation lifecycle, governance expectations, and certification framework.
+5. **STD-001 Knowledge Graph Standard** — Defines graph traversal, graph validation, and node/edge semantics that the Knowledge Engine must comply with.
+6. **STD-003 Terminology Standard** — Defines canonical vocabulary ensuring consistent terminology across engine definitions.
+7. **STD-010 Document Metadata Standard** — Defines metadata requirements for this and all downstream engine RFCs.
+8. **A.3 Runtime Architecture RFC** — Defines runtime lifecycle, context, execution, validation, review, and certification concepts that engine interactions must align with.
+9. **Governance authority and traceability model** — Provides the decision policy and traceability framework within which engine governance operates.
+
+---
+
+## Architecture
 
 The Engine Architecture is founded on a single governing principle that establishes the authority relationship between engines, tools, agents, and the runtime. This principle ensures that no execution participant can redefine the architectural contracts or governance rules that constrain it.
+
+### Core Principle
 
 ```text
 Agents do not own architecture.
@@ -152,9 +171,7 @@ Engines execute governed contracts.
 
 The Engine Architecture exists to make Forge AI platform-independent by placing execution boundaries in governed engine contracts rather than in tool behavior.
 
----
-
-## 5. Engine Stack Diagram
+### Engine Stack Diagram
 
 The following diagram presents the conceptual authority-to-execution flow through the twelve governed engines. It illustrates the layered dependency from Human Governance at the apex down through orchestration engines, support engines, and finally the delivery pipeline of execution, validation, review, and certification.
 
@@ -184,30 +201,26 @@ Authorized State / Registry / Knowledge / Memory Handoffs
 
 The diagram is conceptual. It does not require a specific process model, API, programming language, database, message bus, host application, or runtime implementation.
 
----
-
-## 6. Engine Responsibility Matrix
+### Engine Responsibility Matrix
 
 The Engine Responsibility Matrix provides a consolidated view of each engine's primary responsibility, owning system, principal outputs, and explicit ownership prohibitions. This matrix serves as the authoritative quick-reference for determining which engine owns which architectural concern.
 
-| Engine | Primary Responsibility | Primary Owner | Primary Outputs | Must Not Own |
-|:---|:---|:---|:---|:---|
-| Context Engine | Assemble task-specific traceable context | Context System | Context Package | Authority, state, or certification |
-| Knowledge Engine | Traverse governed knowledge and graph relationships | Knowledge System | Knowledge Result / Graph Evidence | Graph standard definitions |
-| Planning Engine | Resolve approved planning scope and task structure | Planning System | Planning Resolution / Task Plan | Architecture or implementation |
-| Decision Engine | Apply governed decision rules to runtime choices | Governance/Decision System | Decision Record | Human governance override |
-| Execution Engine | Dispatch approved work to agents, humans, automation, or adapters | Runtime Execution System | Execution Output / Evidence | Validation, review, certification |
-| Validation Engine | Verify outputs against requirements and gates | Validation System | Validation Report | Review or certification |
-| Review Engine | Perform independent readiness assessment | Review System | Review Finding / Review Outcome | Implementation or certification |
-| Certification Engine | Package and route certification decisions | Certification System | Certification Handoff / Certification Record when authorized | Self-certification by AI |
-| Memory Engine | Propose, review, and retrieve non-authoritative reusable memory | Memory System | Memory Candidate / Memory Retrieval | Authority, state, documentation |
-| Governance Engine | Enforce authority, ownership, policy, and escalation | Governance System | Governance Decision / Escalation | Execution implementation details |
-| Registry Engine | Register governed engines, artifacts, contracts, capabilities, and adapters | Registry System | Registry Entry / Resolution | Artifact semantics or standards |
-| Workflow Engine | Select and coordinate governed lifecycle workflows | Workflow System | Workflow Resolution / Handoff | Inventing work or skipping gates |
+| Engine               | Primary Responsibility                                                      | Primary Owner              | Primary Outputs                                              | Must Not Own                       |
+|:---------------------|:----------------------------------------------------------------------------|:---------------------------|:-------------------------------------------------------------|:-----------------------------------|
+| Context Engine       | Assemble task-specific traceable context                                    | Context System             | Context Package                                              | Authority, state, or certification |
+| Knowledge Engine     | Traverse governed knowledge and graph relationships                         | Knowledge System           | Knowledge Result / Graph Evidence                            | Graph standard definitions         |
+| Planning Engine      | Resolve approved planning scope and task structure                          | Planning System            | Planning Resolution / Task Plan                              | Architecture or implementation     |
+| Decision Engine      | Apply governed decision rules to runtime choices                            | Governance/Decision System | Decision Record                                              | Human governance override          |
+| Execution Engine     | Dispatch approved work to agents, humans, automation, or adapters           | Runtime Execution System   | Execution Output / Evidence                                  | Validation, review, certification  |
+| Validation Engine    | Verify outputs against requirements and gates                               | Validation System          | Validation Report                                            | Review or certification            |
+| Review Engine        | Perform independent readiness assessment                                    | Review System              | Review Finding / Review Outcome                              | Implementation or certification    |
+| Certification Engine | Package and route certification decisions                                   | Certification System       | Certification Handoff / Certification Record when authorized | Self-certification by AI           |
+| Memory Engine        | Propose, review, and retrieve non-authoritative reusable memory             | Memory System              | Memory Candidate / Memory Retrieval                          | Authority, state, documentation    |
+| Governance Engine    | Enforce authority, ownership, policy, and escalation                        | Governance System          | Governance Decision / Escalation                             | Execution implementation details   |
+| Registry Engine      | Register governed engines, artifacts, contracts, capabilities, and adapters | Registry System            | Registry Entry / Resolution                                  | Artifact semantics or standards    |
+| Workflow Engine      | Select and coordinate governed lifecycle workflows                          | Workflow System            | Workflow Resolution / Handoff                                | Inventing work or skipping gates   |
 
----
-
-## 7. Engine Dependency Graph
+### Engine Dependency Graph
 
 The Engine Dependency Graph captures the authoritative parent-child relationships between engines, showing how governance authority flows downward to operational engines. Support relationships are also indicated where cross-cutting engines provide capabilities to multiple consumers.
 
@@ -233,9 +246,7 @@ Decision Engine ──mediates── Workflow, Execution, Validation, Review, Ce
 
 Dependency direction follows authority-to-execution flow. Lower-level engines may request clarification from higher-authority engines, but they must not redefine the higher authority they consume.
 
----
-
-## 8. Engine Communication Flow
+### Engine Communication Flow
 
 The Engine Communication Flow describes the canonical request lifecycle from initial runtime request through final memory proposal. Each step represents a governed handoff between engines, ensuring that no execution step is skipped and that all evidence is captured at the appropriate boundary.
 
@@ -265,47 +276,41 @@ Certification Engine: prepare human-governed certification handoff
 Memory Engine: propose reusable memory only after approved evidence exists
 ```
 
-Communication should occur through artifacts, records, reports, handoff packages, and registry entries. Conversational context may assist execution but must not become persistent authority.
+### Engine Definitions
 
----
+#### 9.1 Context Engine
 
-## 9. Engine Definitions
-
-This section provides the complete specification for each of the twelve governed engines. Every engine definition includes its purpose, ownership, inputs, outputs, consumed standards, produced artifacts, forbidden responsibilities, relationships to the runtime, Knowledge Graph, Registry, and AI agents, as well as validation requirements, failure modes, and handoff rules.
-
-### 9.1 Context Engine
-
-**Purpose:** Assemble minimal, current, authoritative, traceable context packages for a specific task, lifecycle state, agent, or adapter.
+**Purpose:** Assemble task-specific, traceable, minimal, and current context from governed sources for runtime consumption.
 
 **Ownership:** Context System.
 
-**Inputs:** Human instruction, project state, authority chain, current phase/stage/capability/task, relevant workflows, command documents, templates, standards, Knowledge Engine results, Registry resolutions, validated memory candidates.
+**Inputs:** Task identifier, governance constraints, planning resolution, knowledge query results, memory retrieval candidates, registry artifact metadata, scope boundary statement.
 
-**Outputs:** Context Package, context source list, context traceability map, context completeness finding, context blocker report when required information is missing.
+**Outputs:** Context Package, context gap report, context blocker report.
 
-**Consumed Standards:** A.1 Constitution, M.0 concepts for State/Authority/Ownership/Evidence, M.1 artifact requirements, STD-000 artifact and validation expectations, STD-001 graph traversal evidence, A.3 runtime context rules.
+**Consumed Standards:** A.1 documentation-before-execution principle, M.0 State/Authority/Evidence concepts, M.1 artifact identity and metadata, STD-000 scope and validation expectations, A.3 context assembly lifecycle.
 
-**Produced Artifacts:** Context Package, Context Trace, Context Gap Report.
+**Produced Artifacts:** Context Package, Context Gap Report.
 
-**Forbidden Responsibilities:** Defining authority, changing project state, inventing missing scope, treating memory as authority, certifying context, implementing work.
+**Forbidden Responsibilities:** Defining authority, replacing documentation, creating state, owning knowledge, certifying work.
 
-**Relationship to Runtime:** Runtime invokes the Context Engine before execution and whenever lifecycle transitions require refreshed context.
+**Relationship to Runtime:** Runtime consumes Context Package before planning and execution. Context does not define scope.
 
-**Relationship to Knowledge Graph:** Consumes Knowledge Engine traversal results; does not define node types, edge types, or graph semantics.
+**Relationship to Knowledge Graph:** Consumes graph-backed knowledge for context enrichment. Does not mutate graph.
 
-**Relationship to Registry:** Requests registered artifact, workflow, command, engine, and adapter metadata needed for context assembly.
+**Relationship to Registry:** Resolves artifact metadata, scope boundaries, and registered context templates.
 
-**Relationship to AI Agents:** Supplies agents with bounded context packages and source traces; agents must not silently expand scope beyond the package.
+**Relationship to AI Agents:** Agents consume context; they do not define source-of-truth context.
 
-**Validation Requirements:** Verify source authority, freshness, relevance, traceability, scope fit, and absence of unresolved contradictions.
+**Validation Requirements:** Verify source traceability, scope boundary compliance, freshness, authority consistency, and minimum completeness.
 
-**Failure Modes:** Missing authority, stale project state, contradictory sources, insufficient scope evidence, unregistered artifact references, memory/documentation conflict.
+**Failure Modes:** Missing context source, stale context, scope overflow, authority conflict, unregistered artifact reference, knowledge gap without mitigation.
 
-**Handoff Rules:** Handoff to Planning Engine for scope confirmation, Execution Engine for task work, or Governance Engine when authority or scope is unclear.
+**Handoff Rules:** Handoff Context Package to Planning, Decision, or Execution Engine. Hand context gaps to Knowledge Engine or Governance Engine.
 
-### 9.2 Knowledge Engine
+#### 9.2 Knowledge Engine
 
-**Purpose:** Retrieve and reason over governed knowledge representations, especially Knowledge Graph nodes, relationships, constraints, and traversal evidence.
+**Purpose:** Traverse governed knowledge sources and graph relationships to provide evidence-backed knowledge results.
 
 **Ownership:** Knowledge System.
 
@@ -333,7 +338,7 @@ This section provides the complete specification for each of the twelve governed
 
 **Handoff Rules:** Handoff graph evidence to Context, Planning, Validation, Review, or Governance Engines; escalate unresolved graph contradictions to Governance Engine.
 
-### 9.3 Planning Engine
+#### 9.3 Planning Engine
 
 **Purpose:** Resolve approved work scope from the Forge AI planning hierarchy and produce executable planning structures.
 
@@ -363,7 +368,7 @@ This section provides the complete specification for each of the twelve governed
 
 **Handoff Rules:** Handoff to Decision Engine for action choice, Context Engine for context refresh, Execution Engine for work, or Governance Engine for ambiguity.
 
-### 9.4 Decision Engine
+#### 9.4 Decision Engine
 
 **Purpose:** Apply documented decision rules to runtime choices such as command selection, lifecycle transition, conflict handling, escalation, and stop/go decisions.
 
@@ -393,7 +398,7 @@ This section provides the complete specification for each of the twelve governed
 
 **Handoff Rules:** Handoff approved actions to Workflow or Execution Engine; hand blockers to Governance Engine or Human Governance.
 
-### 9.5 Execution Engine
+#### 9.5 Execution Engine
 
 **Purpose:** Dispatch approved work to AI agents, humans, automation, swarms, or platform/tool adapters and collect execution evidence.
 
@@ -423,7 +428,7 @@ This section provides the complete specification for each of the twelve governed
 
 **Handoff Rules:** Handoff completed output and evidence to Validation Engine; hand blockers to Decision or Governance Engine.
 
-### 9.6 Validation Engine
+#### 9.6 Validation Engine
 
 **Purpose:** Verify outputs, artifacts, evidence, and lifecycle compliance against applicable requirements before review.
 
@@ -453,7 +458,7 @@ This section provides the complete specification for each of the twelve governed
 
 **Handoff Rules:** Passing or conditionally acceptable validation goes to Review Engine; failures return to Decision Engine for remediation or Governance Engine for blockers.
 
-### 9.7 Review Engine
+#### 9.7 Review Engine
 
 **Purpose:** Provide independent readiness assessment of validated outputs before certification handoff.
 
@@ -483,7 +488,7 @@ This section provides the complete specification for each of the twelve governed
 
 **Handoff Rules:** Ready outcomes go to Certification Engine; changes-required outcomes return to Decision Engine; authority blockers go to Governance Engine.
 
-### 9.8 Certification Engine
+#### 9.8 Certification Engine
 
 **Purpose:** Prepare, route, and record certification handoffs and certification decisions when made by Human Governance or delegated human-owned authority.
 
@@ -513,7 +518,7 @@ This section provides the complete specification for each of the twelve governed
 
 **Handoff Rules:** Handoff to Human Governance for decision; after approved certification, hand authorized updates to Registry, Knowledge, Memory, or Project State procedures as applicable.
 
-### 9.9 Memory Engine
+#### 9.9 Memory Engine
 
 **Purpose:** Manage non-authoritative reusable memory candidates and retrievals derived from approved, traceable work.
 
@@ -543,7 +548,7 @@ This section provides the complete specification for each of the twelve governed
 
 **Handoff Rules:** Handoff candidate memory to Review/Certification as needed; hand retrieved memory to Context Engine as non-authoritative input only.
 
-### 9.10 Governance Engine
+#### 9.10 Governance Engine
 
 **Purpose:** Enforce authority, ownership, policy, escalation, lifecycle constraints, and human-governed decision boundaries across all engines.
 
@@ -573,7 +578,7 @@ This section provides the complete specification for each of the twelve governed
 
 **Handoff Rules:** Handoff permitted actions to Decision or Workflow Engine; escalate unresolved governance matters to Human Governance.
 
-### 9.11 Registry Engine
+#### 9.11 Registry Engine
 
 **Purpose:** Maintain discoverable governed records of engines, contracts, artifacts, workflows, commands, standards, adapters, lifecycle states, and capabilities.
 
@@ -603,7 +608,7 @@ This section provides the complete specification for each of the twelve governed
 
 **Handoff Rules:** Handoff resolved entries to all engines; hand registry conflicts to Governance Engine.
 
-### 9.12 Workflow Engine
+#### 9.12 Workflow Engine
 
 **Purpose:** Select, sequence, and enforce governed workflows and lifecycle transitions for a given task or artifact.
 
@@ -627,144 +632,13 @@ This section provides the complete specification for each of the twelve governed
 
 **Relationship to AI Agents:** Agents receive workflow state and handoff instructions; they do not own workflow sequencing.
 
-**Validation Requirements:** Verify transition legality, prerequisite satisfaction, required handoff artifacts, and gate ordering.
+**Validation Requirements:** Verify lifecycle order, gate sequence, scope containment, registry compatibility, and handoff completeness.
 
-**Failure Modes:** Missing workflow, illegal transition, incomplete prerequisite, lifecycle conflict, command mismatch.
+**Failure Modes:** Missing workflow definition, gate skip attempt, incompatible lifecycle state, registry mismatch, scope boundary violation.
 
-**Handoff Rules:** Handoff next actions to Planning, Context, Execution, Validation, Review, or Certification Engines according to lifecycle state.
+**Handoff Rules:** Handoff workflow resolution and handoff instructions to the applicable engine; hand blockers to Governance Engine.
 
----
-
-## 10. Runtime-to-Engine Lifecycle
-
-The Runtime-to-Engine Lifecycle describes the complete sequence of engine invocations that a runtime orchestrating environment must follow from boot through completion. This lifecycle ensures that no execution step is bypassed and that all governance checks, evidence captures, and handoff rules are respected.
-
-```text
-Runtime Boot
-    ↓
-Governance Engine validates authority chain
-    ↓
-Registry Engine resolves available contracts and lifecycle states
-    ↓
-Workflow Engine selects applicable lifecycle
-    ↓
-Planning Engine confirms scope
-    ↓
-Context Engine assembles context with Knowledge Engine support
-    ↓
-Decision Engine confirms next permitted action
-    ↓
-Execution Engine dispatches work
-    ↓
-Validation Engine verifies evidence and outputs
-    ↓
-Review Engine assesses readiness
-    ↓
-Certification Engine prepares human-governed handoff
-    ↓
-Memory Engine proposes reusable memory after approval boundaries are met
-    ↓
-Runtime Completion / Context Release
-```
-
-Runtime is an orchestrating environment. Engines own bounded responsibilities. The runtime must not bypass an engine simply because a tool can perform the action directly.
-
----
-
-## 11. Agent-to-Engine Interaction Model
-
-AI agents interact with Forge AI through runtime-mediated engine contracts. This model ensures that agents remain executors within governed boundaries and cannot subvert the engine authority chain by direct action.
-
-```text
-AI Agent Request / Human Delegation
-    ↓
-Runtime Mediation
-    ↓
-Engine Contract Invocation
-    ↓
-Bounded Engine Response
-    ↓
-Agent Execution or Report
-    ↓
-Evidence Capture
-```
-
-Rules:
-
-1. Agents consume context; they do not define source-of-truth context.
-2. Agents may propose plans; Planning Engine resolves approved scope.
-3. Agents may make recommendations; Decision Engine records governed decisions.
-4. Agents may execute; Execution Engine owns dispatch and evidence capture.
-5. Agents may run checks; Validation Engine owns validation records.
-6. Agents may assist review only when independent from execution; Review Engine owns review output.
-7. Agents may prepare certification packages; Certification Engine routes human-governed decisions.
-8. Agents may propose memory; Memory Engine controls review and reuse boundaries.
-
----
-
-## 12. Tool Adapter Model
-
-The Tool Adapter Model defines how external tools, IDE assistants, CLIs, model runtimes, automation systems, and future Forge-native runtimes connect to the governed engine contracts. Tool adapters serve as translation layers that map platform-specific invocations into framework-compliant engine contract requests.
-
-Tool adapters connect external tools, IDE assistants, CLIs, model runtimes, automation systems, and future Forge-native runtimes to engine contracts.
-
-A tool adapter may:
-
-- translate a tool invocation into an engine contract request;
-- expose tool capabilities registered by the Registry Engine;
-- capture tool output as execution evidence;
-- map tool-specific failures into Forge AI failure modes;
-- enforce context and workflow boundaries inside the tool environment.
-
-A tool adapter must not:
-
-- redefine engine responsibilities;
-- bypass Governance, Workflow, Validation, Review, or Certification Engines;
-- make a tool-specific workflow canonical;
-- treat tool memory as Forge AI memory;
-- mutate project state without governed authorization;
-- make platform-specific behavior part of framework architecture.
-
-Adapter compatibility is determined by registered contracts, lifecycle state, required evidence, and governance approval.
-
----
-
-## 13. Engine Contract Model
-
-The Engine Contract Model defines the governed interface specification for invoking any engine responsibility. An Engine Contract is the conceptual (not necessarily programmatic) agreement between an engine invoker and the engine itself, capturing all preconditions, postconditions, inputs, outputs, and failure behaviors.
-
-An Engine Contract is the governed interface description for invoking an engine responsibility. It is conceptual and does not require a programming API.
-
-Minimum contract fields:
-
-| Field | Requirement |
-|:---|:---|
-| Contract ID | Stable identifier for the engine contract. |
-| Engine ID | Engine that owns the responsibility. |
-| Purpose | Reason the contract exists. |
-| Authority References | Governing documents and standards. |
-| Inputs | Required and optional inputs. |
-| Outputs | Required outputs and evidence. |
-| Preconditions | Lifecycle, scope, ownership, and registry requirements. |
-| Postconditions | Required state after successful invocation. |
-| Validation Rules | Checks required for contract compliance. |
-| Failure Modes | Known failures and reporting obligations. |
-| Handoff Targets | Engines or governance paths that may receive output. |
-| Lifecycle State | Draft, accepted, deprecated, retired, or other governed state when standardized. |
-| Ownership | Single accountable owner. |
-| Compatibility | Supported runtime, adapter, artifact, or workflow compatibility constraints. |
-
-Contract invariants:
-
-1. Contracts consume standards; they do not define standards.
-2. Contracts must be registered before use in governed execution.
-3. Contracts must preserve evidence and traceability.
-4. Contracts must not authorize self-certification.
-5. Contracts must declare failure behavior.
-
----
-
-## 14. Engine Registry Model
+### Engine Registry Model
 
 The Engine Registry Model defines the discoverable governed index that records engines, contracts, adapters, artifacts, lifecycle states, and compatibility metadata. The registry serves as the single source of truth for determining which engines, contracts, and adapters are available for governed execution at any given time.
 
@@ -789,48 +663,7 @@ Registry entries should include:
 
 The Registry Engine resolves whether a runtime, agent, or adapter may invoke a contract. Registration alone does not certify architecture or approve execution. Registry state must follow governance and lifecycle rules.
 
----
-
-## 15. Engine Validation Model
-
-The Engine Validation Model defines the multi-dimensional verification framework that ensures every engine invocation and output conforms to its governed contract. Validation is not a single step but a comprehensive set of checks that span authority, scope, lifecycle, evidence, and integration concerns.
-
-Engine validation verifies that engine invocation and output conform to governed contracts.
-
-Validation dimensions:
-
-1. **Authority validation:** governing documents are identified and not contradicted.
-2. **Scope validation:** requested action is within approved phase/stage/capability/task boundaries.
-3. **Contract validation:** required inputs, outputs, preconditions, postconditions, and handoffs are satisfied.
-4. **Lifecycle validation:** execution order preserves planning, context, execution, validation, review, and certification sequence.
-5. **Evidence validation:** outputs are traceable and adequate for review.
-6. **Registry validation:** engine, contract, adapter, artifact, and workflow entries are valid and compatible.
-7. **Knowledge validation:** graph traversal and knowledge claims comply with STD-001 when used.
-8. **Memory validation:** memory is non-authoritative, approved or reviewable, traceable, and current.
-9. **Adapter validation:** tool-specific behavior does not redefine framework behavior.
-10. **Failure validation:** failures are reported honestly and routed to the correct engine or governance path.
-
----
-
-## 16. Certification Rules
-
-Certification in the Forge AI Engine Architecture is a strictly governed acceptance decision. These rules establish the non-negotiable constraints that prevent AI self-certification, ensure validation and review completeness, and maintain human governance authority over all certification outcomes.
-
-> **Governing Principle:** Certification is a governed acceptance decision, not an execution convenience.
-
-1. Certification is a governed acceptance decision, not an execution convenience.
-2. Certification requires completed validation and independent review unless Human Governance explicitly defines a different governed path.
-3. AI agents, automation, swarms, runtimes, and tool adapters must not self-certify.
-4. The Certification Engine prepares and routes certification handoffs; it does not replace Human Governance.
-5. Failed validation cannot proceed to certification as successful.
-6. Failed review cannot proceed to certification as successful.
-7. Conditional certification must record conditions, evidence, authority, and follow-up requirements.
-8. Certification may authorize registry, knowledge, memory, or project state updates only when the relevant governance procedure permits them.
-9. This RFC is not certified by its creation and remains Draft / Non-canonical until approved.
-
----
-
-## 17. Governance Constraints
+### Governance Constraints
 
 Governance constraints define the inviolable authority boundaries that protect the Forge AI framework from architectural drift. These constraints ensure that no engine, tool, adapter, or agent can elevate its authority beyond what Human Governance and the Constitution permit.
 
@@ -846,130 +679,329 @@ Governance constraints define the inviolable authority boundaries that protect t
 
 ---
 
-## 18. Non-goals
+## Design Decisions
 
-This section explicitly delineates what this RFC does not address. These exclusions are as important as the in-scope items because they prevent scope creep, set stakeholder expectations, and protect upstream governance documents from inadvertent redefinition.
+### D-1: Twelve-Engine Separation of Concerns
 
-This RFC does not:
+**Decision:** The Forge AI execution backbone shall be decomposed into twelve discrete, contract-bound engines rather than a monolithic runtime or a smaller set of multifunction components.
 
-- implement engines;
-- define concrete APIs;
-- select a programming language, database, queue, protocol, model provider, IDE, CLI, or host runtime;
-- modify runtime behavior;
-- redefine the Constitution;
-- redefine M.0 or M.1;
-- redefine STD-000 or STD-001;
-- redefine the Knowledge Graph;
-- certify v3 architecture;
-- update ProjectStatus;
-- create platform-specific adapter behavior;
-- replace RC2 commands, workflows, or validation procedures;
-- create production deployment topology.
+**Context:** The v3 transition requires platform independence and verifiable governance. A monolithic execution model cannot provide the granularity needed for independent validation, review, and certification of individual execution concerns.
+
+**Options considered:**
+1. Monolithic runtime with internal modules — rejected because it couples concerns and prevents independent governance of each capability.
+2. Six-engine model (combining related concerns) — rejected because it creates ambiguous ownership boundaries between combined engines.
+3. Twelve-engine model (chosen) — provides maximum separation, clear ownership, and independent governance for each concern.
+
+**Rationale:** Twelve engines allow each concern to have a single accountable owner, a governed contract, independent validation, and explicit handoff rules. This granularity supports enterprise governance, multi-agent coordination, and regulatory compliance requirements.
+
+### D-2: Contract-Bound Engine Model
+
+**Decision:** Every engine shall be defined by a governed contract specifying inputs, outputs, preconditions, postconditions, validation rules, failure modes, and handoff targets. Execution semantics reside in governed contracts, not in tool-specific behavior.
+
+**Context:** Without explicit contracts, tools, agents, and runtimes risk overstepping their authority. Contracts provide the verifiable boundary that prevents architectural drift.
+
+**Options considered:**
+1. Implicit behavioral contracts (convention-based) — rejected because conventions cannot be validated or enforced programmatically.
+2. Programmatic API contracts — rejected because this is documentation-only architecture; APIs are implementation concerns.
+3. Governed conceptual contracts (chosen) — provides enforceable boundaries without requiring implementation-level specification.
+
+**Rationale:** Conceptual contracts capture the architectural intent without committing to a specific implementation technology. They can be validated, reviewed, and certified at the architecture level.
+
+### D-3: Prohibition of AI Self-Certification
+
+**Decision:** AI agents, automation, swarms, runtimes, and tool adapters must not self-certify. Certification requires human governance or delegated human-owned authority.
+
+**Context:** Self-certification creates a conflict of interest between the executor and the certifier. In enterprise and regulatory contexts, this conflict is unacceptable.
+
+**Options considered:**
+1. AI self-certification with human spot-check — rejected because spot-checks do not provide systematic independence.
+2. Peer AI certification — rejected because AI-to-AI review does not satisfy independence requirements.
+3. Human-governed certification only (chosen) — ensures independent acceptance decisions.
+
+**Rationale:** The non-negotiable prohibition of AI self-certification protects the integrity of the certification process and ensures human accountability for all acceptance decisions.
+
+### D-4: Non-Authoritative Memory
+
+**Decision:** Memory Engine output is non-authoritative. Memory candidates require authority re-validation before use. Memory does not replace documentation, state, or canonical records.
+
+**Context:** If memory were authoritative, stale or incorrect memory could corrupt execution without detection. Non-authoritative memory ensures that current authority always takes precedence.
+
+**Options considered:**
+1. Authoritative memory with expiration — rejected because expiration does not guarantee accuracy; authority may change between memory creation and use.
+2. Non-authoritative memory with re-validation (chosen) — ensures memory is always checked against current authority before use.
+
+**Rationale:** Non-authoritative memory provides reuse benefits while preserving the authority chain. Memory candidates derived from approved, traceable work can accelerate context assembly without risking authority corruption.
+
+### D-5: Registry as Discovery, Not Approval
+
+**Decision:** The Engine Registry discovers contracts, adapters, and artifacts. Registration alone does not certify architecture or approve execution. Registry state must follow governance and lifecycle rules.
+
+**Context:** If registration implied approval, any registered engine or adapter would gain de facto authority without governance review.
+
+**Options considered:**
+1. Registration implies approval — rejected because it bypasses governance review.
+2. Registration as discovery with governance-gated activation (chosen) — separates discovery from approval.
+
+**Rationale:** Discovery and approval are distinct governance concerns. The Registry serves discovery; governance serves approval. This separation prevents authority creep through registration.
+
+### D-6: Tool Adapters as Translation Layers
+
+**Decision:** Tool adapters translate platform-specific invocations into framework-compliant engine contract requests. Adapters may not redefine engine responsibilities, bypass governance engines, or make platform-specific behavior canonical.
+
+**Context:** Without an adapter model, tools would either be tightly coupled to the framework or operate outside governance.
+
+**Options considered:**
+1. Direct tool integration — rejected because it creates platform coupling.
+2. Adapter model with governance constraints (chosen) — enables platform integration while preserving framework authority.
+
+**Rationale:** The adapter model provides a governed translation boundary. Tools gain framework access through contracts, but the framework architecture remains platform-independent.
 
 ---
 
-## 19. Migration Notes from RC2
+## Ownership
 
-The migration from RC2 to the engine-first v3 architecture is a foundational transition that maps existing operational procedures to governed engine responsibilities. The following table provides a comprehensive mapping of RC2 concepts to their v3 engine destinations, along with guidance for incremental migration.
-
-| RC2 Concept | Engine-first v3 Destination | Migration Note |
+| Role | Party | Responsibility |
 |:---|:---|:---|
-| Boot sequence | Governance, Registry, Workflow, Context Engines | Boot becomes explicit engine-mediated initialization while preserving RC2 authority reading. |
-| Task planning | Planning Engine | RC2 planning procedures become governed planning inputs, not ad hoc agent behavior. |
-| Context assembly | Context Engine + Knowledge Engine | Context becomes a traceable engine product rather than a tool-local prompt bundle. |
-| Command selection | Workflow Engine + Decision Engine | Commands remain operational procedures until replaced; selection becomes governed by engine contracts. |
-| Agent execution | Execution Engine | Agents remain executors; execution dispatch and evidence capture become engine responsibilities. |
-| Validation | Validation Engine | Existing validation checks map into registered validation gates and reports. |
-| Review checklist | Review Engine | Review remains independent and consumes validation evidence. |
-| Certification readiness | Certification Engine | Certification handoff becomes explicit and human-governed. |
-| Project state updater | Certification Engine + Governance Engine + existing state procedures | State updates remain prohibited unless certification and governance authorize them. |
-| Memory/context reuse | Memory Engine | Reuse becomes non-authoritative, traceable, and revalidated against current authority. |
-| Multi-agent coordination | Execution Engine + Workflow Engine + Governance Engine | Ownership, handoffs, and synchronization become engine-mediated. |
-| Tool-specific rules | Tool Adapter Model + Registry Engine | Tools become adapters to contracts rather than owners of workflow. |
-
-Migration should be incremental. RC2 remains operational compatibility until v3 engine contracts and replacement procedures are approved.
+| **Owner** | Framework Governance | Accountable for the Engine Architecture RFC architectural integrity, metadata accuracy, lifecycle progression, and governance compliance. |
+| **Maintainers** | Framework Architecture Team | Supports the Owner with ongoing maintenance, edits, validation, and coordination with sub-RFCs. |
+| **Review Authority** | Enterprise Documentation Standards Board | Conducts structured review of this RFC; produces review findings and readiness recommendations. |
+| **Approval Authority** | Human Governance / Framework Governance | Approves this RFC for advancement past Review. |
 
 ---
 
-## 20. Open Questions
+## Responsibilities
 
-The following questions represent unresolved architectural decisions that require further analysis, stakeholder input, or downstream RFC development. These items are tracked as open issues and will be addressed in subsequent revisions or delegated to the appropriate sub-RFCs.
+The Owner (Framework Governance) is responsible for:
 
-1. What artifact type should represent an Engine Contract under M.1?
-2. Should engine contracts have a dedicated standard or be governed by an extension to STD-000?
-3. What lifecycle states apply to engines, contracts, adapters, and registry entries?
-4. How should Registry Engine records be serialized and linked to the Knowledge Graph?
+1. Engine Architecture integrity and consistency across all twelve engine definitions.
+2. Coordination with A.3 Runtime Architecture to ensure engine-runtime alignment.
+3. Parent specification authority for A.4.1 through A.4.7 sub-RFCs, ensuring each sub-RFC specializes within the boundaries defined by this RFC.
+4. Governance review and approval progression through the defined lifecycle.
+5. Metadata and traceability accuracy for this RFC and its produced artifacts.
+6. Ensuring no engine redefines its consumed authorities or oversteps its declared scope.
+
+---
+
+## Non Responsibilities
+
+The Owner (Framework Governance) is not responsible for:
+
+1. Engine implementation, source code, deployment, or operational behavior.
+2. Runtime behavior, execution semantics, or performance characteristics.
+3. Tool, IDE, CLI, or adapter implementation or integration.
+4. Knowledge Graph structure, content, or STD-001 compliance enforcement.
+5. Certification execution, approval, or promotion of this or any other RFC.
+6. ProjectStatus updates, roadmap changes, or phase activation.
+7. Constitutional (A.1), Meta Model (M.0, M.1), Standard (STD-000, STD-001, STD-002, STD-003, STD-010), or Knowledge Graph redefinition.
+8. Platform adapter, multi-agent runtime, swarm runtime, or enterprise governance implementation.
+
+---
+
+## Interfaces
+
+### Agent-to-Engine Interaction Model
+
+AI agents interact with Forge AI through runtime-mediated engine contracts. This model ensures that agents remain executors within governed boundaries and cannot subvert the engine authority chain by direct action.
+
+```text
+AI Agent Request / Human Delegation
+    | Runtime Mediation
+    | Engine Contract Invocation
+    | Bounded Engine Response
+    | Agent Execution or Report
+    | Evidence Capture
+```
+
+Rules:
+
+1. Agents consume context; they do not define source-of-truth context.
+2. Agents may propose plans; Planning Engine resolves approved scope.
+3. Agents may make recommendations; Decision Engine records governed decisions.
+4. Agents may execute; Execution Engine owns dispatch and evidence capture.
+5. Agents may run checks; Validation Engine owns validation records.
+6. Agents may assist review only when independent from execution; Review Engine owns review output.
+7. Agents may prepare certification packages; Certification Engine routes human-governed decisions.
+8. Agents may propose memory; Memory Engine controls review and reuse boundaries.
+
+### Tool Adapter Model
+
+The Tool Adapter Model defines how external tools, IDE assistants, CLIs, model runtimes, automation systems, and future Forge-native runtimes connect to the governed engine contracts. Tool adapters serve as translation layers that map platform-specific invocations into framework-compliant engine contract requests.
+
+A tool adapter may: translate a tool invocation into an engine contract request; expose tool capabilities registered by the Registry Engine; capture tool output as execution evidence; map tool-specific failures into Forge AI failure modes; enforce context and workflow boundaries inside the tool environment.
+
+A tool adapter must not: redefine engine responsibilities; bypass Governance, Workflow, Validation, Review, or Certification Engines; make a tool-specific workflow canonical; treat tool memory as Forge AI memory; mutate project state without governed authorization; make platform-specific behavior part of framework architecture.
+
+Adapter compatibility is determined by registered contracts, lifecycle state, required evidence, and governance approval.
+
+### Engine Contract Model
+
+The Engine Contract Model defines the governed interface specification for invoking any engine responsibility. An Engine Contract is the conceptual (not necessarily programmatic) agreement between an engine invoker and the engine itself, capturing all preconditions, postconditions, inputs, outputs, and failure behaviors.
+
+Minimum contract fields:
+
+| Field | Requirement |
+|:---|:---|
+| Contract ID | Stable identifier for the engine contract. |
+| Engine ID | Engine that owns the responsibility. |
+| Purpose | Reason the contract exists. |
+| Authority References | Governing documents and standards. |
+| Inputs | Required and optional inputs. |
+| Outputs | Required outputs and evidence. |
+| Preconditions | Lifecycle, scope, ownership, and registry requirements. |
+| Postconditions | Required state after successful invocation. |
+| Validation Rules | Checks required for contract compliance. |
+| Failure Modes | Known failures and reporting obligations. |
+| Handoff Targets | Engines or governance paths that may receive output. |
+| Lifecycle State | Draft, accepted, deprecated, retired, or other governed state. |
+| Ownership | Single accountable owner. |
+| Compatibility | Supported runtime, adapter, artifact, or workflow compatibility constraints. |
+
+Contract invariants: Contracts consume standards; they do not define standards. Contracts must be registered before use. Contracts must preserve evidence and traceability. Contracts must not authorize self-certification. Contracts must declare failure behavior.
+
+---
+
+## Lifecycle
+
+The Runtime-to-Engine Lifecycle defines how a runtime request flows through the governed engine chain from initial context assembly to final completion or memory proposal.
+
+```text
+Runtime Request
+    | Governance Engine: authority and permission check
+    | Registry Engine: resolve available engine contracts and adapters
+    | Workflow Engine: select governed lifecycle
+    | Planning Engine: resolve approved scope
+    | Context Engine assembles context with Knowledge Engine support
+    | Decision Engine confirms next permitted action
+    | Execution Engine dispatches work
+    | Validation Engine verifies evidence and outputs
+    | Review Engine assesses readiness
+    | Certification Engine prepares human-governed handoff
+    | Memory Engine proposes reusable memory after approval boundaries are met
+    | Runtime Completion / Context Release
+```
+
+Runtime is an orchestrating environment. Engines own bounded responsibilities. The runtime must not bypass an engine simply because a tool can perform the action directly.
+
+---
+
+## Validation
+
+### Engine Validation Model
+
+The Engine Validation Model defines the multi-dimensional verification framework that ensures every engine invocation and output conforms to its governed contract.
+
+Validation dimensions:
+
+1. **Authority validation:** governing documents are identified and not contradicted.
+2. **Scope validation:** requested action is within approved phase/stage/capability/task boundaries.
+3. **Contract validation:** required inputs, outputs, preconditions, postconditions, and handoffs are satisfied.
+4. **Lifecycle validation:** execution order preserves planning, context, execution, validation, review, and certification sequence.
+5. **Evidence validation:** outputs are traceable and adequate for review.
+6. **Registry validation:** engine, contract, adapter, artifact, and workflow entries are valid and compatible.
+7. **Knowledge validation:** graph traversal and knowledge claims comply with STD-001 when used.
+8. **Memory validation:** memory is non-authoritative, approved or reviewable, traceable, and current.
+9. **Adapter validation:** tool-specific behavior does not redefine framework behavior.
+10. **Failure validation:** failures are reported honestly and routed to the correct engine or governance path.
+
+### Certification Rules
+
+> **Governing Principle:** Certification is a governed acceptance decision, not an execution convenience.
+
+1. Certification is a governed acceptance decision, not an execution convenience.
+2. Certification requires completed validation and independent review unless Human Governance explicitly defines a different governed path.
+3. AI agents, automation, swarms, runtimes, and tool adapters must not self-certify.
+4. The Certification Engine prepares and routes certification handoffs; it does not replace Human Governance.
+5. Failed validation cannot proceed to certification as successful.
+6. Failed review cannot proceed to certification as successful.
+7. Conditional certification must record conditions, evidence, authority, and follow-up requirements.
+8. Certification may authorize registry, knowledge, memory, or project state updates only when the relevant governance procedure permits them.
+9. This RFC is not certified by its creation and remains Draft / Non-canonical until approved.
+
+---
+
+## Risks
+
+| # | Risk | Severity | Mitigation |
+|:---|:---|:---|:---|
+| 1 | RC2 operational continuity during v3 transition | Medium | RC2 procedures remain valid until explicitly replaced through approved v3 operational procedures. |
+| 2 | Engine boundary ambiguity in sub-RFCs | High | A.4.1-A.4.7 sub-RFCs refine individual engine concerns under this parent authority. |
+| 3 | Tool adapter governance gap | Medium | Tool Adapter Model constrains adapters; Registry validates registration; Governance enforces boundaries. |
+| 4 | Memory Engine authority confusion | Medium | Memory is explicitly non-authoritative; every use requires authority re-validation. |
+| 5 | Registry approval by registration | Medium | Registration is discovery, not approval. Governance gates remain. |
+
+---
+
+## Open Questions
+
+1. Should the twelve-engine model be the minimum or can specialized engines be added without a new RFC?
+2. How should engine-to-engine communication be governed when engines span trust boundaries?
+3. What is the minimum viable evidence package for Certification Engine handoff?
+4. How should engine failure recovery be modeled?
 5. Which engine outputs must become first-class Knowledge Graph nodes?
 6. What minimum evidence package is required for each engine invocation?
 7. How should independent review be enforced for AI-assisted review workflows?
 8. What human delegation model is acceptable for certification decisions?
-9. How should tool adapter compatibility be validated across IDE, CLI, and autonomous runner environments?
-10. What RC2 documents should be deprecated only after v3 engine procedures are approved?
+9. How should tool adapter compatibility be validated across environments?
+10. What RC2 documents should be deprecated only after v3 procedures are approved?
 11. Should memory review be part of Review Engine, Certification Engine, or a future Memory Standard?
-12. How should engine failure modes be represented in future validation reports?
+12. How should engine failure modes be represented in validation reports?
 
 ---
 
-## 21. Completion Checklist
+## Completion Criteria
 
-This completion checklist enumerates all mandatory quality gates that must be satisfied before this draft RFC can be considered structurally complete. Each item represents a verification point that ensures the document meets its stated scope, governance constraints, and architectural coverage requirements.
-
-This draft RFC is complete when:
-
-- [x] status is marked RFC / Draft / Non-canonical until approved;
-- [x] documentation-only scope is explicit;
-- [x] no code implementation is introduced;
-- [x] existing Constitution, Meta Models, Standards, and Knowledge Graph are not redefined;
-- [x] all 12 required engines are defined;
-- [x] each engine includes purpose, ownership, inputs, outputs, consumed standards, produced artifacts, forbidden responsibilities, runtime relationship, Knowledge Graph relationship, Registry relationship, AI agent relationship, validation requirements, failure modes, and handoff rules;
-- [x] Engine Stack Diagram is included;
-- [x] Engine Responsibility Matrix is included;
-- [x] Engine Dependency Graph is included;
-- [x] Engine Communication Flow is included;
-- [x] Runtime-to-Engine Lifecycle is included;
-- [x] Agent-to-Engine Interaction Model is included;
-- [x] Tool Adapter Model is included;
-- [x] Engine Contract Model is included;
-- [x] Engine Registry Model is included;
-- [x] Engine Validation Model is included;
-- [x] Certification Rules are included;
-- [x] Governance Constraints are included;
-- [x] Non-goals are included;
-- [x] Migration Notes from RC2 are included;
-- [x] Open Questions are included;
-- [x] ProjectStatus is not updated;
-- [x] this RFC is not certified.
+- [x] Status is marked RFC / Draft / Non-canonical until approved.
+- [x] Documentation-only scope is explicit.
+- [x] No code implementation is introduced.
+- [x] Existing Constitution, Meta Models, Standards, and Knowledge Graph are not redefined.
+- [x] All 12 required engines are defined.
+- [x] Each engine includes purpose, ownership, inputs, outputs, consumed standards, produced artifacts, forbidden responsibilities, runtime relationship, Knowledge Graph relationship, Registry relationship, AI agent relationship, validation requirements, failure modes, and handoff rules.
+- [x] Engine Stack Diagram is included.
+- [x] Engine Responsibility Matrix is included.
+- [x] Engine Dependency Graph is included.
+- [x] Engine Communication Flow is included.
+- [x] Runtime-to-Engine Lifecycle is included.
+- [x] Agent-to-Engine Interaction Model is included.
+- [x] Tool Adapter Model is included.
+- [x] Engine Contract Model is included.
+- [x] Engine Registry Model is included.
+- [x] Engine Validation Model is included.
+- [x] Certification Rules are included.
+- [x] Governance Constraints are included.
+- [x] Out of Scope is included.
+- [x] Migration Notes from RC2 are included.
+- [x] Open Questions are included.
+- [x] ProjectStatus is not updated.
+- [x] This RFC is not certified.
 
 ---
 
-## 22. Stakeholder Impact Matrix
-
-The Stakeholder Impact Matrix identifies the key organizational roles affected by this RFC and assesses the level of impact along with their primary concerns. This matrix supports change management planning and ensures that affected stakeholders are identified early in the governance review process.
+## Stakeholder Impact Matrix
 
 | Stakeholder | Role | Impact Level | Primary Concern |
 |:---|:---|:---|:---|
-| Framework Architecture Team | Document Owner / Maintainer | **High** | Ensuring engine boundary completeness and contract model consistency across all twelve engines and seven sub-RFCs |
-| Enterprise Documentation Standards Board | Review Authority | **High** | STD-010 metadata compliance, structural consistency, and governance traceability of the document |
+| Framework Architecture Team | Document Owner / Maintainer | **High** | Engine boundary completeness and contract model consistency across all twelve engines and seven sub-RFCs |
+| Enterprise Documentation Standards Board | Review Authority | **High** | STD-010 metadata compliance, structural consistency, and governance traceability |
 | Human Governance / Framework Governance | Approval Authority | **High** | Authority chain integrity, AI self-certification prohibition, and governance constraint enforcement |
-| Runtime Engineering Team | Downstream Consumer | **High** | Runtime-to-Engine lifecycle mapping, engine invocation sequencing, and backward compatibility with RC2 |
-| AI Agent Development Team | Execution Consumer | **Medium** | Agent-to-Engine interaction model constraints, bounded execution rules, and tool adapter integration |
-| Knowledge Graph Stewards | Cross-cutting Support | **Medium** | STD-001 compliance for all engine graph interactions, graph update governance, and traversal evidence requirements |
-| Tool / IDE / CLI Integration Teams | Adapter Implementers | **Medium** | Tool Adapter Model constraints, Registry Engine contract registration, and platform-specific boundary enforcement |
-| Quality Assurance / Validation Teams | Validation Consumers | **Medium** | Validation Engine gate definitions, evidence requirements, and failure mode reporting standards |
-| Certification / Compliance Officers | Certification Stakeholders | **Medium** | Certification Rules enforcement, human governance handoff procedures, and audit trail completeness |
-| RC2 Operations Team | Migration Stakeholders | **Low** | Incremental migration path, operational continuity during transition, and RC2 procedure deprecation timeline |
+| Runtime Engineering Team | Downstream Consumer | **High** | Runtime-to-Engine lifecycle mapping, engine invocation sequencing, and backward compatibility |
+| AI Agent Development Team | Execution Consumer | **Medium** | Agent-to-Engine interaction model constraints and bounded execution rules |
+| Knowledge Graph Stewards | Cross-cutting Support | **Medium** | STD-001 compliance for engine graph interactions and traversal evidence requirements |
+| Tool / IDE / CLI Integration Teams | Adapter Implementers | **Medium** | Tool Adapter Model constraints and Registry Engine contract registration |
+| Quality Assurance / Validation Teams | Validation Consumers | **Medium** | Validation Engine gate definitions and failure mode reporting standards |
+| Certification / Compliance Officers | Certification Stakeholders | **Medium** | Certification Rules enforcement and human governance handoff procedures |
+| RC2 Operations Team | Migration Stakeholders | **Low** | Incremental migration path and RC2 procedure deprecation timeline |
 
 ---
 
-## 23. Change Log
+## Migration Notes from RC2
 
-| Version | Date | Author | Description |
-|:---|:---|:---|:---|
-| 0.1.0-draft | 2026-07-07 | Framework Architecture Team | Initial draft: complete engine architecture with all 12 engines defined, responsibility matrix, dependency graph, communication flow, contract model, registry model, validation model, certification rules, governance constraints, RC2 migration notes, and open questions. |
+The v3 Engine Architecture is designed to coexist with RC2 operational procedures until approved v3 engine procedures are explicitly activated. RC2 procedures remain valid for ongoing operations. The Engine Architecture does not deactivate, replace, or deprecate RC2 procedures by its existence.
+
+Migration from RC2 to v3 engine procedures shall occur through a governed migration process, not through this RFC. When v3 engine procedures are approved, a separate migration document shall define the specific transition steps, timeline, and validation criteria.
 
 ---
 
-## 24. Glossary
+## Glossary
 
 | Term | Definition |
 |:---|:---|
@@ -988,11 +1020,11 @@ The Stakeholder Impact Matrix identifies the key organizational roles affected b
 
 ---
 
-## Appendix A: Cross-Reference Index
+## Appendices
 
-This index catalogs all explicit cross-references to other Forge AI v3 documents within this RFC. It supports traceability analysis and impact assessment when upstream or downstream documents are revised.
+### Cross-Reference Index
 
-### A.1 Upstream Dependencies (Consumed)
+#### A.1 Upstream Dependencies (Consumed)
 
 | Reference | Document | Relationship |
 |:---|:---|:---|
@@ -1002,13 +1034,13 @@ This index catalogs all explicit cross-references to other Forge AI v3 documents
 | STD-000 | `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md` | Normative reference for standard structure, validation lifecycle, governance expectations, and certification |
 | STD-001 | `docs/AI/Architecture/Standards/STD-001-Knowledge-Graph-Standard.md` | Normative reference for Knowledge Graph traversal, graph validation, and node/edge semantics |
 | STD-002 | Referenced in Consumes field | Standard referenced for engine RFC input consistency |
+| STD-003 | `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md` | Normative reference for canonical terminology |
+| STD-010 | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` | Normative reference for document metadata compliance |
 | A.3 | `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md` | Direct upstream RFC defining runtime architecture that this Engine Architecture extends |
 | AGENTS.md | `AGENTS.md` | Bootstrap authority during v3 transition; governance authority model |
 | FrameworkGovernance.md | `docs/FrameworkGovernance.md` | Normative authority for governance procedures |
-| STD-010 | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` | Normative reference for document metadata compliance |
-| Blueprint RFC | Forge AI Blueprint RFC | Upstream architectural blueprint referenced in authority chain |
 
-### A.2 Downstream Specifications (Produced / Blocked)
+#### A.2 Downstream Specifications (Produced / Blocked)
 
 | Reference | Document | Relationship |
 |:---|:---|:---|
@@ -1020,8 +1052,17 @@ This index catalogs all explicit cross-references to other Forge AI v3 documents
 | A.4.6 | `docs/AI/Architecture/A.4.6-Engine-State-RFC.md` | Sub-RFC blocked by this RFC; refines engine state management |
 | A.4.7 | `docs/AI/Architecture/A.4.7-Engine-Capability-RFC.md` | Sub-RFC blocked by this RFC; refines engine capability model |
 
-### A.3 Related Specifications (Non-authoritative)
+#### A.3 Related Specifications (Non-authoritative)
 
 | Reference | Document | Relationship |
 |:---|:---|:---|
-| A.3/A.4 engine RFC family | A.3, A.4.1–A.4.7 | Related specifications in the engine RFC family; understood for context but not authoritative over this RFC |
+| A.3/A.4 engine RFC family | A.3, A.4.1-A.4.7 | Related specifications in the engine RFC family; understood for context but not authoritative over this RFC |
+
+---
+
+## Version History
+
+| Version | Status | Notes |
+|:---|:---|:---|
+| `0.1.0-draft` | Draft | Initial draft: complete engine architecture with all 12 engines defined, responsibility matrix, dependency graph, communication flow, contract model, registry model, validation model, certification rules, governance constraints, RC2 migration notes, and open questions. |
+| `0.1.1-draft` | Draft | TPL-001 editorial refactoring: restructured to comply with TPL-001 RFC Template Standard mandatory sections. Added Out of Scope, Normative Authority, Normative References, Dependencies, Design Decisions, Ownership, Responsibilities, Non Responsibilities, Risks as standalone sections. Consolidated Architecture, Interfaces, Validation. Renamed Completion Checklist to Completion Criteria, Change Log to Version History. Added Promotion Requirements, expanded Normative References, Normative Authority, Traceability ID, Dependencies in metadata. Removed Table of Contents. No architectural content changed. |
