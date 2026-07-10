@@ -23,7 +23,7 @@
 | Traceability ID | `FORGE-AI.V2.OP-001` |
 | Scope | Classifies remaining RC2 and operational documents under docs/AI into final v2 Operational Core destinations. |
 | Out of Scope | Architecture, Runtime, Engine RFC, Standards, Constitution, Meta, Governance, ProjectStatus updates, file moves, deletion, archival execution, and certification. |
-| Normative Authority | Human Governance task instruction; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; `docs/AI/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md` |
+| Normative Authority | Human Governance task instruction; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; `docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md` |
 | Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
 | Dependencies | Governance Core; Architecture Core; Operational Core roadmap; RC2 operational compatibility documents. |
 | Consumes | Remaining operational documents in `docs/AI/`, Program C Operational Core roadmap, frozen-area policy, and Human Governance task scope. |

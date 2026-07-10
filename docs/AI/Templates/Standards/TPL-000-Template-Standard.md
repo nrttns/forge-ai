@@ -55,7 +55,7 @@
 - `docs/AI/AgentSystemPrompt.md`
 - `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`
 - `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`
-- `docs/AI/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md`
+- `docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md`
 - `docs/DevelopmentPhases/ProjectStatus.md`
 - `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`
 

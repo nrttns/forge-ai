@@ -2,235 +2,161 @@
 
 ---
 
-# Current Authority
+## Document Metadata
 
-**Strategic Roadmap**
-
-docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md
-
-**Operational Status**
-
-docs/DevelopmentPhases/ProjectStatus.md
-
----
-
-# Current Milestone
-
-**Phase**
-
-Phase 2 — Engine Foundation
-
-**Stage**
-
-Canonical Review Preparation
-
-**Current Objective**
-
-Route the completed Phase 2 Engine Foundation RFC series and review package to Canonical Review, preserving draft / non-canonical / not-certified status until Human Governance explicitly approves any promotion.
-
----
-
-# Completed
-
-## Foundation
-
-- A.0 Framework Audit
-- A.1 Constitution
-
-## Standards
-
-- STD-000 Framework Standards
-- STD-001 Knowledge Graph Standard
-- STD-002 Discovery Standard
-- STD-003 Canonical Terminology Standard
-- STD-010 Document Metadata Standard
-
-## Runtime
-
-- A.3 Runtime Architecture RFC
-
-## Engine Platform
-
-- A.4 Engine Architecture RFC
-- A.4.1 Engine Kernel RFC
-- A.4.2 Engine Contract RFC
-- A.4.3 Engine Registry RFC
-- A.4.4 Engine Lifecycle RFC
-- A.4.5 Engine Communication RFC
-- A.4.6 Engine State RFC
-- A.4.7 Engine Capability RFC
-- Engine Platform Consistency Review
-
-## Metadata
-
-- Core Document Metadata Normalization
-
-## Meta Foundation
-
-- M.0 Framework Meta Model Alignment
-- M.1 Artifact Meta Model Alignment
-- STD-003 Canonical Terminology Standard
-- Meta Layer Consistency Review — PASS WITH OBSERVATIONS
-- Phase 1 — Meta Foundation closed
-
-## Engine Foundation
-
-- A.5.0 Engine Specialization RFC Template
-- A.5.1 Context Engine RFC
-- A.5.2 Knowledge Engine RFC
-- A.5.3 Planning Engine RFC
-- A.5.4 Decision Engine RFC
-- A.5.5 Execution Engine RFC
-- A.5.6 Validation Engine RFC
-- A.5.7 Review Engine RFC
-- A.5.8 Certification Engine RFC
-- A.5.9 Memory Engine RFC
-- A.5.10 Governance Engine RFC
-- A.5.11 Workflow Engine RFC
-- A.5.12 Registry Engine RFC
-- Engine RFC Inventory & Compliance Review
-- Engine Architecture Consistency Review
-- Engine RFC Certification Review — PASS WITH OBSERVATIONS
-- Phase 2 — Engine Foundation RFC series complete
+| Field | Value |
+|:---|:---|
+| Identifier | `FORGE-AI.TARGET.PROJECT-STATUS` |
+| Title | ProjectStatus |
+| Version | 4.1.0-draft |
+| Status | Live Operational State |
+| Canonical Status | Live Forge AI Target Project operational state; not Framework architecture authority |
+| Classification | Target Project Operational State |
+| Document Type | ProjectStatus |
+| Owner | Forge AI Target Project Governance |
+| Maintainers | Framework Architecture Team |
+| Review Authority | Framework Governance |
+| Approval Authority | Human Governance |
+| Created | 2026-07-04 |
+| Last Updated | 2026-07-10 |
+| Lifecycle Phase | Live Operational State |
+| Traceability ID | `FORGE-AI.TARGET.PROJECT-STATUS` |
+| Scope | Current operational state, completed work, current work, next queue, frozen areas, and update policy for the Forge AI repository as self-hosted Target Repository. |
+| Out of Scope | Architecture definition, governance redefinition, Framework redesign, Standards redefinition, Runtime or Engine redesign, roadmap replacement, DevelopmentPhases replacement, canonical promotion, certification, external Target Repository status, implementation authorization, and phase advancement without evidence. |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/FrameworkGovernance.md`; `docs/AI/Architecture/A.2-AI-DOS-Target-Repository-Operational-Boundary.md` |
+| Normative References | `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; `docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md`; `docs/AI/System/TargetRepositoryResolution.md`; `docs/AI/System/SystemLayerFreeze.md`; `docs/AI/Architecture/Reports/Target-Project-Path-Resolution.md`; `docs/AI/Architecture/Reports/Forge-AI-Repository-Rationalization-Audit.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
+| Dependencies | Human Governance task instruction, active master roadmap, DevelopmentPhases, Target Repository operating model, System Layer baseline, and repository evidence. |
+| Consumes | Evidence of completed architecture, normalization, target resolution, System Layer re-freeze, repository rationalization audit, and TARGET-PATH-002 non-frozen normalization. |
+| Produces | Live Forge AI Target Project operational state, current work statement, next queue, frozen-area list, and status update policy. |
+| Related Specifications | `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Architecture/A.2-AI-DOS-Target-Repository-Operational-Boundary.md`; `docs/AI/System/BootSequence.md`; `docs/Roadmap/Forge-AI-v3-Master-Architecture-Development-Roadmap.md` |
+| Supersedes | Earlier ProjectStatus interpretation that did not explicitly distinguish Forge AI self-hosting Target Repository state from Framework authority |
+| Superseded By | None |
+| Promotion Requirements | Not applicable; ProjectStatus is live operational state and changes only through explicit Human Governance authorization or dedicated ProjectStatus tasks. |
+| Certification Status | Not certified; operational state record only |
 
 ---
 
-# Engine Foundation Readiness State
+## 1. Current Authority
 
-The Phase 2 Engine Foundation is recorded as:
+| Field | Value |
+|:---|:---|
+| Target Repository | Forge AI repository |
+| Framework Provider | Forge AI / AI-DOS |
+| Active Master Roadmap | `docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md` |
+| Development Phases | `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
+| Operational Status | `docs/DevelopmentPhases/ProjectStatus.md` |
 
-- Architecturally complete
-- Internally consistent
-- Governance compliant
-- Ready for Canonical Review
+ProjectStatus records live operational state only. It does not define architecture, governance, Runtime, Engines, Standards, templates, commands, workflows, or external Target Repository requirements.
 
-This status record does not certify, approve, promote, or canonicalize any Engine Foundation document, and it does not authorize implementation.
+## 2. Forge AI Self-Hosting Path Mappings
 
----
+The following mappings apply only to Forge AI self-hosting:
 
-# Next Queue
+| Symbolic Path | Forge AI Self-Hosting Resolution |
+|:---|:---|
+| `<TARGET_REPOSITORY_ROOT>` | Forge AI repository root |
+| `<TARGET_AGENTS_PATH>` | `AGENTS.md` |
+| `<PROJECT_STATUS_PATH>` | `docs/DevelopmentPhases/ProjectStatus.md` |
+| `<DEVELOPMENT_PHASES_PATH>` | `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
+| `<PROJECT_ROADMAP_PATH>` | `docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md` |
 
-1. Canonical Review
-2. Editorial Normalization
-3. Human Governance Approval
-4. Next planned architectural phase after Human Governance approval and ProjectStatus update
+These are not universal paths for Axis Suite or any external Target Repository.
 
----
+## 3. Current Work
 
-# Phase Exit Criteria
+**Phase:** Phase 8 — Self-Hosting Project Governance Realignment.
 
-## Phase 1 — Meta Foundation
+**Stage:** Roadmap, DevelopmentPhases, and ProjectStatus realignment.
 
-Phase 1 is complete.
+**Current Objective:** Realign Forge AI project-governance documents with the approved AI-DOS / Target Repository operating model, followed by remaining repository rationalization and physical cleanup when separately authorized.
 
-- ✅ M.0 Framework Meta Model Alignment completed
-- ✅ M.1 Artifact Meta Model Alignment completed
-- ✅ STD-003 Canonical Terminology Standard completed
-- ✅ Meta Layer Consistency Review completed with PASS WITH OBSERVATIONS
+## 4. Evidence-Supported Completed Work
 
-## Phase 2 — Engine Foundation
+### 4.1 Foundation and Architecture Evidence
 
-Phase 2 Engine Foundation RFC drafting and certification-readiness review are complete.
+- A.0 Framework Audit completed.
+- A.1 Constitution drafted as Framework Core architecture; not promoted by this status record.
+- Meta and Standards foundation work completed through repository evidence.
+- Runtime Architecture RFC drafted.
+- Engine Platform RFC family drafted.
+- Engine Foundation RFC series and review-readiness work completed; this does not certify, approve, promote, canonicalize, or authorize implementation.
 
-- ✅ Context Engine RFC completed
-- ✅ Knowledge Engine RFC completed
-- ✅ Planning Engine RFC completed
-- ✅ Decision Engine RFC completed
-- ✅ Execution Engine RFC completed
-- ✅ Validation Engine RFC completed
-- ✅ Review Engine RFC completed
-- ✅ Certification Engine RFC completed
-- ✅ Memory Engine RFC completed
-- ✅ Governance Engine RFC completed
-- ✅ Workflow Engine RFC completed
-- ✅ Registry Engine RFC completed
-- ✅ Engine RFC Inventory & Compliance Review completed
-- ✅ Engine Architecture Consistency Review completed
-- ✅ Engine RFC Certification Review completed with PASS WITH OBSERVATIONS
+### 4.2 Self-Hosting / Target Repository Evidence
 
-Remaining Phase 2 closure work:
+- A.2 AI-DOS / Target Repository Operational Boundary completed as draft architecture; not promoted to canonical status.
+- TargetRepositoryResolution System extension completed.
+- System Layer re-frozen at the amended baseline.
+- Repository Rationalization Audit Revision 1 completed.
+- TARGET-PATH-002 non-frozen normalization completed.
 
-- ⏳ Canonical Review
-- ⏳ Editorial Normalization
-- ⏳ Human Governance Approval
+### 4.3 Normalization Evidence
 
----
+- Template Library normalization completed.
+- Runtime RFC normalization completed.
+- Non-frozen target-path normalization completed.
 
-# Frozen Areas
+## 5. Active Queue
 
-The following work is intentionally frozen until explicitly activated by the roadmap:
+1. Self-hosting roadmap, DevelopmentPhases, and ProjectStatus realignment.
+2. Remaining repository rationalization and physical cleanup.
+3. Repository freeze.
+4. Axis Suite Target Repository preparation.
+5. Axis Suite pilot.
+6. Evidence-driven Framework improvements after the pilot.
 
-- Legacy Migration
-- RC2 relocation
-- AI Operational Layer alignment
-- Platform Adapters
-- Multi-Agent Runtime
-- Swarm Runtime
+## 6. Explicit Non-Completions
 
----
+- Repository Freeze is not complete.
+- Axis Suite preparation has not started.
+- Axis Suite pilot has not started or completed.
+- Draft architecture has not been promoted to canonical status by this ProjectStatus.
+- Runtime, Engine, System Layer, Operational Core, Standards, commands, workflows, and templates are not redefined by this ProjectStatus.
 
-# Rules for Future Work
+## 7. Frozen Areas
 
-Every architectural task shall:
+The following work remains frozen until explicitly activated by Human Governance and reflected through authorized operational-state handling:
 
-1. Read `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`.
-2. Read `docs/DevelopmentPhases/ProjectStatus.md`.
-3. Continue only the currently active Phase and Stage.
-4. Never skip roadmap order.
-5. Never modify frozen areas.
-6. Never move Legacy or RC2 materials before Phase 12.
-7. Never begin a future phase without satisfying the current Phase Exit Criteria and receiving Human Governance approval where required.
-8. Treat M.0, M.1, STD-003, and STD-010 as mandatory inputs for all Engine RFC work.
-9. Ensure every Engine RFC consumes the Meta Foundation and never creates competing root semantics, artifact families, terminology, or metadata rules.
-10. Do not treat Engine Foundation completion as certification, canonical promotion, implementation approval, Runtime activation, Agent Runtime activation, or Swarm activation.
+- Legacy migration beyond authorized repository rationalization / cleanup scope.
+- RC2 relocation beyond authorized cleanup scope.
+- AI Operational Layer redesign.
+- Platform Adapters.
+- Multi-Agent Runtime.
+- Swarm Runtime.
+- Axis Suite implementation and pilot execution.
 
----
+## 8. Rules for Future Work
 
-# Status Update Policy
+Every task shall:
+
+1. Read `AGENTS.md` and the required authority set.
+2. Read `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`.
+3. Read `docs/DevelopmentPhases/ProjectStatus.md`.
+4. Continue only the currently active phase and stage unless Human Governance explicitly narrows or changes scope.
+5. Never skip roadmap order.
+6. Never modify frozen areas without explicit authorization.
+7. Never move legacy, RC2, System Layer, Runtime, Engine, Template Library, Operational Core, command, or workflow files unless the task explicitly authorizes that scope.
+8. Never treat completed draft architecture as certification, canonical promotion, implementation approval, Runtime activation, Agent Runtime activation, Swarm activation, or Axis Suite activation.
+
+## 9. Status Update Policy
 
 ProjectStatus updates are allowed only when one of the following is true:
 
-1. A milestone, stage, phase, review, or certification has completed.
-2. Human governance explicitly requests a status update.
-3. The active task is a ProjectStatus / ProjectStateUpdater task.
+1. Human Governance explicitly requests a ProjectStatus update.
+2. The active task is a ProjectStatus / ProjectStateUpdater task.
+3. A milestone, stage, phase, review, certification, or evidence-supported operational-state change has completed and the task explicitly authorizes recording it.
 
-Codex or any AI agent shall not update ProjectStatus automatically during ordinary documentation, RFC, review, or implementation work unless the command explicitly authorizes it.
+AI agents shall not update ProjectStatus automatically during ordinary documentation, RFC, review, audit, or implementation work.
 
-Recommended default:
+## 10. Decision Log
 
-- Completion reports may recommend a ProjectStatus update.
-- Human confirms or issues a dedicated ProjectStatus update command.
-- Then the status file is updated.
-
----
-
-# Decision Log
-
-## Architectural Decisions
-
-- Engine-first Architecture adopted.
-- Engine Platform Foundation completed.
-- STD-010 adopted as the canonical Document Metadata Standard.
-- Core document metadata normalized.
-- M.0 established as the canonical Framework semantic model.
-- M.1 established as the canonical Artifact specialization model.
-- STD-003 established as the canonical terminology standard.
-- Meta Layer Consistency Review passed with observations.
-- Phase 1 — Meta Foundation closed after review acceptance.
-- Phase 2 — Engine Foundation begins with Context Engine RFC.
-- Phase 2 — Engine Foundation RFC series completed.
-- Engine RFC Certification Review completed with PASS WITH OBSERVATIONS.
-- Engine Foundation recorded as architecturally complete, internally consistent, governance compliant, and ready for Canonical Review.
-- Legacy migration postponed until Framework stabilization.
-- AI Operational Layer deferred until Engine Platform and Engine Foundation readiness.
-- Implementation remains unapproved until explicitly authorized by Human Governance.
-
----
-
-# Success Indicator
-
-The project is considered ready to proceed to **Canonical Review for the Phase 2 Engine Foundation** when:
-
-- The Engine Foundation RFC series remains complete from A.5.0 through A.5.12.
-- Engine RFC Certification Review records PASS WITH OBSERVATIONS.
-- ProjectStatus records remaining Canonical Review, Editorial Normalization, and Human Governance Approval without certifying, canonicalizing, promoting, or activating implementation.
+- Engine-first architecture adopted in earlier roadmap work.
+- STD-010 adopted as the document metadata standard candidate.
+- M.0 and M.1 established as Meta Foundation candidates.
+- STD-003 established as terminology standard candidate.
+- Phase 2 Engine Foundation RFC series completed as draft / review-ready work.
+- AI-DOS / Target Repository operating boundary drafted.
+- TargetRepositoryResolution added to the System Layer.
+- System Layer re-frozen at the amended baseline.
+- Repository Rationalization Audit Revision 1 completed.
+- TARGET-PATH-002 non-frozen normalization completed.
+- Self-hosting project-governance realignment set as current work.
