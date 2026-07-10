@@ -22,7 +22,7 @@
 | Out of Scope | Constitutional redefinition, ProjectStatus replacement, roadmap replacement, standards creation, Runtime RFC creation, Engine RFC creation, AGENTS v1 activation, operational-layer refactor, legacy migration, implementation planning. |
 | Normative Authority | `AGENTS.md`; Human Governance; approved Framework Governance decisions. |
 | Normative References | `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`. |
-| Dependencies | `AGENTS.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; A.0; A.1; M.0; M.1; STD-000; STD-001; STD-002; STD-003; STD-010; A.3; A.4 through A.4.7; AGENTS-v1 draft; RC2 operational-layer documents. |
+| Dependencies | `AGENTS.md`; the ProjectStatus and DevelopmentPhases declared by the active Target Repository; A.0; A.1; M.0; M.1; STD-000; STD-001; STD-002; STD-003; STD-010; A.3; A.4 through A.4.7; AGENTS-v1 draft; RC2 operational-layer documents. |
 | Consumes | Authority, lifecycle, taxonomy, terminology, metadata, runtime, engine, agent, and operational-layer documents. |
 | Produces | Governance atlas, repository navigation index, authority matrix, ownership matrix, classification matrix, AI consumption guide, governance quality checklist. |
 | Related Specifications | GovernanceModel, AIFramework, AIOrchestrator, AgentSystemPrompt, Framework Governance, ProjectStatus, Development Phases. |
@@ -41,8 +41,8 @@ Core conclusions:
 
 - Human Governance is final.
 - `AGENTS.md` is the repository bootloader and bootstrap authority.
-- `docs/DevelopmentPhases/ProjectStatus.md` is operational state, not architecture.
-- `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` is strategic roadmap, not live status.
+- The ProjectStatus declared by the active Target Repository (`<PROJECT_STATUS_PATH>`) is operational state, not architecture. For Forge AI self-hosting, `<PROJECT_STATUS_PATH>` resolves to `docs/DevelopmentPhases/ProjectStatus.md`.
+- The DevelopmentPhases declared by the active Target Repository (`<DEVELOPMENT_PHASES_PATH>`) is strategic roadmap, not live status. For Forge AI self-hosting, `<DEVELOPMENT_PHASES_PATH>` resolves to `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`.
 - Lower layers consume higher layers and shall never redefine them.
 - AI may propose, classify, validate, and recommend.
 - AI shall never approve, certify, promote, or override Human Governance.
@@ -182,8 +182,9 @@ A constitutional conflict is never resolved by implementation convenience. It es
 
 Project governance is split between strategic roadmap and live status:
 
-- `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` is the strategic roadmap.
-- `docs/DevelopmentPhases/ProjectStatus.md` is the live operational status.
+- The DevelopmentPhases declared by the active Target Repository (`<DEVELOPMENT_PHASES_PATH>`) is the strategic roadmap.
+- The ProjectStatus declared by the active Target Repository (`<PROJECT_STATUS_PATH>`) is the live operational status.
+- For Forge AI self-hosting, these resolve to `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` and `docs/DevelopmentPhases/ProjectStatus.md`.
 
 ProjectStatus is not architecture and may not promote documents, redefine semantics, or supersede standards. It records current phase, completed items, next queue, frozen areas, status-update policy, decision log, and success indicators.
 
@@ -308,8 +309,8 @@ This atlas is intentionally shown as a mapping artifact rather than as a replace
 | Document | Authority Domain | Authority Type | May Redefine | May Not Redefine |
 | --- | --- | --- | --- | --- |
 | `AGENTS.md` | Repository bootstrap and constitutional entry | Bootstrap authority | Boot rules by explicit amendment | Human Governance |
-| `docs/DevelopmentPhases/ProjectStatus.md` | Live operational state | State authority | Current status facts | Architecture, standards, promotion |
-| `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` | Strategic roadmap | Planning authority | Roadmap sequence by approval | Live status, architecture |
+| Active Target Repository ProjectStatus (`<PROJECT_STATUS_PATH>`) | Live operational state | State authority | Current status facts | Architecture, standards, promotion |
+| Active Target Repository DevelopmentPhases (`<DEVELOPMENT_PHASES_PATH>`) | Strategic roadmap | Planning authority | Roadmap sequence by approval | Live status, architecture |
 | A.0 Framework Audit | Audit findings | Evidence / assessment | Nothing normative by itself | Constitution, meta, standards |
 | A.1 Constitution | Constitutional principles | Constitutional authority | Constitutional principles by approval | Human Governance |
 | M.0 | Framework semantic model | Semantic authority | Framework semantic model | Constitution, metadata, runtime |
@@ -746,8 +747,8 @@ Traceability prevents implementation, AI output, or operational convenience from
 | --- | --- | --- |
 | Bootstrap | `AGENTS.md` | Start here for repository rules. |
 | Governance atlas | `docs/AI/GOVERNANCE.md` | Navigate authority and governance. |
-| Live status | `docs/DevelopmentPhases/ProjectStatus.md` | Determine active state. |
-| Roadmap | `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` | Determine strategic sequence. |
+| Live status | Active Target Repository ProjectStatus (`<PROJECT_STATUS_PATH>`) | Determine active state. |
+| Roadmap | Active Target Repository DevelopmentPhases (`<DEVELOPMENT_PHASES_PATH>`) | Determine strategic sequence. |
 | Architecture | `docs/AI/Architecture/` | Constitution, audit, standards, agents. |
 | Meta | `docs/AI/Meta/` | Semantic and artifact models. |
 | Runtime | `docs/AI/Runtime/` | Runtime and engine RFCs. |
@@ -762,8 +763,8 @@ Traceability prevents implementation, AI output, or operational convenience from
 
 1. `AGENTS.md`
 2. `docs/AI/GOVERNANCE.md` when present
-3. `docs/DevelopmentPhases/ProjectStatus.md`
-4. `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`
+3. Active Target Repository ProjectStatus (`<PROJECT_STATUS_PATH>`)
+4. Active Target Repository DevelopmentPhases (`<DEVELOPMENT_PHASES_PATH>`)
 5. A.0 through A.1
 6. M.0 and M.1
 7. STD-000, STD-001, STD-002, STD-003, STD-010

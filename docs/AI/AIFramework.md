@@ -23,7 +23,7 @@
 | Traceability ID | `FORGE-AI.V2.OP-002` |
 | Scope | Defines the stable Forge AI v2 Operational Core entry point, authority chain, boot sequence, operating model, operational responsibilities, and Runtime / Engine interaction boundaries for AI-assisted execution. |
 | Out of Scope | Governance redesign, Runtime RFC redesign, Engine RFC redesign, ProjectStatus update, file relocation, operational implementation, platform adapter activation, multi-agent runtime activation, swarm runtime activation, certification, and canonical promotion. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/FrameworkGovernance.md`; the ProjectStatus and DevelopmentPhases declared by the active Target Repository |
 | Normative References | `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md`; `docs/AI/Operational/Operational-Core-Replacement-Matrix.md` |
 | Dependencies | Governance Core; Meta Foundation; Standards Foundation; Runtime Architecture; Engine Platform; Engine Foundation RFC family; Operational Core replacement plan; active ProjectStatus and DevelopmentPhases roadmap. |
 | Consumes | Human task instruction, repository boot sequence, governance navigation, governance decision policy, operational state, roadmap sequence, constitutional principles, meta models, terminology, metadata requirements, Runtime Architecture, Engine Architecture, and Engine Specialization template. |
@@ -98,9 +98,9 @@ docs/AI/GOVERNANCE.md Governance Atlas
     ↓
 docs/FrameworkGovernance.md governance decision policy when applicable
     ↓
-docs/DevelopmentPhases/ProjectStatus.md operational state
+<PROJECT_STATUS_PATH> operational state declared by the active Target Repository
     ↓
-docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md roadmap sequence
+<DEVELOPMENT_PHASES_PATH> roadmap sequence declared by the active Target Repository
     ↓
 Constitution / Meta / Standards
     ↓
@@ -132,9 +132,9 @@ Every AI-assisted task starts with this sequence unless Human Governance explici
         ↓
 2. Read docs/AI/GOVERNANCE.md.
         ↓
-3. Read docs/DevelopmentPhases/ProjectStatus.md.
+3. Read the ProjectStatus declared by the active Target Repository (`<PROJECT_STATUS_PATH>`).
         ↓
-4. Read docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md.
+4. Read the DevelopmentPhases declared by the active Target Repository (`<DEVELOPMENT_PHASES_PATH>`).
         ↓
 5. Identify current phase, stage, objective, next queue, and frozen areas.
         ↓

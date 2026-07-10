@@ -24,7 +24,7 @@
 | Scope | Governance policy for principles, lifecycle, decision priority, ownership, review, validation, certification, canonical review, approval, promotion, change control, conflict resolution, exceptions, metrics, AI execution, and escalation decisions. |
 | Out of Scope | Repository governance navigation, authority matrices, document taxonomy, ProjectStatus replacement, roadmap replacement, constitutional redefinition, standards redefinition, Runtime redesign, Engine redesign, Engine RFC work, implementation planning, operational-layer refactor, legacy migration, and frozen-area activation. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/Architecture/A.1-Constitution.md` when applicable. |
-| Normative References | `docs/AI/GOVERNANCE.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`. |
+| Normative References | `docs/AI/GOVERNANCE.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; the ProjectStatus and DevelopmentPhases declared by the active Target Repository. |
 | Dependencies | Governance Atlas v2 navigation; repository boot sequence; current operational state; strategic roadmap; constitutional principles; applicable approved standards; applicable approved architecture. |
 | Consumes | Governance Atlas routing, ProjectStatus operational state, Development Phases roadmap, constitutional constraints, standards requirements, and Human Governance instructions. |
 | Produces | Governance policy, decision lifecycle rules, decision priority rules, ownership rules, approval gates, promotion policy, decision record policy, conflict-resolution policy, exception policy, governance metrics, AI execution rules, and escalation policy. |
@@ -358,7 +358,7 @@ Classify governance-relevant changes before execution:
 
 ## 14. ProjectStatus Policy
 
-`docs/DevelopmentPhases/ProjectStatus.md` is the operational source of truth for current phase, current stage, completed work, next queue, frozen areas, and status update policy.
+The ProjectStatus declared by the active Target Repository (`<PROJECT_STATUS_PATH>`) is the operational source of truth for current phase, current stage, completed work, next queue, frozen areas, and status update policy.
 
 Rules:
 

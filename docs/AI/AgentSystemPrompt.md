@@ -23,7 +23,7 @@
 | Traceability ID | `FORGE-AI.V2.OP-004` |
 | Scope | Defines executable Forge AI v2 behavior rules for AI coding assistants that consume repository authority, classify tasks, assemble context, execute within scope, validate outputs, report blockers, and produce completion evidence. |
 | Out of Scope | Repository bootloader authority, Governance Atlas ownership, Framework Governance decision policy, ProjectStatus updates, roadmap ownership, Runtime redesign, Engine redesign, Engine RFC creation, command implementation, workflow implementation, template modification, certification, canonical promotion, and implementation activation. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/FrameworkGovernance.md`; the ProjectStatus and DevelopmentPhases declared by the active Target Repository |
 | Normative References | `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/Templates/README.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md`; `docs/AI/Operational/Operational-Core-Replacement-Matrix.md` |
 | Dependencies | Governance Core; Meta Foundation; Standards Foundation; Runtime Architecture; Engine Platform; Engine Foundation RFC family; Operational Core replacement plan; active ProjectStatus and DevelopmentPhases roadmap. |
 | Consumes | Human task instruction, repository boot sequence, governance navigation, governance decision policy, operational state, roadmap sequence, constitutional principles, meta models, terminology, metadata requirements, Runtime Architecture, Engine Architecture, Engine Specialization template, AI Framework entry rules, AI Orchestrator routing rules, template category map, commands, workflows, validation artifacts, and task-specific authorities. |
@@ -104,9 +104,9 @@ docs/AI/GOVERNANCE.md Governance Atlas
     ↓
 docs/FrameworkGovernance.md governance decision policy when applicable
     ↓
-docs/DevelopmentPhases/ProjectStatus.md operational state
+<PROJECT_STATUS_PATH> operational state declared by the active Target Repository
     ↓
-docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md roadmap sequence
+<DEVELOPMENT_PHASES_PATH> roadmap sequence declared by the active Target Repository
     ↓
 docs/AI/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md strategic program structure when applicable
     ↓
@@ -216,8 +216,8 @@ Before execution, agents shall perform the repository boot behavior required by 
 
 1. Read `AGENTS.md`.
 2. Read `docs/AI/GOVERNANCE.md`.
-3. Read `docs/DevelopmentPhases/ProjectStatus.md`.
-4. Read `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`.
+3. Read the ProjectStatus declared by the active Target Repository (`<PROJECT_STATUS_PATH>`).
+4. Read the DevelopmentPhases declared by the active Target Repository (`<DEVELOPMENT_PHASES_PATH>`).
 5. Identify current phase, stage, objective, next queue, and frozen areas.
 6. Classify the task type.
 7. Read `docs/FrameworkGovernance.md` when governance decision policy is relevant or explicitly requested.
@@ -334,7 +334,7 @@ When work affects operational status, agents may recommend the exact ProjectStat
 
 ## 14. ProjectStatus Update Boundaries
 
-`docs/DevelopmentPhases/ProjectStatus.md` is the operational source of truth for current phase, current stage, current objective, completed work, next queue, frozen areas, and status-update policy.
+The ProjectStatus declared by the active Target Repository is the operational source of truth for current phase, current stage, current objective, completed work, next queue, frozen areas, and status-update policy.
 
 Agents shall not modify ProjectStatus during ordinary documentation, operational refactor, review, audit, or implementation work unless one of these conditions is met:
 

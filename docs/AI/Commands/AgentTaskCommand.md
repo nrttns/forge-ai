@@ -23,7 +23,7 @@
 | Traceability ID | `FORGE-AI.V2.OP-005` |
 | Scope | Defines task execution behavior for task-oriented AI agents. |
 | Out of Scope | AGENTS.md, AIFramework, AIOrchestrator, AgentSystemPrompt, governance, ProjectStatus authority, Runtime, Engine RFCs, and templates. |
-| Normative Authority | `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/FrameworkGovernance.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
+| Normative Authority | `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/FrameworkGovernance.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; the ProjectStatus and DevelopmentPhases declared by the active Target Repository |
 | Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/README.md`; `docs/AI/Operational/Operational-Core-Replacement-Matrix.md` |
 | Dependencies | v2 Operational Core; active task instruction; current roadmap and operational state. |
 | Consumes | Human task instruction, authority documents, current ProjectStatus state, roadmap state, applicable templates, validation evidence. |
@@ -53,8 +53,8 @@ This document defines task execution behavior. It consumes the v2 Operational Co
 - Orchestration authority owned by `docs/AI/AIOrchestrator.md`.
 - Agent prompt policy owned by `docs/AI/AgentSystemPrompt.md`.
 - Governance decision policy owned by `docs/FrameworkGovernance.md` and governance navigation owned by `docs/AI/GOVERNANCE.md`.
-- Operational state owned by `docs/DevelopmentPhases/ProjectStatus.md`.
-- Roadmap sequence owned by `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`.
+- Operational state owned by the ProjectStatus declared by the active Target Repository (`<PROJECT_STATUS_PATH>`).
+- Roadmap sequence owned by the DevelopmentPhases declared by the active Target Repository (`<DEVELOPMENT_PHASES_PATH>`).
 - Runtime, Engine RFCs, or template content.
 - The authority to own workflow sequencing or routing decisions.
 
@@ -67,8 +67,8 @@ This document defines task execution behavior. It consumes the v2 Operational Co
 - `docs/AI/AIFramework.md`.
 - `docs/AI/AIOrchestrator.md`.
 - `docs/AI/AgentSystemPrompt.md`.
-- `docs/DevelopmentPhases/ProjectStatus.md`.
-- `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`.
+- the ProjectStatus declared by the active Target Repository (`<PROJECT_STATUS_PATH>`).
+- the DevelopmentPhases declared by the active Target Repository (`<DEVELOPMENT_PHASES_PATH>`).
 - Applicable task-specific authority documents and templates.
 
 ## 5. Outputs
@@ -85,7 +85,7 @@ This document defines task execution behavior. It consumes the v2 Operational Co
 - Do not create parallel replacement files.
 - Do not move, delete, or rename files unless explicitly authorized.
 - Do not modify templates unless explicitly authorized.
-- Do not update `docs/DevelopmentPhases/ProjectStatus.md` unless explicitly authorized.
+- Do not update the ProjectStatus declared by the active Target Repository (`<PROJECT_STATUS_PATH>`) unless explicitly authorized.
 
 ## 7. Validation Rules
 
