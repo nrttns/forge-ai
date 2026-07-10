@@ -43,9 +43,11 @@ This README is the Forge AI v2 System Layer index and navigation map.
 The System Layer defines the tool-facing cognitive procedure for AI agents:
 
 ```text
-Authority
+Target Repository Resolution
     ↓
 Boot
+    ↓
+Authority
     ↓
 Source of Truth
     ↓
@@ -131,8 +133,9 @@ The AI System Operating Layer README does not own:
 The System Layer consists of exactly these procedure documents:
 
 ```text
-docs/AI/System/AuthorityModel.md
+docs/AI/System/TargetRepositoryResolution.md
 docs/AI/System/BootSequence.md
+docs/AI/System/AuthorityModel.md
 docs/AI/System/SourceOfTruth.md
 docs/AI/System/ContextAssembly.md
 docs/AI/System/DecisionModel.md
@@ -147,8 +150,9 @@ This README is the navigation index for those documents. It is not a substitute 
 
 | Procedure Document | Responsibility Summary |
 |:---|:---|
-| `docs/AI/System/AuthorityModel.md` | Resolves authority and conflict handling. |
+| `docs/AI/System/TargetRepositoryResolution.md` | Establishes the active Target Repository and resolves project-resource declarations before boot. |
 | `docs/AI/System/BootSequence.md` | Defines repository boot order. |
+| `docs/AI/System/AuthorityModel.md` | Resolves authority and conflict handling. |
 | `docs/AI/System/SourceOfTruth.md` | Identifies canonical source per domain. |
 | `docs/AI/System/ContextAssembly.md` | Defines bounded task context. |
 | `docs/AI/System/DecisionModel.md` | Selects safe operational outcome. |
@@ -163,9 +167,11 @@ Agents should understand the System Layer flow as:
 ```text
 Human Task
     ↓
-docs/AI/System/AuthorityModel.md
+docs/AI/System/TargetRepositoryResolution.md
     ↓
 docs/AI/System/BootSequence.md
+    ↓
+docs/AI/System/AuthorityModel.md
     ↓
 docs/AI/System/SourceOfTruth.md
     ↓
@@ -215,7 +221,7 @@ Agents shall:
 
 This README is complete when:
 
-- all six System procedure documents are listed;
+- all seven System procedure documents are listed;
 - each responsibility is clear;
 - no obsolete authority remains;
 - this README does not redefine procedure documents;
