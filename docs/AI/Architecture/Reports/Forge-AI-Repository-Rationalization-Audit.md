@@ -34,6 +34,13 @@
 
 ---
 
+## Revision History
+
+| Revision | Date | Amendment | Summary |
+|:---|:---|:---|:---|
+| Original | 2026-07-10 | Repository Rationalization Audit | Established the original repository rationalization audit baseline before formal Target Repository operating-model clarification. |
+| Revision 1 | 2026-07-10 | Target Repository Awareness Amendment | Amends the audit to distinguish Forge AI self-hosting from external Target Repository operation without replacing the audit, re-inventorying the repository, or creating a new disposition matrix from scratch. |
+
 ## 1. Executive Summary
 
 The repository currently contains parallel systems. The current repository bootloader, Governance Atlas, Framework Governance, Runtime RFC family, Template Library, System Layer, and v2 Operational Core coexist with RC2 operational, specification, lifecycle, validation, certification, testing, and project-template documents that still present themselves as active in older navigation chains.
@@ -45,6 +52,17 @@ Invalid Forge AI path universalization exists. The scan found 404 explicit Proje
 The repository can proceed to cleanup batches, but not as a single broad deletion. The audit verdict is **READY FOR CLEANUP WITH GOVERNANCE BLOCKERS** because frozen System Layer, Template Library, and AGENTS v2 Core defects require controlled Human Governance decisions before modification.
 
 No frozen-layer blocker requires immediate content editing in this audit. Frozen families remained unchanged. The blockers are disposition and unfreeze decisions for future cleanup batches, not defects introduced here.
+
+
+### 1.1 Executive Summary Addendum — Revision 1 Target Repository Awareness Amendment
+
+Revision 1 preserves the original audit and all valid findings. It amends only the findings, disposition assumptions, cleanup sequencing, and validation expectations affected by the later Target Repository operating model recorded in A.2 Operational Boundary, Target Repository Resolution, System Layer Freeze, and Target Project Path Resolution.
+
+The original audit correctly identified invalid Forge AI path universalization as a repository-rationalization concern. Revision 1 narrows that finding: Forge-AI-specific paths are not inherently invalid. They are valid when Forge AI is self-hosting as the active Target Repository, invalid when embedded as universal requirements in reusable Framework or operational documents, and historical when retained as evidence of prior repository state.
+
+The revised cleanup posture is therefore **READY FOR TARGET-PATH NORMALIZATION BEFORE GENERAL CLEANUP**. Cleanup batches should not remove or rewrite Forge AI self-hosting paths merely because they are Forge-specific. They should first normalize reusable Framework, Operational Core, Command, Workflow, and Template language so target-project paths are resolved through the active Target Repository declaration.
+
+Affected findings count: **14 disposition rows / families** are amended by Revision 1: D-002, D-005, D-006, D-007, D-009, D-010, D-011, D-012, D-015, D-021, D-038, D-039, D-042, and D-045. Unaffected findings remain governed by the original audit.
 
 ## 2. Audit Purpose
 
@@ -626,6 +644,106 @@ Axis Suite readiness improves when:
 
 Without cleanup, Axis Suite would inherit stale Forge AI path assumptions and parallel RC2 operational authorities.
 
+
+## 32A. Revision 1 — Target Repository Awareness Amendment
+
+### 32A.1 Architectural Background
+
+The original Repository Rationalization Audit was completed before Forge AI formally distinguished Framework truth, target-project truth, Forge AI self-hosting, and external Target Repository operation. Revision 1 incorporates the later architectural decisions from A.2 Operational Boundary, Target Repository Resolution, System Layer Freeze, and Target Project Path Resolution.
+
+This amendment does not replace the original audit, does not perform a new repository inventory, and does not create a new disposition matrix from scratch. It revises only findings whose cleanup decision changes because Forge AI can now be either the Framework provider operating on itself or the Framework provider operating on another project repository.
+
+### 32A.2 Target Repository Operating Model
+
+Forge AI may operate in two valid modes:
+
+1. **Forge AI Self-Hosting** — the active Target Repository is the Forge AI repository. In this mode, `docs/DevelopmentPhases/ProjectStatus.md`, `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`, Forge AI architecture paths, and Forge AI validation rules are valid target-project resources.
+2. **External Target Repository** — the active Target Repository is Axis Suite or another project repository. In this mode, target-project state, roadmap, architecture, source roots, validation commands, and protected areas must be declared by the external repository, normally through that repository's root `AGENTS.md`, and resolved relative to that external root.
+
+The audit must therefore distinguish a Forge AI physical path used as a Forge AI self-hosting fact from the same path used as a universal Framework requirement.
+
+### 32A.3 Revised Classification Rules
+
+| Classification | Rule | Cleanup Meaning |
+|:---|:---|:---|
+| `VALID_FORGE_SELF_HOSTING` | Forge-AI-specific project paths that are correct only when the Forge AI repository is the active Target Repository. | Keep or label as self-hosting; do not remove solely because the path is Forge-specific. |
+| `INVALID_GENERAL_FRAMEWORK_HARDCODE` | Forge-AI-specific project paths embedded in reusable Framework, Operational Core, Command, Workflow, Template, or procedure language as though every target project used Forge AI paths. | Refactor to Target Repository declaration/resolution language. |
+| `TARGET_PROJECT_DECLARATION_REQUIRED` | Framework documents that should obtain project paths through the active Target Repository instead of declaring a Forge AI physical path as universal. | Replace universal physical-path requirements with logical target-resource declarations. |
+| `HISTORICAL_REFERENCE` | Historical evidence, audit evidence, migration records, or superseded reports that remain valid as evidence but not as current execution routing. | Preserve as evidence or archive; do not treat as active boot-chain authority. |
+| `FROZEN_DOCUMENT` | Documents requiring controlled Human Governance unfreeze before modification. | Do not edit in cleanup batches unless controlled unfreeze is explicitly authorized. |
+
+### 32A.4 Revised Disposition Rules
+
+1. Do not reclassify a Forge AI path as invalid when it is scoped to Forge AI self-hosting.
+2. Reclassify reusable Framework or operational language as `TARGET_PROJECT_DECLARATION_REQUIRED` when it should resolve project state through the active Target Repository.
+3. Preserve historical references as `HISTORICAL_REFERENCE` unless they are still loaded by an active boot/navigation chain.
+4. Preserve all frozen documents unchanged unless Human Governance authorizes controlled unfreeze.
+5. Execute target-path normalization before broad RC1/RC2 cleanup so later cleanup does not accidentally remove valid self-hosting evidence or preserve invalid universalization.
+
+### 32A.5 Required Amendment Analysis — Affected Findings
+
+| Finding | Original Classification / Decision | New Classification / Decision | Reason |
+|:---|:---|:---|:---|
+| D-002 `README.md` | REFACTOR for planning-path wording | `TARGET_PROJECT_DECLARATION_REQUIRED` for generic wording; `VALID_FORGE_SELF_HOSTING` for Forge AI examples | Public repository guidance may describe Forge AI self-hosting but must not universalize Forge AI planning paths for external targets. |
+| D-005 `docs/DevelopmentPhases/ProjectStatus.md` | KEEP live state | `VALID_FORGE_SELF_HOSTING` / KEEP | This path is correct when Forge AI is the Target Repository and must not be removed as a hardcode. |
+| D-006 `docs/ProjectStatus.md` | ARCHIVE | `HISTORICAL_REFERENCE` / ARCHIVE or REMOVE after references fixed | Legacy path evidence remains historical; it is not current target-project resolution. |
+| D-007 `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` | KEEP roadmap | `VALID_FORGE_SELF_HOSTING` / KEEP | This path is correct for Forge AI self-hosting and is not a universal external-target roadmap path. |
+| D-009 `docs/AI/README.md` | REFACTOR stale active navigation | `TARGET_PROJECT_DECLARATION_REQUIRED` / REFACTOR | Active read orders must distinguish Framework reading from target-project state resolution. |
+| D-010 `docs/AI/AIFramework.md` | REFACTOR path wording | `TARGET_PROJECT_DECLARATION_REQUIRED` / REFACTOR | Operational Core should consume the active Target Repository declaration for project state. |
+| D-011 `docs/AI/AIOrchestrator.md` | REFACTOR path wording | `TARGET_PROJECT_DECLARATION_REQUIRED` / REFACTOR | Orchestration must not impose Forge AI project-state paths on Axis Suite or other targets. |
+| D-012 `docs/AI/AgentSystemPrompt.md` | REFACTOR path wording | `TARGET_PROJECT_DECLARATION_REQUIRED` / REFACTOR | Agent-facing rules must load target truth from the active Target Repository. |
+| D-015 `docs/AI/System/*` path portability defects | BLOCKED BY HUMAN GOVERNANCE | `FROZEN_DOCUMENT` plus possible `TARGET_PROJECT_DECLARATION_REQUIRED` / controlled unfreeze only | System Layer is frozen; any path-resolution correction requires controlled unfreeze. |
+| D-021 `docs/AI/Templates/Project/` stale project refs | BLOCKED BY HUMAN GOVERNANCE | `FROZEN_DOCUMENT` plus possible `TARGET_PROJECT_DECLARATION_REQUIRED` / controlled unfreeze only | Project Template docs are frozen and may need target declaration wording, not direct execution now. |
+| D-038 `docs/AI/Commands/` | REFACTOR stale path assumptions | `TARGET_PROJECT_DECLARATION_REQUIRED` / REFACTOR | Commands should consume resolved target paths from the active Target Repository. |
+| D-039 `docs/AI/Workflows/` | REFACTOR stale path assumptions | `TARGET_PROJECT_DECLARATION_REQUIRED` / REFACTOR | Workflows should route ProjectStatus and DevelopmentPhases through target declarations. |
+| D-042 program roadmap | KEEP / REFACTOR | `VALID_FORGE_SELF_HOSTING` when scoped to Forge AI; `HISTORICAL_REFERENCE` where superseded | Roadmap content may remain valid as Forge AI planning context rather than external-target truth. |
+| D-045 prior reports | ARCHIVE / REMOVE | `HISTORICAL_REFERENCE` / ARCHIVE unless duplicated | Prior reports may retain evidence even when target-path assumptions are superseded. |
+
+### 32A.6 Decision Matrix Amendment
+
+| Original Decision | Revised Decision | Reason |
+|:---|:---|:---|
+| REMOVE Forge-AI-specific path evidence solely because it is Forge-specific | KEEP (Self Hosting) | Forge AI paths are valid when Forge AI is the active Target Repository. |
+| REFACTOR generic Framework path references | TARGET_PROJECT_DECLARATION_REQUIRED | Reusable Framework text must resolve project paths from the active target declaration. |
+| MERGE THEN REMOVE RC2 materials containing path history | KEEP or ARCHIVE as `HISTORICAL_REFERENCE` where unique | Historical evidence remains valid even if not active execution authority. |
+| BLOCKED BY HUMAN GOVERNANCE for frozen System/Templates edits | FROZEN_DOCUMENT with controlled-unfreeze prerequisite | Frozen documents cannot be edited by cleanup batches without explicit authorization. |
+| REPLACE Forge AI planning paths everywhere | REPLACE only invalid universalization; KEEP self-hosting paths | Blanket replacement would break Forge AI self-hosting. |
+
+### 32A.7 Cleanup Batch Impact
+
+| Original Batch | Status | Revision 1 Impact |
+|:---|:---|:---|
+| 1 — Obvious Temporary and Merged Artifacts | REQUIRES REVISION | No longer first. Execute only after Target Path Normalization so equivalence checks do not ignore target-repository wording. |
+| 2 — Broken Navigation and Stale References | REQUIRES REVISION | Split target-path normalization from general navigation cleanup; avoid removing valid self-hosting paths. |
+| 3 — RC1 Residues | UNCHANGED | Still valid after target-path normalization. |
+| 4 — RC2 Specification Residues | REQUIRES REVISION | Preserve unique target-path history as `HISTORICAL_REFERENCE`; do not merge/remove before target-path normalization. |
+| 5 — Parallel Operational Core | REQUIRES REVISION | Operational Core path wording should be normalized as part of the first target-path batch. |
+| 6 — Target-Project Path Normalization | REQUIRES REVISION | Promoted to first execution step and renamed Target Path Normalization; non-frozen changes precede controlled unfreeze. |
+| 7 — Duplicate Support and Evidence Artifacts | UNCHANGED | Still occurs after RC cleanup and archive-policy decisions. |
+| 8 — Final Reference Cleanup | UNCHANGED | Still follows disposition execution. |
+| 9 — Repository-Wide Integrity Validation | REQUIRES REVISION | Should occur before repository freeze and include target-path validation. |
+| 10 — Self-Hosting and Axis Suite Readiness Check | REQUIRES REVISION | Becomes the Axis Suite Pilot readiness gate after repository freeze. |
+
+### 32A.8 Validation Impact
+
+Validation for subsequent cleanup must verify both modes:
+
+1. Forge AI self-hosting still resolves Forge AI ProjectStatus and DevelopmentPhases correctly.
+2. External Target Repository operation does not inherit Forge AI physical planning paths as universal requirements.
+3. Frozen System Layer, Template Library, and AGENTS v2 Core documents remain unchanged unless controlled unfreeze is authorized.
+4. Historical references are labeled or scoped as evidence, not active execution routing.
+5. `git diff --name-status` for each batch matches the batch's authorized file set.
+
+### 32A.9 Next Execution Order
+
+The revised execution order after Revision 1 is:
+
+1. **Target Path Normalization** — non-frozen target-path wording first; preserve Forge AI self-hosting.
+2. **Controlled Unfreeze (when required)** — System Layer, Template Library, Project Templates, or AGENTS v2 Core only if Human Governance explicitly authorizes.
+3. **Cleanup Batches** — execute temporary-artifact, navigation, RC1/RC2, Operational Core, evidence, and reference cleanup in revised order after target-path assumptions are corrected.
+4. **Repository Freeze** — freeze the rationalized Forge AI repository after validation.
+5. **Axis Suite Pilot** — validate external Target Repository operation only after Forge AI self-hosting and target-resolution behavior are stable.
+
 ## 33. Audit Verdict
 
 **READY FOR CLEANUP WITH GOVERNANCE BLOCKERS**
@@ -634,11 +752,12 @@ The repository has sufficient evidence to begin ordered cleanup batches. Human G
 
 ## 34. Recommended First Cleanup Batch
 
-Begin with **Batch 1 — Obvious Temporary and Merged Artifacts**:
+Begin with **Target Path Normalization** under the follow-on task **FORGE-AI.V2.TARGET-PATH-002 — NON-FROZEN TARGET-PATH NORMALIZATION**.
 
-| File | Action | Prerequisite | Validation |
+| Step | Action | Prerequisite | Validation |
 |:---|:---|:---|:---|
-| `docs/AI/ai-margedmd.md` | Confirm generated content equivalence, then remove. | No active refs and no unique content. | Incoming-reference scan; content sample comparison; link scan. |
-| `docs/AI/templates_margedmd.md` | Confirm generated content equivalence, then remove. | No active refs and no unique content. | Incoming-reference scan; content sample comparison; link scan. |
+| 1 | Normalize non-frozen reusable Framework, Operational Core, Command, Workflow, README, and report wording that universalizes Forge AI planning paths. | Revision 1 amendment accepted as the active audit baseline. | Path search; self-hosting check; external Target Repository declaration check. |
+| 2 | Preserve Forge AI self-hosting paths where they are scoped to Forge AI as the active Target Repository. | No broad replacement of Forge AI paths. | Confirm `VALID_FORGE_SELF_HOSTING` references remain accurate. |
+| 3 | Identify any frozen System Layer, Template Library, Project Template, or AGENTS v2 Core changes that require controlled unfreeze, but do not execute them. | Human Governance controlled-unfreeze decision. | `git diff --name-status`; frozen-family diff check. |
 
-This batch is low-risk, does not touch frozen families, does not require architecture redesign, and immediately removes non-authoritative generated surface.
+The original Batch 1 temporary-artifact removal remains valid but is no longer the first execution step. It should run after target-path assumptions are normalized so later cleanup preserves both Forge AI self-hosting and external Target Repository operation.
