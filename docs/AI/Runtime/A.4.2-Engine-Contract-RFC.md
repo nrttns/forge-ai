@@ -13,38 +13,33 @@
 
 | Field | Value |
 |:---|:---|
-| **Identifier** | `FORGE-A-004.2` |
-| **Title** | A.4.2 — Engine Contract RFC |
-| **Version** | 0.1.1-enterprise |
-| **Status** | RFC / Draft |
-| **Canonical Status** | Non-canonical until reviewed, approved, and promoted through Framework Governance |
-| **Classification** | Engine Contract Architecture |
-| **Document Type** | Architecture RFC |
-| **Owner** | Framework Governance |
-| **Maintainers** | Framework Architecture Team |
-| **Review Authority** | Enterprise Documentation Standards Board |
-| **Approval Authority** | Human Governance / Framework Governance |
-| **Created** | 2026-07-07 |
-| **Last Updated** | 2026-07-07 |
-| **Lifecycle Phase** | Draft |
-| **Traceability ID** | FORGE-A-004.2 |
-| **Scope** | Engine Contract RFC documentation-only architecture |
-| **Out of Scope** | Implementation, runtime behavior changes, certification, and ProjectStatus updates |
-| **Normative Authority** | Human Governance; `AGENTS.md`; `docs/FrameworkGovernance.md` |
-| **Normative References** | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md` |
-| **Dependencies** | Governance authority, artifact identity, lifecycle governance, traceability model, and applicable upstream v3 architecture documents |
-| **Consumes** | A.1; M.0; M.1; STD-000; STD-001; STD-002; related runtime and engine RFC inputs |
-| **Produces** | Engine Contract RFC architecture model and downstream RFC inputs |
-| **Related Specifications** | A.3/A.4 engine RFC family; STD-000; STD-001; STD-002 |
-| **Supersedes** | None |
-| **Superseded By** | None |
-| **Promotion Requirements** | Framework Governance review, approval, traceability validation, metadata validation, and explicit promotion |
-| **Certification Status** | Not certified |
-| **Review Status** | Pending enterprise review |
-| **Approval Status** | Draft — not submitted for approval |
-| **Compliance Level** | STD-010 v1.0 — Full |
-| **Blocks** | Individual Engine RFCs dependent on Engine Contract boundary definitions |
-| **Blocked By** | A.3 Runtime Architecture; A.4 Engine Architecture; A.4.1 Engine Kernel; M.0 Framework Meta-Model |
+| Identifier | `FORGE-A-4-2` |
+| Title | A.4.2 — Engine Contract RFC |
+| Version | `0.2.0-draft` |
+| Status | Draft |
+| Canonical Status | Non-canonical until reviewed, approved, and explicitly promoted by Human Governance |
+| Classification | Engine Foundation Architecture |
+| Document Type | Engine Foundation RFC |
+| Owner | Framework Architecture Team |
+| Maintainers | Framework Architecture Team |
+| Review Authority | Framework Governance |
+| Approval Authority | Human Governance |
+| Created | 2026-07-07 |
+| Last Updated | 2026-07-10 |
+| Lifecycle Phase | Draft |
+| Traceability ID | `FORGE-AI.V2.RUNTIME.A-4-2` |
+| Scope | Defines the Engine Contract foundation responsibility only as a specialization of A.4 Engine Platform Architecture. |
+| Out of Scope | Runtime Architecture redefinition, Engine Platform redefinition, individual Engine Specialization redefinition, implementation, certification, freeze decisions, ProjectStatus updates, and DevelopmentPhases updates. |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/FrameworkGovernance.md` |
+| Normative References | `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/Standards/TPL-001-RFC-Template-Standard.md` |
+| Dependencies | A.3 Runtime Architecture; A.4 Engine Architecture; A.1 Constitution; M.0; M.1; STD-003; STD-010; TPL-000; TPL-001. |
+| Consumes | Runtime Architecture, Engine Platform Architecture, constitutional principles, meta-model semantics, artifact metadata rules, canonical terminology, RFC template rules, and Engine Foundation normalization instructions. |
+| Produces | Engine Contract foundation RFC, foundation boundary definitions, validation expectations, and downstream inputs for Engine Specialization RFCs. |
+| Related Specifications | `docs/AI/Runtime/README.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md` |
+| Supersedes | None |
+| Superseded By | None |
+| Promotion Requirements | STD-010 metadata validation, STD-003 terminology validation, TPL-001 RFC-structure validation, Runtime README navigation alignment, ownership-boundary validation, Framework Governance review, Human Governance approval, and explicit canonical promotion. |
+| Certification Status | Not certified |
 
 ---
 
@@ -867,3 +862,7 @@ This section identifies the key stakeholders affected by the Engine Contract RFC
 | [Section 11 — Artifact Model](#11-artifact-model) | [Section 12 — Validation Model](#12-validation-model) | Artifacts require validation; Validation Model specifies verification |
 | [Section 12 — Validation Model](#12-validation-model) | [Section 14 — Compatibility Rules](#14-compatibility-rules) | Validation verifies compatibility; Compatibility Rules define dimensions |
 | [Section 13 — Telemetry Model](#13-telemetry-model) | [Section 14 — Traceability Model](#14-traceability-model) | Telemetry provides operational evidence; Traceability provides audit lineage |
+
+## Family Normalization Notes
+
+This RFC participates in the Runtime RFC family normalization program. Its metadata, authority wording, lifecycle wording, certification wording, validation expectations, AI consumption boundaries, and relationship declarations are aligned to STD-010, STD-003, TPL-000, TPL-001, and the Runtime README navigation model. This normalization is editorial and governance-structural only; it does not redesign Runtime Architecture, Engine Platform Architecture, Engine Foundation responsibilities, or any Engine Specialization behavior.

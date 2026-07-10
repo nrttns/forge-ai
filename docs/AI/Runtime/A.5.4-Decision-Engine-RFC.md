@@ -19,37 +19,33 @@ This document defines the architecture of the Decision Engine within the approve
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-A-005.4` |
+| Identifier | `FORGE-A-5-4` |
 | Title | A.5.4 — Decision Engine RFC |
-| Version | `0.1.0-draft` |
+| Version | `0.2.0-draft` |
 | Status | Draft |
-| Canonical Status | Non-canonical until reviewed and approved |
-| Classification | Engine Architecture RFC |
-| Document Type | RFC |
+| Canonical Status | Non-canonical until reviewed, approved, and explicitly promoted by Human Governance |
+| Classification | Engine Specialization Architecture |
+| Document Type | Engine Specialization RFC |
 | Owner | Framework Architecture Team |
 | Maintainers | Framework Architecture Team |
-| Review Authority | Enterprise Documentation Standards Board |
-| Approval Authority | Human Governance / Framework Governance |
+| Review Authority | Framework Governance |
+| Approval Authority | Human Governance |
 | Created | 2026-07-08 |
-| Last Updated | 2026-07-08 |
+| Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.V4.PHASE-2.ENGINE-04` |
-| Scope | Architecture of the Decision Engine — the Engine responsible for plan evaluation, trade-off analysis, alternative ranking, decision artifact production, risk assessment, and decision lifecycle governance within the Forge AI v4 Engine Platform. |
-| Out of Scope | Source code, implementation, REST APIs, persistence mechanisms, database schema, Neo4j implementation, vector database configuration, caching infrastructure, LLM call orchestration, prompt engineering, model selection, agent runtime design, swarm runtime design, platform adapter specifications, and ProjectStatus updates. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/FrameworkGovernance.md` |
-| Normative References | `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md` |
-| Dependencies | Runtime Architecture (A.3); Engine Platform (A.4); Engine Kernel (A.4.1); Engine Contract (A.4.2); Engine Registry (A.4.3); Engine Lifecycle (A.4.4); Engine Communication (A.4.5); Engine State (A.4.6); Engine Capability (A.4.7); Metadata Standard (STD-010); Terminology Standard (STD-003); Engine Specialization RFC Template (A.5.0); Context Engine (A.5.1); Knowledge Engine (A.5.2); Planning Engine (A.5.3) |
-| Consumes | Document metadata rules; canonical terminology; framework and artifact meta-models; Runtime Architecture; Engine Platform architecture; Engine Kernel, Contract, Registry, Lifecycle, Communication, State, and Capability RFCs; A.5.0 Template section contract; A.5.1 Context Engine resolved context snapshots and lifecycle events; A.5.2 Knowledge Engine retrieval results, constraint entities, and risk knowledge; A.5.3 Planning Engine validated plans, plan alternatives, feasibility reports, and validation reports |
-| Produces | Decision Engine architecture specification; decision lifecycle model; plan evaluation contract; trade-off analysis rules; decision scoring model; risk assessment model; decision artifact structure; decision handoff contract; decision ownership definition |
-| Related Specifications | A.5.1 — Context Engine RFC; A.5.2 — Knowledge Engine RFC; A.5.3 — Planning Engine RFC; A.5.5 — Execution Engine RFC (future); A.5.6 — Validation Engine RFC (future); A.5.9 — Memory Engine RFC (future) |
+| Traceability ID | `FORGE-AI.V2.RUNTIME.A-5-4` |
+| Scope | Defines the Decision Engine specialization only, including its responsibilities, inputs, outputs, lifecycle participation, validation expectations, AI consumption rules, and handoff contract. |
+| Out of Scope | Runtime Architecture redefinition, Engine Platform redefinition, Engine Foundation redefinition, other Engine Specialization redefinition, implementation, certification, freeze decisions, ProjectStatus updates, and DevelopmentPhases updates. |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/FrameworkGovernance.md` |
+| Normative References | `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/Standards/TPL-001-RFC-Template-Standard.md` |
+| Dependencies | A.3 Runtime Architecture; A.4 Engine Architecture; A.4.1 through A.4.7 Engine Foundation RFCs; A.5.0 Engine Specialization RFC Template; STD-003; STD-010; TPL-000; TPL-001. |
+| Consumes | Runtime Architecture, Engine Platform Architecture, Engine Foundation RFCs, A.5.0 specialization template, canonical terminology, metadata rules, upstream Engine handoff outputs where applicable, and repository-normalization instructions. |
+| Produces | Decision Engine architecture specification, Decision Engine responsibility boundaries, inputs, outputs, validation expectations, AI consumption rules, and handoff contract. |
+| Related Specifications | `docs/AI/Runtime/README.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md` |
 | Supersedes | None |
 | Superseded By | None |
-| Blocks | A.5.5 — Execution Engine RFC (Decision Engine must be certified before Execution Engine enters review); A.5.6 — Validation Engine RFC (Decision Engine must be certified before Validation Engine enters review) |
-| Blocked By | A.5.0 — Engine Specialization RFC Template (template must be approved before Knowledge Engine enters review); A.5.1 — Context Engine RFC (Context Engine must be certified); A.5.2 — Knowledge Engine RFC (Knowledge Engine must be certified); A.5.3 — Planning Engine RFC (Planning Engine must be certified) |
-| Promotion Requirements | Framework Governance review, STD-010 metadata validation, STD-003 terminology validation, Engine Platform alignment review, no implementation-scope confirmation, A.4.7 capability domain mapping, Context Engine, Knowledge Engine, and Planning Engine alignment review, approval by Human Governance / Framework Governance, and explicit canonical promotion |
+| Promotion Requirements | STD-010 metadata validation, STD-003 terminology validation, TPL-001 RFC-structure validation, Runtime README navigation alignment, ownership-boundary validation, Framework Governance review, Human Governance approval, and explicit canonical promotion. |
 | Certification Status | Not certified |
-| Review Status | Not Reviewed |
-| Compliance Level | L1 Draft |
 
 ---
 
@@ -1159,7 +1155,7 @@ If any gate fails, handoff does not proceed. The decision remains in "evaluated"
 
 ---
 
-## Validation Checklist
+## 32. Validation Checklist
 
 ### STD-010 Metadata Validation
 
@@ -1167,8 +1163,8 @@ If any gate fails, handoff does not proceed. The decision remains in "evaluated"
 |:---|:---|
 | Metadata heading is exactly `## Document Metadata` | Pass |
 | Table shape is exactly `\| Field \| Value \|` with left-aligned columns | Pass |
-| All 25 mandatory STD-010 fields present | Pass |
-| Conditionally mandatory fields included (Blocks, Blocked By, Review Status, Compliance Level) | Pass |
+| All 27 mandatory STD-010 fields present | Pass |
+| Conditionally mandatory fields evaluated and included only when applicable | Pass |
 | Normative Authority does not include references, dependencies, consumed documents, or related documents | Pass |
 | Normative References, Dependencies, Consumes, Produces, Related Specifications are separate fields | Pass |
 | `Canonical Status` explicitly states non-canonical | Pass |
@@ -1205,3 +1201,13 @@ If any gate fails, handoff does not proceed. The decision remains in "evaluated"
 | All responsibilities map to at least one operation | Pass |
 | All lifecycle transitions produce events | Pass |
 | Cross-engine consumption contracts are explicit and typed | Pass |
+
+
+## 33. Completion Report
+
+Completion reporting shall identify metadata, terminology, ownership, authority, dependency, cross-reference, and validation changes without declaring certification, freeze, approval, or canonical promotion.
+
+
+## Family Normalization Notes
+
+This RFC participates in the Runtime RFC family normalization program. Its metadata, authority wording, lifecycle wording, certification wording, validation expectations, AI consumption boundaries, and relationship declarations are aligned to STD-010, STD-003, TPL-000, TPL-001, and the Runtime README navigation model. This normalization is editorial and governance-structural only; it does not redesign Runtime Architecture, Engine Platform Architecture, Engine Foundation responsibilities, or any Engine Specialization behavior.

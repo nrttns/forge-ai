@@ -19,35 +19,33 @@ This document defines the mandatory structure for every individual Engine RFC in
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-A-005.0` |
+| Identifier | `FORGE-A-5-0` |
 | Title | A.5.0 — Engine Specialization RFC Template |
-| Version | `3.1.0-draft` |
+| Version | `0.2.0-draft` |
 | Status | Draft |
-| Canonical Status | Non-canonical until reviewed and approved |
-| Classification | Engine Architecture RFC |
-| Document Type | RFC |
-| Owner | Framework Governance |
+| Canonical Status | Non-canonical until reviewed, approved, and explicitly promoted by Human Governance |
+| Classification | Engine Specialization RFC Template |
+| Document Type | RFC Template |
+| Owner | Framework Architecture Team |
 | Maintainers | Framework Architecture Team |
-| Review Authority | Enterprise Documentation Standards Board |
-| Approval Authority | Human Governance / Framework Governance |
+| Review Authority | Framework Governance |
+| Approval Authority | Human Governance |
 | Created | 2026-07-08 |
-| Last Updated | 2026-07-08 |
+| Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.V4.PHASE-2.ENGINE-00` |
-| Scope | Mandatory section structure and section-level content contract for Phase 2 individual Engine RFCs. |
-| Out of Scope | Implementation, source code, REST, APIs, persistence, database schema, Neo4j implementation, vector database, caching, LLM calls, prompt engineering, agent runtime, swarm runtime, platform adapters, certification execution, canonical promotion, and ProjectStatus updates. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/FrameworkGovernance.md` |
-| Normative References | `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md` |
-| Dependencies | Runtime Architecture (A.3); Engine Platform (A.4); Engine Kernel (A.4.1); Engine Contract (A.4.2); Engine Registry (A.4.3); Engine Lifecycle (A.4.4); Engine Communication (A.4.5); Engine State (A.4.6); Engine Capability (A.4.7); Metadata Standard (STD-010); Terminology Standard (STD-003) |
-| Consumes | Document metadata rules; canonical terminology; framework and artifact meta-models; Runtime Architecture; Engine Platform architecture; Engine Kernel, Contract, Registry, Lifecycle, Communication, State, and Capability RFCs; Phase 2 Engine specialization queue |
-| Produces | Engine Specialization RFC Template; Common Engine RFC section contract; Universal section contract model; Engine ownership section contract; Engine handoff section contract |
-| Related Specifications | A.5.1 — Context Engine RFC; future Phase 2 Engine RFCs for Knowledge, Planning, Decision, Execution, Validation, Review, Certification, Memory, Governance, Workflow, and Registry Engines |
+| Traceability ID | `FORGE-AI.V2.RUNTIME.A-5-0` |
+| Scope | Defines the Engine Specialization RFC contract, required section structure, validation checklist, and completion report expectations for A.5.x Engine Specialization RFCs. |
+| Out of Scope | Runtime Architecture redefinition, Engine Platform redefinition, individual Engine behavior definition, implementation, certification, freeze decisions, ProjectStatus updates, and DevelopmentPhases updates. |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/FrameworkGovernance.md` |
+| Normative References | `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/Standards/TPL-001-RFC-Template-Standard.md` |
+| Dependencies | A.3 Runtime Architecture; A.4 Engine Architecture; A.4.1 through A.4.7 Engine Foundation RFCs; STD-003; STD-010; TPL-000; TPL-001. |
+| Consumes | Runtime Architecture, Engine Platform Architecture, Engine Foundation RFCs, canonical terminology, metadata rules, template governance, and RFC template rules. |
+| Produces | Engine Specialization RFC template contract, section ordering rules, validation checklist, completion report structure, and AI consumption guidance for A.5.x RFCs. |
+| Related Specifications | `docs/AI/Runtime/README.md`; `docs/AI/Runtime/A.5.1-Context-Engine-RFC.md`; `docs/AI/Runtime/A.5.12-Registry-Engine-RFC.md` |
 | Supersedes | None |
 | Superseded By | None |
-| Promotion Requirements | Framework Governance review, STD-010 metadata validation, STD-003 terminology validation, Engine Platform alignment review, no implementation-scope confirmation, approval by Human Governance / Framework Governance, and explicit canonical promotion |
+| Promotion Requirements | STD-010 metadata validation, STD-003 terminology validation, TPL-001 RFC-structure validation, Runtime README navigation alignment, ownership-boundary validation, Framework Governance review, Human Governance approval, and explicit canonical promotion. |
 | Certification Status | Not certified |
-| Review Status | Not Reviewed |
-| Compliance Level | L1 Draft |
 
 ---
 
@@ -179,17 +177,17 @@ Every Engine RFC shall include a `## Document Metadata` section that complies wi
 
 | Field | Engine RFC Guidance |
 |:---|:---|
-| Identifier | Use `FORGE-A-005.X` pattern where X is the Engine sequence number. |
+| Identifier | Use `FORGE-A-5-X` pattern where X is the Engine sequence number. |
 | Title | Use `A.5.X — {Engine Name} RFC` pattern. |
-| Version | Use `0.1.0-draft` for initial drafts; follow STD-010 Section 4.6 version rules. |
+| Version | Use `0.2.0-draft` for normalized Runtime RFC family drafts; future new drafts may use the governed initial draft version assigned by Human Governance. |
 | Status | `Draft` until review is entered. |
-| Canonical Status | `Non-canonical until reviewed and approved` — never omit this. |
-| Classification | `Engine Architecture RFC` |
-| Document Type | `RFC` |
-| Owner | Named accountable party, not a vague group. |
+| Canonical Status | `Non-canonical until reviewed, approved, and explicitly promoted by Human Governance` — never omit this. |
+| Classification | `Engine Specialization Architecture` |
+| Document Type | `Engine Specialization RFC` |
+| Owner | `Framework Architecture Team` unless Human Governance assigns a more specific accountable owner. |
 | Maintainers | Team or individuals responsible for upkeep. |
-| Review Authority | `Enterprise Documentation Standards Board` or delegated body. |
-| Approval Authority | `Human Governance / Framework Governance`. |
+| Review Authority | `Framework Governance` unless Human Governance assigns a more specific review authority. |
+| Approval Authority | `Human Governance`. |
 | Created | `YYYY-MM-DD` format per STD-010 Section 4.2. |
 | Last Updated | `YYYY-MM-DD` format; update on material changes. |
 | Lifecycle Phase | Match Status field; `Draft` initially. |
@@ -500,3 +498,7 @@ Refactored the Engine Specialization RFC Template (A.5.0) from version 3.0.0-alp
 ### Recommended Next Step
 
 A.5.1 — Context Engine RFC, using this refactored template as the structural foundation.
+
+## Family Normalization Notes
+
+This RFC participates in the Runtime RFC family normalization program. Its metadata, authority wording, lifecycle wording, certification wording, validation expectations, AI consumption boundaries, and relationship declarations are aligned to STD-010, STD-003, TPL-000, TPL-001, and the Runtime README navigation model. This normalization is editorial and governance-structural only; it does not redesign Runtime Architecture, Engine Platform Architecture, Engine Foundation responsibilities, or any Engine Specialization behavior.

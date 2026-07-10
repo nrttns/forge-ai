@@ -7,35 +7,35 @@
 
 ## Document Metadata
 
-| Field                  | Value                                                                                                                                                                                                                           |
-|:-----------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Identifier             | `FORGE-A-003`                                                                                                                                                                                                                   |
-| Title                  | A.3 — Runtime Architecture RFC                                                                                                                                                                                                  |
-| Version                | `0.2.0-draft`                                                                                                                                                                                                                   |
-| Status                 | RFC / Draft                                                                                                                                                                                                                     |
-| Canonical Status       | Non-canonical until reviewed, approved, and promoted through Framework Governance                                                                                                                                               |
-| Classification         | Runtime Architecture                                                                                                                                                                                                            |
-| Document Type          | Runtime Architecture RFC                                                                                                                                                                                                        |
-| Owner                  | Framework Governance                                                                                                                                                                                                            |
-| Maintainers            | Framework Architecture Team                                                                                                                                                                                                     |
-| Review Authority       | Enterprise Documentation Standards Board                                                                                                                                                                                        |
-| Approval Authority     | Human Governance / Framework Governance                                                                                                                                                                                         |
-| Created                | 2026-07-07                                                                                                                                                                                                                      |
-| Last Updated           | 2026-07-09                                                                                                                                                                                                                      |
-| Lifecycle Phase        | Draft                                                                                                                                                                                                                           |
-| Traceability ID        | `FORGE-AI.V3.A.003`                                                                                                                                                                                                             |
-| Scope                  | Runtime Architecture RFC documentation-only architecture                                                                                                                                                                        |
-| Out of Scope           | Implementation, runtime behavior changes, certification, and ProjectStatus updates                                                                                                                                              |
-| Normative Authority    | Human Governance; `AGENTS.md`; `docs/FrameworkGovernance.md`                                                                                                                                                                    |
-| Normative References   | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md` |
-| Dependencies           | Governance authority, artifact identity, lifecycle governance, traceability model, and applicable upstream v3 architecture documents                                                                                            |
-| Consumes               | A.1; M.0; M.1; STD-000; STD-001; STD-002; related runtime and engine RFC inputs                                                                                                                                                 |
-| Produces               | Runtime Architecture RFC architecture model and downstream RFC inputs                                                                                                                                                           |
-| Related Specifications | A.3/A.4 engine RFC family; STD-000; STD-001; STD-002                                                                                                                                                                            |
-| Supersedes             | None                                                                                                                                                                                                                            |
-| Superseded By          | None                                                                                                                                                                                                                            |
-| Promotion Requirements | Framework Governance review, approval, traceability validation, metadata validation, and explicit promotion                                                                                                                     |
-| Certification Status   | Not certified                                                                                                                                                                                                                   |
+| Field | Value |
+|:---|:---|
+| Identifier | `FORGE-A-3` |
+| Title | A.3 — Runtime Architecture RFC |
+| Version | `0.2.0-draft` |
+| Status | Draft |
+| Canonical Status | Non-canonical until reviewed, approved, and explicitly promoted by Human Governance |
+| Classification | Runtime Architecture |
+| Document Type | Runtime Architecture RFC |
+| Owner | Framework Architecture Team |
+| Maintainers | Framework Architecture Team |
+| Review Authority | Framework Governance |
+| Approval Authority | Human Governance |
+| Created | 2026-07-07 |
+| Last Updated | 2026-07-10 |
+| Lifecycle Phase | Draft |
+| Traceability ID | `FORGE-AI.V2.RUNTIME.A-3` |
+| Scope | Defines Runtime Architecture only, including Runtime responsibilities, Runtime lifecycle boundaries, and Runtime coordination concepts for the Runtime RFC family. |
+| Out of Scope | Engine Platform redefinition, Engine Foundation redefinition, Engine Specialization redefinition, implementation, runtime behavior changes, certification, freeze decisions, ProjectStatus updates, and DevelopmentPhases updates. |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/FrameworkGovernance.md` |
+| Normative References | `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/Standards/TPL-001-RFC-Template-Standard.md` |
+| Dependencies | A.1 Constitution; M.0 Framework Meta Model; M.1 Artifact Meta Model; STD-003; STD-010; TPL-000; TPL-001; Governance Atlas; Framework Governance. |
+| Consumes | Constitutional principles, meta-model semantics, artifact metadata rules, canonical terminology, RFC template rules, governance routing, and repository-normalization instructions. |
+| Produces | Runtime Architecture RFC, Runtime ownership boundaries, Runtime lifecycle model, Runtime coordination concepts, and downstream inputs for A.4 Engine Architecture. |
+| Related Specifications | `docs/AI/Runtime/README.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md` |
+| Supersedes | None |
+| Superseded By | None |
+| Promotion Requirements | STD-010 metadata validation, STD-003 terminology validation, TPL-001 RFC-structure validation, Runtime README navigation alignment, ownership-boundary validation, Framework Governance review, Human Governance approval, and explicit canonical promotion. |
+| Certification Status | Not certified |
 
 ---
 
@@ -945,3 +945,8 @@ This RFC is complete for draft harvest purposes when:
 | Validation before review                          | Section 12           | Harvested as runtime validation pipeline.                                                                                             |
 | Review before project state update                | Sections 13 and 14   | Harvested as review pipeline plus certification handoff.                                                                              |
 | Project state update                              | Sections 8 and 14    | Preserved only as authorized post-certification activity; this task does not update project state.                                    |
+
+
+## Family Normalization Notes
+
+This RFC participates in the Runtime RFC family normalization program. Its metadata, authority wording, lifecycle wording, certification wording, validation expectations, AI consumption boundaries, and relationship declarations are aligned to STD-010, STD-003, TPL-000, TPL-001, and the Runtime README navigation model. This normalization is editorial and governance-structural only; it does not redesign Runtime Architecture, Engine Platform Architecture, Engine Foundation responsibilities, or any Engine Specialization behavior.
