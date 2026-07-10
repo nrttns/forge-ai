@@ -134,7 +134,7 @@
 | 1.0.0 | 2026-06-15 | Framework Architecture Team | Framework Governance | Human Governance | Initial repository bootloader draft. Established the mandatory boot sequence, the role of the AI agent, and the bootloader boundary. |
 | 2.0.0 | 2026-06-28 | Framework Architecture Team | Framework Governance | Human Governance | Added task classification flow ([Section 5](#5-task-classification-flow)), escalation procedure ([Section 14](#14-escalation-procedure)), and completion report template ([Section 13.3](#133-completion-report-template)). |
 | 3.0.0-approved | 2026-07-09 | Framework Architecture Team | Framework Governance | Human Governance | Promoted to Approved. Added Mermaid diagram placeholders, success criteria ([Section 16](#16-success-criteria)), and completion checklist ([Section 17](#17-completion-checklist)). |
-| 3.0.0-beta | 2026-07-10 | Framework Architecture Team | Framework Governance (pending) | Human Governance (pending) | Editorial refactor to enterprise-publication quality. Converted ASCII diagrams to Mermaid (boot sequence, task classification flow, escalation flow, operating principle). Normalized all tables, bullet lists, capitalization, and terminology. Added Document Control block, Revision History, Table of Contents, List of Tables, List of Figures, References, and Annex placeholders. **No architectural changes**; all section numbering, authority, ownership, dependency rules, and conceptual content preserved verbatim. Annexes A–E published as separate companion files under `annexes/`. |
+| 3.0.0-beta | 2026-07-10 | Framework Architecture Team | Framework Governance (pending) | Human Governance (pending) | Editorial refactor to enterprise-publication quality. Converted ASCII diagrams to Mermaid (boot sequence, task classification flow, escalation flow, operating principle). Normalized all tables, bullet lists, capitalization, and terminology. Added Document Control block, Revision History, Table of Contents, List of Tables, List of Figures, and References. **No architectural changes**; all section numbering, authority, ownership, dependency rules, and conceptual content preserved verbatim. Broken draft annex navigation entries were removed pending approved companion files. |
 
 ---
 
@@ -173,7 +173,6 @@
 
 - [Conformance](#conformance)
 - [References](#references)
-- [Annexes](#annexes)
 
 ---
 
@@ -211,7 +210,6 @@
 | T-28 | Normative References | References |
 | T-29 | Authority References | References |
 | T-30 | Related Specifications | References |
-| T-31 | Annex Index | Annexes |
 
 ---
 
@@ -899,17 +897,3 @@ References are categorized per ISO style: normative references establish provisi
 | **RFC 2119** | *Key words for use in RFCs to Indicate Requirement Levels* — IETF, 1997. | Source of the normative-verb convention used in this document. |
 
 ---
-
-## Annexes
-
-The following annexes are published as separate companion files under the `annexes/` directory. Each annex is a Draft pending Human Governance approval and SHALL NOT be cited as normative until approved. Each annex carries its own Document Control block, Revision History, and Conformance section, and is versioned independently of this parent document.
-
-| Annex       | Title                         | Purpose                                                                                                                                                                                                                                          | Path                                                                                                     |
-|:------------|:------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------|
-| **Annex A** | Boot Sequence Quick Reference | One-page condensed reference of the 11-step boot sequence defined in [Section 4](#4-mandatory-boot-sequence).                                                                                                                                    | [`annexes/Annex-A-Boot-Sequence-Quick-Reference.md`](./annexes/Annex-A-Boot-Sequence-Quick-Reference.md) |
-| **Annex B** | Authority Set Quick Reference | Condensed matrix of task types and their minimum authority sets, derived from [Section 5.2](#52-common-task-types).                                                                                                                              | [`annexes/Annex-B-Authority-Set-Quick-Reference.md`](./annexes/Annex-B-Authority-Set-Quick-Reference.md) |
-| **Annex C** | Glossary Index                | Alphabetical index of all canonical terms cross-referenced to STD-003 and the glossary in [Section 3](#3-glossary-of-key-terms).                                                                                                                 | [`annexes/Annex-C-Glossary-Index.md`](./annexes/Annex-C-Glossary-Index.md)                               |
-| **Annex D** | Templates                     | Consolidated templates: validation checklist ([Section 12.2](#122-validation-checklist-template)), completion report ([Section 13.3](#133-completion-report-template)), and escalation report ([Section 14.3](#143-escalation-report-template)). | [`annexes/Annex-D-Templates.md`](./annexes/Annex-D-Templates.md)                                         |
-| **Annex E** | Change Log (External)         | External-facing change log entries beyond the [Revision History](#revision-history), including inter-document impact notes.                                                                                                                      | [`annexes/Annex-E-Change-Log-External.md`](./annexes/Annex-E-Change-Log-External.md)                     |
-
-> **Note:** Annexes are companions to this document; they consolidate and reformat existing material. They do not introduce new normative content. When this document and an annex disagree, **this document prevails**.
