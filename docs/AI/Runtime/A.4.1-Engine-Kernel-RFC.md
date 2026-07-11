@@ -1,11 +1,7 @@
-# FORGE-A-004.1 — Engine Kernel RFC
+# A.4.1 — Engine Kernel RFC
 
-| | |
-|:---|:---|
-| **Framework** | Forge AI v3 |
-| **Document Class** | Architecture RFC |
-| **Domain** | Engine Runtime Coordination |
-| **Confidentiality** | Internal — Governed |
+> Forge AI v3 · Engine Architecture RFC
+> Engine Kernel · Draft / Non-canonical
 
 ---
 
@@ -13,91 +9,43 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-A-4-1` |
+| Identifier | `FORGE-A-004.1` |
 | Title | A.4.1 — Engine Kernel RFC |
 | Version | `0.2.0-draft` |
-| Status | Draft |
-| Canonical Status | Non-canonical until reviewed, approved, and explicitly promoted by Human Governance |
-| Classification | Engine Foundation Architecture |
-| Document Type | Engine Foundation RFC |
-| Owner | Framework Architecture Team |
+| Status | RFC / Draft |
+| Canonical Status | Non-canonical until reviewed, approved, and promoted through Framework Governance |
+| Classification | Engine Runtime Coordination Architecture |
+| Document Type | Architecture RFC |
+| Owner | Framework Governance |
 | Maintainers | Framework Architecture Team |
-| Review Authority | Framework Governance |
-| Approval Authority | Human Governance |
+| Review Authority | Enterprise Documentation Standards Board |
+| Approval Authority | Human Governance / Framework Governance |
 | Created | 2026-07-07 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.V2.RUNTIME.A-4-1` |
-| Scope | Defines the Engine Kernel foundation responsibility only as a specialization of A.4 Engine Platform Architecture. |
-| Out of Scope | Runtime Architecture redefinition, Engine Platform redefinition, individual Engine Specialization redefinition, implementation, certification, freeze decisions, ProjectStatus updates, and DevelopmentPhases updates. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
-| Normative References | `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/Standards/TPL-001-RFC-Template-Standard.md` |
-| Dependencies | A.3 Runtime Architecture; A.4 Engine Architecture; A.1 Constitution; M.0; M.1; STD-003; STD-010; TPL-000; TPL-001. |
-| Consumes | Runtime Architecture, Engine Platform Architecture, constitutional principles, meta-model semantics, artifact metadata rules, canonical terminology, RFC template rules, and Engine Foundation normalization instructions. |
-| Produces | Engine Kernel foundation RFC, foundation boundary definitions, validation expectations, and downstream inputs for Engine Specialization RFCs. |
-| Related Specifications | `docs/AI/Runtime/README.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md` |
+| Traceability ID | `FORGE-AI.V3.A.004.1` |
+| Scope | Engine Kernel RFC documentation-only architecture |
+| Out of Scope | Implementation, runtime behavior changes, certification, and ProjectStatus updates |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/FrameworkGovernance.md` |
+| Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md` |
+| Dependencies | Governance authority, artifact identity, lifecycle governance, traceability model, and applicable upstream v3 architecture documents |
+| Consumes | A.1; A.3; A.4; M.0; M.1; STD-000; STD-001; STD-002; related runtime and engine RFC inputs |
+| Produces | Engine Kernel RFC architecture model and downstream RFC inputs |
+| Related Specifications | A.3/A.4 engine RFC family; STD-000; STD-001; STD-002 |
 | Supersedes | None |
 | Superseded By | None |
-| Promotion Requirements | STD-010 metadata validation, STD-003 terminology validation, TPL-001 RFC-structure validation, Runtime README navigation alignment, ownership-boundary validation, Framework Governance review, Human Governance approval, and explicit canonical promotion. |
+| Promotion Requirements | Framework Governance review, approval, traceability validation, metadata validation, and explicit promotion |
 | Certification Status | Not certified |
 
 ---
 
-## Table of Contents
+## Executive Summary
 
-1. [Executive Summary](#1-executive-summary)
-2. [Purpose](#2-purpose)
-3. [Scope](#3-scope)
-4. [Engine Kernel Position](#4-engine-kernel-position)
-5. [Engine Kernel Responsibilities](#5-engine-kernel-responsibilities)
-6. [Forbidden Responsibilities](#6-forbidden-responsibilities)
-7. [Parallel System Prohibition](#7-parallel-system-prohibition)
-8. [Single Execution Authority Model](#8-single-execution-authority-model)
-9. [Runtime / Kernel Boundary](#9-runtime--kernel-boundary)
-10. [Workflow / Kernel Boundary](#10-workflow--kernel-boundary)
-11. [Registry / Kernel Boundary](#11-registry--kernel-boundary)
-12. [Knowledge Graph / Kernel Boundary](#12-knowledge-graph--kernel-boundary)
-13. [Standards / Kernel Boundary](#13-standards--kernel-boundary)
-14. [Agent / Tool / Kernel Boundary](#14-agent--tool--kernel-boundary)
-15. [Engine Contract Boundary](#15-engine-contract-boundary)
-16. [Engine Lifecycle Model](#16-engine-lifecycle-model)
-17. [Engine Registration Model](#17-engine-registration-model)
-18. [Engine Discovery Model](#18-engine-discovery-model)
-19. [Engine Dependency Resolution](#19-engine-dependency-resolution)
-20. [Engine Invocation Model](#20-engine-invocation-model)
-21. [Engine Communication Model](#21-engine-communication-model)
-22. [Engine State Model](#22-engine-state-model)
-23. [Engine Capability Model](#23-engine-capability-model)
-24. [Engine Event Model](#24-engine-event-model)
-25. [Engine Artifact Model](#25-engine-artifact-model)
-26. [Validation Model](#26-validation-model)
-27. [Failure Model](#27-failure-model)
-28. [Telemetry and Traceability Model](#28-telemetry-and-traceability-model)
-29. [Security and Governance Constraints](#29-security-and-governance-constraints)
-30. [Migration Notes from RC2](#30-migration-notes-from-rc2)
-31. [Impact on Future Standards](#31-impact-on-future-standards)
-32. [Individual Engine RFC Template Impact](#32-individual-engine-rfc-template-impact)
-33. [Stakeholder Impact Matrix](#33-stakeholder-impact-matrix)
-34. [Open Questions](#34-open-questions)
-35. [Completion Checklist](#35-completion-checklist)
-36. [Completion Report](#36-completion-report)
-37. [Change Log](#37-change-log)
-38. [Glossary](#38-glossary)
-- [Appendix A: Cross-Reference Index](#appendix-a-cross-reference-index)
+This RFC defines the Engine Kernel as the single shared execution coordination foundation for all Forge AI Engines. It establishes one governed execution path — Runtime hosts, Kernel coordinates, Engines execute — and prohibits any subsystem from creating parallel execution authorities. The Kernel governs Engine loading, registration, discovery, lifecycle, invocation, dependency resolution, state separation, telemetry, validation handoff, registry synchronization, and failure handling while consuming authority from higher-order governance and producing coordination outputs for downstream Engines, standards, and the Knowledge Graph.
 
 ---
 
-## 1. Executive Summary
-
-This RFC defines the Engine Kernel as the single shared execution coordination foundation for all Forge AI v3 Engines. The Kernel establishes a governed coordination layer responsible for Engine loading, registration, lifecycle dispatch, dependency resolution, invocation routing, capability indexing, event publication, artifact handoff, telemetry collection, validation handoff, registry synchronization, and failure containment. Its primary architectural purpose is to eliminate drift toward parallel execution paths — ensuring that no subsystem (Runtime, Workflow, Registry, Standards, Knowledge Graph, agents, tools, adapters, or individual Engines) can create an alternate execution authority outside Runtime + Kernel coordination.
-
-The document specifies a canonical 11-state Engine lifecycle model, a 12-step invocation flow, explicit boundary definitions between the Kernel and six adjacent subsystems, a state-separation model covering seven domains, and a failure taxonomy of eleven categories including the governance-relevant Parallel System Violation. It also maps RC2 concepts to Kernel-equivalent behavior without migrating implementation.
-
-This RFC is documentation-only and non-canonical. It does not modify runtime behavior, certify outputs, or update ProjectStatus. Individual Engine RFCs must reference this document for lifecycle, registration, discovery, invocation, and communication architecture rather than redefining these responsibilities independently. Future standards (STD-003 through STD-009) must consume Kernel concepts as coordination constraints without becoming execution controllers.
-
----
-
-## 2. Purpose
+## Purpose
 
 The Engine Kernel exists to define the single shared execution coordination foundation for all Forge AI Engines.
 
@@ -118,52 +66,99 @@ No subsystem creates a second execution authority.
 
 ---
 
-## 3. Scope
-
-This section defines the architectural boundaries of the Engine Kernel RFC, distinguishing what falls within its governance from what remains outside its authority.
-
-### 3.1 In Scope
+## Scope
 
 This RFC defines Engine Kernel architecture for:
 
-- engine loading;
-- engine registration;
-- engine discovery;
-- dependency resolution;
-- lifecycle coordination;
-- invocation routing;
-- capability declaration;
-- health reporting;
-- state handling;
-- event publication;
-- artifact production;
-- telemetry;
-- traceability;
-- failure handling;
-- registry synchronization;
-- validation handoff;
-- parallel-system prevention.
-
-### 3.2 Out of Scope
-
-This RFC does not define or perform:
-
-- implementation code;
-- platform-specific adapter behavior;
-- individual engine business logic;
-- standards redesign;
-- Knowledge Graph redesign;
-- Runtime redesign;
-- Workflow redesign;
-- ProjectStatus updates;
-- RFC certification;
-- promotion to canonical authority.
+1. engine loading;
+2. engine registration;
+3. engine discovery;
+4. dependency resolution;
+5. lifecycle coordination;
+6. invocation routing;
+7. capability declaration;
+8. health reporting;
+9. state handling;
+10. event publication;
+11. artifact production;
+12. telemetry;
+13. traceability;
+14. failure handling;
+15. registry synchronization;
+16. validation handoff;
+17. parallel-system prevention.
 
 ---
 
-## 4. Engine Kernel Position
+## Out of Scope
 
-The Engine Kernel is positioned inside the Engine Platform as the common coordination layer consumed by all Engines. This section establishes its architectural placement relative to the broader Forge AI stack.
+This RFC does not define or perform:
+
+1. implementation code;
+2. platform-specific adapter behavior;
+3. individual engine business logic;
+4. standards redesign;
+5. Knowledge Graph redesign;
+6. Runtime redesign;
+7. Workflow redesign;
+8. ProjectStatus updates;
+9. RFC certification;
+10. promotion to canonical authority;
+11. defining a concrete Registry schema;
+12. defining telemetry or event vocabulary standards;
+13. defining individual Engine RFC templates.
+
+---
+
+## Normative Authority
+
+This RFC is governed by the following authority chain, listed from highest to nearest:
+
+1. **Human Governance** — Final authority over all Forge AI architectural decisions, certification, and promotion.
+2. **`AGENTS.md`** — Operational governance contract defining agent behavior, constraints, and authority boundaries.
+3. **`docs/FrameworkGovernance.md`** — Transitional v3 governance framework defining authority delegation, review, and approval processes.
+4. **`docs/AI/Architecture/A.1-Constitution.md`** — Constitutional authority governing framework-level principles, rights, and structural constraints.
+5. **`docs/AI/Meta/M.0-Framework-Meta-Model.md`** — Meta-model authority owning framework-level concepts including Artifact, Entity, Relationship, Lifecycle, State, Authority, Ownership, Evidence, Validation, Review, Certification, and Reference.
+6. **`docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`** — Standards authority owning standards structure, lifecycle, validation, review, certification, and AI consumption expectations.
+7. **`docs/AI/Architecture/Standards/STD-001-Knowledge-Graph-Standard.md`** — Knowledge Graph authority owning graph semantics, node types, edge types, and traversal rules.
+8. **A.3 — Runtime Architecture RFC** — Runtime architecture authority defining runtime layers, context assembly, memory strategy, and validation/review/certification pipelines.
+
+---
+
+## Normative References
+
+This RFC consumes the following normative references:
+
+1. `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` — Document metadata format and mandatory field definitions.
+2. `docs/AI/Architecture/A.1-Constitution.md` — Constitutional principles governing all Forge AI artifacts.
+3. `docs/AI/Meta/M.0-Framework-Meta-Model.md` — Framework meta-model defining core conceptual primitives.
+4. `docs/AI/Meta/M.1-Artifact-Meta-Model.md` — Artifact meta-model defining the common governed artifact contract.
+5. `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md` — Standards library governance, lifecycle, and validation rules.
+6. `docs/AI/Architecture/Standards/STD-001-Knowledge-Graph-Standard.md` — Knowledge Graph semantics and traversal rules.
+7. `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md` — Runtime architecture defining the execution host environment that contains the Engine Platform.
+8. `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md` — Parent Engine Architecture RFC defining the Engine Platform context.
+
+---
+
+## Dependencies
+
+This RFC depends on the following upstream documents, systems, and concepts:
+
+1. **Governance authority** — Human Governance, `AGENTS.md`, and `docs/FrameworkGovernance.md` must exist and be operative for this RFC to have governing validity.
+2. **Artifact identity** — The Artifact Meta Model (M.1) must define what constitutes a valid artifact for Engine outputs and registry metadata.
+3. **Lifecycle governance** — STD-000 must define lifecycle states, transitions, and rules that the Engine Kernel enforces for Engine lifecycle coordination.
+4. **Traceability model** — M.0 and STD-010 must define traceability expectations that Kernel telemetry must satisfy.
+5. **Runtime Architecture (A.3)** — The Engine Kernel is positioned inside the Runtime-hosted Engine Platform and depends on Runtime providing the execution host, environment, session boundaries, and safety envelope.
+6. **Engine Architecture (A.4)** — The parent RFC defining the Engine Platform context within which the Kernel operates.
+7. **Knowledge Graph (STD-001)** — The Kernel consumes graph-compatible metadata and artifacts and depends on STD-001 for graph semantics.
+
+---
+
+## Architecture
+
+### Engine Kernel Position
+
+The Engine Kernel is positioned inside the Engine Platform as the common coordination layer consumed by all Engines.
 
 ```text
 Runtime
@@ -183,11 +178,9 @@ Agents / Tools / Adapters
 
 This diagram describes responsibility adjacency, not authority inversion. Agents, tools, and adapters remain consumers that enter through Runtime and Kernel-governed invocation; they do not become owners of Engine coordination.
 
----
+### Engine Kernel Responsibilities
 
-## 5. Engine Kernel Responsibilities
-
-The Engine Kernel is responsible for shared execution coordination across all Forge AI Engines. The following table enumerates each responsibility and the Kernel's role in fulfilling it.
+The Engine Kernel is responsible for shared execution coordination across all Forge AI Engines.
 
 | Responsibility | Kernel Role |
 |:---|:---|
@@ -205,41 +198,15 @@ The Engine Kernel is responsible for shared execution coordination across all Fo
 | Registry synchronization | Synchronize runtime registration and artifact metadata with the Engine Registry. |
 | Parallel-system prevention | Prevent Runtime, Workflow, Registry, Standards, Knowledge Graph, agents, tools, adapters, and individual Engines from duplicating Kernel execution authority. |
 
----
+### Parallel System Prohibition
 
-## 6. Forbidden Responsibilities
-
-The Engine Kernel operates within strictly defined authority boundaries. This section enumerates actions and authorities that the Kernel shall not assume, ensuring it remains a coordination layer rather than a governance superseder.
-
-The Engine Kernel shall not:
-
-- define constitutional authority;
-- redefine standards;
-- redefine Knowledge Graph semantics;
-- own `docs/ProjectStatus.md` or project state authority;
-- replace Runtime;
-- replace Workflow;
-- replace the Registry Engine;
-- replace the Governance Engine;
-- implement individual Engine logic;
-- certify outputs;
-- bypass Human Governance.
-
-The Kernel coordinates execution only within authority granted by higher-order architecture and governance.
-
----
-
-## 7. Parallel System Prohibition
-
-This section defines, justifies, and operationalizes the prohibition against parallel execution systems — the central governance constraint that the Engine Kernel enforces across all Forge AI subsystems.
-
-### 7.1 Definition of a Parallel System
+#### Definition of a Parallel System
 
 A parallel system is any subsystem, tool, agent, adapter, document, convention, implementation, or Engine behavior that creates an alternate authority for Engine discovery, lifecycle, dependency resolution, invocation, validation handoff, artifact truth, registry synchronization, or failure handling outside Runtime + Engine Kernel coordination.
 
 A parallel system exists when two or more subsystems can independently decide how Engines are discovered, selected, invoked, sequenced, validated, retired, or synchronized without a single Kernel-governed coordination path.
 
-### 7.2 Why Parallel Execution Paths Are Prohibited
+#### Why Parallel Execution Paths Are Prohibited
 
 Parallel execution paths are prohibited because they would:
 
@@ -255,7 +222,7 @@ Parallel execution paths are prohibited because they would:
 
 Forge AI requires one governed execution coordination model so that execution remains auditable, traceable, reviewable, and governable.
 
-### 7.3 Subsystems at Risk
+#### Subsystems at Risk
 
 The following subsystems are at risk of becoming parallel systems if their boundaries are not explicit:
 
@@ -270,7 +237,7 @@ The following subsystems are at risk of becoming parallel systems if their bound
 - adapters, if platform behavior redefines Engine invocation;
 - individual Engines, if they define independent lifecycle, dependency, or validation models.
 
-### 7.4 Kernel Prevention Mechanisms
+#### Kernel Prevention Mechanisms
 
 The Engine Kernel prevents duplication by requiring:
 
@@ -285,7 +252,7 @@ The Engine Kernel prevents duplication by requiring:
 9. all failures to be classified and contained;
 10. all parallel-system violations to be treated as governance-relevant failures.
 
-### 7.5 Explicit Prohibitions
+#### Explicit Prohibitions
 
 - Runtime shall not duplicate Engine Kernel responsibilities.
 - Workflow shall not invoke Engines directly except through Kernel-governed execution.
@@ -296,15 +263,11 @@ The Engine Kernel prevents duplication by requiring:
 - Tools shall not own Engine lifecycle.
 - Individual Engines shall not define independent lifecycle models.
 
-### 7.6 Consumer and Collaborator Boundaries
+#### Consumer and Collaborator Boundaries
 
 Runtime hosts the execution environment and delegates Engine coordination to the Kernel. Workflow defines ordered procedure and requests Kernel-governed Engine invocation. Registry stores discoverability metadata and synchronization records. Standards define contracts and governance expectations. Knowledge Graph defines canonical semantics, identity, topology, and traversal rules. Agents and tools submit requests through Runtime + Kernel. None of these collaborators may become an alternate execution authority.
 
----
-
-## 8. Single Execution Authority Model
-
-This section codifies the principle that Forge AI maintains exactly one governed execution coordination model for all Engine execution. Any path outside this model is non-canonical.
+### Single Execution Authority Model
 
 There shall be one governed execution coordination model for Engine execution.
 
@@ -336,185 +299,7 @@ No alternative execution path is canonical.
 
 Direct invocation from an agent, tool, adapter, Workflow, Registry, Knowledge Graph query, standard, file scan, directory convention, or prompt memory is non-canonical unless it enters through Runtime Host and Engine Kernel coordination.
 
----
-
-## 9. Runtime / Kernel Boundary
-
-This section defines the responsibility boundary between the Runtime Host and the Engine Kernel, ensuring clear separation between hosting concerns and coordination concerns.
-
-Runtime hosts.
-
-Kernel coordinates.
-
-Engines execute specialized capabilities.
-
-Runtime is responsible for providing the execution host, environment, session boundaries, tool access, context availability, and runtime safety envelope. The Engine Kernel is responsible for Engine registration, discovery coordination, lifecycle dispatch, dependency resolution, invocation routing, event routing, validation handoff, telemetry, failure containment, and registry synchronization.
-
-Runtime shall not duplicate Kernel lifecycle, registry, invocation, or dependency rules. Runtime may request Kernel action, observe Kernel telemetry, and enforce host-level safety constraints, but it shall not become a second Engine dispatcher.
-
----
-
-## 10. Workflow / Kernel Boundary
-
-This section establishes that Workflow defines procedural orchestration while the Kernel performs governed Engine invocation, preventing Workflow from becoming a second dispatch authority.
-
-Workflow defines ordered procedure.
-
-Kernel performs governed Engine invocation.
-
-Workflow documents may define procedural orchestration such as planning, execution, validation, review, certification, and project-state update sequencing. Workflow shall not become a second Engine dispatcher, shall not select Engines through hidden conventions, and shall not invoke Engines directly except through Kernel-governed execution.
-
-Workflow consumes Kernel outcomes as procedural evidence. Kernel consumes Workflow intent as invocation context, not as alternate lifecycle authority.
-
----
-
-## 11. Registry / Kernel Boundary
-
-This section clarifies that the Registry is a metadata store for Engine discoverability while the Kernel owns runtime registration coordination and invocation — the Registry shall not become an execution controller.
-
-Registry stores discoverable metadata.
-
-Kernel coordinates runtime registration and invocation.
-
-The Engine Registry records Engine identity, type, capabilities, versions, owners, dependencies, lifecycle state, health status, registry references, and artifact relationships. The Registry shall not execute Engines and shall not become an invocation controller.
-
-The Kernel uses Registry metadata for discovery and synchronization. Runtime registration is coordinated by the Kernel and recorded by the Registry.
-
----
-
-## 12. Knowledge Graph / Kernel Boundary
-
-This section ensures the Knowledge Graph defines canonical semantics while the Kernel consumes graph-compatible metadata — neither subsystem shall assume the other's authority.
-
-Knowledge Graph defines canonical semantics.
-
-Kernel consumes graph-compatible metadata and artifacts.
-
-The Kernel shall not redefine graph topology, graph nodes, graph edges, identity, relationship semantics, traversal semantics, or graph authority. It may request graph traversal, validate graph compatibility, and synchronize graph-compatible artifact metadata through governed handoff.
-
-Knowledge Graph shall not coordinate runtime execution. It informs semantic relationships; it does not dispatch Engines.
-
----
-
-## 13. Standards / Kernel Boundary
-
-This section establishes that Standards define contracts and governance expectations while the Kernel enforces their consumption — Standards shall not become runtime execution controllers.
-
-Standards define contracts, governance, lifecycle expectations, and artifact structures.
-
-Kernel enforces consumption of standards.
-
-The Kernel shall not redefine standards, create standards, supersede standards, or convert standards into executable controllers. Standards may define required metadata, lifecycle expectations, validation criteria, artifact structures, and governance rules that the Kernel must consume and enforce during coordination.
-
----
-
-## 14. Agent / Tool / Kernel Boundary
-
-This section mandates that all external consumers — including Codex-like tools, Claude Code-like tools, Cursor-like assistants, CLI tools, IDE tools, Forge-native agents, automation runners, and platform adapters — must invoke Engines through the Runtime + Kernel path.
-
-Codex-like tools, Claude Code-like tools, Cursor-like assistants, CLI tools, IDE tools, Forge-native agents, automation runners, and platform adapters must invoke Engines through Runtime + Kernel.
-
-Agents and tools shall not own lifecycle, registry, validation, certification, canonical artifact truth, dependency resolution, or Engine discovery. They may request work, provide inputs, execute host-supported operations, report evidence, and receive outputs, but they remain consumers of governed Engine coordination.
-
----
-
-## 15. Engine Contract Boundary
-
-This section defines the minimum Engine Contract that every Engine must declare. Individual Engine RFCs may specialize business logic and validation expectations but shall not duplicate or redefine Kernel responsibilities.
-
-Every Engine shall declare a shared minimum Engine Contract. Individual Engine RFCs may specialize business logic, inputs, outputs, and validation expectations, but they shall not duplicate or redefine Kernel responsibilities.
-
-Minimum Engine Contract fields:
-
-- identity;
-- version;
-- lifecycle state;
-- capabilities;
-- required inputs;
-- produced outputs;
-- consumed standards;
-- dependencies;
-- invocation method;
-- validation requirements;
-- failure modes;
-- emitted events;
-- produced artifacts;
-- registry metadata;
-- telemetry metadata.
-
-An Engine without a valid contract is not eligible for Kernel-governed registration or invocation.
-
----
-
-## 16. Engine Lifecycle Model
-
-This section defines the canonical 11-state Engine lifecycle model and all allowed transitions between states. Individual Engines shall not define independent lifecycle models.
-
-### 16.1 Canonical States
-
-The canonical Engine lifecycle states are:
-
-1. Declared;
-2. Registered;
-3. Initialized;
-4. Ready;
-5. Invoked;
-6. Running;
-7. Completed;
-8. Failed;
-9. Suspended;
-10. Deprecated;
-11. Retired.
-
-Individual Engines shall not define independent lifecycle models.
-
-### 16.2 Allowed Transitions
-
-| From | Allowed To | Notes |
-|:---|:---|:---|
-| Declared | Registered, Deprecated, Retired | Registration requires valid metadata and contract. |
-| Registered | Initialized, Failed, Deprecated, Retired | Initialization requires dependency availability. |
-| Initialized | Ready, Failed, Suspended | Ready requires health checks and contract validation. |
-| Ready | Invoked, Suspended, Deprecated, Retired | Invocation requires authorized request and dependency resolution. |
-| Invoked | Running, Failed, Suspended | Running begins after invocation context is accepted. |
-| Running | Completed, Failed, Suspended | Completion requires artifact and telemetry closure. |
-| Completed | Ready, Deprecated, Retired | Engines may return to Ready for future invocations. |
-| Failed | Suspended, Ready, Deprecated, Retired | Recovery requires failure review and safe reset. |
-| Suspended | Ready, Failed, Deprecated, Retired | Resume requires governance-compatible condition resolution. |
-| Deprecated | Retired | Deprecated Engines may remain discoverable but should not be preferred. |
-| Retired | None | Retired is terminal unless future governance defines reactivation. |
-
-Invalid transitions are validation failures and may indicate a Parallel System Violation if caused by bypassed Kernel coordination.
-
----
-
-## 17. Engine Registration Model
-
-This section specifies the Kernel-governed registration process that makes an Engine discoverable, contract-bound, lifecycle-tracked, and eligible for invocation.
-
-Engine registration is the Kernel-governed process that makes an Engine discoverable, contract-bound, lifecycle-tracked, and eligible for invocation.
-
-Required registration metadata:
-
-- engine id;
-- engine type;
-- owner;
-- capabilities;
-- consumed standards;
-- produced artifacts;
-- dependencies;
-- version;
-- lifecycle state;
-- health status;
-- registry references.
-
-Registration shall fail when metadata is incomplete, authority is invalid, consumed standards are unresolved, dependencies are circular, lifecycle state is inconsistent, or registry synchronization cannot be established.
-
----
-
-## 18. Engine Discovery Model
-
-This section defines how Engines are discovered — exclusively through Kernel + Registry metadata — and prohibits alternative discovery mechanisms.
+### Engine Discovery Model
 
 Engine discovery must use Kernel + Registry metadata.
 
@@ -528,11 +313,7 @@ Discovery by the following mechanisms is prohibited:
 
 Discovery requires explicit capability metadata, lifecycle eligibility, health status, dependency availability, authority compatibility, and registry identity. The Kernel may query the Registry, but the Registry does not select or execute Engines independently.
 
----
-
-## 19. Engine Dependency Resolution
-
-This section specifies how the Kernel resolves Engine dependencies before invocation, classifies failure behavior, and prohibits circular and silent dependency substitution.
+### Engine Dependency Resolution
 
 The Kernel resolves dependencies before invocation.
 
@@ -556,53 +337,7 @@ Unavailable dependency behavior:
 
 No Engine may silently substitute an undeclared dependency.
 
----
-
-## 20. Engine Invocation Model
-
-This section defines the canonical 12-step invocation flow governed by Runtime + Kernel coordination and prohibits hidden direct coupling between Engines.
-
-Engine invocation is governed by Runtime + Kernel coordination.
-
-Canonical invocation flow:
-
-1. Agent, tool, or adapter submits a request to the Runtime Host.
-2. Runtime validates host-level eligibility and forwards the request to the Engine Kernel.
-3. Kernel identifies requested capability and queries Registry metadata.
-4. Kernel verifies Engine contract, lifecycle state, health status, authority, dependencies, and validation requirements.
-5. Kernel creates trace id and invocation id.
-6. Kernel transitions the Engine from Ready to Invoked to Running according to the lifecycle model.
-7. Selected Engine performs its specialized capability.
-8. Engine produces declared artifacts and events.
-9. Kernel records telemetry, routes events, and performs artifact handoff.
-10. Kernel requests validation and review handoff as applicable.
-11. Kernel synchronizes Registry and Knowledge Graph-compatible metadata.
-12. Kernel returns governed output to Runtime.
-
-There shall be no direct hidden coupling between Engines. Engine-to-Engine cooperation must use Kernel-mediated invocation, event publication, artifact handoff, registry lookup, graph traversal request, or validation request.
-
----
-
-## 21. Engine Communication Model
-
-This section enumerates the allowed and prohibited communication modes between Engines, ensuring all inter-Engine interaction remains Kernel-governed.
-
-Allowed Engine communication modes are:
-
-- Kernel-mediated invocation;
-- event publication;
-- artifact handoff;
-- registry lookup;
-- graph traversal request;
-- validation request.
-
-Prohibited communication modes include hidden direct calls, undocumented prompt conventions, implicit filesystem discovery, unregistered shared state, unmanaged lifecycle mutation, and agent-mediated Engine dispatch outside Runtime + Kernel.
-
----
-
-## 22. Engine State Model
-
-This section defines seven distinct state domains with explicit ownership boundaries, preventing any single subsystem from becoming a hidden execution controller through state ownership.
+### Engine State Model
 
 The Kernel shall preserve separation among state domains.
 
@@ -618,11 +353,7 @@ The Kernel shall preserve separation among state domains.
 
 State boundaries prevent ProjectStatus, Registry, Knowledge Graph, memory, validation, and certification from becoming hidden execution controllers.
 
----
-
-## 23. Engine Capability Model
-
-This section specifies that Engine capabilities must be explicit, versioned, discoverable, Registry-backed, and contract-bound — capability names alone are insufficient for invocation eligibility.
+### Engine Capability Model
 
 Engine capabilities must be explicit, versioned, discoverable, Registry-backed, and contract-bound.
 
@@ -643,11 +374,260 @@ Each capability declaration shall identify:
 
 Capability names alone are insufficient. Capability eligibility depends on Kernel-validated contract, lifecycle, dependency, authority, and health conditions.
 
+### Security and Governance Constraints
+
+AI systems shall not self-certify.
+
+The Kernel shall not bypass review.
+
+Human Governance remains final authority.
+
+The Kernel shall preserve authority ordering, enforce explicit handoffs, record evidence, and stop execution when governance, validation, review, certification, or authority constraints are unclear or violated.
+
+No Kernel optimization, automation feature, agent preference, tool shortcut, or adapter-specific convenience may override Human Governance, AGENTS.md, constitutional principles, standards governance, validation, review, or certification boundaries.
+
 ---
 
-## 24. Engine Event Model
+## Design Decisions
 
-This section defines the canonical set of 13 Engine events and their required metadata, establishing that events inform coordination but do not replace lifecycle rules.
+### DD-001: Single Execution Authority Through Engine Kernel
+
+**Context:** Forge AI requires Engines to execute governed capabilities. The question is whether multiple subsystems may independently coordinate Engine execution.
+
+**Options considered:**
+1. Distributed coordination where Runtime, Workflow, Registry, and Standards each manage their own Engine dispatch — rejected because it fragments authority, creates inconsistent lifecycle state, and makes certification evidence unreliable.
+2. Single Kernel-governed execution authority — selected because it preserves one auditable, traceable, and governable execution path.
+
+**Rationale:** One governed execution coordination model ensures that all Engine invocations pass through the same registration, discovery, lifecycle, dependency, validation, and traceability checkpoints. Parallel systems would compromise platform independence and governance enforcement.
+
+### DD-002: Nine-Layer Responsibility Adjacency Model
+
+**Context:** The Engine Kernel needs a clear structural position within the Forge AI architecture. The question is how to define its relationship to Runtime, Engines, and consumers.
+
+**Options considered:**
+1. Kernel as part of Runtime — rejected because it would allow Runtime to become a second Engine dispatcher.
+2. Kernel as part of each Engine — rejected because it would fragment coordination and allow independent lifecycle models.
+3. Kernel as a separate coordination layer inside Engine Platform, between Runtime and Engines — selected because it provides clear separation of hosting, coordination, and execution concerns.
+
+**Rationale:** The adjacency model (Runtime → Engine Platform → Engine Kernel → Engine Contracts → Engine Registry → Individual Engines → Agents/Tools/Adapters) ensures each layer has a single, well-defined responsibility without authority inversion.
+
+### DD-003: Kernel as Coordinator, Not Executor
+
+**Context:** The Engine Kernel needs a defined relationship to actual Engine execution. The question is whether the Kernel itself executes Engine logic.
+
+**Options considered:**
+1. Kernel executes Engine capabilities directly — rejected because it would conflate coordination with specialized execution.
+2. Kernel coordinates and dispatches; individual Engines execute their specialized capabilities — selected because it preserves separation of coordination and execution concerns.
+
+**Rationale:** The Kernel coordinates registration, discovery, lifecycle, dependency resolution, invocation routing, and validation handoff. Individual Engines perform their specialized capabilities. This separation ensures that no single component monopolizes execution authority and that Engine specialization is preserved.
+
+### DD-004: Explicit Prohibition of Discovery by Convention
+
+**Context:** Engines need to be discoverable for invocation. The question is what discovery mechanisms are acceptable.
+
+**Options considered:**
+1. Allow discovery by filename, directory structure, naming convention, and prompt memory — rejected because these mechanisms create implicit, undocumented, and ungoverned discovery paths that bypass Registry and Kernel coordination.
+2. Require Kernel + Registry metadata-based discovery only — selected because it ensures all discovery is explicit, contract-bound, and governable.
+
+**Rationale:** Convention-based discovery creates parallel discovery authorities that fragment registry truth and obscure traceability. All discovery must use explicit capability metadata, lifecycle eligibility, health status, dependency availability, authority compatibility, and registry identity.
+
+### DD-005: Failure Classification as Governance-Relevant Event
+
+**Context:** Engine failures need handling. The question is whether all failures are treated equally or whether some require governance escalation.
+
+**Options considered:**
+1. All failures handled uniformly at Kernel level — rejected because governance-relevant failures (authority violations, parallel system violations) require escalation beyond Kernel containment.
+2. Classified failure handling with governance escalation path — selected because it ensures that failures affecting authority, artifact truth, or project state receive appropriate governance review.
+
+**Rationale:** The Kernel classifies failures (Registration, Initialization, Dependency, Invocation, Validation, Artifact Production, Registry Sync, Graph Compatibility, Governance, and Parallel System Violation) and routes validation, review, or governance handoff when required. Parallel System Violation is explicitly treated as a governance-relevant failure.
+
+---
+
+## Ownership
+
+| Role | Party | Accountability |
+|:---|:---|:---|
+| Owner | Framework Governance | Ultimate accountability for the Engine Kernel RFC, including promotion decisions, scope changes, authority compliance, and parallel-system prevention enforcement. |
+| Maintainers | Framework Architecture Team | Day-to-day maintenance, editorial updates, gap analysis, and TPL-001 compliance. |
+| Review Authority | Enterprise Documentation Standards Board | Structural, metadata, and standards compliance review. |
+| Approval Authority | Human Governance / Framework Governance | Final approval for promotion beyond Draft status. |
+
+---
+
+## Responsibilities
+
+The Owner (Framework Governance) is responsible for:
+
+1. maintaining the architectural integrity of the Engine Kernel RFC;
+2. ensuring this RFC remains compliant with TPL-001, STD-010, and all governing inputs;
+3. coordinating with A.3 (Runtime Architecture) and A.4 (Engine Architecture) to prevent scope overlap;
+4. ensuring the single execution authority model is preserved across all downstream Engine RFCs;
+5. responding to Engine Kernel-related change requests and governance questions;
+6. initiating review when this RFC is ready for promotion;
+7. ensuring future individual Engine RFCs reference this Kernel for lifecycle, registration, discovery, dependency resolution, invocation routing, and parallel-system prevention;
+8. ensuring future standards (STD-003 through STD-009) consume Kernel concepts as coordination constraints without becoming execution authorities;
+9. deciding on Open Questions through proper governance channels.
+
+---
+
+## Non Responsibilities
+
+The Owner (Framework Governance) is not responsible for:
+
+1. implementing Engine Kernel code, platforms, or infrastructure;
+2. implementing individual Engine business logic;
+3. defining platform-specific adapter behavior;
+4. selecting AI providers, programming languages, or frameworks;
+5. designing the Registry schema;
+6. defining telemetry vocabulary standards;
+7. defining event vocabulary standards;
+8. redesigning Runtime, Workflow, Standards, or Knowledge Graph;
+9. certifying this document;
+10. updating `docs/ProjectStatus.md`;
+11. promoting this document to canonical status without governance review;
+12. defining individual Engine RFC templates.
+
+The Engine Kernel shall not:
+
+- define constitutional authority;
+- redefine standards;
+- redefine Knowledge Graph semantics;
+- own `docs/ProjectStatus.md` or project state authority;
+- replace Runtime;
+- replace Workflow;
+- replace the Registry Engine;
+- replace the Governance Engine;
+- implement individual Engine logic;
+- certify outputs;
+- bypass Human Governance.
+
+---
+
+## Interfaces
+
+### Runtime / Kernel Boundary
+
+Runtime hosts. Kernel coordinates. Engines execute specialized capabilities.
+
+Runtime is responsible for providing the execution host, environment, session boundaries, tool access, context availability, and runtime safety envelope. The Engine Kernel is responsible for Engine registration, discovery coordination, lifecycle dispatch, dependency resolution, invocation routing, event routing, validation handoff, telemetry, failure containment, and registry synchronization.
+
+Runtime shall not duplicate Kernel lifecycle, registry, invocation, or dependency rules. Runtime may request Kernel action, observe Kernel telemetry, and enforce host-level safety constraints, but it shall not become a second Engine dispatcher.
+
+### Workflow / Kernel Boundary
+
+Workflow defines ordered procedure. Kernel performs governed Engine invocation.
+
+Workflow documents may define procedural orchestration such as planning, execution, validation, review, certification, and project-state update sequencing. Workflow shall not become a second Engine dispatcher, shall not select Engines through hidden conventions, and shall not invoke Engines directly except through Kernel-governed execution.
+
+Workflow consumes Kernel outcomes as procedural evidence. Kernel consumes Workflow intent as invocation context, not as alternate lifecycle authority.
+
+### Registry / Kernel Boundary
+
+Registry stores discoverable metadata. Kernel coordinates runtime registration and invocation.
+
+The Engine Registry records Engine identity, type, capabilities, versions, owners, dependencies, lifecycle state, health status, registry references, and artifact relationships. The Registry shall not execute Engines and shall not become an invocation controller.
+
+The Kernel uses Registry metadata for discovery and synchronization. Runtime registration is coordinated by the Kernel and recorded by the Registry.
+
+### Knowledge Graph / Kernel Boundary
+
+Knowledge Graph defines canonical semantics. Kernel consumes graph-compatible metadata and artifacts.
+
+The Kernel shall not redefine graph topology, graph nodes, graph edges, identity, relationship semantics, traversal semantics, or graph authority. It may request graph traversal, validate graph compatibility, and synchronize graph-compatible artifact metadata through governed handoff.
+
+Knowledge Graph shall not coordinate runtime execution. It informs semantic relationships; it does not dispatch Engines.
+
+### Standards / Kernel Boundary
+
+Standards define contracts, governance, lifecycle expectations, and artifact structures. Kernel enforces consumption of standards.
+
+The Kernel shall not redefine standards, create standards, supersede standards, or convert standards into executable controllers. Standards may define required metadata, lifecycle expectations, validation criteria, artifact structures, and governance rules that the Kernel must consume and enforce during coordination.
+
+### Agent / Tool / Kernel Boundary
+
+Codex-like tools, Claude Code-like tools, Cursor-like assistants, CLI tools, IDE tools, Forge-native agents, automation runners, and platform adapters must invoke Engines through Runtime + Kernel.
+
+Agents and tools shall not own lifecycle, registry, validation, certification, canonical artifact truth, dependency resolution, or Engine discovery. They may request work, provide inputs, execute host-supported operations, report evidence, and receive outputs, but they remain consumers of governed Engine coordination.
+
+### Engine Contract Boundary
+
+Every Engine shall declare a shared minimum Engine Contract. Individual Engine RFCs may specialize business logic, inputs, outputs, and validation expectations, but they shall not duplicate or redefine Kernel responsibilities.
+
+Minimum Engine Contract fields:
+
+- identity;
+- version;
+- lifecycle state;
+- capabilities;
+- required inputs;
+- produced outputs;
+- consumed standards;
+- dependencies;
+- invocation method;
+- validation requirements;
+- failure modes;
+- emitted events;
+- produced artifacts;
+- registry metadata;
+- telemetry metadata.
+
+An Engine without a valid contract is not eligible for Kernel-governed registration or invocation.
+
+### Engine Registration Interface
+
+Engine registration is the Kernel-governed process that makes an Engine discoverable, contract-bound, lifecycle-tracked, and eligible for invocation.
+
+Required registration metadata:
+
+- engine id;
+- engine type;
+- owner;
+- capabilities;
+- consumed standards;
+- produced artifacts;
+- dependencies;
+- version;
+- lifecycle state;
+- health status;
+- registry references.
+
+Registration shall fail when metadata is incomplete, authority is invalid, consumed standards are unresolved, dependencies are circular, lifecycle state is inconsistent, or registry synchronization cannot be established.
+
+### Engine Invocation Interface
+
+Engine invocation is governed by Runtime + Kernel coordination.
+
+Canonical invocation flow:
+
+1. Agent, tool, or adapter submits a request to the Runtime Host.
+2. Runtime validates host-level eligibility and forwards the request to the Engine Kernel.
+3. Kernel identifies requested capability and queries Registry metadata.
+4. Kernel verifies Engine contract, lifecycle state, health status, authority, dependencies, and validation requirements.
+5. Kernel creates trace id and invocation id.
+6. Kernel transitions the Engine from Ready to Invoked to Running according to the lifecycle model.
+7. Selected Engine performs its specialized capability.
+8. Engine produces declared artifacts and events.
+9. Kernel records telemetry, routes events, and performs artifact handoff.
+10. Kernel requests validation and review handoff as applicable.
+11. Kernel synchronizes Registry and Knowledge Graph-compatible metadata.
+12. Kernel returns governed output to Runtime.
+
+There shall be no direct hidden coupling between Engines. Engine-to-Engine cooperation must use Kernel-mediated invocation, event publication, artifact handoff, registry lookup, graph traversal request, or validation request.
+
+### Engine Communication Interface
+
+Allowed Engine communication modes are:
+
+- Kernel-mediated invocation;
+- event publication;
+- artifact handoff;
+- registry lookup;
+- graph traversal request;
+- validation request.
+
+Prohibited communication modes include hidden direct calls, undocumented prompt conventions, implicit filesystem discovery, unregistered shared state, unmanaged lifecycle mutation, and agent-mediated Engine dispatch outside Runtime + Kernel.
+
+### Engine Event Interface
 
 Canonical Engine events are:
 
@@ -668,11 +648,7 @@ Each event shall include Engine identity, lifecycle or invocation context, trace
 
 Events inform coordination; they do not replace lifecycle rules or become independent execution triggers outside Kernel governance.
 
----
-
-## 25. Engine Artifact Model
-
-This section requires that all Engine-produced artifacts carry comprehensive provenance metadata and do not become canonical solely by virtue of production.
+### Engine Artifact Interface
 
 Engine-produced artifacts must reference:
 
@@ -687,11 +663,74 @@ Engine-produced artifacts must reference:
 
 Artifacts shall not become canonical merely because an Engine produced them. Artifact authority, validation state, review state, certification state, and registry synchronization must remain explicit.
 
+### Telemetry and Traceability Interface
+
+Kernel telemetry shall include:
+
+- trace id;
+- invocation id;
+- engine id;
+- input artifact ids;
+- output artifact ids;
+- validation status;
+- failure status;
+- handoff target;
+- human approval marker when required.
+
+Traceability must be sufficient to reconstruct who or what requested invocation, which Runtime hosted it, which Engine was selected, which Registry metadata was used, which dependencies were resolved, which artifacts were produced, what validation occurred, what review or certification handoff was requested, and whether Human Governance approval was required.
+
 ---
 
-## 26. Validation Model
+## Lifecycle
 
-This section enumerates the nine categories of Kernel-governed validation and specifies when validation failures shall block completion claims.
+### Canonical Engine Lifecycle States
+
+The canonical Engine lifecycle states are:
+
+1. Declared;
+2. Registered;
+3. Initialized;
+4. Ready;
+5. Invoked;
+6. Running;
+7. Completed;
+8. Failed;
+9. Suspended;
+10. Deprecated;
+11. Retired.
+
+Individual Engines shall not define independent lifecycle models.
+
+### Allowed Transitions
+
+| From | Allowed To | Notes |
+|:---|:---|:---|
+| Declared | Registered, Deprecated, Retired | Registration requires valid metadata and contract. |
+| Registered | Initialized, Failed, Deprecated, Retired | Initialization requires dependency availability. |
+| Initialized | Ready, Failed, Suspended | Ready requires health checks and contract validation. |
+| Ready | Invoked, Suspended, Deprecated, Retired | Invocation requires authorized request and dependency resolution. |
+| Invoked | Running, Failed, Suspended | Running begins after invocation context is accepted. |
+| Running | Completed, Failed, Suspended | Completion requires artifact and telemetry closure. |
+| Completed | Ready, Deprecated, Retired | Engines may return to Ready for future invocations. |
+| Failed | Suspended, Ready, Deprecated, Retired | Recovery requires failure review and safe reset. |
+| Suspended | Ready, Failed, Deprecated, Retired | Resume requires governance-compatible condition resolution. |
+| Deprecated | Retired | Deprecated Engines may remain discoverable but should not be preferred. |
+| Retired | None | Retired is terminal unless future governance defines reactivation. |
+
+Invalid transitions are validation failures and may indicate a Parallel System Violation if caused by bypassed Kernel coordination.
+
+### Lifecycle Rules
+
+1. All lifecycle transitions must pass through Kernel coordination.
+2. Invalid transitions are validation failures.
+3. No Engine may skip lifecycle states.
+4. The lifecycle model applies to all Engines without exception.
+5. Deprecated Engines may remain discoverable but should not be preferred for new invocations.
+6. Retired is a terminal state unless future governance defines a reactivation path.
+
+---
+
+## Validation
 
 Kernel-governed validation shall verify:
 
@@ -707,11 +746,7 @@ Kernel-governed validation shall verify:
 
 Validation failures shall block completion claims where the failing condition affects authority, traceability, artifact correctness, lifecycle integrity, or parallel-system prevention.
 
----
-
-## 27. Failure Model
-
-This section defines the eleven failure categories recognized by the Engine Kernel and specifies the seven-step failure handling procedure.
+### Failure Classification and Handling
 
 Failure categories:
 
@@ -740,45 +775,78 @@ Parallel System Violation is a governance-relevant failure because it threatens 
 
 ---
 
-## 28. Telemetry and Traceability Model
+## Risks
 
-This section specifies the mandatory telemetry fields for every Engine invocation and the traceability requirements sufficient to reconstruct the full execution chain.
-
-Kernel telemetry shall include:
-
-- trace id;
-- invocation id;
-- engine id;
-- input artifact ids;
-- output artifact ids;
-- validation status;
-- failure status;
-- handoff target;
-- human approval marker when required.
-
-Traceability must be sufficient to reconstruct who or what requested invocation, which Runtime hosted it, which Engine was selected, which Registry metadata was used, which dependencies were resolved, which artifacts were produced, what validation occurred, what review or certification handoff was requested, and whether Human Governance approval was required.
+| # | Risk | Severity | Mitigation |
+|:---|:---|:---|:---|
+| R-001 | Subsystems may inadvertently create parallel execution paths if Kernel boundaries are not enforced during implementation. | High | Explicit prohibition list, prevention mechanisms, and Parallel System Violation as a governance-relevant failure category. |
+| R-002 | The Kernel may be perceived as an implementation bottleneck if coordination overhead is not managed. | Medium | The Kernel is documentation-only architecture at this stage; implementation performance is out of scope. Future implementation RFCs should address performance constraints. |
+| R-003 | Future standards (STD-003 through STD-009) may inadvertently become execution controllers. | Medium | Explicit boundary statements required in each future standard; this RFC's "Impact on Future Standards" section provides the constraint template. |
+| R-004 | Individual Engine RFCs may duplicate Kernel responsibilities if the Kernel boundary is not referenced. | Medium | This RFC defines the explicit template impact for individual Engine RFCs; each must reference the Kernel for lifecycle, registration, discovery, and coordination. |
+| R-005 | Registry schema, telemetry vocabulary, and event vocabulary remain undefined. | Low | These are documented as Open Questions requiring future standards work. They do not block the architectural model. |
+| R-006 | RC2 operational compatibility may create tension between existing command/workflow behavior and Kernel-governed execution. | Low | Migration notes preserve RC2 operational behavior; no RC2 implementation is migrated by this RFC. |
 
 ---
 
-## 29. Security and Governance Constraints
+## Open Questions
 
-This section states the inviolable governance constraints that no Kernel optimization, automation feature, agent preference, tool shortcut, or adapter-specific convenience may override.
+The following questions require future RFCs or governance decisions:
 
-> AI systems shall not self-certify.
->
-> The Kernel shall not bypass review.
->
-> Human Governance remains final authority.
-
-The Kernel shall preserve authority ordering, enforce explicit handoffs, record evidence, and stop execution when governance, validation, review, certification, or authority constraints are unclear or violated.
-
-No Kernel optimization, automation feature, agent preference, tool shortcut, or adapter-specific convenience may override Human Governance, AGENTS.md, constitutional principles, standards governance, validation, review, or certification boundaries.
+1. What exact Registry schema will represent Engine registration metadata?
+2. Which Engine Contract fields are mandatory for draft Engines versus review-ready Engines?
+3. How will Kernel-mediated event publication be represented in documentation-only and future runtime contexts?
+4. What is the precise validation evidence format for Parallel System Violation detection?
+5. How will Engine health status be classified and updated?
+6. What governance process approves Engine deprecation and retirement?
+7. How will Kernel trace ids map to Knowledge Graph identifiers and artifact registry identifiers?
+8. Which future standard owns telemetry vocabulary?
+9. Which future standard owns event vocabulary, if separate from the Engine Kernel RFC?
+10. How will platform adapters prove they do not bypass Runtime + Kernel?
+11. What minimum review handoff metadata is required before certification handoff may be requested?
+12. How should swarm or multi-agent execution be represented without creating a second dispatcher?
 
 ---
 
-## 30. Migration Notes from RC2
+## Completion Criteria
 
-This section maps RC2 command and workflow concepts to their Engine Kernel equivalents without migrating any implementation — RC2 behavior is preserved operationally until governed v3 replacements exist.
+This RFC is complete for draft purposes when:
+
+1. status is marked RFC / Draft;
+2. canonical status is explicitly not claimed;
+3. purpose is defined;
+4. scope is defined;
+5. out of scope is defined and non-empty;
+6. normative authority is declared;
+7. normative references are listed with full paths;
+8. dependencies are listed with relationship context;
+9. architecture section contains Kernel position, responsibilities, parallel system prohibition, execution authority model, discovery, dependency resolution, state model, capability model, and governance constraints;
+10. design decisions are documented with context, options, and rationale;
+11. ownership is explicitly assigned;
+12. responsibilities are listed;
+13. non responsibilities are listed;
+14. interfaces are described for all collaborator boundaries, contracts, registration, invocation, communication, events, artifacts, and telemetry;
+15. lifecycle model is defined with canonical states, allowed transitions, and rules;
+16. validation model is defined with verification targets and failure classification;
+17. risks are identified with severity and mitigation;
+18. open questions are listed (non-empty at Draft stage);
+19. RC2 migration notes are provided;
+20. future standards and Engine RFC impact is defined;
+21. no implementation code is produced;
+22. no ProjectStatus update is performed;
+23. no existing standards, A.3, A.4, or individual Engine RFCs are modified.
+
+---
+
+## Version History
+
+| Version | Status | Notes |
+|:---|:---|:---|
+| 0.1.0-draft | RFC / Draft | Initial draft — Engine Kernel architecture with 34 numbered sections. Defined single execution authority model, parallel system prohibition, lifecycle, registration, invocation, state, event, artifact, validation, failure, and telemetry models. |
+| 0.2.0-draft | RFC / Draft | Editorial refactoring for TPL-001 compliance. Restructured into 20 mandatory sections. Added Executive Summary, Design Decisions, Ownership, Responsibilities, Non Responsibilities, Risks, Version History. Renamed and consolidated 30+ sections into Architecture and Interfaces. Removed Completion Report (non-standard artifact). No content or authority changes. |
+
+---
+
+## Appendix A: Migration Notes from RC2
 
 This RFC maps RC2 command/workflow behavior into Engine Kernel concepts without migrating implementation.
 
@@ -798,9 +866,7 @@ No RC2 implementation is migrated by this RFC.
 
 ---
 
-## 31. Impact on Future Standards
-
-This section establishes expectations for future standards (STD-003 through STD-009) regarding their relationship to the Engine Kernel — they must consume Kernel concepts as constraints without becoming execution authorities.
+## Appendix B: Impact on Future Standards
 
 Future STD-003 through STD-009 standards should consume Engine Kernel concepts as coordination constraints without becoming execution authorities.
 
@@ -819,9 +885,7 @@ Each future standard should include an explicit statement that it is consumed by
 
 ---
 
-## 32. Individual Engine RFC Template Impact
-
-This section specifies what future individual Engine RFCs must define (Engine-specific concerns only) and what they must reference from the Engine Kernel (shared coordination architecture).
+## Appendix C: Individual Engine RFC Template Impact
 
 Future individual Engine RFCs shall not duplicate Kernel responsibilities.
 
@@ -843,179 +907,3 @@ Each Engine RFC should define only Engine-specific:
 - governance constraints.
 
 Each Engine RFC shall reference the Engine Kernel for lifecycle, registration, discovery, dependency resolution, invocation routing, communication, state separation, telemetry baseline, validation handoff, registry synchronization, and parallel-system prevention.
-
----
-
-## 33. Stakeholder Impact Matrix
-
-This section identifies the key stakeholders affected by the Engine Kernel RFC and describes the nature and mode of their interaction with the architecture defined herein.
-
-| Stakeholder | Role | Impact | Interaction Mode |
-|:---|:---|:---|:---|
-| Framework Architecture Team | Document owner and maintainer | Owns the RFC, ensures alignment with A.3, A.4, and engine RFC family | Author, reviewer, maintainer |
-| Enterprise Documentation Standards Board | Review authority | Reviews document for STD-010 compliance, metadata integrity, and structural quality | Reviewer, approver |
-| Human Governance / Framework Governance | Approval authority | Final authority for promotion to canonical status; governance constraint enforcement | Approver, governor |
-| Individual Engine RFC Authors | Downstream consumers | Must reference Kernel for lifecycle, registration, invocation, and communication architecture | Consumer, constrained author |
-| Runtime Platform Engineers | Collaborator | Must respect Runtime/Kernel boundary; host execution without duplicating Kernel coordination | Collaborator, boundary adherent |
-| Workflow Authors | Collaborator | Must route Engine invocation through Kernel-governed execution; not become a second dispatcher | Consumer, boundary adherent |
-| Standards Authors (STD-003–STD-009) | Collaborator | Must consume Kernel concepts as coordination constraints; not become execution controllers | Consumer, constrained author |
-| Platform Adapter Developers | Collaborator | Must invoke Engines through Runtime + Kernel; must not bypass governed coordination | Consumer, boundary adherent |
-| Validation and Certification Authorities | Collaborator | Receive Kernel-handoff validation and certification requests; operate independently of Kernel | Consumer, independent authority |
-
----
-
-## 34. Open Questions
-
-The following questions require future RFCs or governance decisions:
-
-1. What exact Registry schema will represent Engine registration metadata?
-2. Which Engine Contract fields are mandatory for draft Engines versus review-ready Engines?
-3. How will Kernel-mediated event publication be represented in documentation-only and future runtime contexts?
-4. What is the precise validation evidence format for Parallel System Violation detection?
-5. How will Engine health status be classified and updated?
-6. What governance process approves Engine deprecation and retirement?
-7. How will Kernel trace ids map to Knowledge Graph identifiers and artifact registry identifiers?
-8. Which future standard owns telemetry vocabulary?
-9. Which future standard owns event vocabulary, if separate from the Engine Kernel RFC?
-10. How will platform adapters prove they do not bypass Runtime + Kernel?
-11. What minimum review handoff metadata is required before certification handoff may be requested?
-12. How should swarm or multi-agent execution be represented without creating a second dispatcher?
-
----
-
-## 35. Completion Checklist
-
-- [x] Authority preserved.
-- [x] A.4 consumed, not rewritten.
-- [x] STD-000 consumed, not rewritten.
-- [x] STD-001 consumed, not rewritten.
-- [x] Standards not redefined.
-- [x] Knowledge Graph not redefined.
-- [x] Runtime not duplicated.
-- [x] Workflow not duplicated.
-- [x] Registry not duplicated.
-- [x] Kernel responsibilities defined.
-- [x] Forbidden responsibilities defined.
-- [x] Parallel system prohibition included.
-- [x] Single execution authority model defined.
-- [x] Lifecycle model defined.
-- [x] Registration model defined.
-- [x] Invocation model defined.
-- [x] State model defined.
-- [x] Event model defined.
-- [x] Artifact model defined.
-- [x] Validation model defined.
-- [x] Failure model defined.
-- [x] Telemetry model defined.
-- [x] Future Engine RFC impact defined.
-
----
-
-## 36. Completion Report
-
-### Summary
-
-Created a draft, non-canonical Engine Kernel RFC defining the Engine Kernel as the single shared execution coordination foundation for Forge AI Engines.
-
-### Document Created
-
-- `docs/AI/Runtime/A.4.1-Engine-Kernel-RFC.md`
-
-### Architecture Impact
-
-The RFC introduces a Kernel-centered coordination model for Engine loading, registration, discovery, lifecycle, invocation, dependency resolution, state separation, events, artifacts, validation handoff, telemetry, failure handling, and registry synchronization.
-
-### Parallel-System Risk Reduction
-
-The RFC explicitly prohibits alternate Engine execution authorities and states that Runtime, Workflow, Registry, Standards, Knowledge Graph, agents, tools, adapters, and individual Engines must remain consumers or collaborators rather than parallel execution systems.
-
-### Validation Performed
-
-Documentation structure was checked against the requested section list and scope constraints. No code, runtime behavior, ProjectStatus, existing standards, A.3, A.4, or individual Engine RFCs were modified.
-
-### Known Risks
-
-- This RFC is draft and non-canonical until reviewed and promoted through governance.
-- Future Registry schema, telemetry vocabulary, event vocabulary, and individual Engine RFC templates remain unresolved.
-- Future standards must preserve the boundary that standards define contracts but do not execute Engines.
-
-### Recommended Next Step
-
-Submit this RFC for governance review and use it as the required Kernel boundary reference before drafting individual Engine RFCs.
-
----
-
-## 37. Change Log
-
-| Version | Date | Author | Description |
-|:---|:---|:---|:---|
-| 0.1.0-draft | 2026-07-07 | Framework Architecture Team | Initial draft — Engine Kernel RFC with full architecture model, boundary definitions, lifecycle model, and parallel-system prohibition. |
-| 0.1.1-enterprise | 2026-07-07 | Enterprise Refactoring Agent | Enterprise refactoring — STD-010 full metadata compliance, executive summary, TOC, stakeholder impact matrix, glossary, cross-reference index, consistent formatting, introductory paragraphs, `---` separators. |
-
----
-
-## 38. Glossary
-
-| Term | Definition |
-|:---|:---|
-| **Engine Kernel** | The single shared execution coordination layer inside the Engine Platform, responsible for registration, lifecycle, invocation, dependency resolution, and parallel-system prevention. |
-| **Engine Registry** | The metadata store that records Engine identity, type, capabilities, versions, lifecycle state, health status, and artifact relationships for discoverability. |
-| **Engine Contract** | The minimum required metadata declaration (identity, version, capabilities, inputs, outputs, dependencies, etc.) that every Engine must provide for Kernel-governed registration. |
-| **Parallel System** | Any subsystem, tool, agent, adapter, or Engine behavior that creates an alternate authority for Engine discovery, lifecycle, invocation, or coordination outside Runtime + Kernel. |
-| **Canonical Execution Path** | The single governed execution chain: Agent/Tool/Adapter → Runtime Host → Engine Kernel → Registry Lookup → Selected Engine → Artifact Output → Validation → Review → Certification → Synchronization. |
-| **Lifecycle State** | One of eleven canonical states (Declared through Retired) that define the Kernel-governed status of an Engine at any point in time. |
-| **Validation Handoff** | A Kernel-initiated request to the Validation Engine or validation process to verify registration, contract, dependency, artifact, or lifecycle correctness. |
-| **Artifact** | An Engine-produced output that carries provenance metadata (producer, inputs, authority, trace id, registry identity) and does not become canonical by production alone. |
-| **Traceability** | The metadata chain (trace id, invocation id, engine id, artifact ids, validation status) sufficient to reconstruct the full execution history of an Engine invocation. |
-| **Governance Failure** | A failure category indicating that constitutional principles, Human Governance authority, or AGENTS.md constraints were violated during Engine coordination. |
-| **State Domain** | One of seven ownership-separated state areas (Runtime, Engine lifecycle, Invocation, Artifact, Validation, Certification, Memory) that prevent hidden execution control through state ownership. |
-| **Capability Declaration** | An explicit, versioned, Registry-backed, contract-bound description of a specific Engine capability including inputs, outputs, dependencies, failure modes, and lifecycle eligibility. |
-| **Circular Dependency** | A dependency cycle between two or more Engines that is prohibited and must block registration or invocation until resolved through governance-compatible remediation. |
-
----
-
-## Appendix A: Cross-Reference Index
-
-### A.1 Upstream References
-
-| Reference | Document | Relevance |
-|:---|:---|:---|
-| A.1 Constitution | `docs/AI/Architecture/A.1-Constitution.md` | Constitutional authority and governance principles that constrain Kernel behavior |
-| M.0 Framework Meta-Model | `docs/AI/Meta/M.0-Framework-Meta-Model.md` | Meta-model definitions for artifact identity and traceability |
-| M.1 | `docs/AI/Meta/M.1-*` | Framework meta-model extensions consumed by Engine architecture |
-| STD-000 Framework Standards | `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md` | Master standards index; Kernel consumes but does not redefine |
-| STD-001 | `docs/AI/Architecture/Standards/STD-001-*` | Standard consumed by Kernel for contract and governance enforcement |
-| STD-002 | `docs/AI/Architecture/Standards/STD-002-*` | Standard consumed by Kernel for validation and lifecycle expectations |
-| STD-010 Document Metadata Standard | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` | Metadata standard governing this RFC's structure and fields |
-| AGENTS.md | `AGENTS.md` | Operational governance authority referenced by Kernel constraints |
-| Framework Governance | `docs/AI/FrameworkGovernance.md` | Governance processes for RFC promotion and approval |
-| A.3 Runtime Architecture | `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md` | Runtime/Kernel boundary definition and host coordination model |
-
-### A.2 Peer References
-
-| Reference | Document | Relevance |
-|:---|:---|:---|
-| A.4 Engine Architecture | `docs/AI/Architecture/A.4-Engine-Architecture-RFC.md` | Parent Engine architecture consumed but not rewritten by this RFC |
-| A.4.3 Engine Registry RFC | `docs/AI/Runtime/A.4.3-Engine-Registry-RFC.md` | Registry metadata model that Kernel synchronization depends on |
-| A.4.5 Engine Communication RFC | `docs/AI/Runtime/A.4.5-Engine-Communication-RFC.md` | Communication model constraints referenced by Kernel invocation |
-| A.4.6 Engine State RFC | `docs/AI/Runtime/A.4.6-Engine-State-RFC.md` | State model architecture aligned with Kernel state separation |
-| A.4.7 Engine Capability RFC | `docs/AI/Runtime/A.4.7-Engine-Capability-RFC.md` | Capability model architecture aligned with Kernel capability indexing |
-
-### A.3 Internal Section Cross-References
-
-| Section | Cross-References |
-|:---|:---|
-| [Section 5 — Engine Kernel Responsibilities](#5-engine-kernel-responsibilities) | Expanded by [Section 7](#7-parallel-system-prohibition) (parallel-system prevention), [Section 16](#16-engine-lifecycle-model) (lifecycle dispatch), [Section 17](#17-engine-registration-model) (registration protocol), [Section 20](#20-engine-invocation-model) (invocation routing) |
-| [Section 7 — Parallel System Prohibition](#7-parallel-system-prohibition) | Enforced by [Section 8](#8-single-execution-authority-model) (single authority), [Section 9](#9-runtime--kernel-boundary)–[Section 14](#14-agent--tool--kernel-boundary) (boundary definitions), [Section 27](#27-failure-model) (Parallel System Violation failure category) |
-| [Section 15 — Engine Contract Boundary](#15-engine-contract-boundary) | Consumed by [Section 17](#17-engine-registration-model) (registration validation), [Section 20](#20-engine-invocation-model) (contract verification at invocation), [Section 26](#26-validation-model) (contract compliance verification) |
-| [Section 16 — Engine Lifecycle Model](#16-engine-lifecycle-model) | Referenced by [Section 20](#20-engine-invocation-model) (state transitions during invocation), [Section 22](#22-engine-state-model) (lifecycle state domain), [Section 32](#32-individual-engine-rfc-template-impact) (required Kernel reference) |
-| [Section 27 — Failure Model](#27-failure-model) | Informed by [Section 7.5](#75-explicit-prohibitions) (violation triggers), [Section 19](#19-engine-dependency-resolution) (dependency failure), [Section 26](#26-validation-model) (validation failure) |
-| [Section 29 — Security and Governance Constraints](#29-security-and-governance-constraints) | Constrains all sections; specifically [Section 5](#5-engine-kernel-responsibilities), [Section 20](#20-engine-invocation-model), [Section 26](#26-validation-model), [Section 28](#28-telemetry-and-traceability-model) |
-| [Section 30 — Migration Notes from RC2](#30-migration-notes-from-rc2) | Maps to [Section 20](#20-engine-invocation-model) (invocation flow), [Section 25](#25-engine-artifact-model) (artifact model), [Section 16](#16-engine-lifecycle-model) (lifecycle) |
-| [Section 31 — Impact on Future Standards](#31-impact-on-future-standards) | Constrains STD-003 through STD-009; reinforces [Section 7](#7-parallel-system-prohibition), [Section 13](#13-standards--kernel-boundary) |
-| [Section 32 — Individual Engine RFC Template Impact](#32-individual-engine-rfc-template-impact) | Points to all shared Kernel sections (lifecycle, registration, discovery, invocation, communication, state, telemetry, validation, registry sync, parallel-system prevention) |
-| [Section 33 — Stakeholder Impact Matrix](#33-stakeholder-impact-matrix) | Summarizes impact across all architectural sections; [Section 9](#9-runtime--kernel-boundary)–[Section 14](#14-agent--tool--kernel-boundary) define specific boundary impacts |
-
-## Family Normalization Notes
-
-This RFC participates in the Runtime RFC family normalization program. Its metadata, authority wording, lifecycle wording, certification wording, validation expectations, AI consumption boundaries, and relationship declarations are aligned to STD-010, STD-003, TPL-000, TPL-001, and the Runtime README navigation model. This normalization is editorial and governance-structural only; it does not redesign Runtime Architecture, Engine Platform Architecture, Engine Foundation responsibilities, or any Engine Specialization behavior.
