@@ -1,401 +1,283 @@
 <!--
-Identifier: FORGE-BOOTLOADER-AGENTS
-Title: AGENTS.md — Forge AI / AI-DOS Entry Point
-Version: 4.0.0-draft
-Status: Draft for Human Governance Approval
-Owner: Human Governance
-Updated: 2026-07-10
+Identifier: FORGE-AI.TARGET.AGENTS-CONTRACT
+Title: AGENTS.md — Forge AI Target Project Contract
+Version: 1.0.0-draft
+Status: Draft
+Owner: Forge AI Target Project Governance
+Updated: 2026-07-11
 -->
 
-# AGENTS.md — Forge AI / AI-DOS Entry Point
+# AGENTS.md — Forge AI Target Project Contract
 
 ## Document Metadata
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-BOOTLOADER-AGENTS` |
-| Title | AGENTS.md — Forge AI / AI-DOS Entry Point |
-| Version | `4.0.0-draft` |
+| Identifier | `FORGE-AI.TARGET.AGENTS-CONTRACT` |
+| Title | AGENTS.md — Forge AI Target Project Contract |
+| Version | `1.0.0-draft` |
 | Status | Draft |
-| Canonical Status | Repository entry authority; pending Human Governance approval |
-| Classification | Target Repository Entry Contract and AI-DOS Provider Entry Point |
-| Document Type | Repository Bootloader |
-| Owner | Human Governance |
-| Maintainers | Framework Architecture Team |
-| Review Authority | Framework Governance |
+| Classification | Forge AI Target Project Contract |
+| Document Type | Target Project Contract |
+| Owner | Forge AI Target Project Governance |
 | Approval Authority | Human Governance |
-| Created | 2026-07-08 |
-| Last Updated | 2026-07-10 |
-| Lifecycle Phase | Entry-Point Realignment |
-| Traceability ID | `FORGE-AI.V2.AGENTS-ENTRY-001` |
-| Scope | Declares the AI-DOS Framework Provider entry contract and, for Forge AI self-hosting only, Target Repository declaration inputs consumed by TargetRepositoryResolution. |
-| Out of Scope | AI-DOS internal architecture definition, ProjectStatus content, DevelopmentPhases content, roadmap content, implementation design, certification, and automatic state updates. |
+| Last Updated | 2026-07-11 |
+| Scope | Forge AI identity, mission, Target Context, Target resources, protected areas, AI-DOS invocation boundary, execution rules, evidence requirements, autonomy safety, and working principles. |
+| Out of Scope | AI-DOS product architecture, internal AI-DOS procedures, AI-DOS governance mechanics, implementation design, automatic state updates, and planning-document redesign. |
 | Normative Authority | Human Governance |
-| Normative References | AI-DOS Framework Provider entry point; Target Repository resources declared in this document |
-| Dependencies | Human task instruction; accessible Target Repository; accessible AI-DOS Framework Provider |
-| Consumes | Human instruction, repository identity, Framework Provider identity, project resource declarations |
-| Produces | Provider entry routing and Forge AI self-hosting declaration inputs; TargetRepositoryResolution produces the resolution result and BootSequence loads it. |
-| Related Specifications | AI-DOS internal authorities resolved behind the Framework Provider entry point |
-| Supersedes | Prior Forge AI repository bootloader drafts |
-| Superseded By | None |
-| Promotion Requirements | Human Governance review; provider-entry validation; Target Repository declaration validation; self-hosting validation |
-| Certification Status | Not certified |
+| Mission Source | `docs/ForgeAI-Mission-and-Autonomy-Model.md` |
 
 ---
 
-## 1. Purpose
+## 1. Forge AI Identity
 
-This file is the **single entry point** for:
+Forge AI is the AI-DOS Development and Autonomy Enablement Target Project.
 
-1. Forge AI repository self-hosting.
-2. External Target Repositories that consume Forge AI / AI-DOS.
-3. AI agents beginning work against either operating mode.
+Forge AI is not AI-DOS. Forge AI owns project truth, project mission, project planning, project state, project evidence, and project authorization. AI-DOS owns reusable framework truth and reusable capability behavior.
 
-A Target Project must never depend on AI-DOS internal document paths.
-
-A Target Project depends only on:
-
-```text
-AI-DOS Framework Provider
-    +
-AI-DOS Framework Entry Point
-```
-
-AI-DOS resolves its own internal authorities behind that entry point.
+Forge AI develops AI-DOS, validates AI-DOS, applies AI-DOS to authorized Forge AI work, improves AI-DOS autonomy through evidence, and prepares AI-DOS for safe reuse by independent Target Projects.
 
 ---
 
-## Section A — AI-DOS Framework Provider Entry Contract
+## 2. Mission
 
-The AI-DOS Provider Entry is:
+Forge AI exists to develop, validate, self-apply, harden, and progressively autonomize AI-DOS through bounded, evidence-driven, Human-Governed work.
 
-```text
-<AI_DOS_ROOT>/AGENTS.md
-```
+### Mission Summary
 
-Purpose:
-
-- enter AI-DOS;
-- start AI-DOS boot;
-- route to the System Layer;
-- start TargetRepositoryResolution.
-
-AI-DOS Provider AGENTS.md starts the Framework boot.
-It does not resolve Target Project resources itself.
-It delegates Target Repository resolution to TargetRepositoryResolution.
-
-| Provider Declaration | Value |
+| Mission Pillar | Forge AI Meaning |
 |:---|:---|
-| Framework Provider identity | Forge AI / AI-DOS |
-| Framework Provider root | Repository root containing this `AGENTS.md` in self-hosting mode, or `<AI_DOS_ROOT>` for external targets |
-| Framework Provider entry point | `<AI_DOS_ROOT>/AGENTS.md` |
-| AI-DOS internal navigation entry | `docs/AI/README.md` |
-| System Layer entry | `docs/AI/System/README.md` |
-| Target Repository resolution authority | `docs/AI/System/TargetRepositoryResolution.md` |
-| Context loading authority | `docs/AI/System/BootSequence.md` |
+| Develop AI-DOS | Advance the reusable system Forge AI is responsible for building. |
+| Preserve product purity | Keep AI-DOS reusable, Target-independent, and free of Forge AI project-specific truth. |
+| Self-apply responsibly | Use AI-DOS on authorized Forge AI work to expose real strengths, weaknesses, and blockers. |
+| Validate with evidence | Treat task inputs, outputs, validation, review, blockers, and acceptance as proof. |
+| Increase autonomy progressively | Mature capability through governed, evidence-backed levels rather than unrestricted execution. |
+| Preserve safety and traceability | Require scope boundaries, protected-area respect, validation, review, escalation, and auditable results. |
+| Prove external readiness | Demonstrate that AI-DOS can operate on independent Target Contexts without leakage or authority crossover. |
+| Improve from observation | Prioritize AI-DOS changes because execution evidence shows a need, not because speculation suggests one. |
 
-Provider boot routes to TargetRepositoryResolution for active Target Repository identification, Target AGENTS discovery, declaration resolution, validation, blocker reporting, and BootSequence handoff. Provider boot does not create a second resolution procedure.
-
----
-
-## Section B — Forge AI Target Repository Declarations
-
-These declarations apply only to Forge AI self-hosting.
-They are inputs to TargetRepositoryResolution.
-They are not resolution results.
-They are not universal external-project defaults.
-
-The Target Repository Entry is:
-
-```text
-<TARGET_REPOSITORY_ROOT>/AGENTS.md
-```
-
-Purpose:
-
-- declare Target Project resources;
-- declare project authority order;
-- declare validation and protection context;
-- declare the AI-DOS Provider reference.
-
-In Forge AI self-hosting, the AI-DOS Provider Entry and Target Repository Entry are two logical roles in this same physical file. This is not a circular dependency: the Provider role starts resolution, and TargetRepositoryResolution reads the Target role as declaration input.
+This contract summarizes the mission. It does not duplicate the full mission and autonomy model.
 
 ---
 
-## 2. Operating Modes
+## 3. Project Scope
 
-### 2.1 Self-Hosting Mode
+Forge AI performs Target Project work that advances AI-DOS capability and safe autonomy.
 
-Use when the active Target Repository is the Forge AI repository itself.
+In scope:
 
-```text
-AI-DOS Provider
-    = Forge AI repository
+- AI-DOS development authorized by Human Governance.
+- AI-DOS validation through real tasks, tests, reviews, and evidence.
+- AI-DOS self-application against Forge AI Target Context.
+- Autonomy progression through explicit capability evidence.
+- Capability hardening for planning, execution, validation, review, recovery, reporting, and blocker handling.
+- Repository evolution that improves clarity, maintainability, and Target readiness.
+- External Target readiness work that preserves context isolation and reusable behavior.
 
-Target Repository
-    = Forge AI repository
+Out of scope unless separately authorized:
 
-Provider Entry Point
-    = AGENTS.md
-
-Target Entry Point
-    = AGENTS.md
-```
-
-This is one operating model with one shared entry point, not a parallel system.
-
-### 2.2 External Target Mode
-
-Use when Forge AI / AI-DOS operates on another repository.
-
-```text
-AI-DOS Provider
-    = Forge AI repository
-
-Target Repository
-    = external repository
-
-Provider Entry Point
-    = <AI_DOS_ROOT>/AGENTS.md
-
-Target Entry Point
-    = <TARGET_REPOSITORY_ROOT>/AGENTS.md
-```
-
-The external Target Repository declares only its own resources and the AI-DOS Provider entry point. It must not declare or reference AI-DOS internal files.
+- Automatic project-state updates.
+- Silent phase, roadmap, or lifecycle changes.
+- Unbounded autonomous operation.
+- Cross-Target execution without explicit Target authority.
+- Project shortcuts that contaminate reusable AI-DOS behavior.
 
 ---
 
-## 3. Forge AI Self-Hosting Declarations
+## 4. Target Resources
 
-These declarations apply only when this repository is the active Target Repository. They are Forge AI Target Repository declaration inputs for TargetRepositoryResolution, not resolution results and not external-project defaults.
+Forge AI supplies Target resources as task context. These resources are Forge AI project resources, not AI-DOS internal knowledge.
 
-| Declaration | Resolution |
+### Target Responsibilities
+
+| Resource Category | Target Responsibility |
 |:---|:---|
-| Target Repository Identity | Forge AI repository |
-| Target Repository Root | Repository root containing this `AGENTS.md` |
-| Target Entry Point | `AGENTS.md` |
-| Framework Provider | Forge AI / AI-DOS |
-| Framework Provider Root | Same repository root in self-hosting mode |
-| Framework Provider Entry Point | `AGENTS.md` |
-| AI-DOS Internal Navigation Entry | `docs/AI/README.md` |
-| ProjectStatus Resource | `docs/DevelopmentPhases/ProjectStatus.md` |
-| DevelopmentPhases Resource | `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
-| Project Roadmap Resource | `docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md` |
-| Historical Roadmap Resource | `docs/Roadmap/Forge-AI-v3-Master-Architecture-Development-Roadmap.md` |
-| Project Architecture Resources | Declared task-by-task or resolved from repository architecture navigation |
-| Source Roots | Repository roots relevant to the active task |
-| Validation Commands | Declared by the active task or repository-local validation guidance |
-| Protected Areas | This file plus the active ProjectStatus protected-area state and any explicit Human Governance restrictions |
+| Source | Identify authorized code, configuration, scripts, and assets relevant to the task. |
+| Documentation | Provide Forge AI project documentation needed to understand task scope and constraints. |
+| Planning | Provide project planning resources such as active status, development sequencing, roadmap direction, and approved objectives when relevant. |
+| Architecture | Provide Target Project architecture artifacts needed for the authorized change or review. |
+| Tests | Identify applicable tests, checks, fixtures, and validation expectations. |
+| Governance | Provide Human Governance decisions, approval boundaries, protected areas, and review expectations. |
+| Evidence | Preserve task inputs, changed artifacts, validation output, review findings, blockers, and acceptance records. |
 
-These physical paths are Forge AI self-hosting declarations. They are not universal AI-DOS requirements.
+Target resources must be explicit, task-relevant, and bounded. Missing resources are blockers, not permission to invent context.
 
 ---
 
-## 4. Entry-Point Boundary
+## 5. Protected Areas
 
-### 4.1 Target Repository Responsibilities
+Protected areas are Forge AI Target Project boundaries. They prevent accidental authority drift, lifecycle mutation, evidence loss, and product-project contamination.
 
-The Target Repository entry point owns:
+### Protected Areas
 
-- Target Repository identity.
-- AI-DOS Framework Provider declaration.
-- AI-DOS Framework Provider entry point.
-- ProjectStatus resource declaration.
-- DevelopmentPhases resource declaration.
-- Roadmap resource declaration.
-- Project architecture resource declarations.
-- Source-root declarations.
-- Validation-command declarations.
-- Protected-area declarations.
-- Target-project authority routing.
+| Protected Area | Protection Rule |
+|:---|:---|
+| Root Target Project contract | Modify only when the active task explicitly authorizes contract changes. |
+| Mission and autonomy model | Treat as mission authority; do not rewrite or duplicate without explicit authorization. |
+| Live project state | Do not update operational state unless the task explicitly authorizes a state update. |
+| Development sequencing | Do not change phase or stage definitions unless the task explicitly authorizes planning realignment. |
+| Roadmap direction | Do not change roadmap direction unless the task explicitly authorizes roadmap work. |
+| Governance decisions | Do not reinterpret, weaken, or override Human Governance decisions. |
+| Evidence records | Preserve evidence provenance; do not delete, obscure, or fabricate completion evidence. |
+| AI-DOS product truth | Do not insert Forge AI project truth into reusable AI-DOS product truth. |
 
-### 4.2 AI-DOS Responsibilities
-
-The AI-DOS Framework Provider entry point owns:
-
-- AI-DOS internal authority discovery.
-- Governance routing.
-- System Layer routing.
-- Operational Core routing.
-- Runtime and Engine routing.
-- Commands, Workflows, and Templates routing.
-- AI-DOS validation and review model routing.
-
-### 4.3 Prohibited Coupling
-
-Target Project documents must not directly depend on:
-
-- AI-DOS Governance file paths.
-- AI-DOS Framework Governance file paths.
-- AI-DOS architecture paths.
-- AI-DOS System Layer paths.
-- AI-DOS Runtime or Engine paths.
-- AI-DOS command, workflow, or template paths.
-
-Only the AI-DOS Provider entry point may expose and resolve those internal resources.
+Protected-area conflicts must stop work and be reported as blockers.
 
 ---
 
-## 5. Mandatory Boot Sequence
+## 6. AI-DOS Invocation
+
+Forge AI invokes AI-DOS as a reusable capability system. Forge AI supplies the Target side of the work and receives bounded results.
 
 ```text
-1. Receive Human Task.
-2. Enter AI-DOS through the AI-DOS Provider AGENTS.md.
-3. Route to TargetRepositoryResolution.
-4. TargetRepositoryResolution identifies the active Target Repository, establishes `<TARGET_REPOSITORY_ROOT>`, resolves `<TARGET_AGENTS_PATH>`, reads Target AGENTS declarations, resolves repository-relative project resources, validates declarations, reports blockers, and produces the Resolution Result.
-5. TargetRepositoryResolution hands the Resolution Result to BootSequence.
-6. BootSequence consumes the Resolution Result and loads the resolved Framework + Target Project context.
-7. Operational Core consumes the loaded context.
-8. AuthorityModel, SourceOfTruth, ContextAssembly, DecisionModel, and ExecutionSequence proceed from loaded context.
-9. Classify the task.
-10. Assemble the minimum necessary context.
-11. Execute only authorized scope.
-12. Validate.
-13. Review when required.
-14. Produce a completion report.
+Forge AI Goal
+    ↓
+Target Context
+    ↓
+AI-DOS Invocation
+    ↓
+Result
+    ↓
+Evidence
+    ↓
+Human Governance
+    ↓
+Next Target Objective
 ```
 
-Do not skip TargetRepositoryResolution or duplicate its procedure in this file.
+```mermaid
+flowchart TD
+    A[Forge AI Goal] --> B[Target Context]
+    B --> C[AI-DOS Invocation]
+    C --> D[Result]
+    D --> E[Evidence]
+    E --> F[Human Governance]
+    F --> G[Next Target Objective]
+```
 
-Do not substitute Forge AI self-hosting paths for an external Target Repository. Do not treat declaration inputs in this file as resolution results.
+Forge AI supplies:
 
----
+- Target Context.
+- Target resources.
+- Objectives.
+- Constraints.
+- Authorized scope.
+- Protected-area boundaries.
+- Validation expectations.
+- Review expectations.
 
-## 6. Boot Failure Rules
+AI-DOS returns:
 
-Stop and report a blocker if:
+- Result.
+- Evidence.
+- Review findings when applicable.
+- Validation results when applicable.
+- Blockers, risks, and uncertainty.
 
-- the Target Repository cannot be identified;
-- Target `AGENTS.md` is missing;
-- AI-DOS Framework Provider entry point is missing or inaccessible;
-- required Target Repository declarations are missing;
-- declared project resources cannot be resolved;
-- multiple Target Repositories are possible without explicit selection;
-- a Target Project directly depends on AI-DOS internal paths;
-- protected-area or validation declarations required by the task are unavailable;
-- authority conflicts cannot be resolved safely.
-
-Never invent missing paths.
-
-Never use self-hosting paths as external-project fallbacks.
-
----
-
-## 7. ProjectStatus Boundary
-
-ProjectStatus owns live operational state only.
-
-It does not own:
-
-- project-resource declarations;
-- AI-DOS entry-point declarations;
-- path resolution;
-- architecture;
-- roadmap structure;
-- certification;
-- promotion;
-- implementation authorization.
-
-ProjectStatus may be updated only through explicit Human Governance authorization or a dedicated authorized state-update task.
+This contract describes only Forge AI's Target-side invocation responsibilities. It does not define how AI-DOS works internally.
 
 ---
 
-## 8. DevelopmentPhases and Roadmap Boundary
+## 7. Execution Rules
 
-DevelopmentPhases owns phase and stage sequencing.
+Execution must be bounded, evidence-first, and governed.
 
-The active roadmap owns long-term Target Project direction.
+### Execution Constraints
 
-Neither document:
-
-- declares AI-DOS internal paths;
-- owns the AI-DOS entry point;
-- replaces ProjectStatus;
-- promotes architecture;
-- activates implementation by implication.
-
----
-
-## 9. Task Classification
-
-| Task Type | Required Target Context | AI-DOS Internal Routing |
-|:---|:---|:---|
-| Governance | Project state, roadmap, affected project authority | Provider resolves governance policy |
-| Documentation | Project state, affected artifact, project constraints | Provider resolves metadata, terminology, templates |
-| Audit / Review | Project state, audit scope, evidence | Provider resolves audit/review rules |
-| Implementation | Project state, source roots, architecture, validation commands, protected areas | Provider resolves execution and validation rules |
-| Roadmap / Status | Project roadmap, DevelopmentPhases, ProjectStatus | Provider resolves governance boundaries |
-| Runtime / Engine | Project authorization and affected scope | Provider resolves Runtime / Engine authorities |
-
-Read only the minimum context required.
+| Constraint | Rule |
+|:---|:---|
+| Bounded work | Execute only the task-authorized scope. |
+| No unauthorized expansion | Do not expand objectives, files, lifecycle state, or authority by implication. |
+| Protected-area respect | Refuse unauthorized protected-area changes and report blockers. |
+| Evidence-first execution | Record what was requested, inspected, changed, validated, and unresolved. |
+| Validation | Run applicable checks or report why they could not be run. |
+| Review | Separate review findings from Human Governance approval. |
+| Blocker reporting | Stop, narrow, or escalate when required context, authority, or safety is missing. |
+| Target isolation | Keep Target Context explicit and isolated from other Target Projects. |
+| Product purity | Preserve reusable AI-DOS behavior and avoid Forge AI project-specific contamination. |
 
 ---
 
-## 10. File Safety
+## 8. Evidence Requirements
 
-- Modify only task-authorized files.
-- Do not move, rename, archive, delete, or merge files unless explicitly authorized.
-- Update inbound references in the same change as an authorized move.
-- Do not modify protected areas without explicit authorization.
-- Do not update ProjectStatus automatically.
-- Do not begin future phases by implication.
-- Do not let historical evidence become active authority.
+Every AI-DOS-assisted Forge AI task must return enough evidence for Human Governance to understand what happened and decide what comes next.
 
----
+### Evidence Requirements
 
-## 11. Validation
+| Evidence Type | Minimum Requirement |
+|:---|:---|
+| Task input | Identify the objective, constraints, and authorized scope. |
+| Target Context | Identify the resources and assumptions actually used. |
+| Changed artifacts | List files or artifacts changed, or state that none changed. |
+| Validation | Report commands, checks, outputs, failures, skipped checks, and environment limitations. |
+| Review | Report findings, uncertainty, unresolved questions, and approval boundaries. |
+| Blockers | Identify missing context, unsafe requests, protected-area conflicts, or failed validation. |
+| Safety proof | Explain how scope, protected areas, project state, and product purity were preserved. |
+| Completion report | Summarize result, evidence, risks, and exactly authorized next-step recommendations when required. |
 
-Every task must validate:
-
-- Target Repository resolved by TargetRepositoryResolution.
-- AI-DOS Provider entry point resolved.
-- No Target Project document directly depends on AI-DOS internal paths.
-- Active phase and protected areas preserved.
-- Only authorized files changed.
-- Task-specific validation completed.
-- ProjectStatus unchanged unless authorized.
-- Completion evidence produced.
+Evidence must be specific, traceable, and honest. A missing or failed check is evidence, not something to hide.
 
 ---
 
-## 12. Completion Report
+## 9. Autonomy Safety
 
-Every task ends with:
+Forge AI advances autonomy only through explicit evidence and Human Governance acceptance.
 
-- Summary.
-- Files changed.
-- Target Repository resolution confirmation.
-- AI-DOS entry-point confirmation.
-- Authority and scope validation.
-- Project state and roadmap validation.
-- File-safety validation.
-- Task-specific validation results.
-- Risks or blockers.
-- Recommended next step.
+Autonomy means completing increasingly complex bounded work with less direct intervention while preserving authority, constraints, validation, traceability, escalation, and safe-stop behavior.
 
----
+Autonomy does not mean unrestricted access, self-approval, silent scope expansion, automatic lifecycle changes, automatic state updates, bypassed governance, bypassed protected areas, or uncontrolled continuous execution.
 
-## 13. Core Invariants
+Safety invariants:
 
-1. Human Governance is final.
-2. Every task has one active Target Repository.
-3. Every Target Repository has one root `AGENTS.md`.
-4. Every Target Repository declares one AI-DOS Framework Provider entry point.
-5. AI-DOS internal structure is hidden behind that entry point.
-6. Target Project documents do not reference AI-DOS internal paths.
-7. Root `AGENTS.md` owns project-resource declarations.
-8. ProjectStatus owns live state only.
-9. DevelopmentPhases owns sequence only.
-10. Roadmap owns direction only.
-11. AI agents do not become a source of truth.
-12. Self-hosting and external operation use the same model.
+- Human Governance remains final.
+- Target Context is explicit.
+- Scope is bounded.
+- Protected areas are enforced.
+- No authority is inferred.
+- No lifecycle change is automatic.
+- No project state is modified without authorization.
+- Validation is mandatory.
+- Review is distinct from approval.
+- Blockers stop or safely redirect execution.
+- Every result is traceable.
+- Target Contexts remain isolated.
+- AI-DOS remains Target-independent.
 
 ---
 
-## 14. Version History
+## 10. Working Principles
+
+- Target-first: Forge AI supplies explicit Target Context before expecting useful AI-DOS work.
+- Human Governance authority: Human Governance is final for approvals, scope changes, and autonomy claims.
+- Evidence before assumptions: Missing context must be reported rather than invented.
+- Bounded execution: Work remains inside authorized objectives, files, and constraints.
+- Reusable capability over project shortcuts: Prefer improvements that strengthen reusable AI-DOS behavior.
+- AI-DOS purity preservation: Keep Forge AI project truth out of reusable AI-DOS truth.
+- Review is not approval: Review informs governance; it does not replace governance.
+- Blockers are valid outcomes: Safe stopping is preferable to unsafe completion.
+- External readiness requires proof: Self-application alone does not prove independent Target readiness.
+
+---
+
+## 11. Non-Goals
+
+This Target Project contract does not define:
+
+- AI-DOS architecture.
+- AI-DOS runtime behavior.
+- AI-DOS operating layers.
+- AI-DOS governance mechanics.
+- AI-DOS startup procedures.
+- AI-DOS Target-discovery procedures.
+- AI-DOS documentation navigation.
+- AI-DOS implementation design.
+- Universal lifecycle requirements for external Target Projects.
+- Automatic state, roadmap, phase, sprint, milestone, or backlog requirements.
+
+---
+
+## 12. Version History
 
 | Version | Date | Description |
 |:---|:---|:---|
-| `3.0.0-beta` | 2026-07-10 | Prior Forge AI repository bootloader with direct internal authority routing. |
-| `4.0.0-draft` | 2026-07-10 | Introduced the single AI-DOS Provider entry point and Target Repository declaration contract. |
+| `1.0.0-draft` | 2026-07-11 | Initial Forge AI Target Project contract realigned around AI-DOS development, validation, self-application, autonomy safety, evidence, and Target-side invocation. |
