@@ -28,7 +28,7 @@
 | Dependencies | Governance Core; Meta Foundation; Standards Foundation; Runtime Architecture; Engine Platform; Engine Foundation RFC family; Operational Core replacement plan; active ProjectStatus and DevelopmentPhases roadmap. |
 | Consumes | Human task instruction, repository boot sequence, governance navigation, governance decision policy, operational state, roadmap sequence, constitutional principles, meta models, terminology, metadata requirements, Runtime Architecture, Engine Architecture, and Engine Specialization template. |
 | Produces | Operational Core entry guidance, task boot sequence, authority routing, AI operating model, operational boundary rules, Runtime interaction rules, Engine interaction rules, and completion-report expectations. |
-| Related Specifications | `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md`; `docs/AI/Operational/Operational-Core-Replacement-Matrix.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
+| Related Specifications | `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md` (Forge AI self-hosting related specification only); `docs/AI/Operational/Operational-Core-Replacement-Matrix.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
 | Supersedes | Prior release-candidate master-index wording in this file while preserving this file as the Operational Core entry point. |
 | Superseded By | None |
 | Promotion Requirements | Framework Governance review, Human Governance review, validation against Governance Atlas, ProjectStatus, DevelopmentPhases, STD-010, Runtime Architecture, Engine Architecture, and explicit Human Governance promotion authorization. |
@@ -87,20 +87,24 @@ This document does not:
 
 ## 3. Authority Chain
 
-Operational execution follows this authority chain:
+AIFramework begins after TargetRepositoryResolution and BootSequence. Operational execution consumes the resolved and loaded context through this authority chain:
 
 ```text
 Human Governance
     ↓
-AGENTS.md repository bootloader
+AI-DOS Provider AGENTS.md
+    ↓
+TargetRepositoryResolution Resolution Result
+    ↓
+BootSequence loaded resolved Framework + Target Project context
     ↓
 docs/AI/GOVERNANCE.md Governance Atlas
     ↓
 docs/AI/FrameworkGovernance.md governance decision policy when applicable
     ↓
-<PROJECT_STATUS_PATH> operational state declared by the active Target Repository
+<PROJECT_STATUS_PATH> operational state loaded from the resolved Target Repository
     ↓
-<DEVELOPMENT_PHASES_PATH> roadmap sequence declared by the active Target Repository
+<DEVELOPMENT_PHASES_PATH> roadmap sequence loaded from the resolved Target Repository
     ↓
 Constitution / Meta / Standards
     ↓
@@ -125,18 +129,18 @@ Rules:
 
 ## 4. Boot Sequence
 
-Every AI-assisted task starts with this sequence unless Human Governance explicitly narrows the required authority set:
+Every AI-assisted task enters AIFramework only after TargetRepositoryResolution and BootSequence unless Human Governance explicitly narrows the required authority set:
 
 ```text
-1. Read AGENTS.md.
+1. Confirm TargetRepositoryResolution completed and produced the Resolution Result.
         ↓
-2. Read docs/AI/GOVERNANCE.md.
+2. Confirm BootSequence consumed the Resolution Result and loaded resolved Framework + Target Project context.
         ↓
-3. Read the ProjectStatus declared by the active Target Repository (`<PROJECT_STATUS_PATH>`).
+3. Consume the loaded Target Repository identity, ProjectStatus, DevelopmentPhases, roadmap, architecture resources, source roots, validation commands, protected areas, and task-relevant AI-DOS authority.
         ↓
-4. Read the DevelopmentPhases declared by the active Target Repository (`<DEVELOPMENT_PHASES_PATH>`).
+4. Read docs/AI/GOVERNANCE.md from the loaded Framework context.
         ↓
-5. Identify current phase, stage, objective, next queue, and frozen areas.
+5. Identify current phase, stage, objective, next queue, and frozen areas from loaded context.
         ↓
 6. Classify the task type.
         ↓
@@ -151,7 +155,7 @@ Every AI-assisted task starts with this sequence unless Human Governance explici
 11. Report completion, risks, validation evidence, and recommended next step.
 ```
 
-Stop and escalate to Human Governance when required authority is missing, current phase or frozen-area status is unclear, task scope conflicts with authority, or the requested work crosses a roadmap boundary without explicit authorization.
+AIFramework must not discover the Target Repository, resolve Target AGENTS, resolve project paths, validate declarations, override TargetRepositoryResolution, or rerun BootSequence. Stop and escalate to Human Governance when required authority is missing, current phase or frozen-area status is unclear, task scope conflicts with authority, or the requested work crosses a roadmap boundary without explicit authorization.
 
 ---
 

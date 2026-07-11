@@ -28,13 +28,13 @@ Updated: 2026-07-10
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Entry-Point Realignment |
 | Traceability ID | `FORGE-AI.V2.AGENTS-ENTRY-001` |
-| Scope | Declares Target Repository resources, declares the AI-DOS Framework Provider entry point, selects operating mode, and bootstraps deterministic execution. |
+| Scope | Declares the AI-DOS Framework Provider entry contract and, for Forge AI self-hosting only, Target Repository declaration inputs consumed by TargetRepositoryResolution. |
 | Out of Scope | AI-DOS internal architecture definition, ProjectStatus content, DevelopmentPhases content, roadmap content, implementation design, certification, and automatic state updates. |
 | Normative Authority | Human Governance |
 | Normative References | AI-DOS Framework Provider entry point; Target Repository resources declared in this document |
 | Dependencies | Human task instruction; accessible Target Repository; accessible AI-DOS Framework Provider |
 | Consumes | Human instruction, repository identity, Framework Provider identity, project resource declarations |
-| Produces | Operating mode, resolved entry points, Target Repository resource map, boot boundary, task execution boundary |
+| Produces | Provider entry routing and Forge AI self-hosting declaration inputs; TargetRepositoryResolution produces the resolution result and BootSequence loads it. |
 | Related Specifications | AI-DOS internal authorities resolved behind the Framework Provider entry point |
 | Supersedes | Prior Forge AI repository bootloader drafts |
 | Superseded By | None |
@@ -62,6 +62,63 @@ AI-DOS Framework Entry Point
 ```
 
 AI-DOS resolves its own internal authorities behind that entry point.
+
+---
+
+## Section A — AI-DOS Framework Provider Entry Contract
+
+The AI-DOS Provider Entry is:
+
+```text
+<AI_DOS_ROOT>/AGENTS.md
+```
+
+Purpose:
+
+- enter AI-DOS;
+- start AI-DOS boot;
+- route to the System Layer;
+- start TargetRepositoryResolution.
+
+AI-DOS Provider AGENTS.md starts the Framework boot.
+It does not resolve Target Project resources itself.
+It delegates Target Repository resolution to TargetRepositoryResolution.
+
+| Provider Declaration | Value |
+|:---|:---|
+| Framework Provider identity | Forge AI / AI-DOS |
+| Framework Provider root | Repository root containing this `AGENTS.md` in self-hosting mode, or `<AI_DOS_ROOT>` for external targets |
+| Framework Provider entry point | `<AI_DOS_ROOT>/AGENTS.md` |
+| AI-DOS internal navigation entry | `docs/AI/README.md` |
+| System Layer entry | `docs/AI/System/README.md` |
+| Target Repository resolution authority | `docs/AI/System/TargetRepositoryResolution.md` |
+| Context loading authority | `docs/AI/System/BootSequence.md` |
+
+Provider boot routes to TargetRepositoryResolution for active Target Repository identification, Target AGENTS discovery, declaration resolution, validation, blocker reporting, and BootSequence handoff. Provider boot does not create a second resolution procedure.
+
+---
+
+## Section B — Forge AI Target Repository Declarations
+
+These declarations apply only to Forge AI self-hosting.
+They are inputs to TargetRepositoryResolution.
+They are not resolution results.
+They are not universal external-project defaults.
+
+The Target Repository Entry is:
+
+```text
+<TARGET_REPOSITORY_ROOT>/AGENTS.md
+```
+
+Purpose:
+
+- declare Target Project resources;
+- declare project authority order;
+- declare validation and protection context;
+- declare the AI-DOS Provider reference.
+
+In Forge AI self-hosting, the AI-DOS Provider Entry and Target Repository Entry are two logical roles in this same physical file. This is not a circular dependency: the Provider role starts resolution, and TargetRepositoryResolution reads the Target role as declaration input.
 
 ---
 
@@ -111,7 +168,7 @@ The external Target Repository declares only its own resources and the AI-DOS Pr
 
 ## 3. Forge AI Self-Hosting Declarations
 
-These declarations apply only when this repository is the active Target Repository.
+These declarations apply only when this repository is the active Target Repository. They are Forge AI Target Repository declaration inputs for TargetRepositoryResolution, not resolution results and not external-project defaults.
 
 | Declaration | Resolution |
 |:---|:---|
@@ -184,27 +241,24 @@ Only the AI-DOS Provider entry point may expose and resolve those internal resou
 
 ```text
 1. Receive Human Task.
-2. Identify the active Target Repository.
-3. Read the Target Repository root AGENTS.md.
-4. Resolve the declared AI-DOS Framework Provider entry point.
-5. Load AI-DOS through that single entry point.
-6. Let AI-DOS resolve its own internal authority and operating rules.
-7. Resolve Target Repository resources declared by Target AGENTS.md.
-8. Read resolved ProjectStatus.
-9. Read resolved DevelopmentPhases.
-10. Read resolved roadmap and task-specific project resources.
-11. Identify phase, stage, current objective, queue, protected areas, and validation context.
-12. Classify the task.
-13. Assemble the minimum necessary context.
-14. Execute only authorized scope.
-15. Validate.
-16. Review when required.
-17. Produce a completion report.
+2. Enter AI-DOS through the AI-DOS Provider AGENTS.md.
+3. Route to TargetRepositoryResolution.
+4. TargetRepositoryResolution identifies the active Target Repository, establishes `<TARGET_REPOSITORY_ROOT>`, resolves `<TARGET_AGENTS_PATH>`, reads Target AGENTS declarations, resolves repository-relative project resources, validates declarations, reports blockers, and produces the Resolution Result.
+5. TargetRepositoryResolution hands the Resolution Result to BootSequence.
+6. BootSequence consumes the Resolution Result and loads the resolved Framework + Target Project context.
+7. Operational Core consumes the loaded context.
+8. AuthorityModel, SourceOfTruth, ContextAssembly, DecisionModel, and ExecutionSequence proceed from loaded context.
+9. Classify the task.
+10. Assemble the minimum necessary context.
+11. Execute only authorized scope.
+12. Validate.
+13. Review when required.
+14. Produce a completion report.
 ```
 
-Do not skip Target Repository resolution.
+Do not skip TargetRepositoryResolution or duplicate its procedure in this file.
 
-Do not substitute Forge AI self-hosting paths for an external Target Repository.
+Do not substitute Forge AI self-hosting paths for an external Target Repository. Do not treat declaration inputs in this file as resolution results.
 
 ---
 
@@ -294,7 +348,7 @@ Read only the minimum context required.
 
 Every task must validate:
 
-- Target Repository resolved.
+- Target Repository resolved by TargetRepositoryResolution.
 - AI-DOS Provider entry point resolved.
 - No Target Project document directly depends on AI-DOS internal paths.
 - Active phase and protected areas preserved.

@@ -40,9 +40,11 @@ This atlas is a map, not a replacement authority. It does not supersede `AGENTS.
 Core conclusions:
 
 - Human Governance is final.
-- `AGENTS.md` is the repository bootloader and bootstrap authority.
-- The ProjectStatus declared by the active Target Repository (`<PROJECT_STATUS_PATH>`) is operational state, not architecture. For Forge AI self-hosting, `<PROJECT_STATUS_PATH>` resolves to `docs/DevelopmentPhases/ProjectStatus.md`.
-- The DevelopmentPhases declared by the active Target Repository (`<DEVELOPMENT_PHASES_PATH>`) is strategic roadmap, not live status. For Forge AI self-hosting, `<DEVELOPMENT_PHASES_PATH>` resolves to `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`.
+- The AI-DOS Provider root `AGENTS.md` is the Provider entry that starts Framework boot and routes to TargetRepositoryResolution; the Target Repository root `AGENTS.md` is the Target Project declaration contract.
+- TargetRepositoryResolution owns Target Repository identification, Target AGENTS discovery, project-resource resolution, declaration validation, blocker reporting, Resolution Result production, and BootSequence handoff.
+- BootSequence owns loading the resolved Framework + Target Project context from the Resolution Result.
+- The ProjectStatus loaded from the resolved Target Repository (`<PROJECT_STATUS_PATH>`) is operational state, not architecture. For Forge AI self-hosting only, `<PROJECT_STATUS_PATH>` resolves to `docs/DevelopmentPhases/ProjectStatus.md`.
+- The DevelopmentPhases loaded from the resolved Target Repository (`<DEVELOPMENT_PHASES_PATH>`) is strategic roadmap, not live status. For Forge AI self-hosting only, `<DEVELOPMENT_PHASES_PATH>` resolves to `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`.
 - Lower layers consume higher layers and shall never redefine them.
 - AI may propose, classify, validate, and recommend.
 - AI shall never approve, certify, promote, or override Human Governance.
@@ -126,7 +128,10 @@ Governance favors explicit ownership over implicit convention. A lower document 
 ```mermaid
 flowchart TD
     H[Human Governance]
-    B[AGENTS.md Bootloader]
+    B[AI-DOS Provider AGENTS.md]
+    TRR[TargetRepositoryResolution]
+    BS[BootSequence]
+    TG[Target Repository AGENTS.md Declarations]
     C[A.1 Constitution]
     M[Meta Layer: M.0 / M.1]
     S[Standards Layer: STD-000 / 001 / 002 / 003 / 010]
@@ -136,13 +141,15 @@ flowchart TD
     O[Operational Layer: AIFramework / AIOrchestrator / AgentSystemPrompt]
     P[ProjectStatus and Roadmap]
     T[Tasks and Completion Reports]
-    H --> B --> C --> M --> S --> R --> E --> A --> O --> P --> T
+    H --> B --> TRR --> TG --> BS --> C --> M --> S --> R --> E --> A --> O --> P --> T
 ```
 
 | Layer | Primary Function | May Redefine | Must Consume |
 | --- | --- | --- | --- |
 | Human Governance | Final approval | Any governance decision within project constraints | Evidence and recommendations |
-| Bootloader | Repository entry and transitional authority | Repository boot sequence by explicit amendment | Human authority |
+| Provider entry | Start AI-DOS Framework boot and route to TargetRepositoryResolution | Provider entry routing by explicit amendment | Human authority |
+| Target Repository resolution | Identify Target Repository, read Target AGENTS declarations, resolve resources, validate, block, and hand off | Resolution procedure by System Layer governance only | Provider entry and Target declarations |
+| Resolved-context loading | Load resolved Framework + Target Project context | Boot loading procedure by System Layer governance only | TargetRepositoryResolution result |
 | Constitution | Constitutional principles | Constitutional principles within approval process | Bootloader |
 | Meta | Semantic and artifact models | Its owned model only | Constitution |
 | Standards | Cross-document rules | Owned standard domain only | Constitution and meta |
@@ -156,7 +163,7 @@ flowchart TD
 
 ## 8. Repository Governance
 
-Repository governance begins with `AGENTS.md`. It defines bootstrap authority, core principles, planning hierarchy, boot sequence, subsystem ownership, dependency flow, adapter rules, validation and review rules, and completion expectations.
+Repository governance begins with the AI-DOS Provider root `AGENTS.md`, which starts Framework boot and routes to TargetRepositoryResolution. Target Repository project declarations live in the Target Repository root `AGENTS.md`. TargetRepositoryResolution, not the Governance Atlas, identifies the Target Repository, reads declarations, resolves project resources, validates declarations, reports blockers, produces the Resolution Result, and hands off to BootSequence. BootSequence loads the resolved context. This atlas governs navigation after those boundaries are respected.
 
 Repository governance separates:
 
@@ -182,9 +189,9 @@ A constitutional conflict is never resolved by implementation convenience. It es
 
 Project governance is split between strategic roadmap and live status:
 
-- The DevelopmentPhases declared by the active Target Repository (`<DEVELOPMENT_PHASES_PATH>`) is the strategic roadmap.
-- The ProjectStatus declared by the active Target Repository (`<PROJECT_STATUS_PATH>`) is the live operational status.
-- For Forge AI self-hosting, these resolve to `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` and `docs/DevelopmentPhases/ProjectStatus.md`.
+- The DevelopmentPhases loaded from the resolved Target Repository (`<DEVELOPMENT_PHASES_PATH>`) is the strategic roadmap.
+- The ProjectStatus loaded from the resolved Target Repository (`<PROJECT_STATUS_PATH>`) is the live operational status.
+- For Forge AI self-hosting only, these resolve to `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` and `docs/DevelopmentPhases/ProjectStatus.md`.
 
 ProjectStatus is not architecture and may not promote documents, redefine semantics, or supersede standards. It records current phase, completed items, next queue, frozen areas, status-update policy, decision log, and success indicators.
 
@@ -308,7 +315,10 @@ This atlas is intentionally shown as a mapping artifact rather than as a replace
 
 | Document | Authority Domain | Authority Type | May Redefine | May Not Redefine |
 | --- | --- | --- | --- | --- |
-| `AGENTS.md` | Repository bootstrap and constitutional entry | Bootstrap authority | Boot rules by explicit amendment | Human Governance |
+| AI-DOS Provider root `AGENTS.md` | AI-DOS Provider entry | Provider entry authority | Start Framework boot and route to TargetRepositoryResolution | Target declaration validation, project path resolution, BootSequence handoff result |
+| Target Repository root `AGENTS.md` | Target Project declarations | Declaration authority | Declare project resources, authority order, validation context, protection context, and AI-DOS Provider reference | Active Target Repository identification, path resolution, validation, blocker status |
+| TargetRepositoryResolution | Target Repository resolution | System Layer resolution authority | Identify Target Repository, discover Target AGENTS, resolve resources, validate, block, produce Resolution Result, hand off to BootSequence | Loaded context execution |
+| BootSequence | Resolved-context loading | System Layer boot authority | Load resolved Framework + Target Project context from the Resolution Result | Target discovery, declaration validation, operational execution |
 | Active Target Repository ProjectStatus (`<PROJECT_STATUS_PATH>`) | Live operational state | State authority | Current status facts | Architecture, standards, promotion |
 | Active Target Repository DevelopmentPhases (`<DEVELOPMENT_PHASES_PATH>`) | Strategic roadmap | Planning authority | Roadmap sequence by approval | Live status, architecture |
 | A.0 Framework Audit | Audit findings | Evidence / assessment | Nothing normative by itself | Constitution, meta, standards |
@@ -341,7 +351,11 @@ This atlas is intentionally shown as a mapping artifact rather than as a replace
 | Domain | Owner | Primary Documents | Consumers |
 | --- | --- | --- | --- |
 | Human approval | Human Governance | Governance decisions | All layers |
-| Repository bootstrap | AGENTS.md | `AGENTS.md` | All agents and automation |
+| AI-DOS Provider entry | AI-DOS Provider root `AGENTS.md` | `<AI_DOS_ROOT>/AGENTS.md` | TargetRepositoryResolution |
+| Target Project declarations | Target Repository root `AGENTS.md` | `<TARGET_REPOSITORY_ROOT>/AGENTS.md` | TargetRepositoryResolution |
+| Target Repository resolution | TargetRepositoryResolution | `docs/AI/System/TargetRepositoryResolution.md` | BootSequence |
+| Resolved-context loading | BootSequence | `docs/AI/System/BootSequence.md` | Operational Core |
+| Governance navigation | Governance Atlas | `docs/AI/GOVERNANCE.md` | All agents and automation |
 | Constitution | Framework Constitution | A.1 | Meta, standards, runtime, engines |
 | Semantic model | Meta Governance | M.0 | M.1, standards, runtime |
 | Artifact model | Meta Governance | M.1 | Standards, runtime, engines |
@@ -362,7 +376,10 @@ This atlas is intentionally shown as a mapping artifact rather than as a replace
 
 | Document / Layer | Consumes | Produces |
 | --- | --- | --- |
-| AGENTS.md | Human authority | Boot rules, project principles |
+| AI-DOS Provider root `AGENTS.md` | Human authority | Provider entry routing to TargetRepositoryResolution |
+| Target Repository root `AGENTS.md` | Target Project governance | Project resource declarations and provider reference |
+| TargetRepositoryResolution | Provider entry and Target declarations | Resolution Result and BootSequence handoff |
+| BootSequence | TargetRepositoryResolution result | Loaded Framework + Target Project context |
 | ProjectStatus | Roadmap, completed evidence, governance decisions | Live operational status |
 | Development Phases | Strategic planning decisions | Phase sequence |
 | A.0 | Existing repository state | Audit findings |
@@ -377,7 +394,7 @@ This atlas is intentionally shown as a mapping artifact rather than as a replace
 | A.3 | Constitution, meta, standards | Runtime architecture |
 | A.4.x | A.3, meta, standards | Engine platform |
 | AGENTS-v1 | Meta, standards, runtime, engine | Agent architecture draft |
-| Operational Layer | AGENTS.md, AIFramework, ProjectStatus | Execution procedures |
+| Operational Layer | Loaded Framework + Target Project context, AIFramework, ProjectStatus | Execution procedures |
 | Governance Atlas | All listed inputs | Navigation and governance map |
 
 ---
@@ -761,33 +778,37 @@ Traceability prevents implementation, AI output, or operational convenience from
 
 ### Governance Atlas Task Reading Order
 
-1. `AGENTS.md`
-2. `docs/AI/GOVERNANCE.md` when present
-3. Active Target Repository ProjectStatus (`<PROJECT_STATUS_PATH>`)
-4. Active Target Repository DevelopmentPhases (`<DEVELOPMENT_PHASES_PATH>`)
-5. A.0 through A.1
-6. M.0 and M.1
-7. STD-000, STD-001, STD-002, STD-003, STD-010
-8. A.3
-9. A.4 through A.4.7
-10. AGENTS-v1 draft
-11. GovernanceModel when present
-12. Operational-layer documents for classification only
+1. AI-DOS Provider root `AGENTS.md`
+2. TargetRepositoryResolution result
+3. BootSequence loaded context
+4. `docs/AI/GOVERNANCE.md` when present
+5. Active Target Repository ProjectStatus (`<PROJECT_STATUS_PATH>`)
+6. Active Target Repository DevelopmentPhases (`<DEVELOPMENT_PHASES_PATH>`)
+7. A.0 through A.1
+8. M.0 and M.1
+9. STD-000, STD-001, STD-002, STD-003, STD-010
+10. A.3
+11. A.4 through A.4.7
+12. AGENTS-v1 draft
+13. GovernanceModel when present
+14. Operational-layer documents for classification only
 
 ### AI Agent Consumption Path
 
 ```mermaid
 flowchart TD
     Start[AI Agent Starts]
-    AG[Read AGENTS.md]
+    AG[Enter AI-DOS Provider AGENTS.md]
+    TRR[TargetRepositoryResolution resolves Target]
+    BS[BootSequence loads context]
     GOV[Read Governance Atlas for navigation]
-    PS[Read ProjectStatus]
-    RD[Read Roadmap]
+    PS[Consume loaded ProjectStatus]
+    RD[Consume loaded Roadmap]
     Auth[Read relevant authority documents]
     Scope[Confirm scope and frozen boundaries]
     Work[Draft / validate / recommend]
     Report[Completion report]
-    Start --> AG --> GOV --> PS --> RD --> Auth --> Scope --> Work --> Report
+    Start --> AG --> TRR --> BS --> GOV --> PS --> RD --> Auth --> Scope --> Work --> Report
 ```
 
 ---

@@ -28,7 +28,7 @@
 | Dependencies | Governance Core; Meta Foundation; Standards Foundation; Runtime Architecture; Engine Platform; Engine Foundation RFC family; Operational Core replacement plan; active ProjectStatus and DevelopmentPhases roadmap. |
 | Consumes | Human task instruction, repository boot sequence, governance navigation, governance decision policy, operational state, roadmap sequence, constitutional principles, meta models, terminology, metadata requirements, Runtime Architecture, Engine Architecture, Engine Specialization template, AI Framework entry rules, AI Orchestrator routing rules, template category map, commands, workflows, validation artifacts, and task-specific authorities. |
 | Produces | Tool-facing agent behavior rules, required boot behavior, authority consumption behavior, task classification behavior, context assembly behavior, execution-scope discipline, validation behavior, completion-report behavior, blocker reporting behavior, and ProjectStatus boundary behavior. |
-| Related Specifications | `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md`; `docs/AI/Operational/Operational-Core-Replacement-Matrix.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/Templates/README.md` |
+| Related Specifications | `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md` (Forge AI self-hosting related specification only); `docs/AI/Operational/Operational-Core-Replacement-Matrix.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/Templates/README.md` |
 | Supersedes | Prior tool-facing prompt wording in this file while preserving this file as the in-place Agent System Prompt document. |
 | Superseded By | None |
 | Promotion Requirements | Framework Governance review, Human Governance review, validation against Governance Atlas, ProjectStatus, DevelopmentPhases, STD-010, Runtime Architecture, Engine Architecture, Operational Core replacement plan, and explicit Human Governance promotion authorization. |
@@ -98,17 +98,21 @@ Agents shall consume the authority chain in this order for Forge AI v2 work:
 ```text
 Human Governance / active task instruction
     ↓
-AGENTS.md repository bootloader
+AI-DOS Provider AGENTS.md
+    ↓
+TargetRepositoryResolution resolved Target Repository
+    ↓
+BootSequence loaded resolved context
     ↓
 docs/AI/GOVERNANCE.md Governance Atlas
     ↓
 docs/AI/FrameworkGovernance.md governance decision policy when applicable
     ↓
-<PROJECT_STATUS_PATH> operational state declared by the active Target Repository
+<PROJECT_STATUS_PATH> operational state loaded from the resolved Target Repository
     ↓
-<DEVELOPMENT_PHASES_PATH> roadmap sequence declared by the active Target Repository
+<DEVELOPMENT_PHASES_PATH> roadmap sequence loaded from the resolved Target Repository
     ↓
-docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md strategic program structure when applicable
+docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md strategic program structure when applicable for Forge AI self-hosting only
     ↓
 docs/AI/Architecture/A.1-Constitution.md
     ↓
@@ -138,14 +142,15 @@ Behavior rules:
 
 ## 4. Relationship to AGENTS.md
 
-`AGENTS.md` is the repository bootloader and initial task-entry authority. This Agent System Prompt is not a second `AGENTS.md`.
+`AGENTS.md` is the AI-DOS Provider entry and, in Forge AI self-hosting only, also contains Target Repository declaration inputs. This Agent System Prompt is not a second `AGENTS.md`.
 
 Agents shall:
 
-1. Start with `AGENTS.md` when operating in the repository.
-2. Use `AGENTS.md` to identify mandatory boot rules, task classification expectations, ProjectStatus policy, roadmap policy, file-safety rules, validation expectations, and completion-report requirements.
-3. Use this prompt only after repository boot has established the applicable authority chain and execution boundary.
-4. Preserve `AGENTS.md` as the repository-level authority when this prompt gives tool-facing behavioral detail.
+1. Start at the Provider entry.
+2. Allow TargetRepositoryResolution to resolve the Target Repository and validate Target declarations.
+3. Allow BootSequence to load the resolved context.
+4. Confirm successful handoff before consuming project and Framework context.
+5. Preserve `AGENTS.md` as the repository-level authority when this prompt gives tool-facing behavioral detail.
 
 This prompt may clarify how an AI coding assistant executes behavior, but it shall not override, duplicate, or replace the bootloader.
 
@@ -212,17 +217,18 @@ The Agent System Prompt does not own:
 
 ## 8. Required Boot Behavior
 
-Before execution, agents shall perform the repository boot behavior required by `AGENTS.md` and the active task. At minimum, agents shall:
+Before execution, agents shall perform the provider-entry, resolution, and boot behavior required by `AGENTS.md` and the active task. At minimum, agents shall:
 
-1. Read `AGENTS.md`.
-2. Read `docs/AI/GOVERNANCE.md`.
-3. Read the ProjectStatus declared by the active Target Repository (`<PROJECT_STATUS_PATH>`).
-4. Read the DevelopmentPhases declared by the active Target Repository (`<DEVELOPMENT_PHASES_PATH>`).
-5. Identify current phase, stage, objective, next queue, and frozen areas.
-6. Classify the task type.
-7. Read `docs/AI/FrameworkGovernance.md` when governance decision policy is relevant or explicitly requested.
-8. Read only task-specific authority documents needed for safe execution.
-9. Execute within approved scope and frozen-area boundaries.
+1. Start at the Provider entry.
+2. Allow TargetRepositoryResolution to resolve the Target Repository.
+3. Allow BootSequence to load the resolved context.
+4. Confirm successful handoff.
+5. Consume loaded project and Framework context.
+6. Classify task.
+7. Assemble minimum context.
+8. Execute.
+9. Validate.
+10. Report.
 10. Validate with evidence.
 11. Provide a completion report.
 
