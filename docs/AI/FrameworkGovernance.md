@@ -56,7 +56,7 @@ This document shall be used when a task requires governance decision policy, inc
 - AI execution boundaries;
 - completion-report expectations.
 
-This document shall not be used as the repository navigation map. Use `docs/AI/GOVERNANCE.md` as the Governance Atlas and navigation authority.
+This document shall not be used as the repository navigation map or Target Repository resolver. Use TargetRepositoryResolution for Target Repository identification and declaration resolution, BootSequence for loaded context, and `docs/AI/GOVERNANCE.md` as the Governance Atlas and navigation authority after context is loaded.
 
 ---
 
@@ -111,7 +111,10 @@ This policy does not:
 | Human Governance | Final decision, approval, promotion, exception, and conflict authority. | May approve governance changes; receives escalations when authority, scope, ownership, lifecycle state, or promotion authority is unclear. |
 | Framework Governance | Maintains governance policy and reviews governance consistency. | Does not override Human Governance or redefine canonical architecture outside approved scope. |
 | Governance Atlas v2 | Provides repository governance navigation, authority mapping, ownership mapping, dependency mapping, taxonomy, and AI consumption guidance. | Navigation authority only; it does not replace the documents it maps and does not duplicate this policy. |
-| AGENTS.md | Provides repository bootloader instructions and task entry sequence. | Bootloader only; it is not the Governance Atlas, roadmap, architecture, or ProjectStatus. |
+| AI-DOS Provider root `AGENTS.md` | Starts Framework boot and routes to TargetRepositoryResolution. | Provider entry only; it does not resolve Target Project resources, validate Target declarations, or produce the BootSequence handoff result. |
+| Target Repository root `AGENTS.md` | Declares Target Project resources, authority order, validation context, protection context, and AI-DOS Provider reference. | Declaration contract only; TargetRepositoryResolution reads and validates it. |
+| TargetRepositoryResolution | Identifies the active Target Repository, discovers Target AGENTS, resolves project resources, validates declarations, reports blockers, produces the Resolution Result, and hands off to BootSequence. | System Layer resolution authority only; it does not execute operational tasks. |
+| BootSequence | Loads resolved Framework + Target Project context from the TargetRepositoryResolution result. | Context-loading authority only; it does not rediscover the Target Repository or validate declarations. |
 | Constitution | Defines constitutional principles and invariants where applicable. | Constitutional authority only; this policy consumes it and shall not redefine it. |
 | Standards | Define cross-document consistency requirements within each standard's scope. | Standards authority only; this policy consumes applicable standards and shall not redefine their technical requirements. |
 | ProjectStatus | Records current phase, current stage, completed work, next queue, frozen areas, and status update policy. | Operational state only; it does not redefine architecture, promote documents, supersede standards, or bypass roadmap order. |
@@ -524,10 +527,10 @@ Escalation reports should identify the conflict, cite the relevant authority pat
 
 AI agents must:
 
-1. Start from `AGENTS.md` and follow the required boot sequence.
+1. Start from the AI-DOS Provider root `AGENTS.md`, allow TargetRepositoryResolution to resolve and validate the Target Repository, and allow BootSequence to load the resolved context before applying this governance policy.
 2. Use `docs/AI/GOVERNANCE.md` as the Governance Atlas v2 navigation authority.
 3. Use this document only for governance decision policy.
-4. Use ProjectStatus only as operational state and frozen-area source of truth.
+4. Use the ProjectStatus loaded by BootSequence only as operational state and frozen-area source of truth.
 5. Read only the authorities required by the classified task.
 6. Modify only files required by the task.
 7. Avoid unrelated refactoring, relocation, normalization, or implementation.

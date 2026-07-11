@@ -28,7 +28,7 @@
 | Dependencies | Governance Core; Meta Foundation; Standards Foundation; Runtime Architecture; Engine Platform; Engine Foundation RFC family; Operational Core replacement plan; active ProjectStatus and DevelopmentPhases roadmap. |
 | Consumes | Human task instruction, repository boot sequence, governance navigation, governance decision policy, operational state, roadmap sequence, constitutional principles, meta models, terminology, metadata requirements, Runtime Architecture, Engine Architecture, Engine Specialization template, AI Framework entry rules, Agent System Prompt boundaries, template category map, commands, workflows, validation artifacts, and task-specific authorities. |
 | Produces | Operational orchestration lifecycle, routing rules, workflow selection guidance, command selection guidance, template selection guidance, Runtime interaction guidance, Engine interaction guidance, blocker escalation rules, ProjectStatus update boundaries, and completion-cycle expectations. |
-| Related Specifications | `docs/AI/AIFramework.md`; `docs/AI/AgentSystemPrompt.md`; `docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md`; `docs/AI/Operational/Operational-Core-Replacement-Matrix.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/Templates/README.md` |
+| Related Specifications | `docs/AI/AIFramework.md`; `docs/AI/AgentSystemPrompt.md`; `docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md` (Forge AI self-hosting related specification only); `docs/AI/Operational/Operational-Core-Replacement-Matrix.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/Templates/README.md` |
 | Supersedes | Prior orchestration wording in this file while preserving this file as the in-place Operational Core orchestration document. |
 | Superseded By | None |
 | Promotion Requirements | Framework Governance review, Human Governance review, validation against Governance Atlas, ProjectStatus, DevelopmentPhases, STD-010, Runtime Architecture, Engine Architecture, Operational Core replacement plan, and explicit Human Governance promotion authorization. |
@@ -92,17 +92,21 @@ Operational orchestration follows this authority chain:
 ```text
 Human Governance
     ↓
-AGENTS.md repository bootloader
+AI-DOS Provider AGENTS.md
+    ↓
+TargetRepositoryResolution completed
+    ↓
+BootSequence loaded resolved context
     ↓
 docs/AI/GOVERNANCE.md Governance Atlas
     ↓
 docs/AI/FrameworkGovernance.md governance decision policy when applicable
     ↓
-<PROJECT_STATUS_PATH> operational state declared by the active Target Repository
+<PROJECT_STATUS_PATH> operational state loaded from the resolved Target Repository
     ↓
-<DEVELOPMENT_PHASES_PATH> roadmap sequence declared by the active Target Repository
+<DEVELOPMENT_PHASES_PATH> roadmap sequence loaded from the resolved Target Repository
     ↓
-docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md strategic program structure when applicable
+docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md strategic program structure when applicable for Forge AI self-hosting only
     ↓
 docs/AI/Architecture/A.1-Constitution.md
     ↓
@@ -175,14 +179,18 @@ The AI Orchestrator does not own:
 
 ## 5. Orchestration Lifecycle
 
-The Forge AI v2 orchestration lifecycle is:
+The Forge AI v2 orchestration lifecycle begins only after TargetRepositoryResolution and BootSequence. AIOrchestrator consumes loaded inputs and does not identify or select the Target Repository, resolve Target AGENTS, resolve project paths, validate declarations, create resolution statuses, override TargetRepositoryResolution, or rerun BootSequence. The lifecycle is:
 
 ```text
 Task Instruction
     ↓
-Boot and Authority Discovery
+Target Repository Resolution completed
     ↓
-ProjectStatus and Roadmap State Acquisition
+BootSequence loaded resolved context
+    ↓
+Orchestration begins
+    ↓
+Loaded ProjectStatus and Roadmap State Consumption
     ↓
 Task Classification
     ↓
