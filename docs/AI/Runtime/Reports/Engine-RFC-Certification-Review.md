@@ -26,7 +26,7 @@
 | Traceability ID | `AI-DOS.V4.PHASE-2.ENGINE-RFC-CERTIFICATION-REVIEW` |
 | Scope | Final certification-readiness review of the Phase 2 Engine Foundation RFC series, including A.3, A.4, A.4.1 through A.4.7, A.5.0, and A.5.1 through A.5.12. |
 | Out of Scope | Runtime RFC edits, Engine RFC edits, implementation, source code, ProjectStatus updates, roadmap updates, canonical promotion, certification execution, and approval decisions. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` |
 | Normative References | `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md` |
 | Dependencies | Phase 2 Engine Foundation RFC family; Runtime Architecture; Engine Platform RFC family; Engine Specialization RFC Template; Meta Foundation; Standards Foundation; active governance boot sequence. |
 | Consumes | Human review instruction; AGENTS bootloader; Governance Atlas; Framework Governance; ProjectStatus; DevelopmentPhases; A.1 Constitution; M.0; M.1; STD-000; STD-003; STD-010; A.3; A.4; A.4.1 through A.4.7; A.5.0; A.5.1 through A.5.12. |
@@ -58,8 +58,8 @@ The report does **not** certify, approve, promote, or canonicalize any reviewed 
 - `AGENTS.md`
 - `docs/AI/GOVERNANCE.md`
 - `docs/AI/FrameworkGovernance.md`
-- `docs/DevelopmentPhases/ProjectStatus.md`
-- `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`
+- `docs/Projects/ForgeAI/Planning/ProjectStatus.md`
+- `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`
 - `docs/AI/Architecture/A.1-Constitution.md`
 - `docs/AI/Meta/M.0-Framework-Meta-Model.md`
 - `docs/AI/Meta/M.1-Artifact-Meta-Model.md`

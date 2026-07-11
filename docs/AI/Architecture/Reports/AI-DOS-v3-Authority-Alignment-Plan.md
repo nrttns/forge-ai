@@ -71,7 +71,7 @@ docs/AI/FrameworkGovernance.md
     ↓
 docs/ProjectStatus.md
     ↓
-docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md
+docs/Projects/ForgeAI/Planning/DevelopmentPhases.md
     ↓
 Current Phase / Stage / Capability
     ↓
@@ -256,7 +256,7 @@ Blueprint RFC material may inform planning but must not be treated as canonical 
 Proposed edits:
 
 1. Change status to `Tool-Facing Agent Rule Set — RC2 / v3 Transitional`.
-2. Correct the current stale path `docs/DevelopmentPhases/AI-DOS2-DevelopmentPhases.md` to `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`.
+2. Correct the current stale path `docs/DevelopmentPhases/AI-DOS2-DevelopmentPhases.md` to `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`.
 3. Add v3 transitional reading rules after `docs/AI/AIFramework.md` for v3-specific tasks.
 4. Add explicit instruction:
 

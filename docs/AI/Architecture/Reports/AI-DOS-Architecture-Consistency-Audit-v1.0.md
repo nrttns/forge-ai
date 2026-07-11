@@ -125,7 +125,7 @@ docs/AI/FrameworkGovernance.md
     ↓
 docs/ProjectStatus.md
     ↓
-docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md
+docs/Projects/ForgeAI/Planning/DevelopmentPhases.md
     ↓
 Current Phase Document
     ↓

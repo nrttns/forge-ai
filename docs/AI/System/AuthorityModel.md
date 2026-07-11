@@ -23,7 +23,7 @@
 | Traceability ID | `AI-DOS.V2.OP-005A` |
 | Scope | Tool-facing authority resolution, conflict handling, human override handling, generated task authority rules, and escalation rules for agents operating in AI-DOS. |
 | Out of Scope | Repository bootloader authority, governance atlas ownership, framework governance policy, operational state, roadmap sequencing, constitutional authority, meta models, standards, runtime architecture, engine RFCs, operational core ownership, commands, workflows, templates, certification, promotion, and ProjectStatus updates. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` |
 | Normative References | `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md` |
 | Dependencies | Repository boot sequence, Governance Atlas navigation, Framework Governance decision policy, ProjectStatus operational state, DevelopmentPhases roadmap sequence, architecture authorities, operational core documents, and task-specific artifacts. |
 | Consumes | Human task instruction, repository bootloader rules, governance navigation, decision policy, operational state, roadmap state, architecture authorities, standards, runtime and engine RFCs, operational core procedures, and task-specific artifacts. |
@@ -116,9 +116,9 @@ docs/AI/GOVERNANCE.md
     ↓
 docs/AI/FrameworkGovernance.md
     ↓
-docs/DevelopmentPhases/ProjectStatus.md
+docs/Projects/ForgeAI/Planning/ProjectStatus.md
     ↓
-docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md
+docs/Projects/ForgeAI/Planning/DevelopmentPhases.md
     ↓
 docs/AI/Architecture/A.1-Constitution.md
     ↓
@@ -167,9 +167,9 @@ Human Governance is final. A valid human instruction may narrow task scope, sele
 
 ### 5.5 ProjectStatus and DevelopmentPhases
 
-`docs/DevelopmentPhases/ProjectStatus.md` records operational state, current phase, current stage, current objective, next queue, frozen areas, and status-update policy.
+`docs/Projects/ForgeAI/Planning/ProjectStatus.md` records operational state, current phase, current stage, current objective, next queue, frozen areas, and status-update policy.
 
-`docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` defines roadmap sequence. Agents shall not skip phases or begin future-phase work unless Human Governance explicitly activates that scope.
+`docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` defines roadmap sequence. Agents shall not skip phases or begin future-phase work unless Human Governance explicitly activates that scope.
 
 ---
 
@@ -181,8 +181,8 @@ When instructions, documents, or artifacts conflict, agents shall:
 2. Preserve `AGENTS.md` as repository bootloader authority.
 3. Use `docs/AI/GOVERNANCE.md` to identify the correct governing authority.
 4. Use `docs/AI/FrameworkGovernance.md` when policy interpretation is required.
-5. Preserve `docs/DevelopmentPhases/ProjectStatus.md` as operational state only, not architecture.
-6. Preserve `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` as roadmap sequence only, not live operational state.
+5. Preserve `docs/Projects/ForgeAI/Planning/ProjectStatus.md` as operational state only, not architecture.
+6. Preserve `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` as roadmap sequence only, not live operational state.
 7. Prefer the higher authority in the current authority order.
 8. Treat commands, workflows, templates, generated tasks, checklists, validation artifacts, and conversation-derived task notes as execution aids that cannot override higher authority.
 9. Stop and escalate when the conflict cannot be resolved safely within the active task boundary.
@@ -219,9 +219,9 @@ AGENTS.md boot classification and file-safety boundary
     ↓
 docs/AI/GOVERNANCE.md authority routing
     ↓
-docs/DevelopmentPhases/ProjectStatus.md active operational state
+docs/Projects/ForgeAI/Planning/ProjectStatus.md active operational state
     ↓
-docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md roadmap sequence
+docs/Projects/ForgeAI/Planning/DevelopmentPhases.md roadmap sequence
     ↓
 Applicable architecture, operational core, command, workflow, template, or task artifact
 ```

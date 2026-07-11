@@ -15,9 +15,9 @@ docs/AI/GOVERNANCE.md
     ↓
 docs/AI/FrameworkGovernance.md when governance decision policy is relevant
     ↓
-docs/DevelopmentPhases/ProjectStatus.md
+docs/Projects/ForgeAI/Planning/ProjectStatus.md
     ↓
-docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md
+docs/Projects/ForgeAI/Planning/DevelopmentPhases.md
     ↓
 docs/AI/AIFramework.md
     ↓
@@ -39,8 +39,8 @@ Additional task-specific routing:
 - `AGENTS.md` is the repository bootloader for AI assistants.
 - `docs/AI/GOVERNANCE.md` is the Governance Atlas and navigation authority.
 - `docs/AI/FrameworkGovernance.md` is the governance decision-policy authority when decision policy is relevant.
-- `docs/DevelopmentPhases/ProjectStatus.md` records current Forge AI operational state.
-- `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` defines roadmap sequence.
+- `docs/Projects/ForgeAI/Planning/ProjectStatus.md` records current Forge AI operational state.
+- `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` defines roadmap sequence.
 - Operational Core documents route execution but do not replace governance, roadmap, Runtime, Engine, or ProjectStatus authority.
 
 ## Target-Project Portability

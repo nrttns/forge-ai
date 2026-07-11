@@ -750,8 +750,8 @@ This document is ready for review when these checks are complete:
 
 - `git diff --check` passes;
 - only `docs/AI/Meta/M.1-Artifact-Meta-Model.md` changed;
-- `docs/DevelopmentPhases/ProjectStatus.md` was not modified;
-- `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` was not modified;
+- `docs/Projects/ForgeAI/Planning/ProjectStatus.md` was not modified;
+- `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` was not modified;
 - no legacy or RC2 files moved or modified;
 - required sections exist;
 - required diagrams exist;

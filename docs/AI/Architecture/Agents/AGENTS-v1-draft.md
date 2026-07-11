@@ -8,7 +8,7 @@
 | **Classification** | Governance |
 | **Normative Authority** | Human Governance |
 | **Normative References** | A.1 Constitution; M.0 Framework Meta Model; M.1 Artifact Meta Model; STD-000–003; STD-010 |
-| **Dependencies** | `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; `docs/DevelopmentPhases/ProjectStatus.md` |
+| **Dependencies** | `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md` |
 | **Consumes** | Constitution; Framework Audit; Meta Models; Standards; RFCs; Roadmap; ProjectStatus |
 | **Produces** | Governed agent behaviour; completion reports; validation outputs |
 | **Related Specifications** | A.3 Runtime Architecture RFC; A.4 Engine Platform RFC family |
@@ -166,7 +166,7 @@ flowchart TD
 
 ### 1.7 Operational Source of Truth
 
-`docs/DevelopmentPhases/ProjectStatus.md` is the live operational source of truth for:
+`docs/Projects/ForgeAI/Planning/ProjectStatus.md` is the live operational source of truth for:
 
 - current phase;
 - current stage;
@@ -187,7 +187,7 @@ ProjectStatus is operational state. ProjectStatus is not architecture.
 
 ### 1.8 Strategic Roadmap Source
 
-`docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` defines the strategic roadmap.
+`docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` defines the strategic roadmap.
 
 Agents shall:
 
@@ -208,8 +208,8 @@ Before performing any task, the agent shall execute this boot sequence:
 
 ```text
  1. Read AGENTS.md.
- 2. Read docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md.
- 3. Read docs/DevelopmentPhases/ProjectStatus.md.
+ 2. Read docs/Projects/ForgeAI/Planning/DevelopmentPhases.md.
+ 3. Read docs/Projects/ForgeAI/Planning/ProjectStatus.md.
  4. Identify current Phase.
  5. Identify current Stage.
  6. Identify current Objective.

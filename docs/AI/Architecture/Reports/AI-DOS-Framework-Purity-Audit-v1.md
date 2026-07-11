@@ -73,7 +73,7 @@ Classification: `TARGET COUPLED`.
 
 ### 4.3 Concrete Target Path Leakage
 
-Concrete path leakage exists in active documents. Examples include `docs/AI/System/BootSequence.md` requiring `docs/DevelopmentPhases/ProjectStatus.md` and `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`, and `docs/AI/System/ContextAssembly.md` listing those paths as required context. These are not valid reusable AI-DOS defaults.
+Concrete path leakage exists in active documents. Examples include `docs/AI/System/BootSequence.md` requiring `docs/Projects/ForgeAI/Planning/ProjectStatus.md` and `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`, and `docs/AI/System/ContextAssembly.md` listing those paths as required context. These are not valid reusable AI-DOS defaults.
 
 Classification: `SELF-HOSTING COUPLED`.
 
@@ -151,7 +151,7 @@ Overall AI-DOS Purity
 
 | File | Contamination | Severity | Classification |
 |:---|:---|:---|:---|
-| `docs/AI/System/BootSequence.md` | Hard-codes `docs/DevelopmentPhases/ProjectStatus.md` and `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` in authority, loading order, readiness checks, and blockers. | Critical | `SELF-HOSTING COUPLED` |
+| `docs/AI/System/BootSequence.md` | Hard-codes `docs/Projects/ForgeAI/Planning/ProjectStatus.md` and `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` in authority, loading order, readiness checks, and blockers. | Critical | `SELF-HOSTING COUPLED` |
 | `docs/AI/System/ContextAssembly.md` | Treats concrete Forge AI ProjectStatus and DevelopmentPhases paths as normative authority and context inputs. | Critical | `SELF-HOSTING COUPLED` |
 | `docs/AI/System/ExecutionSequence.md` | Metadata cites concrete target project state and phase documents as normative authority. | High | `SELF-HOSTING COUPLED` |
 | `docs/AI/System/AuthorityModel.md` | Uses target-state concepts in reusable authority ordering. | High | `TARGET COUPLED` |

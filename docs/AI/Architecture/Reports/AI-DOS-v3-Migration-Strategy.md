@@ -359,7 +359,7 @@ Recommended refinements:
 | `docs/AI/Certification/AIFrameworkCertificationReadinessAudit.md` | Archive Later | Historical readiness audit. | Preserve as evidence. |
 | `docs/AI/Certification/ProjectTemplateAdoptionReview.md` | Archive Later | Historical adoption review. | Preserve as evidence/reference. |
 | `docs/DevelopmentPhases/` | Keep Operational Temporarily | Current ProjectStatus depends on phases. | Replan under v3 after state migration. |
-| `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` | Keep Operational Temporarily | Current phase index. | Reconcile with v3 roadmap. |
+| `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` | Keep Operational Temporarily | Current phase index. | Reconcile with v3 roadmap. |
 | `docs/DevelopmentPhases/Phase-00-Foundation.md` | Keep Operational Temporarily | Active phase context. | Update only in approved state migration. |
 | `docs/DevelopmentPhases/Phase-01-Core Framework.md` through `Phase-13-Enterprise-Governance.md` | Requires Human Decision | Planned roadmap may not match v3 architecture sequence. | Rebaseline after v3 authority approval. |
 

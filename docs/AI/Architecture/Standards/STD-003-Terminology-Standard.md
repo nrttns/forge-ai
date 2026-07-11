@@ -21,7 +21,7 @@
 | Traceability ID | AI-DOS.V4.PHASE-1.STD-003 |
 | Scope | Canonical Framework terminology, naming, synonyms, and terminology consumption rules |
 | Out of Scope | Runtime implementation, engine implementation, tooling, schemas, APIs, registries, project code, roadmap changes, and canonical promotion |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Architecture/A.0-Framework-Audit.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; `docs/DevelopmentPhases/ProjectStatus.md` |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Architecture/A.0-Framework-Audit.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md` |
 | Normative References | `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI/Architecture/Standards/STD-001-Knowledge-Graph-Standard.md`; `docs/AI/Architecture/Standards/STD-002-Discovery-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
 | Dependencies | Constitutional authority, Framework semantic model, Artifact model, Standards governance, Knowledge Graph vocabulary, Discovery vocabulary, Document Metadata vocabulary |
 | Consumes | A.0 audit findings; A.1 constitutional principles; M.0 semantic concepts; M.1 artifact concepts; STD-000, STD-001, STD-002, and STD-010 standards vocabulary |
@@ -749,8 +749,8 @@ STD-003 quality gates are documentation and architecture validation gates:
 
 1. `git diff --check` passes.
 2. Only `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md` changes.
-3. `docs/DevelopmentPhases/ProjectStatus.md` remains unchanged.
-4. `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` remains unchanged.
+3. `docs/Projects/ForgeAI/Planning/ProjectStatus.md` remains unchanged.
+4. `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` remains unchanged.
 5. No Runtime, Engine, Meta, Legacy, or project code documents are modified.
 6. Required chapters exist.
 7. Required Mermaid diagrams exist.

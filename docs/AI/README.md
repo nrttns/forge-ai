@@ -54,7 +54,7 @@ docs/AI/Templates/README.md when document generation is required
 
 ## Target-Project Portability
 
-AI-DOS self-hosting examples may reference `docs/DevelopmentPhases/ProjectStatus.md`, `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`, and `docs/Roadmap/AI-DOS-Program-Architecture-Master-Roadmap-v4.md`. These areAI-DOS self-hosting examples only, not universal inputs or fallback paths.
+AI-DOS self-hosting examples may reference `docs/Projects/ForgeAI/Planning/ProjectStatus.md`, `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`, and `docs/Roadmap/AI-DOS-Program-Architecture-Master-Roadmap-v4.md`. These areAI-DOS self-hosting examples only, not universal inputs or fallback paths.
 
 For a separate target project, TargetRepositoryResolution reads that target repository root and its own `AGENTS.md` declaration contract. This README does not resolve the target project's state, roadmap, source roots, validation commands, protected areas, or provider reference.
 

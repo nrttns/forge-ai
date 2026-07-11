@@ -23,7 +23,7 @@
 | Traceability ID | `AI-DOS.ARCHITECTURE.AGENTS.V2.DELEGATION-ESCALATION` |
 | Scope | Documentation-level AGENTS v2 agent delegation and escalation model, including delegation philosophy, delegation contracts, participants, preconditions, payloads, acceptance, rejection, escalation triggers, escalation paths, escalation outcomes, validation rules, and governance boundaries. |
 | Out of Scope | Delegation runtime implementation, scheduling, queues, dispatch, routing, orchestration, APIs, storage, CLI, UI, transport, messaging runtime, execution, swarm behavior, platform adapters, Engine RFC work, Runtime redefinition, Engine Platform redefinition, Governance redefinition, Standards redefinition, M.0 redefinition, M.1 redefinition, STD-010 redefinition, and ProjectStatus updates. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Architecture.md` |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Architecture.md` |
 | Normative References | `docs/AI/Architecture/Agents/AGENTS-v2-Architecture.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Agent-Identity-and-Registry.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Agent-Capability-and-Role-Catalog.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Agent-Lifecycle-and-Governance-Boundaries.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Agent-Communication-and-Coordination.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Agent-Validation-and-Review-Model.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Agent-Workflow-Model.md`; `docs/AI/Architecture/Agents/AGENTS-v1-draft.md`; `docs/AI/Architecture/Agents/AGENTS-V2-Roadmap.md`; `docs/AI/Architecture/Agents/AGENTS-V2-DevelopmentPhases.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
 | Dependencies | AGENTS v2 Architecture Foundation; AGENTS v2 Agent Identity and Registry; AGENTS v2 Agent Capability and Role Catalog; AGENTS v2 Agent Lifecycle and Governance Boundaries; AGENTS v2 Agent Communication and Coordination; AGENTS v2 Agent Validation and Review Model; AGENTS v2 Agent Workflow Model; Governance Atlas v2 navigation; ProjectStatus operational state and frozen-area constraints; Development Phases roadmap; STD-010 metadata requirements. |
 | Consumes | AGENTS v2 foundation boundaries; identity, registry, role, capability, lifecycle, communication, coordination, validation, review, workflow, reporting, escalation, and deferred-scope models; repository bootloader rules; governance navigation; roadmap state; frozen-area constraints; AGENTS v1; AGENTS v2 roadmap and development phases; STD-010 metadata requirements. |
@@ -148,8 +148,8 @@ Authority rules:
 1. Human Governance remains final.
 2. `AGENTS.md` remains the repository bootloader.
 3. `docs/AI/GOVERNANCE.md` remains the governance navigation authority.
-4. `docs/DevelopmentPhases/ProjectStatus.md` remains the operational state and frozen-area authority.
-5. `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` remains the roadmap authority.
+4. `docs/Projects/ForgeAI/Planning/ProjectStatus.md` remains the operational state and frozen-area authority.
+5. `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` remains the roadmap authority.
 6. `docs/AI/Architecture/Agents/AGENTS-v2-Architecture.md` is the parent foundation for this document.
 7. Identity and registry inputs define traceable delegator, delegatee, reviewer, validator, and escalation-recipient references.
 8. Capability and role inputs define role and capability boundaries for interpreting delegation eligibility.

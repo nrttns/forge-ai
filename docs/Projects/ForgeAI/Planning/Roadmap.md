@@ -20,8 +20,8 @@
 | Traceability ID | `FORGE-AI.V2.ROADMAP-REALIGNMENT-001` |
 | Scope | AI-DOS capability acquisition, reusable outcomes, required evidence, governance gates, dependency chains, autonomy impact, Target independence proof, and long-term capability evolution directed by Forge AI. |
 | Out of Scope | AI-DOS internal architecture, `docs/AI/` changes, live ProjectStatus updates, DevelopmentPhases replacement, operational work-list management, project-state mutation, certification, and automatic maturity advancement. |
-| Normative Authority | Human Governance; root `AGENTS.md`; `docs/ForgeAI-Mission-and-Autonomy-Model.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
-| Read-Only Context | `docs/DevelopmentPhases/ProjectStatus.md` |
+| Normative Authority | Human Governance; canonical Target Project contract `docs/Projects/ForgeAI/Mission/AGENTS.md`; `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-and-Autonomy-Model.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` |
+| Read-Only Context | `docs/Projects/ForgeAI/Planning/ProjectStatus.md` |
 | Consumes | Forge AI mission, Target Project contract, DevelopmentPhases capability program, live-state evidence as read-only context, Human Governance decisions, and completed execution evidence. |
 | Produces | Capability-oriented roadmap describing what reusable AI-DOS capability is acquired next, what proves maturity, and what governance decision authorizes progression. |
 | Certification Status | Not certified |

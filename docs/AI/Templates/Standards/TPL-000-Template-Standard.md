@@ -56,8 +56,8 @@
 - `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`
 - `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`
 - `docs/Roadmap/AI-DOS-Program-Architecture-Master-Roadmap-v4.md`
-- `docs/DevelopmentPhases/ProjectStatus.md`
-- `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`
+- `docs/Projects/ForgeAI/Planning/ProjectStatus.md`
+- `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`
 
 </details>
 

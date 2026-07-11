@@ -175,7 +175,7 @@ The scoped files are aligned on the core transitional-authority rules:
 
 Observations for future cleanup:
 
-1. `docs/AI/AgentSystemPrompt.md` places `docs/AI/FrameworkGovernance.md` after `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` in its authority order, while `AGENTS.md` places `docs/AI/FrameworkGovernance.md` before `docs/ProjectStatus.md` and development phases.
+1. `docs/AI/AgentSystemPrompt.md` places `docs/AI/FrameworkGovernance.md` after `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` in its authority order, while `AGENTS.md` places `docs/AI/FrameworkGovernance.md` before `docs/ProjectStatus.md` and development phases.
 2. `docs/AI/FrameworkGovernance.md` summarizes the authority hierarchy as `AGENTS.md → AI Framework Constitution → Framework Governance → Project Status`, while `AGENTS.md` uses the fuller chain `AGENTS.md → docs/AI/AIFramework.md → docs/AI/Specification/Constitution.md → docs/AI/AIOrchestrator.md → docs/AI/FrameworkGovernance.md → docs/ProjectStatus.md`.
 3. `docs/AI/README.md` includes `STD-001` and `STD-002` in the v3 architecture-track transition list, while the narrower target-authority-candidate list in `AGENTS.md`, `docs/AI/AIFramework.md`, `docs/AI/System/AuthorityModel.md`, `docs/AI/AgentSystemPrompt.md`, and `docs/AI/FrameworkGovernance.md` focuses on `A.1`, `M.0`, `M.1`, and `STD-000`. This does not promote `STD-001` or `STD-002` to canonical authority, but future wording could distinguish architecture-track documents from authority candidates more explicitly.
 

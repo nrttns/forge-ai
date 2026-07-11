@@ -284,7 +284,7 @@ Forge AI succeeds only when AI-DOS becomes more reusable, safe, deterministic, a
 
 Future Forge AI planning documents must consume this mission model without turning it into AI-DOS internal architecture.
 
-### Forge AI `AGENTS.md`
+### Forge AI Canonical Target Project Contract
 
 Must govern:
 
@@ -338,7 +338,7 @@ Must record:
 
 | Document | Mission Role | Must Contain | Must Not Contain |
 |:---|:---|:---|:---|
-| Forge AI `AGENTS.md` | Target Project contract and AI-DOS invocation boundary | Target identity, mission, Target resources, protected areas, execution boundaries, autonomy safety, evidence requirements | AI-DOS internal architecture replacement or Target-specific contamination inside AI-DOS |
+| `docs/Projects/ForgeAI/Mission/AGENTS.md` | Target Project contract and AI-DOS invocation boundary | Target identity, mission, Target resources, protected areas, execution boundaries, autonomy safety, evidence requirements | AI-DOS internal architecture replacement or Target-specific contamination inside AI-DOS |
 | Forge AI DevelopmentPhases | Sequenced capability maturation | AI-DOS purity, invocation, Target Context handling, deterministic execution, validation, review, safe self-application, autonomy maturity, external proof, multi-Target readiness | Universal phase model for all Target Projects or implementation activation by implication |
 | Forge AI roadmap | Strategic outcome and milestone direction | Capability outcomes, autonomy milestones, evidence gates, external proof, dependencies, sequencing | AI-DOS architecture definition or live operational state |
 | Forge AI ProjectStatus | Live operational state | Current state, active capability objective, current autonomy maturity, completed evidence, blockers, next authorized work | Architecture, roadmap replacement, phase replacement, automatic updates, or external Target status |
@@ -394,7 +394,7 @@ If the answer is no to all mission questions, the work should be challenged or d
 This sequence is defined for future Human Governance consideration and is not executed by this document:
 
 1. Human Governance accepts this mission model.
-2. Forge AI root AGENTS.md is rebuilt as a pure Target Project contract.
+2. Forge AI canonical Target Project Contract is established at `docs/Projects/ForgeAI/Mission/AGENTS.md`, with the repository root `AGENTS.md` serving only as the repository entry and discovery file.
 3. Forge AI DevelopmentPhases is realigned.
 4. Forge AI roadmap is realigned.
 5. Forge AI ProjectStatus is realigned.

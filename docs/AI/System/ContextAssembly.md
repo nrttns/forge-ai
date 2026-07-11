@@ -23,7 +23,7 @@
 | Traceability ID | `AI-DOS.V2.OP-005D` |
 | Scope | Context source selection, minimum required reading set, task-specific context boundary, authority-aware context collection, evidence inclusion, missing-context detection, and context conflict reporting forAI-DOS agents. |
 | Out of Scope | Authority resolution, source-of-truth decisions, boot sequence ownership, governance decisions, ProjectStatus ownership, Runtime definitions, Engine definitions, command definitions, workflow definitions, template definitions, execution, validation, certification, canonical promotion, and implementation. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` |
 | Normative References | `docs/AI/System/AuthorityModel.md`; `docs/AI/System/BootSequence.md`; `docs/AI/System/SourceOfTruth.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
 | Dependencies | Repository bootloader, AuthorityModel authority resolution, BootSequence loading order, SourceOfTruth domain mapping, Governance Atlas navigation, Framework Governance policy, ProjectStatus operational state, DevelopmentPhases roadmap sequence, Operational Core documents, and task-specific authority or evidence files. |
 | Consumes | Human task instruction, AuthorityModel procedure, BootSequence procedure, SourceOfTruth procedure, ProjectStatus operational state, DevelopmentPhases roadmap, Operational Core guidance, task-specific authorities, relevant commands, workflows, templates, Runtime and Engine documents when required, and evidence files when required. |
@@ -129,9 +129,9 @@ docs/AI/System/BootSequence.md
     ↓
 docs/AI/System/SourceOfTruth.md
     ↓
-docs/DevelopmentPhases/ProjectStatus.md
+docs/Projects/ForgeAI/Planning/ProjectStatus.md
     ↓
-docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md
+docs/Projects/ForgeAI/Planning/DevelopmentPhases.md
     ↓
 Operational Core
     ↓

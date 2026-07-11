@@ -24,7 +24,7 @@
 | Scope | Template Library purpose, navigation, family map, ownership routing, selection principles, usage workflow, lifecycle expectations, alignment rules, validation expectations, and cross-reference routing |
 | Out of Scope | Template standard definitions, metadata standard definitions, placeholder schema definitions, governance policy, Runtime authority, Engine authority, ProjectStatus authority, template family specifications, implementation logic, generated artifacts, certification, and promotion decisions |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
-| Normative References | `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/Standards/TPL-001-RFC-Template-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md` |
+| Normative References | `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/Standards/TPL-001-RFC-Template-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md` |
 | Dependencies | Template standards, document metadata standard, Governance Atlas, Framework Governance, ProjectStatus, DevelopmentPhases, and family-local README/index documents where present |
 | Consumes | Active task instruction, repository boot sequence, template standards, document metadata standard, family-local template inventories, and domain authority routing |
 | Produces | Canonical Template Library navigation entry point, family directory map, selection guidance, validation routing, alignment rules, extension rules, and cross-reference index |
@@ -281,8 +281,8 @@ The Template Library maintains these invariants:
 | `AGENTS.md` | Repository bootloader and AI task entry sequence. |
 | `docs/AI/GOVERNANCE.md` | Governance Atlas and repository governance navigation. |
 | `docs/AI/FrameworkGovernance.md` | Governance decision policy, review routing, approval routing, and conflict handling. |
-| `docs/DevelopmentPhases/ProjectStatus.md` | Operational state, current phase, current stage, next queue, and frozen-area policy. |
-| `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` | Roadmap order and development phase authority. |
+| `docs/Projects/ForgeAI/Planning/ProjectStatus.md` | Operational state, current phase, current stage, next queue, and frozen-area policy. |
+| `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` | Roadmap order and development phase authority. |
 | `docs/AI/Templates/Standards/TPL-000-Template-Standard.md` | Baseline reusable template standard. |
 | `docs/AI/Templates/Standards/TPL-001-RFC-Template-Standard.md` | RFC-style template standard. |
 | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` | Document metadata standard. |

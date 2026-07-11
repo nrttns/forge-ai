@@ -23,7 +23,7 @@
 | Traceability ID | `AI-DOS.ARCHITECTURE.AGENTS.V2.LIFECYCLE-GOVERNANCE-BOUNDARIES` |
 | Scope | Documentation-level AGENTS v2 agent lifecycle model, lifecycle states, lifecycle transitions, activation, suspension, deactivation, Human Governance boundaries, AI decision boundaries, review, approval, certification, ProjectStatus, frozen-area, and validation boundaries. |
 | Out of Scope | Lifecycle runtime implementation, scheduling, queues, dispatch, routing, messaging, execution, swarm behavior, platform adapters, Engine RFC work, Runtime redefinition, Engine Platform redefinition, Governance redefinition, Standards redefinition, M.0 redefinition, M.1 redefinition, STD-010 redefinition, and ProjectStatus updates. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Architecture.md` |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Architecture.md` |
 | Normative References | `docs/AI/Architecture/Agents/AGENTS-v2-Architecture.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Agent-Identity-and-Registry.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Agent-Capability-and-Role-Catalog.md`; `docs/AI/Architecture/Agents/AGENTS-v1-draft.md`; `docs/AI/Architecture/Agents/AGENTS-V2-Roadmap.md`; `docs/AI/Architecture/Agents/AGENTS-V2-DevelopmentPhases.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
 | Dependencies | AGENTS v2 Architecture Foundation; AGENTS v2 Agent Identity and Registry; AGENTS v2 Agent Capability and Role Catalog; Governance Atlas v2 navigation; ProjectStatus operational state and frozen-area constraints; Development Phases roadmap; AGENTS v1 operating architecture; AGENTS v2 planning inputs; STD-010 metadata requirements. |
 | Consumes | AGENTS v2 foundation boundaries; AGENTS v2 identity, registry, lifecycle-state, ownership, governance, capability-link, role-reference, and validation models; AGENTS v2 capability and role definitions; repository bootloader rules; governance navigation; roadmap state; frozen-area constraints; AGENTS v1; AGENTS v2 roadmap and development phases; STD-010 metadata requirements. |
@@ -121,8 +121,8 @@ Authority rules:
 1. Human Governance remains final.
 2. `AGENTS.md` remains the repository bootloader.
 3. `docs/AI/GOVERNANCE.md` remains the governance navigation authority.
-4. `docs/DevelopmentPhases/ProjectStatus.md` remains the operational state and frozen-area authority.
-5. `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` remains the roadmap authority.
+4. `docs/Projects/ForgeAI/Planning/ProjectStatus.md` remains the operational state and frozen-area authority.
+5. `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` remains the roadmap authority.
 6. `docs/AI/Architecture/Agents/AGENTS-v2-Architecture.md` is the parent foundation for this document.
 7. `docs/AI/Architecture/Agents/AGENTS-v2-Agent-Identity-and-Registry.md` provides identity, registry, metadata, lifecycle-state, ownership, governance, and validation inputs.
 8. `docs/AI/Architecture/Agents/AGENTS-v2-Agent-Capability-and-Role-Catalog.md` provides capability, role, assignment, validation, reporting, and escalation inputs.
@@ -366,7 +366,7 @@ A record may be review-ready without being approved. A record may be approved wi
 
 ## 14. ProjectStatus Boundaries
 
-`docs/DevelopmentPhases/ProjectStatus.md` remains the operational source of truth for current phase, current stage, current objective, next queue, frozen areas, and status-update policy.
+`docs/Projects/ForgeAI/Planning/ProjectStatus.md` remains the operational source of truth for current phase, current stage, current objective, next queue, frozen areas, and status-update policy.
 
 This document does not modify ProjectStatus.
 

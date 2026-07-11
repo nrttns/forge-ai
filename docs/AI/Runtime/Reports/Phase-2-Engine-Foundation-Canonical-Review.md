@@ -26,7 +26,7 @@
 | Traceability ID | `AI-DOS.V4.CANONICAL-REVIEW-00` |
 | Scope | Official canonical-readiness review of the completeAI-DOS Phase 2 Engine Foundation documentation package as an architectural baseline candidate. |
 | Out of Scope | Document certification, document promotion, canonicalization, implementation approval, Runtime activation, Agent Runtime activation, Swarm Runtime activation, ProjectStatus updates, RFC rewriting, editorial normalization, source-code changes, platform adapters, persistence implementation, and operational-layer activation. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` |
 | Normative References | `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md` |
 | Dependencies | Phase 2 Engine Foundation RFC package; Engine Platform RFC family; Engine specialization RFC family; prior Phase 2 review reports; active ProjectStatus; roadmap authority; governance boot sequence; standards and meta-model authority. |
 | Consumes | Human canonical-review instruction; AGENTS bootloader; Governance Atlas; Framework Governance; ProjectStatus; DevelopmentPhases; Constitution; Meta layer; Standards layer; Runtime Architecture; Engine Platform RFCs; Engine Specialization RFC Template; A.5.1 through A.5.12 Engine RFCs; inventory, consistency, and certification-readiness review reports. |
@@ -64,8 +64,8 @@ This recommendation means the Engine Foundation appears suitable for Human Gover
 | `AGENTS.md` | Repository bootloader and task execution boundary | Consumed |
 | `docs/AI/GOVERNANCE.md` | Governance navigation and authority map | Consumed |
 | `docs/AI/FrameworkGovernance.md` | Decision, ownership, review, approval, promotion, and escalation policy | Consumed |
-| `docs/DevelopmentPhases/ProjectStatus.md` | Current operational state, Phase 2 readiness, next queue, frozen-area policy | Consumed; not modified |
-| `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` | Strategic roadmap and phase sequencing | Consumed; not modified |
+| `docs/Projects/ForgeAI/Planning/ProjectStatus.md` | Current operational state, Phase 2 readiness, next queue, frozen-area policy | Consumed; not modified |
+| `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` | Strategic roadmap and phase sequencing | Consumed; not modified |
 
 ### Foundation, Meta, and Standards Authorities
 

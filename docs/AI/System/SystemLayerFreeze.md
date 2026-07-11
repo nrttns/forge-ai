@@ -23,7 +23,7 @@
 | Traceability ID | `AI-DOS.V2.OP-005H` |
 | Scope | CompletedAI-DOS v2 System Layer baseline, System document inventory, operational freeze state, and baseline ownership. |
 | Out of Scope | Governance, Runtime, Engine, templates, commands, workflows, certification, ProjectStatus modification, audits, reviews, verification reports, and redesign recommendations. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` |
 | Normative References | `docs/AI/System/README.md`; `docs/AI/System/TargetRepositoryResolution.md`; `docs/AI/System/AuthorityModel.md`; `docs/AI/System/BootSequence.md`; `docs/AI/System/SourceOfTruth.md`; `docs/AI/System/ContextAssembly.md`; `docs/AI/System/DecisionModel.md`; `docs/AI/System/ExecutionSequence.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
 | Dependencies | Completed System Layer procedure documents including TargetRepositoryResolution.md, System Layer README, Operational Core documents, Governance Atlas navigation, Framework Governance policy, ProjectStatus operational state, and DevelopmentPhases roadmap sequence. |
 | Consumes | System Layer procedure baseline, System Layer navigation index, Operational Core consumption model, current authority paths, metadata requirements, and Human Governance task instruction. |
@@ -94,7 +94,7 @@ The frozen System Layer baseline records the following guarantees:
 1. All System Layer documents are aligned.
 2. Obsolete RC2 authority has been removed.
 3. Obsolete Specification references have been removed.
-4. The ProjectStatus path has been updated to `docs/DevelopmentPhases/ProjectStatus.md`.
+4. The ProjectStatus path has been updated to `docs/Projects/ForgeAI/Planning/ProjectStatus.md`.
 5. The Operational Core is aligned with the System Layer.
 6. The System Layer is STD-010 compliant.
 7. The System Layer now resolves the active Target Repository before BootSequence loads target-project state under controlled extension `AI-DOS.V2.SYSTEM-EXT-001`.

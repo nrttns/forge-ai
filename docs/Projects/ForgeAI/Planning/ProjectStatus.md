@@ -19,7 +19,7 @@
 | Scope | Current AI-DOS capability state, evidence state, governance gate, autonomy maturity, program health, Target independence, purity, and next approved capability for Forge AI as the AI-DOS Development and Autonomy Enablement Target Project. |
 | Out of Scope | Roadmap definition, phase definition, AI-DOS architecture definition, implementation authorization, sprint tracking, backlog tracking, document inventory, historical logs, automatic state updates, and Human Governance replacement. |
 | Normative Authority | Human Governance; Forge AI Target Project contract; Forge AI mission and autonomy model. |
-| Consumes | `AGENTS.md`, `docs/ForgeAI-Mission-and-Autonomy-Model.md`, `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`, `docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md`, and current repository evidence. |
+| Consumes | `docs/Projects/ForgeAI/Mission/AGENTS.md`, `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-and-Autonomy-Model.md`, `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`, `docs/Projects/ForgeAI/Planning/Roadmap.md`, and current repository evidence. |
 | Produces | Current operational telemetry for AI-DOS capability maturity, evidence readiness, governance status, autonomy maturity, Target independence, and the next approved capability. |
 | Update Rule | Update only through explicit Human Governance authorization or a dedicated ProjectStatus task. |
 
@@ -53,7 +53,7 @@ Exactly one capability is active.
 
 Current phase reference: **Phase 0 — Identity, Boundary, Purity**, with operational work aligned to the Phase 0 capability maturity emphasis on product-project separation, AI-DOS purity, Target independence, and protected-area respect.
 
-This section references the capability maturity phase defined by `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; it does not redefine DevelopmentPhases.
+This section references the capability maturity phase defined by `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`; it does not redefine DevelopmentPhases.
 
 ---
 

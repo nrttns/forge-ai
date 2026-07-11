@@ -246,8 +246,8 @@ WhenAI-DOS is the Target Repository, these mappings are valid:
 ```text
 <TARGET_REPOSITORY_ROOT> =AI-DOS repository root
 <TARGET_AGENTS_PATH> = AGENTS.md
-<PROJECT_STATUS_PATH> = docs/DevelopmentPhases/ProjectStatus.md
-<DEVELOPMENT_PHASES_PATH> = docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md
+<PROJECT_STATUS_PATH> = docs/Projects/ForgeAI/Planning/ProjectStatus.md
+<DEVELOPMENT_PHASES_PATH> = docs/Projects/ForgeAI/Planning/DevelopmentPhases.md
 ```
 
 These mappings are validAI-DOS self-hosting mappings only. They must not become fallback values for an external Target Repository.

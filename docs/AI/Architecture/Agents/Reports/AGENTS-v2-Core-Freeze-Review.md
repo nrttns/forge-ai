@@ -25,7 +25,7 @@
 | Traceability ID | `AI-DOS.ARCHITECTURE.AGENTS.V2.CORE-FREEZE-REVIEW` |
 | Scope | Documentation-only audit of the AGENTS v2 specification family for metadata compliance, authority consistency, ownership consistency, source-of-truth separation, agent/runtime/engine boundaries, runtime consumption boundaries, frozen-area protections, ProjectStatus policy, roadmap alignment, deferred scope, implementation non-activation, and readiness for AGENTS v2 Core Freeze. |
 | Out of Scope | ProjectStatus updates, AGENTS.md changes, FrameworkGovernance changes, Governance Atlas changes, Runtime RFC changes, Engine RFC changes, Standards changes, Meta Model changes, implementation work, runtime activation, certification, approval, promotion, or canonicalization. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` |
 | Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Architecture/Agents/AGENTS-v2.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Architecture.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Agent-Identity-and-Registry.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Agent-Capability-and-Role-Catalog.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Agent-Lifecycle-and-Governance-Boundaries.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Agent-Communication-and-Coordination.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Agent-Validation-and-Review-Model.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Agent-Workflow-Model.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Agent-Delegation-and-Escalation-Model.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Agent-Runtime-Consumption-Model.md`; `docs/AI/Architecture/Agents/AGENTS-V2-DevelopmentPhases.md`; `docs/AI/Architecture/Agents/AGENTS-V2-Roadmap.md` |
 | Dependencies | Repository boot sequence; Governance Atlas routing; Framework Governance decision policy; ProjectStatus operational state and frozen-area constraints; Development Phases roadmap; STD-010 metadata requirements; complete AGENTS v2 specification family. |
 | Consumes | AGENTS v2 master specification; AGENTS v2 architecture foundation; AGENTS v2 identity, registry, capability, role, lifecycle, governance-boundary, communication, coordination, validation, review, workflow, delegation, escalation, runtime-consumption, development-phase, and roadmap documents; metadata validation evidence; authority-boundary review evidence. |
@@ -103,8 +103,8 @@ Supporting authorities reviewed for routing and validation:
 - `AGENTS.md`;
 - `docs/AI/GOVERNANCE.md`;
 - `docs/AI/FrameworkGovernance.md`;
-- `docs/DevelopmentPhases/ProjectStatus.md`;
-- `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`;
+- `docs/Projects/ForgeAI/Planning/ProjectStatus.md`;
+- `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`;
 - `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`.
 
 ---

@@ -19,8 +19,8 @@
 | Traceability ID | `FORGE-AI.TARGET.DEVELOPMENT-PHASES` |
 | Scope | AI-DOS capability maturity, evidence maturity, autonomy progression, governance checkpoints, reusable outcomes, and external Target readiness as directed by Forge AI. |
 | Out of Scope | AI-DOS internal architecture, AI-DOS implementation design, live ProjectStatus updates, roadmap replacement, sprint planning, cleanup execution, repository disposition, certification, and automatic phase advancement. |
-| Normative Authority | Human Governance; Forge AI Target Project contract; `docs/ForgeAI-Mission-and-Autonomy-Model.md` |
-| Primary Authority | `docs/ForgeAI-Mission-and-Autonomy-Model.md` |
+| Normative Authority | Human Governance; Forge AI Target Project contract; `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-and-Autonomy-Model.md` |
+| Primary Authority | `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-and-Autonomy-Model.md` |
 | Consumes | Forge AI mission, Human Governance decisions, resolved Target Context, ProjectStatus evidence, roadmap direction, and execution evidence. |
 | Produces | Capability-oriented Forge AI development phases, governance gates, evidence expectations, autonomy progression model, and maturity criteria for AI-DOS development. |
 | Certification Status | Not certified |

@@ -267,8 +267,8 @@ ForAI-DOS self-hosting:
 |:---|:---|
 | `<TARGET_REPOSITORY_ROOT>` |AI-DOS repository root |
 | `<TARGET_AGENTS_PATH>` | `AGENTS.md` |
-| `<PROJECT_STATUS_PATH>` | `docs/DevelopmentPhases/ProjectStatus.md` |
-| `<DEVELOPMENT_PHASES_PATH>` | `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
+| `<PROJECT_STATUS_PATH>` | `docs/Projects/ForgeAI/Planning/ProjectStatus.md` |
+| `<DEVELOPMENT_PHASES_PATH>` | `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` |
 
 These paths are valid self-hosting mappings only. They are not universal Target Repository paths.
 

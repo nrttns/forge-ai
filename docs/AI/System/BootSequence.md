@@ -23,7 +23,7 @@
 | Traceability ID | `AI-DOS.V2.OP-005B` |
 | Scope | Repository boot procedure, document loading order, context assembly order, boot validation, and boot failure handling forAI-DOS agents. |
 | Out of Scope | Governance redesign, authority decisions, Runtime ownership, Engine ownership, command definitions, workflow definitions, template definitions, ProjectStatus updates, certification, promotion, and implementation. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` |
 | Normative References | `docs/AI/System/TargetRepositoryResolution.md`; `docs/AI/System/AuthorityModel.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
 | Dependencies | Target Repository Resolution Result, resolved Target AGENTS path, repository bootloader, AuthorityModel authority resolution, AIFramework operational entry point, AIOrchestrator execution routing, AgentSystemPrompt agent behavior rules, active ProjectStatus, DevelopmentPhases roadmap, and task-specific runtime, engine, command, workflow, and template documents when required. |
 | Consumes | Human task instruction, Target Repository Resolution Result, resolved Target Repository root, resolved Target AGENTS path, target-project resource declarations, protected areas, validation context, AGENTS.md bootloader rules, AuthorityModel authority procedure, AIFramework operational guidance, AIOrchestrator routing rules, AgentSystemPrompt behavior constraints, relevant runtime and engine authorities, commands, workflows, templates, validation expectations, ProjectStatus operational state, and DevelopmentPhases roadmap sequence. |
@@ -163,8 +163,8 @@ After reading the required boot documents, agents assemble context in this order
 5. Operational Core guidance from `docs/AI/AIFramework.md`.
 6. Execution routing from `docs/AI/AIOrchestrator.md`.
 7. Agent behavior constraints from `docs/AI/AgentSystemPrompt.md`.
-8. Operational state from `docs/DevelopmentPhases/ProjectStatus.md`.
-9. Roadmap sequence from `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`.
+8. Operational state from `docs/Projects/ForgeAI/Planning/ProjectStatus.md`.
+9. Roadmap sequence from `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`.
 10. Relevant Runtime or Engine authorities, only when required by the active task.
 11. Relevant commands, workflows, templates, checklists, and validation artifacts.
 12. Source files or documents explicitly in scope for the task.
@@ -180,8 +180,8 @@ Before execution, agents shall validate that:
 1. The active task type is classified.
 2. Target Repository Resolution has completed with `RESOLVED` status.
 3. Required boot documents are readable.
-4. The active ProjectStatus path is `docs/DevelopmentPhases/ProjectStatus.md`.
-5. The roadmap path is `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`.
+4. The active ProjectStatus path is `docs/Projects/ForgeAI/Planning/ProjectStatus.md`.
+5. The roadmap path is `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`.
 6. Frozen-area boundaries are known when relevant.
 7. Task-specific authority documents have been identified.
 8. File restrictions are understood.
@@ -198,8 +198,8 @@ Stop and report a blocker when:
 - the resolved Target AGENTS path is missing or unreadable;
 - `docs/AI/System/AuthorityModel.md` is missing or unreadable;
 - required Operational Core documents are missing or unreadable;
-- `docs/DevelopmentPhases/ProjectStatus.md` is missing or unreadable when operational state is required;
-- `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` is missing or unreadable when roadmap sequence is required;
+- `docs/Projects/ForgeAI/Planning/ProjectStatus.md` is missing or unreadable when operational state is required;
+- `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` is missing or unreadable when roadmap sequence is required;
 - the active task type cannot be classified;
 - authority or ownership conflicts cannot be resolved through the authority order;
 - the requested work conflicts with explicit file restrictions, ProjectStatus policy, roadmap order, or frozen-area boundaries;

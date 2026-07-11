@@ -23,7 +23,7 @@
 | Traceability ID | `AI-DOS.V4.REPO-CANONICALIZATION-00` |
 | Scope | Classification of documentation under `docs/`, `AGENTS.md`, `.cursorrules`, and `README.md` before any move, merge, archive, or rewrite. |
 | Out of Scope | File movement, file deletion, file renaming, ProjectStatus updates, implementation, reference rewrites, metadata normalization, canonical promotion, certification, and approval. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` |
 | Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/Roadmap/AI-DOS-Program-Architecture-Master-Roadmap-v4.md`; `docs/AI/Architecture/Reports/AI-DOS-Architecture-Consistency-Audit-v1.0.md`; `docs/AI/Architecture/Reports/AI-DOS-Authority-Cleanup-Plan-v1.0.md`; `docs/AI/Architecture/Reports/AI-DOS-v3-Migration-Strategy.md`; `docs/AI/Architecture/Reports/AI-DOS-v3-Transitional-Authority-Verification.md`; `docs/AI/Architecture/Reports/RC2-Specification-Harvest-Report.md`; `docs/AI/Architecture/Reports/RC2-Specification-Legacy-Migration-Plan.md` |
 | Dependencies | Repository inventory; authority cleanup reports; RC2 harvest and migration reports; ProjectStatus frozen-area policy; roadmap sequencing. |
 | Consumes | Required reading set, repository file inventory, active reference search results, and classification categories supplied by Human Governance. |
@@ -56,7 +56,7 @@ In scope:
 ## Out of Scope
 
 - Moving, renaming, deleting, merging, archiving, or rewriting existing files.
-- Updating `docs/DevelopmentPhases/ProjectStatus.md` or `docs/ProjectStatus.md`.
+- Updating `docs/Projects/ForgeAI/Planning/ProjectStatus.md` or `docs/ProjectStatus.md`.
 - Creating implementation.
 - Normalizing metadata.
 - Rewriting references.
@@ -351,7 +351,7 @@ Note: the requested path `docs/AI/Architecture/Reports/AI-DOS-Program-Architectu
 | `docs/AI/Workflows/ProjectStateUpdater.md` | Reviewed documentation artifact | Operational Compatibility | Operational compatibility layer | AI Framework / Operational maintainers | No, frozen unless activated | No | Yes | KEEP AS OPERATIONAL COMPATIBILITY |
 | `docs/AI/Workflows/TaskGenerationWorkflow.md` | Reviewed documentation artifact | Operational Compatibility | Operational compatibility layer | AI Framework / Operational maintainers | No, frozen unless activated | No | Yes | KEEP AS OPERATIONAL COMPATIBILITY |
 | `docs/AI/Workflows/TaskPlanner.md` | Reviewed documentation artifact | Operational Compatibility | Operational compatibility layer | AI Framework / Operational maintainers | No, frozen unless activated | No | Yes | KEEP AS OPERATIONAL COMPATIBILITY |
-| `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` | Reviewed documentation artifact | Transitional | Roadmap/status or legacy roadmap state | Framework Governance / Human Governance | No unless dedicated status/roadmap task | No | Yes | KEEP |
+| `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` | Reviewed documentation artifact | Transitional | Roadmap/status or legacy roadmap state | Framework Governance / Human Governance | No unless dedicated status/roadmap task | No | Yes | KEEP |
 | `docs/DevelopmentPhases/Phase-00-Foundation.md` | Reviewed documentation artifact | Transitional | Roadmap/status or legacy roadmap state | Framework Governance / Human Governance | No unless dedicated status/roadmap task | No | Yes | KEEP |
 | `docs/DevelopmentPhases/Phase-01-Core Framework.md` | Reviewed documentation artifact | Transitional | Roadmap/status or legacy roadmap state | Framework Governance / Human Governance | No unless dedicated status/roadmap task | No | Yes | KEEP |
 | `docs/DevelopmentPhases/Phase-02-Planning System.md` | Reviewed documentation artifact | Transitional | Roadmap/status or legacy roadmap state | Framework Governance / Human Governance | No unless dedicated status/roadmap task | No | Yes | KEEP |
@@ -366,7 +366,7 @@ Note: the requested path `docs/AI/Architecture/Reports/AI-DOS-Program-Architectu
 | `docs/DevelopmentPhases/Phase-11-Swarm-Orchestration.md` | Reviewed documentation artifact | Transitional | Roadmap/status or legacy roadmap state | Framework Governance / Human Governance | No unless dedicated status/roadmap task | No | Yes | KEEP |
 | `docs/DevelopmentPhases/Phase-12-Platform-Adapters.md` | Reviewed documentation artifact | Transitional | Roadmap/status or legacy roadmap state | Framework Governance / Human Governance | No unless dedicated status/roadmap task | No | Yes | KEEP |
 | `docs/DevelopmentPhases/Phase-13-Enterprise-Governance.md` | Reviewed documentation artifact | Transitional | Roadmap/status or legacy roadmap state | Framework Governance / Human Governance | No unless dedicated status/roadmap task | No | Yes | KEEP |
-| `docs/DevelopmentPhases/ProjectStatus.md` | Reviewed documentation artifact | Transitional | Roadmap/status or legacy roadmap state | Framework Governance / Human Governance | No unless dedicated status/roadmap task | No | Yes | KEEP |
+| `docs/Projects/ForgeAI/Planning/ProjectStatus.md` | Reviewed documentation artifact | Transitional | Roadmap/status or legacy roadmap state | Framework Governance / Human Governance | No unless dedicated status/roadmap task | No | Yes | KEEP |
 | `docs/AI/FrameworkGovernance.md` | Reviewed documentation artifact | Draft / Candidate | Current v3/v4 candidate authority or repository entry | Framework Governance / Architecture Team | Only within active authorized task | No | Yes | KEEP |
 | `docs/ProjectStatus.md` | Reviewed documentation artifact | Transitional | Roadmap/status or legacy roadmap state | Framework Governance / Human Governance | No unless dedicated status/roadmap task | No | Yes | KEEP |
 
@@ -375,7 +375,7 @@ Note: the requested path `docs/AI/Architecture/Reports/AI-DOS-Program-Architectu
 | Area | Finding | Risk | Recommendation |
 | --- | --- | --- | --- |
 | Governance | `docs/AI/GOVERNANCE.md`, `docs/AI/FrameworkGovernance.md`, legacy `docs/AI/Specification/GovernanceModel.md`, operational `docs/AI/System/AuthorityModel.md`, and root boot documents all contain governance or authority concepts. | Silent authority conflict if roles are merged or moved without separation. | Keep Governance Atlas as navigation, FrameworkGovernance as decision policy, RC2 governance as harvested legacy source, and operational system files as compatibility until replacements are approved. |
-| Roadmap | `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`, `docs/AI/Roadmap/*`, and phase files under `docs/DevelopmentPhases/` overlap. | Confusion between live roadmap authority, historical roadmap planning, and phase artifacts. | Preserve current ProjectStatus/DevelopmentPhases authority; treat `docs/AI/Roadmap/` as transitional planning evidence pending separation. |
+| Roadmap | `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`, `docs/AI/Roadmap/*`, and phase files under `docs/DevelopmentPhases/` overlap. | Confusion between live roadmap authority, historical roadmap planning, and phase artifacts. | Preserve current ProjectStatus/DevelopmentPhases authority; treat `docs/AI/Roadmap/` as transitional planning evidence pending separation. |
 | Runtime | `docs/AI/Runtime/A.3-*`, Engine RFCs, legacy `docs/AI/Specification/RuntimeModel.md`, runtime templates, and future agent runtime docs overlap. | Runtime semantics could be redefined by legacy or future-scope documents. | Keep A.3/A.4/A.5 as draft candidate runtime authority; harvest RC2 runtime only; keep future agent/swarm runtime frozen. |
 | Agent/system prompt | `AGENTS.md`, `.cursorrules`, `docs/AI/AgentSystemPrompt.md`, `docs/AI/System/*`, AGENTS v1, and AGENTS v2 docs overlap. | Tool-facing operational instructions may diverge from future agent architecture. | Separate bootloader, operational compatibility, legacy single-agent reference, and frozen AGENTS v2 planning in a follow-up plan. |
 | Validation/review/certification | `docs/AI/Validation/*`, `docs/AI/Certification/*`, STD reports, runtime reviews, and templates overlap. | Quality-gate naming and evidence may be mistaken for approval. | Keep reports as evidence; keep validation/certification operational docs as compatibility; define future canonical quality-gate ownership separately. |
@@ -429,7 +429,7 @@ No frozen-area document should be moved or rewritten during repository canonical
 3. AGENTS v1/v2/future swarm documents can imply activation if not clearly marked frozen or planning-only.
 4. Evidence reports may be mistaken for canonical approvals.
 5. The missing required-reading path under `docs/AI/Architecture/Reports/` indicates repository path drift that must be resolved before automated canonicalization.
-6. `docs/ProjectStatus.md` and `docs/DevelopmentPhases/ProjectStatus.md` coexist; the latter is current boot authority, while the former requires governance classification before action.
+6. `docs/ProjectStatus.md` and `docs/Projects/ForgeAI/Planning/ProjectStatus.md` coexist; the latter is current boot authority, while the former requires governance classification before action.
 
 ## Verdict
 

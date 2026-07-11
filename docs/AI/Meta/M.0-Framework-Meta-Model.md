@@ -27,7 +27,7 @@
 | Scope | Canonical semantic type system and dependency model forAI-DOS Framework artifacts |
 | Out of Scope | Runtime implementation, engine implementation, registries, storage schemas, platform adapters, project code, and M.1 alignment |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Architecture/A.0-Framework-Audit.md` |
-| Normative References | `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
+| Normative References | `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
 | Dependencies | Constitutional authority, audit baseline, roadmap scope, active project status, standards governance, metadata governance, artifact identity, lifecycle governance, and traceability model |
 | Consumes | A.1 constitutional model; A.0 audit baseline; Phase 1 Meta Foundation roadmap; STD-000 standards governance; STD-010 metadata governance |
 | Produces | Canonical Framework Meta Type System, artifact abstraction, identity abstraction, metadata abstraction, lifecycle abstraction, authority abstraction, ownership abstraction, relationship abstraction, dependency abstraction, capability abstraction, runtime abstraction, engine abstraction, context abstraction, knowledge abstraction, and AI semantic model |

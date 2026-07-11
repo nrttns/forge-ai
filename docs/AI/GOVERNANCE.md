@@ -43,8 +43,8 @@ Core conclusions:
 - The AI-DOS Provider root `AGENTS.md` is the Provider entry that starts Framework boot and routes to TargetRepositoryResolution; the Target Repository root `AGENTS.md` is the Target Project declaration contract.
 - TargetRepositoryResolution owns Target Repository identification, Target AGENTS discovery, project-resource resolution, declaration validation, blocker reporting, Resolution Result production, and BootSequence handoff.
 - BootSequence owns loading the resolved Framework + Target Project context from the Resolution Result.
-- The ProjectStatus loaded from the resolved Target Repository (`<PROJECT_STATUS_PATH>`) is operational state, not architecture. ForAI-DOS self-hosting only, `<PROJECT_STATUS_PATH>` resolves to `docs/DevelopmentPhases/ProjectStatus.md`.
-- The DevelopmentPhases loaded from the resolved Target Repository (`<DEVELOPMENT_PHASES_PATH>`) is strategic roadmap, not live status. ForAI-DOS self-hosting only, `<DEVELOPMENT_PHASES_PATH>` resolves to `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`.
+- The ProjectStatus loaded from the resolved Target Repository (`<PROJECT_STATUS_PATH>`) is operational state, not architecture. ForAI-DOS self-hosting only, `<PROJECT_STATUS_PATH>` resolves to `docs/Projects/ForgeAI/Planning/ProjectStatus.md`.
+- The DevelopmentPhases loaded from the resolved Target Repository (`<DEVELOPMENT_PHASES_PATH>`) is strategic roadmap, not live status. ForAI-DOS self-hosting only, `<DEVELOPMENT_PHASES_PATH>` resolves to `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`.
 - Lower layers consume higher layers and shall never redefine them.
 - AI may propose, classify, validate, and recommend.
 - AI shall never approve, certify, promote, or override Human Governance.
@@ -191,7 +191,7 @@ Project governance is split between strategic roadmap and live status:
 
 - The DevelopmentPhases loaded from the resolved Target Repository (`<DEVELOPMENT_PHASES_PATH>`) is the strategic roadmap.
 - The ProjectStatus loaded from the resolved Target Repository (`<PROJECT_STATUS_PATH>`) is the live operational status.
-- ForAI-DOS self-hosting only, these resolve to `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` and `docs/DevelopmentPhases/ProjectStatus.md`.
+- ForAI-DOS self-hosting only, these resolve to `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` and `docs/Projects/ForgeAI/Planning/ProjectStatus.md`.
 
 ProjectStatus is not architecture and may not promote documents, redefine semantics, or supersede standards. It records current phase, completed items, next queue, frozen areas, status-update policy, decision log, and success indicators.
 

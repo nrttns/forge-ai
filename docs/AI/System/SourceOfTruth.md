@@ -23,7 +23,7 @@
 | Traceability ID | `AI-DOS.V2.OP-005C` |
 | Scope | Source-of-truth identification, authority lookup, domain-to-authority mapping, conflict detection, source validation, and escalation recommendation forAI-DOS agents. |
 | Out of Scope | Governance decisions, architecture decisions, Runtime definitions, Engine definitions, ProjectStatus ownership, command definitions, workflow definitions, template definitions, certification, canonical promotion, and implementation. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` |
 | Normative References | `docs/AI/System/AuthorityModel.md`; `docs/AI/System/BootSequence.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
 | Dependencies | Repository bootloader, AuthorityModel authority resolution, BootSequence loading order, Governance Atlas navigation, Framework Governance policy, ProjectStatus operational state, DevelopmentPhases roadmap sequence, architecture authorities, Operational Core documents, and task-specific execution artifacts. |
 | Consumes | Human task instruction, AGENTS.md bootloader rules, AuthorityModel procedure, BootSequence procedure, Governance Atlas routing, Framework Governance policy, ProjectStatus operational state, DevelopmentPhases roadmap, architecture authorities, Operational Core guidance, and task-specific commands, workflows, templates, reports, reviews, and roadmaps. |
@@ -132,8 +132,8 @@ Agents must never merge conflicting authorities. When documents conflict, the ag
 | Engine Platform | `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md` and the applicable A.4.x Engine Platform RFC |
 | Runtime RFCs | The applicable RFC under `docs/AI/Runtime/` |
 | Engine Specialization RFCs | The applicable A.5.x Engine RFC under `docs/AI/Runtime/` |
-| Project Status | `docs/DevelopmentPhases/ProjectStatus.md` |
-| Development Phases | `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
+| Project Status | `docs/Projects/ForgeAI/Planning/ProjectStatus.md` |
+| Development Phases | `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` |
 | Commands | The applicable command artifact after higher authority is resolved |
 | Workflows | The applicable workflow artifact after higher authority is resolved |
 | Templates | The applicable template artifact after higher authority is resolved |
