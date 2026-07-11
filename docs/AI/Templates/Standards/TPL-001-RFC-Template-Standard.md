@@ -1,6 +1,6 @@
 # TPL-001 — RFC Template Standard
 
-> Forge AI v3 · Standards Library
+>AI-DOS v3 · Standards Library
 > Template Standard · RFC Template Authority · Draft / Non-canonical
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-001` |
+| Identifier | `AI-DOS-TPL-001` |
 | Title | TPL-001 — RFC Template Standard |
 | Version | `0.1.0-draft` |
 | Status | Draft |
@@ -23,8 +23,8 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.V3.TPL-001` |
-| Scope | Standard structure, content contract, taxonomy, lifecycle, validation, naming, traceability, versioning, review, approval, certification, promotion, compliance, and anti-patterns for every RFC template used by Forge AI |
+| Traceability ID | `AI-DOS.V3.TPL-001` |
+| Scope | Standard structure, content contract, taxonomy, lifecycle, validation, naming, traceability, versioning, review, approval, certification, promotion, compliance, and anti-patterns for every RFC template used byAI-DOS |
 | Out of Scope | Redefining STD-010, redefining TPL-000, redefining Runtime Architecture, redefining Engine Platform, normalizing existing RFC documents, implementing template tooling, and authoring specific domain RFCs |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/Architecture/A.1-Constitution.md` |
 | Normative References | `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md` |
@@ -64,9 +64,9 @@
 
 ## Executive Summary
 
-TPL-001 defines the canonical RFC template standard for Forge AI. It governs how every RFC template shall be authored, structured, reviewed, approved, certified, and promoted. It does not govern Runtime behavior, Engine Platform behavior, or implementation details. It standardizes the document form that RFCs take.
+TPL-001 defines the canonical RFC template standard for AI-DOS. It governs how every RFC template shall be authored, structured, reviewed, approved, certified, and promoted. It does not govern Runtime behavior, Engine Platform behavior, or implementation details. It standardizes the document form that RFCs take.
 
-TPL-001 consumes STD-010 as the governing metadata authority and TPL-000 as the governing template authority. It shall not redefine either. It establishes the normative authority for every RFC template produced under the Forge AI framework, converting the existing body of RFC documents into reference implementations without altering their current status.
+TPL-001 consumes STD-010 as the governing metadata authority and TPL-000 as the governing template authority. It shall not redefine either. It establishes the normative authority for every RFC template produced under theAI-DOS framework, converting the existing body of RFC documents into reference implementations without altering their current status.
 
 This standard defines 35 required sections for the template standard document itself, plus a mandatory RFC output structure that every RFC template shall generate. The RFC output structure consists of 18 mandatory sections that every RFC produced from a TPL-001-compliant template must include. The standard further defines RFC taxonomy, categories, lifecycle, ownership, authority consumption, metadata requirements, naming, identifiers, traceability, versioning, status model, review, approval, certification, promotion, validation, compliance matrices, examples, anti-patterns, and best practices.
 
@@ -74,7 +74,7 @@ This standard defines 35 required sections for the template standard document it
 
 ## 1. Purpose
 
-TPL-001 exists to create a single, authoritative standard for how RFC templates are authored within Forge AI. Without this standard, RFC templates risk divergent structure, inconsistent metadata, unclear authority chains, ambiguous lifecycle progression, and unpredictable validation outcomes. Each of these risks erodes the trust that downstream consumers — including reviewers, certifiers, implementers, and governance bodies — place in RFC documents as architectural decision records.
+TPL-001 exists to create a single, authoritative standard for how RFC templates are authored within AI-DOS. Without this standard, RFC templates risk divergent structure, inconsistent metadata, unclear authority chains, ambiguous lifecycle progression, and unpredictable validation outcomes. Each of these risks erodes the trust that downstream consumers — including reviewers, certifiers, implementers, and governance bodies — place in RFC documents as architectural decision records.
 
 The purpose of TPL-001 is fourfold. First, it establishes the normative structural contract that every RFC template must follow, ensuring that any RFC produced from a compliant template contains a predictable, complete, and traceable set of sections. Second, it defines the governance boundaries that separate RFC template authoring from RFC content authoring, ensuring that template standards do not become architecture standards and that RFC documents do not redefine template governance. Third, it provides the validation model that allows reviewers, certifiers, and automated tooling to determine whether a given RFC template or RFC document conforms to the standard. Fourth, it preserves existing RFC documents as reference implementations, allowing the framework to benefit from accumulated architectural decisions without requiring retroactive restructuring of documents that predate this standard.
 
@@ -88,7 +88,7 @@ TPL-001 is a template standard. It governs the form of RFC templates. It does no
 
 TPL-001 governs:
 
-1. The standard structure of RFC templates used by Forge AI.
+1. The standard structure of RFC templates used by AI-DOS.
 2. The mandatory section contract that every RFC template shall produce.
 3. The optional section catalog that RFC templates may include.
 4. RFC taxonomy: the classification system for RFC types.
@@ -134,7 +134,7 @@ TPL-001 does not:
 
 ## 3. Goals
 
-1. **Structural Uniformity**: Every RFC template under Forge AI shall produce RFC documents with a predictable, complete section structure. Reviewers and consumers shall be able to locate any required section in any RFC without searching for it.
+1. **Structural Uniformity**: Every RFC template underAI-DOS shall produce RFC documents with a predictable, complete section structure. Reviewers and consumers shall be able to locate any required section in any RFC without searching for it.
 
 2. **Authority Clarity**: Every RFC template shall clearly declare which upstream authorities it consumes. Every RFC document shall clearly declare its normative authority chain. No RFC shall create circular authority or claim governance over its own governing standards.
 
@@ -166,7 +166,7 @@ TPL-001 does not:
 
 ## 5. Relationship to STD-010
 
-STD-010 is the governing metadata authority for all Forge AI documents, including RFC templates and RFC documents. TPL-001 consumes STD-010 without redefining it. The relationship is layered and non-overlapping.
+STD-010 is the governing metadata authority for allAI-DOS documents, including RFC templates and RFC documents. TPL-001 consumes STD-010 without redefining it. The relationship is layered and non-overlapping.
 
 ### 5.1 Layer Model
 
@@ -204,7 +204,7 @@ Every RFC template shall include a STD-010-compliant metadata block as the first
 
 ## 6. Relationship to TPL-000
 
-TPL-000 is the governing template authority for all Forge AI templates, including RFC templates. TPL-001 consumes TPL-000 without redefining it. TPL-001 is itself a template standard governed by TPL-000.
+TPL-000 is the governing template authority for allAI-DOS templates, including RFC templates. TPL-001 consumes TPL-000 without redefining it. TPL-001 is itself a template standard governed by TPL-000.
 
 ### 6.1 Compliance Level
 
@@ -243,7 +243,7 @@ TPL-000 (Template Standard)
 
 ### 7.1 RFC as Architectural Decision Record
 
-An RFC is a proposal or definition of architecture submitted for structured review. It is not implementation code, not a project plan, and not a status report. An RFC captures the architectural intent, rationale, constraints, and decisions that shape the Forge AI framework. The RFC is the unit of architectural governance.
+An RFC is a proposal or definition of architecture submitted for structured review. It is not implementation code, not a project plan, and not a status report. An RFC captures the architectural intent, rationale, constraints, and decisions that shape theAI-DOS framework. The RFC is the unit of architectural governance.
 
 ### 7.2 RFC as Living Document
 
@@ -299,7 +299,7 @@ No RFC shall be promoted to canonical status without passing all applicable vali
 
 ### 9.1 Taxonomy Overview
 
-RFC taxonomy classifies RFCs by their structural role within the Forge AI framework. Taxonomy is distinct from category (Section 10): taxonomy describes the RFC's structural type, while category describes the RFC's domain family.
+RFC taxonomy classifies RFCs by their structural role within theAI-DOS framework. Taxonomy is distinct from category (Section 10): taxonomy describes the RFC's structural type, while category describes the RFC's domain family.
 
 ### 9.2 Taxonomy Types
 
@@ -328,7 +328,7 @@ RFC taxonomy classifies RFCs by their structural role within the Forge AI framew
 
 ### 10.1 Category Overview
 
-RFC categories group RFCs by their domain family within the Forge AI framework. Categories enable navigation, ownership assignment, and dependency analysis across the RFC corpus.
+RFC categories group RFCs by their domain family within theAI-DOS framework. Categories enable navigation, ownership assignment, and dependency analysis across the RFC corpus.
 
 ### 10.2 Category Definitions
 
@@ -633,10 +633,10 @@ Examples:
 
 | RFC | File Name |
 |:---|:---|
-| FORGE-A-004 | `A.4-Engine-Architecture-RFC.md` |
-| FORGE-STD-010 | `STD-010-Document-Metadata-Standard.md` |
-| FORGE-TPL-001 | `TPL-001-RFC-Template-Standard.md` |
-| FORGE-A-005.1 | `A.5.1-Context-Engine-RFC.md` |
+| AI-DOS-A-004 | `A.4-Engine-Architecture-RFC.md` |
+| AI-DOS-STD-010 | `STD-010-Document-Metadata-Standard.md` |
+| AI-DOS-TPL-001 | `TPL-001-RFC-Template-Standard.md` |
+| AI-DOS-A-005.1 | `A.5.1-Context-Engine-RFC.md` |
 
 ### 17.2 Naming Rules
 
@@ -671,23 +671,23 @@ The title shall include the identifier prefix for disambiguation. The descriptiv
 RFC identifiers shall follow the STD-010 identifier prefix convention, scoped to the RFC's category:
 
 ```
-FORGE-{Category-Prefix}-{Number}
+AI-DOS-{Category-Prefix}-{Number}
 ```
 
 | Category | Prefix Pattern | Example |
 |:---|:---|:---|
-| Meta | `FORGE-M-{N}` | `FORGE-M-0`, `FORGE-M-1` |
-| Standards | `FORGE-STD-{NNN}` | `FORGE-STD-010` |
-| Architecture | `FORGE-A-{N}` | `FORGE-A-001`, `FORGE-A-004` |
-| Runtime | `FORGE-A-{N}` | `FORGE-A-003` |
-| Engine | `FORGE-A-{N}.{N}` | `FORGE-A-004`, `FORGE-A-005.1` |
-| Operational | `FORGE-OP-{NNN}` | `FORGE-OP-002` |
-| Template | `FORGE-TPL-{NNN}` | `FORGE-TPL-000`, `FORGE-TPL-001` |
-| Governance | `FORGE-GOV-{NNN}` | `FORGE-GOV-001` |
+| Meta | `AI-DOS-M-{N}` | `AI-DOS-M-0`, `AI-DOS-M-1` |
+| Standards | `AI-DOS-STD-{NNN}` | `AI-DOS-STD-010` |
+| Architecture | `AI-DOS-A-{N}` | `AI-DOS-A-001`, `AI-DOS-A-004` |
+| Runtime | `AI-DOS-A-{N}` | `AI-DOS-A-003` |
+| Engine | `AI-DOS-A-{N}.{N}` | `AI-DOS-A-004`, `AI-DOS-A-005.1` |
+| Operational | `AI-DOS-OP-{NNN}` | `AI-DOS-OP-002` |
+| Template | `AI-DOS-TPL-{NNN}` | `AI-DOS-TPL-000`, `AI-DOS-TPL-001` |
+| Governance | `AI-DOS-GOV-{NNN}` | `AI-DOS-GOV-001` |
 
 ### 18.2 Identifier Rules
 
-1. Identifiers shall be unique across the entire Forge AI framework. No two RFCs shall share an identifier.
+1. Identifiers shall be unique across the entireAI-DOS framework. No two RFCs shall share an identifier.
 2. Identifiers shall be stable. An identifier shall not change when the RFC is revised, renamed, or moved.
 3. Identifiers shall be assigned sequentially within a category or subcategory. Gaps in numbering are allowed but should be documented.
 4. Sub-identifiers (e.g., `A.5.1`, `A.5.2`) shall be used for specializations of a parent RFC. The parent-child relationship shall be explicit in metadata.
@@ -698,17 +698,17 @@ FORGE-{Category-Prefix}-{Number}
 Traceability IDs shall follow this convention:
 
 ```
-FORGE-AI.V{Version}.{Phase}.{Category}-{Number}
+AI-DOS.V{Version}.{Phase}.{Category}-{Number}
 ```
 
 Examples:
 
 | RFC | Traceability ID |
 |:---|:---|
-| STD-010 | `FORGE-STD-010` |
-| TPL-000 | `FORGE-AI.V3.TPL-000` |
-| TPL-001 | `FORGE-AI.V3.TPL-001` |
-| A.5.0 | `FORGE-AI.V4.PHASE-2.ENGINE-00` |
+| STD-010 | `AI-DOS-STD-010` |
+| TPL-000 | `AI-DOS.V3.TPL-000` |
+| TPL-001 | `AI-DOS.V3.TPL-001` |
+| A.5.0 | `AI-DOS.V4.PHASE-2.ENGINE-00` |
 
 Traceability IDs shall be stable and shall appear in review, audit, certification, registry, and knowledge graph records.
 
@@ -885,7 +885,7 @@ A completed review shall produce:
 
 ### 23.1 Approval Authority
 
-Approval Authority is declared in the RFC's metadata. For Forge AI RFCs, the Approval Authority is typically `Human Governance / Framework Governance`. Approval Authority shall not be the RFC Owner or a contributor to the RFC.
+Approval Authority is declared in the RFC's metadata. ForAI-DOS RFCs, the Approval Authority is typically `Human Governance / Framework Governance`. Approval Authority shall not be the RFC Owner or a contributor to the RFC.
 
 ### 23.2 Approval Criteria
 
@@ -1073,7 +1073,7 @@ The following matrix defines the structural compliance expectations for RFC docu
 
 | Metadata Field | Required | Format | Source of Truth |
 |:---|:---|:---|:---|
-| Identifier | Yes | `FORGE-{Prefix}-{Number}` | STD-010 + Section 18 |
+| Identifier | Yes | `AI-DOS-{Prefix}-{Number}` | STD-010 + Section 18 |
 | Title | Yes | `{Identifier} — {Descriptive Title}` | Section 17 |
 | Version | Yes | `{M}.{m}.{p}-{status}` | Section 20 |
 | Status | Yes | From Section 21 status values | Section 21 |
@@ -1112,7 +1112,7 @@ The validation matrix defines what is checked, how it is checked, and what the e
 | # | Validation Criterion | Validation Method | Expected Outcome | Severity if Failed |
 |:---|:---|:---|:---|:---|
 | V-01 | All mandatory metadata fields present | Field-by-field inspection | All fields populated | Blocking |
-| V-02 | Identifier follows category prefix convention | Pattern match | Matches `FORGE-{Prefix}-{Number}` | Blocking |
+| V-02 | Identifier follows category prefix convention | Pattern match | Matches `AI-DOS-{Prefix}-{Number}` | Blocking |
 | V-03 | Title follows naming convention | Pattern match | Contains identifier prefix | Warning |
 | V-04 | Version follows semantic versioning with status | Pattern match | Matches `{M}.{m}.{p}-{status}` | Blocking |
 | V-05 | Status is a valid state value | Enumeration check | Value in Section 21 status list | Blocking |
@@ -1160,7 +1160,7 @@ The following is a conforming metadata block for a hypothetical RFC:
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-A-006` |
+| Identifier | `AI-DOS-A-006` |
 | Title | A.6 — Knowledge Engine RFC |
 | Version | `0.1.0-draft` |
 | Status | RFC / Draft |
@@ -1174,7 +1174,7 @@ The following is a conforming metadata block for a hypothetical RFC:
 | Created | 2026-07-10 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.V4.PHASE-2.ENGINE-01` |
+| Traceability ID | `AI-DOS.V4.PHASE-2.ENGINE-01` |
 | Scope | Knowledge Engine architecture, contracts, registry, lifecycle, and specialization constraints |
 | Out of Scope | Implementation, source code, REST APIs, database schema, vector database, LLM calls, certification execution, and ProjectStatus updates |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/FrameworkGovernance.md` |
@@ -1196,7 +1196,7 @@ The following demonstrates the mandatory section skeleton for a conforming RFC:
 ```markdown
 # A.6 — Knowledge Engine RFC
 
-> Forge AI v4 · Engine Architecture RFC
+>AI-DOS v4 · Engine Architecture RFC
 > Engine Specialization · Draft / Non-canonical
 
 ---
@@ -1425,7 +1425,7 @@ The following existing RFC documents serve as reference implementations. They pr
 
 TPL-001 shall be considered successful when:
 
-1. **Structural Uniformity**: Every new RFC template produced under Forge AI follows the mandatory section structure defined in Section 15. No new RFC template omits a mandatory section or redefines a mandatory section's purpose.
+1. **Structural Uniformity**: Every new RFC template produced underAI-DOS follows the mandatory section structure defined in Section 15. No new RFC template omits a mandatory section or redefines a mandatory section's purpose.
 
 2. **Metadata Compliance**: Every new RFC document produced from a TPL-001-compliant template passes the Metadata Compliance Matrix (Section 27.2) with zero blocking findings.
 
@@ -1449,7 +1449,7 @@ TPL-001 shall be considered successful when:
 
 TPL-001 is designed for extension without breaking existing compliance. The following extension points are anticipated:
 
-1. **New RFC Categories**: As the Forge AI framework grows, new categories may be added to Section 10. New categories shall follow the existing category definition structure and shall not conflict with existing categories.
+1. **New RFC Categories**: As theAI-DOS framework grows, new categories may be added to Section 10. New categories shall follow the existing category definition structure and shall not conflict with existing categories.
 
 2. **New Taxonomy Types**: As new RFC structural roles emerge, new taxonomy types may be added to Section 9. New types shall follow the existing taxonomy definition structure.
 
@@ -1480,7 +1480,7 @@ TPL-001 is designed for extension without breaking existing compliance. The foll
 
 | Term | Definition |
 |:---|:---|
-| **RFC** | Request for Comments; in Forge AI context, a proposal or definition of architecture submitted for structured review |
+| **RFC** | Request for Comments; inAI-DOS context, a proposal or definition of architecture submitted for structured review |
 | **RFC Template** | A reusable structural standard that defines the mandatory and optional sections for a class of RFCs |
 | **RFC Template Standard** | A governance document (such as TPL-001) that defines how RFC templates shall be authored |
 | **Mandatory Section** | A section that every RFC document shall include; defined in Section 15 |
@@ -1510,7 +1510,7 @@ The following is the complete skeleton that every RFC template shall generate. D
 ```markdown
 # {Identifier} — {Descriptive Title}
 
-> Forge AI v{Version} · {Category}
+>AI-DOS v{Version} · {Category}
 > {Classification} · {Status} / {Canonical Status}
 
 ---
@@ -1520,7 +1520,7 @@ The following is the complete skeleton that every RFC template shall generate. D
 
 | Field                  | Value                                                                             |
 |:-----------------------|:----------------------------------------------------------------------------------|
-| Identifier             | `{FORGE-{Prefix}-{Number}}`                                                       | 
+| Identifier             | `{AI-DOS-{Prefix}-{Number}}`                                                       | 
 | Title                  | {Identifier} — {Descriptive Title}                                                | 
 | Version                | `{0.1.0-draft}`                                                                   | 
 | Status                 | {RFC / Draft}                                                                     |
@@ -1534,7 +1534,7 @@ The following is the complete skeleton that every RFC template shall generate. D
 | Created                | {YYYY-MM-DD}                                                                      |
 | Last Updated           | {YYYY-MM-DD}                                                                      |
 | Lifecycle Phase        | Draft                                                                             |
-| Traceability ID        | `{FORGE-AI.V{N}.{Phase}.{Category}-{Number}}`                                     |
+| Traceability ID        | `{AI-DOS.V{N}.{Phase}.{Category}-{Number}}`                                     |
 | Scope                  | {Scope description}                                                               |
 | Out of Scope           | {Out of Scope description}                                                        |
 | Normative Authority    | {Authority list}                                                                  |

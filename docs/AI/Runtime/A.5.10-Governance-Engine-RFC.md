@@ -1,13 +1,13 @@
 # A.5.10 — Governance Engine RFC
 
-> Forge AI v4 · Engine Architecture RFC
+>AI-DOS v4 · Engine Architecture RFC
 > Phase 2 Engine Specialization · Draft / Non-canonical
 
 ---
 
 ## 1. Status
 
-This RFC is a draft, non-canonical Engine Architecture RFC for the Governance Engine, the tenth individual Engine specialization in Phase 2 of the Forge AI v4 Engine Platform.
+This RFC is a draft, non-canonical Engine Architecture RFC for the Governance Engine, the tenth individual Engine specialization in Phase 2 of theAI-DOS v4 Engine Platform.
 
 Canonical Status: Non-canonical until reviewed and approved.
 
@@ -19,7 +19,7 @@ This document defines the architecture of the Governance Engine within the appro
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-A-5-10` |
+| Identifier | `AI-DOS-A-5-10` |
 | Title | A.5.10 — Governance Engine RFC |
 | Version | `0.2.0-draft` |
 | Status | Draft |
@@ -33,7 +33,7 @@ This document defines the architecture of the Governance Engine within the appro
 | Created | 2026-07-08 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.V2.RUNTIME.A-5-10` |
+| Traceability ID | `AI-DOS.V2.RUNTIME.A-5-10` |
 | Scope | Defines the Governance Engine specialization only, including its responsibilities, inputs, outputs, lifecycle participation, validation expectations, AI consumption rules, and handoff contract. |
 | Out of Scope | Runtime Architecture redefinition, Engine Platform redefinition, Engine Foundation redefinition, other Engine Specialization redefinition, implementation, certification, freeze decisions, ProjectStatus updates, and DevelopmentPhases updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
@@ -51,7 +51,7 @@ This document defines the architecture of the Governance Engine within the appro
 
 ## 3. Purpose
 
-The Governance Engine exists to centralize all governance concerns that would otherwise be scattered across the individual Engines of the Forge AI v4 Engine Platform. Governance is a cross-cutting concern: policy management, escalation handling, human governance interaction, retention administration, and audit trail maintenance are domains that span multiple Engines rather than belonging to any single Engine. Without a dedicated Governance Engine, each Engine would need to independently implement governance interfaces, leading to inconsistent policy enforcement, fragmented audit trails, and uncontrolled human governance interaction points that compromise the platform's architectural integrity.
+The Governance Engine exists to centralize all governance concerns that would otherwise be scattered across the individual Engines of theAI-DOS v4 Engine Platform. Governance is a cross-cutting concern: policy management, escalation handling, human governance interaction, retention administration, and audit trail maintenance are domains that span multiple Engines rather than belonging to any single Engine. Without a dedicated Governance Engine, each Engine would need to independently implement governance interfaces, leading to inconsistent policy enforcement, fragmented audit trails, and uncontrolled human governance interaction points that compromise the platform's architectural integrity.
 
 A governance action, in the context of this Engine, is any action that involves the application, creation, modification, or enforcement of a governance policy, the processing of a governance escalation, the recording of a human governance decision, or the production of a governance audit entry. Governance actions are the primary output of the Governance Engine. Each governance action produces an immutable Governance Record that documents the action, its rationale, the applied policies, and the audit trail context.
 

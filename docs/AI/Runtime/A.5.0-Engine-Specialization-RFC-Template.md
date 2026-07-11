@@ -1,6 +1,6 @@
 # A.5.0 — Engine Specialization RFC Template
 
-> Forge AI v4 · Engine Architecture RFC
+>AI-DOS v4 · Engine Architecture RFC
 > Engine Specialization Template · Draft / Non-canonical
 
 ---
@@ -19,7 +19,7 @@ This document defines the mandatory structure for every individual Engine RFC in
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-A-5-0` |
+| Identifier | `AI-DOS-A-5-0` |
 | Title | A.5.0 — Engine Specialization RFC Template |
 | Version | `0.2.0-draft` |
 | Status | Draft |
@@ -33,7 +33,7 @@ This document defines the mandatory structure for every individual Engine RFC in
 | Created | 2026-07-08 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.V2.RUNTIME.A-5-0` |
+| Traceability ID | `AI-DOS.V2.RUNTIME.A-5-0` |
 | Scope | Defines the Engine Specialization RFC contract, required section structure, validation checklist, and completion report expectations for A.5.x Engine Specialization RFCs. |
 | Out of Scope | Runtime Architecture redefinition, Engine Platform redefinition, individual Engine behavior definition, implementation, certification, freeze decisions, ProjectStatus updates, and DevelopmentPhases updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
@@ -53,7 +53,7 @@ This document defines the mandatory structure for every individual Engine RFC in
 
 ### 2.1 Scope
 
-This template governs the structure and section-level content contract for every individual Engine RFC produced during Phase 2 of the Forge AI v4 Engine specialization effort. It applies to all Engine RFCs listed in the Phase 2 Engine specialization queue, beginning with A.5.1 — Context Engine RFC.
+This template governs the structure and section-level content contract for every individual Engine RFC produced during Phase 2 of theAI-DOS v4 Engine specialization effort. It applies to all Engine RFCs listed in the Phase 2 Engine specialization queue, beginning with A.5.1 — Context Engine RFC.
 
 The template establishes two categories of sections:
 
@@ -177,7 +177,7 @@ Every Engine RFC shall include a `## Document Metadata` section that complies wi
 
 | Field | Engine RFC Guidance |
 |:---|:---|
-| Identifier | Use `FORGE-A-5-X` pattern where X is the Engine sequence number. |
+| Identifier | Use `AI-DOS-A-5-X` pattern where X is the Engine sequence number. |
 | Title | Use `A.5.X — {Engine Name} RFC` pattern. |
 | Version | Use `0.2.0-draft` for normalized Runtime RFC family drafts; future new drafts may use the governed initial draft version assigned by Human Governance. |
 | Status | `Draft` until review is entered. |
@@ -191,7 +191,7 @@ Every Engine RFC shall include a `## Document Metadata` section that complies wi
 | Created | `YYYY-MM-DD` format per STD-010 Section 4.2. |
 | Last Updated | `YYYY-MM-DD` format; update on material changes. |
 | Lifecycle Phase | Match Status field; `Draft` initially. |
-| Traceability ID | Use `FORGE-AI.V4.PHASE-2.ENGINE-{XX}` pattern. |
+| Traceability ID | Use `AI-DOS.V4.PHASE-2.ENGINE-{XX}` pattern. |
 | Scope | Engine-specific scope statement. |
 | Out of Scope | Explicitly list implementation and platform concerns. |
 | Normative Authority | Ordered from highest to nearest governing authority. |
@@ -293,7 +293,7 @@ The following 16 sections require Engine-specific content. For each, the author 
 
 #### 5.6.1 Purpose (Section 3)
 
-Define the architectural reason this Engine exists within the Forge AI v4 platform. Explain what problem it solves, what gap it fills, and why it cannot be subsumed by another Engine. Reference the Engine Platform's capability model (A.4.7) and demonstrate how this Engine's purpose aligns with a distinct capability domain.
+Define the architectural reason this Engine exists within theAI-DOS v4 platform. Explain what problem it solves, what gap it fills, and why it cannot be subsumed by another Engine. Reference the Engine Platform's capability model (A.4.7) and demonstrate how this Engine's purpose aligns with a distinct capability domain.
 
 *Consider*: What would break if this Engine did not exist? Which platform capability does it uniquely own?
 
@@ -468,7 +468,7 @@ Refactored the Engine Specialization RFC Template (A.5.0) from version 3.0.0-alp
 - Normative Authority ordered from highest to nearest (STD-010 Section 8.2).
 - Normative References, Dependencies, Consumes, Produces, and Related Specifications are separate fields (STD-010 Section 5).
 - RFC class expectations met: parent architecture identified, non-canonical status stated, review and approval authority explicit, normative authority separated from dependencies, produced architectural requirements identified (STD-010 Section 6.2).
-- Identifier follows `FORGE-A` prefix convention (STD-010 Section 4.5).
+- Identifier follows `AI-DOS-A` prefix convention (STD-010 Section 4.5).
 - Version follows `major.minor.patch-status` format (STD-010 Section 4.6).
 - Metadata completeness does not imply canonical status (STD-010 Section 3.4).
 

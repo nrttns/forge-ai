@@ -1,6 +1,6 @@
 # Integration Registry Template
 
-> Forge AI v2 · Integration Templates<br>
+>AI-DOS v2 · Integration Templates<br>
 > Template Artifact · Draft / Non-canonical
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-INTEGRATION-REGISTRY` |
+| Identifier | `AI-DOS-TPL-INTEGRATION-REGISTRY` |
 | Title | Integration Registry Template |
 | Version | `2.0.0-draft` |
 | Status | Draft |
@@ -23,7 +23,7 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Operational Core Alignment |
-| Traceability ID | `FORGE-AI.V2.TEMPLATES.INTEGRATION.REGISTRY` |
+| Traceability ID | `AI-DOS.V2.TEMPLATES.INTEGRATION.REGISTRY` |
 | Scope | Defines the reusable documentation structure for recording approved integrations available to a project, adapter, runtime, or tool ecosystem. |
 | Out of Scope | Integration authority redefinition, connector authority redefinition, external-tool authority redefinition, platform-adapter authority redefinition, runtime authority redefinition, API authority creation, registry authority creation, governance authority creation, review authority creation, certification authority creation, ProjectStatus updates, connector implementation, API implementation, platform-adapter implementation, runtime behavior implementation, external tool behavior implementation, authentication flow implementation, transport protocol definition, registry persistence implementation, architecture redefinition, and canonical promotion. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |

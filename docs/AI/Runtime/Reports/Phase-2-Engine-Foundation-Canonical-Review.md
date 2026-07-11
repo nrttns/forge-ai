@@ -1,6 +1,6 @@
 # Phase 2 Engine Foundation Canonical Review
 
-> Forge AI v4 · Phase 2 Engine Foundation  
+>AI-DOS v4 · Phase 2 Engine Foundation  
 > Canonical review report · Governance evidence and recommendation only
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.V4.CANONICAL-REVIEW-00` |
+| Identifier | `AI-DOS.V4.CANONICAL-REVIEW-00` |
 | Title | Phase 2 Engine Foundation Canonical Review |
 | Version | `1.0.0-draft` |
 | Status | Draft Review |
@@ -23,8 +23,8 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Draft Review |
-| Traceability ID | `FORGE-AI.V4.CANONICAL-REVIEW-00` |
-| Scope | Official canonical-readiness review of the complete Forge AI Phase 2 Engine Foundation documentation package as an architectural baseline candidate. |
+| Traceability ID | `AI-DOS.V4.CANONICAL-REVIEW-00` |
+| Scope | Official canonical-readiness review of the completeAI-DOS Phase 2 Engine Foundation documentation package as an architectural baseline candidate. |
 | Out of Scope | Document certification, document promotion, canonicalization, implementation approval, Runtime activation, Agent Runtime activation, Swarm Runtime activation, ProjectStatus updates, RFC rewriting, editorial normalization, source-code changes, platform adapters, persistence implementation, and operational-layer activation. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
 | Normative References | `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md` |
@@ -41,7 +41,7 @@
 
 ## Executive Summary
 
-This Canonical Review evaluates the complete Forge AI Phase 2 Engine Foundation documentation package as a candidate architectural baseline. The review is evidence-only. It does not certify, promote, canonicalize, approve implementation, activate Runtime, activate Agent Runtime, activate Swarm Runtime, or update ProjectStatus.
+This Canonical Review evaluates the completeAI-DOS Phase 2 Engine Foundation documentation package as a candidate architectural baseline. The review is evidence-only. It does not certify, promote, canonicalize, approve implementation, activate Runtime, activate Agent Runtime, activate Swarm Runtime, or update ProjectStatus.
 
 The reviewed package is architecturally complete for Phase 2 canonical consideration. It contains the Runtime Architecture, Engine Platform RFC family, Engine Specialization RFC Template, twelve Engine specialization RFCs, and three review reports that establish inventory, consistency, and certification-readiness evidence.
 

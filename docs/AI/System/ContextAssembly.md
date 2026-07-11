@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.SYSTEM.CONTEXT-ASSEMBLY` |
+| Identifier | `AI-DOS.SYSTEM.CONTEXT-ASSEMBLY` |
 | Title | AI System Context Assembly |
 | Version | `2.0.0-draft` |
 | Status | Draft |
@@ -20,8 +20,8 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Draft Operational Core Alignment |
-| Traceability ID | `FORGE-AI.V2.OP-005D` |
-| Scope | Context source selection, minimum required reading set, task-specific context boundary, authority-aware context collection, evidence inclusion, missing-context detection, and context conflict reporting for Forge AI agents. |
+| Traceability ID | `AI-DOS.V2.OP-005D` |
+| Scope | Context source selection, minimum required reading set, task-specific context boundary, authority-aware context collection, evidence inclusion, missing-context detection, and context conflict reporting forAI-DOS agents. |
 | Out of Scope | Authority resolution, source-of-truth decisions, boot sequence ownership, governance decisions, ProjectStatus ownership, Runtime definitions, Engine definitions, command definitions, workflow definitions, template definitions, execution, validation, certification, canonical promotion, and implementation. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
 | Normative References | `docs/AI/System/AuthorityModel.md`; `docs/AI/System/BootSequence.md`; `docs/AI/System/SourceOfTruth.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-This document defines how Forge AI agents collect the minimum necessary context for a task.
+This document defines howAI-DOS agents collect the minimum necessary context for a task.
 
 Context Assembly determines which documents, task inputs, state files, authority documents, templates, commands, workflows, Runtime or Engine references, and evidence are required for safe execution.
 

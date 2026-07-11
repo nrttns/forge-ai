@@ -1,4 +1,4 @@
-# Forge AI v2 Target Repository Resolution
+#AI-DOS v2 Target Repository Resolution
 
 ---
 
@@ -6,8 +6,8 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.SYSTEM.TARGET-REPOSITORY-RESOLUTION` |
-| Title | Forge AI v2 Target Repository Resolution |
+| Identifier | `AI-DOS.SYSTEM.TARGET-REPOSITORY-RESOLUTION` |
+| Title |AI-DOS v2 Target Repository Resolution |
 | Version | `1.0.0-draft` |
 | Status | Draft |
 | Canonical Status | Non-canonical until reviewed, approved, and promoted through Framework Governance |
@@ -20,13 +20,13 @@
 | Created | 2026-07-10 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft System Layer Controlled Extension |
-| Traceability ID | `FORGE-AI.V2.SYSTEM-EXT-001` |
+| Traceability ID | `AI-DOS.V2.SYSTEM-EXT-001` |
 | Scope | Active Target Repository identification, Target Repository root establishment, Target AGENTS.md location, target-project resource declaration resolution, repository-relative path resolution, target-resolution validation, blocker reporting, and handoff to BootSequence. |
 | Out of Scope | Human Governance, Framework Governance, repository selection policy beyond the active task, AGENTS.md syntax, AGENTS.md content ownership, authority resolution, source-of-truth selection, context assembly, decision selection, execution, ProjectStatus ownership, DevelopmentPhases ownership, project architecture, source code, Runtime, Engines, Commands, Workflows, Templates, validation execution, certification, and canonical promotion. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Architecture/A.2-AI-DOS-Target-Repository-Operational-Boundary.md` |
 | Normative References | `docs/AI/Architecture/A.2-AI-DOS-Target-Repository-Operational-Boundary.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Architecture/Reports/Target-Project-Path-Resolution.md`; `docs/AI/System/BootSequence.md` |
 | Dependencies | Human task instruction, A.2 operational boundary, Target Repository root availability, Target Repository root AGENTS.md, target-project resource declarations, System Layer BootSequence, ProjectStatus policy, DevelopmentPhases roadmap policy, and protected-area declarations. |
-| Consumes | Human task instruction, current working repository context, explicit target repository instruction, available repository roots when provided by the task context, Target Repository root AGENTS.md, A.2 operational-boundary rules, Forge AI self-hosting declaration, and external Target Repository declaration. |
+| Consumes | Human task instruction, current working repository context, explicit target repository instruction, available repository roots when provided by the task context, Target Repository root AGENTS.md, A.2 operational-boundary rules,AI-DOS self-hosting declaration, and external Target Repository declaration. |
 | Produces | Target Repository Resolution Result, resolved Target Repository root, resolved Target AGENTS path, resolved project-resource paths, target authority declarations, protected areas, validation context, unresolved declaration list, resolution status, blocker status, and BootSequence handoff context. |
 | Related Specifications | `docs/AI/System/README.md`; `docs/AI/System/AuthorityModel.md`; `docs/AI/System/BootSequence.md`; `docs/AI/System/SourceOfTruth.md`; `docs/AI/System/ContextAssembly.md`; `docs/AI/System/DecisionModel.md`; `docs/AI/System/ExecutionSequence.md`; `docs/AI/System/SystemLayerFreeze.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md` |
 | Supersedes | None |
@@ -38,14 +38,14 @@
 
 ## 1. Purpose
 
-This document defines how a Forge Agent establishes the active Target Repository and resolves its repository-local resources before normal boot, authority, context, decision, and execution procedures continue.
+This document defines how a AI-DOS Agent establishes the active Target Repository and resolves its repository-local resources before normal boot, authority, context, decision, and execution procedures continue.
 
 The procedure preserves this architectural rule:
 
 ```text
-Forge AI / AI-DOS provides Framework truth.
+AI-DOS / AI-DOS provides Framework truth.
 The Target Repository provides project truth.
-The Forge Agent consumes both.
+The AI-DOS Agent consumes both.
 ```
 
 ## 2. Scope
@@ -95,9 +95,9 @@ This procedure consumes A.2. It does not redefine A.2, create a Repository Adapt
 
 ## 4. Relationship to A.2
 
-A.2 defines the operational boundary between Forge AI / AI-DOS, the active Target Repository, and the Forge Agent. This procedure operationalizes only the pre-boot resolution portion of that boundary.
+A.2 defines the operational boundary betweenAI-DOS / AI-DOS, the active Target Repository, and the AI-DOS Agent. This procedure operationalizes only the pre-boot resolution portion of that boundary.
 
-This document uses the A.2 concepts of Framework truth, project truth, Target Repository, Forge Agent, Forge AI self-hosting, external Target Repository operation, protected areas, and repository-relative target paths. It does not change ownership: Forge AI / AI-DOS owns Framework truth, the Target Repository owns project truth, and the Forge Agent consumes both without becoming a source of truth.
+This document uses the A.2 concepts of Framework truth, project truth, Target Repository, AI-DOS Agent,AI-DOS self-hosting, external Target Repository operation, protected areas, and repository-relative target paths. It does not change ownership:AI-DOS / AI-DOS owns Framework truth, the Target Repository owns project truth, and the AI-DOS Agent consumes both without becoming a source of truth.
 
 ## 5. Operational Responsibilities
 
@@ -153,7 +153,7 @@ This procedure may consume:
 - available repository roots supplied by the task context;
 - Target Repository root `AGENTS.md`;
 - A.2 operational-boundary rules;
-- Forge AI self-hosting declaration;
+-AI-DOS self-hosting declaration;
 - external Target Repository declaration.
 
 The procedure shall not invent a repository-discovery mechanism, define automatic filesystem scanning, or choose among multiple repositories without explicit authority.
@@ -186,7 +186,7 @@ Agents shall perform Target Repository Resolution in this sequence:
 5. Resolve `<TARGET_AGENTS_PATH> = <TARGET_REPOSITORY_ROOT>/AGENTS.md`.
 6. Confirm the Target AGENTS.md exists and is readable.
 7. Read the Target AGENTS.md.
-8. Resolve target-project declarations for ProjectStatus, DevelopmentPhases, project architecture, source root, validation commands, protected and frozen areas, target-project authority order, and Forge AI consumption rule.
+8. Resolve target-project declarations for ProjectStatus, DevelopmentPhases, project architecture, source root, validation commands, protected and frozen areas, target-project authority order, andAI-DOS consumption rule.
 9. Resolve all declared project paths relative to `<TARGET_REPOSITORY_ROOT>`.
 10. Validate that required resources exist or are explicitly declared optional.
 11. Produce a Target Repository Resolution Result.
@@ -223,7 +223,7 @@ The conceptual result contains:
 - validation commands;
 - protected areas;
 - target authority order;
-- Forge AI provider/reference;
+-AI-DOS provider/reference;
 - unresolved declarations;
 - resolution status;
 - blocker status.
@@ -239,18 +239,18 @@ Allowed resolution statuses are:
 - `BLOCKED_AUTHORITY_CONFLICT`
 - `BLOCKED_AMBIGUOUS_TARGET`
 
-## 10. Forge AI Self-Hosting Rules
+## 10.AI-DOS Self-Hosting Rules
 
-When Forge AI is the Target Repository, these mappings are valid:
+WhenAI-DOS is the Target Repository, these mappings are valid:
 
 ```text
-<TARGET_REPOSITORY_ROOT> = Forge AI repository root
+<TARGET_REPOSITORY_ROOT> =AI-DOS repository root
 <TARGET_AGENTS_PATH> = AGENTS.md
 <PROJECT_STATUS_PATH> = docs/DevelopmentPhases/ProjectStatus.md
 <DEVELOPMENT_PHASES_PATH> = docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md
 ```
 
-These mappings are valid Forge AI self-hosting mappings only. They must not become fallback values for an external Target Repository.
+These mappings are validAI-DOS self-hosting mappings only. They must not become fallback values for an external Target Repository.
 
 Self-hosting is a specialization of the same resolution procedure. It is not a parallel boot system.
 
@@ -262,7 +262,7 @@ For an external Target Repository, including an external repository such as Axis
 - its own root `AGENTS.md` must be read;
 - its own project-resource declarations must be resolved;
 - all project paths must resolve relative to its own repository root;
-- Forge AI self-hosting paths must not be substituted;
+-AI-DOS self-hosting paths must not be substituted;
 - missing declarations must produce a blocker;
 - project truth must remain owned by the external Target Repository.
 
@@ -279,7 +279,7 @@ Before handing context to BootSequence, agents shall validate that:
 5. Required target-project resource declarations are present or explicitly optional.
 6. Declared paths resolve relative to `<TARGET_REPOSITORY_ROOT>`.
 7. Declared paths do not escape the authorized Target Repository boundary without explicit authorization.
-8. Forge AI self-hosting mappings are not applied to an external Target Repository.
+8.AI-DOS self-hosting mappings are not applied to an external Target Repository.
 9. Target-project authority routing does not conflict with A.2.
 10. Protected-area and validation-command declarations required for the task are available.
 
@@ -295,7 +295,7 @@ Agents shall stop when:
 - required project-resource declarations are missing;
 - declared paths cannot be resolved;
 - declared paths escape the authorized Target Repository boundary without explicit authorization;
-- Forge AI self-hosting paths are being applied to an external Target Repository;
+-AI-DOS self-hosting paths are being applied to an external Target Repository;
 - project authority routing conflicts with A.2;
 - protected-area declarations required for the task are missing;
 - validation commands required for implementation are unavailable.
@@ -303,7 +303,7 @@ Agents shall stop when:
 On stop, agents shall:
 
 - not infer missing values;
-- not use Forge AI self-hosting defaults;
+- not useAI-DOS self-hosting defaults;
 - not begin BootSequence;
 - report the exact blocker;
 - list missing or conflicting declarations;
@@ -335,13 +335,13 @@ This procedure is complete when:
 2. `<TARGET_REPOSITORY_ROOT>` can be established or blocked deterministically.
 3. `<TARGET_AGENTS_PATH>` can be resolved or blocked deterministically.
 4. Target-project declarations can be resolved relative to `<TARGET_REPOSITORY_ROOT>` or reported as blockers.
-5. Forge AI self-hosting mappings are isolated from external Target Repository operation.
+5.AI-DOS self-hosting mappings are isolated from external Target Repository operation.
 6. External Target Repository operation preserves target-project ownership of project truth.
 7. The Resolution Result can be handed to BootSequence without BootSequence rediscovering or overriding the Target Repository.
 
 ## 17. Historical Context
 
-The frozen Forge AI v2 System Layer assumed that the active Target Repository had already been identified before BootSequence loaded target-project state. `FORGE-AI.V2.SYSTEM-EXT-001` authorizes a controlled System Layer extension to add the missing deterministic pre-boot resolution procedure while preserving the existing System Layer architecture and freeze boundaries.
+The frozenAI-DOS v2 System Layer assumed that the active Target Repository had already been identified before BootSequence loaded target-project state. `AI-DOS.V2.SYSTEM-EXT-001` authorizes a controlled System Layer extension to add the missing deterministic pre-boot resolution procedure while preserving the existing System Layer architecture and freeze boundaries.
 
 ## 18. Version History
 

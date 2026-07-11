@@ -1,4 +1,4 @@
-# Forge AI — AGENTS v2 Agent Identity and Registry
+#AI-DOS — AGENTS v2 Agent Identity and Registry
 
 ---
 
@@ -6,8 +6,8 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.AGENTS.V2.AGENT-IDENTITY-AND-REGISTRY` |
-| Title | Forge AI — AGENTS v2 Agent Identity and Registry |
+| Identifier | `AI-DOS.AGENTS.V2.AGENT-IDENTITY-AND-REGISTRY` |
+| Title |AI-DOS — AGENTS v2 Agent Identity and Registry |
 | Version | 0.1.0-draft |
 | Status | Draft |
 | Canonical Status | Non-canonical until reviewed, approved, and promoted through Human Governance / Framework Governance |
@@ -20,7 +20,7 @@
 | Created | 2026-07-08 |
 | Last Updated | 2026-07-08 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.ARCHITECTURE.AGENTS.V2.IDENTITY-REGISTRY` |
+| Traceability ID | `AI-DOS.ARCHITECTURE.AGENTS.V2.IDENTITY-REGISTRY` |
 | Scope | Documentation-level AGENTS v2 agent identity and registry model, including identity fields, identifier rules, type and role references, metadata expectations, registry entries, capability links, lifecycle states, ownership, governance, and validation boundaries. |
 | Out of Scope | Registry implementation, storage, databases, APIs, CLI, UI, runtime execution, swarm runtime, platform adapters, Engine RFC work, Runtime redefinition, Engine Platform redefinition, Governance redefinition, Standards redefinition, M.0 redefinition, M.1 redefinition, STD-010 redefinition, and ProjectStatus updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Architecture.md` |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-This document defines the AGENTS v2 agent identity and registry model for Forge AI.
+This document defines the AGENTS v2 agent identity and registry model for AI-DOS.
 
 Its purpose is to describe, at the documentation and architecture-specification level, how future AGENTS v2 agents are identified, typed, assigned roles, described with metadata, represented as registry entries, linked to capability declarations, and governed through lifecycle states.
 
@@ -163,7 +163,7 @@ Identifier rules:
 Recommended identifier shape:
 
 ```text
-FORGE-AI.AGENTS.V2.AGENT.<STABLE-NAME>
+AI-DOS.AGENTS.V2.AGENT.<STABLE-NAME>
 ```
 
 The recommended shape is a documentation convention only. It is not a storage key, database key, API path, CLI argument, runtime handle, or platform adapter identifier.

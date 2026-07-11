@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-PLANNING-README` |
+| Identifier | `AI-DOS-TPL-PLANNING-README` |
 | Title | Planning Templates |
 | Version | `0.2.0-draft` |
 | Status | Draft |
@@ -20,15 +20,15 @@
 | Created | 2026-07-10 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.TEMPLATES.PLANNING.README` |
-| Scope | Index and usage guide for the Forge AI Planning template family. |
+| Traceability ID | `AI-DOS.TEMPLATES.PLANNING.README` |
+| Scope | Index and usage guide for theAI-DOS Planning template family. |
 | Out of Scope | Planning logic implementation, roadmap execution, phase advancement, stage transition execution, automated planning, certification decisions, registry updates, runtime behavior, or ProjectStatus updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
-| Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/README.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md` |
+| Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/README.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/Roadmap/AI-DOS-Program-Architecture-Master-Roadmap-v4.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md` |
 | Dependencies | STD-010 metadata schema; TPL-000 template governance; DevelopmentPhases roadmap; ProjectStatus operational state; Master Roadmap; applicable planning, runtime, architecture, standards, and governance authorities |
 | Consumes | Existing Planning, Governance, DevelopmentPhases, Runtime, Architecture, Standards, and roadmap authorities without redefining them |
 | Produces | Planning template family index and usage guide |
-| Related Specifications | Vision Template; Roadmap Template; Phase Template; Stage Template; Historical Capability Template; Forge AI template library |
+| Related Specifications | Vision Template; Roadmap Template; Phase Template; Stage Template; Historical Capability Template;AI-DOS template library |
 | Supersedes | None |
 | Superseded By | None |
 | Promotion Requirements | Planning template family review, README alignment validation, STD-010 validation, TPL-000 validation, authority-reference validation, and explicit Human Governance approval |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-The Planning template family defines reusable output structures for planning artifacts in Forge AI and AI Framework adopters.
+The Planning template family defines reusable output structures for planning artifacts inAI-DOS and AI Framework adopters.
 
 Planning artifacts define why work exists, where it belongs, what it may change, what it must not change, how it is validated, and when it can be reviewed for advancement.
 
@@ -93,7 +93,7 @@ No RFC-style Planning template exists in this family; the RFC template standard 
 
 Use `HistoricalCapabilityTemplate.md` instead of `SprintTemplate.md`.
 
-Sprint is a delivery cadence term. Forge AI uses Historical Capability as the immutable implementation history unit.
+Sprint is a delivery cadence term.AI-DOS uses Historical Capability as the immutable implementation history unit.
 
 ## 7. Planning Invariants
 

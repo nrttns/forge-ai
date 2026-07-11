@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.OPERATIONAL.CORE.AI-ORCHESTRATOR` |
+| Identifier | `AI-DOS.OPERATIONAL.CORE.AI-ORCHESTRATOR` |
 | Title | AI Orchestrator |
 | Version | `2.0.0-draft` |
 | Status | Draft |
@@ -20,15 +20,15 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Draft Operational Core Alignment |
-| Traceability ID | `FORGE-AI.V2.OP-003` |
-| Scope | Defines Forge AI v2 Operational Core orchestration for authority routing, lifecycle coordination, workflow routing, command routing, template routing, Runtime interaction, Engine interaction, blocker management, completion handling, and ProjectStatus update boundaries. |
+| Traceability ID | `AI-DOS.V2.OP-003` |
+| Scope | DefinesAI-DOS v2 Operational Core orchestration for authority routing, lifecycle coordination, workflow routing, command routing, template routing, Runtime interaction, Engine interaction, blocker management, completion handling, and ProjectStatus update boundaries. |
 | Out of Scope | Governance redesign, Runtime RFC redesign, Engine RFC redesign, command implementation, workflow implementation, template modification, ProjectStatus update, file relocation, operational implementation, platform adapter activation, multi-agent runtime activation, swarm runtime activation, certification, and canonical promotion. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; the ProjectStatus and DevelopmentPhases declared by the active Target Repository |
 | Normative References | `docs/AI/AIFramework.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Templates/README.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md`; `docs/AI/Operational/Operational-Core-Replacement-Matrix.md` |
 | Dependencies | Governance Core; Meta Foundation; Standards Foundation; Runtime Architecture; Engine Platform; Engine Foundation RFC family; Operational Core replacement plan; active ProjectStatus and DevelopmentPhases roadmap. |
 | Consumes | Human task instruction, repository boot sequence, governance navigation, governance decision policy, operational state, roadmap sequence, constitutional principles, meta models, terminology, metadata requirements, Runtime Architecture, Engine Architecture, Engine Specialization template, AI Framework entry rules, Agent System Prompt boundaries, template category map, commands, workflows, validation artifacts, and task-specific authorities. |
 | Produces | Operational orchestration lifecycle, routing rules, workflow selection guidance, command selection guidance, template selection guidance, Runtime interaction guidance, Engine interaction guidance, blocker escalation rules, ProjectStatus update boundaries, and completion-cycle expectations. |
-| Related Specifications | `docs/AI/AIFramework.md`; `docs/AI/AgentSystemPrompt.md`; `docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md` (Forge AI self-hosting related specification only); `docs/AI/Operational/Operational-Core-Replacement-Matrix.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/Templates/README.md` |
+| Related Specifications | `docs/AI/AIFramework.md`; `docs/AI/AgentSystemPrompt.md`; `docs/Roadmap/AI-DOS-Program-Architecture-Master-Roadmap-v4.md` (AI-DOS self-hosting related specification only); `docs/AI/Operational/Operational-Core-Replacement-Matrix.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/Templates/README.md` |
 | Supersedes | Prior orchestration wording in this file while preserving this file as the in-place Operational Core orchestration document. |
 | Superseded By | None |
 | Promotion Requirements | Framework Governance review, Human Governance review, validation against Governance Atlas, ProjectStatus, DevelopmentPhases, STD-010, Runtime Architecture, Engine Architecture, Operational Core replacement plan, and explicit Human Governance promotion authorization. |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-The AI Orchestrator coordinates Forge AI v2 Operational Core execution. It determines how a directed task moves from authority discovery through context assembly, workflow routing, command routing, template routing, execution coordination, validation, review, blocker handling, completion reporting, and next-action recommendation.
+The AI Orchestrator coordinatesAI-DOS v2 Operational Core execution. It determines how a directed task moves from authority discovery through context assembly, workflow routing, command routing, template routing, execution coordination, validation, review, blocker handling, completion reporting, and next-action recommendation.
 
 The Orchestrator does not create authority, invent roadmap scope, approve work, certify documents, promote documents, update ProjectStatus by default, or implement Runtime or Engine behavior. It coordinates execution within the authority chain established by Human Governance, the repository bootloader, Governance Atlas, Framework Governance, ProjectStatus, DevelopmentPhases, the Constitution, Meta Foundation, Standards, Runtime Architecture, Engine Platform, and task-specific authorities.
 
@@ -106,7 +106,7 @@ docs/AI/FrameworkGovernance.md governance decision policy when applicable
     ↓
 <DEVELOPMENT_PHASES_PATH> roadmap sequence loaded from the resolved Target Repository
     ↓
-docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md strategic program structure when applicable for Forge AI self-hosting only
+docs/Roadmap/AI-DOS-Program-Architecture-Master-Roadmap-v4.md strategic program structure when applicable forAI-DOS self-hosting only
     ↓
 docs/AI/Architecture/A.1-Constitution.md
     ↓
@@ -179,7 +179,7 @@ The AI Orchestrator does not own:
 
 ## 5. Orchestration Lifecycle
 
-The Forge AI v2 orchestration lifecycle begins only after TargetRepositoryResolution and BootSequence. AIOrchestrator consumes loaded inputs and does not identify or select the Target Repository, resolve Target AGENTS, resolve project paths, validate declarations, create resolution statuses, override TargetRepositoryResolution, or rerun BootSequence. The lifecycle is:
+TheAI-DOS v2 orchestration lifecycle begins only after TargetRepositoryResolution and BootSequence. AIOrchestrator consumes loaded inputs and does not identify or select the Target Repository, resolve Target AGENTS, resolve project paths, validate declarations, create resolution statuses, override TargetRepositoryResolution, or rerun BootSequence. The lifecycle is:
 
 ```text
 Task Instruction
@@ -393,7 +393,7 @@ The Orchestrator recommends corrective action rather than guessing.
 
 ## 13. Completion Cycle
 
-A Forge AI v2 orchestration cycle is complete when the active task has:
+AAI-DOS v2 orchestration cycle is complete when the active task has:
 
 ```text
 Authority Confirmed
@@ -461,7 +461,7 @@ The Orchestrator is not a replacement for AIFramework. It is the coordinating la
 
 ## 15. Historical Context and Version History
 
-This file remains the permanent in-place AI Orchestrator document. The v2 refactor modernizes the existing file rather than replacing it, moving it into the Forge AI v2 Operational Core model while preserving its orchestration role.
+This file remains the permanent in-place AI Orchestrator document. The v2 refactor modernizes the existing file rather than replacing it, moving it into theAI-DOS v2 Operational Core model while preserving its orchestration role.
 
 Historical notes:
 
@@ -473,4 +473,4 @@ Historical notes:
 | Version | Status | Notes |
 |:---|:---|:---|
 | Pre-v2 | Historical | Original orchestration wording coordinated AI workflow, commands, templates, certification, and project-state update behavior using older path conventions. |
-| `2.0.0-draft` | Draft | In-place Forge AI v2 Operational Core orchestration refactor for `FORGE-AI.V2.OP-003`; aligned with current Governance, ProjectStatus, Roadmap, Runtime, Engine Platform, Engine Foundation, and template authority model. |
+| `2.0.0-draft` | Draft | In-placeAI-DOS v2 Operational Core orchestration refactor for `AI-DOS.V2.OP-003`; aligned with current Governance, ProjectStatus, Roadmap, Runtime, Engine Platform, Engine Foundation, and template authority model. |

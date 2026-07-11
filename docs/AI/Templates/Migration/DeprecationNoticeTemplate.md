@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-MIGRATION-DEPRECATION-NOTICE` |
+| Identifier | `AI-DOS-TPL-MIGRATION-DEPRECATION-NOTICE` |
 | Title | Deprecation Notice Template |
 | Version | `0.2.0-draft` |
 | Status | Draft |
@@ -20,7 +20,7 @@
 | Created | 2026-07-10 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.TEMPLATES.MIGRATION.DEPRECATION-NOTICE` |
+| Traceability ID | `AI-DOS.TEMPLATES.MIGRATION.DEPRECATION-NOTICE` |
 | Scope | Reusable output contract for documenting deprecation notices, replacements, migration guidance, compatibility impact, and required validation evidence. |
 | Out of Scope | Executing deprecation, removing files, implementing migration logic, runtime conversion, automated upgrades, governance decisions, certification decisions, registry updates, or ProjectStatus updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |

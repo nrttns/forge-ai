@@ -1,6 +1,6 @@
 # STD-002 — Discovery YAML Schema
 
-> **Parent Standard:** [STD-002 — Discovery Standard](../Standards/STD-002-Discovery-Standard.md) (`FORGE-STD-002`)  
+> **Parent Standard:** [STD-002 — Discovery Standard](../Standards/STD-002-Discovery-Standard.md) (`AI-DOS-STD-002`)  
 > **Related Appendix:** [Appendix A — Discovery Classification Catalog](../Appendix/STD-002-Discovery-Standard-Appendix-A-Discovery-Classification-Catalog.md)  
 > **Related JSON Schema:** [`STD-002-Discovery.schema.json`](./STD-002-Discovery.schema.json)  
 > **Executable YAML Schema:** [`STD-002-Discovery.schema.yaml`](./STD-002-Discovery.schema.yaml)  
@@ -14,7 +14,7 @@
 | Property | Value                                  |
 |:---|:---------------------------------------|
 | **Document** | STD-002 — Discovery YAML Schema        |
-| **Identifier** | `FORGE-STD-002-SCHEMA-YAML`            |
+| **Identifier** | `AI-DOS-STD-002-SCHEMA-YAML`            |
 | **Version** | 1.0.0-alpha                            |
 | **Status** | Draft                                  |
 | **Type** | Technical Schema Specification         |
@@ -30,7 +30,7 @@
 
 ## 2. Purpose
 
-This document defines the canonical YAML representation for Forge AI Discovery artifacts.
+This document defines the canonical YAML representation forAI-DOS Discovery artifacts.
 
 The YAML representation exists for human-friendly authoring, review, repository storage, configuration workflows, AI-assisted editing, and governance-controlled documentation pipelines.
 
@@ -165,7 +165,7 @@ metadata:
     - runtime
     - governance
     - cycle
-  project: Forge AI
+  project: AI-DOS
 ```
 
 ---
@@ -267,6 +267,6 @@ Future versions shall not:
 
 ## 14. Completion Statement
 
-This document defines the human-readable YAML schema specification for Forge AI Discovery artifacts.
+This document defines the human-readable YAML schema specification forAI-DOS Discovery artifacts.
 
 The executable YAML schema is maintained in `STD-002-Discovery.schema.yaml` and shall remain semantically equivalent to the canonical JSON Schema contract.

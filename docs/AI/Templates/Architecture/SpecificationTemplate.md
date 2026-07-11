@@ -20,7 +20,7 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Draft |
-| Traceability ID | FORGE-AI.TEMPLATES.ARCHITECTURE.SPECIFICATION |
+| Traceability ID | AI-DOS.TEMPLATES.ARCHITECTURE.SPECIFICATION |
 | Scope | Reusable template for contract-bearing specifications in the Architecture template family |
 | Out of Scope | Broad architecture narratives, RFC proposals, governance policy, or implementation source truth |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |

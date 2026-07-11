@@ -118,13 +118,13 @@ The following documents were reviewed for this audit:
 
 AI Framework RC2 is structurally ready for certification review. The master framework document is an index and entry point, while detailed architectural responsibilities are delegated to focused specification modules. The split supports the transition away from an RC1-style monolith and preserves framework independence.
 
-Forge AI is correctly positioned as the first framework implementation rather than the framework core. The framework language separates persistent knowledge, live state, temporary context, execution, validation, review, certification, project state update, and future memory.
+AI-DOS is correctly positioned as the first framework implementation rather than the framework core. The framework language separates persistent knowledge, live state, temporary context, execution, validation, review, certification, project state update, and future memory.
 
 ## 8. Ownership Review
 
 Ownership boundaries are clear:
 
-- `AGENTS.md` is the Forge AI bootstrap authority.
+- `AGENTS.md` is theAI-DOS bootstrap authority.
 - `docs/AI/AIFramework.md` is the AI Framework RC2 master entry.
 - `docs/AI/Specification/Constitution.md` is the framework constitution.
 - `docs/ProjectStatus.md` is the only live operational project state dashboard.

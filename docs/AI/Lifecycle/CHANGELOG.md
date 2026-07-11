@@ -14,7 +14,7 @@ Authority: `docs/AI/Lifecycle/README.md`
 
 This changelog records AI Framework lifecycle history, release status, compatibility-relevant changes, certification-related milestones, and support-state changes.
 
-It does not replace certification evidence, validation evidence, project operational state, or Forge AI historical capability records.
+It does not replace certification evidence, validation evidence, project operational state, orAI-DOS historical capability records.
 
 ---
 

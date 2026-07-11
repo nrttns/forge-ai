@@ -5,7 +5,7 @@
 
 # STD-001 — Knowledge Graph Standard
 
-> **Authority:** Human Governance → `AGENTS.md` → [A.1 — Constitution](../A.1-Constitution.md) (`FORGE-A-001`) → Forge AI Blueprint RFC → [M.0 — Framework Meta Model](../../Meta/M.0-Framework-Meta-Model.md) (`FORGE-META-000`) → [M.1 — Artifact Meta Model](../../Meta/M.1-Artifact-Meta-Model.md) (`FORGE-META-001`) → [STD-000 — Framework Standards](STD-000-Framework-Standards.md) (`FORGE-STD-000`) → this standard. Runtime and Engine Architecture consume this standard; they do not supersede it.
+> **Authority:** Human Governance → `AGENTS.md` → [A.1 — Constitution](../A.1-Constitution.md) (`AI-DOS-A-001`) →AI-DOS Blueprint RFC → [M.0 — Framework Meta Model](../../Meta/M.0-Framework-Meta-Model.md) (`AI-DOS-META-000`) → [M.1 — Artifact Meta Model](../../Meta/M.1-Artifact-Meta-Model.md) (`AI-DOS-META-001`) → [STD-000 — Framework Standards](STD-000-Framework-Standards.md) (`AI-DOS-STD-000`) → this standard. Runtime and Engine Architecture consume this standard; they do not supersede it.
 >
 > **Document Type:** Technical Graph Specification
 >
@@ -27,7 +27,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-STD-001` |
+| Identifier | `AI-DOS-STD-001` |
 | Title | STD-001 — Knowledge Graph Standard |
 | Version | 3.1.0-beta |
 | Status | Draft |
@@ -41,7 +41,7 @@
 | Created | 2026-07-04 |
 | Last Updated | 2026-07-07 |
 | Lifecycle Phase | Draft |
-| Traceability ID | FORGE-STD-001 |
+| Traceability ID | AI-DOS-STD-001 |
 | Scope | Knowledge graph schema standard |
 | Out of Scope | Runtime implementation, engine behavior, and certification |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/FrameworkGovernance.md` |
@@ -74,11 +74,11 @@
 
 | Document | Relationship |
 |:---|:---|
-| [STD-000 — Framework Standards](STD-000-Framework-Standards.md) (`FORGE-STD-000`) | Governing standard |
-| [M.0 — Framework Meta Model](../../Meta/M.0-Framework-Meta-Model.md) (`FORGE-META-000`) | Conceptual type system |
-| [A.1 — Constitution](../A.1-Constitution.md) (`FORGE-A-001`) | Constitutional authority |
-| [M.1 — Artifact Meta Model](../../Meta/M.1-Artifact-Meta-Model.md) (`FORGE-META-001`) | Artifact participation and projection contract |
-| [STD-002 — Discovery Standard](STD-002-Discovery-Standard.md) (`FORGE-STD-002`) | Discovery consumer of Knowledge Graph semantics |
+| [STD-000 — Framework Standards](STD-000-Framework-Standards.md) (`AI-DOS-STD-000`) | Governing standard |
+| [M.0 — Framework Meta Model](../../Meta/M.0-Framework-Meta-Model.md) (`AI-DOS-META-000`) | Conceptual type system |
+| [A.1 — Constitution](../A.1-Constitution.md) (`AI-DOS-A-001`) | Constitutional authority |
+| [M.1 — Artifact Meta Model](../../Meta/M.1-Artifact-Meta-Model.md) (`AI-DOS-META-001`) | Artifact participation and projection contract |
+| [STD-002 — Discovery Standard](STD-002-Discovery-Standard.md) (`AI-DOS-STD-002`) | Discovery consumer of Knowledge Graph semantics |
 | [A.3 — Runtime Architecture RFC](../../Runtime/A.3-Runtime-Architecture-RFC.md) | Runtime consumer of graph projections and traversal rules |
 | [A.4 — Engine Architecture RFC](../../Runtime/A.4-Engine-Architecture-RFC.md) | Engine Platform consumer of graph semantics |
 | STD-001 Discovery JSON Schema | Serialization projection |
@@ -164,7 +164,7 @@
 | Property | Value |
 |:---|:---|
 | Document | STD-001 — Knowledge Graph Standard |
-| Identifier | `FORGE-STD-001` |
+| Identifier | `AI-DOS-STD-001` |
 | Version | `3.1.0-beta` |
 | Status | Draft |
 | Governance Classification | Core |
@@ -178,7 +178,7 @@ For complete document metadata, see [Document Metadata](#document-metadata) abov
 
 ## 1.2 Purpose
 
-This document defines the canonical graph representation of Discovery artifacts within the Forge AI Framework.
+This document defines the canonical graph representation of Discovery artifacts within theAI-DOS Framework.
 
 Unlike the JSON and YAML schemas, which define serialization formats, this specification defines the conceptual graph used by the Framework to represent architectural knowledge.
 
@@ -218,7 +218,7 @@ This specification is complete when:
 
 ## 1.5 Completion Statement
 
-The Discovery Graph Model establishes the canonical knowledge representation for Discovery artifacts within the Forge AI Framework.
+The Discovery Graph Model establishes the canonical knowledge representation for Discovery artifacts within theAI-DOS Framework.
 
 All machine-readable representations shall be projections of this graph.
 
@@ -232,7 +232,7 @@ The Discovery Graph Model is founded on the principle that architectural knowled
 
 Traditional governance systems represent architecture as isolated documents connected through informal references.
 
-The Forge AI Framework instead represents architecture as an interconnected knowledge graph.
+TheAI-DOS Framework instead represents architecture as an interconnected knowledge graph.
 
 In this model, every architectural artifact becomes an addressable node connected through explicit, typed, and governed relationships.
 
@@ -423,7 +423,7 @@ The Graph Design Philosophy is complete when:
 
 ## 2.9 Completion Statement
 
-The Graph Design Philosophy establishes the canonical architectural worldview of the Forge AI Framework.
+The Graph Design Philosophy establishes the canonical architectural worldview of theAI-DOS Framework.
 
 All Discovery artifacts, regardless of representation, shall ultimately be interpreted as interconnected knowledge nodes within a governed architectural graph.
 
@@ -437,7 +437,7 @@ The Graph Principles define the immutable architectural rules governing the Disc
 
 These principles establish the behavioral constraints that every graph implementation shall satisfy regardless of storage technology, runtime platform, serialization format, or visualization tool.
 
-They are considered architectural invariants of the Forge AI Framework.
+They are considered architectural invariants of theAI-DOS Framework.
 
 ## 3.2 Graph Invariants
 
@@ -709,7 +709,7 @@ The Graph Principles are complete when:
 
 ## 3.21 Completion Statement
 
-The Graph Principles establish the immutable architectural rules governing the Forge AI Discovery Knowledge Graph.
+The Graph Principles establish the immutable architectural rules governing theAI-DOS Discovery Knowledge Graph.
 
 These principles ensure that every implementation preserves canonical semantics, deterministic reasoning, traceability, and governance regardless of technology, storage engine, or runtime platform.
 
@@ -719,7 +719,7 @@ These principles ensure that every implementation preserves canonical semantics,
 
 ## 4.1 Overview
 
-The Canonical Graph Model defines the official knowledge topology of the Forge AI Framework.
+The Canonical Graph Model defines the official knowledge topology of theAI-DOS Framework.
 
 It specifies how architectural knowledge is represented as a directed, typed, governed graph.
 
@@ -996,7 +996,7 @@ The Canonical Graph Model is complete when:
 
 ## 4.16 Completion Statement
 
-The Canonical Graph Model establishes the official knowledge topology of the Forge AI Framework.
+The Canonical Graph Model establishes the official knowledge topology of theAI-DOS Framework.
 
 It defines the semantic structure through which Discovery artifacts evolve into validated, governed, and certifiable architectural knowledge while preserving deterministic reasoning, complete traceability, and implementation independence.
 
@@ -1006,7 +1006,7 @@ It defines the semantic structure through which Discovery artifacts evolve into 
 
 ## 5.1 Overview
 
-The Canonical Node Model defines the common structural contract shared by every node within the Forge AI Knowledge Graph.
+The Canonical Node Model defines the common structural contract shared by every node within theAI-DOS Knowledge Graph.
 
 Regardless of its semantic purpose, every graph node shall conform to this model.
 
@@ -1266,7 +1266,7 @@ The Canonical Node Model is complete when:
 
 ## 5.20 Completion Statement
 
-The Canonical Node Model establishes the universal architectural contract for all nodes within the Forge AI Knowledge Graph.
+The Canonical Node Model establishes the universal architectural contract for all nodes within theAI-DOS Knowledge Graph.
 
 It provides a consistent foundation for identity, governance, lifecycle, metadata, relationships, extensibility, and auditability while ensuring implementation independence and long-term architectural stability.
 
@@ -1276,9 +1276,9 @@ It provides a consistent foundation for identity, governance, lifecycle, metadat
 
 ## 6.1 Overview
 
-The Canonical Edge Model defines the universal contract governing every relationship within the Forge AI Knowledge Graph.
+The Canonical Edge Model defines the universal contract governing every relationship within theAI-DOS Knowledge Graph.
 
-Unlike conventional graph implementations where relationships are simple links between nodes, Forge AI treats every edge as a governed architectural object.
+Unlike conventional graph implementations where relationships are simple links between nodes,AI-DOS treats every edge as a governed architectural object.
 
 Edges possess identity, semantics, ownership, lifecycle, metadata, and auditability.
 
@@ -1537,9 +1537,9 @@ The Canonical Edge Model is complete when:
 
 ## 6.22 Completion Statement
 
-The Canonical Edge Model establishes the universal architectural contract for relationships within the Forge AI Knowledge Graph.
+The Canonical Edge Model establishes the universal architectural contract for relationships within theAI-DOS Knowledge Graph.
 
-It ensures that every edge remains a governed, traceable, explainable, and technology-independent architectural object while preserving deterministic graph semantics across the entire Forge AI Framework.
+It ensures that every edge remains a governed, traceable, explainable, and technology-independent architectural object while preserving deterministic graph semantics across the entireAI-DOS Framework.
 
 ---
 
@@ -1547,7 +1547,7 @@ It ensures that every edge remains a governed, traceable, explainable, and techn
 
 ## 7.1 Overview
 
-The Graph Topology defines the canonical structural organization of the Forge AI Knowledge Graph.
+The Graph Topology defines the canonical structural organization of theAI-DOS Knowledge Graph.
 
 While the Canonical Graph Model ([Section 4](#4-canonical-graph-model)) defines the semantic concepts and relationships, the Graph Topology specifies how those concepts are organized into coherent architectural layers.
 
@@ -1568,7 +1568,7 @@ The Graph Topology shall:
 
 ## 7.3 Topology Philosophy
 
-The Forge AI Knowledge Graph is layered, directed, and governed.
+TheAI-DOS Knowledge Graph is layered, directed, and governed.
 
 - Knowledge flows through architectural stages rather than existing as isolated nodes.
 - Each layer has a distinct responsibility.
@@ -1817,9 +1817,9 @@ The Graph Topology is complete when:
 
 ## 7.20 Completion Statement
 
-The Graph Topology establishes the canonical structural organization of the Forge AI Knowledge Graph.
+The Graph Topology establishes the canonical structural organization of theAI-DOS Knowledge Graph.
 
-It defines the logical layers, knowledge flow, and traversal rules required to ensure deterministic reasoning, governance integrity, implementation independence, and long-term architectural scalability across the Forge AI Framework.
+It defines the logical layers, knowledge flow, and traversal rules required to ensure deterministic reasoning, governance integrity, implementation independence, and long-term architectural scalability across theAI-DOS Framework.
 
 ---
 
@@ -1827,7 +1827,7 @@ It defines the logical layers, knowledge flow, and traversal rules required to e
 
 ## 8.1 Overview
 
-The Canonical Node Types define the fundamental knowledge entities of the Forge AI Knowledge Graph.
+The Canonical Node Types define the fundamental knowledge entities of theAI-DOS Knowledge Graph.
 
 Every node within the graph shall belong to exactly one canonical node type.
 
@@ -1848,7 +1848,7 @@ The Canonical Node Type Model shall:
 
 ## 8.3 Node Taxonomy
 
-The Forge AI Knowledge Graph defines the following canonical node types.
+TheAI-DOS Knowledge Graph defines the following canonical node types.
 
 ```mermaid
 graph TD
@@ -2149,9 +2149,9 @@ The Canonical Node Types are complete when:
 
 ## 8.21 Completion Statement
 
-The Canonical Node Types establish the official ontology of the Forge AI Knowledge Graph.
+The Canonical Node Types establish the official ontology of theAI-DOS Knowledge Graph.
 
-They define the semantic responsibilities of every architectural knowledge entity while ensuring deterministic reasoning, governance consistency, technology independence, and long-term interoperability across the Forge AI Framework.
+They define the semantic responsibilities of every architectural knowledge entity while ensuring deterministic reasoning, governance consistency, technology independence, and long-term interoperability across theAI-DOS Framework.
 
 ---
 
@@ -2159,7 +2159,7 @@ They define the semantic responsibilities of every architectural knowledge entit
 
 ## 9.1 Overview
 
-The Canonical Relationship Types define the official semantic relationships used throughout the Forge AI Knowledge Graph.
+The Canonical Relationship Types define the official semantic relationships used throughout theAI-DOS Knowledge Graph.
 
 Relationships are first-class architectural entities.
 
@@ -2504,9 +2504,9 @@ The Canonical Relationship Types are complete when:
 
 ## 9.26 Completion Statement
 
-The Canonical Relationship Types establish the official relationship ontology of the Forge AI Knowledge Graph.
+The Canonical Relationship Types establish the official relationship ontology of theAI-DOS Knowledge Graph.
 
-They define the semantic meaning of every connection between architectural entities, ensuring deterministic reasoning, complete traceability, governance consistency, and implementation independence throughout the Forge AI Framework.
+They define the semantic meaning of every connection between architectural entities, ensuring deterministic reasoning, complete traceability, governance consistency, and implementation independence throughout theAI-DOS Framework.
 
 ---
 
@@ -2514,7 +2514,7 @@ They define the semantic meaning of every connection between architectural entit
 
 ## 10.1 Overview
 
-Graph Constraints define the mandatory structural and semantic rules that preserve the integrity of the Forge AI Knowledge Graph.
+Graph Constraints define the mandatory structural and semantic rules that preserve the integrity of theAI-DOS Knowledge Graph.
 
 Constraints are independent of storage technology.
 
@@ -2644,7 +2644,7 @@ Graph Constraints are complete when every valid graph satisfies all structural, 
 
 ## 10.13 Completion Statement
 
-Graph Constraints establish the mandatory integrity rules of the Forge AI Knowledge Graph, ensuring that every implementation preserves deterministic reasoning, governance compliance, semantic consistency, and long-term architectural stability.
+Graph Constraints establish the mandatory integrity rules of theAI-DOS Knowledge Graph, ensuring that every implementation preserves deterministic reasoning, governance compliance, semantic consistency, and long-term architectural stability.
 
 ---
 
@@ -2652,7 +2652,7 @@ Graph Constraints establish the mandatory integrity rules of the Forge AI Knowle
 
 ## 11.1 Overview
 
-Knowledge Evolution defines how architectural knowledge progresses through the Forge AI Knowledge Graph.
+Knowledge Evolution defines how architectural knowledge progresses through theAI-DOS Knowledge Graph.
 
 Knowledge shall evolve through controlled expansion rather than destructive modification.
 
@@ -2719,7 +2719,7 @@ Knowledge Evolution is complete when historical knowledge remains immutable whil
 
 ## 12.1 Overview
 
-The AI Traversal Rules define the canonical behavior that AI Agents shall follow when navigating the Forge AI Knowledge Graph.
+The AI Traversal Rules define the canonical behavior that AI Agents shall follow when navigating theAI-DOS Knowledge Graph.
 
 Traversal is not merely graph navigation. Traversal represents explainable architectural reasoning.
 
@@ -2956,7 +2956,7 @@ The AI Traversal Rules are complete when:
 
 ## 12.19 Completion Statement
 
-The AI Traversal Rules establish the canonical reasoning model for AI systems operating on the Forge AI Knowledge Graph.
+The AI Traversal Rules establish the canonical reasoning model for AI systems operating on theAI-DOS Knowledge Graph.
 
 They ensure that architectural reasoning remains deterministic, explainable, governance-aware, and fully traceable while preserving the integrity of the canonical graph.
 
@@ -2966,7 +2966,7 @@ They ensure that architectural reasoning remains deterministic, explainable, gov
 
 ## 13.1 Overview
 
-The Runtime Traversal Rules define how runtime systems navigate, query, project, and consume the Forge AI Knowledge Graph.
+The Runtime Traversal Rules define how runtime systems navigate, query, project, and consume theAI-DOS Knowledge Graph.
 
 Unlike AI Traversal ([Section 12](#12-ai-traversal-rules)), which focuses on architectural reasoning, Runtime Traversal focuses on deterministic execution.
 
@@ -3242,7 +3242,7 @@ The Runtime Traversal Rules are complete when:
 
 ## 13.20 Completion Statement
 
-The Runtime Traversal Rules establish the canonical execution model for systems consuming the Forge AI Knowledge Graph.
+The Runtime Traversal Rules establish the canonical execution model for systems consuming theAI-DOS Knowledge Graph.
 
 They ensure that runtime implementations navigate, project, and execute graph data consistently while preserving canonical semantics, governance integrity, and implementation independence.
 
@@ -3252,7 +3252,7 @@ They ensure that runtime implementations navigate, project, and execute graph da
 
 ## 14.1 Overview
 
-The Neo4j Mapping defines the canonical mapping between the Forge AI Knowledge Graph and a Neo4j property graph implementation.
+The Neo4j Mapping defines the canonical mapping between theAI-DOS Knowledge Graph and a Neo4j property graph implementation.
 
 The Knowledge Graph remains the canonical architectural model. Neo4j is one possible implementation.
 
@@ -3272,7 +3272,7 @@ The mapping shall never redefine architectural knowledge.
 
 ## 14.3 Mapping Philosophy
 
-The Forge AI Framework distinguishes between canonical knowledge and its Neo4j projection.
+TheAI-DOS Framework distinguishes between canonical knowledge and its Neo4j projection.
 
 ```mermaid
 graph LR
@@ -3570,7 +3570,7 @@ The Neo4j Mapping is complete when:
 
 ## 14.22 Completion Statement
 
-The Neo4j Mapping establishes the canonical projection of the Forge AI Knowledge Graph into the Neo4j property graph model.
+The Neo4j Mapping establishes the canonical projection of theAI-DOS Knowledge Graph into the Neo4j property graph model.
 
 It guarantees that implementation-specific optimizations never redefine architectural semantics while enabling scalable graph storage, deterministic traversal, and enterprise-grade knowledge management.
 
@@ -3580,7 +3580,7 @@ It guarantees that implementation-specific optimizations never redefine architec
 
 ## 15.1 Overview
 
-This section provides canonical Cypher examples for querying and validating the Forge AI Knowledge Graph when implemented on Neo4j.
+This section provides canonical Cypher examples for querying and validating theAI-DOS Knowledge Graph when implemented on Neo4j.
 
 These examples are illustrative but normative in intent.
 
@@ -3974,7 +3974,7 @@ LIMIT 25;
 
 ## 15.15 Query Safety Rules
 
-Cypher queries used by Forge AI shall:
+Cypher queries used byAI-DOS shall:
 
 - Use parameterized inputs
 - Avoid unrestricted deep traversal
@@ -4050,7 +4050,7 @@ The Cypher Examples section is complete when:
 
 ## 15.20 Completion Statement
 
-The Cypher Examples provide a canonical reference query set for implementing, inspecting, validating, and traversing the Forge AI Knowledge Graph in Neo4j.
+The Cypher Examples provide a canonical reference query set for implementing, inspecting, validating, and traversing theAI-DOS Knowledge Graph in Neo4j.
 
 They demonstrate how the abstract Knowledge Graph Standard may be operationalized without allowing Neo4j-specific implementation details to redefine canonical graph semantics.
 
@@ -4060,7 +4060,7 @@ They demonstrate how the abstract Knowledge Graph Standard may be operationalize
 
 ## 16.1 Overview
 
-Graph Validation defines the canonical validation model for the Forge AI Knowledge Graph.
+Graph Validation defines the canonical validation model for theAI-DOS Knowledge Graph.
 
 Validation ensures that the graph preserves:
 
@@ -4077,7 +4077,7 @@ Graph Validation applies to every representation of the Knowledge Graph, includi
 
 Graph Validation exists to answer one question:
 
-> "Can this graph be trusted as a canonical representation of Forge AI knowledge?"
+> "Can this graph be trusted as a canonical representation ofAI-DOS knowledge?"
 
 Validation does not create knowledge.
 
@@ -4448,7 +4448,7 @@ Graph Validation is complete when:
 
 ## 16.21 Completion Statement
 
-Graph Validation establishes the canonical validation model for the Forge AI Knowledge Graph.
+Graph Validation establishes the canonical validation model for theAI-DOS Knowledge Graph.
 
 It ensures that graph representations remain structurally valid, semantically correct, governance-compliant, traceable, and suitable for AI reasoning, runtime traversal, and certification.
 
@@ -4458,7 +4458,7 @@ It ensures that graph representations remain structurally valid, semantically co
 
 ## 17.1 Overview
 
-This section provides canonical examples demonstrating how architectural knowledge is represented within the Forge AI Knowledge Graph.
+This section provides canonical examples demonstrating how architectural knowledge is represented within theAI-DOS Knowledge Graph.
 
 These examples are normative reference patterns.
 
@@ -4749,7 +4749,7 @@ The Canonical Examples are complete when:
 
 ## 17.18 Completion Statement
 
-The Canonical Examples establish the official reference patterns for constructing, traversing, validating, and governing the Forge AI Knowledge Graph.
+The Canonical Examples establish the official reference patterns for constructing, traversing, validating, and governing theAI-DOS Knowledge Graph.
 
 They provide reusable examples that preserve canonical semantics while supporting implementation consistency, AI reasoning, runtime interoperability, and long-term architectural governance.
 
@@ -4759,7 +4759,7 @@ They provide reusable examples that preserve canonical semantics while supportin
 
 ## 18.1 Overview
 
-The Graph Evolution Rules define how the Forge AI Knowledge Graph may evolve over time while preserving canonical semantics, governance integrity, backward compatibility, and long-term architectural stability.
+The Graph Evolution Rules define how theAI-DOS Knowledge Graph may evolve over time while preserving canonical semantics, governance integrity, backward compatibility, and long-term architectural stability.
 
 Knowledge Graph evolution is governed. It is never ad hoc.
 
@@ -5047,7 +5047,7 @@ The Graph Evolution Rules are complete when:
 
 ## 18.22 Completion Statement
 
-The Graph Evolution Rules establish the canonical governance model for the long-term evolution of the Forge AI Knowledge Graph.
+The Graph Evolution Rules establish the canonical governance model for the long-term evolution of theAI-DOS Knowledge Graph.
 
 They ensure that architectural knowledge can grow, adapt, and mature without sacrificing historical integrity, deterministic reasoning, traceability, or governance compliance, enabling the Framework to evolve sustainably across future versions and implementations.
 
@@ -5057,7 +5057,7 @@ They ensure that architectural knowledge can grow, adapt, and mature without sac
 
 ## 19.1 Overview
 
-The Extension Model defines how the Forge AI Knowledge Graph may be safely extended without compromising canonical semantics, governance integrity, or interoperability.
+The Extension Model defines how theAI-DOS Knowledge Graph may be safely extended without compromising canonical semantics, governance integrity, or interoperability.
 
 Extensions enable organizations, platform adapters, plugins, AI systems, and future standards to introduce additional capabilities while preserving the canonical Knowledge Graph.
 
@@ -5232,9 +5232,9 @@ Every extension shall belong to a namespace.
 Examples:
 
 ```text
-forge.core.*
-forge.enterprise.*
-forge.runtime.*
+ai-dos.core.*
+ai-dos.enterprise.*
+ai-dos.runtime.*
 vendor.microsoft.*
 vendor.openai.*
 vendor.company.*
@@ -5380,9 +5380,9 @@ The Extension Model is complete when:
 
 ## 19.24 Completion Statement
 
-The Extension Model establishes the governed extensibility framework for the Forge AI Knowledge Graph.
+The Extension Model establishes the governed extensibility framework for theAI-DOS Knowledge Graph.
 
-It enables controlled evolution through namespaces, registries, compatibility declarations, and governance-approved extensions while preserving canonical semantics, deterministic reasoning, interoperability, and long-term architectural stability across the Forge AI Framework.
+It enables controlled evolution through namespaces, registries, compatibility declarations, and governance-approved extensions while preserving canonical semantics, deterministic reasoning, interoperability, and long-term architectural stability across theAI-DOS Framework.
 
 ---
 
@@ -5390,9 +5390,9 @@ It enables controlled evolution through namespaces, registries, compatibility de
 
 ## 20.1 Overview
 
-This section formally concludes the Forge AI Knowledge Graph Standard.
+This section formally concludes theAI-DOS Knowledge Graph Standard.
 
-It establishes the Knowledge Graph as the canonical architectural knowledge model of the Forge AI Framework and defines its normative relationship with all current and future Framework Standards.
+It establishes the Knowledge Graph as the canonical architectural knowledge model of theAI-DOS Framework and defines its normative relationship with all current and future Framework Standards.
 
 The Completion Statement is normative.
 
@@ -5400,7 +5400,7 @@ All compliant implementations shall interpret the Knowledge Graph according to t
 
 ## 20.2 Canonical Status
 
-The Forge AI Knowledge Graph is the canonical architectural knowledge model of the Framework.
+TheAI-DOS Knowledge Graph is the canonical architectural knowledge model of the Framework.
 
 - It is the authoritative representation of architectural knowledge.
 - No alternative representation shall redefine canonical graph semantics.
@@ -5562,9 +5562,9 @@ Future evolution shall never compromise:
 
 ## 20.12 Normative References
 
-This standard should be interpreted together with the following Forge AI specifications:
+This standard should be interpreted together with the followingAI-DOS specifications:
 
-- Forge AI Constitution
+-AI-DOS Constitution
 - Framework Standards
 - Discovery Standard
 - Validation Standard
@@ -5589,13 +5589,13 @@ Technology evolves. Canonical architectural knowledge remains stable.
 
 ## 20.14 Final Statement
 
-The Forge AI Knowledge Graph Standard establishes the canonical semantic foundation of the Forge AI Framework.
+TheAI-DOS Knowledge Graph Standard establishes the canonical semantic foundation of theAI-DOS Framework.
 
 It defines how architectural knowledge is represented, connected, validated, traversed, governed, extended, and evolved while remaining independent of implementation technologies.
 
 By separating knowledge from representation and governance from implementation, this standard enables deterministic reasoning, explainable AI, enterprise-scale interoperability, and long-term architectural sustainability.
 
-All current and future Forge AI Standards shall treat this document as the authoritative definition of canonical graph semantics.
+All current and futureAI-DOS Standards shall treat this document as the authoritative definition of canonical graph semantics.
 
 ## 20.15 Standard Completion
 
@@ -5604,7 +5604,7 @@ All current and future Forge AI Standards shall treat this document as the autho
 | Document Status | Complete |
 | Version | `3.1.0-beta` |
 | Classification | Normative Framework Standard |
-| Authority | Forge AI Architecture Board |
+| Authority |AI-DOS Architecture Board |
 | Lifecycle State | Approved for Framework Integration |
 | Supersedes | None |
 | Next Planned Revision | `3.1` |
@@ -5612,17 +5612,17 @@ All current and future Forge AI Standards shall treat this document as the autho
 
 ## 20.16 Certification Statement
 
-This document is designated as the canonical Knowledge Graph Standard for the Forge AI Framework.
+This document is designated as the canonical Knowledge Graph Standard for theAI-DOS Framework.
 
 All Framework Standards, AI systems, Runtime implementations, Validation Engines, Governance processes, and future platform integrations shall interpret canonical architectural knowledge according to the principles defined herein.
 
-The Knowledge Graph Standard therefore serves as the semantic foundation upon which the Forge AI Framework is built.
+The Knowledge Graph Standard therefore serves as the semantic foundation upon which theAI-DOS Framework is built.
 
 ---
 
 # Appendices
 
-The following appendices provide reference material supporting the Forge AI Knowledge Graph Standard.
+The following appendices provide reference material supporting theAI-DOS Knowledge Graph Standard.
 
 - [Appendix A — Glossary of Terms](#appendix-a--glossary-of-terms)
 - [Appendix B — Relationship Reference Card](#appendix-b--relationship-reference-card)
@@ -5916,9 +5916,9 @@ This section declares the normative and informative dependencies of STD-001 — 
 
 | Dependency | Identifier | Relationship |
 |:---|:---|:---|
-| [STD-000 — Framework Standards](STD-000-Framework-Standards.md) | `FORGE-STD-000` | Governing standard; provides structure, lifecycle, governance, and validation requirements. |
-| [M.0 — Framework Meta Model](../../Meta/M.0-Framework-Meta-Model.md) | `FORGE-META-000` | Provides conceptual type system: Artifact, Entity, Identity, Relationship, Lifecycle, Authority, Ownership, Evidence. |
-| [A.1 — Constitution](../A.1-Constitution.md) | `FORGE-A-001` | Constitutional authority; Human Governance supremacy. |
+| [STD-000 — Framework Standards](STD-000-Framework-Standards.md) | `AI-DOS-STD-000` | Governing standard; provides structure, lifecycle, governance, and validation requirements. |
+| [M.0 — Framework Meta Model](../../Meta/M.0-Framework-Meta-Model.md) | `AI-DOS-META-000` | Provides conceptual type system: Artifact, Entity, Identity, Relationship, Lifecycle, Authority, Ownership, Evidence. |
+| [A.1 — Constitution](../A.1-Constitution.md) | `AI-DOS-A-001` | Constitutional authority; Human Governance supremacy. |
 
 ## 26.3 Informative Dependencies
 
@@ -6006,7 +6006,7 @@ This section provides the canonical, machine-readable metadata for STD-001 — K
 ## 28.2 Structured Metadata
 
 ```yaml
-id: FORGE-STD-001
+id: AI-DOS-STD-001
 title: Knowledge Graph Standard
 version: 3.0.1-beta
 owner: Framework Architecture Team
@@ -6014,9 +6014,9 @@ authority: STD-000 — Framework Standards
 classification: Core
 status: Draft
 dependencies:
-  - FORGE-STD-000
-  - FORGE-META-000
-  - FORGE-A-001
+  - AI-DOS-STD-000
+  - AI-DOS-META-000
+  - AI-DOS-A-001
 consumers:
   - Runtime reasoning systems
   - AI traversal engines
@@ -6052,9 +6052,9 @@ This section is complete when all required fields from STD-000 §26 are populate
 
 | Reference | Identifier | Description |
 |:---|:---|:---|
-| [A.1 — Constitution](../A.1-Constitution.md) | `FORGE-A-001` | The constitutional authority governing all Framework Standards. |
-| [M.0 — Framework Meta Model](../../Meta/M.0-Framework-Meta-Model.md) | `FORGE-META-000` | The conceptual type system consumed by all Framework Standards. |
-| [STD-000 — Framework Standards](STD-000-Framework-Standards.md) | `FORGE-STD-000` | The governing standard for the Standards Library. |
+| [A.1 — Constitution](../A.1-Constitution.md) | `AI-DOS-A-001` | The constitutional authority governing all Framework Standards. |
+| [M.0 — Framework Meta Model](../../Meta/M.0-Framework-Meta-Model.md) | `AI-DOS-META-000` | The conceptual type system consumed by all Framework Standards. |
+| [STD-000 — Framework Standards](STD-000-Framework-Standards.md) | `AI-DOS-STD-000` | The governing standard for the Standards Library. |
 
 ## 29.2 Informative References
 
@@ -6162,7 +6162,7 @@ This section is complete when the remediation metadata, dispositions, and ration
 
 ## 32.1 Executive Summary
 
-STD-001 remains the canonical Knowledge Graph Standard for Forge AI. This architectural realignment aligns STD-001 with the v3 Runtime Architecture and Engine Platform without changing approved graph semantics.
+STD-001 remains the canonical Knowledge Graph Standard for AI-DOS. This architectural realignment aligns STD-001 with the v3 Runtime Architecture and Engine Platform without changing approved graph semantics.
 
 The Knowledge Graph defines canonical architectural semantics. Nodes remain the canonical representation of architectural knowledge. Edges remain the canonical representation of architectural relationships. Graph topology remains the canonical architecture. Identity remains immutable. Traversal remains deterministic. Governance traceability remains mandatory.
 
@@ -6174,7 +6174,7 @@ This section is an alignment layer only. It recognizes Runtime and Engine Archit
 
 ### 32.2.1 Canonical Knowledge Graph Position
 
-The Knowledge Graph is the canonical semantic layer of Forge AI architectural knowledge.
+The Knowledge Graph is the canonical semantic layer ofAI-DOS architectural knowledge.
 
 | Graph Element | Canonical Role | Alignment Rule |
 |:---|:---|:---|
@@ -6248,7 +6248,7 @@ AI-generated graph recommendations remain proposed evidence or candidate artifac
 | Authority / Standard | Finding | Result |
 |:---|:---|:---|
 | A.1 Constitution | Preserves Architecture before Code, Documentation before Implementation, Contracts before Implementation, Validation before Completion, Review before Certification, Human Governance, and Runtime consumption boundaries. | Consistent |
-| Forge AI Blueprint RFC | Preserves the Knowledge Graph as a framework-level semantic model consumed by downstream architecture. | Consistent |
+|AI-DOS Blueprint RFC | Preserves the Knowledge Graph as a framework-level semantic model consumed by downstream architecture. | Consistent |
 | M.0 Framework Meta Model | Preserves entity, relationship, authority, ownership, lifecycle, state, evidence, governance, and certification concepts as meta-model inputs. | Consistent |
 | M.1 Artifact Meta Model | Preserves artifact identity, ownership, lifecycle, traceability, validation, and graph participation expectations. | Consistent |
 | STD-000 Framework Standards | Preserves standards governance authority, lifecycle, validation, certification, and Engine Platform alignment boundaries. | Consistent |
@@ -6273,7 +6273,7 @@ No approved graph semantics are changed. No node type, relationship type, topolo
 | Document | Impact | Required Action |
 |:---|:---|:---|
 | A.1 Constitution | None. | No amendment required. |
-| Forge AI Blueprint RFC | None. | No amendment required. |
+|AI-DOS Blueprint RFC | None. | No amendment required. |
 | M.0 Framework Meta Model | None. | No amendment required. |
 | M.1 Artifact Meta Model | None. | No amendment required. |
 | STD-000 Framework Standards | None. | Already aligned with Engine Platform consumption boundaries. |
@@ -6525,8 +6525,8 @@ signature: sha256:def456...
 ### G.3 AI Extension Manifest
 
 ```yaml
-extensionId: forge.ai.reasoning.ConfidenceScore
-namespace: forge.ai.reasoning
+extensionId: ai-dos.reasoning.ConfidenceScore
+namespace: ai-dos.reasoning
 category: AIExtension
 version: 1.0.0
 graphCompatibility: ">=3.0.0"
@@ -6675,9 +6675,9 @@ This appendix provides normative and informative references.
 
 | Reference | Identifier | Description |
 |:---|:---|:---|
-| [A.1 — Constitution](../A.1-Constitution.md) | `FORGE-A-001` | Constitutional authority governing all Framework Standards |
-| [M.0 — Framework Meta Model](../../Meta/M.0-Framework-Meta-Model.md) | `FORGE-META-000` | Conceptual type system consumed by all Framework Standards |
-| [STD-000 — Framework Standards](STD-000-Framework-Standards.md) | `FORGE-STD-000` | Governing standard for the Standards Library |
+| [A.1 — Constitution](../A.1-Constitution.md) | `AI-DOS-A-001` | Constitutional authority governing all Framework Standards |
+| [M.0 — Framework Meta Model](../../Meta/M.0-Framework-Meta-Model.md) | `AI-DOS-META-000` | Conceptual type system consumed by all Framework Standards |
+| [STD-000 — Framework Standards](STD-000-Framework-Standards.md) | `AI-DOS-STD-000` | Governing standard for the Standards Library |
 | STD-001 Discovery JSON Schema | — | Serialization projection of the Knowledge Graph |
 | STD-001 Discovery YAML Schema | — | Serialization projection of the Knowledge Graph |
 

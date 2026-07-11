@@ -1,13 +1,13 @@
 # A.5.1 — Context Engine RFC
 
-> Forge AI v4 · Engine Architecture RFC
+>AI-DOS v4 · Engine Architecture RFC
 > Phase 2 Engine Specialization · Draft / Non-canonical
 
 ---
 
 ## 1. Status
 
-This RFC is a draft, non-canonical Engine Architecture RFC for the Context Engine, the first individual Engine specialization in Phase 2 of the Forge AI v4 Engine Platform.
+This RFC is a draft, non-canonical Engine Architecture RFC for the Context Engine, the first individual Engine specialization in Phase 2 of theAI-DOS v4 Engine Platform.
 
 Canonical Status: Non-canonical until reviewed and approved.
 
@@ -19,7 +19,7 @@ This document defines the architecture of the Context Engine within the approved
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-A-5-1` |
+| Identifier | `AI-DOS-A-5-1` |
 | Title | A.5.1 — Context Engine RFC |
 | Version | `0.2.0-draft` |
 | Status | Draft |
@@ -33,7 +33,7 @@ This document defines the architecture of the Context Engine within the approved
 | Created | 2026-07-08 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.V2.RUNTIME.A-5-1` |
+| Traceability ID | `AI-DOS.V2.RUNTIME.A-5-1` |
 | Scope | Defines the Context Engine specialization only, including its responsibilities, inputs, outputs, lifecycle participation, validation expectations, AI consumption rules, and handoff contract. |
 | Out of Scope | Runtime Architecture redefinition, Engine Platform redefinition, Engine Foundation redefinition, other Engine Specialization redefinition, implementation, certification, freeze decisions, ProjectStatus updates, and DevelopmentPhases updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
@@ -51,7 +51,7 @@ This document defines the architecture of the Context Engine within the approved
 
 ## 3. Purpose
 
-The Context Engine exists to ensure that every Engine in the Forge AI v4 platform operates on a consistent, resolved, and versioned contextual state. Context is the shared informational substrate that connects user intent, task history, environmental conditions, and inter-Engine state into a unified representation that all Engines can reason about and contribute to.
+The Context Engine exists to ensure that every Engine in theAI-DOS v4 platform operates on a consistent, resolved, and versioned contextual state. Context is the shared informational substrate that connects user intent, task history, environmental conditions, and inter-Engine state into a unified representation that all Engines can reason about and contribute to.
 
 Without a dedicated Context Engine, each Engine would independently acquire, interpret, and maintain its own view of context, leading to divergence, duplication, conflicting state, and non-deterministic behaviour. The Context Engine eliminates this risk by serving as the single authoritative source for context acquisition, resolution, versioning, and distribution. It ensures that the Planning Engine, Decision Engine, Execution Engine, Validation Engine, and all other peer Engines receive context that is traceable, validated, and consistent with the current task state.
 
@@ -775,7 +775,7 @@ Before the Context Engine transitions from Draft to Approved, the following cert
 
 - Certification evidence must be reviewed by the Enterprise Documentation Standards Board.
 - Certification does not imply canonical status — canonical promotion requires separate governance approval.
-- Certification evidence must be traceable to this RFC's Traceability ID: `FORGE-AI.V4.PHASE-2.ENGINE-01`.
+- Certification evidence must be traceable to this RFC's Traceability ID: `AI-DOS.V4.PHASE-2.ENGINE-01`.
 
 ---
 
@@ -1154,7 +1154,7 @@ If any certification gate fails, the handoff does not proceed. The Context Engin
 
 ### Executive Summary
 
-Created the first Phase 2 Engine specialization RFC — A.5.1 Context Engine — using the refactored A.5.0 Engine Specialization RFC Template. The Context Engine is the foundational Engine responsible for acquiring, resolving, versioning, and distributing contextual state for all peer Engines in the Forge AI v4 Engine Platform. This RFC defines a deterministic, invariant-preserving architecture that ensures every Engine operates on a consistent, traceable, and timely context.
+Created the first Phase 2 Engine specialization RFC — A.5.1 Context Engine — using the refactored A.5.0 Engine Specialization RFC Template. The Context Engine is the foundational Engine responsible for acquiring, resolving, versioning, and distributing contextual state for all peer Engines in theAI-DOS v4 Engine Platform. This RFC defines a deterministic, invariant-preserving architecture that ensures every Engine operates on a consistent, traceable, and timely context.
 
 ### Documents Created
 
@@ -1174,7 +1174,7 @@ Created the first Phase 2 Engine specialization RFC — A.5.1 Context Engine —
 - Metadata heading uses exact `## Document Metadata` format.
 - All 27 mandatory STD-010 fields are present; conditionally mandatory fields are evaluated and included only when applicable.
 - RFC class expectations met: parent architecture identified, non-canonical status stated, review and approval authority explicit, normative authority separated from dependencies, produced architectural requirements identified.
-- Identifier `FORGE-A-5-1` follows the normalized Runtime RFC family identifier convention.
+- Identifier `AI-DOS-A-5-1` follows the normalized Runtime RFC family identifier convention.
 - Version `0.2.0-draft` follows `major.minor.patch-status` format.
 - Metadata completeness does not imply canonical status.
 

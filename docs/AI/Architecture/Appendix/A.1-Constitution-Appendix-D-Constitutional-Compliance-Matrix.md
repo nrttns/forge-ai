@@ -6,7 +6,7 @@
 
 ## 1. Purpose
 
-This appendix defines the canonical Constitutional Compliance Model for Forge AI.
+This appendix defines the canonical Constitutional Compliance Model for AI-DOS.
 It establishes how constitutional compliance is measured, validated, reviewed,
 certified, and consumed by Framework engines.
 

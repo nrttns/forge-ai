@@ -287,7 +287,7 @@ Escalate when:
 
 Verify that a framework implementation conforms to the AI Framework, framework constitution, live Project Status, architecture, active phase, active stage, historical capability, and quality requirements.
 
-For Forge AI, Framework Validation verifies conformance to `AGENTS.md`, `docs/ProjectStatus.md`, development phase documents, framework governance, and applicable stage or capability documentation.
+For AI-DOS, Framework Validation verifies conformance to `AGENTS.md`, `docs/ProjectStatus.md`, development phase documents, framework governance, and applicable stage or capability documentation.
 
 ## Evidence
 

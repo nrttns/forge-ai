@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-PLATFORM-ADAPTER` |
+| Identifier | `AI-DOS-TPL-PLATFORM-ADAPTER` |
 | Title | Platform Adapter Template |
 | Version | `0.2.0-draft` |
 | Status | Draft |
@@ -20,12 +20,12 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.TEMPLATES.PLATFORM.ADAPTER` |
-| Scope | Reusable output contract for documenting how a platform adapter consumes Forge AI authority and applies platform-specific conventions without redefining framework, runtime, engine, registry, integration, governance, certification, or ProjectStatus authority. |
+| Traceability ID | `AI-DOS.TEMPLATES.PLATFORM.ADAPTER` |
+| Scope | Reusable output contract for documenting how a platform adapter consumesAI-DOS authority and applies platform-specific conventions without redefining framework, runtime, engine, registry, integration, governance, certification, or ProjectStatus authority. |
 | Out of Scope | Implementing platform adapters, connectors, APIs, runtime behavior, authentication, transport, registry persistence, platform-specific execution, governance ownership, certification authority, or ProjectStatus updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
 | Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/README.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/Runtime/A.4.3-Engine-Registry-RFC.md`; `docs/AI/Runtime/A.5.1-Context-Engine-RFC.md`; `docs/AI/Runtime/A.5.2-Knowledge-Engine-RFC.md`; `docs/AI/Runtime/A.5.12-Registry-Engine-RFC.md` |
-| Dependencies | STD-010 metadata schema; TPL-000 template governance; Forge AI template library; existing Platform Adapter, Integration, Runtime, Engine, Context, Knowledge, and Registry authorities |
+| Dependencies | STD-010 metadata schema; TPL-000 template governance;AI-DOS template library; existing Platform Adapter, Integration, Runtime, Engine, Context, Knowledge, and Registry authorities |
 | Consumes | STD-010 mandatory metadata fields; TPL-000 placeholder grammar, lifecycle, taxonomy, compliance model, and validation requirements; existing Platform Adapter, Integration, Runtime, Engine, Context, Knowledge, and Registry boundaries |
 | Produces | Platform adapter documentation structure and placeholder manifest |
 | Related Specifications | Adapter Boundary Template; Adapter Capability Map Template; Adapter Validation Template; Architecture templates; Integration templates |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-Use this template to document a platform adapter as an output contract only. The produced document describes how an adapter applies existing Forge AI authority to a target platform while preserving ownership boundaries.
+Use this template to document a platform adapter as an output contract only. The produced document describes how an adapter applies existingAI-DOS authority to a target platform while preserving ownership boundaries.
 
 This template does not authorize implementation and does not create platform-adapter, integration, connector, runtime, API, registry, governance, review, certification, or ProjectStatus authority.
 
@@ -191,7 +191,7 @@ Default produced-document classification is `Platform Adapter Artifact` and defa
 ## 7. Adapter Position
 
 ```text
-Forge AI authority
+AI-DOS authority
     ↓ consumed by
 Project template output
     ↓ specialized by
@@ -219,7 +219,7 @@ Target project implementation
 
 ### Adapter Must Not
 
-- Redefine the Forge AI Constitution, Governance Atlas, FrameworkGovernance, ProjectStatus, or roadmap.
+- Redefine theAI-DOS Constitution, Governance Atlas, FrameworkGovernance, ProjectStatus, or roadmap.
 - Redefine Runtime, Engine, Context, Knowledge, Registry, Integration, connector, API, review, or certification authority.
 - Implement platform adapters, connectors, APIs, authentication, transport, registry persistence, or platform-specific execution.
 - Advance or update ProjectStatus.
@@ -237,7 +237,7 @@ Target project implementation
 
 ## 11. Compatibility Matrix
 
-| Forge AI Surface | Adapter Behavior | Authority Source | Validation Evidence |
+|AI-DOS Surface | Adapter Behavior | Authority Source | Validation Evidence |
 |:---|:---|:---|:---|
 | Governance | {{GOVERNANCE_BEHAVIOR}} | {{GOVERNANCE_AUTHORITY}} | {{GOVERNANCE_EVIDENCE}} |
 | ProjectStatus | {{PROJECTSTATUS_BEHAVIOR}} | {{PROJECTSTATUS_AUTHORITY}} | {{PROJECTSTATUS_EVIDENCE}} |

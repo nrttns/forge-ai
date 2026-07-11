@@ -1,6 +1,6 @@
 # A.2 — AI-DOS / Target Repository Operational Boundary
 
-> Forge AI v3 · Framework Core Architecture Specification
+>AI-DOS v3 · Framework Core Architecture Specification
 > Phase A — Framework Core · Stage A.2
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.V2.ARCH-002` |
+| Identifier | `AI-DOS.V2.ARCH-002` |
 | Title | A.2 — AI-DOS / Target Repository Operational Boundary |
 | Version | 0.1.0-draft |
 | Status | Draft |
@@ -23,15 +23,15 @@
 | Created | 2026-07-10 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | FORGE-AI.V2.ARCH-002 |
-| Scope | Repository-agnostic operational boundary between Forge AI / AI-DOS, an active Target Repository, and the Forge Agent that consumes both |
+| Traceability ID | AI-DOS.V2.ARCH-002 |
+| Scope | Repository-agnostic operational boundary betweenAI-DOS / AI-DOS, an active Target Repository, and the AI-DOS Agent that consumes both |
 | Out of Scope | Implementation, Runtime implementation design, Engine implementation design, AGENTS syntax, repository adapters, connectors, installation, schemas, configuration formats, new governance layers, repository cleanup, repository audit, ProjectStatus updates, and DevelopmentPhases updates |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/Architecture/A.1-Constitution.md` |
 | Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md` |
 | Dependencies | A.1 Constitution, Governance Atlas, Framework Governance, Meta Models, Framework Standards, Runtime Architecture, Engine Architecture, Operational Core, System Layer, Target Repository boot declarations, ProjectStatus, DevelopmentPhases, protected-area declarations, and validation context |
 | Consumes | A.1 constitutional authority invariants, M.0 Framework concepts, M.1 Artifact concepts, STD-000 standards model, STD-003 terminology, STD-010 metadata, A.3 Runtime Architecture, A.4 Engine Architecture, System Layer procedures, Target Project Path Resolution findings, and repository rationalization audit context |
 | Produces | Operational boundary model, Framework truth and project truth separation, Target Repository resolution model, self-hosting model, external target model, responsibility matrix, authority matrix, design invariants, and stop conditions |
-| Related Specifications | `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/System/README.md`; `docs/AI/System/AuthorityModel.md`; `docs/AI/System/BootSequence.md`; `docs/AI/System/SourceOfTruth.md`; `docs/AI/System/ContextAssembly.md`; `docs/AI/System/DecisionModel.md`; `docs/AI/System/ExecutionSequence.md`; `docs/AI/System/SystemLayerFreeze.md`; `docs/AI/Architecture/Reports/Target-Project-Path-Resolution.md`; `docs/AI/Architecture/Reports/Forge-AI-Repository-Rationalization-Audit.md` |
+| Related Specifications | `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/System/README.md`; `docs/AI/System/AuthorityModel.md`; `docs/AI/System/BootSequence.md`; `docs/AI/System/SourceOfTruth.md`; `docs/AI/System/ContextAssembly.md`; `docs/AI/System/DecisionModel.md`; `docs/AI/System/ExecutionSequence.md`; `docs/AI/System/SystemLayerFreeze.md`; `docs/AI/Architecture/Reports/Target-Project-Path-Resolution.md`; `docs/AI/Architecture/Reports/AI-DOS-Repository-Rationalization-Audit.md` |
 | Supersedes | None |
 | Superseded By | None |
 | Promotion Requirements | Framework Governance review, approval, traceability validation, metadata validation, terminology validation, architecture consistency validation, and explicit promotion |
@@ -41,18 +41,18 @@
 
 ## 1. Executive Summary
 
-This document defines the permanent operational boundary between Forge AI / AI-DOS, an active Target Repository, and the Forge Agent that consumes both. It establishes the repository-agnostic operating model in which Forge AI / AI-DOS provides general Framework operating rules, the Target Repository provides project truth, and the Forge Agent resolves and consumes both without becoming a new source of truth.
+This document defines the permanent operational boundary betweenAI-DOS / AI-DOS, an active Target Repository, and the AI-DOS Agent that consumes both. It establishes the repository-agnostic operating model in whichAI-DOS / AI-DOS provides general Framework operating rules, the Target Repository provides project truth, and the AI-DOS Agent resolves and consumes both without becoming a new source of truth.
 
 The boundary is architectural, not implementation-specific. It does not define AGENTS syntax, configuration formats, schemas, adapters, connectors, APIs, registries, installation procedures, Runtime implementation, or Engine implementation.
 
-The core decision is simple: Forge AI / AI-DOS owns Framework truth; the Target Repository owns project truth; the Forge Agent applies both inside an authorized task boundary.
+The core decision is simple:AI-DOS / AI-DOS owns Framework truth; the Target Repository owns project truth; the AI-DOS Agent applies both inside an authorized task boundary.
 
 ```mermaid
 flowchart TD
     HI[Human Instruction] --> TR[Target Repository]
     TR --> TA[Target AGENTS.md]
     TA --> TPT[Target Project Truth]
-    FA[Forge AI / AI-DOS Rules] --> Agent[Forge Agent]
+    FA[AI-DOS / AI-DOS Rules] --> Agent[AI-DOS Agent]
     TPT --> Agent
     Agent --> Exec[Target Repository Execution]
 ```
@@ -61,19 +61,19 @@ flowchart TD
 
 ## 2. Purpose
 
-The purpose of A.2 is to define where Forge AI / AI-DOS ends and where the Target Repository begins. This document bridges A.1 Constitution and A.3 Runtime Architecture by declaring the immutable ownership, authority, information, and execution boundaries that the Runtime must respect.
+The purpose of A.2 is to define whereAI-DOS / AI-DOS ends and where the Target Repository begins. This document bridges A.1 Constitution and A.3 Runtime Architecture by declaring the immutable ownership, authority, information, and execution boundaries that the Runtime must respect.
 
-A.2 exists so Forge AI can operate on itself or on an external repository such as Axis Suite without confusing Framework truth with project truth.
+A.2 exists soAI-DOS can operate on itself or on an external repository such as Axis Suite without confusing Framework truth with project truth.
 
 ## 3. Scope
 
 This document is in scope for:
 
-- Defining Forge AI / AI-DOS as the general operating system for AI-assisted repository work.
+- DefiningAI-DOS / AI-DOS as the general operating system for AI-assisted repository work.
 - Defining Target Repository ownership of project-specific truth.
-- Defining the Forge Agent as a consumer and executor, not an owner of truth.
-- Defining Forge AI self-hosting as a specialization of the same model.
-- Defining external Target Repository operation without Forge AI-specific fallback paths.
+- Defining the AI-DOS Agent as a consumer and executor, not an owner of truth.
+- DefiningAI-DOS self-hosting as a specialization of the same model.
+- Defining external Target Repository operation without AI-DOS-specific fallback paths.
 - Defining logical path concepts at an architecture level only.
 - Defining responsibility, authority, invariants, stop conditions, and relationship to adjacent architecture.
 
@@ -85,9 +85,9 @@ STD-010 governs this document metadata. STD-003 governs terminology. A.1 governs
 
 ## 5. AI-DOS Definition
 
-Forge AI / AI-DOS is the general operating system for AI-assisted repository work. It provides Framework-level operating rules and reusable architectural assets that can be consumed by a Forge Agent while operating against a selected Target Repository.
+AI-DOS / AI-DOS is the general operating system for AI-assisted repository work. It provides Framework-level operating rules and reusable architectural assets that can be consumed by a AI-DOS Agent while operating against a selected Target Repository.
 
-Forge AI / AI-DOS provides:
+AI-DOS / AI-DOS provides:
 
 - Constitution.
 - Governance.
@@ -104,7 +104,7 @@ Forge AI / AI-DOS provides:
 - Review Model.
 - Certification Model.
 
-Forge AI / AI-DOS does not own target-project truth, target-project source code, target-project operational state, or target-project-specific governance decisions.
+AI-DOS / AI-DOS does not own target-project truth, target-project source code, target-project operational state, or target-project-specific governance decisions.
 
 ## 6. Target Repository Definition
 
@@ -125,18 +125,18 @@ A Target Repository provides:
 - Validation commands.
 - Protected and frozen areas.
 
-The Target Repository does not own Forge AI constitutional principles, Framework Standards, Runtime Architecture, Engine Architecture, System Layer, or general operating model.
+The Target Repository does not ownAI-DOS constitutional principles, Framework Standards, Runtime Architecture, Engine Architecture, System Layer, or general operating model.
 
-## 7. Forge Agent Definition
+## 7. AI-DOS Agent Definition
 
-The Forge Agent is the execution participant that resolves, consumes, combines, and applies Forge AI / AI-DOS rules and Target Repository project truth inside an authorized task boundary.
+The AI-DOS Agent is the execution participant that resolves, consumes, combines, and appliesAI-DOS / AI-DOS rules and Target Repository project truth inside an authorized task boundary.
 
-The Forge Agent consumes:
+The AI-DOS Agent consumes:
 
-- Forge AI general operating rules.
+-AI-DOS general operating rules.
 - Target Repository project truth.
 
-The Forge Agent produces:
+The AI-DOS Agent produces:
 
 - Project-scoped planning.
 - Execution.
@@ -144,21 +144,21 @@ The Forge Agent produces:
 - Review.
 - Completion evidence.
 
-The Forge Agent owns neither Framework truth nor project truth. It does not certify, promote, canonicalize, or invent missing target-project truth.
+The AI-DOS Agent owns neither Framework truth nor project truth. It does not certify, promote, canonicalize, or invent missing target-project truth.
 
 ## 8. Operational Boundary
 
 The operational boundary separates three concerns:
 
-1. Forge AI / AI-DOS defines general Framework conduct.
+1.AI-DOS / AI-DOS defines general Framework conduct.
 2. The Target Repository defines project-specific state and resources.
-3. The Forge Agent applies the relevant authorities within the active task boundary.
+3. The AI-DOS Agent applies the relevant authorities within the active task boundary.
 
-Neither side replaces the other. Forge AI rules govern how work is conducted; Target Repository truth governs what the project is, what state it is in, which files and areas are protected, and which validation commands apply.
+Neither side replaces the other.AI-DOS rules govern how work is conducted; Target Repository truth governs what the project is, what state it is in, which files and areas are protected, and which validation commands apply.
 
 ```mermaid
 flowchart TD
-    subgraph ForgeTruth[Forge AI Truth]
+    subgraph ForgeTruth[AI-DOS Truth]
         FR[Framework rules]
         OM[Operating model]
     end
@@ -167,7 +167,7 @@ flowchart TD
         PA[Architecture]
         SV[Source / validation]
     end
-    ForgeTruth --> Agent[Forge Agent]
+    ForgeTruth --> Agent[AI-DOS Agent]
     ProjectTruth --> Agent
 ```
 
@@ -175,17 +175,17 @@ flowchart TD
 
 ## 9. Responsibility and Ownership Model
 
-Forge AI / AI-DOS owns Framework truth, constitutional principles, Framework governance model, Framework standards, Runtime architecture definitions, Engine architecture definitions, System Layer procedures, general commands, general workflows, reusable templates, and general validation, review, and certification models.
+AI-DOS / AI-DOS owns Framework truth, constitutional principles, Framework governance model, Framework standards, Runtime architecture definitions, Engine architecture definitions, System Layer procedures, general commands, general workflows, reusable templates, and general validation, review, and certification models.
 
-Forge AI / AI-DOS does not own target-project ProjectStatus, DevelopmentPhases, roadmap, architecture, implementation, source code, runtime state, validation commands, protected areas, or project-specific governance decisions.
+AI-DOS / AI-DOS does not own target-project ProjectStatus, DevelopmentPhases, roadmap, architecture, implementation, source code, runtime state, validation commands, protected areas, or project-specific governance decisions.
 
 The Target Repository owns its repository boot entry, project-specific authority routing, planning resources, active operational state, project architecture, source and implementation, validation commands, constraints, frozen areas, and project-specific decisions.
 
-The Forge Agent owns execution accountability for the assigned task only. It owns neither side's truth.
+The AI-DOS Agent owns execution accountability for the assigned task only. It owns neither side's truth.
 
 ## 10. Framework Truth
 
-Framework truth is the set of Forge AI / AI-DOS authorities, standards, models, and reusable procedures that govern general AI-assisted work. Framework truth includes the Constitution, Governance Atlas, Framework Governance, Meta Models, Framework Standards, Runtime Architecture, Engine Architecture, System Layer, Operational Core, Commands, Workflows, Templates, and general validation, review, and certification models.
+Framework truth is the set ofAI-DOS / AI-DOS authorities, standards, models, and reusable procedures that govern general AI-assisted work. Framework truth includes the Constitution, Governance Atlas, Framework Governance, Meta Models, Framework Standards, Runtime Architecture, Engine Architecture, System Layer, Operational Core, Commands, Workflows, Templates, and general validation, review, and certification models.
 
 Framework truth defines conduct, structure, and reusable architecture. It does not define the active state of an external Target Repository.
 
@@ -193,11 +193,11 @@ Framework truth defines conduct, structure, and reusable architecture. It does n
 
 Project truth is the Target Repository's repository-local state and authority context. It includes root `AGENTS.md`, project-specific instructions, ProjectStatus, DevelopmentPhases, roadmap, phase / stage / capability state, project architecture, source code, implementation state, project runtime configuration, validation commands, protected areas, frozen areas, and project-specific decisions.
 
-Project truth defines the current project reality. It does not redefine Forge AI Framework truth.
+Project truth defines the current project reality. It does not redefineAI-DOS Framework truth.
 
 ## 12. Authority Boundary
 
-Higher Framework authority governs how work is conducted. Target-project authority governs project-specific truth. When both apply, the Forge Agent must preserve single ownership:
+Higher Framework authority governs how work is conducted. Target-project authority governs project-specific truth. When both apply, the AI-DOS Agent must preserve single ownership:
 
 - Framework rules constrain process, governance, terminology, validation expectations, review expectations, and certification meaning.
 - Target Repository rules constrain project state, paths, source code, protected areas, validation commands, and project-specific decisions.
@@ -205,9 +205,9 @@ Higher Framework authority governs how work is conducted. Target-project authori
 
 ## 13. Information Ownership
 
-Information ownership follows origin and scope. Forge AI-originated Framework information remains Framework truth. Target Repository-originated project information remains project truth. Completion evidence produced by the Forge Agent belongs to the task record and must not be treated as a new source of project truth unless accepted by the Target Repository's authority process.
+Information ownership follows origin and scope. AI-DOS-originated Framework information remains Framework truth. Target Repository-originated project information remains project truth. Completion evidence produced by the AI-DOS Agent belongs to the task record and must not be treated as a new source of project truth unless accepted by the Target Repository's authority process.
 
-The Forge Agent may assemble context from both sides, but assembled context is not a third authority layer.
+The AI-DOS Agent may assemble context from both sides, but assembled context is not a third authority layer.
 
 ## 14. Logical Path Concepts
 
@@ -228,7 +228,7 @@ These concepts do not define syntax, YAML, JSON, schemas, environment variables,
 
 ## 15. Target Repository Resolution Flow
 
-The Forge Agent must use the following operating flow:
+The AI-DOS Agent must use the following operating flow:
 
 1. Select the active Target Repository.
 2. Locate and read `<TARGET_REPOSITORY_ROOT>/AGENTS.md`.
@@ -236,36 +236,36 @@ The Forge Agent must use the following operating flow:
 4. Resolve all target-project paths relative to `<TARGET_REPOSITORY_ROOT>`.
 5. Read target ProjectStatus.
 6. Read target DevelopmentPhases.
-7. Load relevant Forge AI authorities and operating rules.
+7. Load relevantAI-DOS authorities and operating rules.
 8. Load target-project architecture, source, protected-area, and validation context.
 9. Assemble the task context.
 10. Determine the authorized action.
 11. Execute inside the Target Repository.
 12. Validate using target-project commands.
-13. Review according to Forge AI and target-project rules.
+13. Review according toAI-DOS and target-project rules.
 14. Produce completion evidence.
 
-If the Target Repository does not provide required project declarations, the Forge Agent must stop and report a blocker. Forge AI self-hosting paths must never be used as fallback paths for an external Target Repository.
+If the Target Repository does not provide required project declarations, the AI-DOS Agent must stop and report a blocker.AI-DOS self-hosting paths must never be used as fallback paths for an external Target Repository.
 
-## 16. Forge AI Self-Hosting Model
+## 16.AI-DOS Self-Hosting Model
 
-Forge AI itself is a valid Target Repository. Self-hosting is a specialization of the same operating model, not a separate architecture.
+AI-DOS itself is a valid Target Repository. Self-hosting is a specialization of the same operating model, not a separate architecture.
 
 ```mermaid
 flowchart TD
-    DOS[Forge AI / AI-DOS] --> Repo[Forge AI Repository as Target Repository]
-    Repo --> Agents[Forge AI AGENTS.md]
-    Agents --> State[Forge AI ProjectStatus / DevelopmentPhases]
-    State --> Agent[Forge Agent]
+    DOS[AI-DOS / AI-DOS] --> Repo[AI-DOS Repository as Target Repository]
+    Repo --> Agents[AI-DOS AGENTS.md]
+    Agents --> State[AI-DOS ProjectStatus / DevelopmentPhases]
+    State --> Agent[AI-DOS Agent]
 ```
 
 **Figure 3 — Self-Hosting Model.**
 
-For Forge AI self-hosting:
+ForAI-DOS self-hosting:
 
 | Logical Concept | Self-Hosting Mapping |
 |:---|:---|
-| `<TARGET_REPOSITORY_ROOT>` | Forge AI repository root |
+| `<TARGET_REPOSITORY_ROOT>` |AI-DOS repository root |
 | `<TARGET_AGENTS_PATH>` | `AGENTS.md` |
 | `<PROJECT_STATUS_PATH>` | `docs/DevelopmentPhases/ProjectStatus.md` |
 | `<DEVELOPMENT_PHASES_PATH>` | `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
@@ -274,29 +274,29 @@ These paths are valid self-hosting mappings only. They are not universal Target 
 
 ## 17. External Target Repository Model
 
-When Forge AI operates on an external repository such as Axis Suite, the external repository is the Target Repository and owns its project truth.
+WhenAI-DOS operates on an external repository such as Axis Suite, the external repository is the Target Repository and owns its project truth.
 
 ```mermaid
 flowchart TD
-    DOS[Forge AI / AI-DOS] --> Repo[Axis Suite Repository as Target Repository]
+    DOS[AI-DOS / AI-DOS] --> Repo[Axis Suite Repository as Target Repository]
     Repo --> Agents[Axis Suite AGENTS.md]
     Agents --> State[Axis Suite ProjectStatus / DevelopmentPhases]
-    State --> Agent[Forge Agent]
+    State --> Agent[AI-DOS Agent]
 ```
 
 **Figure 4 — External Repository Model.**
 
-Forge AI must not assume that Axis Suite or any other external Target Repository uses Forge AI physical planning paths. Target-project resources must be declared by the active Target Repository and resolved relative to that repository root.
+AI-DOS must not assume that Axis Suite or any other external Target Repository usesAI-DOS physical planning paths. Target-project resources must be declared by the active Target Repository and resolved relative to that repository root.
 
 This document does not define Axis Suite project paths or Axis Suite final `AGENTS.md` content.
 
-## 18. Forge Agent Consumption Model
+## 18. AI-DOS Agent Consumption Model
 
-The Forge Agent consumes Framework truth and project truth as separate authority streams. It may combine them into a task context, but it must not merge ownership or treat one stream as a fallback for the other.
+The AI-DOS Agent consumes Framework truth and project truth as separate authority streams. It may combine them into a task context, but it must not merge ownership or treat one stream as a fallback for the other.
 
-The Forge Agent consumption model is:
+The AI-DOS Agent consumption model is:
 
-1. Use Forge AI / AI-DOS to determine general operating rules.
+1. UseAI-DOS / AI-DOS to determine general operating rules.
 2. Use the Target Repository to determine project-specific truth.
 3. Apply both inside the task's authorized boundary.
 4. Validate and review according to both sets of applicable rules.
@@ -311,7 +311,7 @@ The execution context must include enough information to determine:
 - The active Target Repository root.
 - The applicable Target Repository boot instructions.
 - The current project phase, stage, objective, and protected areas.
-- The applicable Forge AI authorities.
+- The applicableAI-DOS authorities.
 - The relevant project architecture and source context.
 - The authorized action.
 - The validation and review expectations.
@@ -320,17 +320,17 @@ The execution context does not become a durable authority or source of truth.
 
 ## 20. Responsibility Matrix
 
-| Capability / Responsibility | Forge AI / AI-DOS | Target Repository | Forge Agent |
+| Capability / Responsibility |AI-DOS / AI-DOS | Target Repository | AI-DOS Agent |
 |:---|:---|:---|:---|
 | Human Governance | Owner of final Framework authority | May identify project-specific human authority | Consumes and escalates to the applicable authority |
 | Constitution | Owns | Does not own | Consumes |
 | Framework Governance | Owns | Does not own | Consumes |
 | Meta Models | Owns | Does not own | Consumes |
 | Framework Standards | Owns | Does not own | Consumes |
-| Runtime Architecture | Owns general definition | Does not own Forge Runtime definition | Consumes and operates within it |
-| Engine Architecture | Owns general definition | Does not own Forge Engine definition | Consumes and operates within it |
-| System Layer | Owns general procedures | Does not own Forge System Layer | Consumes |
-| Operational Core | Owns general model | Does not own Forge Operational Core | Consumes |
+| Runtime Architecture | Owns general definition | Does not own AI-DOS Runtime definition | Consumes and operates within it |
+| Engine Architecture | Owns general definition | Does not own AI-DOS Engine definition | Consumes and operates within it |
+| System Layer | Owns general procedures | Does not own AI-DOS System Layer | Consumes |
+| Operational Core | Owns general model | Does not own AI-DOS Operational Core | Consumes |
 | Commands | Owns general command model and templates | Owns project-specific command availability and constraints | Consumes and applies |
 | Workflows | Owns general workflow model and templates | Owns project-specific workflow constraints | Consumes and applies |
 | Templates | Owns reusable templates | Owns project-specific template use or local variants | Consumes |
@@ -357,11 +357,11 @@ The execution context does not become a durable authority or source of truth.
 
 | Domain | General Authority | Target-Project Authority | Resolution Rule |
 |:---|:---|:---|:---|
-| Framework rules | Forge AI / AI-DOS authorities | Target Repository may add local constraints | Framework authority governs conduct; local constraints narrow execution. |
+| Framework rules |AI-DOS / AI-DOS authorities | Target Repository may add local constraints | Framework authority governs conduct; local constraints narrow execution. |
 | Repository boot | AGENTS.md bootloader concept | Target root `AGENTS.md` | Read target boot instructions as the project-to-AI-DOS entry boundary. |
 | Project status | ProjectStatus concept and handling rules | Target ProjectStatus | Target ProjectStatus owns active project state. |
 | Project roadmap | DevelopmentPhases concept and sequencing rules | Target DevelopmentPhases / roadmap | Target roadmap owns project sequencing; Framework rules prohibit unauthorized skipping. |
-| Architecture | Forge architecture for Framework domains | Target project architecture | Use Forge architecture for Framework behavior and target architecture for project truth. |
+| Architecture | AI-DOS architecture for Framework domains | Target project architecture | Use AI-DOS architecture for Framework behavior and target architecture for project truth. |
 | Implementation | Framework execution conduct | Target source and implementation state | Execute only within target authorization and protected-area rules. |
 | Validation | General validation model | Target validation commands | Run target commands and apply Framework reporting expectations. |
 | Review | General review model | Target review requirements | Satisfy both without treating review as approval. |
@@ -371,47 +371,47 @@ The execution context does not become a durable authority or source of truth.
 
 ## 22. Design Invariants
 
-1. Forge AI never owns Target Repository project truth.
-2. Target Repository never owns Forge AI Framework truth.
-3. Forge Agent does not become a new source of truth.
-4. Forge Agent combines authorities but does not merge conflicting ownership.
+1.AI-DOS never owns Target Repository project truth.
+2. Target Repository never ownsAI-DOS Framework truth.
+3. AI-DOS Agent does not become a new source of truth.
+4. AI-DOS Agent combines authorities but does not merge conflicting ownership.
 5. The active Target Repository root must be explicitly established.
 6. Target-project paths must resolve relative to the active Target Repository root.
 7. Target Repository `AGENTS.md` is the project-to-AI-DOS entry boundary.
-8. Forge AI self-hosting paths are valid only when Forge AI is the Target Repository.
+8.AI-DOS self-hosting paths are valid only whenAI-DOS is the Target Repository.
 9. External Target Repositories must declare their own planning, architecture, source, validation, and protected-area resources.
-10. Forge AI self-hosting is not a parallel system.
+10.AI-DOS self-hosting is not a parallel system.
 11. Self-hosting and external operation use the same architectural model.
-12. No external project may silently inherit Forge AI-specific planning paths.
+12. No external project may silently inherit AI-DOS-specific planning paths.
 13. No new adapter, registry, schema, or implementation layer is required to establish this boundary.
 14. The boundary must remain deterministic, repository-agnostic, and single-owner.
 15. Missing target-project declarations produce a blocker, never an inferred fallback.
 
 ## 23. Failure and Stop Conditions
 
-The Forge Agent must stop when:
+The AI-DOS Agent must stop when:
 
 - The active Target Repository cannot be identified.
 - Target `AGENTS.md` is missing.
 - Required project-resource declarations are missing.
 - Declared paths cannot be resolved.
-- Forge AI self-hosting paths are being applied to an external Target Repository.
+-AI-DOS self-hosting paths are being applied to an external Target Repository.
 - Framework truth and project truth are treated as interchangeable.
 - Ownership conflicts cannot be resolved.
 - Protected-area rules are unavailable.
 - Validation commands are unavailable for an implementation task.
 
-The Forge Agent must report the missing information and must not invent target-project truth.
+The AI-DOS Agent must report the missing information and must not invent target-project truth.
 
 ## 24. Relationship to A.1 Constitution
 
-A.1 Constitution defines permanent principles, constitutional authority, source-of-truth expectations, governance principles, decision principles, evidence principles, and architectural invariants. A.2 consumes those principles and applies them to the operational boundary between Forge AI / AI-DOS and a Target Repository.
+A.1 Constitution defines permanent principles, constitutional authority, source-of-truth expectations, governance principles, decision principles, evidence principles, and architectural invariants. A.2 consumes those principles and applies them to the operational boundary betweenAI-DOS / AI-DOS and a Target Repository.
 
 A.2 does not amend, supersede, or redefine A.1.
 
 ## 25. Relationship to A.3 Runtime Architecture
 
-A.3 Runtime Architecture defines runtime architecture operating within the A.2 boundary. Runtime coordination must respect that Forge AI owns Framework truth, the Target Repository owns project truth, and the Forge Agent does not become a source of truth.
+A.3 Runtime Architecture defines runtime architecture operating within the A.2 boundary. Runtime coordination must respect thatAI-DOS owns Framework truth, the Target Repository owns project truth, and the AI-DOS Agent does not become a source of truth.
 
 A.2 does not define Runtime implementation or Runtime component design.
 
@@ -431,7 +431,7 @@ The Operational Core does not redefine Framework truth, project truth, or Target
 
 The System Layer consumes this boundary through authority handling, boot sequence behavior, source-of-truth handling, context assembly, decision handling, execution sequencing, and freeze rules.
 
-The System Layer does not replace Target Repository declarations and must not use Forge AI self-hosting paths as external-repository fallbacks.
+The System Layer does not replace Target Repository declarations and must not useAI-DOS self-hosting paths as external-repository fallbacks.
 
 ## 29. Future Extension Principles
 
@@ -445,10 +445,10 @@ Future work may define:
 Future work must not:
 
 - Change the ownership boundary.
-- Make Forge AI own project truth.
+- MakeAI-DOS own project truth.
 - Make Target Repository own Framework truth.
 - Introduce parallel boot models.
-- Create Forge-specific universal project paths.
+- Create AI-DOS-specific universal project paths.
 
 ## 30. Out of Scope
 
@@ -474,11 +474,11 @@ This document does not define:
 
 ## 31. Architectural Decision
 
-A.2 establishes the repository-agnostic operational boundary for Forge AI / AI-DOS:
+A.2 establishes the repository-agnostic operational boundary forAI-DOS / AI-DOS:
 
-- Forge AI / AI-DOS provides the general operating system.
+-AI-DOS / AI-DOS provides the general operating system.
 - The Target Repository provides project truth.
-- The Forge Agent consumes both and performs authorized work inside the Target Repository.
+- The AI-DOS Agent consumes both and performs authorized work inside the Target Repository.
 - Neither side replaces the other.
 - Self-hosting and external repository operation use the same architectural model.
 - Missing target-project declarations are blockers, not opportunities for inferred fallback.
@@ -490,7 +490,7 @@ This document is complete when it provides:
 - STD-010 metadata.
 - A clear AI-DOS definition.
 - A clear Target Repository definition.
-- A clear Forge Agent definition.
+- A clear AI-DOS Agent definition.
 - A clear operational boundary.
 - Responsibility and authority matrices.
 - Logical path concepts without syntax or implementation design.

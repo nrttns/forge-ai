@@ -1,13 +1,13 @@
 # A.5.2 — Knowledge Engine RFC
 
-> Forge AI v4 · Engine Architecture RFC
+>AI-DOS v4 · Engine Architecture RFC
 > Phase 2 Engine Specialization · Draft / Non-canonical
 
 ---
 
 ## 1. Status
 
-This RFC is a draft, non-canonical Engine Architecture RFC for the Knowledge Engine, the second individual Engine specialization in Phase 2 of the Forge AI v4 Engine Platform.
+This RFC is a draft, non-canonical Engine Architecture RFC for the Knowledge Engine, the second individual Engine specialization in Phase 2 of theAI-DOS v4 Engine Platform.
 
 Canonical Status: Non-canonical until reviewed and approved.
 
@@ -19,7 +19,7 @@ This document defines the architecture of the Knowledge Engine within the approv
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-A-5-2` |
+| Identifier | `AI-DOS-A-5-2` |
 | Title | A.5.2 — Knowledge Engine RFC |
 | Version | `0.2.0-draft` |
 | Status | Draft |
@@ -33,7 +33,7 @@ This document defines the architecture of the Knowledge Engine within the approv
 | Created | 2026-07-08 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.V2.RUNTIME.A-5-2` |
+| Traceability ID | `AI-DOS.V2.RUNTIME.A-5-2` |
 | Scope | Defines the Knowledge Engine specialization only, including its responsibilities, inputs, outputs, lifecycle participation, validation expectations, AI consumption rules, and handoff contract. |
 | Out of Scope | Runtime Architecture redefinition, Engine Platform redefinition, Engine Foundation redefinition, other Engine Specialization redefinition, implementation, certification, freeze decisions, ProjectStatus updates, and DevelopmentPhases updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
@@ -51,7 +51,7 @@ This document defines the architecture of the Knowledge Engine within the approv
 
 ## 3. Purpose
 
-The Knowledge Engine exists to provide a governed, traceable, and conflict-resolved knowledge service for all peer Engines in the Forge AI v4 platform. While the Context Engine (A.5.1) manages real-time contextual state — the here-and-now of a task — the Knowledge Engine manages the persistent, structured, and reusable knowledge that spans across tasks, sessions, and Engine interactions.
+The Knowledge Engine exists to provide a governed, traceable, and conflict-resolved knowledge service for all peer Engines in theAI-DOS v4 platform. While the Context Engine (A.5.1) manages real-time contextual state — the here-and-now of a task — the Knowledge Engine manages the persistent, structured, and reusable knowledge that spans across tasks, sessions, and Engine interactions.
 
 Knowledge, in the context of this Engine, is defined as any structured informational entity that has been validated, attributed to a source, assigned a confidence and relevance classification, and made available for retrieval and reasoning by peer Engines. This includes domain models, factual records, procedural knowledge, causal relationships, rule sets, and derived insights. Knowledge is distinct from context: context is ephemeral and task-bound; knowledge is durable and cross-task.
 
@@ -872,7 +872,7 @@ Before the Knowledge Engine transitions from Draft to Approved, the following ce
 - Certification evidence must be reviewed by the Enterprise Documentation Standards Board.
 - Context Engine alignment must be verified against A.5.1's output contract to ensure input/output compatibility.
 - Certification does not imply canonical status — canonical promotion requires separate governance approval.
-- Certification evidence must be traceable to this RFC's Traceability ID: `FORGE-AI.V4.PHASE-2.ENGINE-02`.
+- Certification evidence must be traceable to this RFC's Traceability ID: `AI-DOS.V4.PHASE-2.ENGINE-02`.
 
 ---
 
@@ -1262,7 +1262,7 @@ If any certification gate fails, the handoff does not proceed. The Knowledge Eng
 
 ### Executive Summary
 
-Created the second Phase 2 Engine specialization RFC — A.5.2 Knowledge Engine — using the A.5.0 Engine Specialization RFC Template. The Knowledge Engine is the service Engine responsible for knowledge acquisition, retrieval, contribution, lifecycle management, conflict resolution, and provenance tracking within the Forge AI v4 Engine Platform. This RFC defines a deterministic, invariant-preserving architecture that ensures every peer Engine has access to validated, relevant, and provenance-tracked knowledge with full traceability from acquisition to consumption.
+Created the second Phase 2 Engine specialization RFC — A.5.2 Knowledge Engine — using the A.5.0 Engine Specialization RFC Template. The Knowledge Engine is the service Engine responsible for knowledge acquisition, retrieval, contribution, lifecycle management, conflict resolution, and provenance tracking within theAI-DOS v4 Engine Platform. This RFC defines a deterministic, invariant-preserving architecture that ensures every peer Engine has access to validated, relevant, and provenance-tracked knowledge with full traceability from acquisition to consumption.
 
 ### Documents Created
 
@@ -1284,7 +1284,7 @@ Created the second Phase 2 Engine specialization RFC — A.5.2 Knowledge Engine 
 - Metadata heading uses exact `## Document Metadata` format.
 - All 27 mandatory STD-010 fields are present; conditionally mandatory fields are evaluated and included only when applicable.
 - RFC class expectations met: parent architecture identified, non-canonical status stated, review and approval authority explicit, normative authority separated from dependencies, produced architectural requirements identified.
-- Identifier `FORGE-A-5-2` follows the normalized Runtime RFC family identifier convention.
+- Identifier `AI-DOS-A-5-2` follows the normalized Runtime RFC family identifier convention.
 - Version `0.2.0-draft` follows `major.minor.patch-status` format.
 - Metadata completeness does not imply canonical status.
 

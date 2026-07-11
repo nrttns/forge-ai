@@ -1,6 +1,6 @@
 # Swarm Merge Report Template
 
-> Forge AI v2 · Swarm Templates<br>
+>AI-DOS v2 · Swarm Templates<br>
 > Template Artifact · Draft / Non-canonical
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-SWARM-MERGE-REPORT` |
+| Identifier | `AI-DOS-TPL-SWARM-MERGE-REPORT` |
 | Title | Swarm Merge Report Template |
 | Version | `2.0.0-draft` |
 | Status | Draft |
@@ -23,7 +23,7 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Operational Core Alignment |
-| Traceability ID | `FORGE-AI.V2.TEMPLATES.SWARM.MERGE-REPORT` |
+| Traceability ID | `AI-DOS.V2.TEMPLATES.SWARM.MERGE-REPORT` |
 | Scope | Defines the reusable documentation structure for recording how parallel swarm outputs were merged into one coherent result, including inputs, strategy, conflicts, final output, validation, risks, and completion checklist. |
 | Out of Scope | Swarm authority redefinition, multi-agent authority redefinition, runtime authority redefinition, orchestration authority creation, governance authority creation, review authority creation, certification authority creation, ProjectStatus updates, swarm execution implementation, consensus algorithm definition, orchestration logic definition, runtime behavior implementation, merge algorithm definition, scheduling definition, synchronization definition, engine implementation, architecture redefinition, and canonical promotion. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |

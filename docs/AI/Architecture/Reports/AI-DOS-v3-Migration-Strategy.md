@@ -1,34 +1,34 @@
-# Forge AI v3 Migration Strategy
+#AI-DOS v3 Migration Strategy
 
 ## 1. Status
 
 Status: Strategy Proposal / Not Yet Approved  
-Project: Forge AI  
+Project: AI-DOS  
 Document Type: Migration Strategy  
 Scope: Documentation-only planning  
 Created: 2026-07-07  
-Authority Premise: Human governance has decided that Forge AI v3 is the target architecture and RC2 is source, reference, and legacy material to be migrated, harvested, or archived.
+Authority Premise: Human governance has decided thatAI-DOS v3 is the target architecture and RC2 is source, reference, and legacy material to be migrated, harvested, or archived.
 
 This report is advisory. It does not promote, move, rename, archive, deprecate, or rewrite any existing document. It creates a migration plan only.
 
 ## 2. Executive Summary
 
-Forge AI currently contains two architecture generations:
+AI-DOS currently contains two architecture generations:
 
 1. RC2 AI Framework generation, centered on `docs/AI/AIFramework.md`, `docs/AI/Specification/`, `docs/AI/System/`, `docs/AI/Commands/`, `docs/AI/Workflows/`, `docs/AI/Templates/`, `docs/AI/Validation/`, and `docs/AI/Certification/`.
-2. Forge AI v3 architecture generation, centered on `docs/AI/Architecture/A.1-Constitution.md`, the v3 Blueprint RFC, the Framework and Artifact Meta Models, and the emerging Standards Library.
+2.AI-DOS v3 architecture generation, centered on `docs/AI/Architecture/A.1-Constitution.md`, the v3 Blueprint RFC, the Framework and Artifact Meta Models, and the emerging Standards Library.
 
 The safest migration is staged rather than immediate. RC2 should remain operational temporarily because it still contains the current executable agent procedures, command definitions, workflow procedures, templates, validation references, certification references, and development phase plan. v3 should become the future canonical architecture after human approval, compatibility mapping, and controlled ProjectStatus updates.
 
 Recommended verdict:
 
-> Proceed with staged Forge AI v3 migration after human approval.
+> Proceed with stagedAI-DOS v3 migration after human approval.
 
 ## 3. Governing Decision
 
 The governing human decision for this strategy is:
 
-> Forge AI v3 is the target architecture. RC2 is not the target authority. RC2 is source/reference/legacy material to be migrated, harvested, or archived.
+>AI-DOS v3 is the target architecture. RC2 is not the target authority. RC2 is source/reference/legacy material to be migrated, harvested, or archived.
 
 This report accepts that decision as binding and does not challenge it.
 
@@ -59,7 +59,7 @@ Major RC2 areas:
 - `docs/AI/Certification/` — certification readiness and adoption review artifacts.
 - `docs/DevelopmentPhases/` — current phase roadmap and planned phase specifications.
 
-### 4.2 Forge AI v3 Architecture Generation
+### 4.2AI-DOS v3 Architecture Generation
 
 The v3 generation provides the target architecture track. Its strengths are stronger authority modeling, meta-modeling, standards governance, graph-oriented knowledge representation, discovery governance, and architecture audit lineage.
 
@@ -67,7 +67,7 @@ Major v3 areas:
 
 - `docs/AI/Architecture/A.0-Framework-Audit.md`
 - `docs/AI/Architecture/A.1-Constitution.md`
-- `docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md`
+- `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md`
 - `docs/AI/Meta/M.0-Framework-Meta-Model.md`
 - `docs/AI/Meta/M.1-Artifact-Meta-Model.md`
 - `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`
@@ -142,11 +142,11 @@ The following are strong canonical candidates but should remain draft/transition
 
 The following should remain transitional unless explicitly ratified:
 
-- `docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md`
+- `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md`
 - `docs/AI/Architecture/A.0-Framework-Audit.md`
-- `docs/AI/Architecture/Reports/Forge-AI-Architecture-Consistency-Audit-v1.0.md`
-- `docs/AI/Architecture/Reports/Forge-AI-Authority-Cleanup-Plan-v1.0.md`
-- `docs/AI/Architecture/Reports/Forge-AI-v3-Migration-Strategy.md`
+- `docs/AI/Architecture/Reports/AI-DOS-Architecture-Consistency-Audit-v1.0.md`
+- `docs/AI/Architecture/Reports/AI-DOS-Authority-Cleanup-Plan-v1.0.md`
+- `docs/AI/Architecture/Reports/AI-DOS-v3-Migration-Strategy.md`
 
 Reports and audits are evidence and planning artifacts, not permanent architecture authority.
 
@@ -161,7 +161,7 @@ AGENTS.md
     ↓
 docs/AI/Architecture/A.1-Constitution.md
     ↓
-docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md
+docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md
     ↓
 docs/AI/Meta/M.0-Framework-Meta-Model.md
     ↓
@@ -233,12 +233,12 @@ docs/
       Framework-Core-Map.md
 
       Blueprint/
-        Forge-AI-Blueprint-v1.0-RFC.md
+        AI-DOS-Blueprint-v1.0-RFC.md
 
       Reports/
-        Forge-AI-Architecture-Consistency-Audit-v1.0.md
-        Forge-AI-Authority-Cleanup-Plan-v1.0.md
-        Forge-AI-v3-Migration-Strategy.md
+        AI-DOS-Architecture-Consistency-Audit-v1.0.md
+        AI-DOS-Authority-Cleanup-Plan-v1.0.md
+        AI-DOS-v3-Migration-Strategy.md
 
       Appendix/
       Standards/
@@ -299,10 +299,10 @@ Recommended refinements:
 | `docs/AI/AIOrchestrator.md` | Keep Operational Temporarily | Current orchestration procedure remains needed. | Migrate into future runtime/workflow architecture. |
 | `docs/AI/Architecture/A.0-Framework-Audit.md` | Keep Operational Temporarily | Architecture evidence and audit baseline. | Keep as report/reference, not canonical authority. |
 | `docs/AI/Architecture/A.1-Constitution.md` | Promote to Canonical | Target v3 constitutional authority. | Promote after human approval. |
-| `docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md` | Requires Human Decision | Blueprint is target direction but currently RFC. | Ratify, revise, or supersede. |
-| `docs/AI/Architecture/Reports/Forge-AI-Architecture-Consistency-Audit-v1.0.md` | Keep Operational Temporarily | Evidence for migration and cleanup. | Archive as evidence later. |
-| `docs/AI/Architecture/Reports/Forge-AI-Authority-Cleanup-Plan-v1.0.md` | Keep Operational Temporarily | Cleanup plan informs migration order. | Archive as evidence after completion. |
-| `docs/AI/Architecture/Reports/Forge-AI-v3-Migration-Strategy.md` | Keep Operational Temporarily | This strategy proposes migration only. | Use as implementation planning input. |
+| `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md` | Requires Human Decision | Blueprint is target direction but currently RFC. | Ratify, revise, or supersede. |
+| `docs/AI/Architecture/Reports/AI-DOS-Architecture-Consistency-Audit-v1.0.md` | Keep Operational Temporarily | Evidence for migration and cleanup. | Archive as evidence later. |
+| `docs/AI/Architecture/Reports/AI-DOS-Authority-Cleanup-Plan-v1.0.md` | Keep Operational Temporarily | Cleanup plan informs migration order. | Archive as evidence after completion. |
+| `docs/AI/Architecture/Reports/AI-DOS-v3-Migration-Strategy.md` | Keep Operational Temporarily | This strategy proposes migration only. | Use as implementation planning input. |
 | `docs/AI/Meta/M.0-Framework-Meta-Model.md` | Promote to Canonical | Foundational v3 framework type model. | Promote after approval and consistency check. |
 | `docs/AI/Meta/M.1-Artifact-Meta-Model.md` | Promote to Canonical | Foundational v3 artifact model. | Promote after approval and consistency check. |
 | `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md` | Promote to Canonical | Governs standards library structure and lifecycle. | Promote after approval. |
@@ -491,7 +491,7 @@ Current blockers before implementation:
 
 Recommended next task:
 
-> Create a Forge AI v3 Authority Alignment Plan that proposes the exact future edits to `AGENTS.md`, `docs/AI/README.md`, `docs/AI/AIFramework.md`, `docs/AI/FrameworkGovernance.md`, and `docs/ProjectStatus.md`, without applying them, and defines the approval checklist for promoting A.1, M.0, M.1, and STD-000.
+> Create aAI-DOS v3 Authority Alignment Plan that proposes the exact future edits to `AGENTS.md`, `docs/AI/README.md`, `docs/AI/AIFramework.md`, `docs/AI/FrameworkGovernance.md`, and `docs/ProjectStatus.md`, without applying them, and defines the approval checklist for promoting A.1, M.0, M.1, and STD-000.
 
 Recommended command:
 
@@ -503,6 +503,6 @@ Reason: the next step is documentation governance and authority planning, not im
 
 ## 16. Final Recommendation
 
-Proceed with staged Forge AI v3 migration after human approval.
+Proceed with stagedAI-DOS v3 migration after human approval.
 
 The safest path is to promote v3 as the target architecture while preserving RC2 as temporary operational compatibility material. Do not move RC2 directories, rewrite ProjectStatus, or promote draft v3 documents until human approval, authority alignment, compatibility rules, validation, and review are complete.

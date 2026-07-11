@@ -1,4 +1,4 @@
-# Forge AI Authority Cleanup Plan v1.0
+#AI-DOS Authority Cleanup Plan v1.0
 
 ## Status
 
@@ -6,14 +6,14 @@ Status: Proposed Plan
 Document Type: Authority Cleanup Plan  
 Command: `docs/AI/Commands/AgentDocumentationCommand.md`  
 Scope: No-code documentation planning only  
-Output Path: `docs/AI/Architecture/Reports/Forge-AI-Authority-Cleanup-Plan-v1.0.md`  
+Output Path: `docs/AI/Architecture/Reports/AI-DOS-Authority-Cleanup-Plan-v1.0.md`  
 Date: 2026-07-07
 
 ---
 
 ## Purpose
 
-This plan proposes a safe cleanup path for resolving constitutional and authority ambiguity across Forge AI documentation.
+This plan proposes a safe cleanup path for resolving constitutional and authority ambiguity acrossAI-DOS documentation.
 
 This document does not apply fixes. It classifies existing authority documents, identifies duplicate authority claims, proposes future edits, and defines a safe migration sequence for later approved work.
 
@@ -29,7 +29,7 @@ This plan was prepared under the following constraints:
 - `docs/AI/FrameworkGovernance.md` defines framework-level governance and decision policy.
 - `docs/AI/AIOrchestrator.md` coordinates execution lifecycle and consumes authority.
 - `docs/AI/System/AuthorityModel.md` and `docs/AI/AgentSystemPrompt.md` are tool-facing operational summaries.
-- `docs/AI/Architecture/A.1-Constitution.md` and `docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md` are newer architecture-track documents that currently assert authority relationships not yet reconciled with the RC2 authority chain.
+- `docs/AI/Architecture/A.1-Constitution.md` and `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md` are newer architecture-track documents that currently assert authority relationships not yet reconciled with the RC2 authority chain.
 
 ---
 
@@ -80,7 +80,7 @@ Approved architecture-track specifications
     ↓
 docs/AI/Architecture/A.1-Constitution.md, if migrated and certified
     ↓
-docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md, until accepted
+docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md, until accepted
 ```
 
 ### 1.3 Rationale
@@ -101,7 +101,7 @@ This target preserves the current bootstrap rule that `AGENTS.md` wins all repos
 | `docs/AI/AIOrchestrator.md` | Operational procedure | Keep canonical procedure | Execution lifecycle coordinator | Should consume governance and state; should not place governance below orchestration or define a divergent authority chain. |
 | `docs/AI/System/AuthorityModel.md` | Tool-facing summary | Keep as derived operational summary | Agent-facing authority resolver | Should mirror the canonical chain exactly and explicitly state that it is derived. |
 | `docs/AI/AgentSystemPrompt.md` | Tool-facing summary | Keep as derived tool prompt | Reusable AI assistant operating prompt | Should mirror `AuthorityModel.md`; fix stale paths and ordering during cleanup. |
-| `docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md` | RFC / transitional | Keep as RFC only | Candidate architectural blueprint | Should remain non-canonical until reviewed, accepted, and reconciled with current authority documents. |
+| `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md` | RFC / transitional | Keep as RFC only | Candidate architectural blueprint | Should remain non-canonical until reviewed, accepted, and reconciled with current authority documents. |
 
 ---
 
@@ -109,7 +109,7 @@ This target preserves the current bootstrap rule that `AGENTS.md` wins all repos
 
 ### 3.1 Multiple Constitutional Documents
 
-Finding: Forge AI currently contains at least three constitution-bearing documents:
+Finding:AI-DOS currently contains at least three constitution-bearing documents:
 
 1. `AGENTS.md`, which calls itself the project constitution and bootstrap authority.
 2. `docs/AI/Specification/Constitution.md`, which calls itself the AI Framework Constitution.
@@ -137,7 +137,7 @@ Proposed resolution: Governance should sit above orchestration in the target cha
 
 ### 3.4 Tool-Facing Document Drift
 
-Finding: `docs/AI/AgentSystemPrompt.md` contains stale references to `docs/DevelopmentPhases/ForgeAI2-DevelopmentPhases.md` and uses an authority order that differs from the current project authority model.
+Finding: `docs/AI/AgentSystemPrompt.md` contains stale references to `docs/DevelopmentPhases/AI-DOS2-DevelopmentPhases.md` and uses an authority order that differs from the current project authority model.
 
 Impact: Tool-facing prompts may direct agents to missing files or incorrect authority ordering.
 
@@ -145,7 +145,7 @@ Proposed resolution: Update tool-facing documents after the canonical chain is a
 
 ### 3.5 RFC Documents Presenting as Canonical
 
-Finding: `docs/AI/Architecture/A.1-Constitution.md` and `docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md` contain strong canonical language and authority claims while also being draft or RFC documents.
+Finding: `docs/AI/Architecture/A.1-Constitution.md` and `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md` contain strong canonical language and authority claims while also being draft or RFC documents.
 
 Impact: Draft architecture documents may appear to supersede certified RC2 authority without migration approval.
 
@@ -203,11 +203,11 @@ No edits are applied by this plan. The following edits are proposed for later ap
 
 ### 4.8 `docs/AI/AgentSystemPrompt.md`
 
-- Fix stale `ForgeAI2` development phase path references.
+- Fix stale `AI-DOS2` development phase path references.
 - Align authority order with `docs/AI/System/AuthorityModel.md`.
 - Mark as a tool-facing summary, not an authority source.
 
-### 4.9 `docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md`
+### 4.9 `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md`
 
 - Preserve as RFC while under review.
 - Add an explicit non-canonical notice.
@@ -224,7 +224,7 @@ No edits are applied by this plan. The following edits are proposed for later ap
 5. Update `docs/AI/AgentSystemPrompt.md` to consume `AuthorityModel.md` and fix stale paths.
 6. Update `docs/AI/FrameworkGovernance.md` to align governance ordering and remove competing authority-chain language.
 7. Update `docs/AI/AIOrchestrator.md` to consume governance and avoid redefining authority.
-8. Add transitional banners to `docs/AI/Architecture/A.1-Constitution.md` and `docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md`.
+8. Add transitional banners to `docs/AI/Architecture/A.1-Constitution.md` and `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md`.
 9. Decide whether the v3 architecture-track constitution should be adopted, merged, superseded, or archived.
 10. If adopted, perform a governed constitutional migration with explicit review, validation, and project state update.
 11. If not adopted, mark the architecture-track constitution as historical / obsolete candidate and keep the blueprint as an RFC or archive it.
@@ -248,7 +248,7 @@ No edits are applied by this plan. The following edits are proposed for later ap
 
 ## 7. Final Recommendation
 
-Forge AI should adopt a two-layer constitutional model:
+AI-DOS should adopt a two-layer constitutional model:
 
 1. `AGENTS.md` remains the bootstrap authority and repository-level conflict resolver.
 2. `docs/AI/Specification/Constitution.md` remains the canonical AI Framework constitution under `docs/AI/AIFramework.md`.
@@ -259,6 +259,6 @@ All other documents should consume this model:
 - `docs/AI/AIOrchestrator.md` should coordinate execution under governance.
 - `docs/AI/System/AuthorityModel.md` and `docs/AI/AgentSystemPrompt.md` should be derived tool-facing summaries.
 - `docs/AI/Architecture/A.1-Constitution.md` should remain RFC/transitional until explicitly adopted or archived.
-- `docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md` should remain an RFC and must not become canonical by implication.
+- `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md` should remain an RFC and must not become canonical by implication.
 
 The immediate next approved work should be a documentation-only authority normalization task that applies status banners and aligns authority chains without changing project state or implementation code.

@@ -1,6 +1,6 @@
 # M.1 — Artifact Meta Model
 
-> Forge AI v4 · Meta Foundation
+>AI-DOS v4 · Meta Foundation
 > Canonical Artifact Specialization Layer · Draft / Governance Candidate
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-META-001` |
+| Identifier | `AI-DOS-META-001` |
 | Title | M.1 — Artifact Meta Model |
 | Version | 4.0.0-draft |
 | Status | Draft; canonical candidate for Phase 1 — Meta Foundation |
@@ -23,7 +23,7 @@
 | Created | 2026-07-06 |
 | Last Updated | 2026-07-07 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-META-001` |
+| Traceability ID | `AI-DOS-META-001` |
 | Scope | Concrete artifact type system derived from M.0 |
 | Out of Scope | Runtime implementation, engine implementation, registries, tooling, automation, validation scripts, project code, file movement, and legacy migration |
 | Normative Authority | Human Governance; `AGENTS.md`; A.1 Constitution; A.0 Framework Audit; active Phase 1 roadmap |
@@ -44,7 +44,7 @@
 | Version | Date | Author | Description |
 |:---|:---|:---|:---|
 | 0.1.0-draft | 2026-07-06 | Framework Architecture Team | Initial foundation draft for M.1 Artifact Meta Model. |
-| 4.0.0-draft | 2026-07-07 | Framework Architecture Team | Refactored into the Forge AI v4 canonical artifact specialization layer derived from M.0. |
+| 4.0.0-draft | 2026-07-07 | Framework Architecture Team | Refactored into theAI-DOS v4 canonical artifact specialization layer derived from M.0. |
 
 ---
 
@@ -84,7 +84,7 @@
 
 # 1. Status
 
-M.1 is the Forge AI v4 Artifact Meta Model candidate for Phase 1 — Meta Foundation. It is the concrete artifact type system beneath [M.0 — Framework Meta Model](./M.0-Framework-Meta-Model.md) and above standards, knowledge graph projections, runtime artifacts, engine artifacts, registries, validation outputs, review records, certification packages, planning artifacts, operational artifacts, and historical artifacts.
+M.1 is theAI-DOS v4 Artifact Meta Model candidate for Phase 1 — Meta Foundation. It is the concrete artifact type system beneath [M.0 — Framework Meta Model](./M.0-Framework-Meta-Model.md) and above standards, knowledge graph projections, runtime artifacts, engine artifacts, registries, validation outputs, review records, certification packages, planning artifacts, operational artifacts, and historical artifacts.
 
 M.1 remains a governance candidate until approved and promoted. It does not alter project state, certify itself, implement tooling, move files, or replace RC2 operational procedures.
 
@@ -108,7 +108,7 @@ graph TD
 
 # 2. Purpose
 
-M.1 defines the canonical concrete artifact specialization layer for Forge AI. M.0 defines abstract semantic types; M.1 specializes those types into governed artifact families and artifact type rules.
+M.1 defines the canonical concrete artifact specialization layer for AI-DOS. M.0 defines abstract semantic types; M.1 specializes those types into governed artifact families and artifact type rules.
 
 M.1 exists so every standard, RFC, report, audit, schema, registry entry, validation result, review record, certification package, runtime record, engine record, planning document, operational document, and historical document can be classified consistently without inventing competing artifact semantics.
 
@@ -764,7 +764,7 @@ This document is ready for review when these checks are complete:
 
 M.1 is successful when:
 
-- it is the canonical candidate artifact type system of Forge AI;
+- it is the canonical candidate artifact type system of AI-DOS;
 - every artifact type derives from M.0;
 - artifact families are explicit and governed;
 - every document artifact has a defined artifact family;

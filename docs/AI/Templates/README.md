@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-OP-TEMPLATES` |
+| Identifier | `AI-DOS-OP-TEMPLATES` |
 | Title | AI Templates Library |
 | Version | 2.1.0-draft |
 | Status | Draft |
@@ -20,11 +20,11 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Operational Core Alignment |
-| Traceability ID | FORGE-AI.V2.OP-TEMPLATES |
+| Traceability ID | AI-DOS.V2.OP-TEMPLATES |
 | Scope | Template Library purpose, navigation, family map, ownership routing, selection principles, usage workflow, lifecycle expectations, alignment rules, validation expectations, and cross-reference routing |
 | Out of Scope | Template standard definitions, metadata standard definitions, placeholder schema definitions, governance policy, Runtime authority, Engine authority, ProjectStatus authority, template family specifications, implementation logic, generated artifacts, certification, and promotion decisions |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
-| Normative References | `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/Standards/TPL-001-RFC-Template-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md` |
+| Normative References | `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/Standards/TPL-001-RFC-Template-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md` |
 | Dependencies | Template standards, document metadata standard, Governance Atlas, Framework Governance, ProjectStatus, DevelopmentPhases, and family-local README/index documents where present |
 | Consumes | Active task instruction, repository boot sequence, template standards, document metadata standard, family-local template inventories, and domain authority routing |
 | Produces | Canonical Template Library navigation entry point, family directory map, selection guidance, validation routing, alignment rules, extension rules, and cross-reference index |
@@ -38,13 +38,13 @@
 
 ## 1. Purpose
 
-This README is the canonical entry point and navigation document for the Forge AI Template Library.
+This README is the canonical entry point and navigation document for theAI-DOS Template Library.
 
 It helps contributors and reviewers locate template families, select the correct template starting point, understand how template standards apply, and route validation through the appropriate authority documents. It is not itself a reusable template, template specification, metadata specification, governance policy, runtime specification, engine specification, or ProjectStatus authority.
 
 ## 2. Library Scope
 
-The Template Library contains reusable Markdown template assets and family indexes used to produce governed Forge AI planning, architecture, runtime, operational, integration, migration, project, validation, and related documentation artifacts.
+The Template Library contains reusable Markdown template assets and family indexes used to produce governedAI-DOS planning, architecture, runtime, operational, integration, migration, project, validation, and related documentation artifacts.
 
 This README covers library-level navigation only:
 
@@ -74,7 +74,7 @@ This README consumes existing authorities and routes users to them. It does not 
 
 ## 4. Relationship to TPL-000
 
-`docs/AI/Templates/Standards/TPL-000-Template-Standard.md` is the baseline template standard for reusable Forge AI templates. This README uses TPL-000 as the library-level routing authority for template classification, template placeholder expectations, produced-document guidance, and validation expectations.
+`docs/AI/Templates/Standards/TPL-000-Template-Standard.md` is the baseline template standard for reusableAI-DOS templates. This README uses TPL-000 as the library-level routing authority for template classification, template placeholder expectations, produced-document guidance, and validation expectations.
 
 This README does not restate the TPL-000 schema or convert navigation guidance into template requirements. Template authors and reviewers must read TPL-000 directly when creating, aligning, or validating reusable templates.
 
@@ -289,11 +289,11 @@ The Template Library maintains these invariants:
 | `docs/AI/AIFramework.md` | Framework-level conceptual authority consumed by operational templates. |
 | `docs/AI/AIOrchestrator.md` | Orchestration context consumed by operational templates. |
 | `docs/AI/AgentSystemPrompt.md` | Agent system prompt context consumed by operational templates. |
-| `docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md` | System overview and architecture blueprint context consumed by architecture-facing templates. |
+| `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md` | System overview and architecture blueprint context consumed by architecture-facing templates. |
 
 ## 22. Version History
 
 | Version | Date | Notes |
 |:---|:---|:---|
 | 2.1.0-draft | 2026-07-10 | Refactored as the canonical Template Library navigation entry point aligned with STD-010, TPL-000, and TPL-001 routing boundaries. |
-| 2.0.0-draft | 2026-07-09 | Initial Forge AI v2 operational template library README. |
+| 2.0.0-draft | 2026-07-09 | InitialAI-DOS v2 operational template library README. |

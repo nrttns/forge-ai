@@ -1,4 +1,4 @@
-# Forge AI — AGENTS v2 Architecture Foundation
+#AI-DOS — AGENTS v2 Architecture Foundation
 
 ---
 
@@ -6,8 +6,8 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.AGENTS.V2.ARCHITECTURE` |
-| Title | Forge AI — AGENTS v2 Architecture Foundation |
+| Identifier | `AI-DOS.AGENTS.V2.ARCHITECTURE` |
+| Title |AI-DOS — AGENTS v2 Architecture Foundation |
 | Version | 0.1.0-draft |
 | Status | Draft |
 | Canonical Status | Non-canonical until reviewed, approved, and promoted through Human Governance / Framework Governance |
@@ -20,7 +20,7 @@
 | Created | 2026-07-08 |
 | Last Updated | 2026-07-08 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.ARCHITECTURE.AGENTS.V2.FOUNDATION` |
+| Traceability ID | `AI-DOS.ARCHITECTURE.AGENTS.V2.FOUNDATION` |
 | Scope | Foundational AGENTS v2 architecture boundaries for agent identity, roles, registries, metadata, lifecycle, governance boundaries, AI execution rules, and validation expectations. |
 | Out of Scope | Implementation, swarm runtime, multi-agent runtime activation, platform adapters, Engine RFC continuation, Runtime redefinition, Engine Platform redefinition, governance redefinition, standards redefinition, meta-model redefinition, and ProjectStatus updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-This document defines the AGENTS v2 Architecture Foundation for Forge AI.
+This document defines the AGENTS v2 Architecture Foundation for AI-DOS.
 
 Its purpose is to establish the documentation-level foundation for future AGENTS v2 work without activating implementation, multi-agent runtime, swarm runtime, platform adapters, or Engine RFC work.
 

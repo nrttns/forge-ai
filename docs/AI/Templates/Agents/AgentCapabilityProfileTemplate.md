@@ -1,6 +1,6 @@
 # Agent Capability Profile Template
 
-> Forge AI v2 · Agent Templates<br>
+>AI-DOS v2 · Agent Templates<br>
 > Template Artifact · Draft / Non-canonical
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-AGENTS-CAPABILITY-PROFILE` |
+| Identifier | `AI-DOS-TPL-AGENTS-CAPABILITY-PROFILE` |
 | Title | Agent Capability Profile Template |
 | Version | `2.0.0-draft` |
 | Status | Draft |
@@ -23,7 +23,7 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Operational Core Alignment |
-| Traceability ID | `FORGE-AI.V2.TEMPLATES.AGENTS.CAPABILITY-PROFILE` |
+| Traceability ID | `AI-DOS.V2.TEMPLATES.AGENTS.CAPABILITY-PROFILE` |
 | Scope | Defines the reusable structure for describing the capabilities, limits, permissions, and safe operating scope of one agent or tool. |
 | Out of Scope | Agent authority redefinition, runtime authority redefinition, engine authority redefinition, workflow authority creation, orchestration authority creation, validation authority creation, review authority creation, certification authority creation, governance authority creation, swarm activation, ProjectStatus updates, runtime implementation, orchestration implementation, engine implementation, architecture redefinition, and canonical promotion. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |

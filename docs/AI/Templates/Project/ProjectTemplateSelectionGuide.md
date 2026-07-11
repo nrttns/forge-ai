@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-PROJECT-SELECTION-GUIDE` |
+| Identifier | `AI-DOS-TPL-PROJECT-SELECTION-GUIDE` |
 | Title | Project Template Selection Guide |
 | Version | `0.2.0-draft` |
 | Status | Draft |
@@ -20,7 +20,7 @@
 | Created | 2026-07-10 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.TEMPLATES.PROJECT.SELECTION-GUIDE` |
+| Traceability ID | `AI-DOS.TEMPLATES.PROJECT.SELECTION-GUIDE` |
 | Scope | Guidance for selecting the smallest correct Project template from the normalized Project template family. |
 | Out of Scope | Project implementation logic, scaffolding behavior, code generation, runtime behavior, deployment logic, CI/CD behavior, package management execution, framework-specific execution, certification decisions, registry updates, or ProjectStatus updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |

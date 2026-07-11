@@ -3,7 +3,7 @@
 ## 1. Status
 
 Status: Documentation-only audit / harvest report  
-Project: Forge AI  
+Project: AI-DOS  
 Document Type: RC2 Specification Harvest Report  
 Scope: `docs/AI/Specification/` only  
 Created: 2026-07-07  
@@ -31,7 +31,7 @@ This report inspects the following RC2 Specification files:
 This report compares those files against the following v3 target or transitional target documents:
 
 - `docs/AI/Architecture/A.1-Constitution.md`
-- `docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md`
+- `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md`
 - `docs/AI/Meta/M.0-Framework-Meta-Model.md`
 - `docs/AI/Meta/M.1-Artifact-Meta-Model.md`
 - `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`
@@ -56,7 +56,7 @@ This report does not:
 | `docs/AI/Specification/Constitution.md` | RC2 framework constitution | Purpose, vision, mission, objectives, audience, scope, foundational philosophy, core principles, constitutional invariants, relationship to RC2 modules. | Covered by v3; partially covered by v3; legacy authority mapping still active. |
 | `docs/AI/Specification/FrameworkSpecification.md` | RC2 core framework specification | Core architecture, planning model, project state, workflow engine, command system, template system, review, validation, documentation, state management, orchestration. | Partially covered by v3; requires future Workflow Standard; requires future Governance/Certification Standard. |
 | `docs/AI/Specification/GovernanceModel.md` | RC2 governance specification | Governance philosophy, hierarchy, human authority, decision classification, ownership governance, quality gates, certification, escalation, compliance, evolution, invariants. | Partially covered by v3; requires future Governance/Certification Standard. |
-| `docs/AI/Specification/ReferenceArchitecture.md` | RC2 reference architecture | High-level architecture, logical layers, information flow, authority flow, adapter model, Forge AI adapter position, extension readiness, roadmap, principles. | Partially covered by v3; requires future Runtime Architecture for runtime-layer material; adapter material requires future adapter standard. |
+| `docs/AI/Specification/ReferenceArchitecture.md` | RC2 reference architecture | High-level architecture, logical layers, information flow, authority flow, adapter model,AI-DOS adapter position, extension readiness, roadmap, principles. | Partially covered by v3; requires future Runtime Architecture for runtime-layer material; adapter material requires future adapter standard. |
 | `docs/AI/Specification/RuntimeModel.md` | RC2 runtime specification | Runtime philosophy, agent lifecycle, runtime layers, context management, memory strategy, multi-agent coordination, conflict resolution, swarm coordination, runtime communication, runtime invariants. | Partially covered by v3; requires future Runtime Architecture; requires future Workflow Standard for execution lifecycle details. |
 | `docs/AI/Specification/Terminology.md` | RC2 terminology specification | Canonical definitions, state terms, planning terms, command/workflow/template terms, framework terms. | Partially covered by v3; requires future Glossary/Terminology Standard. |
 
@@ -65,7 +65,7 @@ This report does not:
 | v3 target document | Current target role | RC2 coverage contribution | Limitations |
 | --- | --- | --- | --- |
 | `docs/AI/Architecture/A.1-Constitution.md` | v3 constitutional candidate | Strong coverage for mission, authority, scope, principles, human authority, framework authority, evolution, compliance, amendment, and certification principles. | Does not fully replace operational RC2 references until promoted through governance. Does not house detailed runtime or terminology coverage. |
-| `docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md` | Transitional blueprint RFC / planning input | Covers v3 vision, layered architecture, governance, meta model, standards, knowledge graph, artifact, registry, workflow, runtime, AI agent, swarm, validation, enterprise governance, roadmap, risks, and open decisions. | RFC is non-canonical until ratified. Runtime, agent, swarm, workflow, and governance layers are high-level and not sufficient replacements for RC2 runtime details. |
+| `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md` | Transitional blueprint RFC / planning input | Covers v3 vision, layered architecture, governance, meta model, standards, knowledge graph, artifact, registry, workflow, runtime, AI agent, swarm, validation, enterprise governance, roadmap, risks, and open decisions. | RFC is non-canonical until ratified. Runtime, agent, swarm, workflow, and governance layers are high-level and not sufficient replacements for RC2 runtime details. |
 | `docs/AI/Meta/M.0-Framework-Meta-Model.md` | v3 framework meta-model candidate | Covers artifacts, entities, relationships, identity, lifecycle, state, authority, ownership, evidence, validation, review, certification, references, derivation, governance, compliance, anti-patterns. | Does not provide a complete RC2 glossary or operational runtime model. |
 | `docs/AI/Meta/M.1-Artifact-Meta-Model.md` | v3 artifact meta-model candidate | Covers artifact identity, lifecycle, anatomy, ownership, metadata, relationships, validation, projection, serialization, registry, extension, compliance, and a glossary appendix. | Focused on artifact modeling; not a full framework glossary or runtime/agent/swarm model. |
 | `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md` | v3 standards foundation candidate | Covers standards philosophy, classification, lifecycle, identity, structure, relationships, governance, validation, certification, migration, references, glossary, AI consumption rules. | It is a standards foundation, not a specific workflow, runtime, governance/certification, adapter, or terminology standard. |
@@ -92,7 +92,7 @@ The following RC2 concepts are sufficiently represented in the inspected v3 targ
 5. **Evidence, validation, review, and certification as distinct concepts** — M.0, M.1, and STD-000 cover evidence-supported truth, validation, review, certification, certification records, and compliance levels.
 6. **Standards governance and migration discipline** — STD-000 covers standards lifecycle, identity, structure, governance, validation, certification, versioning, migration, references, decision records, and AI consumption rules.
 7. **Layered architecture direction** — the Blueprint RFC covers governance, meta model, standards, knowledge graph, artifact, registry, workflow, runtime, AI agent, swarm, validation/certification, and enterprise governance layers at a target architecture level.
-8. **Platform independence and adapter-consumer rule** — A.1 and the Blueprint RFC preserve the principle that platform adapters consume Forge AI and must not redefine it.
+8. **Platform independence and adapter-consumer rule** — A.1 and the Blueprint RFC preserve the principle that platform adapters consumeAI-DOS and must not redefine it.
 9. **State, authority, ownership, reference, and relationship primitives** — M.0 covers these as meta-model concepts and M.1 specializes them for artifacts.
 10. **Migration caution** — STD-000 and the legacy migration plan both support controlled migration, compatibility strategy, deprecation discipline, and explicit migration plans.
 

@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-MIGRATION-COMPATIBILITY-MATRIX` |
+| Identifier | `AI-DOS-TPL-MIGRATION-COMPATIBILITY-MATRIX` |
 | Title | Compatibility Matrix Template |
 | Version | `0.2.0-draft` |
 | Status | Draft |
@@ -20,7 +20,7 @@
 | Created | 2026-07-10 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.TEMPLATES.MIGRATION.COMPATIBILITY-MATRIX` |
+| Traceability ID | `AI-DOS.TEMPLATES.MIGRATION.COMPATIBILITY-MATRIX` |
 | Scope | Reusable output contract for documenting compatibility across framework versions, adapters, templates, tooling, commands, workflows, and adopting projects. |
 | Out of Scope | Implementing migration logic, compatibility behavior, runtime conversion, automated upgrades, deprecation execution, governance decisions, certification decisions, registry updates, or ProjectStatus updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |

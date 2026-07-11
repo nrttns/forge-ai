@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-PLATFORM-ADAPTER-BOUNDARY` |
+| Identifier | `AI-DOS-TPL-PLATFORM-ADAPTER-BOUNDARY` |
 | Title | Adapter Boundary Template |
 | Version | `0.2.0-draft` |
 | Status | Draft |
@@ -20,8 +20,8 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.TEMPLATES.PLATFORM.ADAPTER-BOUNDARY` |
-| Scope | Reusable output contract for documenting boundaries between Forge AI authority, project templates, platform adapter documentation, and project implementation. |
+| Traceability ID | `AI-DOS.TEMPLATES.PLATFORM.ADAPTER-BOUNDARY` |
+| Scope | Reusable output contract for documenting boundaries betweenAI-DOS authority, project templates, platform adapter documentation, and project implementation. |
 | Out of Scope | Creating adapter implementation, integration, connector, runtime, API, registry, governance, certification, review, or ProjectStatus authority. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
 | Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/README.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/Runtime/A.4.3-Engine-Registry-RFC.md`; `docs/AI/Runtime/A.5.1-Context-Engine-RFC.md`; `docs/AI/Runtime/A.5.2-Knowledge-Engine-RFC.md`; `docs/AI/Runtime/A.5.12-Registry-Engine-RFC.md` |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-Use this template to document the exact boundary between Forge AI authority, a project template output, a platform adapter document, and a project implementation.
+Use this template to document the exact boundary betweenAI-DOS authority, a project template output, a platform adapter document, and a project implementation.
 
 ## 2. Authority Boundary
 
@@ -121,7 +121,7 @@ Every document produced from this template must begin with a STD-010-compliant `
 ## 5. Boundary Diagram
 
 ```text
-Forge AI authority
+AI-DOS authority
     ↓ consumed by
 Project template output
     ↓ specialized by
@@ -134,10 +134,10 @@ Project implementation
 
 | Boundary Layer | Owned Responsibilities | Authority Source | Must Not Own |
 |:---|:---|:---|:---|
-| Forge AI authority | Constitution, governance, standards, runtime, engine, context, knowledge, registry, review, certification, ProjectStatus rules | {{FORGE_AUTHORITY_SOURCE}} | Platform implementation details |
+|AI-DOS authority | Constitution, governance, standards, runtime, engine, context, knowledge, registry, review, certification, ProjectStatus rules | {{FORGE_AUTHORITY_SOURCE}} | Platform implementation details |
 | Project template output | Reusable project-document structure | {{PROJECT_TEMPLATE_SOURCE}} | Runtime behavior or governance decisions |
 | Platform adapter documentation | Platform-specific documentation conventions and validation evidence expectations | {{ADAPTER_DOCUMENT_SOURCE}} | Connector/API implementation, registry persistence, certification, ProjectStatus updates |
-| Project implementation | Product source, project-specific files, platform code | {{PROJECT_SOURCE}} | Forge AI authority or template authority |
+| Project implementation | Product source, project-specific files, platform code | {{PROJECT_SOURCE}} |AI-DOS authority or template authority |
 
 ## 7. Forbidden Boundary Crossings
 

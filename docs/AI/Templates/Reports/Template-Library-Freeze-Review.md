@@ -1,6 +1,6 @@
 # Template Library Freeze Review
 
-> Forge AI v2 · Template Library Freeze Review · Draft / Non-canonical / Documentation-only
+>AI-DOS v2 · Template Library Freeze Review · Draft / Non-canonical / Documentation-only
 
 ---
 
@@ -8,7 +8,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-FREEZE-REVIEW` |
+| Identifier | `AI-DOS-TPL-FREEZE-REVIEW` |
 | Title | Template Library Freeze Review |
 | Version | `0.1.0-draft` |
 | Status | Draft |
@@ -22,8 +22,8 @@
 | Created | 2026-07-10 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft Review |
-| Traceability ID | `FORGE-AI.TEMPLATES.REPORTS.FREEZE-REVIEW` |
-| Scope | Evidence-based review of the completed Template Library Global Audit to determine whether the Forge AI v2 Template Library is ready to proceed to Template Library Freeze. |
+| Traceability ID | `AI-DOS.TEMPLATES.REPORTS.FREEZE-REVIEW` |
+| Scope | Evidence-based review of the completed Template Library Global Audit to determine whether theAI-DOS v2 Template Library is ready to proceed to Template Library Freeze. |
 | Out of Scope | Re-auditing the Template Library, modifying templates, refactoring templates, normalizing templates, freezing the Template Library, certifying templates, approving templates, canonical promotion, ProjectStatus updates, DevelopmentPhases updates, runtime implementation, and governance-authority creation. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/Architecture/A.1-Constitution.md` |
 | Normative References | `docs/AI/Templates/Reports/Template-Library-Global-Audit.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/Standards/TPL-001-RFC-Template-Standard.md` |
@@ -162,7 +162,7 @@ The governance evidence supports Freeze readiness. This Freeze Review does not i
 | Are any findings classified as Blocker? | No | The audit explicitly states that no findings are classified as `Blocker`. |
 | Do observations prevent Freeze? | No | Observations remain appropriate for Freeze consideration but do not require remediation before Freeze. |
 | Do editorial observations prevent Freeze? | No | The audit states editorial observations do not reduce readiness. |
-| Is the Template Library ready to become the canonical Forge AI v2 Template Library pending Human Governance action? | Yes | The audit found the Template Library internally consistent at the architectural level and ready to enter Freeze Review. |
+| Is the Template Library ready to become the canonicalAI-DOS v2 Template Library pending Human Governance action? | Yes | The audit found the Template Library internally consistent at the architectural level and ready to enter Freeze Review. |
 
 The completed Global Audit provides sufficient evidence for this Freeze Review to recommend proceeding to Template Library Freeze.
 

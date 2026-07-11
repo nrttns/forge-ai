@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-PLATFORM-ADAPTER-VALIDATION` |
+| Identifier | `AI-DOS-TPL-PLATFORM-ADAPTER-VALIDATION` |
 | Title | Adapter Validation Template |
 | Version | `0.2.0-draft` |
 | Status | Draft |
@@ -20,8 +20,8 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.TEMPLATES.PLATFORM.ADAPTER-VALIDATION` |
-| Scope | Reusable output contract for validating that platform adapter documentation preserves Forge AI authority and safely maps platform-specific constraints. |
+| Traceability ID | `AI-DOS.TEMPLATES.PLATFORM.ADAPTER-VALIDATION` |
+| Scope | Reusable output contract for validating that platform adapter documentation preservesAI-DOS authority and safely maps platform-specific constraints. |
 | Out of Scope | Certifying adapters, approving implementations, implementing connectors or APIs, executing runtime behavior, persisting registry entries, changing governance ownership, or updating ProjectStatus. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
 | Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/README.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/Runtime/A.4.3-Engine-Registry-RFC.md`; `docs/AI/Runtime/A.5.1-Context-Engine-RFC.md`; `docs/AI/Runtime/A.5.2-Knowledge-Engine-RFC.md`; `docs/AI/Runtime/A.5.12-Registry-Engine-RFC.md` |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-Use this template to validate platform adapter documentation. Validation determines whether the adapter documentation preserves Forge AI authority, not whether an adapter implementation is certified, approved, deployed, or registered.
+Use this template to validate platform adapter documentation. Validation determines whether the adapter documentation preservesAI-DOS authority, not whether an adapter implementation is certified, approved, deployed, or registered.
 
 ## 2. Authority Boundary
 

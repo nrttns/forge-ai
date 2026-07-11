@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.SYSTEM.BOOT-SEQUENCE` |
+| Identifier | `AI-DOS.SYSTEM.BOOT-SEQUENCE` |
 | Title | AI System Boot Sequence |
 | Version | `2.0.0-draft` |
 | Status | Draft |
@@ -20,8 +20,8 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Draft Operational Core Alignment |
-| Traceability ID | `FORGE-AI.V2.OP-005B` |
-| Scope | Repository boot procedure, document loading order, context assembly order, boot validation, and boot failure handling for Forge AI agents. |
+| Traceability ID | `AI-DOS.V2.OP-005B` |
+| Scope | Repository boot procedure, document loading order, context assembly order, boot validation, and boot failure handling forAI-DOS agents. |
 | Out of Scope | Governance redesign, authority decisions, Runtime ownership, Engine ownership, command definitions, workflow definitions, template definitions, ProjectStatus updates, certification, promotion, and implementation. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
 | Normative References | `docs/AI/System/TargetRepositoryResolution.md`; `docs/AI/System/AuthorityModel.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-This document defines the Forge AI v2 System Layer boot procedure used by AI agents before executing repository work.
+This document defines theAI-DOS v2 System Layer boot procedure used by AI agents before executing repository work.
 
 Boot consumes the Target Repository Resolution Result, then establishes the task instruction, authority path, document loading order, context assembly order, execution boundary, validation expectation, and completion-report requirement. It prevents agents from relying on stale memory, conversational assumptions, undocumented authority, or lower-level execution aids that conflict with higher authority.
 
@@ -105,7 +105,7 @@ The AI System Boot Sequence does not own:
 
 ## 4. Boot Sequence
 
-Agents shall use the following boot sequence for Forge AI v2 System Layer execution:
+Agents shall use the following boot sequence forAI-DOS v2 System Layer execution:
 
 ```text
 Human Task

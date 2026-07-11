@@ -20,7 +20,7 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Draft |
-| Traceability ID | FORGE-AI.TEMPLATES.ARCHITECTURE.ADR |
+| Traceability ID | AI-DOS.TEMPLATES.ARCHITECTURE.ADR |
 | Scope | Reusable template for architecture decision records in the Architecture template family |
 | Out of Scope | Approving decisions, creating new authority, or replacing RFC / Specification / Governance templates |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |

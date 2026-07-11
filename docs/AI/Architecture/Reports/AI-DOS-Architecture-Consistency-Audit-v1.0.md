@@ -1,19 +1,19 @@
-# Forge AI Architecture Consistency Audit v1.0
+#AI-DOS Architecture Consistency Audit v1.0
 
 ## 1. Audit Identification
 
 | Field | Value |
 | --- | --- |
-| Audit | Forge AI Architecture Consistency Audit v1.0 |
+| Audit |AI-DOS Architecture Consistency Audit v1.0 |
 | Mode | Audit-only documentation report |
 | Date | 2026-07-07 |
-| Scope | Forge AI documentation architecture |
-| Output | `docs/AI/Architecture/Reports/Forge-AI-Architecture-Consistency-Audit-v1.0.md` |
+| Scope |AI-DOS documentation architecture |
+| Output | `docs/AI/Architecture/Reports/AI-DOS-Architecture-Consistency-Audit-v1.0.md` |
 | Verdict | REQUIRES FOLLOW-UP |
 
 ## 2. Executive Summary
 
-Forge AI currently exists as a platform-independent, documentation-driven AI Development Operating System with a substantial AI Framework documentation layer. The repository contains a coherent constitutional intent, but the architecture is fragmented across three generations of documents:
+AI-DOS currently exists as a platform-independent, documentation-driven AI Development Operating System with a substantial AI Framework documentation layer. The repository contains a coherent constitutional intent, but the architecture is fragmented across three generations of documents:
 
 1. root bootstrap and operational authority documents;
 2. RC2 specification and system documents under `docs/AI/Specification/` and `docs/AI/System/`;
@@ -21,7 +21,7 @@ Forge AI currently exists as a platform-independent, documentation-driven AI Dev
 
 The strongest current architecture is the authority principle: documentation governs implementation, planning precedes execution, validation precedes completion, and review/certification precede state update. The weakest current architecture is document ownership: several concepts are defined in more than one place, directory status is not explicit, and the Blueprint/standards layer is not fully reconciled with the RC2 framework layer.
 
-The audit verdict is **REQUIRES FOLLOW-UP**. Forge AI is valuable and directionally coherent, but it needs authority cleanup before further runtime or standards expansion.
+The audit verdict is **REQUIRES FOLLOW-UP**.AI-DOS is valuable and directionally coherent, but it needs authority cleanup before further runtime or standards expansion.
 
 ## 3. Audit Scope
 
@@ -54,7 +54,7 @@ The audit inspected the required minimum inputs:
 - `docs/AI/AIFramework.md`
 - `docs/AI/AIOrchestrator.md`
 - `docs/AI/AgentSystemPrompt.md`
-- `docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md`
+- `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md`
 - `docs/AI/Architecture/A.0-Framework-Audit.md`
 - `docs/AI/Architecture/A.1-Constitution.md`
 - `docs/AI/Meta/M.0-Framework-Meta-Model.md`
@@ -76,9 +76,9 @@ Additional repository inspection found existing sibling areas not listed in the 
 
 ## 5. Architecture Identity
 
-### What Forge AI is today
+### WhatAI-DOS is today
 
-Forge AI is currently best described as:
+AI-DOS is currently best described as:
 
 > a platform-independent, documentation-driven AI Development Operating System implemented as an authoritative documentation framework, with emerging architecture standards, meta-model, knowledge graph, discovery, and future runtime ambitions.
 
@@ -102,7 +102,7 @@ Supporting identity documents:
 
 - `docs/AI/AIFramework.md` — master AI Framework identity and RC2 map.
 - `docs/AI/Specification/Constitution.md` — framework mission, philosophy, objectives, invariants.
-- `docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md` — broader architectural vision/RFC, but not fully reconciled as canonical authority.
+- `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md` — broader architectural vision/RFC, but not fully reconciled as canonical authority.
 
 ## 6. Authority Chain Analysis
 
@@ -209,7 +209,7 @@ However, duplicate constitutional authority exists because:
 | Directory | Purpose | Owner | Authority Level | Consumers | Produced Artifacts | Classification |
 | --- | --- | --- | --- | --- | --- | --- |
 | `docs/AI/Architecture/` | Architecture-series audits, constitution, appendix, schemas, standards, blueprint | Architecture System, unclear canonical integration | High if adopted, currently transitional | Standards, meta, future runtime, governance | Architecture audit docs, constitutional docs, standards, schemas | Transitional / partially canonical |
-| `docs/AI/Architecture/Blueprint/` | Long-form Forge AI Blueprint RFC | Architecture/RFC process | Visionary, not clearly canonical | Architecture planning, standards, future runtime | Blueprint RFC | Transitional RFC |
+| `docs/AI/Architecture/Blueprint/` | Long-formAI-DOS Blueprint RFC | Architecture/RFC process | Visionary, not clearly canonical | Architecture planning, standards, future runtime | Blueprint RFC | Transitional RFC |
 | `docs/AI/Architecture/Appendix/` | Appendix/supporting architecture material | Architecture System | Supporting | Architecture readers | Appendix records | Supporting / unclear |
 | `docs/AI/Architecture/Schemas/` | Formal or semi-formal schema/model docs | Standards System | Standard-dependent | Discovery, KG, validation | Discovery graph model | Canonical if tied to STD; otherwise unclear |
 | `docs/AI/Architecture/Standards/` | Framework standards STD-000+ | Standards System | Emerging canonical standards | Discovery, graph, tooling, validation | Standards docs | Emerging canonical / fragmented |
@@ -306,7 +306,7 @@ graph TD
 
 Repository reference inspection found references to missing or apparently moved paths:
 
-- `docs/DevelopmentPhases/ForgeAI2-DevelopmentPhases.md`
+- `docs/DevelopmentPhases/AI-DOS2-DevelopmentPhases.md`
 - `docs/AI/Templates/AuditTemplate.md`
 - `docs/AI/Templates/SprintTemplate.md`
 - `docs/AI/Templates/PhaseTemplate.md`
@@ -326,9 +326,9 @@ The actual template layout now places planning templates under `docs/AI/Template
 | `docs/AI/Specification/Constitution.md` and `docs/AI/Architecture/A.1-Constitution.md` | Must merge or must deprecate one | Two constitution documents create duplicate ownership. |
 | `AGENTS.md` and `docs/AI/AgentSystemPrompt.md` | Acceptable operational summary | Prompt should remain tool-facing and explicitly non-canonical. |
 | `docs/AI/AIFramework.md` and `docs/AI/README.md` | Acceptable summary | README is directory index; AIFramework is master entry. Some map entries are stale. |
-| `docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md` and `AIFramework.md` | Transitional overlap | Blueprint is broader and newer-looking; must be clearly RFC or promoted into canonical map. |
+| `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md` and `AIFramework.md` | Transitional overlap | Blueprint is broader and newer-looking; must be clearly RFC or promoted into canonical map. |
 | `docs/AI/Architecture/A.0-Framework-Audit.md` and this report | Transitional / historical audit | A.0 should be historical once superseded. |
-| `docs/AI/FrameworkGovernance.md` and `docs/AI/Specification/GovernanceModel.md` | Must clarify ownership | One should own Forge-project governance and one should own portable framework governance. |
+| `docs/AI/FrameworkGovernance.md` and `docs/AI/Specification/GovernanceModel.md` | Must clarify ownership | One should own AI-DOS-project governance and one should own portable framework governance. |
 | `docs/AI/Validation/ValidationCertification.md` and `docs/AI/Certification/` | Must clarify | Certification relationship is split between validation standard and certification evidence directory. |
 | `docs/AI/System/*` and `AIOrchestrator.md` | Acceptable if System is procedure | Several lifecycle/authority definitions repeat; mark System as tool-facing procedure. |
 
@@ -347,7 +347,7 @@ The actual template layout now places planning templates under `docs/AI/Template
 | Agent runtime | Documented/planned | Agent lifecycle and prompt exist; no runtime execution architecture. |
 | Swarm runtime | Planned | Swarm principles/templates exist; no runtime. |
 
-Conclusion: Forge AI does **not** currently have a real runtime architecture beyond documentation-level runtime model, operational procedures, and templates.
+Conclusion:AI-DOS does **not** currently have a real runtime architecture beyond documentation-level runtime model, operational procedures, and templates.
 
 ## 12. Standards Readiness
 
@@ -365,7 +365,7 @@ The standards layer is coherent in intent but fragmented in governance. It shoul
 
 ### Blueprint matches repository reality
 
-- Forge AI is documentation-first and architecture-first.
+-AI-DOS is documentation-first and architecture-first.
 - Platform independence is consistently repeated.
 - Standards and knowledge graph work exists.
 - Runtime, agent, multi-agent, and swarm aspirations exist in phase and template structures.
@@ -412,7 +412,7 @@ The following architecture is missing or insufficiently canonical:
 
 ## 16. Findings
 
-1. **Canonical identity exists but is repeated.** Forge AI is a documentation-driven AI Development Operating System, primarily defined by `AGENTS.md` and supported by `AIFramework.md`.
+1. **Canonical identity exists but is repeated.**AI-DOS is a documentation-driven AI Development Operating System, primarily defined by `AGENTS.md` and supported by `AIFramework.md`.
 2. **Canonical constitution is ambiguous in practice.** `docs/AI/Specification/Constitution.md` should be canonical below `AGENTS.md`, but `Architecture/A.1-Constitution.md` creates duplicate ownership.
 3. **Authority chains are compatible but inconsistent.** Different documents name and order authority layers differently.
 4. **RC2 Specification remains the strongest canonical framework layer.** It is explicitly mapped by `AIFramework.md`.
@@ -449,8 +449,8 @@ The following architecture is missing or insufficiently canonical:
 ### Phase 4: Duplicate deprecation
 
 - Deprecate or merge duplicate constitutions.
-- Clarify governance split: portable AI Framework governance vs Forge AI project governance.
-- Fix references to moved templates and missing `ForgeAI2-DevelopmentPhases.md`.
+- Clarify governance split: portable AI Framework governance vsAI-DOS project governance.
+- Fix references to moved templates and missing `AI-DOS2-DevelopmentPhases.md`.
 - Clarify Validation vs Review vs Certification ownership.
 
 ### Phase 5: Runtime architecture work
@@ -469,14 +469,14 @@ The following architecture is missing or insufficiently canonical:
 
 **REQUIRES FOLLOW-UP**
 
-Forge AI has a strong and valuable architecture, but it is currently fragmented across bootstrap, RC2 specification, system procedures, architecture-series documents, meta-models, and standards. It should not be considered architecturally consistent until constitutional authority, directory ownership, concept ownership, and broken references are reconciled.
+AI-DOS has a strong and valuable architecture, but it is currently fragmented across bootstrap, RC2 specification, system procedures, architecture-series documents, meta-models, and standards. It should not be considered architecturally consistent until constitutional authority, directory ownership, concept ownership, and broken references are reconciled.
 
 ## 19. Next Safe Step
 
 Run an authority-focused documentation task only:
 
 ```text
-Forge AI Authority Cleanup Plan v1.0
+AI-DOS Authority Cleanup Plan v1.0
 ```
 
 Recommended command:

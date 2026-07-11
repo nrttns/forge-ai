@@ -1,6 +1,6 @@
 # A.1 — Constitution
 
-> **Forge AI v3 · Constitutional Architecture Specification**
+> **AI-DOS v3 · Constitutional Architecture Specification**
 > Phase A — Framework Core · Stage A.1
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-ARCH-A.1` |
+| Identifier | `AI-DOS-ARCH-A.1` |
 | Title | A.1 — Constitution |
 | Version | 3.0.0-beta |
 | Status | Draft |
@@ -23,7 +23,7 @@
 | Created | 2026-07-04 |
 | Last Updated | 2026-07-07 |
 | Lifecycle Phase | Draft |
-| Traceability ID | FORGE-ARCH-A.1 |
+| Traceability ID | AI-DOS-ARCH-A.1 |
 | Scope | v3 constitutional architecture candidate |
 | Out of Scope | Canonical promotion, implementation, and project state updates |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/FrameworkGovernance.md` |
@@ -85,13 +85,13 @@
 | Property | Value |
 |:---|:---|
 | **Document** | A.1 — Constitution |
-| **Identifier** | `FORGE-ARCH-A.1` |
+| **Identifier** | `AI-DOS-ARCH-A.1` |
 | **Version** | 3.0.0-beta |
 | **Status** | Draft |
 | **Type** | Constitutional Architecture Specification |
 | **Classification** | Framework Core |
 | **Authority** | [A.0 — Framework Audit](./A.0-Framework-Audit.md), Human Governance |
-| **Owner** | Forge AI Framework |
+| **Owner** |AI-DOS Framework |
 | **Maintainers** | Framework Architecture Team |
 | **Phase** | Phase A — Framework Core |
 | **Stage** | A.1 — Constitution |
@@ -102,9 +102,9 @@
 
 The Constitution is the first authoritative Framework Core document produced after [A.0 — Framework Audit](./A.0-Framework-Audit.md).
 
-It transforms the verified architectural baseline of A.0 into permanent constitutional principles, governance boundaries, authority rules, and non-negotiable invariants for Forge AI v3.
+It transforms the verified architectural baseline of A.0 into permanent constitutional principles, governance boundaries, authority rules, and non-negotiable invariants forAI-DOS v3.
 
-The Constitution does not implement runtime behavior, define platform adapters, introduce commands, or replace future architecture documents. It establishes the constitutional foundation that all subsequent Forge AI v3 Framework Core documents must consume.
+The Constitution does not implement runtime behavior, define platform adapters, introduce commands, or replace future architecture documents. It establishes the constitutional foundation that all subsequentAI-DOS v3 Framework Core documents must consume.
 
 ### Framework Roadmap Position
 
@@ -143,7 +143,7 @@ Unlike an audit, roadmap, runtime specification, or implementation plan, the Con
 - Explicit ownership
 - Platform independence
 
-These protections apply across the full Forge AI lifecycle.
+These protections apply across the fullAI-DOS lifecycle.
 
 ### Authority Relationship
 
@@ -180,7 +180,7 @@ The Status section is complete when the document identity, architectural positio
 
 ### Purpose
 
-The Constitution is the highest governing document of the Forge AI Framework Core.
+The Constitution is the highest governing document of theAI-DOS Framework Core.
 
 It establishes the permanent constitutional principles that define:
 
@@ -192,7 +192,7 @@ Unlike implementation specifications, the Constitution does not define runtime b
 
 ### Constitutional Intent
 
-Forge AI is an AI Development Operating System (AI-DOS).
+AI-DOS is an AI Development Operating System (AI-DOS).
 
 Its mission is to enable trustworthy, evidence-driven, and human-governed AI-assisted software engineering through a coherent constitutional architecture.
 
@@ -217,7 +217,7 @@ Project-specific implementations may extend the Framework but shall not contradi
 
 ### Completion Statement
 
-The Preamble is complete when the constitutional purpose, intent, commitments, and governing scope of the Forge AI Framework have been explicitly established.
+The Preamble is complete when the constitutional purpose, intent, commitments, and governing scope of theAI-DOS Framework have been explicitly established.
 
 ---
 
@@ -225,7 +225,7 @@ The Preamble is complete when the constitutional purpose, intent, commitments, a
 
 ### Overview
 
-The Constitution defines the permanent constitutional foundation of the Forge AI Framework.
+The Constitution defines the permanent constitutional foundation of theAI-DOS Framework.
 
 Its purpose is to establish immutable principles, governance boundaries, and decision rules that remain stable regardless of future implementation, technology, runtime, or platform changes.
 
@@ -292,7 +292,7 @@ The Purpose section is complete when the constitutional mission, architectural r
 
 ### Overview
 
-Constitutional Authority defines the highest non-human authority within the Forge AI Framework. It establishes the permanent decision hierarchy governing every Framework Core document, architectural model, runtime capability, and future evolution of the Framework.
+Constitutional Authority defines the highest non-human authority within theAI-DOS Framework. It establishes the permanent decision hierarchy governing every Framework Core document, architectural model, runtime capability, and future evolution of the Framework.
 
 No architectural authority may exist outside this hierarchy unless explicitly approved by Human Governance.
 
@@ -370,7 +370,7 @@ This section is complete when:
 
 ### Completion Statement
 
-The Constitutional Authority section establishes the permanent authority hierarchy of the Forge AI Framework and becomes the governing reference for every subsequent Framework Core document.
+The Constitutional Authority section establishes the permanent authority hierarchy of theAI-DOS Framework and becomes the governing reference for every subsequent Framework Core document.
 
 ---
 
@@ -378,7 +378,7 @@ The Constitutional Authority section establishes the permanent authority hierarc
 
 ### Overview
 
-The Constitutional Scope defines the boundaries of constitutional governance within the Forge AI Framework. It specifies what the Constitution governs, what it influences, and what remains outside its authority. Clear constitutional boundaries prevent overlap between the Constitution and subsequent Framework Core documents.
+The Constitutional Scope defines the boundaries of constitutional governance within theAI-DOS Framework. It specifies what the Constitution governs, what it influences, and what remains outside its authority. Clear constitutional boundaries prevent overlap between the Constitution and subsequent Framework Core documents.
 
 ### Scope Objectives
 
@@ -436,7 +436,7 @@ The Constitution applies to:
 - Agent and Swarm architecture
 - Official platform integrations
 
-Projects built on Forge AI inherit these principles unless explicitly exempted by Human Governance.
+Projects built onAI-DOS inherit these principles unless explicitly exempted by Human Governance.
 
 ### Boundary Rules
 
@@ -453,7 +453,7 @@ This section is complete when constitutional responsibilities, exclusions, appli
 
 ### Completion Statement
 
-The Constitutional Scope establishes the governing boundaries of the Constitution and defines where constitutional authority begins and ends within the Forge AI Framework.
+The Constitutional Scope establishes the governing boundaries of the Constitution and defines where constitutional authority begins and ends within theAI-DOS Framework.
 
 ---
 
@@ -461,7 +461,7 @@ The Constitutional Scope establishes the governing boundaries of the Constitutio
 
 ### Overview
 
-The Fundamental Principles define the immutable constitutional values of the Forge AI Framework. They establish the philosophical and architectural foundation upon which every Framework Core document, runtime component, governance rule, and implementation decision shall be based.
+The Fundamental Principles define the immutable constitutional values of theAI-DOS Framework. They establish the philosophical and architectural foundation upon which every Framework Core document, runtime component, governance rule, and implementation decision shall be based.
 
 Unless amended through the [constitutional amendment process](#18-amendment-process), these principles are permanent.
 
@@ -496,7 +496,7 @@ This section is complete when the permanent constitutional principles and immuta
 
 ### Completion Statement
 
-The Fundamental Principles establish the permanent constitutional values of the Forge AI Framework and provide the normative foundation for every subsequent Framework Core specification.
+The Fundamental Principles establish the permanent constitutional values of theAI-DOS Framework and provide the normative foundation for every subsequent Framework Core specification.
 
 ---
 
@@ -504,7 +504,7 @@ The Fundamental Principles establish the permanent constitutional values of the 
 
 ### Overview
 
-Human Authority is the highest constitutional principle within the Forge AI Framework.
+Human Authority is the highest constitutional principle within theAI-DOS Framework.
 
 Artificial intelligence exists to assist, accelerate, and improve engineering activities, but it shall never replace accountable human judgment. Every constitutional rule, governance process, and architectural decision derives its ultimate legitimacy from Human Governance.
 
@@ -568,7 +568,7 @@ The Human Authority section establishes the constitutional supremacy of accounta
 
 ### Overview
 
-Framework Authority defines the constitutional authority exercised by the Forge AI Framework after Human Governance. It establishes how constitutional authority flows through governance, architecture, planning, runtime, validation, and execution while preserving constitutional integrity.
+Framework Authority defines the constitutional authority exercised by theAI-DOS Framework after Human Governance. It establishes how constitutional authority flows through governance, architecture, planning, runtime, validation, and execution while preserving constitutional integrity.
 
 ### Constitutional Statement
 
@@ -626,7 +626,7 @@ This section is complete when the Framework authority chain, responsibilities, c
 
 ### Completion Statement
 
-The Framework Authority section establishes the constitutional authority exercised throughout the Forge AI Framework and defines the lawful chain through which every Framework decision derives its legitimacy.
+The Framework Authority section establishes the constitutional authority exercised throughout theAI-DOS Framework and defines the lawful chain through which every Framework decision derives its legitimacy.
 
 ---
 
@@ -634,7 +634,7 @@ The Framework Authority section establishes the constitutional authority exercis
 
 ### Overview
 
-The Source of Truth defines how architectural truth is established, maintained, and consumed throughout the Forge AI Framework. Every constitutional principle, architectural rule, governance policy, and runtime contract shall have exactly one canonical source of truth.
+The Source of Truth defines how architectural truth is established, maintained, and consumed throughout theAI-DOS Framework. Every constitutional principle, architectural rule, governance policy, and runtime contract shall have exactly one canonical source of truth.
 
 ### Constitutional Statement
 
@@ -697,7 +697,7 @@ This section is complete when canonical truth, ownership, derivation rules, and 
 
 ### Completion Statement
 
-The Source of Truth section establishes the constitutional model for defining, protecting, and consuming canonical architectural truth throughout the Forge AI Framework.
+The Source of Truth section establishes the constitutional model for defining, protecting, and consuming canonical architectural truth throughout theAI-DOS Framework.
 
 ---
 
@@ -705,7 +705,7 @@ The Source of Truth section establishes the constitutional model for defining, p
 
 ### Overview
 
-Constitutional Invariants are permanent rules that define the non-negotiable characteristics of the Forge AI Framework. These invariants protect the identity, integrity, and continuity of the Framework. They may only be changed through the formal [Amendment Process](#18-amendment-process).
+Constitutional Invariants are permanent rules that define the non-negotiable characteristics of theAI-DOS Framework. These invariants protect the identity, integrity, and continuity of the Framework. They may only be changed through the formal [Amendment Process](#18-amendment-process).
 
 ### Constitutional Statement
 
@@ -750,7 +750,7 @@ This section is complete when every permanent constitutional invariant, enforcem
 
 ### Completion Statement
 
-The Constitutional Invariants section establishes the immutable constitutional rules that preserve the long-term identity and integrity of the Forge AI Framework.
+The Constitutional Invariants section establishes the immutable constitutional rules that preserve the long-term identity and integrity of theAI-DOS Framework.
 
 ---
 
@@ -758,7 +758,7 @@ The Constitutional Invariants section establishes the immutable constitutional r
 
 ### Overview
 
-Governance Principles define how the constitutional values of the Forge AI Framework are interpreted, applied, and enforced throughout the Framework lifecycle. They ensure that every architectural, operational, and strategic decision remains aligned with the Constitution.
+Governance Principles define how the constitutional values of theAI-DOS Framework are interpreted, applied, and enforced throughout the Framework lifecycle. They ensure that every architectural, operational, and strategic decision remains aligned with the Constitution.
 
 ### Constitutional Statement
 
@@ -811,7 +811,7 @@ The Governance Principles section establishes the constitutional governance mode
 
 ### Overview
 
-Decision Principles define the constitutional rules governing how decisions are made throughout the Forge AI Framework. These principles ensure that every strategic, architectural, governance, and operational decision is lawful, transparent, evidence-driven, and traceable.
+Decision Principles define the constitutional rules governing how decisions are made throughout theAI-DOS Framework. These principles ensure that every strategic, architectural, governance, and operational decision is lawful, transparent, evidence-driven, and traceable.
 
 ### Constitutional Statement
 
@@ -869,7 +869,7 @@ The Decision Principles section establishes the constitutional framework through
 
 ### Overview
 
-Evidence Principles establish the constitutional requirements for collecting, evaluating, preserving, and referencing evidence throughout the Forge AI Framework. Evidence is the constitutional foundation for governance, architectural decisions, validation, certification, and continuous Framework evolution.
+Evidence Principles establish the constitutional requirements for collecting, evaluating, preserving, and referencing evidence throughout theAI-DOS Framework. Evidence is the constitutional foundation for governance, architectural decisions, validation, certification, and continuous Framework evolution.
 
 No significant Framework decision shall rely solely on opinion, preference, or undocumented assumptions.
 
@@ -929,7 +929,7 @@ The Evidence Principles section establishes the constitutional foundation for ev
 
 ### Overview
 
-Architectural Principles establish the constitutional design rules that govern every architectural decision within the Forge AI Framework. These principles ensure that the Framework remains modular, maintainable, scalable, technology-neutral, and constitutionally compliant throughout its evolution.
+Architectural Principles establish the constitutional design rules that govern every architectural decision within theAI-DOS Framework. These principles ensure that the Framework remains modular, maintainable, scalable, technology-neutral, and constitutionally compliant throughout its evolution.
 
 ### Constitutional Statement
 
@@ -968,7 +968,7 @@ This section is complete when architectural principles, constraints, and constit
 
 ### Completion Statement
 
-The Architectural Principles section establishes the constitutional design philosophy of the Forge AI Framework and provides the normative foundation for all subsequent architecture specifications.
+The Architectural Principles section establishes the constitutional design philosophy of theAI-DOS Framework and provides the normative foundation for all subsequent architecture specifications.
 
 ---
 
@@ -976,13 +976,13 @@ The Architectural Principles section establishes the constitutional design philo
 
 ### Overview
 
-Evolution Principles establish the constitutional rules governing how the Forge AI Framework may evolve over time. These principles ensure that Framework evolution remains deliberate, evidence-driven, constitutionally compliant, and free from uncontrolled architectural drift.
+Evolution Principles establish the constitutional rules governing how theAI-DOS Framework may evolve over time. These principles ensure that Framework evolution remains deliberate, evidence-driven, constitutionally compliant, and free from uncontrolled architectural drift.
 
 Evolution is a governed process rather than an accumulation of implementation changes.
 
 ### Constitutional Statement
 
-The Forge AI Framework shall evolve through constitutional governance, documented evidence, and controlled architectural progression.
+TheAI-DOS Framework shall evolve through constitutional governance, documented evidence, and controlled architectural progression.
 
 No Framework evolution shall compromise constitutional principles, architectural integrity, or canonical truth.
 
@@ -1014,7 +1014,7 @@ This section is complete when constitutional evolution principles, governance ex
 
 ### Completion Statement
 
-The Evolution Principles section establishes the constitutional framework for sustainable, governed, and evidence-driven evolution of the Forge AI Framework while preserving its long-term architectural integrity.
+The Evolution Principles section establishes the constitutional framework for sustainable, governed, and evidence-driven evolution of theAI-DOS Framework while preserving its long-term architectural integrity.
 
 ---
 
@@ -1022,7 +1022,7 @@ The Evolution Principles section establishes the constitutional framework for su
 
 ### Overview
 
-Compliance defines the constitutional expectations that every Framework Core document, governance activity, runtime capability, engine, and implementation shall satisfy. Compliance ensures that the Forge AI Framework remains aligned with constitutional principles throughout its lifecycle.
+Compliance defines the constitutional expectations that every Framework Core document, governance activity, runtime capability, engine, and implementation shall satisfy. Compliance ensures that theAI-DOS Framework remains aligned with constitutional principles throughout its lifecycle.
 
 ### Constitutional Statement
 
@@ -1069,7 +1069,7 @@ This section is complete when compliance principles, scope, assessment expectati
 
 ### Completion Statement
 
-The Compliance section establishes the constitutional requirements for demonstrating, maintaining, and governing compliance across the Forge AI Framework.
+The Compliance section establishes the constitutional requirements for demonstrating, maintaining, and governing compliance across theAI-DOS Framework.
 
 ---
 
@@ -1077,7 +1077,7 @@ The Compliance section establishes the constitutional requirements for demonstra
 
 ### Overview
 
-Constitutional Violations define actions, decisions, artifacts, or behaviors that conflict with the constitutional principles of the Forge AI Framework. Their purpose is to preserve constitutional integrity by ensuring that violations are identified, documented, governed, and resolved through approved processes.
+Constitutional Violations define actions, decisions, artifacts, or behaviors that conflict with the constitutional principles of theAI-DOS Framework. Their purpose is to preserve constitutional integrity by ensuring that violations are identified, documented, governed, and resolved through approved processes.
 
 ### Constitutional Statement
 
@@ -1132,7 +1132,7 @@ This section is complete when violation categories, handling rules, escalation a
 
 ### Completion Statement
 
-The Constitutional Violations section establishes the constitutional mechanism for identifying, governing, escalating, and resolving violations while preserving the long-term integrity of the Forge AI Framework.
+The Constitutional Violations section establishes the constitutional mechanism for identifying, governing, escalating, and resolving violations while preserving the long-term integrity of theAI-DOS Framework.
 
 ---
 
@@ -1140,7 +1140,7 @@ The Constitutional Violations section establishes the constitutional mechanism f
 
 ### Overview
 
-The Amendment Process defines the only lawful mechanism for modifying the Forge AI Constitution. Its purpose is to preserve constitutional stability while allowing carefully governed evolution when justified by evidence and approved through Human Governance.
+The Amendment Process defines the only lawful mechanism for modifying theAI-DOS Constitution. Its purpose is to preserve constitutional stability while allowing carefully governed evolution when justified by evidence and approved through Human Governance.
 
 No constitutional provision may be changed outside this process.
 
@@ -1201,7 +1201,7 @@ This section is complete when amendment principles, lifecycle, approval authorit
 
 ### Completion Statement
 
-The Amendment Process establishes the exclusive constitutional mechanism through which the Forge AI Constitution may evolve while preserving governance, traceability, and long-term constitutional integrity.
+The Amendment Process establishes the exclusive constitutional mechanism through which theAI-DOS Constitution may evolve while preserving governance, traceability, and long-term constitutional integrity.
 
 ---
 
@@ -1209,7 +1209,7 @@ The Amendment Process establishes the exclusive constitutional mechanism through
 
 ### Overview
 
-Certification defines the constitutional process through which the Forge AI Constitution is formally recognized as an approved Framework Core document. Certification confirms that the Constitution satisfies its constitutional objectives, governance requirements, and quality expectations before it becomes authoritative.
+Certification defines the constitutional process through which theAI-DOS Constitution is formally recognized as an approved Framework Core document. Certification confirms that the Constitution satisfies its constitutional objectives, governance requirements, and quality expectations before it becomes authoritative.
 
 ### Constitutional Statement
 
@@ -1268,7 +1268,7 @@ This section is complete when certification principles, lifecycle, approval auth
 
 ### Completion Statement
 
-The Certification section establishes the constitutional approval process through which the Forge AI Constitution becomes an authoritative and officially governed Framework Core document.
+The Certification section establishes the constitutional approval process through which theAI-DOS Constitution becomes an authoritative and officially governed Framework Core document.
 
 ---
 
@@ -1348,7 +1348,7 @@ This section is complete when the successor document, constitutional handoff, ma
 
 ### Completion Statement
 
-The Next Document section formally closes the Constitution and authorizes the transition to A.2 — Framework Philosophy while preserving constitutional authority and continuity across the Forge AI Framework Core.
+The Next Document section formally closes the Constitution and authorizes the transition to A.2 — Framework Philosophy while preserving constitutional authority and continuity across theAI-DOS Framework Core.
 
 ---
 
@@ -1359,7 +1359,7 @@ The Next Document section formally closes the Constitution and authorizes the tr
 | [A.0 — Framework Audit](./A.0-Framework-Audit.md) | The verified architectural baseline consumed by the Constitution. |
 | A.2 — Framework Philosophy (Planned) | The successor document that interprets constitutional principles. |
 | A.3 — Terminology (Planned) | The canonical definition of Framework terms. |
-| A.4 — Framework Architecture (Planned) | The architectural model of the Forge AI Framework. |
+| A.4 — Framework Architecture (Planned) | The architectural model of theAI-DOS Framework. |
 | A.5 — Runtime (Planned) | The runtime specification. |
 | A.6 — Engine Model (Planned) | The engine model specification. |
 | A.7 — Authority Model (Planned) | The authority model specification. |

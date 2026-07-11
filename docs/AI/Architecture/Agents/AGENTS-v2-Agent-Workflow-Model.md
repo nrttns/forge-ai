@@ -1,4 +1,4 @@
-# Forge AI — AGENTS v2 Agent Workflow Model
+#AI-DOS — AGENTS v2 Agent Workflow Model
 
 ---
 
@@ -6,8 +6,8 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.AGENTS.V2.AGENT-WORKFLOW-MODEL` |
-| Title | Forge AI — AGENTS v2 Agent Workflow Model |
+| Identifier | `AI-DOS.AGENTS.V2.AGENT-WORKFLOW-MODEL` |
+| Title |AI-DOS — AGENTS v2 Agent Workflow Model |
 | Version | 0.1.0-draft |
 | Status | Draft |
 | Canonical Status | Non-canonical until reviewed, approved, and promoted through Human Governance / Framework Governance |
@@ -20,7 +20,7 @@
 | Created | 2026-07-08 |
 | Last Updated | 2026-07-08 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.ARCHITECTURE.AGENTS.V2.WORKFLOW` |
+| Traceability ID | `AI-DOS.ARCHITECTURE.AGENTS.V2.WORKFLOW` |
 | Scope | Documentation-level AGENTS v2 agent workflow model, workflow philosophy, participants, stages, state, inputs, outputs, handoffs, validation rules, review rules, and governance boundaries. |
 | Out of Scope | Workflow runtime implementation, task execution, scheduling, queues, dispatch, routing, orchestration, APIs, storage, CLI, UI, swarm behavior, platform adapters, Engine RFC work, Runtime redefinition, Engine Platform redefinition, Governance redefinition, Standards redefinition, M.0 redefinition, M.1 redefinition, STD-010 redefinition, and ProjectStatus updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Architecture.md` |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-This document defines the AGENTS v2 agent workflow model for Forge AI.
+This document defines the AGENTS v2 agent workflow model for AI-DOS.
 
 Its purpose is to describe a documentation-level workflow structure that relates future AGENTS v2 agent identities, roles, capabilities, lifecycle states, communication contracts, validation expectations, and review expectations without defining workflow runtime behavior or task execution.
 

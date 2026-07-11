@@ -1,4 +1,4 @@
-Forge AI Framework
+AI-DOS Framework
 Enterprise Standards Compliance Audit
 STD-001 — Knowledge Graph Standard
 Audit Reference: AUDIT-STD-001-v3.0.0-beta
@@ -8,7 +8,7 @@ Governing Standard: STD-000 — Framework Standards (Version 3.1.0)
 
 1. Executive Summary
    Audit Overview
-   STD-001 — Knowledge Graph Standard is a comprehensive technical specification defining the canonical graph representation of Discovery artifacts within the Forge AI Framework. The document is substantial, well-organized, and architecturally coherent, spanning 20 major sections and 12 appendices.
+   STD-001 — Knowledge Graph Standard is a comprehensive technical specification defining the canonical graph representation of Discovery artifacts within theAI-DOS Framework. The document is substantial, well-organized, and architecturally coherent, spanning 20 major sections and 12 appendices.
 
 Overall Compliance Score
 Metric	Score	Status
@@ -62,7 +62,7 @@ Mandatory Sections
 2.19	Glossary	§11	Appendix A	✅ PASS	Comprehensive glossary
 2.20	Next Standard	§11	—	❌ FAIL	Missing "Next Standard" section
 Document Metadata					
-2.21	Identifier	§10	§1.1	✅ PASS	FORGE-STD-001-GRAPH
+2.21	Identifier	§10	§1.1	✅ PASS	AI-DOS-STD-001-GRAPH
 2.22	Canonical Title	§10	§1.1	✅ PASS	"Knowledge Graph Standard"
 2.23	Version	§10	§1.1	✅ PASS	"3.0.0-beta"
 2.24	Status	§10	§1.1	⚠️ PARTIAL	"Draft" — no lifecycle state progression
@@ -73,7 +73,7 @@ Document Metadata
 2.29	Created Date	§10	§1.1	✅ PASS	"2026-07-04"
 2.30	Last Updated	§10	§1.1	✅ PASS	"2026-07-06"
 Standards Identity					
-2.31	Immutable identifier	§10	§1.1	✅ PASS	FORGE-STD-001-GRAPH
+2.31	Immutable identifier	§10	§1.1	✅ PASS	AI-DOS-STD-001-GRAPH
 2.32	No identifier reuse	§10	—	✅ PASS	No evidence of reuse
 2.33	Version identity	§10	§1.1	⚠️ PARTIAL	Version declared but no versioning policy
 Governance					
@@ -127,9 +127,9 @@ NOT APPLICABLE	0	0%
 3. Dependency Analysis
    Dependency Direction
    Dependency	Direction	STD-000 Reference	Status	Evidence
-   STD-001 → Constitution	Normative	§22	✅ PASS	References "Forge AI Constitution" in §1.1
+   STD-001 → Constitution	Normative	§22	✅ PASS	References "AI-DOS Constitution" in §1.1
    STD-001 → M.0 Meta Model	Normative	§22	✅ PASS	Consistently references M.0 concepts throughout
-   STD-001 → STD-000	Normative	§22	✅ PASS	References "Parent Standard: STD-002 — Discovery Standard (FORGE-STD-001)"
+   STD-001 → STD-000	Normative	§22	✅ PASS	References "Parent Standard: STD-002 — Discovery Standard (AI-DOS-STD-001)"
    STD-001 → STD-001-JSON	Derivative	§22	✅ PASS	References "STD-001 Discovery JSON Schema"
    STD-001 → STD-001-YAML	Derivative	§22	✅ PASS	References "STD-001 Discovery YAML Schema"
    Dependency Ownership
@@ -140,10 +140,10 @@ NOT APPLICABLE	0	0%
    Authority Hierarchy
    Authority Level	Document Reference	Status	Evidence
    Human Governance	§1.1	✅ PASS	"Authority: Framework Architecture Team"
-   Constitution	§1.1	✅ PASS	"Forge AI Constitution" referenced
+   Constitution	§1.1	✅ PASS	"AI-DOS Constitution" referenced
    Framework Governance	—	❌ FAIL	No explicit Framework Governance reference
    M.0 Meta Model	§4	✅ PASS	Explicitly referenced throughout
-   STD-000	§1	✅ PASS	"Parent Standard: STD-002 — Discovery Standard (FORGE-STD-001)"
+   STD-000	§1	✅ PASS	"Parent Standard: STD-002 — Discovery Standard (AI-DOS-STD-001)"
    Illegal Dependencies
    Dependency	Reason	Status	Evidence
    None identified	—	✅ PASS	No illegal dependencies found
@@ -154,7 +154,7 @@ NOT APPLICABLE	0	0%
    Authority Chain
    Component	STD-000 Requirement	STD-001 Reference	Status	Evidence
    Human Governance	Constitutional authority	—	❌ FAIL	No explicit Human Governance reference
-   Constitution	Supreme authority	§1.1	✅ PASS	"Forge AI Constitution" referenced
+   Constitution	Supreme authority	§1.1	✅ PASS	"AI-DOS Constitution" referenced
    Framework Governance	Standards authority	—	❌ FAIL	No explicit Framework Governance
    Standards Owner	Accountable owner	—	❌ FAIL	No owner defined
    Authority	Explicit authority	§1.1	⚠️ PARTIAL	"Framework Architecture Team" — insufficient detail
@@ -215,7 +215,7 @@ NOT APPLICABLE	0	0%
 6. Canonical Metadata Validation
    Required Metadata Fields
    Field	STD-000 Requirement	STD-001 Reference	Status	Evidence
-   id	FORGE-STD-001	§1.1	✅ PASS	"FORGE-STD-001-GRAPH"
+   id	AI-DOS-STD-001	§1.1	✅ PASS	"AI-DOS-STD-001-GRAPH"
    title	Knowledge Graph Standard	§1.1	✅ PASS	"Knowledge Graph Standard"
    version	3.0.0-beta	§1.1	✅ PASS	"3.0.0-beta"
    owner	Accountable party	—	❌ FAIL	No owner field present
@@ -376,7 +376,7 @@ NOT APPLICABLE	0	0%
     Constitution Traceability
     Constitution Reference	STD-001 Evidence	Status	Evidence
     Human Governance	"Human Governance" §3.17	✅ PASS	Explicitly referenced
-    Constitutional Authority	"Forge AI Constitution" §1.1	✅ PASS	Explicitly referenced
+    Constitutional Authority	"AI-DOS Constitution" §1.1	✅ PASS	Explicitly referenced
     Evidence Principles	"Evidence" §8.6	✅ PASS	Comprehensive evidence model
     Single Source of Truth	"Single Source of Truth" §2.5.1	✅ PASS	Principle established
     Meta Model Traceability
@@ -413,7 +413,7 @@ NOT APPLICABLE	0	0%
     Glossary	Appendix A	✅ PASS	Comprehensive
     Parent Standards Traceability
     Parent Standard	STD-001 Reference	Status	Evidence
-    STD-000	§1	✅ PASS	"Parent Standard: STD-002 — Discovery Standard (FORGE-STD-001)"
+    STD-000	§1	✅ PASS	"Parent Standard: STD-002 — Discovery Standard (AI-DOS-STD-001)"
     STD-001-JSON	§1.1	✅ PASS	"STD-001 Discovery JSON Schema"
     STD-001-YAML	§1.1	✅ PASS	"STD-001 Discovery YAML Schema"
 13. Reference Integrity
@@ -423,7 +423,7 @@ NOT APPLICABLE	0	0%
     Human Governance	Critical	No reference to Human Governance as final authority	Constitutional alignment unclear
     A.1 Constitution	Major	Constitution referenced but not as A.1	Standard identifier not used
     M.0 Meta Model	Major	Meta Model referenced but not as M.0	Standard identifier not used
-    STD-000	Major	STD-000 referenced but not as FORGE-STD-000	Standard identifier not used
+    STD-000	Major	STD-000 referenced but not as AI-DOS-STD-000	Standard identifier not used
     Unused References
     Reference	Location	Status	Evidence
     Appendix G	§19	⚠️ PARTIAL	Referenced but not in main body
@@ -433,7 +433,7 @@ NOT APPLICABLE	0	0%
     Appendix L	§19	⚠️ PARTIAL	Referenced but not in main body
     Duplicate References
     Reference	First Occurrence	Second Occurrence	Status
-    Forge AI Constitution	§1.1	§20.12	✅ PASS
+    AI-DOS Constitution	§1.1	§20.12	✅ PASS
     Framework Architecture Team	§1.1	§20.12	✅ PASS
 14. Diagram & Visualization Compliance
     Mermaid Diagrams
@@ -631,7 +631,7 @@ Add Missing Glossary Terms — Add Authority, Artifact, Certification terms
 Priority 4 — Reference and Cross-Reference Items
 Add Missing References — Add Human Governance, Framework Governance references
 
-Fix Standard Identifiers — Use FORGE-STD-000, FORGE-META-000, FORGE-A-001
+Fix Standard Identifiers — Use AI-DOS-STD-000, AI-DOS-META-000, AI-DOS-A-001
 
 Add Missing Appendix References — Reference Appendices H, I, K, L in main body
 

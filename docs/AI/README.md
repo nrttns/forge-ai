@@ -1,6 +1,6 @@
 # AI Framework Navigation
 
-This README is the active AI-DOS internal navigation entry point for the `docs/AI/` directory. It routes humans and AI agents to current Forge AI v2 internal authorities and operational entry points.
+This README is the active AI-DOS internal navigation entry point for the `docs/AI/` directory. It routes humans and AI agents to currentAI-DOS v2 internal authorities and operational entry points.
 
 This README is navigation only. It does **not** replace `AGENTS.md`, TargetRepositoryResolution, BootSequence, the Governance Atlas, Framework Governance, ProjectStatus, DevelopmentPhases, Operational Core, Runtime, System Layer, Commands, Workflows, Templates, or Human Governance.
 
@@ -42,7 +42,7 @@ docs/AI/Templates/README.md when document generation is required
 
 ## Navigation Boundaries
 
-- `AGENTS.md` remains the AI-DOS Provider entry and, in Forge AI self-hosting only, also contains Forge AI Target Repository declarations.
+- `AGENTS.md` remains the AI-DOS Provider entry and, inAI-DOS self-hosting only, also containsAI-DOS Target Repository declarations.
 - `docs/AI/System/TargetRepositoryResolution.md` owns active Target Repository identification, Target AGENTS discovery, declaration resolution, validation, blocker reporting, Resolution Result production, and BootSequence handoff.
 - `docs/AI/System/BootSequence.md` owns loading resolved Framework + Target Project context from the Resolution Result.
 - `docs/AI/GOVERNANCE.md` remains the Governance Atlas and governance navigation map.
@@ -54,7 +54,7 @@ docs/AI/Templates/README.md when document generation is required
 
 ## Target-Project Portability
 
-Forge AI self-hosting examples may reference `docs/DevelopmentPhases/ProjectStatus.md`, `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`, and `docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md`. These are Forge AI self-hosting examples only, not universal inputs or fallback paths.
+AI-DOS self-hosting examples may reference `docs/DevelopmentPhases/ProjectStatus.md`, `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`, and `docs/Roadmap/AI-DOS-Program-Architecture-Master-Roadmap-v4.md`. These areAI-DOS self-hosting examples only, not universal inputs or fallback paths.
 
 For a separate target project, TargetRepositoryResolution reads that target repository root and its own `AGENTS.md` declaration contract. This README does not resolve the target project's state, roadmap, source roots, validation commands, protected areas, or provider reference.
 

@@ -1,4 +1,4 @@
-# Forge AI — AGENTS v2 Development Phases
+#AI-DOS — AGENTS v2 Development Phases
 
 > Enterprise Edition v2.0.0-draft
 
@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | FORGE-AGENTS-PHASES |
+| Identifier | AI-DOS-AGENTS-PHASES |
 | Title | AGENTS v2 Development Phases |
 | Version | 2.0.0-draft |
 | Status | Draft |
@@ -20,7 +20,7 @@
 | Created | 2026-07-08 |
 | Last Updated | 2026-07-08 |
 | Lifecycle Phase | Draft |
-| Traceability ID | FORGE-AGENTS-PHASES |
+| Traceability ID | AI-DOS-AGENTS-PHASES |
 | Scope | AGENTS v2 phased evolution |
 | Out of Scope | Runtime implementation |
 | Normative Authority | AGENTS.md; FrameworkGovernance.md |

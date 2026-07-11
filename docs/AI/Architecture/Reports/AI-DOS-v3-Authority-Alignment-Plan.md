@@ -1,4 +1,4 @@
-# Forge AI v3 Authority Alignment Plan
+#AI-DOS v3 Authority Alignment Plan
 
 > Documentation-only planning artifact. This plan proposes future edits only. It does not apply edits, move files, or update `docs/ProjectStatus.md`.
 
@@ -6,20 +6,20 @@
 
 | Property | Value |
 | --- | --- |
-| Document | Forge AI v3 Authority Alignment Plan |
+| Document |AI-DOS v3 Authority Alignment Plan |
 | Type | Architecture Alignment Plan |
 | Status | Draft Plan |
 | Mode | Documentation-only planning |
-| Output Path | `docs/AI/Architecture/Reports/Forge-AI-v3-Authority-Alignment-Plan.md` |
+| Output Path | `docs/AI/Architecture/Reports/AI-DOS-v3-Authority-Alignment-Plan.md` |
 | Governing Input | `docs/AI/Architecture/A.0-Framework-Audit.md` Section 19 — Migration Strategy |
-| Requested Governing Input | `Forge-AI-v3-Migration-Strategy.md` |
-| Important Note | No standalone file named `Forge-AI-v3-Migration-Strategy.md` was found in the repository during plan creation. The migration strategy embedded in A.0 Section 19 is therefore treated as the available governing migration input for this plan. |
+| Requested Governing Input | `AI-DOS-v3-Migration-Strategy.md` |
+| Important Note | No standalone file named `AI-DOS-v3-Migration-Strategy.md` was found in the repository during plan creation. The migration strategy embedded in A.0 Section 19 is therefore treated as the available governing migration input for this plan. |
 
 ---
 
 ## 1. Purpose
 
-This plan defines the exact future edits required to align the current Forge AI RC2 authority surface with the emerging Forge AI v3 authority model while preserving operational stability.
+This plan defines the exact future edits required to align the currentAI-DOS RC2 authority surface with the emergingAI-DOS v3 authority model while preserving operational stability.
 
 The plan covers these files only:
 
@@ -40,8 +40,8 @@ This plan does not authorize applying those edits. A later approved refactor tas
 Future edits must follow these constraints:
 
 1. Preserve `AGENTS.md` as bootstrap authority.
-2. Promote `docs/AI/Architecture/A.1-Constitution.md` as target Forge AI v3 constitutional authority only after explicit approval.
-3. Keep `docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md` transitional until ratified.
+2. Promote `docs/AI/Architecture/A.1-Constitution.md` as targetAI-DOS v3 constitutional authority only after explicit approval.
+3. Keep `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md` transitional until ratified.
 4. Preserve RC2 operational compatibility temporarily.
 5. Prevent `docs/ProjectStatus.md` drift by keeping it live-state-only.
 6. Introduce v3 references as transitional alignment references, not as silently effective authority.
@@ -123,7 +123,7 @@ Proposed edits:
 3. Add this exact transitional statement:
 
 ```text
-During Forge AI v3 migration, docs/AI/Architecture/A.1-Constitution.md, docs/AI/Meta/M.0-Framework-Meta-Model.md, docs/AI/Meta/M.1-Artifact-Meta-Model.md, and docs/AI/Architecture/Standards/STD-000-Framework-Standards.md are target v3 authority candidates until explicitly approved and promoted through governance.
+DuringAI-DOS v3 migration, docs/AI/Architecture/A.1-Constitution.md, docs/AI/Meta/M.0-Framework-Meta-Model.md, docs/AI/Meta/M.1-Artifact-Meta-Model.md, and docs/AI/Architecture/Standards/STD-000-Framework-Standards.md are target v3 authority candidates until explicitly approved and promoted through governance.
 ```
 
 4. Add this exact non-promotion statement:
@@ -135,7 +135,7 @@ No v3 architecture, meta model, standard, RFC, report, or blueprint supersedes t
 5. Add this exact Blueprint statement:
 
 ```text
-The Forge AI Blueprint RFC remains transitional and non-canonical until ratified by Framework Governance and explicitly referenced by this document or another approved authority document.
+TheAI-DOS Blueprint RFC remains transitional and non-canonical until ratified by Framework Governance and explicitly referenced by this document or another approved authority document.
 ```
 
 6. Add a `Current Effective Authority` chain preserving RC2 compatibility.
@@ -154,7 +154,7 @@ docs/AI/Architecture/A.1-Constitution.md
 docs/AI/Meta/M.0-Framework-Meta-Model.md
 docs/AI/Meta/M.1-Artifact-Meta-Model.md
 docs/AI/Architecture/Standards/STD-000-Framework-Standards.md
-docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md
+docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md
 ```
 
 3. Add a warning that v3 documents are target architecture until promotion.
@@ -219,7 +219,7 @@ Proposed edits:
 2. Add only a small `Authority Alignment Note` if and only if governance approves such a note:
 
 ```text
-Forge AI v3 authority alignment is in planning. v3 documents remain draft or transitional unless promoted by AGENTS.md and Framework Governance. This ProjectStatus document records live operational state only and does not promote architecture.
+AI-DOS v3 authority alignment is in planning. v3 documents remain draft or transitional unless promoted by AGENTS.md and Framework Governance. This ProjectStatus document records live operational state only and does not promote architecture.
 ```
 
 3. Add a `Drift Prevention Rule`:
@@ -256,7 +256,7 @@ Blueprint RFC material may inform planning but must not be treated as canonical 
 Proposed edits:
 
 1. Change status to `Tool-Facing Agent Rule Set — RC2 / v3 Transitional`.
-2. Correct the current stale path `docs/DevelopmentPhases/ForgeAI2-DevelopmentPhases.md` to `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`.
+2. Correct the current stale path `docs/DevelopmentPhases/AI-DOS2-DevelopmentPhases.md` to `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`.
 3. Add v3 transitional reading rules after `docs/AI/AIFramework.md` for v3-specific tasks.
 4. Add explicit instruction:
 
@@ -272,7 +272,7 @@ Do not treat A.1, M.0, M.1, STD-000, or the Blueprint RFC as promoted canonical 
 
 ## 5. Blueprint RFC Transitional Handling
 
-`docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md` should remain transitional until ratified.
+`docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md` should remain transitional until ratified.
 
 Future edits should describe it as:
 
@@ -360,15 +360,15 @@ test -f docs/AI/Architecture/Standards/STD-000-Framework-Standards.md
 ```
 
 ```bash
-test -f docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md
+test -f docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md
 ```
 
 ```bash
-rg -n "ForgeAI2-DevelopmentPhases|ForgeAI-DevelopmentPhases|v1.0 RC2|A\.1|M\.0|M\.1|STD-000|Blueprint RFC" AGENTS.md docs/AI/README.md docs/AI/AIFramework.md docs/AI/FrameworkGovernance.md docs/ProjectStatus.md docs/AI/System/AuthorityModel.md docs/AI/AgentSystemPrompt.md
+rg -n "AI-DOS2-DevelopmentPhases|ForgeAI-DevelopmentPhases|v1.0 RC2|A\.1|M\.0|M\.1|STD-000|Blueprint RFC" AGENTS.md docs/AI/README.md docs/AI/AIFramework.md docs/AI/FrameworkGovernance.md docs/ProjectStatus.md docs/AI/System/AuthorityModel.md docs/AI/AgentSystemPrompt.md
 ```
 
 ```bash
-rg -n "Status\s*\| Draft|\*\*Status\*\* \| Draft|Status:.*RC2|Blueprint RFC|ratified|canonical" docs/AI/Architecture/A.1-Constitution.md docs/AI/Meta/M.0-Framework-Meta-Model.md docs/AI/Meta/M.1-Artifact-Meta-Model.md docs/AI/Architecture/Standards/STD-000-Framework-Standards.md docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md
+rg -n "Status\s*\| Draft|\*\*Status\*\* \| Draft|Status:.*RC2|Blueprint RFC|ratified|canonical" docs/AI/Architecture/A.1-Constitution.md docs/AI/Meta/M.0-Framework-Meta-Model.md docs/AI/Meta/M.1-Artifact-Meta-Model.md docs/AI/Architecture/Standards/STD-000-Framework-Standards.md docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md
 ```
 
 Manual validation checklist:

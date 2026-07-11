@@ -1,6 +1,6 @@
 # Multi-Agent Coordination Plan Template
 
-> Forge AI v2 · MultiAgent Templates<br>
+>AI-DOS v2 · MultiAgent Templates<br>
 > Template Artifact · Draft / Non-canonical
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-MULTIAGENT-COORDINATION-PLAN` |
+| Identifier | `AI-DOS-TPL-MULTIAGENT-COORDINATION-PLAN` |
 | Title | Multi-Agent Coordination Plan Template |
 | Version | `2.0.0-draft` |
 | Status | Draft |
@@ -23,7 +23,7 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Operational Core Alignment |
-| Traceability ID | `FORGE-AI.V2.TEMPLATES.MULTIAGENT.COORDINATION-PLAN` |
+| Traceability ID | `AI-DOS.V2.TEMPLATES.MULTIAGENT.COORDINATION-PLAN` |
 | Scope | Defines how multiple agents coordinate on a bounded objective while preserving authority, ownership, and validation discipline. |
 | Out of Scope | Multi-agent authority redefinition, runtime authority redefinition, orchestration authority creation, swarm authority creation, governance authority creation, review authority creation, certification authority creation, ProjectStatus updates, synchronization algorithm definition, conflict-resolution algorithm definition, runtime implementation, orchestration implementation, swarm execution, engine implementation, architecture redefinition, and canonical promotion. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |

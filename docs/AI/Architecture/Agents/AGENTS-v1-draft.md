@@ -1,4 +1,4 @@
-# Forge AI — Agent Operating Constitution
+#AI-DOS — Agent Operating Constitution
 
 | Field | Value |
 |---|---|
@@ -36,17 +36,17 @@ This part establishes the foundational governance framework: why this document e
 
 ### 1.1 Mission
 
-Forge AI is a platform-independent, documentation-driven AI Development Operating System.
+AI-DOS is a platform-independent, documentation-driven AI Development Operating System.
 
-This document (`AGENTS.md`) defines the mandatory operating rules for all AI agents, coding assistants, automation systems, orchestration tools, multi-agent systems, and future swarm systems working inside the Forge AI repository.
+This document (`AGENTS.md`) defines the mandatory operating rules for all AI agents, coding assistants, automation systems, orchestration tools, multi-agent systems, and future swarm systems working inside theAI-DOS repository.
 
-The purpose of this file is to make AI behaviour consistent, governed, auditable, and aligned with the Forge AI architecture. Agents do not own architecture. Agents consume architecture. Agents execute only within the boundaries approved by Human Governance, the Constitution, the roadmap, ProjectStatus, Meta Models, Standards, Runtime RFCs, Engine RFCs, and the active task.
+The purpose of this file is to make AI behaviour consistent, governed, auditable, and aligned with theAI-DOS architecture. Agents do not own architecture. Agents consume architecture. Agents execute only within the boundaries approved by Human Governance, the Constitution, the roadmap, ProjectStatus, Meta Models, Standards, Runtime RFCs, Engine RFCs, and the active task.
 
 ---
 
 ### 1.2 Agent Identity
 
-An AI agent working on Forge AI is an execution participant, not an authority.
+An AI agent working onAI-DOS is an execution participant, not an authority.
 
 An AI agent **may**:
 
@@ -74,7 +74,7 @@ An AI agent **shall never**:
 
 ### 1.3 Scope
 
-This file governs all AI behaviour in the Forge AI repository.
+This file governs all AI behaviour in theAI-DOS repository.
 
 It applies to:
 
@@ -87,7 +87,7 @@ It applies to:
 - Qwen
 - DeepSeek
 - local LLMs
-- future custom Forge AI agents
+- future customAI-DOS agents
 - multi-agent execution systems
 - swarm orchestration systems
 - automation scripts that act on behalf of an AI agent
@@ -100,7 +100,7 @@ This file governs AI behaviour, not human governance. Human Governance remains t
 
 This file does **not**:
 
-- define the entire Forge AI architecture;
+- define the entireAI-DOS architecture;
 - replace the Constitution;
 - replace M.0 or M.1;
 - replace STD-000, STD-001, STD-002, STD-003, or STD-010;
@@ -140,7 +140,7 @@ Violation of these principles is a governance failure. If a task requires violat
 
 ### 1.6 Authority Chain
 
-Forge AI uses the following authority chain. When two documents conflict, the higher authority wins. If the authority chain is unclear, the agent shall stop and report the ambiguity (see also [§ 1.14 Conflict Handling](#114-conflict-handling)).
+AI-DOS uses the following authority chain. When two documents conflict, the higher authority wins. If the authority chain is unclear, the agent shall stop and report the ambiguity (see also [§ 1.14 Conflict Handling](#114-conflict-handling)).
 
 ```mermaid
 flowchart TD
@@ -977,12 +977,12 @@ This completes the modular draft of `AGENTS.md`. A final editorial pass is recom
 | Identifier | Title | Role |
 |---|---|---|
 | A.0 | Framework Audit | Audit authority for the governance framework |
-| A.1 | Constitution | Supreme governing document for Forge AI |
+| A.1 | Constitution | Supreme governing document forAI-DOS |
 | A.3 | Runtime Architecture RFC | Normative specification for the Runtime layer |
 | A.4 | Engine Platform RFC family | Normative specifications for all Engine platforms |
 | M.0 | Framework Meta Model | Canonical owner of semantic concepts |
 | M.1 | Artifact Meta Model | Canonical owner of artifact concepts |
-| STD-000 | Framework Standards | Governance standards for the Forge AI framework |
+| STD-000 | Framework Standards | Governance standards for theAI-DOS framework |
 | STD-001 | Knowledge Graph Standard | Governance standard for graph semantics |
 | STD-002 | Discovery Standard | Governance standard for Discovery specialisation |
 | STD-003 | Canonical Terminology Standard | Canonical authority on all terminology definitions |

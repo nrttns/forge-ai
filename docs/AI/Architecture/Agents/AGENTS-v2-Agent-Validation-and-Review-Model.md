@@ -1,4 +1,4 @@
-# Forge AI — AGENTS v2 Agent Validation and Review Model
+#AI-DOS — AGENTS v2 Agent Validation and Review Model
 
 ---
 
@@ -6,8 +6,8 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.AGENTS.V2.AGENT-VALIDATION-AND-REVIEW-MODEL` |
-| Title | Forge AI — AGENTS v2 Agent Validation and Review Model |
+| Identifier | `AI-DOS.AGENTS.V2.AGENT-VALIDATION-AND-REVIEW-MODEL` |
+| Title |AI-DOS — AGENTS v2 Agent Validation and Review Model |
 | Version | 0.1.0-draft |
 | Status | Draft |
 | Canonical Status | Non-canonical until reviewed, approved, and promoted through Human Governance / Framework Governance |
@@ -20,7 +20,7 @@
 | Created | 2026-07-08 |
 | Last Updated | 2026-07-08 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.ARCHITECTURE.AGENTS.V2.VALIDATION-REVIEW` |
+| Traceability ID | `AI-DOS.ARCHITECTURE.AGENTS.V2.VALIDATION-REVIEW` |
 | Scope | Documentation-level AGENTS v2 agent validation and review model, validation philosophy, validation categories, identity validation, capability validation, lifecycle validation, communication validation, review responsibilities, review outcomes, validation rules, and governance boundaries. |
 | Out of Scope | Runtime validation, implementation validation, CI/CD validation, execution validation, scheduling, orchestration, runtime review, approval workflow, certification workflow, automation, APIs, storage, platform adapters, Engine RFC work, Runtime redefinition, Engine Platform redefinition, Governance redefinition, Standards redefinition, M.0 redefinition, M.1 redefinition, STD-010 redefinition, and ProjectStatus updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Architecture.md` |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-This document defines the AGENTS v2 agent validation and review model for Forge AI.
+This document defines the AGENTS v2 agent validation and review model for AI-DOS.
 
 Its purpose is to establish a documentation-level architectural governance contract for validating and reviewing future AGENTS v2 agent identities, registry references, role and capability declarations, lifecycle boundaries, and communication contracts without defining runtime validation, implementation validation, CI/CD validation, execution validation, approval workflow, certification workflow, automation, APIs, storage, scheduling, orchestration, or runtime review.
 

@@ -1,13 +1,13 @@
 # A.5.6 — Validation Engine RFC
 
-> Forge AI v4 · Engine Architecture RFC
+>AI-DOS v4 · Engine Architecture RFC
 > Phase 2 Engine Specialization · Draft / Non-canonical
 
 ---
 
 ## 1. Status
 
-This RFC is a draft, non-canonical Engine Architecture RFC for the Validation Engine, the sixth individual Engine specialization in Phase 2 of the Forge AI v4 Engine Platform.
+This RFC is a draft, non-canonical Engine Architecture RFC for the Validation Engine, the sixth individual Engine specialization in Phase 2 of theAI-DOS v4 Engine Platform.
 
 Canonical Status: Non-canonical until reviewed and approved.
 
@@ -19,7 +19,7 @@ This document defines the architecture of the Validation Engine within the appro
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-A-5-6` |
+| Identifier | `AI-DOS-A-5-6` |
 | Title | A.5.6 — Validation Engine RFC |
 | Version | `0.2.0-draft` |
 | Status | Draft |
@@ -33,7 +33,7 @@ This document defines the architecture of the Validation Engine within the appro
 | Created | 2026-07-08 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.V2.RUNTIME.A-5-6` |
+| Traceability ID | `AI-DOS.V2.RUNTIME.A-5-6` |
 | Scope | Defines the Validation Engine specialization only, including its responsibilities, inputs, outputs, lifecycle participation, validation expectations, AI consumption rules, and handoff contract. |
 | Out of Scope | Runtime Architecture redefinition, Engine Platform redefinition, Engine Foundation redefinition, other Engine Specialization redefinition, implementation, certification, freeze decisions, ProjectStatus updates, and DevelopmentPhases updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
@@ -51,7 +51,7 @@ This document defines the architecture of the Validation Engine within the appro
 
 ## 3. Purpose
 
-The Validation Engine exists to serve as the deterministic quality gate of the Forge AI v4 Engine Platform, responsible for verifying that all execution outputs conform to the constraints established by upstream engines through multi-source assertion-based verification. It is the only Engine that consumes artifacts from all five preceding engines (Context, Knowledge, Planning, Decision, Execution) and performs cross-referencing verification against their combined constraint sets, producing a unified, immutable ValidationResult artifact that classifies conformance and computes a pipeline verdict.
+The Validation Engine exists to serve as the deterministic quality gate of theAI-DOS v4 Engine Platform, responsible for verifying that all execution outputs conform to the constraints established by upstream engines through multi-source assertion-based verification. It is the only Engine that consumes artifacts from all five preceding engines (Context, Knowledge, Planning, Decision, Execution) and performs cross-referencing verification against their combined constraint sets, producing a unified, immutable ValidationResult artifact that classifies conformance and computes a pipeline verdict.
 
 The Validation Engine answers the question "Does the execution output faithfully satisfy all constraints established during context resolution, knowledge retrieval, plan creation, decision authorization, and execution itself?" This question requires the Validation Engine to consume the complete artifact chain from Context through Execution and to evaluate deterministic assertion predicates that compare execution outputs against each constraint source. The Validation Engine does not decide whether to execute (that is the Decision Engine's responsibility), does not execute (that is the Execution Engine's responsibility), and does not assess readiness for certification (that is the Review Engine's responsibility). The Validation Engine verifies that what was executed matches what was planned, authorized, and constrained.
 

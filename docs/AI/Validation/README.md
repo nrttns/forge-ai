@@ -110,7 +110,7 @@ Validation does not lower or bypass quality gates. If a quality gate is required
 
 # Relationship to ProjectStatus
 
-`docs/ProjectStatus.md` remains the live operational Source of Truth for Forge AI project state.
+`docs/ProjectStatus.md` remains the live operational Source of Truth forAI-DOS project state.
 
 Validation may recommend that project state advance only after successful validation, independent review, and certification.
 

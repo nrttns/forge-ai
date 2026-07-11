@@ -1,6 +1,6 @@
 # STD-002 — Discovery Standard
 
-> **Forge AI v3 · Standards Library**  
+> **AI-DOS v3 · Standards Library**  
 > Standards Library · Core Standard · Discovery Domain
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-STD-002` |
+| Identifier | `AI-DOS-STD-002` |
 | Title | STD-002 — Discovery Standard |
 | Version | 1.0.0-draft |
 | Status | Draft; publication-ready pending governance approval |
@@ -23,7 +23,7 @@
 | Created | 2026-07-04 |
 | Last Updated | 2026-07-07 |
 | Lifecycle Phase | Draft |
-| Traceability ID | FORGE-STD-002 |
+| Traceability ID | AI-DOS-STD-002 |
 | Scope | Discovery artifact and discovery process standard |
 | Out of Scope | Implementation tooling and project state updates |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/FrameworkGovernance.md` |
@@ -91,13 +91,13 @@
 
 ### 1.1 Document Identity
 
-STD-002 is the canonical Forge AI v3 Framework Standard for Discovery. A Discovery is a governed architectural observation captured before it becomes a Finding, Evidence item, Risk, Recommendation, Decision, implementation task, or architecture change.
+STD-002 is the canonicalAI-DOS v3 Framework Standard for Discovery. A Discovery is a governed architectural observation captured before it becomes a Finding, Evidence item, Risk, Recommendation, Decision, implementation task, or architecture change.
 
 STD-002 specializes higher-authority artifact, standard, and graph contracts for Discovery. It does not redefine those contracts.
 
 ### 1.2 Standard Position
 
-STD-002 is the Discovery Standard in the Forge AI Standards Library. It depends on STD-000 for standards governance and STD-001 for knowledge graph semantics.
+STD-002 is the Discovery Standard in theAI-DOS Standards Library. It depends on STD-000 for standards governance and STD-001 for knowledge graph semantics.
 
 ```mermaid
 graph TD
@@ -151,7 +151,7 @@ The Preamble is complete when the reason for Discovery, its protective role, and
 
 ### 3.1 Overview
 
-STD-002 defines the canonical model for capturing, managing, validating, graphing, and consuming Discoveries across Forge AI.
+STD-002 defines the canonical model for capturing, managing, validating, graphing, and consuming Discoveries across AI-DOS.
 
 ### 3.2 Objectives
 
@@ -878,7 +878,7 @@ The next published Framework Standard in the current repository is:
 
 | Property | Value |
 |:---|:---|
-| **Identifier** | `FORGE-STD-003` |
+| **Identifier** | `AI-DOS-STD-003` |
 | **Title** | STD-003 — Terminology Standard |
 | **Status** | Draft |
 | **Role** | Defines canonical terminology governance for the Standards Library. |
@@ -928,7 +928,7 @@ The Discovery Taxonomy section is complete when taxonomy dimensions and taxonomy
 ```yaml
 id: DISC-ARCH-20260704-001
 title: Governance definition overlap discovered
-standard: FORGE-STD-002
+standard: AI-DOS-STD-002
 version: 0.3-verified
 state: Verified
 classification: Architecture Discovery
@@ -947,7 +947,7 @@ evidence_references: []
 evidence_gaps:
   - Downstream Finding has not yet been created.
 related_artifacts:
-  - FORGE-STD-003
+  - AI-DOS-STD-003
 disposition: Promote to Finding
 validation_status: Valid
 review_status: Pending
@@ -1368,7 +1368,7 @@ No Discovery architecture blockers remain. Publication blockers are governance a
 
 ### 32.9 Publication Recommendation
 
-Publish STD-002 as the Forge AI v3 Discovery Standard after governance approval and companion artifact validation. Do not redesign Discovery, Knowledge Graph, authority, lifecycle, or graph topology as part of publication.
+Publish STD-002 as theAI-DOS v3 Discovery Standard after governance approval and companion artifact validation. Do not redesign Discovery, Knowledge Graph, authority, lifecycle, or graph topology as part of publication.
 
 ### 32.10 Completion Statement
 

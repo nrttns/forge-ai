@@ -1,12 +1,12 @@
-# Forge AI v3 Transitional Authority Verification
+#AI-DOS v3 Transitional Authority Verification
 
 ## Status
 
 Status: PASS WITH OBSERVATIONS  
 Mode: Audit-only verification report  
-Task: Verify Forge AI v3 Transitional Authority Alignment  
+Task: VerifyAI-DOS v3 Transitional Authority Alignment  
 Date: 2026-07-07  
-Output: `docs/AI/Architecture/Reports/Forge-AI-v3-Transitional-Authority-Verification.md`
+Output: `docs/AI/Architecture/Reports/AI-DOS-v3-Transitional-Authority-Verification.md`
 
 ---
 
@@ -28,21 +28,21 @@ Verification checks:
 3. Blueprint RFC is non-canonical until ratified.
 4. RC2 operational compatibility remains valid.
 5. `ProjectStatus` is not used to promote architecture.
-6. No stale `ForgeAI2` path remains.
+6. No stale `AI-DOS2` path remains.
 7. Authority wording is consistent across all six files.
 
 ---
 
 ## Method
 
-The audit inspected the six scoped authority documents directly and searched those same files for stale ForgeAI2 references and transitional-authority terms.
+The audit inspected the six scoped authority documents directly and searched those same files for stale AI-DOS2 references and transitional-authority terms.
 
 Commands used:
 
 ```bash
 sed -n '1,220p' AGENTS.md docs/AI/AIFramework.md docs/AI/System/AuthorityModel.md docs/AI/AgentSystemPrompt.md docs/AI/FrameworkGovernance.md docs/AI/README.md
-rg -n "ForgeAI2|Forge AI 2|Forge-AI-2|ForgeAI 2|forge-ai-2|forgeai2" AGENTS.md docs/AI/AIFramework.md docs/AI/System/AuthorityModel.md docs/AI/AgentSystemPrompt.md docs/AI/FrameworkGovernance.md docs/AI/README.md
-rg -n "bootstrap|target|transitional|Blueprint|RFC|RC2|ProjectStatus|promote|canonical|ratified|ratify|Forge AI v3|v3" AGENTS.md docs/AI/AIFramework.md docs/AI/System/AuthorityModel.md docs/AI/AgentSystemPrompt.md docs/AI/FrameworkGovernance.md docs/AI/README.md
+rg -n "AI-DOS2|AI-DOS 2|AI-DOS-2|AI-DOS 2|ai-dos-2|aidos2" AGENTS.md docs/AI/AIFramework.md docs/AI/System/AuthorityModel.md docs/AI/AgentSystemPrompt.md docs/AI/FrameworkGovernance.md docs/AI/README.md
+rg -n "bootstrap|target|transitional|Blueprint|RFC|RC2|ProjectStatus|promote|canonical|ratified|ratify|AI-DOS v3|v3" AGENTS.md docs/AI/AIFramework.md docs/AI/System/AuthorityModel.md docs/AI/AgentSystemPrompt.md docs/AI/FrameworkGovernance.md docs/AI/README.md
 ```
 
 ---
@@ -56,7 +56,7 @@ rg -n "bootstrap|target|transitional|Blueprint|RFC|RC2|ProjectStatus|promote|can
 | 3. Blueprint RFC is non-canonical until ratified | PASS | Scoped files describe the Blueprint RFC as planning input, RFC material, non-canonical, or not canonical until ratified. |
 | 4. RC2 operational compatibility remains valid | PASS | Scoped files preserve RC2 as the current operational compatibility layer until approved v3 replacements exist. |
 | 5. `ProjectStatus` is not used to promote architecture | PASS | Scoped files constrain `docs/ProjectStatus.md` to live operational state and prohibit promotion, ratification, or architecture supersession through ProjectStatus. |
-| 6. No stale `ForgeAI2` path remains | PASS | No stale ForgeAI2 path or naming variant was found in the six scoped files. |
+| 6. No stale `AI-DOS2` path remains | PASS | No stale AI-DOS2 path or naming variant was found in the six scoped files. |
 | 7. Authority wording consistent across all six files | PASS WITH OBSERVATIONS | The core transitional authority intent is aligned, but some authority-chain wording differs by document. |
 
 ---
@@ -69,9 +69,9 @@ Result: PASS
 
 Evidence:
 
-- `AGENTS.md` states that it is the bootstrap authority for all Forge AI participants and tooling.
+- `AGENTS.md` states that it is the bootstrap authority for allAI-DOS participants and tooling.
 - `AGENTS.md` states that it wins when code, documentation, proposals, capabilities, implementation, automation, or agent output conflict with it.
-- `AGENTS.md` explicitly states that it remains the bootstrap authority before, during, and after Forge AI v3 migration.
+- `AGENTS.md` explicitly states that it remains the bootstrap authority before, during, and afterAI-DOS v3 migration.
 - `docs/AI/AIFramework.md`, `docs/AI/System/AuthorityModel.md`, `docs/AI/AgentSystemPrompt.md`, `docs/AI/FrameworkGovernance.md`, and `docs/AI/README.md` all preserve `AGENTS.md` as the top repository authority or document authority.
 
 Conclusion: `AGENTS.md` remains the bootstrap authority across the scoped documents.
@@ -85,7 +85,7 @@ Result: PASS
 Evidence:
 
 - `AGENTS.md` marks `A.1`, `M.0`, `M.1`, and `STD-000` as target v3 authority candidates until approved and promoted through governance.
-- `docs/AI/AIFramework.md` states that Forge AI v3 is the target architecture and that the listed v3 documents are target authority candidates until explicitly approved and promoted.
+- `docs/AI/AIFramework.md` states thatAI-DOS v3 is the target architecture and that the listed v3 documents are target authority candidates until explicitly approved and promoted.
 - `docs/AI/System/AuthorityModel.md` defines the current effective authority during transition separately from the target v3 authority after approval.
 - `docs/AI/AgentSystemPrompt.md` instructs agents not to treat v3 documents as promoted canonical authority unless `AGENTS.md` or approved governance explicitly says so.
 - `docs/AI/FrameworkGovernance.md` requires approval before canonical promotion of v3 authority candidates.
@@ -120,7 +120,7 @@ Evidence:
 
 - `AGENTS.md` states that RC2 operational procedures remain valid until explicitly replaced by approved v3 operational procedures.
 - `docs/AI/AIFramework.md` states that RC2 remains the operational compatibility layer during migration and that RC2 operational documents, commands, workflows, templates, validation procedures, and specification mappings remain valid until approved replacements exist.
-- `docs/AI/System/AuthorityModel.md` requires agents to apply the RC2-compatible effective authority chain until Forge AI v3 promotion is explicitly approved.
+- `docs/AI/System/AuthorityModel.md` requires agents to apply the RC2-compatible effective authority chain untilAI-DOS v3 promotion is explicitly approved.
 - `docs/AI/AgentSystemPrompt.md` states that RC2 remains the operational compatibility layer until approved v3 replacements are promoted.
 - `docs/AI/FrameworkGovernance.md` states that RC2 operational documents remain valid temporarily until approved v3 replacements exist.
 - `docs/AI/README.md` states that RC2 remains the operational compatibility layer until approved v3 operational replacements exist.
@@ -145,7 +145,7 @@ Conclusion: Scoped documents do not use `ProjectStatus` to promote architecture.
 
 ---
 
-### 6. No Stale `ForgeAI2` Path Remains
+### 6. No Stale `AI-DOS2` Path Remains
 
 Result: PASS
 
@@ -154,10 +154,10 @@ Evidence:
 The scoped-file search for stale variants returned no matches:
 
 ```bash
-rg -n "ForgeAI2|Forge AI 2|Forge-AI-2|ForgeAI 2|forge-ai-2|forgeai2" AGENTS.md docs/AI/AIFramework.md docs/AI/System/AuthorityModel.md docs/AI/AgentSystemPrompt.md docs/AI/FrameworkGovernance.md docs/AI/README.md
+rg -n "AI-DOS2|AI-DOS 2|AI-DOS-2|AI-DOS 2|ai-dos-2|aidos2" AGENTS.md docs/AI/AIFramework.md docs/AI/System/AuthorityModel.md docs/AI/AgentSystemPrompt.md docs/AI/FrameworkGovernance.md docs/AI/README.md
 ```
 
-Conclusion: No stale ForgeAI2 path or naming variant remains in the six scoped files.
+Conclusion: No stale AI-DOS2 path or naming variant remains in the six scoped files.
 
 ---
 
@@ -187,7 +187,7 @@ Conclusion: The authority wording is materially aligned for transitional governa
 
 PASS WITH OBSERVATIONS
 
-The six scoped files preserve Forge AI v3 transitional authority alignment. No blocking authority conflict was found. The only follow-up is optional wording normalization for authority-chain ordering and distinction between v3 architecture-track documents and target authority candidates.
+The six scoped files preserveAI-DOS v3 transitional authority alignment. No blocking authority conflict was found. The only follow-up is optional wording normalization for authority-chain ordering and distinction between v3 architecture-track documents and target authority candidates.
 
 ---
 

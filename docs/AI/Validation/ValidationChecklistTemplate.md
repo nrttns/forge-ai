@@ -22,7 +22,7 @@ docs/AI/Checklists/AgentReviewChecklist.md
 
 # Purpose
 
-This template provides a generic, reusable structure for validation across the AI Framework, Forge AI, future platforms, commands, workflows, documentation, framework subsystems, implementation tasks, and certification candidates.
+This template provides a generic, reusable structure for validation across the AI Framework, AI-DOS, future platforms, commands, workflows, documentation, framework subsystems, implementation tasks, and certification candidates.
 
 Use this template when a validation activity requires structured evidence, findings, decision recording, and certification-readiness assessment.
 
@@ -41,7 +41,7 @@ This template does not define architecture. It verifies conformance to existing 
 | Validation Level | Level 1 / Level 2 / Level 3 / Level 4 / Level 5 / Level 6 |
 | Target Type | Document / Workflow / Command / Subsystem / Framework / Framework / Other |
 | Target Path or Scope |  |
-| Framework | AI Framework / Forge AI / Other |
+| Framework | AI Framework /AI-DOS / Other |
 | Validator |  |
 | Date |  |
 | Related Task / Capability / Stage / Phase |  |

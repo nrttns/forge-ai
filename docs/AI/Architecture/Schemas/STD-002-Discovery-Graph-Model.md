@@ -1,8 +1,8 @@
 # STD-002 — Discovery Graph Model
 
-> **Parent Standard:** STD-002 — Discovery Standard (`FORGE-STD-002`)
+> **Parent Standard:** STD-002 — Discovery Standard (`AI-DOS-STD-002`)
 >
-> **Consumed Standard:** STD-001 — Knowledge Graph Standard (`FORGE-STD-001`)
+> **Consumed Standard:** STD-001 — Knowledge Graph Standard (`AI-DOS-STD-001`)
 >
 > **Related Documents**
 >
@@ -21,7 +21,7 @@
 | Property | Value |
 |:---|:---|
 | **Document** | STD-002 — Discovery Graph Model |
-| **Identifier** | `FORGE-STD-002-GRAPH` |
+| **Identifier** | `AI-DOS-STD-002-GRAPH` |
 | **Version** | 1.1.0-draft |
 | **Status** | Draft |
 | **Type** | Technical Graph Projection |
@@ -29,7 +29,7 @@
 | **Authority** | STD-002 — Discovery Standard |
 | **Owner** | Framework Architecture Team |
 | **Maintainers** | Framework Architecture Team |
-| **Depends On** | STD-001 — Knowledge Graph Standard (`FORGE-STD-001`) |
+| **Depends On** | STD-001 — Knowledge Graph Standard (`AI-DOS-STD-001`) |
 | **Directory** | `docs/AI/Architecture/Schemas/` |
 | **Created** | 2026-07-04 |
 | **Last Updated** | 2026-07-06 |
@@ -484,7 +484,7 @@ Runtime traversal shall:
 
 ## Compliance Verification
 
-- [x] Document identifier is `FORGE-STD-002-GRAPH`
+- [x] Document identifier is `AI-DOS-STD-002-GRAPH`
 - [x] Classification is `Discovery Graph Projection`
 - [x] Authority is `STD-002 — Discovery Standard`
 - [x] Depends On declares `STD-001 — Knowledge Graph Standard`

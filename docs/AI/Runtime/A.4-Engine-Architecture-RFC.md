@@ -1,8 +1,8 @@
-# FORGE-A-004 — Engine Architecture RFC
+# AI-DOS-A-004 — Engine Architecture RFC
 
 |                     |                     |
 |:--------------------|:--------------------|
-| **Framework**       | Forge AI v3         |
+| **Framework**       |AI-DOS v3         |
 | **Document Class**  | Architecture RFC    |
 | **Domain**          | Engine Architecture |
 | **Confidentiality** | Internal — Governed |
@@ -13,7 +13,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-A-4` |
+| Identifier | `AI-DOS-A-4` |
 | Title | A.4 — Engine Architecture RFC |
 | Version | `0.2.0-draft` |
 | Status | Draft |
@@ -27,7 +27,7 @@
 | Created | 2026-07-07 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.V2.RUNTIME.A-4` |
+| Traceability ID | `AI-DOS.V2.RUNTIME.A-4` |
 | Scope | Defines the Engine Platform only, including shared Engine architecture, platform responsibilities, and foundation boundaries that specialize A.3 Runtime Architecture. |
 | Out of Scope | Runtime Architecture redefinition, individual Engine Specialization redefinition, implementation, certification, freeze decisions, ProjectStatus updates, and DevelopmentPhases updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
@@ -45,9 +45,9 @@
 
 ## Executive Summary
 
-The Forge AI v3 Engine Architecture RFC defines twelve governed engines that serve as the central execution backbone of the AI Development Operating System. This architecture establishes clear capability boundaries between context assembly, knowledge retrieval, planning resolution, decision governance, work execution, output validation, independent review, certification handoff, memory management, policy enforcement, registry operations, and lifecycle orchestration. By separating these concerns into discrete, contract-bound engines, the framework achieves platform independence: execution semantics reside in governed contracts rather than in tool-specific behavior, agent heuristics, or runtime coupling.
+TheAI-DOS v3 Engine Architecture RFC defines twelve governed engines that serve as the central execution backbone of the AI Development Operating System. This architecture establishes clear capability boundaries between context assembly, knowledge retrieval, planning resolution, decision governance, work execution, output validation, independent review, certification handoff, memory management, policy enforcement, registry operations, and lifecycle orchestration. By separating these concerns into discrete, contract-bound engines, the framework achieves platform independence: execution semantics reside in governed contracts rather than in tool-specific behavior, agent heuristics, or runtime coupling.
 
-This RFC matters because it resolves a critical architectural ambiguity in the Forge AI v3 transition. Without explicit engine boundaries, tools, agents, and runtimes risk overstepping their authority—agents defining context, tools owning workflow, or runtimes bypassing validation. The Engine Architecture eliminates these risks by mandating that every non-trivial execution action flows through a governed engine with declared inputs, outputs, forbidden responsibilities, and handoff rules.
+This RFC matters because it resolves a critical architectural ambiguity in theAI-DOS v3 transition. Without explicit engine boundaries, tools, agents, and runtimes risk overstepping their authority—agents defining context, tools owning workflow, or runtimes bypassing validation. The Engine Architecture eliminates these risks by mandating that every non-trivial execution action flows through a governed engine with declared inputs, outputs, forbidden responsibilities, and handoff rules.
 
 Key architectural decisions include the inversion of authority (engines enforce contracts rather than tools defining behavior), the explicit prohibition of AI self-certification, the non-authoritative status of memory, and the governance-rooted dependency flow from Human Governance downward through all twelve engines. The business impact is a verifiable, auditable, and platform-agnostic execution model suitable for enterprise governance, multi-agent coordination, and regulatory compliance.
 
@@ -57,9 +57,9 @@ This RFC sits downstream of A.1 (Constitution), M.0 (Framework Meta Model), M.1 
 
 ## Purpose
 
-This RFC defines the Forge AI v3 Engine Architecture as the central execution architecture of the AI Development Operating System.
+This RFC defines theAI-DOS v3 Engine Architecture as the central execution architecture of the AI Development Operating System.
 
-The Engine Architecture separates governed execution responsibilities from tools, agents, IDE assistants, CLI runners, automation hosts, and future Forge-native runtimes. Engines define capability boundaries through governed contracts. Tools and agents consume those contracts; they do not own architecture, workflow, standards, certification, or project state.
+The Engine Architecture separates governed execution responsibilities from tools, agents, IDE assistants, CLI runners, automation hosts, and future AI-DOS-native runtimes. Engines define capability boundaries through governed contracts. Tools and agents consume those contracts; they do not own architecture, workflow, standards, certification, or project state.
 
 This is documentation-only architecture work. It does not implement code, modify runtime behavior, redefine the Constitution, redefine the Meta Model, redefine framework standards, or redefine the Knowledge Graph.
 
@@ -67,11 +67,11 @@ This is documentation-only architecture work. It does not implement code, modify
 
 ## Scope
 
-This RFC defines the structural and contractual foundations of the Forge AI v3 engine-first execution architecture. It enumerates the required engines, their responsibility boundaries, and the models that govern how engines interact with each other, with the runtime, with the Knowledge Graph, with the Registry, and with AI agents.
+This RFC defines the structural and contractual foundations of theAI-DOS v3 engine-first execution architecture. It enumerates the required engines, their responsibility boundaries, and the models that govern how engines interact with each other, with the runtime, with the Knowledge Graph, with the Registry, and with AI agents.
 
 This RFC defines:
 
-1. the required Forge AI engines;
+1. the requiredAI-DOS engines;
 2. the responsibility boundaries for each engine;
 3. engine inputs, outputs, artifacts, validation expectations, failure modes, and handoff rules;
 4. the relationship between engines, runtime, Knowledge Graph, Registry, AI agents, and tool adapters;
@@ -116,7 +116,7 @@ This RFC does not:
 
 The following authorities govern this RFC. Each authority is consumed as governing input; this RFC does not redefine any of them.
 
-1. **Human Governance** — Ultimate authority for all Forge AI decisions. No engine, tool, agent, or runtime may override Human Governance.
+1. **Human Governance** — Ultimate authority for allAI-DOS decisions. No engine, tool, agent, or runtime may override Human Governance.
 2. **`AGENTS.md`** — Repository bootstrap authority during the v3 transition. Defines initial task classification and boot behavior.
 3. **`docs/AI/FrameworkGovernance.md`** — Governance decision policy including review, approval, promotion, conflict resolution, and escalation.
 4. **`docs/AI/GOVERNANCE.md`** — Governance Atlas providing authority navigation and ownership mapping.
@@ -166,7 +166,7 @@ Runtime does not own standards.
 Engines execute governed contracts.
 ```
 
-The Engine Architecture exists to make Forge AI platform-independent by placing execution boundaries in governed engine contracts rather than in tool behavior.
+The Engine Architecture exists to makeAI-DOS platform-independent by placing execution boundaries in governed engine contracts rather than in tool behavior.
 
 ### Engine Stack Diagram
 
@@ -337,7 +337,7 @@ Memory Engine: propose reusable memory only after approved evidence exists
 
 #### 9.3 Planning Engine
 
-**Purpose:** Resolve approved work scope from the Forge AI planning hierarchy and produce executable planning structures.
+**Purpose:** Resolve approved work scope from theAI-DOS planning hierarchy and produce executable planning structures.
 
 **Ownership:** Planning System.
 
@@ -662,7 +662,7 @@ The Registry Engine resolves whether a runtime, agent, or adapter may invoke a c
 
 ### Governance Constraints
 
-Governance constraints define the inviolable authority boundaries that protect the Forge AI framework from architectural drift. These constraints ensure that no engine, tool, adapter, or agent can elevate its authority beyond what Human Governance and the Constitution permit.
+Governance constraints define the inviolable authority boundaries that protect theAI-DOS framework from architectural drift. These constraints ensure that no engine, tool, adapter, or agent can elevate its authority beyond what Human Governance and the Constitution permit.
 
 - Human Governance remains highest authority.
 - `AGENTS.md` remains bootstrap authority during v3 transition.
@@ -670,7 +670,7 @@ Governance constraints define the inviolable authority boundaries that protect t
 - This RFC does not supersede the Constitution, Meta Models, Standards, Knowledge Graph Standard, or Runtime Architecture RFC.
 - Engines may enforce authority but may not invent it.
 - Registry entries may discover contracts but may not approve architecture by existence alone.
-- Tool adapters may extend integration but may not redefine Forge AI.
+- Tool adapters may extend integration but may not redefine AI-DOS.
 - RC2 operational procedures remain valid until explicitly replaced through approved v3 operational procedures.
 - ProjectStatus must not be updated by this RFC task.
 
@@ -680,7 +680,7 @@ Governance constraints define the inviolable authority boundaries that protect t
 
 ### D-1: Twelve-Engine Separation of Concerns
 
-**Decision:** The Forge AI execution backbone shall be decomposed into twelve discrete, contract-bound engines rather than a monolithic runtime or a smaller set of multifunction components.
+**Decision:** TheAI-DOS execution backbone shall be decomposed into twelve discrete, contract-bound engines rather than a monolithic runtime or a smaller set of multifunction components.
 
 **Context:** The v3 transition requires platform independence and verifiable governance. A monolithic execution model cannot provide the granularity needed for independent validation, review, and certification of individual execution concerns.
 
@@ -798,7 +798,7 @@ The Owner (Framework Governance) is not responsible for:
 
 ### Agent-to-Engine Interaction Model
 
-AI agents interact with Forge AI through runtime-mediated engine contracts. This model ensures that agents remain executors within governed boundaries and cannot subvert the engine authority chain by direct action.
+AI agents interact withAI-DOS through runtime-mediated engine contracts. This model ensures that agents remain executors within governed boundaries and cannot subvert the engine authority chain by direct action.
 
 ```text
 AI Agent Request / Human Delegation
@@ -822,11 +822,11 @@ Rules:
 
 ### Tool Adapter Model
 
-The Tool Adapter Model defines how external tools, IDE assistants, CLIs, model runtimes, automation systems, and future Forge-native runtimes connect to the governed engine contracts. Tool adapters serve as translation layers that map platform-specific invocations into framework-compliant engine contract requests.
+The Tool Adapter Model defines how external tools, IDE assistants, CLIs, model runtimes, automation systems, and future AI-DOS-native runtimes connect to the governed engine contracts. Tool adapters serve as translation layers that map platform-specific invocations into framework-compliant engine contract requests.
 
-A tool adapter may: translate a tool invocation into an engine contract request; expose tool capabilities registered by the Registry Engine; capture tool output as execution evidence; map tool-specific failures into Forge AI failure modes; enforce context and workflow boundaries inside the tool environment.
+A tool adapter may: translate a tool invocation into an engine contract request; expose tool capabilities registered by the Registry Engine; capture tool output as execution evidence; map tool-specific failures intoAI-DOS failure modes; enforce context and workflow boundaries inside the tool environment.
 
-A tool adapter must not: redefine engine responsibilities; bypass Governance, Workflow, Validation, Review, or Certification Engines; make a tool-specific workflow canonical; treat tool memory as Forge AI memory; mutate project state without governed authorization; make platform-specific behavior part of framework architecture.
+A tool adapter must not: redefine engine responsibilities; bypass Governance, Workflow, Validation, Review, or Certification Engines; make a tool-specific workflow canonical; treat tool memory asAI-DOS memory; mutate project state without governed authorization; make platform-specific behavior part of framework architecture.
 
 Adapter compatibility is determined by registered contracts, lifecycle state, required evidence, and governance approval.
 
@@ -1002,7 +1002,7 @@ Migration from RC2 to v3 engine procedures shall occur through a governed migrat
 
 | Term | Definition |
 |:---|:---|
-| **Engine** | A governed architectural component that owns a bounded execution responsibility within the Forge AI v3 framework, defined by its contract, inputs, outputs, and forbidden responsibilities. |
+| **Engine** | A governed architectural component that owns a bounded execution responsibility within theAI-DOS v3 framework, defined by its contract, inputs, outputs, and forbidden responsibilities. |
 | **Engine Contract** | The governed interface description specifying how an engine is invoked, including its preconditions, postconditions, inputs, outputs, validation rules, failure modes, and handoff targets. |
 | **Engine Registry** | The discoverable governed index of engines, contracts, adapters, artifacts, lifecycle states, and compatibility metadata maintained by the Registry Engine. |
 | **Governance Engine** | The highest-authority engine that enforces authority chains, ownership policies, escalation rules, and human-governed decision boundaries across all other engines. |
@@ -1011,7 +1011,7 @@ Migration from RC2 to v3 engine procedures shall occur through a governed migrat
 | **Context Package** | A minimal, current, authoritative, and traceable assembly of information produced by the Context Engine for a specific task, lifecycle state, or agent. |
 | **Memory Candidate** | A non-authoritative reusable memory record proposed by the Memory Engine, derived from approved and traceable work, requiring authority re-validation before use. |
 | **Knowledge Graph** | The governed knowledge representation conforming to STD-001 that stores nodes, relationships, constraints, and traversal evidence consumed by the Knowledge Engine and other engines. |
-| **Human Governance** | The ultimate authority in the Forge AI framework, residing above all engines, agents, tools, and runtimes, with the power to override, escalate, and certify. |
+| **Human Governance** | The ultimate authority in theAI-DOS framework, residing above all engines, agents, tools, and runtimes, with the power to override, escalate, and certify. |
 | **Lifecycle Transition** | A governed state change managed by the Workflow Engine that moves an artifact, engine, or contract from one lifecycle state to another according to registered rules. |
 | **Evidence Package** | A collection of traceable execution artifacts produced by the Execution Engine and consumed by the Validation, Review, and Certification Engines. |
 

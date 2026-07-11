@@ -1,4 +1,4 @@
-# Forge AI Governance Atlas v2
+#AI-DOS Governance Atlas v2
 
 ---
 
@@ -6,8 +6,8 @@
 
 | Field | Value |
 | --- | --- |
-| Identifier | FORGE-GOVERNANCE-ATLAS |
-| Title | Forge AI Governance Atlas v2 |
+| Identifier | AI-DOS-GOVERNANCE-ATLAS |
+| Title |AI-DOS Governance Atlas v2 |
 | Version | 4.0.0-draft |
 | Status | Draft |
 | Canonical Status | Non-canonical until reviewed and approved |
@@ -33,7 +33,7 @@
 
 ## 1. Executive Summary
 
-The Forge AI Governance Atlas v2 is the central navigation and governance map for the Forge AI repository. It explains how authority is discovered, how documents consume each other, which document owns which domain, and which activities require human approval.
+TheAI-DOS Governance Atlas v2 is the central navigation and governance map for theAI-DOS repository. It explains how authority is discovered, how documents consume each other, which document owns which domain, and which activities require human approval.
 
 This atlas is a map, not a replacement authority. It does not supersede `AGENTS.md`, the Constitution, M.0, M.1, standards, runtime RFCs, engine RFCs, agent architecture, operational-layer files, ProjectStatus, or the roadmap. It classifies those documents and explains safe consumption paths for humans and AI agents.
 
@@ -43,8 +43,8 @@ Core conclusions:
 - The AI-DOS Provider root `AGENTS.md` is the Provider entry that starts Framework boot and routes to TargetRepositoryResolution; the Target Repository root `AGENTS.md` is the Target Project declaration contract.
 - TargetRepositoryResolution owns Target Repository identification, Target AGENTS discovery, project-resource resolution, declaration validation, blocker reporting, Resolution Result production, and BootSequence handoff.
 - BootSequence owns loading the resolved Framework + Target Project context from the Resolution Result.
-- The ProjectStatus loaded from the resolved Target Repository (`<PROJECT_STATUS_PATH>`) is operational state, not architecture. For Forge AI self-hosting only, `<PROJECT_STATUS_PATH>` resolves to `docs/DevelopmentPhases/ProjectStatus.md`.
-- The DevelopmentPhases loaded from the resolved Target Repository (`<DEVELOPMENT_PHASES_PATH>`) is strategic roadmap, not live status. For Forge AI self-hosting only, `<DEVELOPMENT_PHASES_PATH>` resolves to `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`.
+- The ProjectStatus loaded from the resolved Target Repository (`<PROJECT_STATUS_PATH>`) is operational state, not architecture. ForAI-DOS self-hosting only, `<PROJECT_STATUS_PATH>` resolves to `docs/DevelopmentPhases/ProjectStatus.md`.
+- The DevelopmentPhases loaded from the resolved Target Repository (`<DEVELOPMENT_PHASES_PATH>`) is strategic roadmap, not live status. ForAI-DOS self-hosting only, `<DEVELOPMENT_PHASES_PATH>` resolves to `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`.
 - Lower layers consume higher layers and shall never redefine them.
 - AI may propose, classify, validate, and recommend.
 - AI shall never approve, certify, promote, or override Human Governance.
@@ -102,7 +102,7 @@ This atlas is not:
 
 ## 5. Governance Philosophy
 
-Forge AI governance is documentation-first and authority-driven. Architecture precedes implementation, governance precedes execution, validation precedes review, review precedes certification, and certification precedes project-state update.
+AI-DOS governance is documentation-first and authority-driven. Architecture precedes implementation, governance precedes execution, validation precedes review, review precedes certification, and certification precedes project-state update.
 
 Governance favors explicit ownership over implicit convention. A lower document may refine a higher document only within its assigned scope. A lower document may not redefine, bypass, or silently contradict higher authority.
 
@@ -191,7 +191,7 @@ Project governance is split between strategic roadmap and live status:
 
 - The DevelopmentPhases loaded from the resolved Target Repository (`<DEVELOPMENT_PHASES_PATH>`) is the strategic roadmap.
 - The ProjectStatus loaded from the resolved Target Repository (`<PROJECT_STATUS_PATH>`) is the live operational status.
-- For Forge AI self-hosting only, these resolve to `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` and `docs/DevelopmentPhases/ProjectStatus.md`.
+- ForAI-DOS self-hosting only, these resolve to `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` and `docs/DevelopmentPhases/ProjectStatus.md`.
 
 ProjectStatus is not architecture and may not promote documents, redefine semantics, or supersede standards. It records current phase, completed items, next queue, frozen areas, status-update policy, decision log, and success indicators.
 
@@ -973,7 +973,7 @@ These extensions require Human Governance or approved roadmap activation.
 | Consumption | Use of an upstream document without redefining it. |
 | Frozen | Preserved and not modifiable until explicitly activated. |
 | Governance Atlas | A navigation and authority map, not a replacement authority. |
-| Human Governance | Final approval authority for Forge AI. |
+| Human Governance | Final approval authority for AI-DOS. |
 | Operational State | The live project status recorded in ProjectStatus. |
 | Promotion | Movement from draft or approved status to canonical authority. |
 | Roadmap | Strategic sequence of phases, not live project state. |

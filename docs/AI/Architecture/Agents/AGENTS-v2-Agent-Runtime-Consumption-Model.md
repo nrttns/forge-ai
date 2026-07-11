@@ -1,4 +1,4 @@
-# Forge AI — AGENTS v2 Agent Runtime Consumption Model
+#AI-DOS — AGENTS v2 Agent Runtime Consumption Model
 
 ---
 
@@ -6,8 +6,8 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.AGENTS.V2.AGENT-RUNTIME-CONSUMPTION-MODEL` |
-| Title | Forge AI — AGENTS v2 Agent Runtime Consumption Model |
+| Identifier | `AI-DOS.AGENTS.V2.AGENT-RUNTIME-CONSUMPTION-MODEL` |
+| Title |AI-DOS — AGENTS v2 Agent Runtime Consumption Model |
 | Version | 0.1.0-draft |
 | Status | Draft |
 | Canonical Status | Non-canonical until reviewed, approved, and promoted through Human Governance / Framework Governance |
@@ -20,7 +20,7 @@
 | Created | 2026-07-08 |
 | Last Updated | 2026-07-08 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.ARCHITECTURE.AGENTS.V2.RUNTIME-CONSUMPTION` |
+| Traceability ID | `AI-DOS.ARCHITECTURE.AGENTS.V2.RUNTIME-CONSUMPTION` |
 | Scope | Documentation-level AGENTS v2 agent runtime consumption model, including agent/runtime/engine boundary rules, capability consumption, context consumption, workflow consumption, delegation consumption, validation consumption, governance boundaries, ProjectStatus boundaries, forbidden content, and deferred scope. |
 | Out of Scope | Runtime implementation, runtime execution, scheduling, queues, dispatch, routing, orchestration, APIs, storage, CLI, UI, transport, messaging runtime, swarm behavior, platform adapters, Engine RFC continuation, Runtime redefinition, Engine Platform redefinition, Governance redefinition, Standards redefinition, M.0 redefinition, M.1 redefinition, STD-010 redefinition, and ProjectStatus updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Architecture.md` |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-This document defines the AGENTS v2 agent runtime consumption model for Forge AI.
+This document defines the AGENTS v2 agent runtime consumption model for AI-DOS.
 
 Its purpose is to describe how future AGENTS v2 agent architecture consumes Runtime Architecture and Engine Platform capabilities without replacing, redefining, implementing, or continuing those layers.
 

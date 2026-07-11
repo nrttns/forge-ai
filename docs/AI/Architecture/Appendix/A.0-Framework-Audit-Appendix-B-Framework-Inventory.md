@@ -1,6 +1,6 @@
 # Appendix B: Complete Framework Inventory
 
-> **Parent Document:** [A.0 — Framework Audit](../A.0-Framework-Audit.md) (`FORGE-AUDIT-A.0`)
+> **Parent Document:** [A.0 — Framework Audit](../A.0-Framework-Audit.md) (`AI-DOS-AUDIT-A.0`)
 > **Version:** 3.0.0-beta
 > **Status:** Draft
 
@@ -8,7 +8,7 @@
 
 ## B.1 Purpose
 
-This appendix provides the complete architectural inventory of the Forge AI Framework as identified during the audit (Section 7). Each subsystem is presented with its Architecture Identity Card, documenting identifier, purpose, owner, responsibilities, dependencies, and lifecycle status. The inventory is organized by architectural layer and is the canonical reference for all dependency, ownership, and governance analysis.
+This appendix provides the complete architectural inventory of theAI-DOS Framework as identified during the audit (Section 7). Each subsystem is presented with its Architecture Identity Card, documenting identifier, purpose, owner, responsibilities, dependencies, and lifecycle status. The inventory is organized by architectural layer and is the canonical reference for all dependency, ownership, and governance analysis.
 
 ---
 
@@ -36,7 +36,7 @@ This appendix provides the complete architectural inventory of the Forge AI Fram
 | Field | Value |
 |:---|:---|
 | **Identifier** | `FND-PHIL` |
-| **Purpose** | Articulate the foundational philosophy, values, and design intent of the Forge AI Framework. |
+| **Purpose** | Articulate the foundational philosophy, values, and design intent of theAI-DOS Framework. |
 | **Authority** | Constitution |
 | **Owner** | Architecture Owner |
 | **Responsibilities** | Design philosophy; value system; architectural intent. |

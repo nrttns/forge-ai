@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.OPERATIONAL.CORE.AI-FRAMEWORK` |
+| Identifier | `AI-DOS.OPERATIONAL.CORE.AI-FRAMEWORK` |
 | Title | AI Framework |
 | Version | `2.0.0-draft` |
 | Status | Draft |
@@ -20,15 +20,15 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Draft Operational Core Alignment |
-| Traceability ID | `FORGE-AI.V2.OP-002` |
-| Scope | Defines the stable Forge AI v2 Operational Core entry point, authority chain, boot sequence, operating model, operational responsibilities, and Runtime / Engine interaction boundaries for AI-assisted execution. |
+| Traceability ID | `AI-DOS.V2.OP-002` |
+| Scope | Defines the stableAI-DOS v2 Operational Core entry point, authority chain, boot sequence, operating model, operational responsibilities, and Runtime / Engine interaction boundaries for AI-assisted execution. |
 | Out of Scope | Governance redesign, Runtime RFC redesign, Engine RFC redesign, ProjectStatus update, file relocation, operational implementation, platform adapter activation, multi-agent runtime activation, swarm runtime activation, certification, and canonical promotion. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; the ProjectStatus and DevelopmentPhases declared by the active Target Repository |
 | Normative References | `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md`; `docs/AI/Operational/Operational-Core-Replacement-Matrix.md` |
 | Dependencies | Governance Core; Meta Foundation; Standards Foundation; Runtime Architecture; Engine Platform; Engine Foundation RFC family; Operational Core replacement plan; active ProjectStatus and DevelopmentPhases roadmap. |
 | Consumes | Human task instruction, repository boot sequence, governance navigation, governance decision policy, operational state, roadmap sequence, constitutional principles, meta models, terminology, metadata requirements, Runtime Architecture, Engine Architecture, and Engine Specialization template. |
 | Produces | Operational Core entry guidance, task boot sequence, authority routing, AI operating model, operational boundary rules, Runtime interaction rules, Engine interaction rules, and completion-report expectations. |
-| Related Specifications | `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md` (Forge AI self-hosting related specification only); `docs/AI/Operational/Operational-Core-Replacement-Matrix.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
+| Related Specifications | `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/Roadmap/AI-DOS-Program-Architecture-Master-Roadmap-v4.md` (AI-DOS self-hosting related specification only); `docs/AI/Operational/Operational-Core-Replacement-Matrix.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
 | Supersedes | Prior release-candidate master-index wording in this file while preserving this file as the Operational Core entry point. |
 | Superseded By | None |
 | Promotion Requirements | Framework Governance review, Human Governance review, validation against Governance Atlas, ProjectStatus, DevelopmentPhases, STD-010, Runtime Architecture, Engine Architecture, and explicit Human Governance promotion authorization. |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-The AI Framework is the stable Operational Core entry point for Forge AI v2. It defines how AI-assisted work begins, discovers authority, assembles context, executes within scope, validates outputs, reports evidence, and recommends next steps.
+The AI Framework is the stable Operational Core entry point forAI-DOS v2. It defines how AI-assisted work begins, discovers authority, assembles context, executes within scope, validates outputs, reports evidence, and recommends next steps.
 
 This document is an operational entry document. It does not replace the Constitution, Governance Atlas, Framework Governance, ProjectStatus, roadmap, Runtime Architecture, Engine Architecture, Engine Specialization RFC template, AI Orchestrator, Agent System Prompt, commands, workflows, or templates. It routes execution participants to those authorities and defines the operational boundaries for consuming them.
 
@@ -161,7 +161,7 @@ AIFramework must not discover the Target Repository, resolve Target AGENTS, reso
 
 ## 5. Framework Architecture References
 
-The Operational Core consumes the completed Forge AI v2 architecture layers as follows:
+The Operational Core consumes the completedAI-DOS v2 architecture layers as follows:
 
 | Layer | Operational Consumption |
 |:---|:---|
@@ -314,7 +314,7 @@ Operational work using this document should validate:
 
 Earlier versions of this file used release-candidate transitional wording and a specification-map structure while the repository moved toward the v2 Governance, Runtime, Engine Platform, and Engine Foundation architecture. That history explains why existing inbound references target this file.
 
-The current document preserves the file identity and entry-point role while replacing transitional operational wording with the Forge AI v2 Operational Core model.
+The current document preserves the file identity and entry-point role while replacing transitional operational wording with theAI-DOS v2 Operational Core model.
 
 ---
 
@@ -324,4 +324,4 @@ The current document preserves the file identity and entry-point role while repl
 |:---|:---|:---|
 | v1.0 RC1 | Historical Release Candidate | Initial single-document constitution integration. |
 | v1.0 RC2 | Historical Release Candidate | Split framework into focused architecture modules and retained this file as the master index. |
-| v2.0.0-draft | Draft Operational Core Alignment | Refactored in place as the stable Forge AI v2 Operational Core entry point. |
+| v2.0.0-draft | Draft Operational Core Alignment | Refactored in place as the stableAI-DOS v2 Operational Core entry point. |

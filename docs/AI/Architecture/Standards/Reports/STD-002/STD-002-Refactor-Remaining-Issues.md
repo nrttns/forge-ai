@@ -23,7 +23,7 @@
 |:---|:---|
 | **Severity** | Informational |
 | **Type** | Out of Scope |
-| **Description** | STD-001-Knowledge-Graph-Standard.md contains internal inconsistencies: the header references 'STD-002 — Discovery Standard' as parent, the identifier is 'FORGE-STD-001-GRAPH' but it is the Knowledge Graph standard, and 'Related Documents' lists 'STD-001 Discovery JSON Schema' and 'STD-001 Discovery YAML Schema'. These are legacy artifacts from before the STD-001/STD-002 renumbering. |
+| **Description** | STD-001-Knowledge-Graph-Standard.md contains internal inconsistencies: the header references 'STD-002 — Discovery Standard' as parent, the identifier is 'AI-DOS-STD-001-GRAPH' but it is the Knowledge Graph standard, and 'Related Documents' lists 'STD-001 Discovery JSON Schema' and 'STD-001 Discovery YAML Schema'. These are legacy artifacts from before the STD-001/STD-002 renumbering. |
 | **Required Action** | A separate controlled remediation of STD-001 is needed. This was not in scope for the STD-002 refactor. |
 | **Why Not Fixed** | The objective states: 'Do NOT modify STD-000 or STD-001.' |
 

@@ -1,6 +1,6 @@
 # Appendix A: Constitutional Glossary
 
-> **Parent Document:** [A.1 — Constitution](../A.1-Constitution.md) (`FORGE-ARCH-A.1`)
+> **Parent Document:** [A.1 — Constitution](../A.1-Constitution.md) (`AI-DOS-ARCH-A.1`)
 > **Version:** 3.0.0-beta
 > **Status:** Draft
 
@@ -10,7 +10,7 @@
 
 This appendix extracts and consolidates the constitutional terminology defined or specialized within [A.1 — Constitution](./A.1-Constitution.md). Each term is classified according to the canonical terminology lifecycle, assigned an authoritative owner, and mapped to its defining section. Terms already established in [Appendix C — Terminology Glossary Extract](./A.0-Framework-Audit-Appendix-C-Terminology-Glossary.md) of the A.0 Framework Audit are cross-referenced rather than redefined; only constitutional extensions or specializations are provided here.
 
-This glossary serves as the authoritative terminology reference for all constitutional discussions, amendments, compliance assessments, and case studies within the Forge AI Framework.
+This glossary serves as the authoritative terminology reference for all constitutional discussions, amendments, compliance assessments, and case studies within theAI-DOS Framework.
 
 ---
 
@@ -32,7 +32,7 @@ This glossary serves as the authoritative terminology reference for all constitu
 
 | Preferred Term | Definition | Owner | Authority | Synonyms | Deprecated Terms | Lifecycle Status |
 |:---|:---|:---|:---|:---|:---|:---|
-| **Constitution** | The highest governing document of the Forge AI Framework Core, establishing permanent constitutional principles, governance boundaries, authority rules, and non-negotiable invariants. Defined in A.1. | Framework Architecture Team | Human Governance | Constitutional Document, Framework Constitution | — | Canonical |
+| **Constitution** | The highest governing document of theAI-DOS Framework Core, establishing permanent constitutional principles, governance boundaries, authority rules, and non-negotiable invariants. Defined in A.1. | Framework Architecture Team | Human Governance | Constitutional Document, Framework Constitution | — | Canonical |
 | **Constitutional Architecture Specification** | The document classification for the Constitution (A.1), distinguishing it from audits, roadmaps, runtime specifications, and implementation plans. Defines permanent rules and governing principles rather than behavioral specifications. | Framework Architecture Team | Constitution | — | — | Approved |
 | **Constitutional Position** | The defined location of a document within the constitutional authority chain, determining its governing scope and the documents it may constrain. | Framework Architecture Team | Constitution | Document Position, Authority Position | — | Approved |
 
@@ -40,11 +40,11 @@ This glossary serves as the authoritative terminology reference for all constitu
 
 | Preferred Term | Definition | Owner | Authority | Synonyms | Deprecated Terms | Lifecycle Status |
 |:---|:---|:---|:---|:---|:---|:---|
-| **Constitutional Authority** | The highest non-human authority within the Forge AI Framework, established by the Constitution and governing every Framework Core document, architectural model, and runtime capability. No architectural authority may exist outside this hierarchy without Human Governance approval. | Framework Governance | Constitution | — | — | Canonical |
+| **Constitutional Authority** | The highest non-human authority within theAI-DOS Framework, established by the Constitution and governing every Framework Core document, architectural model, and runtime capability. No architectural authority may exist outside this hierarchy without Human Governance approval. | Framework Governance | Constitution | — | — | Canonical |
 | **Constitutional Rule** | An immutable governance rule defined by the Constitution that constrains how authority, governance, architecture, and runtime shall operate. May only be changed through the Amendment Process. | Framework Governance | Constitution | Constitution Rule | — | Approved |
 | **Authority Boundary** | The explicitly documented scope within which a given constitutional authority may operate. Every authority shall respect the boundaries of all higher and peer authorities. | Framework Governance | Constitution | Authority Scope, Decision Boundary | — | Approved |
 | **Authority Chain** | The linear sequence of constitutional authority from Human Governance through Constitution, Governance, Architecture, Planning, Runtime, Execution, Validation, Review, and Certification. Each level derives authority exclusively from the level above. | Framework Governance | Constitution | — | — | Approved |
-| **Framework Authority** | The constitutional authority exercised by the Forge AI Framework after Human Governance, flowing through governance, architecture, planning, runtime, validation, and execution. Derives exclusively from the Constitution. | Framework Governance | Constitution | — | — | Approved |
+| **Framework Authority** | The constitutional authority exercised by theAI-DOS Framework after Human Governance, flowing through governance, architecture, planning, runtime, validation, and execution. Derives exclusively from the Constitution. | Framework Governance | Constitution | — | — | Approved |
 | **Conflict Resolution (Constitutional)** | The defined precedence rules governing authority conflicts: Human Governance prevails; the Constitution prevails over all Framework documents; Governance resolves constitutional interpretation; lower-level documents shall be revised. | Framework Governance | Constitution | Authority Conflict Resolution | — | Approved |
 
 ### A.3.3 Human Authority Terms
@@ -69,7 +69,7 @@ This glossary serves as the authoritative terminology reference for all constitu
 
 | Preferred Term | Definition | Owner | Authority | Synonyms | Deprecated Terms | Lifecycle Status |
 |:---|:---|:---|:---|:---|:---|:---|
-| **Constitutional Invariant** | A permanent rule defining a non-negotiable characteristic of the Forge AI Framework. Invariants protect the identity, integrity, and continuity of the Framework and may only be changed through the formal Amendment Process. | Framework Governance | Constitution | Invariant, Immutable Rule | — | Canonical |
+| **Constitutional Invariant** | A permanent rule defining a non-negotiable characteristic of theAI-DOS Framework. Invariants protect the identity, integrity, and continuity of the Framework and may only be changed through the formal Amendment Process. | Framework Governance | Constitution | Invariant, Immutable Rule | — | Canonical |
 | **Human Supremacy** | The core invariant establishing that Human Governance remains the ultimate authority over all Framework activities. No AI model, automation, runtime, engine, agent, swarm, workflow, or platform adapter may supersede human decision-making. | Human Governance | Constitution | — | — | Canonical |
 | **Technology Neutrality** | The invariant ensuring that constitutional principles remain independent of programming languages, platforms, vendors, and implementation technologies. Architectural truth shall never be tied to a specific technology stack. | Framework Architecture Team | Constitution | Platform Independence | — | Approved |
 | **Controlled Evolution** | The invariant requiring that Framework evolution shall occur only through governed processes and constitutional amendments rather than ad hoc or uncontrolled changes. | Framework Governance | Constitution | Governed Evolution | — | Approved |
@@ -91,7 +91,7 @@ This glossary serves as the authoritative terminology reference for all constitu
 |:---|:---|:---|:---|:---|:---|:---|
 | **Constitutional Compliance** | The state in which a Framework artifact satisfies all constitutional principles, governance policies, and quality expectations as defined by the Constitution. Compliance shall be evaluated objectively using documented criteria and supporting evidence. | Framework Governance | Constitution | Compliance | — | Canonical |
 | **Non-Compliance** | The state in which a Framework artifact fails to satisfy constitutional requirements. Non-compliance shall be documented, include impact assessment, identify corrective actions, and be resolved through approved governance processes. No unresolved violation shall be promoted to canonical status. | Framework Governance | Constitution | — | — | Approved |
-| **Constitutional Violation** | Any activity, decision, artifact, or behavior that contradicts the constitutional principles of the Forge AI Framework. No violation may become part of the canonical Framework without formal resolution through Human Governance. | Framework Governance | Constitution | Violation | — | Canonical |
+| **Constitutional Violation** | Any activity, decision, artifact, or behavior that contradicts the constitutional principles of theAI-DOS Framework. No violation may become part of the canonical Framework without formal resolution through Human Governance. | Framework Governance | Constitution | Violation | — | Canonical |
 | **Critical Violation** | A violation of the highest severity, including: overriding Human Governance, contradicting the Constitution, creating multiple canonical sources of truth, or bypassing constitutional amendment procedures. Requires immediate escalation to Human Governance. | Framework Governance | Constitution | Severe Violation | — | Approved |
 | **Major Violation** | A violation of high severity, including: breaking approved dependency direction, violating explicit ownership, ignoring governance approval, or introducing undocumented authority. Requires governance review and documented resolution. | Framework Governance | Constitution | — | — | Approved |
 | **Minor Violation** | A violation of lower severity, including: inconsistent terminology, incomplete traceability, missing supporting evidence, or documentation inconsistencies. Requires identification, documentation, and corrective action tracking. | Framework Governance | Constitution | — | — | Approved |
@@ -101,7 +101,7 @@ This glossary serves as the authoritative terminology reference for all constitu
 
 | Preferred Term | Definition | Owner | Authority | Synonyms | Deprecated Terms | Lifecycle Status |
 |:---|:---|:---|:---|:---|:---|:---|
-| **Constitutional Amendment** | The only lawful mechanism for modifying the Forge AI Constitution. Every amendment shall be deliberate, evidence-driven, transparent, traceable, and formally approved by Human Governance. No constitutional provision may be changed outside this process. | Human Governance | Constitution | Amendment | — | Canonical |
+| **Constitutional Amendment** | The only lawful mechanism for modifying theAI-DOS Constitution. Every amendment shall be deliberate, evidence-driven, transparent, traceable, and formally approved by Human Governance. No constitutional provision may be changed outside this process. | Human Governance | Constitution | Amendment | — | Canonical |
 | **Amendment Lifecycle** | The seven-stage process for constitutional modification: Proposal → Evidence Collection → Governance Review → Human Approval → Implementation → Version Update → Canonical Publication. Only Human Governance may approve the transition from Governance Review to Implementation. | Human Governance | Constitution | Amendment Process | — | Approved |
 | **Amendment Principle** | One of five principles governing amendments: Constitution First, Evidence Required, Governance Review, Human Approval, and Traceability. Each amendment shall be evaluated against the purpose and intent of the Constitution. | Human Governance | Constitution | — | — | Approved |
 | **Certification (Constitutional)** | Cross-reference: [A.0 Glossary — Certification](./A.0-Framework-Audit-Appendix-C-Terminology-Glossary.md). Constitutional context: the formal process through which the Constitution is recognized as an approved Framework Core document, confirming it satisfies constitutional objectives, governance requirements, and quality expectations. | Human Governance | Constitution | — | — | Canonical |
@@ -112,7 +112,7 @@ This glossary serves as the authoritative terminology reference for all constitu
 
 | Preferred Term | Definition | Owner | Authority | Synonyms | Deprecated Terms | Lifecycle Status |
 |:---|:---|:---|:---|:---|:---|:---|
-| **Constitutional Scope** | The defined boundaries of constitutional governance within the Forge AI Framework, specifying what the Constitution governs (principles, authority, governance, invariants, decisions, evidence, amendments, compliance, violations) and what remains outside its authority (runtime, engines, commands, workflows, platforms, languages, project architecture). | Framework Governance | Constitution | — | — | Canonical |
+| **Constitutional Scope** | The defined boundaries of constitutional governance within theAI-DOS Framework, specifying what the Constitution governs (principles, authority, governance, invariants, decisions, evidence, amendments, compliance, violations) and what remains outside its authority (runtime, engines, commands, workflows, platforms, languages, project architecture). | Framework Governance | Constitution | — | — | Canonical |
 | **Boundary Rule** | A constitutional rule governing the separation between principles and implementation: the Constitution defines principles not implementation; lower-level documents refine without contradicting; no document may redefine constitutional terminology or authority; scope may change only through amendment. | Framework Governance | Constitution | — | — | Approved |
 | **Principles vs. Implementation** | The foundational boundary rule establishing that the Constitution defines governing principles while implementation details belong to dedicated Framework Core specifications. This separation protects the Constitution from becoming tied to specific technologies or platforms. | Framework Governance | Constitution | — | — | Approved |
 

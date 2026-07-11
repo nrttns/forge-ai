@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-PROJECT-README` |
+| Identifier | `AI-DOS-TPL-PROJECT-README` |
 | Title | Project Templates |
 | Version | `0.2.0-draft` |
 | Status | Draft |
@@ -20,8 +20,8 @@
 | Created | 2026-07-10 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.TEMPLATES.PROJECT.README` |
-| Scope | Index and usage guide for reusable project adoption templates in the Forge AI template library. |
+| Traceability ID | `AI-DOS.TEMPLATES.PROJECT.README` |
+| Scope | Index and usage guide for reusable project adoption templates in theAI-DOS template library. |
 | Out of Scope | Project implementation logic, scaffolding behavior, code generation, runtime behavior, deployment logic, CI/CD behavior, package management execution, framework-specific execution, certification decisions, registry updates, or ProjectStatus updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
 | Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/README.md`; `docs/AI/Templates/Planning/RoadmapTemplate.md`; `docs/AI/Templates/Architecture/ArchitectureTemplate.md`; `docs/AI/Templates/Integration/IntegrationContractTemplate.md`; `docs/AI/Templates/Platform/PlatformAdapterTemplate.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md` |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-This directory contains reusable project adoption templates for projects adopting Forge AI / AI Framework governance patterns.
+This directory contains reusable project adoption templates for projects adoptingAI-DOS / AI Framework governance patterns.
 
 Project templates provide repository-structure guidance, document responsibilities, governance placeholders, source-of-truth initialization rules, validation expectations, and adapter boundaries.
 

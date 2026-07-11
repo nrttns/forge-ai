@@ -1,6 +1,6 @@
 # Knowledge Architecture Template
 
-> Forge AI v2 · Knowledge Templates<br>
+>AI-DOS v2 · Knowledge Templates<br>
 > Template Artifact · Draft / Non-canonical
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-KNOWLEDGE-ARCHITECTURE` |
+| Identifier | `AI-DOS-TPL-KNOWLEDGE-ARCHITECTURE` |
 | Title | Knowledge Architecture Template |
 | Version | `2.0.0-draft` |
 | Status | Draft |
@@ -23,12 +23,12 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Operational Core Alignment |
-| Traceability ID | `FORGE-AI.V2.TEMPLATES.KNOWLEDGE.ARCHITECTURE` |
+| Traceability ID | `AI-DOS.V2.TEMPLATES.KNOWLEDGE.ARCHITECTURE` |
 | Scope | Defines the reusable structure for documenting a project or framework knowledge architecture, including categories, ownership, source hierarchy, refresh rules, validation expectations, and consumption boundaries. |
 | Out of Scope | Knowledge authority redefinition, discovery standard redefinition, terminology redefinition, metadata standard redefinition, registry authority creation, evidence authority creation, finding authority creation, recommendation authority creation, risk authority creation, decision authority creation, validation authority creation, review authority creation, certification authority creation, governance authority creation, ProjectStatus updates, runtime behavior, engine behavior, implementation, and canonical promotion. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
 | Normative References | `docs/AI/Architecture/Standards/STD-001-Knowledge-Graph-Standard.md`; `docs/AI/Architecture/Standards/STD-002-Discovery-Standard.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/README.md` |
-| Dependencies | STD-001 knowledge graph rules; STD-002 discovery rules; STD-003 terminology; STD-010 metadata schema; TPL-000 template governance; Forge AI template library |
+| Dependencies | STD-001 knowledge graph rules; STD-002 discovery rules; STD-003 terminology; STD-010 metadata schema; TPL-000 template governance;AI-DOS template library |
 | Consumes | STD-001 knowledge graph concepts; STD-002 discovery concepts; STD-003 canonical terminology; STD-010 mandatory metadata fields; TPL-000 placeholder grammar, lifecycle, taxonomy, compliance model, and validation requirements |
 | Produces | Reusable knowledge architecture artifact structure |
 | Related Specifications | `docs/AI/Templates/Knowledge/`; `docs/AI/Templates/README.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md` |

@@ -1,4 +1,4 @@
-# Forge AI Repository Classification Audit v1.0
+#AI-DOS Repository Classification Audit v1.0
 
 ---
 
@@ -6,8 +6,8 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.V4.REPO-CANONICALIZATION-00` |
-| Title | Forge AI Repository Classification Audit v1.0 |
+| Identifier | `AI-DOS.V4.REPO-CANONICALIZATION-00` |
+| Title |AI-DOS Repository Classification Audit v1.0 |
 | Version | 1.0.0-draft |
 | Status | Draft audit report |
 | Canonical Status | Non-canonical audit evidence until reviewed by Human Governance |
@@ -20,15 +20,15 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Audit / Repository Canonicalization Preparation |
-| Traceability ID | `FORGE-AI.V4.REPO-CANONICALIZATION-00` |
+| Traceability ID | `AI-DOS.V4.REPO-CANONICALIZATION-00` |
 | Scope | Classification of documentation under `docs/`, `AGENTS.md`, `.cursorrules`, and `README.md` before any move, merge, archive, or rewrite. |
 | Out of Scope | File movement, file deletion, file renaming, ProjectStatus updates, implementation, reference rewrites, metadata normalization, canonical promotion, certification, and approval. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
-| Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md`; `docs/AI/Architecture/Reports/Forge-AI-Architecture-Consistency-Audit-v1.0.md`; `docs/AI/Architecture/Reports/Forge-AI-Authority-Cleanup-Plan-v1.0.md`; `docs/AI/Architecture/Reports/Forge-AI-v3-Migration-Strategy.md`; `docs/AI/Architecture/Reports/Forge-AI-v3-Transitional-Authority-Verification.md`; `docs/AI/Architecture/Reports/RC2-Specification-Harvest-Report.md`; `docs/AI/Architecture/Reports/RC2-Specification-Legacy-Migration-Plan.md` |
+| Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/Roadmap/AI-DOS-Program-Architecture-Master-Roadmap-v4.md`; `docs/AI/Architecture/Reports/AI-DOS-Architecture-Consistency-Audit-v1.0.md`; `docs/AI/Architecture/Reports/AI-DOS-Authority-Cleanup-Plan-v1.0.md`; `docs/AI/Architecture/Reports/AI-DOS-v3-Migration-Strategy.md`; `docs/AI/Architecture/Reports/AI-DOS-v3-Transitional-Authority-Verification.md`; `docs/AI/Architecture/Reports/RC2-Specification-Harvest-Report.md`; `docs/AI/Architecture/Reports/RC2-Specification-Legacy-Migration-Plan.md` |
 | Dependencies | Repository inventory; authority cleanup reports; RC2 harvest and migration reports; ProjectStatus frozen-area policy; roadmap sequencing. |
 | Consumes | Required reading set, repository file inventory, active reference search results, and classification categories supplied by Human Governance. |
 | Produces | Repository classification matrix, duplicate authority findings, RC2 compatibility findings, frozen-area findings, move-safety findings, disposition recommendations, and follow-up recommendation. |
-| Related Specifications | Governance Atlas v2; Framework Governance; STD-010; Forge AI v4 master roadmap; RC2 migration reports. |
+| Related Specifications | Governance Atlas v2; Framework Governance; STD-010;AI-DOS v4 master roadmap; RC2 migration reports. |
 | Supersedes | None |
 | Superseded By | None |
 | Promotion Requirements | Human Governance review and explicit acceptance before any follow-up repository movement or canonicalization work. |
@@ -42,7 +42,7 @@ This audit classified 230 documentation artifacts under the requested scope. The
 
 Verdict: **REQUIRES FOLLOW-UP**.
 
-The audit supports the next task, **FORGE-AI.V4.REPO-CANONICALIZATION-01 — PARALLEL SYSTEM SEPARATION PLAN**, but does not authorize file movement.
+The audit supports the next task, **AI-DOS.V4.REPO-CANONICALIZATION-01 — PARALLEL SYSTEM SEPARATION PLAN**, but does not authorize file movement.
 
 ## Scope
 
@@ -69,7 +69,7 @@ In scope:
 3. Classified each artifact into exactly one primary category using path role, document title, metadata where present, active references, and frozen-area constraints.
 4. Treated classification as audit evidence only, not as promotion or deprecation.
 
-Note: the requested path `docs/AI/Architecture/Reports/Forge-AI-Program-Architecture-Master-Roadmap-v4.md` was not present. The matching document was reviewed at `docs/AI/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md`.
+Note: the requested path `docs/AI/Architecture/Reports/AI-DOS-Program-Architecture-Master-Roadmap-v4.md` was not present. The matching document was reviewed at `docs/AI/Roadmap/AI-DOS-Program-Architecture-Master-Roadmap-v4.md`.
 
 ## Repository Inventory Summary
 
@@ -175,13 +175,13 @@ Note: the requested path `docs/AI/Architecture/Reports/Forge-AI-Program-Architec
 | `docs/AI/Architecture/Appendix/STD-000-Framework-Standards-Appendix-B-Certification-Templates.md` | Reviewed documentation artifact | Unknown / Requires Governance Decision | Unclassified appendix/schema/blueprint or unmapped support document | Not clear from inventory | No | No | Unknown | REQUIRES GOVERNANCE DECISION |
 | `docs/AI/Architecture/Appendix/STD-000-Framework-Standards-Appendix-C-Migration-Playbook.md` | Reviewed documentation artifact | Unknown / Requires Governance Decision | Unclassified appendix/schema/blueprint or unmapped support document | Not clear from inventory | No | No | Unknown | REQUIRES GOVERNANCE DECISION |
 | `docs/AI/Architecture/Appendix/STD-002-Discovery-Standard-Appendix-A-Discovery-Classification-Catalog.md` | Reviewed documentation artifact | Unknown / Requires Governance Decision | Unclassified appendix/schema/blueprint or unmapped support document | Not clear from inventory | No | No | Unknown | REQUIRES GOVERNANCE DECISION |
-| `docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md` | Reviewed documentation artifact | Unknown / Requires Governance Decision | Unclassified appendix/schema/blueprint or unmapped support document | Not clear from inventory | No | No | Unknown | REQUIRES GOVERNANCE DECISION |
+| `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md` | Reviewed documentation artifact | Unknown / Requires Governance Decision | Unclassified appendix/schema/blueprint or unmapped support document | Not clear from inventory | No | No | Unknown | REQUIRES GOVERNANCE DECISION |
 | `docs/AI/Architecture/Governance/GOV-001-Human-Governance-Approval.md` | Reviewed documentation artifact | Draft / Candidate | Current v3/v4 candidate authority or repository entry | Framework Governance / Architecture Team | Only within active authorized task | No | Yes | KEEP |
-| `docs/AI/Architecture/Reports/Forge-AI-Architecture-Consistency-Audit-v1.0.md` | Reviewed documentation artifact | Evidence / Report | Low / evidentiary | Varies; source report metadata | No, except report amendment task | No | Yes, if cited | KEEP AS EVIDENCE |
-| `docs/AI/Architecture/Reports/Forge-AI-Authority-Cleanup-Plan-v1.0.md` | Reviewed documentation artifact | Evidence / Report | Low / evidentiary | Varies; source report metadata | No, except report amendment task | No | Yes, if cited | KEEP AS EVIDENCE |
-| `docs/AI/Architecture/Reports/Forge-AI-v3-Authority-Alignment-Plan.md` | Reviewed documentation artifact | Evidence / Report | Low / evidentiary | Varies; source report metadata | No, except report amendment task | No | Yes, if cited | KEEP AS EVIDENCE |
-| `docs/AI/Architecture/Reports/Forge-AI-v3-Migration-Strategy.md` | Reviewed documentation artifact | Evidence / Report | Low / evidentiary | Varies; source report metadata | No, except report amendment task | No | Yes, if cited | KEEP AS EVIDENCE |
-| `docs/AI/Architecture/Reports/Forge-AI-v3-Transitional-Authority-Verification.md` | Reviewed documentation artifact | Evidence / Report | Low / evidentiary | Varies; source report metadata | No, except report amendment task | No | Yes, if cited | KEEP AS EVIDENCE |
+| `docs/AI/Architecture/Reports/AI-DOS-Architecture-Consistency-Audit-v1.0.md` | Reviewed documentation artifact | Evidence / Report | Low / evidentiary | Varies; source report metadata | No, except report amendment task | No | Yes, if cited | KEEP AS EVIDENCE |
+| `docs/AI/Architecture/Reports/AI-DOS-Authority-Cleanup-Plan-v1.0.md` | Reviewed documentation artifact | Evidence / Report | Low / evidentiary | Varies; source report metadata | No, except report amendment task | No | Yes, if cited | KEEP AS EVIDENCE |
+| `docs/AI/Architecture/Reports/AI-DOS-v3-Authority-Alignment-Plan.md` | Reviewed documentation artifact | Evidence / Report | Low / evidentiary | Varies; source report metadata | No, except report amendment task | No | Yes, if cited | KEEP AS EVIDENCE |
+| `docs/AI/Architecture/Reports/AI-DOS-v3-Migration-Strategy.md` | Reviewed documentation artifact | Evidence / Report | Low / evidentiary | Varies; source report metadata | No, except report amendment task | No | Yes, if cited | KEEP AS EVIDENCE |
+| `docs/AI/Architecture/Reports/AI-DOS-v3-Transitional-Authority-Verification.md` | Reviewed documentation artifact | Evidence / Report | Low / evidentiary | Varies; source report metadata | No, except report amendment task | No | Yes, if cited | KEEP AS EVIDENCE |
 | `docs/AI/Architecture/Reports/RC2-Specification-Harvest-Report.md` | Reviewed documentation artifact | Evidence / Report | Low / evidentiary | Varies; source report metadata | No, except report amendment task | No | Yes, if cited | KEEP AS EVIDENCE |
 | `docs/AI/Architecture/Reports/RC2-Specification-Legacy-Migration-Plan.md` | Reviewed documentation artifact | Evidence / Report | Low / evidentiary | Varies; source report metadata | No, except report amendment task | No | Yes, if cited | KEEP AS EVIDENCE |
 | `docs/AI/Architecture/Schemas/STD-002-Discovery-Graph-Model.md` | Reviewed documentation artifact | Unknown / Requires Governance Decision | Unclassified appendix/schema/blueprint or unmapped support document | Not clear from inventory | No | No | Unknown | REQUIRES GOVERNANCE DECISION |
@@ -222,8 +222,8 @@ Note: the requested path `docs/AI/Architecture/Reports/Forge-AI-Program-Architec
 | `docs/AI/Meta/M.1-Artifact-Meta-Model.md` | Reviewed documentation artifact | Draft / Candidate | Current v3/v4 candidate authority or repository entry | Framework Governance / Architecture Team | Only within active authorized task | No | Yes | KEEP |
 | `docs/AI/Meta/M.1-Step-01-Change-Log.md` | Reviewed documentation artifact | Evidence / Report | Low / evidentiary | Varies; source report metadata | No, except report amendment task | No | Yes, if cited | KEEP AS EVIDENCE |
 | `docs/AI/README.md` | Reviewed documentation artifact | Draft / Candidate | Current v3/v4 candidate authority or repository entry | Framework Governance / Architecture Team | Only within active authorized task | No | Yes | KEEP |
-| `docs/AI/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md` | Reviewed documentation artifact | Transitional | Roadmap/status or legacy roadmap state | Framework Governance / Human Governance | No unless dedicated status/roadmap task | No | Yes | KEEP |
-| `docs/AI/Roadmap/Forge-AI-v3-Master-Architecture-Development-Roadmap.md` | Reviewed documentation artifact | Transitional | Roadmap/status or legacy roadmap state | Framework Governance / Human Governance | No unless dedicated status/roadmap task | No | Yes | KEEP |
+| `docs/AI/Roadmap/AI-DOS-Program-Architecture-Master-Roadmap-v4.md` | Reviewed documentation artifact | Transitional | Roadmap/status or legacy roadmap state | Framework Governance / Human Governance | No unless dedicated status/roadmap task | No | Yes | KEEP |
+| `docs/AI/Roadmap/AI-DOS-v3-Master-Architecture-Development-Roadmap.md` | Reviewed documentation artifact | Transitional | Roadmap/status or legacy roadmap state | Framework Governance / Human Governance | No unless dedicated status/roadmap task | No | Yes | KEEP |
 | `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md` | Reviewed documentation artifact | Draft / Candidate | Current v3/v4 candidate authority or repository entry | Framework Governance / Architecture Team | Only within active authorized task | No | Yes | KEEP |
 | `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md` | Reviewed documentation artifact | Draft / Candidate | Current v3/v4 candidate authority or repository entry | Framework Governance / Architecture Team | Only within active authorized task | No | Yes | KEEP |
 | `docs/AI/Runtime/A.4.1-Engine-Kernel-RFC.md` | Reviewed documentation artifact | Draft / Candidate | Current v3/v4 candidate authority or repository entry | Framework Governance / Architecture Team | Only within active authorized task | No | Yes | KEEP |
@@ -439,7 +439,7 @@ The repository can be classified well enough to plan canonicalization, but it is
 
 ## Recommended Next Step
 
-Proceed with **FORGE-AI.V4.REPO-CANONICALIZATION-01 — PARALLEL SYSTEM SEPARATION PLAN**.
+Proceed with **AI-DOS.V4.REPO-CANONICALIZATION-01 — PARALLEL SYSTEM SEPARATION PLAN**.
 
 That plan should define explicit lanes for:
 

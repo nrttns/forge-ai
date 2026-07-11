@@ -1,4 +1,4 @@
-# Forge AI — AGENTS v2 Agent Lifecycle and Governance Boundaries
+#AI-DOS — AGENTS v2 Agent Lifecycle and Governance Boundaries
 
 ---
 
@@ -6,8 +6,8 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.AGENTS.V2.AGENT-LIFECYCLE-AND-GOVERNANCE-BOUNDARIES` |
-| Title | Forge AI — AGENTS v2 Agent Lifecycle and Governance Boundaries |
+| Identifier | `AI-DOS.AGENTS.V2.AGENT-LIFECYCLE-AND-GOVERNANCE-BOUNDARIES` |
+| Title |AI-DOS — AGENTS v2 Agent Lifecycle and Governance Boundaries |
 | Version | 0.1.0-draft |
 | Status | Draft |
 | Canonical Status | Non-canonical until reviewed, approved, and promoted through Human Governance / Framework Governance |
@@ -20,7 +20,7 @@
 | Created | 2026-07-08 |
 | Last Updated | 2026-07-08 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.ARCHITECTURE.AGENTS.V2.LIFECYCLE-GOVERNANCE-BOUNDARIES` |
+| Traceability ID | `AI-DOS.ARCHITECTURE.AGENTS.V2.LIFECYCLE-GOVERNANCE-BOUNDARIES` |
 | Scope | Documentation-level AGENTS v2 agent lifecycle model, lifecycle states, lifecycle transitions, activation, suspension, deactivation, Human Governance boundaries, AI decision boundaries, review, approval, certification, ProjectStatus, frozen-area, and validation boundaries. |
 | Out of Scope | Lifecycle runtime implementation, scheduling, queues, dispatch, routing, messaging, execution, swarm behavior, platform adapters, Engine RFC work, Runtime redefinition, Engine Platform redefinition, Governance redefinition, Standards redefinition, M.0 redefinition, M.1 redefinition, STD-010 redefinition, and ProjectStatus updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Architecture.md` |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-This document defines the AGENTS v2 agent lifecycle and governance-boundary model for Forge AI.
+This document defines the AGENTS v2 agent lifecycle and governance-boundary model for AI-DOS.
 
 Its purpose is to describe how future AGENTS v2 agent identities, registry entries, roles, and capability declarations may move through governed lifecycle states at the documentation and architecture-specification level.
 

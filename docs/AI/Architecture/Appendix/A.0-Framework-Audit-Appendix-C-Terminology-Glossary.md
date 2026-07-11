@@ -1,6 +1,6 @@
 # Appendix C: Terminology Glossary Extract
 
-> **Parent Document:** [A.0 — Framework Audit](../A.0-Framework-Audit.md) (`FORGE-AUDIT-A.0`)
+> **Parent Document:** [A.0 — Framework Audit](../A.0-Framework-Audit.md) (`AI-DOS-AUDIT-A.0`)
 > **Version:** 3.0.0-beta
 > **Status:** Draft
 
@@ -29,9 +29,9 @@ This appendix extracts and consolidates the architectural terminology identified
 
 | Preferred Term | Definition | Owner | Authority | Synonyms | Deprecated Terms | Lifecycle Status |
 |:---|:---|:---|:---|:---|:---|:---|
-| **Framework** | The complete Forge AI architectural system encompassing governance, planning, runtime, execution, validation, documentation, and platform layers. | Forge AI Framework | Constitution | Forge AI Framework, Forge Framework | — | Canonical |
-| **Framework Core** | The foundational set of documents (A.1–A.9) that define the architectural truth, principles, models, and governance of the Forge AI Framework. | Architecture Owner | Framework Governance | Core Documents | — | Canonical |
-| **Framework Core Redesign** | The structured architectural activity to evolve the existing Forge AI Framework into the Forge AI v3 Framework Core, governed by this audit and subsequent documents. | Architecture Owner | Framework Governance | Redesign Program, v3 Redesign | — | Approved |
+| **Framework** | The completeAI-DOS architectural system encompassing governance, planning, runtime, execution, validation, documentation, and platform layers. |AI-DOS Framework | Constitution |AI-DOS Framework, AI-DOS Framework | — | Canonical |
+| **Framework Core** | The foundational set of documents (A.1–A.9) that define the architectural truth, principles, models, and governance of theAI-DOS Framework. | Architecture Owner | Framework Governance | Core Documents | — | Canonical |
+| **Framework Core Redesign** | The structured architectural activity to evolve the existingAI-DOS Framework into theAI-DOS v3 Framework Core, governed by this audit and subsequent documents. | Architecture Owner | Framework Governance | Redesign Program, v3 Redesign | — | Approved |
 | **Architecture Discovery Document (ADD)** | A master discovery artifact that combines architectural discovery, governance evidence, migration analysis, and historical traceability into a single canonical document. | Architecture Owner | Framework Governance | Master Audit | — | Proposed |
 | **Master Architecture Audit** | A Framework-level audit that evaluates the entire Framework as a complete architectural system for discovery rather than verification. | Architecture Owner | Framework Governance | Framework Audit | — | Approved |
 
@@ -172,7 +172,7 @@ This appendix extracts and consolidates the architectural terminology identified
 
 | Preferred Term | Definition | Owner | Authority | Synonyms | Deprecated Terms | Lifecycle Status |
 |:---|:---|:---|:---|:---|:---|:---|
-| **AI Development Operating System (AI-DOS)** | The target architectural vision for Forge AI v3: a complete operating system for AI-assisted software development. | Architecture Owner | Constitution | AI-DOS | — | Proposed |
+| **AI Development Operating System (AI-DOS)** | The target architectural vision forAI-DOS v3: a complete operating system for AI-assisted software development. | Architecture Owner | Constitution | AI-DOS | — | Proposed |
 | **AI Orchestrator** | The coordinating component responsible for managing AI agents, swarm execution, and engine interactions. | Runtime Owner | Runtime | Orchestrator | — | Approved |
 | **Context Graph** | The graph-based model representing relationships, dependencies, and state within the execution context. | Runtime Owner | Runtime | — | — | Incomplete |
 | **Knowledge Graph** | The graph-based model representing the canonical knowledge of the Framework. | Knowledge Owner | Engine Model | — | — | Missing |

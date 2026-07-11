@@ -1,6 +1,6 @@
 # Runtime RFC Family Index and Navigation Guide
 
-> Forge AI v2 repository-normalization program  
+>AI-DOS v2 repository-normalization program  
 > Runtime RFC Family · Navigation Guide · Draft / Non-canonical
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-RUNTIME-README` |
+| Identifier | `AI-DOS-RUNTIME-README` |
 | Title | Runtime RFC Family Index and Navigation Guide |
 | Version | `0.1.0-draft` |
 | Status | Draft |
@@ -23,7 +23,7 @@
 | Created | 2026-07-10 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.V2.RUNTIME.README` |
+| Traceability ID | `AI-DOS.V2.RUNTIME.README` |
 | Scope | Runtime RFC family navigation, Runtime family documentation inventory, Runtime family reading order, Runtime family relationships, Runtime ownership map, Runtime dependency map, AI consumption guidance, and repository-normalization notes. |
 | Out of Scope | Redefining Runtime Architecture, redefining Engine Architecture, redefining Engine Foundation behavior, redefining Engine Specialization behavior, changing Runtime lifecycle, changing Engine lifecycle, creating implementation scope, certifying Runtime documents, freezing Runtime documents, or updating ProjectStatus. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
@@ -41,7 +41,7 @@
 
 ## 1. Purpose
 
-This README is the entry point for the Forge AI Runtime RFC family. It helps humans and AI agents find the correct Runtime, Engine Platform, Engine Foundation, Engine Specialization, and Runtime report documents without creating a parallel Runtime authority.
+This README is the entry point for theAI-DOS Runtime RFC family. It helps humans and AI agents find the correct Runtime, Engine Platform, Engine Foundation, Engine Specialization, and Runtime report documents without creating a parallel Runtime authority.
 
 This README is not a Runtime specification, Runtime RFC, Engine RFC, Engine Platform RFC, Engine Specialization RFC, Runtime audit, Runtime freeze review, Runtime freeze declaration, or ProjectStatus update.
 

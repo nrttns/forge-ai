@@ -125,7 +125,7 @@ Evidence collected here supports Certification Audits but does not itself certif
 
 # Reference Implementation
 
-Forge AI is the first official Reference Implementation used during Operational Validation.
+AI-DOS is the first official Reference Implementation used during Operational Validation.
 
 Future projects may contribute additional evidence once they adopt the AI Framework.
 

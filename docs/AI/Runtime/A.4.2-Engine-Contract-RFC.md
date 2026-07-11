@@ -1,6 +1,6 @@
 # A.4.2 — Engine Contract RFC
 
-> Forge AI v3 · Engine Architecture RFC
+>AI-DOS v3 · Engine Architecture RFC
 > Engine Contract · Draft / Non-canonical
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-A-004.2` |
+| Identifier | `AI-DOS-A-004.2` |
 | Title | A.4.2 — Engine Contract RFC |
 | Version | `0.2.0-draft` |
 | Status | RFC / Draft |
@@ -23,7 +23,7 @@
 | Created | 2026-07-07 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.V3.A.004.2` |
+| Traceability ID | `AI-DOS.V3.A.004.2` |
 | Scope | Engine Contract RFC documentation-only architecture |
 | Out of Scope | Implementation, runtime behavior changes, certification, and ProjectStatus updates |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/FrameworkGovernance.md` |
@@ -41,13 +41,13 @@
 
 ## Executive Summary
 
-This RFC defines the Engine Contract — the minimum architectural contract every Forge AI Engine must declare before it can be discovered, registered, invoked, validated, or governed through the Engine Kernel. The contract establishes a stable, technology-independent interface covering identity, metadata, lifecycle, capabilities, dependencies, invocation, validation, artifacts, events, telemetry, traceability, compatibility, versioning, and governance constraints. It sits between A.4.1 (Engine Kernel) and individual Engines, ensuring every Engine is identifiable, owned, versioned, discoverable, dependency-aware, capability-bounded, invocation-ready, validation-compatible, artifact-compatible, graph-compatible, observable, traceable, and governable — without defining implementation APIs, programming language interfaces, or business logic.
+This RFC defines the Engine Contract — the minimum architectural contract everyAI-DOS Engine must declare before it can be discovered, registered, invoked, validated, or governed through the Engine Kernel. The contract establishes a stable, technology-independent interface covering identity, metadata, lifecycle, capabilities, dependencies, invocation, validation, artifacts, events, telemetry, traceability, compatibility, versioning, and governance constraints. It sits between A.4.1 (Engine Kernel) and individual Engines, ensuring every Engine is identifiable, owned, versioned, discoverable, dependency-aware, capability-bounded, invocation-ready, validation-compatible, artifact-compatible, graph-compatible, observable, traceable, and governable — without defining implementation APIs, programming language interfaces, or business logic.
 
 ---
 
 ## Purpose
 
-The Engine Contract defines the minimum architectural contract every Forge AI Engine shall implement before it can be discovered, registered, invoked, validated, observed, reviewed, or governed through the Engine Kernel.
+The Engine Contract defines the minimum architectural contract everyAI-DOS Engine shall implement before it can be discovered, registered, invoked, validated, observed, reviewed, or governed through the Engine Kernel.
 
 The contract establishes the stable interface between the Engine Kernel and individual Engines without defining implementation APIs, programming language interfaces, runtime hosts, storage systems, transport protocols, provider integrations, or business logic.
 
@@ -120,7 +120,7 @@ This RFC does not:
 
 This RFC is governed by the following authority chain, listed from highest to nearest:
 
-1. **Human Governance** — Final authority over all Forge AI architectural decisions, certification, and promotion.
+1. **Human Governance** — Final authority over allAI-DOS architectural decisions, certification, and promotion.
 2. **`AGENTS.md`** — Operational governance contract defining agent behavior, constraints, and authority boundaries.
 3. **`docs/FrameworkGovernance.md`** — Transitional v3 governance framework defining authority delegation, review, and approval processes.
 4. **`docs/AI/Architecture/A.1-Constitution.md`** — Constitutional authority governing framework-level principles, rights, and structural constraints.
@@ -139,7 +139,7 @@ This RFC is governed by the following authority chain, listed from highest to ne
 This RFC consumes the following normative references:
 
 1. `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` — Document metadata format and mandatory field definitions.
-2. `docs/AI/Architecture/A.1-Constitution.md` — Constitutional principles governing all Forge AI artifacts.
+2. `docs/AI/Architecture/A.1-Constitution.md` — Constitutional principles governing allAI-DOS artifacts.
 3. `docs/AI/Meta/M.0-Framework-Meta-Model.md` — Framework meta-model defining core conceptual primitives.
 4. `docs/AI/Meta/M.1-Artifact-Meta-Model.md` — Artifact meta-model defining the common governed artifact contract.
 5. `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md` — Standards library governance, lifecycle, and validation rules.
@@ -238,7 +238,7 @@ The Engine Contract is the minimum common architectural interface required for t
 
 ### Contract Definition
 
-An Engine Contract is a governed architectural declaration that describes the minimum identity, metadata, lifecycle, capability, dependency, invocation, validation, artifact, event, telemetry, traceability, state, and registry expectations for a Forge AI Engine.
+An Engine Contract is a governed architectural declaration that describes the minimum identity, metadata, lifecycle, capability, dependency, invocation, validation, artifact, event, telemetry, traceability, state, and registry expectations for aAI-DOS Engine.
 
 Every Engine shall expose a contract before it can be considered available to the Engine Kernel.
 

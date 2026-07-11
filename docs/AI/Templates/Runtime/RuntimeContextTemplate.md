@@ -1,6 +1,6 @@
 # Runtime Context Template
 
-> Forge AI v2 · Runtime Templates<br>
+>AI-DOS v2 · Runtime Templates<br>
 > Template Artifact · Draft / Non-canonical
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-RUNTIME-CONTEXT` |
+| Identifier | `AI-DOS-TPL-RUNTIME-CONTEXT` |
 | Title | Runtime Context Template |
 | Version | `2.0.0-draft` |
 | Status | Draft |
@@ -23,12 +23,12 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Operational Core Alignment |
-| Traceability ID | `FORGE-AI.V2.TEMPLATES.RUNTIME.CONTEXT` |
+| Traceability ID | `AI-DOS.V2.TEMPLATES.RUNTIME.CONTEXT` |
 | Scope | Defines the reusable structure for documenting the active runtime context used by an agent or coordinated execution unit, including actor details, task scope, runtime inputs, constraints, required outputs, and release conditions. |
 | Out of Scope | Runtime authority redefinition, engine authority redefinition, context authority redefinition, workflow authority creation, validation authority creation, review authority creation, certification authority creation, governance authority creation, ProjectStatus updates, runtime implementation, engine implementation, workflow implementation, architecture redefinition, and canonical promotion. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
 | Normative References | `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/README.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/Runtime/A.5.4-Decision-Engine-RFC.md`; `docs/AI/System/ContextAssembly.md` |
-| Dependencies | STD-003 terminology; STD-010 metadata schema; TPL-000 template governance; Runtime Architecture RFC; Engine Architecture RFC; Decision Engine RFC where decision context is applicable; System Context Assembly; Forge AI template library |
+| Dependencies | STD-003 terminology; STD-010 metadata schema; TPL-000 template governance; Runtime Architecture RFC; Engine Architecture RFC; Decision Engine RFC where decision context is applicable; System Context Assembly;AI-DOS template library |
 | Consumes | STD-003 canonical terminology; STD-010 mandatory metadata fields; TPL-000 placeholder grammar, lifecycle, taxonomy, compliance model, and validation requirements; Runtime, Engine, Decision, and Context boundaries |
 | Produces | Reusable runtime context artifact structure |
 | Related Specifications | `docs/AI/Templates/Runtime/`; `docs/AI/Templates/Context/`; `docs/AI/Templates/Workflow/`; `docs/AI/Templates/Validation/`; `docs/AI/Templates/README.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md` |

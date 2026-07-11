@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.SYSTEM.DECISION-MODEL` |
+| Identifier | `AI-DOS.SYSTEM.DECISION-MODEL` |
 | Title | AI System Decision Model |
 | Version | `2.0.0-draft` |
 | Status | Draft |
@@ -20,8 +20,8 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Draft Operational Core Alignment |
-| Traceability ID | `FORGE-AI.V2.OP-005E` |
-| Scope | Decision classification, safe-action selection, stop/proceed rules, escalation decisions, command or workflow routing decisions, ProjectStatus update recommendation decisions, blocker decisions, and validation or review routing decisions for Forge AI agents. |
+| Traceability ID | `AI-DOS.V2.OP-005E` |
+| Scope | Decision classification, safe-action selection, stop/proceed rules, escalation decisions, command or workflow routing decisions, ProjectStatus update recommendation decisions, blocker decisions, and validation or review routing decisions forAI-DOS agents. |
 | Out of Scope | Authority resolution, source-of-truth ownership, context assembly, governance decisions, ProjectStatus ownership, Runtime definitions, Engine definitions, command definitions, workflow definitions, template definitions, execution, certification, canonical promotion, and implementation. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
 | Normative References | `docs/AI/System/AuthorityModel.md`; `docs/AI/System/BootSequence.md`; `docs/AI/System/SourceOfTruth.md`; `docs/AI/System/ContextAssembly.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-This document defines how Forge AI agents choose the next safe action after authority resolution, boot, source-of-truth selection, and context assembly.
+This document defines howAI-DOS agents choose the next safe action after authority resolution, boot, source-of-truth selection, and context assembly.
 
 DecisionModel determines the safe operational decision after context is assembled. It answers whether an agent should proceed, stop, ask for Human Governance, recommend a ProjectStatus update, route to a command, route to a workflow, route to validation or review, or report a blocker.
 

@@ -1,11 +1,11 @@
-# Forge AI Repository Rationalization Audit
+#AI-DOS Repository Rationalization Audit
 
 ## Document Metadata
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.REPORT.REPOSITORY-RATIONALIZATION-AUDIT` |
-| Title | Forge AI Repository Rationalization Audit |
+| Identifier | `AI-DOS.REPORT.REPOSITORY-RATIONALIZATION-AUDIT` |
+| Title |AI-DOS Repository Rationalization Audit |
 | Version | `1.0.0` |
 | Status | Audit Complete |
 | Canonical Status | Authoritative cleanup baseline for subsequent executable cleanup batches; not a promotion or certification artifact |
@@ -18,7 +18,7 @@
 | Created | 2026-07-10 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Phase B — Remaining Legacy / Reference Cleanup Repository Rationalization |
-| Traceability ID | `FORGE-AI.V2.REPOSITORY-RATIONALIZATION.AUDIT` |
+| Traceability ID | `AI-DOS.V2.REPOSITORY-RATIONALIZATION.AUDIT` |
 | Scope | Repository-wide inspection and classification of active, legacy, duplicated, transitional, RC1, RC2, merged, stale, report, navigation, and reference material for cleanup planning. |
 | Out of Scope | Deletion, movement, archive execution, merge execution, refactoring of active documents, ProjectStatus updates, DevelopmentPhases updates, Runtime RFC modification, Runtime README modification, Template Library modification, System Layer modification, architecture redesign, Repository Contract creation, Repository Adapter creation, Repository Freeze, and Axis Suite implementation. |
 | Normative Authority | Human task instruction; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
@@ -26,7 +26,7 @@
 | Dependencies | Repository tree inspection; Markdown reference scan; RC1/RC2 search; path-universalization search; existing reports and freeze records. |
 | Consumes | Governance Atlas, Framework Governance, ProjectStatus, DevelopmentPhases, Operational Core, System Layer, Runtime RFC family, Template Library, AGENTS architecture family, Meta Foundation, Standards, existing reports, repository file tree, and local Markdown links. |
 | Produces | Canonical owner map, boot-chain assessment, hardcoded path inventory, RC1 and RC2 inventories, parallel-system findings, disposition matrix, ordered cleanup batches, validation plan, and Axis Suite readiness impact. |
-| Related Specifications | `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Operational/Operational-Core-Replacement-Matrix.md`; `docs/AI/Architecture/Reports/Forge-AI-Repository-Classification-Audit-v1.0.md`; `docs/AI/Architecture/Reports/RC2-Specification-Harvest-Report.md`; `docs/AI/Architecture/Reports/RC2-Specification-Legacy-Migration-Plan.md`; `docs/AI/Architecture/Reports/Forge-AI-Authority-Cleanup-Plan-v1.0.md` |
+| Related Specifications | `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Operational/Operational-Core-Replacement-Matrix.md`; `docs/AI/Architecture/Reports/AI-DOS-Repository-Classification-Audit-v1.0.md`; `docs/AI/Architecture/Reports/RC2-Specification-Harvest-Report.md`; `docs/AI/Architecture/Reports/RC2-Specification-Legacy-Migration-Plan.md`; `docs/AI/Architecture/Reports/AI-DOS-Authority-Cleanup-Plan-v1.0.md` |
 | Supersedes | None |
 | Superseded By | None |
 | Promotion Requirements | Human Governance review before executing cleanup batches that touch frozen families, archived evidence, ProjectStatus, DevelopmentPhases, Runtime RFCs, System Layer, Template Library, or AGENTS v2 Core. |
@@ -39,7 +39,7 @@
 | Revision | Date | Amendment | Summary |
 |:---|:---|:---|:---|
 | Original | 2026-07-10 | Repository Rationalization Audit | Established the original repository rationalization audit baseline before formal Target Repository operating-model clarification. |
-| Revision 1 | 2026-07-10 | Target Repository Awareness Amendment | Amends the audit to distinguish Forge AI self-hosting from external Target Repository operation without replacing the audit, re-inventorying the repository, or creating a new disposition matrix from scratch. |
+| Revision 1 | 2026-07-10 | Target Repository Awareness Amendment | Amends the audit to distinguishAI-DOS self-hosting from external Target Repository operation without replacing the audit, re-inventorying the repository, or creating a new disposition matrix from scratch. |
 
 ## 1. Executive Summary
 
@@ -47,7 +47,7 @@ The repository currently contains parallel systems. The current repository bootl
 
 RC1 and RC2 material remains active by reference. The scan found 37 RC1 textual references across 22 Markdown files and 466 RC2 textual references across 60 Markdown files. RC2 is not uniformly obsolete: some references are valid migration evidence, while the old `docs/AI/Specification/`, `docs/AI/Validation/`, `docs/AI/Certification/`, `docs/AI/Lifecycle/`, `docs/AI/Testing/`, and old Project Template paths compete with current v2/v3/v4 owners when loaded by `docs/AI/README.md` and related RC2 chains.
 
-Invalid Forge AI path universalization exists. The scan found 404 explicit ProjectStatus / DevelopmentPhases path references across 101 Markdown files, including stale `docs/ProjectStatus.md` references and generic Framework/Operational documents that should resolve target-project state through the target repository root `AGENTS.md` rather than imposing Forge AI planning paths universally.
+InvalidAI-DOS path universalization exists. The scan found 404 explicit ProjectStatus / DevelopmentPhases path references across 101 Markdown files, including stale `docs/ProjectStatus.md` references and generic Framework/Operational documents that should resolve target-project state through the target repository root `AGENTS.md` rather than imposingAI-DOS planning paths universally.
 
 The repository can proceed to cleanup batches, but not as a single broad deletion. The audit verdict is **READY FOR CLEANUP WITH GOVERNANCE BLOCKERS** because frozen System Layer, Template Library, and AGENTS v2 Core defects require controlled Human Governance decisions before modification.
 
@@ -58,9 +58,9 @@ No frozen-layer blocker requires immediate content editing in this audit. Frozen
 
 Revision 1 preserves the original audit and all valid findings. It amends only the findings, disposition assumptions, cleanup sequencing, and validation expectations affected by the later Target Repository operating model recorded in A.2 Operational Boundary, Target Repository Resolution, System Layer Freeze, and Target Project Path Resolution.
 
-The original audit correctly identified invalid Forge AI path universalization as a repository-rationalization concern. Revision 1 narrows that finding: Forge-AI-specific paths are not inherently invalid. They are valid when Forge AI is self-hosting as the active Target Repository, invalid when embedded as universal requirements in reusable Framework or operational documents, and historical when retained as evidence of prior repository state.
+The original audit correctly identified invalidAI-DOS path universalization as a repository-rationalization concern. Revision 1 narrows that finding: AI-DOS-specific paths are not inherently invalid. They are valid whenAI-DOS is self-hosting as the active Target Repository, invalid when embedded as universal requirements in reusable Framework or operational documents, and historical when retained as evidence of prior repository state.
 
-The revised cleanup posture is therefore **READY FOR TARGET-PATH NORMALIZATION BEFORE GENERAL CLEANUP**. Cleanup batches should not remove or rewrite Forge AI self-hosting paths merely because they are Forge-specific. They should first normalize reusable Framework, Operational Core, Command, Workflow, and Template language so target-project paths are resolved through the active Target Repository declaration.
+The revised cleanup posture is therefore **READY FOR TARGET-PATH NORMALIZATION BEFORE GENERAL CLEANUP**. Cleanup batches should not remove or rewriteAI-DOS self-hosting paths merely because they are AI-DOS-specific. They should first normalize reusable Framework, Operational Core, Command, Workflow, and Template language so target-project paths are resolved through the active Target Repository declaration.
 
 Affected findings count: **14 disposition rows / families** are amended by Revision 1: D-002, D-005, D-006, D-007, D-009, D-010, D-011, D-012, D-015, D-021, D-038, D-039, D-042, and D-045. Unaffected findings remain governed by the original audit.
 
@@ -97,7 +97,7 @@ The audit consumed the mandated authority set: root `AGENTS.md`, Governance Atla
 
 | Evidence | Result |
 |:---|:---|
-| Repository Markdown inventory | 245 Markdown files inspected, including 8 Markdown files under `node_modules` explicitly counted as repository-surface Markdown but excluded from Forge AI governance dispositions. |
+| Repository Markdown inventory | 245 Markdown files inspected, including 8 Markdown files under `node_modules` explicitly counted as repository-surface Markdown but excluded fromAI-DOS governance dispositions. |
 | Directory inventory | 101 directories inspected. |
 | Markdown reference scan | 4,578 local Markdown references checked. |
 | Broken reference scan | 336 broken local Markdown references detected. |
@@ -114,11 +114,11 @@ The audit consumed the mandated authority set: root `AGENTS.md`, Governance Atla
 | Directory | Markdown Files | Classification |
 |:---|---:|:---|
 | `/` | 2 | Root repository boot and general README surface. |
-| `docs/` | 235 | Forge AI governed documentation corpus. |
-| `node_modules/` | 8 | Dependency package documentation; out of Forge AI governance cleanup except repository-surface accounting. |
+| `docs/` | 235 |AI-DOS governed documentation corpus. |
+| `node_modules/` | 8 | Dependency package documentation; out ofAI-DOS governance cleanup except repository-surface accounting. |
 | **Total** | **245** | Complete Markdown inspection scope. |
 
-### 6.2 Counts by Material Forge AI Family
+### 6.2 Counts by MaterialAI-DOS Family
 
 | Family | Files / Families Inspected | Lifecycle / Status | Current vs Legacy Classification | Proposed Primary Disposition |
 |:---|---:|:---|:---|:---|
@@ -172,11 +172,11 @@ The audit consumed the mandated authority set: root `AGENTS.md`, Governance Atla
 Confirmed final operating model:
 
 ```text
-Forge AI / AI-DOS
+AI-DOS / AI-DOS
     provides constitutional rules, governance rules, Meta Models, Standards,
     Runtime and Engine architecture, System Layer, Operational Core,
     Commands, Workflows, Templates, Validation, Review, Certification,
-    and governed Forge Agent behavior.
+    and governed AI-DOS Agent behavior.
 
 Target Project Repository
     provides root AGENTS.md, project governance, project planning paths,
@@ -184,7 +184,7 @@ Target Project Repository
     architecture, source code, implementation state, and validation commands.
 ```
 
-When Forge AI is the target repository, root `AGENTS.md`, `docs/DevelopmentPhases/ProjectStatus.md`, `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`, Forge AI architecture, and Forge AI validation rules direct work. When Axis Suite is the target repository, Axis Suite's root `AGENTS.md`, ProjectStatus, DevelopmentPhases, architecture, implementation state, and validation rules must direct Forge Agent work. Generic Framework documents must not universalize Forge AI planning filenames.
+WhenAI-DOS is the target repository, root `AGENTS.md`, `docs/DevelopmentPhases/ProjectStatus.md`, `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`,AI-DOS architecture, andAI-DOS validation rules direct work. When Axis Suite is the target repository, Axis Suite's root `AGENTS.md`, ProjectStatus, DevelopmentPhases, architecture, implementation state, and validation rules must direct AI-DOS Agent work. Generic Framework documents must not universalizeAI-DOS planning filenames.
 
 ## 8. Canonical Owner Map
 
@@ -204,7 +204,7 @@ When Forge AI is the target repository, root `AGENTS.md`, `docs/DevelopmentPhase
 | Engine Foundation | `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md` | A.5.1-A.5.12 | none active | Protected by task | Engine RFC family | Historical inventory has stale A.5 numbering | Keep current family; refactor reports later. |
 | Engine Specializations | `docs/AI/Runtime/A.5.1` through `A.5.12` | Runtime reports | none active | Protected by task | Operational Core, future implementation | Link scan found stale report references | Keep; fix reports in cleanup batch. |
 | System boot | `docs/AI/System/BootSequence.md` | System README, freeze | Root `AGENTS.md` for repository boot | Frozen | Operational Core | Must not claim repository boot ownership | Human Governance blocker for portability wording. |
-| Authority resolution | `docs/AI/System/AuthorityModel.md` | Governance Atlas, Framework Governance | RC2 GovernanceModel | Frozen | Operational Core | Frozen wording may encode Forge paths | Human Governance blocker if genericized. |
+| Authority resolution | `docs/AI/System/AuthorityModel.md` | Governance Atlas, Framework Governance | RC2 GovernanceModel | Frozen | Operational Core | Frozen wording may encode AI-DOS paths | Human Governance blocker if genericized. |
 | Source-of-truth resolution | `docs/AI/System/SourceOfTruth.md` | System README | ProjectStatus docs | Frozen | Operational Core | Target-project portability risk | Human Governance blocker if edited. |
 | Context assembly | `docs/AI/System/ContextAssembly.md` | Runtime Context Engine | old prompts/workflows | Frozen | Operational Core | None blocking cleanup | Keep. |
 | Decision sequence | `docs/AI/System/DecisionModel.md` | Decision Engine RFC | older command docs | Frozen | Operational Core | Potential duplicate with Decision Engine only if redefined | Keep; no change. |
@@ -212,19 +212,19 @@ When Forge AI is the target repository, root `AGENTS.md`, `docs/DevelopmentPhase
 | Framework entry point | `docs/AI/AIFramework.md` | AI README, Orchestrator, Prompt | `docs/AI/README.md` RC2 master index | Not frozen | Operational Core | README still calls RC2 master | Refactor README and remove old active chain. |
 | Orchestration | `docs/AI/AIOrchestrator.md` | AIFramework, workflows | older lifecycle orchestration docs | Not frozen | Operational Core | RC2 lifecycle may compete | Refactor/merge lifecycle evidence. |
 | Agent-facing operating rules | `docs/AI/AgentSystemPrompt.md` | AGENTS, System Layer | `docs/AI/Tooling/CursorRules.md` | Not frozen | AI agents/tools | Tooling rules may be stale | Refactor or remove CursorRules. |
-| Commands | `docs/AI/Commands/` | Orchestrator, workflows | old command mentions in specs | Not frozen | Operational Core | Hardcoded Forge planning paths | Refactor commands for target-project root resolution. |
+| Commands | `docs/AI/Commands/` | Orchestrator, workflows | old command mentions in specs | Not frozen | Operational Core | Hardcoded AI-DOS planning paths | Refactor commands for target-project root resolution. |
 | Workflows | `docs/AI/Workflows/` | Orchestrator | Lifecycle / Testing scenarios | Not frozen | Commands | ProjectStateUpdater path assumptions | Refactor target-project portability. |
 | Templates | `docs/AI/Templates/README.md` | Template standards, freeze reports | `docs/AI/templates_margedmd.md`; old root templates | Frozen | Template users | Merged generated file duplicates | Remove merged file; frozen edits need approval. |
 | Project bootstrap | `docs/AI/Templates/Project/README.md` | Project templates | older ProjectTemplateArchitecture, TemplateBootstrapWorkflow names | Frozen | Target projects | Stale broken links; possible RC2 residue | Blocked by Human Governance for edits. |
-| Project planning | Target repository root `AGENTS.md` plus that repo's planning docs; Forge self-hosting uses `docs/DevelopmentPhases/` | Planning templates | Generic Framework docs hardcoding Forge paths | Partly frozen templates | Operational Core, Commands | Invalid universalization | Refactor non-frozen docs; controlled unfreeze for templates/system if necessary. |
-| Live operational state | Target repo ProjectStatus; Forge self-hosting `docs/DevelopmentPhases/ProjectStatus.md` | ProjectStateUpdater workflow | `docs/ProjectStatus.md` legacy file | Not frozen | Bootloader, tasks | Duplicate status path | Refactor active refs; archive/remove legacy `docs/ProjectStatus.md`. |
+| Project planning | Target repository root `AGENTS.md` plus that repo's planning docs; AI-DOS self-hosting uses `docs/DevelopmentPhases/` | Planning templates | Generic Framework docs hardcoding AI-DOS paths | Partly frozen templates | Operational Core, Commands | Invalid universalization | Refactor non-frozen docs; controlled unfreeze for templates/system if necessary. |
+| Live operational state | Target repo ProjectStatus; AI-DOS self-hosting `docs/DevelopmentPhases/ProjectStatus.md` | ProjectStateUpdater workflow | `docs/ProjectStatus.md` legacy file | Not frozen | Bootloader, tasks | Duplicate status path | Refactor active refs; archive/remove legacy `docs/ProjectStatus.md`. |
 | Validation | `docs/AI/Runtime/A.5.6-Validation-Engine-RFC.md` plus `docs/AI/Validation/` until replaced | Validation templates | RC2 Validation docs | Mixed | Operational Core | RC2 validation remains operational | Merge valid checklist content into current owner, then remove obsolete sources. |
 | Review | `docs/AI/Runtime/A.5.7-Review-Engine-RFC.md` plus review templates | Agent review checklist | RC2 certification reviews | Mixed | Governance/reports | Some reports evidence only | Keep engine; archive evidence. |
 | Certification | `docs/AI/Runtime/A.5.8-Certification-Engine-RFC.md` plus certification evidence | STD-000 | `docs/AI/Certification/` RC2 docs | Mixed | Governance/reports | RC2 certification readiness not current certification | Archive evidence; remove active chain. |
 | Lifecycle and release governance | Future current lifecycle owner absent outside RC2 | STD-000 lifecycle sections | `docs/AI/Lifecycle/` RC2 family | Not frozen | README old chain | Genuine ownership gap for release governance | BLOCKED BY HUMAN GOVERNANCE: decide retain/refactor lifecycle owner or merge into STD-000/governance. |
 | Agent architecture | `docs/AI/Architecture/Agents/AGENTS-v2.md` | AGENTS v2 family, freeze review | `AGENTS-v1-draft.md` | AGENTS v2 Core frozen by evidence | Governance Atlas, bootloader | v1 historical can be overread | Archive v1 or mark non-active. |
 | Multi-agent architecture | AGENTS v2 roadmap/dev phases; future multi-agent docs | AGENTS v2 Core | Swarm templates | Future/frozen | Architecture planning | Templates can imply activation | Keep templates frozen; clarify activation only with approval. |
-| Platform and target-project integration | Target-project root `AGENTS.md` plus future Platform Adapter docs | Project templates, platform templates | Hardcoded Forge paths | Platform future frozen | Axis Suite readiness | No current adapter; invalid universalization | Refactor path assumptions; do not create adapter. |
+| Platform and target-project integration | Target-project root `AGENTS.md` plus future Platform Adapter docs | Project templates, platform templates | Hardcoded AI-DOS paths | Platform future frozen | Axis Suite readiness | No current adapter; invalid universalization | Refactor path assumptions; do not create adapter. |
 
 ## 9. Current Boot Chain
 
@@ -274,7 +274,7 @@ Findings:
 Target repository root AGENTS.md
   -> target repository governance navigation
   -> target repository ProjectStatus / DevelopmentPhases / planning state
-  -> Forge AI / AI-DOS Framework authorities as required by task:
+  ->AI-DOS / AI-DOS Framework authorities as required by task:
        - Governance Atlas
        - Framework Governance when decision policy is relevant
        - Constitution, Meta Models, Standards
@@ -286,16 +286,16 @@ Target repository root AGENTS.md
   -> task execution within phase, stage, frozen-area, and authority boundaries
 ```
 
-For Forge AI self-hosting, the target repository root is this repository and the planning docs are `docs/DevelopmentPhases/ProjectStatus.md` and `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`. For Axis Suite, the target repository root must be Axis Suite and its planning/state documents must be resolved through Axis Suite's root bootloader.
+ForAI-DOS self-hosting, the target repository root is this repository and the planning docs are `docs/DevelopmentPhases/ProjectStatus.md` and `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`. For Axis Suite, the target repository root must be Axis Suite and its planning/state documents must be resolved through Axis Suite's root bootloader.
 
 ## 11. Framework versus Target-Project Findings
 
 | ID | Finding | Evidence | Required Resolution | Disposition |
 |:---|:---|:---|:---|:---|
-| FTP-001 | Generic Framework documents hardcode Forge AI planning filenames. | 404 explicit path matches across 101 Markdown files. | Non-frozen Framework docs must describe target-project root resolution; Forge self-hosting examples may name Forge paths explicitly. | REFACTOR |
-| FTP-002 | Old README chain directs agents to `docs/ProjectStatus.md`. | `docs/AI/README.md` reading order. | Replace with target-root state resolution and Forge self-hosting exception. | REFACTOR |
-| FTP-003 | Commands and Workflows assume Forge AI state paths. | Commands/Workflows path search hits. | Refactor commands/workflows to consume target repository status docs through target bootloader. | REFACTOR |
-| FTP-004 | Frozen System Layer may encode Forge-specific path resolution. | System Layer path hits and freeze evidence. | Human Governance must authorize controlled unfreeze if portability edits are required. | BLOCKED BY HUMAN GOVERNANCE |
+| FTP-001 | Generic Framework documents hardcodeAI-DOS planning filenames. | 404 explicit path matches across 101 Markdown files. | Non-frozen Framework docs must describe target-project root resolution; AI-DOS self-hosting examples may name AI-DOS paths explicitly. | REFACTOR |
+| FTP-002 | Old README chain directs agents to `docs/ProjectStatus.md`. | `docs/AI/README.md` reading order. | Replace with target-root state resolution and AI-DOS self-hosting exception. | REFACTOR |
+| FTP-003 | Commands and Workflows assumeAI-DOS state paths. | Commands/Workflows path search hits. | Refactor commands/workflows to consume target repository status docs through target bootloader. | REFACTOR |
+| FTP-004 | Frozen System Layer may encode AI-DOS-specific path resolution. | System Layer path hits and freeze evidence. | Human Governance must authorize controlled unfreeze if portability edits are required. | BLOCKED BY HUMAN GOVERNANCE |
 | FTP-005 | Frozen Project Templates contain stale/broken legacy template links and planning assumptions. | Broken link scan and Project Template inspection. | Human Governance must authorize controlled template unfreeze for portability correction. | BLOCKED BY HUMAN GOVERNANCE |
 
 Conclusion: Axis Suite can provide its own planning and operational state without modifying Framework architecture only after non-frozen Operational Core/Commands/Workflows navigation is refactored and any frozen template/system path defects are handled through controlled Human Governance decisions.
@@ -304,18 +304,18 @@ Conclusion: Axis Suite can provide its own planning and operational state withou
 
 | File | Section or line | Current path/reference | Classification | Required resolution | Disposition dependency |
 |:---|:---|:---|:---|:---|:---|
-| `docs/AI/README.md` | Framework Reading Order | `docs/ProjectStatus.md` | stale path / invalid universalization | Replace active read with target-root ProjectStatus resolution; preserve Forge self-hosting note. | Batch 2 / 6 |
-| `docs/AI/AIFramework.md` | Metadata / authority chain | Forge AI ProjectStatus and DevelopmentPhases | valid Forge self-hosting reference, ambiguous generic instruction risk | Clarify target-project resolution where generic; keep Forge self-hosting paths as examples. | Batch 6 |
-| `docs/AI/AIOrchestrator.md` | Metadata / orchestration | Forge AI ProjectStatus and DevelopmentPhases | valid self-hosting, ambiguous generic instruction risk | Refactor target-project routing language. | Batch 6 |
-| `docs/AI/AgentSystemPrompt.md` | Metadata / behavior rules | Forge AI ProjectStatus and DevelopmentPhases | valid self-hosting, ambiguous generic instruction risk | Refactor to target-root state discovery. | Batch 6 |
-| `docs/AI/System/*.md` | Frozen system rules | Forge AI planning/status paths | frozen possible portability defect | Human Governance decides controlled unfreeze. | Batch 6 blocker |
-| `docs/AI/Commands/*.md` | Command inputs | Forge AI planning/status paths | invalid universalization in reusable commands | Refactor command preconditions to target root. | Batch 6 |
-| `docs/AI/Workflows/*.md` | Workflow steps | Forge AI planning/status paths | invalid universalization in reusable workflows | Refactor workflow state resolution. | Batch 6 |
-| `docs/AI/Templates/Planning/*.md` | Planning templates | Forge planning/status paths | frozen template portability defect if normative | Human Governance controlled unfreeze if edits are required. | Batch 6 blocker |
+| `docs/AI/README.md` | Framework Reading Order | `docs/ProjectStatus.md` | stale path / invalid universalization | Replace active read with target-root ProjectStatus resolution; preserve AI-DOS self-hosting note. | Batch 2 / 6 |
+| `docs/AI/AIFramework.md` | Metadata / authority chain |AI-DOS ProjectStatus and DevelopmentPhases | valid AI-DOS self-hosting reference, ambiguous generic instruction risk | Clarify target-project resolution where generic; keep AI-DOS self-hosting paths as examples. | Batch 6 |
+| `docs/AI/AIOrchestrator.md` | Metadata / orchestration |AI-DOS ProjectStatus and DevelopmentPhases | valid self-hosting, ambiguous generic instruction risk | Refactor target-project routing language. | Batch 6 |
+| `docs/AI/AgentSystemPrompt.md` | Metadata / behavior rules |AI-DOS ProjectStatus and DevelopmentPhases | valid self-hosting, ambiguous generic instruction risk | Refactor to target-root state discovery. | Batch 6 |
+| `docs/AI/System/*.md` | Frozen system rules |AI-DOS planning/status paths | frozen possible portability defect | Human Governance decides controlled unfreeze. | Batch 6 blocker |
+| `docs/AI/Commands/*.md` | Command inputs |AI-DOS planning/status paths | invalid universalization in reusable commands | Refactor command preconditions to target root. | Batch 6 |
+| `docs/AI/Workflows/*.md` | Workflow steps |AI-DOS planning/status paths | invalid universalization in reusable workflows | Refactor workflow state resolution. | Batch 6 |
+| `docs/AI/Templates/Planning/*.md` | Planning templates | AI-DOS planning/status paths | frozen template portability defect if normative | Human Governance controlled unfreeze if edits are required. | Batch 6 blocker |
 | `docs/AI/Templates/Project/*.md` | Project template docs | ProjectStatus / DevelopmentPhases assumptions | frozen template portability defect if normative | Refactor under controlled unfreeze. | Batch 6 blocker |
 | `docs/AI/Specification/*.md` | RC2 specs | `docs/ProjectStatus.md` and RC2 paths | stale / RC2 residue | Merge valid unique content then remove or archive. | Batch 4 |
-| `docs/AI/Validation/*.md` | RC2 validation docs | Forge state paths | stale / RC2 residue | Merge valid checklist concepts into current validation owner; remove active source. | Batch 4 |
-| `docs/AI/Testing/*.md` | scenarios | Forge state paths | stale scenario residue | Archive if unique evidence; otherwise remove. | Batch 7 |
+| `docs/AI/Validation/*.md` | RC2 validation docs | AI-DOS state paths | stale / RC2 residue | Merge valid checklist concepts into current validation owner; remove active source. | Batch 4 |
+| `docs/AI/Testing/*.md` | scenarios | AI-DOS state paths | stale scenario residue | Archive if unique evidence; otherwise remove. | Batch 7 |
 | `docs/ProjectStatus.md` | whole file | legacy status location | duplicate live-state path | Archive if unique historical traceability; otherwise remove after references fixed. | Batch 2 / 7 |
 
 ## 13. Parallel-System Findings
@@ -337,7 +337,7 @@ Conclusion: Axis Suite can provide its own planning and operational state withou
 | PS-013 | Commands | Specification command definitions | Command behavior | none material | REMOVE after refs fixed | Specification links | Low. |
 | PS-014 | Templates README/freeze | `templates_margedmd.md` | Template library | none after equivalence check | REMOVE | Any generated refs | Low. |
 | PS-015 | Project Templates | missing old ProjectTemplateArchitecture/Bootstrap/Checklist docs | Project bootstrap | historical adoption workflow | MERGE THEN REMOVE / REMOVE | README/certification refs | Medium. |
-| PS-016 | Target repo planning | Forge-specific paths in generic docs | Planning authority | self-hosting paths valid only for Forge | REFACTOR / BLOCKED | Commands/workflows/templates/system | High for Axis Suite. |
+| PS-016 | Target repo planning | AI-DOS-specific paths in generic docs | Planning authority | self-hosting paths valid only for AI-DOS | REFACTOR / BLOCKED | Commands/workflows/templates/system | High for Axis Suite. |
 | PS-017 | Validation Engine | RC2 Validation docs | Validation authority | checklist wording | MERGE THEN REMOVE | Validation README | Medium. |
 | PS-018 | Certification Engine / STD-000 | RC2 Certification docs | Certification authority | readiness evidence | ARCHIVE | Certification refs | Medium. |
 
@@ -350,7 +350,7 @@ Conclusion: Axis Suite can provide its own planning and operational state withou
 | `docs/AI/Testing/*` | Scenario validation | Yes through old README | No | Partly represented in validation/review rules | Scenario examples | Testing README | ARCHIVE or REMOVE by file after batch review |
 | `docs/AI/Lifecycle/*` | Release/lifecycle policy | Yes through old README | Possible lifecycle gap | Not fully harvested | Versioning/release support policy details | Lifecycle README | BLOCKED BY HUMAN GOVERNANCE |
 | `docs/AI/Specification/FrameworkSpecification.md` | RC1/RC2 framework spec | Yes through old README | No | Partly harvested by M.0/M.1/Operational Core | Examples and old command taxonomy | README/spec links | MERGE THEN REMOVE |
-| `docs/AI/Architecture/Reports/Forge-AI-v3-Authority-Alignment-Plan.md` | Authority alignment plan | No direct active boot | Evidence | Harvested by current governance docs | Decision traceability | Reports | ARCHIVE |
+| `docs/AI/Architecture/Reports/AI-DOS-v3-Authority-Alignment-Plan.md` | Authority alignment plan | No direct active boot | Evidence | Harvested by current governance docs | Decision traceability | Reports | ARCHIVE |
 
 RC1 material should not be preserved merely for age. The only RC1-linked items requiring archive are evidence records where Git history alone would not show the review/migration decision context.
 
@@ -374,8 +374,8 @@ RC1 material should not be preserved merely for age. The only RC1-linked items r
 | Family | Evidence | Actual Role | Disposition |
 |:---|:---|:---|:---|
 | `docs/AI/Operational/Operational-Core-Replacement-Matrix.md` | Replacement plan for AIFramework/Orchestrator/Prompt | Migration evidence | ARCHIVE after operational refs stop consuming it as active dependency. |
-| `docs/AI/Roadmap/Forge-AI-v3-Master-Architecture-Development-Roadmap.md` | Older roadmap | Historical plan | ARCHIVE or REMOVE after v4 roadmap references are confirmed. |
-| `docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md` | Blueprint planning input | Historical architecture planning | ARCHIVE. |
+| `docs/AI/Roadmap/AI-DOS-v3-Master-Architecture-Development-Roadmap.md` | Older roadmap | Historical plan | ARCHIVE or REMOVE after v4 roadmap references are confirmed. |
+| `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md` | Blueprint planning input | Historical architecture planning | ARCHIVE. |
 | `docs/AI/Architecture/Reports/*Migration*` | Migration reports/plans | Evidence | ARCHIVE when superseded by this audit and current docs. |
 | `docs/AI/Architecture/Reports/*Classification*` | Earlier classification audit | Evidence | ARCHIVE unless superseded fully by this report. |
 | RC2 Specification family | Old architecture/operational specification | Parallel owner | MERGE THEN REMOVE. |
@@ -417,7 +417,7 @@ RC1 material should not be preserved merely for age. The only RC1-linked items r
 | Standards remediation reports | `docs/AI/Architecture/Standards/Reports/*` | Standards compliance evidence | KEEP / ARCHIVE based on direct references. |
 | RC2 certification reviews | `docs/AI/Certification/*` | Historical certification/adoption evidence | ARCHIVE after active refs removed. |
 | Completed temporary work plans | Older phase/report plans fully reflected in canonical docs | Superseded recommendations | REMOVE when evidence is duplicated. |
-| This report | `docs/AI/Architecture/Reports/Forge-AI-Repository-Rationalization-Audit.md` | Cleanup baseline | KEEP. |
+| This report | `docs/AI/Architecture/Reports/AI-DOS-Repository-Rationalization-Audit.md` | Cleanup baseline | KEEP. |
 
 ## 20. Broken and Stale Reference Inventory
 
@@ -459,9 +459,9 @@ Incoming-reference rule: files referenced only by legacy artifacts are not activ
 | D-002 | `README.md` | Repository README | General navigation | Root README | REFACTOR | Public overview | Align planning path language | Path refs | Low | No | 2 |
 | D-003 | `docs/AI/GOVERNANCE.md` | Governance Atlas | Current navigation | Itself | KEEP | Navigation authority | None | None | Low | No | 9 |
 | D-004 | `docs/AI/FrameworkGovernance.md` | Governance policy | Current decision policy | Itself | KEEP | Decision policy | None | None | Low | No | 9 |
-| D-005 | `docs/DevelopmentPhases/ProjectStatus.md` | Live state | Forge self-hosting state | Itself | KEEP | Operational state | Do not edit | None | High | Yes for any edit | 9 |
+| D-005 | `docs/DevelopmentPhases/ProjectStatus.md` | Live state | AI-DOS self-hosting state | Itself | KEEP | Operational state | Do not edit | None | High | Yes for any edit | 9 |
 | D-006 | `docs/ProjectStatus.md` | Old ProjectStatus | Duplicate/stale status | Current ProjectStatus | ARCHIVE | Historical state if not in Git history summary | Stop active refs; archive or remove after refs fixed | Many old refs | Medium | Possibly | 7 |
-| D-007 | `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` | Roadmap | Forge self-hosting roadmap | Itself | KEEP | Roadmap | Do not edit | None | High | Yes for any edit | 9 |
+| D-007 | `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` | Roadmap | AI-DOS self-hosting roadmap | Itself | KEEP | Roadmap | Do not edit | None | High | Yes for any edit | 9 |
 | D-008 | `docs/DevelopmentPhases/Phase-*.md` | Phase detail docs | Planning evidence | DevelopmentPhases roadmap | REFACTOR / ARCHIVE | Some phase detail | Classify current vs superseded | Roadmap refs | Medium | No unless roadmap state | 7 |
 | D-009 | `docs/AI/README.md` | AI Framework RC2 entry | Stale active navigation | AIFramework + Governance Atlas | REFACTOR | Directory map | Replace RC2 read order | Many | High | No | 2 |
 | D-010 | `docs/AI/AIFramework.md` | Operational Core entry | Current v2 draft owner | Itself | REFACTOR | Valid operational model | Genericize target-project path wording | Path refs | Medium | No | 6 |
@@ -496,8 +496,8 @@ Incoming-reference rule: files referenced only by legacy artifacts are not activ
 | D-039 | `docs/AI/Workflows/` | Workflows | Current but stale path assumptions | Workflow family | REFACTOR | Workflow rules | Genericize target root | Path refs | Medium | No | 6 |
 | D-040 | `docs/AI/Checklists/` | Checklist | Support artifact | Review/validation owners | REFACTOR | Review checklist | Align owner refs | Links | Low | No | 5 |
 | D-041 | `docs/AI/Tooling/CursorRules.md` | Cursor tooling | Stale tool-specific rules | AgentSystemPrompt | REMOVE / REFACTOR | Cursor examples | Merge if valid, else delete | Tooling refs | Low | No | 5 |
-| D-042 | `docs/AI/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md` | Program roadmap | Planning evidence/current program view | DevelopmentPhases/Governance | KEEP / REFACTOR | Program context | Align FrameworkGovernance link | Broken link | Low | No | 8 |
-| D-043 | `docs/AI/Roadmap/Forge-AI-v3-Master-Architecture-Development-Roadmap.md` | Old roadmap | Historical roadmap | Current roadmap | ARCHIVE | Historical sequence | Archive or remove if duplicated | Roadmap refs | Low | No | 7 |
+| D-042 | `docs/AI/Roadmap/AI-DOS-Program-Architecture-Master-Roadmap-v4.md` | Program roadmap | Planning evidence/current program view | DevelopmentPhases/Governance | KEEP / REFACTOR | Program context | Align FrameworkGovernance link | Broken link | Low | No | 8 |
+| D-043 | `docs/AI/Roadmap/AI-DOS-v3-Master-Architecture-Development-Roadmap.md` | Old roadmap | Historical roadmap | Current roadmap | ARCHIVE | Historical sequence | Archive or remove if duplicated | Roadmap refs | Low | No | 7 |
 | D-044 | `docs/AI/Architecture/Blueprint/` | Blueprint RFC | Historical planning input | Architecture reports/archive | ARCHIVE | Blueprint traceability | Archive; fix broken meta links if retained | Many broken links | Medium | No | 7 |
 | D-045 | `docs/AI/Architecture/Reports/*` prior reports | Reports | Evidence / superseded plans | Report archive | ARCHIVE / REMOVE | Varies | Keep unique evidence; remove duplicate plans | Report refs | Low | No | 7 |
 | D-046 | `docs/AI/Architecture/Appendix/` | Appendices | Support evidence | Parent architecture docs | KEEP / REFACTOR | Evidence tables | Fix relative links | Many broken links | Medium | No | 8 |
@@ -516,18 +516,18 @@ Incoming-reference rule: files referenced only by legacy artifacts are not activ
 - `docs/AI/Architecture/Agents/AGENTS-v2.md`, AGENTS v2 core/supporting documents, and `docs/AI/Architecture/Agents/Reports/AGENTS-v2-Core-Freeze-Review.md`.
 - `docs/AI/Meta/M.0-Framework-Meta-Model.md` and `docs/AI/Meta/M.1-Artifact-Meta-Model.md`.
 - `docs/AI/Architecture/A.1-Constitution.md` and current standards STD-000, STD-001, STD-002, STD-003, STD-010 and required schemas/appendices after link refactor.
-- Third-party dependency Markdown under `node_modules/` as package contents outside Forge governance cleanup.
+- Third-party dependency Markdown under `node_modules/` as package contents outside AI-DOS governance cleanup.
 
 ## 24. Exact REFACTOR List
 
 - `AGENTS.md` for broken annex references and approval-state clarity, subject to Human Governance status context.
 - `README.md` for planning-path wording.
 - `docs/AI/README.md` to remove RC2 active status, stale reading order, stale directory map, and old ProjectStatus path.
-- `docs/AI/AIFramework.md`, `docs/AI/AIOrchestrator.md`, `docs/AI/AgentSystemPrompt.md` to clarify target-project root resolution while preserving Forge self-hosting.
-- `docs/AI/Commands/*.md` to remove invalid universalization of Forge AI planning paths.
+- `docs/AI/AIFramework.md`, `docs/AI/AIOrchestrator.md`, `docs/AI/AgentSystemPrompt.md` to clarify target-project root resolution while preserving AI-DOS self-hosting.
+- `docs/AI/Commands/*.md` to remove invalid universalization ofAI-DOS planning paths.
 - `docs/AI/Workflows/*.md` to resolve target-project ProjectStatus / DevelopmentPhases through target bootloader.
 - `docs/AI/Checklists/AgentReviewChecklist.md` if owner references point to RC2 validation/review.
-- `docs/AI/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md` broken `FrameworkGovernance.md` link.
+- `docs/AI/Roadmap/AI-DOS-Program-Architecture-Master-Roadmap-v4.md` broken `FrameworkGovernance.md` link.
 - Standards appendices and schemas with broken relative links.
 - Runtime and standards reports with stale references, excluding Runtime README/RFC content unless separately authorized.
 
@@ -552,8 +552,8 @@ Every archive item below requires retention because Git history alone does not p
 - `docs/AI/Certification/AIFrameworkCertificationReadinessAudit.md`; Git history alone is insufficient because it records certification-readiness findings.
 - `docs/AI/Certification/ProjectTemplateAdoptionReview.md`; Git history alone is insufficient because it records project-template adoption findings and broken-reference context.
 - `docs/AI/Architecture/Agents/AGENTS-v1-draft.md`; Git history alone is insufficient because v1 is a historical architecture reference consumed by AGENTS v2 comparisons.
-- `docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md`; Git history alone is insufficient because it is a named planning input.
-- `docs/AI/Roadmap/Forge-AI-v3-Master-Architecture-Development-Roadmap.md`; Git history alone is insufficient because it captures v3 planning context superseded by v4.
+- `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md`; Git history alone is insufficient because it is a named planning input.
+- `docs/AI/Roadmap/AI-DOS-v3-Master-Architecture-Development-Roadmap.md`; Git history alone is insufficient because it captures v3 planning context superseded by v4.
 - Prior architecture migration, authority-cleanup, harvest, classification, consistency, and transitional verification reports under `docs/AI/Architecture/Reports/` when they contain unique decision traceability.
 - Standards compliance audit/remediation reports under `docs/AI/Architecture/Standards/Reports/` if current standards reference their findings.
 - `docs/AI/Testing/Scenario-*.md` only for scenarios that provide unique validation evidence not represented in current validation/review templates.
@@ -575,9 +575,9 @@ Each removal requires final reference check and content-equivalence confirmation
 
 | ID | Blocker | Exact Decision Required | Controlled Unfreeze Required? |
 |:---|:---|:---|:---|
-| HGB-001 | System Layer path portability edits may be needed for target-project root resolution. | Decide whether frozen System Layer may be minimally edited to replace Forge-specific planning paths with target-root resolution while preserving Forge self-hosting. | Yes, if edits are authorized. |
+| HGB-001 | System Layer path portability edits may be needed for target-project root resolution. | Decide whether frozen System Layer may be minimally edited to replace AI-DOS-specific planning paths with target-root resolution while preserving AI-DOS self-hosting. | Yes, if edits are authorized. |
 | HGB-002 | Template Library and Project Template path/link portability defects exist in frozen docs. | Decide whether frozen Template Library / Project Template docs may be minimally edited for stale links and target-project state resolution. | Yes, if edits are authorized. |
-| HGB-003 | AGENTS v2 Core is frozen but may need reference clarifications if target-project integration text hardcodes Forge paths. | Decide whether AGENTS v2 Core remains unchanged until later phase or receives controlled reference corrections. | Yes, if edits are authorized. |
+| HGB-003 | AGENTS v2 Core is frozen but may need reference clarifications if target-project integration text hardcodes AI-DOS paths. | Decide whether AGENTS v2 Core remains unchanged until later phase or receives controlled reference corrections. | Yes, if edits are authorized. |
 | HGB-004 | Lifecycle ownership gap remains after RC2 cleanup. | Decide whether Lifecycle remains as a current owner, is merged into Framework Governance/STD-000, or is archived. | No unless frozen destination selected. |
 | HGB-005 | Legacy `docs/ProjectStatus.md` disposition depends on historical traceability value. | Decide archive versus removal after references are fixed. | No. |
 | HGB-006 | Runtime A.3 harvest target for old RuntimeModel examples would touch protected Runtime RFCs. | Decide whether old examples are archived separately or merged into Runtime under controlled authorization. | Yes, if Runtime edits are authorized. |
@@ -592,12 +592,12 @@ Each removal requires final reference check and content-equivalence confirmation
 | 2 — Broken Navigation and Stale References | `AGENTS.md`; `README.md`; `docs/AI/README.md`; active README/index files | Refactor links and active read orders | No frozen edits without approval | Old ProjectStatus, old template files, broken annex links | Markdown link scan | Medium | Active boot/navigation no longer loads RC2 chain. |
 | 3 — RC1 Residues | RC1-linked validation/lifecycle/spec/testing/report files | Merge exact valid content, archive evidence, remove duplicate source | Batch 2 complete | RC1 refs | RC1 search count reduced to evidence-only | Medium | No RC1 active authority remains. |
 | 4 — RC2 Specification Residues | `docs/AI/Specification/`; `docs/AI/Validation/`; `docs/AI/Certification/`; `docs/AI/Lifecycle/`; `docs/AI/Testing/`; Project Template old refs | Merge/archive/remove by matrix | Batch 2 complete; HGB-004 resolved | README, certification, validation, testing refs | RC2 search; link scan | High | RC2 no longer active; evidence retained only where justified. |
-| 5 — Parallel Operational Core | `docs/AI/AIFramework.md`; `AIOrchestrator.md`; `AgentSystemPrompt.md`; Commands; Workflows; Tooling; Checklists | Refactor ownership and stale path wording; remove duplicate tool docs | Batches 2-4 enough to avoid stale refs | RC2 owners, Forge path universalization | Path search; boot-chain review | Medium | One Operational Core surface remains. |
-| 6 — Target-Project Path Normalization | Operational Core, Commands, Workflows, possibly frozen System/Templates/AGENTS v2 | Refactor non-frozen docs; execute controlled unfreeze decisions if approved | HGB-001/002/003 decisions | ProjectStatus/DevelopmentPhases hardcoded refs | Path search; Axis Suite readiness checklist | High | Generic docs resolve target state through target root; Forge self-hosting preserved. |
+| 5 — Parallel Operational Core | `docs/AI/AIFramework.md`; `AIOrchestrator.md`; `AgentSystemPrompt.md`; Commands; Workflows; Tooling; Checklists | Refactor ownership and stale path wording; remove duplicate tool docs | Batches 2-4 enough to avoid stale refs | RC2 owners, AI-DOS path universalization | Path search; boot-chain review | Medium | One Operational Core surface remains. |
+| 6 — Target-Project Path Normalization | Operational Core, Commands, Workflows, possibly frozen System/Templates/AGENTS v2 | Refactor non-frozen docs; execute controlled unfreeze decisions if approved | HGB-001/002/003 decisions | ProjectStatus/DevelopmentPhases hardcoded refs | Path search; Axis Suite readiness checklist | High | Generic docs resolve target state through target root; AI-DOS self-hosting preserved. |
 | 7 — Duplicate Support and Evidence Artifacts | Prior reports, old roadmaps, blueprint, testing scenarios, duplicated plans | Archive or remove by evidence rules | Archive policy HGB-008 | Report/index refs | Incoming-reference scan | Medium | Evidence separated from active authority. |
 | 8 — Final Reference Cleanup | Standards appendices, schemas, Runtime reports, Project Template refs, appendix links | Refactor broken/stale links | Prior dispositions complete | All remaining broken local links | Markdown link scan | Medium | Broken active links eliminated or evidence-scoped. |
 | 9 — Repository-Wide Integrity Validation | Full repository | Validate authority, ownership, links, metadata, boot chain, frozen boundaries | Batches 1-8 complete | N/A | Full scans and git diff checks | Low | Repository consistency report passes. |
-| 10 — Self-Hosting and Axis Suite Readiness Check | Root boot, Operational Core, System/Templates/Project templates, target-project examples | Validate no invalid Forge path universalization | Batch 9 complete | Any remaining target path refs | Self-hosting and Axis Suite dry-run checklist | Medium | Forge AI self-hosting works; Axis Suite can own its planning/state through its root docs. |
+| 10 — Self-Hosting and Axis Suite Readiness Check | Root boot, Operational Core, System/Templates/Project templates, target-project examples | Validate no invalid AI-DOS path universalization | Batch 9 complete | Any remaining target path refs | Self-hosting and Axis Suite dry-run checklist | Medium |AI-DOS self-hosting works; Axis Suite can own its planning/state through its root docs. |
 
 ## 30. Validation Plan
 
@@ -623,7 +623,7 @@ Expected final active surface after all cleanup batches:
 
 - Root: one repository bootloader plus one public README.
 - Governance: Governance Atlas and Framework Governance with no parallel RC2 governance owner.
-- Planning/state: target-root planning model; Forge self-hosting uses `docs/DevelopmentPhases/`; no generic Framework universalization of Forge paths.
+- Planning/state: target-root planning model; AI-DOS self-hosting uses `docs/DevelopmentPhases/`; no generic Framework universalization of AI-DOS paths.
 - Architecture: A.1, M.0, M.1, Standards, Runtime, Engine, AGENTS v2, and required appendices/evidence.
 - Operational Core: AIFramework, AIOrchestrator, AgentSystemPrompt, Commands, Workflows, and scoped templates with one owner per responsibility.
 - Frozen families: System Layer, Template Library, AGENTS v2 Core retained and only modified under Human Governance controlled unfreeze.
@@ -638,43 +638,43 @@ Axis Suite readiness improves when:
 
 - Generic Framework and Operational Core documents no longer require `docs/DevelopmentPhases/ProjectStatus.md` or `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` in every target repository.
 - Target-project state is resolved through the target repository root `AGENTS.md`.
-- Forge AI self-hosting remains explicit as an example/instance, not a universal rule.
-- Project Templates explain required target repository documents without hardcoding Forge AI planning filenames.
+-AI-DOS self-hosting remains explicit as an example/instance, not a universal rule.
+- Project Templates explain required target repository documents without hardcodingAI-DOS planning filenames.
 - RC2 operational chains no longer bypass the current bootloader and Governance Atlas.
 
-Without cleanup, Axis Suite would inherit stale Forge AI path assumptions and parallel RC2 operational authorities.
+Without cleanup, Axis Suite would inherit staleAI-DOS path assumptions and parallel RC2 operational authorities.
 
 
 ## 32A. Revision 1 — Target Repository Awareness Amendment
 
 ### 32A.1 Architectural Background
 
-The original Repository Rationalization Audit was completed before Forge AI formally distinguished Framework truth, target-project truth, Forge AI self-hosting, and external Target Repository operation. Revision 1 incorporates the later architectural decisions from A.2 Operational Boundary, Target Repository Resolution, System Layer Freeze, and Target Project Path Resolution.
+The original Repository Rationalization Audit was completed beforeAI-DOS formally distinguished Framework truth, target-project truth,AI-DOS self-hosting, and external Target Repository operation. Revision 1 incorporates the later architectural decisions from A.2 Operational Boundary, Target Repository Resolution, System Layer Freeze, and Target Project Path Resolution.
 
-This amendment does not replace the original audit, does not perform a new repository inventory, and does not create a new disposition matrix from scratch. It revises only findings whose cleanup decision changes because Forge AI can now be either the Framework provider operating on itself or the Framework provider operating on another project repository.
+This amendment does not replace the original audit, does not perform a new repository inventory, and does not create a new disposition matrix from scratch. It revises only findings whose cleanup decision changes becauseAI-DOS can now be either the Framework provider operating on itself or the Framework provider operating on another project repository.
 
 ### 32A.2 Target Repository Operating Model
 
-Forge AI may operate in two valid modes:
+AI-DOS may operate in two valid modes:
 
-1. **Forge AI Self-Hosting** — the active Target Repository is the Forge AI repository. In this mode, `docs/DevelopmentPhases/ProjectStatus.md`, `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`, Forge AI architecture paths, and Forge AI validation rules are valid target-project resources.
+1. **AI-DOS Self-Hosting** — the active Target Repository is theAI-DOS repository. In this mode, `docs/DevelopmentPhases/ProjectStatus.md`, `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`,AI-DOS architecture paths, andAI-DOS validation rules are valid target-project resources.
 2. **External Target Repository** — the active Target Repository is Axis Suite or another project repository. In this mode, target-project state, roadmap, architecture, source roots, validation commands, and protected areas must be declared by the external repository, normally through that repository's root `AGENTS.md`, and resolved relative to that external root.
 
-The audit must therefore distinguish a Forge AI physical path used as a Forge AI self-hosting fact from the same path used as a universal Framework requirement.
+The audit must therefore distinguish aAI-DOS physical path used as aAI-DOS self-hosting fact from the same path used as a universal Framework requirement.
 
 ### 32A.3 Revised Classification Rules
 
 | Classification | Rule | Cleanup Meaning |
 |:---|:---|:---|
-| `VALID_FORGE_SELF_HOSTING` | Forge-AI-specific project paths that are correct only when the Forge AI repository is the active Target Repository. | Keep or label as self-hosting; do not remove solely because the path is Forge-specific. |
-| `INVALID_GENERAL_FRAMEWORK_HARDCODE` | Forge-AI-specific project paths embedded in reusable Framework, Operational Core, Command, Workflow, Template, or procedure language as though every target project used Forge AI paths. | Refactor to Target Repository declaration/resolution language. |
-| `TARGET_PROJECT_DECLARATION_REQUIRED` | Framework documents that should obtain project paths through the active Target Repository instead of declaring a Forge AI physical path as universal. | Replace universal physical-path requirements with logical target-resource declarations. |
+| `VALID_FORGE_SELF_HOSTING` | AI-DOS-specific project paths that are correct only when theAI-DOS repository is the active Target Repository. | Keep or label as self-hosting; do not remove solely because the path is AI-DOS-specific. |
+| `INVALID_GENERAL_FRAMEWORK_HARDCODE` | AI-DOS-specific project paths embedded in reusable Framework, Operational Core, Command, Workflow, Template, or procedure language as though every target project usedAI-DOS paths. | Refactor to Target Repository declaration/resolution language. |
+| `TARGET_PROJECT_DECLARATION_REQUIRED` | Framework documents that should obtain project paths through the active Target Repository instead of declaring aAI-DOS physical path as universal. | Replace universal physical-path requirements with logical target-resource declarations. |
 | `HISTORICAL_REFERENCE` | Historical evidence, audit evidence, migration records, or superseded reports that remain valid as evidence but not as current execution routing. | Preserve as evidence or archive; do not treat as active boot-chain authority. |
 | `FROZEN_DOCUMENT` | Documents requiring controlled Human Governance unfreeze before modification. | Do not edit in cleanup batches unless controlled unfreeze is explicitly authorized. |
 
 ### 32A.4 Revised Disposition Rules
 
-1. Do not reclassify a Forge AI path as invalid when it is scoped to Forge AI self-hosting.
+1. Do not reclassify aAI-DOS path as invalid when it is scoped toAI-DOS self-hosting.
 2. Reclassify reusable Framework or operational language as `TARGET_PROJECT_DECLARATION_REQUIRED` when it should resolve project state through the active Target Repository.
 3. Preserve historical references as `HISTORICAL_REFERENCE` unless they are still loaded by an active boot/navigation chain.
 4. Preserve all frozen documents unchanged unless Human Governance authorizes controlled unfreeze.
@@ -684,30 +684,30 @@ The audit must therefore distinguish a Forge AI physical path used as a Forge AI
 
 | Finding | Original Classification / Decision | New Classification / Decision | Reason |
 |:---|:---|:---|:---|
-| D-002 `README.md` | REFACTOR for planning-path wording | `TARGET_PROJECT_DECLARATION_REQUIRED` for generic wording; `VALID_FORGE_SELF_HOSTING` for Forge AI examples | Public repository guidance may describe Forge AI self-hosting but must not universalize Forge AI planning paths for external targets. |
-| D-005 `docs/DevelopmentPhases/ProjectStatus.md` | KEEP live state | `VALID_FORGE_SELF_HOSTING` / KEEP | This path is correct when Forge AI is the Target Repository and must not be removed as a hardcode. |
+| D-002 `README.md` | REFACTOR for planning-path wording | `TARGET_PROJECT_DECLARATION_REQUIRED` for generic wording; `VALID_FORGE_SELF_HOSTING` forAI-DOS examples | Public repository guidance may describeAI-DOS self-hosting but must not universalizeAI-DOS planning paths for external targets. |
+| D-005 `docs/DevelopmentPhases/ProjectStatus.md` | KEEP live state | `VALID_FORGE_SELF_HOSTING` / KEEP | This path is correct whenAI-DOS is the Target Repository and must not be removed as a hardcode. |
 | D-006 `docs/ProjectStatus.md` | ARCHIVE | `HISTORICAL_REFERENCE` / ARCHIVE or REMOVE after references fixed | Legacy path evidence remains historical; it is not current target-project resolution. |
-| D-007 `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` | KEEP roadmap | `VALID_FORGE_SELF_HOSTING` / KEEP | This path is correct for Forge AI self-hosting and is not a universal external-target roadmap path. |
+| D-007 `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` | KEEP roadmap | `VALID_FORGE_SELF_HOSTING` / KEEP | This path is correct forAI-DOS self-hosting and is not a universal external-target roadmap path. |
 | D-009 `docs/AI/README.md` | REFACTOR stale active navigation | `TARGET_PROJECT_DECLARATION_REQUIRED` / REFACTOR | Active read orders must distinguish Framework reading from target-project state resolution. |
 | D-010 `docs/AI/AIFramework.md` | REFACTOR path wording | `TARGET_PROJECT_DECLARATION_REQUIRED` / REFACTOR | Operational Core should consume the active Target Repository declaration for project state. |
-| D-011 `docs/AI/AIOrchestrator.md` | REFACTOR path wording | `TARGET_PROJECT_DECLARATION_REQUIRED` / REFACTOR | Orchestration must not impose Forge AI project-state paths on Axis Suite or other targets. |
+| D-011 `docs/AI/AIOrchestrator.md` | REFACTOR path wording | `TARGET_PROJECT_DECLARATION_REQUIRED` / REFACTOR | Orchestration must not imposeAI-DOS project-state paths on Axis Suite or other targets. |
 | D-012 `docs/AI/AgentSystemPrompt.md` | REFACTOR path wording | `TARGET_PROJECT_DECLARATION_REQUIRED` / REFACTOR | Agent-facing rules must load target truth from the active Target Repository. |
 | D-015 `docs/AI/System/*` path portability defects | BLOCKED BY HUMAN GOVERNANCE | `FROZEN_DOCUMENT` plus possible `TARGET_PROJECT_DECLARATION_REQUIRED` / controlled unfreeze only | System Layer is frozen; any path-resolution correction requires controlled unfreeze. |
 | D-021 `docs/AI/Templates/Project/` stale project refs | BLOCKED BY HUMAN GOVERNANCE | `FROZEN_DOCUMENT` plus possible `TARGET_PROJECT_DECLARATION_REQUIRED` / controlled unfreeze only | Project Template docs are frozen and may need target declaration wording, not direct execution now. |
 | D-038 `docs/AI/Commands/` | REFACTOR stale path assumptions | `TARGET_PROJECT_DECLARATION_REQUIRED` / REFACTOR | Commands should consume resolved target paths from the active Target Repository. |
 | D-039 `docs/AI/Workflows/` | REFACTOR stale path assumptions | `TARGET_PROJECT_DECLARATION_REQUIRED` / REFACTOR | Workflows should route ProjectStatus and DevelopmentPhases through target declarations. |
-| D-042 program roadmap | KEEP / REFACTOR | `VALID_FORGE_SELF_HOSTING` when scoped to Forge AI; `HISTORICAL_REFERENCE` where superseded | Roadmap content may remain valid as Forge AI planning context rather than external-target truth. |
+| D-042 program roadmap | KEEP / REFACTOR | `VALID_FORGE_SELF_HOSTING` when scoped to AI-DOS; `HISTORICAL_REFERENCE` where superseded | Roadmap content may remain valid asAI-DOS planning context rather than external-target truth. |
 | D-045 prior reports | ARCHIVE / REMOVE | `HISTORICAL_REFERENCE` / ARCHIVE unless duplicated | Prior reports may retain evidence even when target-path assumptions are superseded. |
 
 ### 32A.6 Decision Matrix Amendment
 
 | Original Decision | Revised Decision | Reason |
 |:---|:---|:---|
-| REMOVE Forge-AI-specific path evidence solely because it is Forge-specific | KEEP (Self Hosting) | Forge AI paths are valid when Forge AI is the active Target Repository. |
+| REMOVE AI-DOS-specific path evidence solely because it is AI-DOS-specific | KEEP (Self Hosting) |AI-DOS paths are valid whenAI-DOS is the active Target Repository. |
 | REFACTOR generic Framework path references | TARGET_PROJECT_DECLARATION_REQUIRED | Reusable Framework text must resolve project paths from the active target declaration. |
 | MERGE THEN REMOVE RC2 materials containing path history | KEEP or ARCHIVE as `HISTORICAL_REFERENCE` where unique | Historical evidence remains valid even if not active execution authority. |
 | BLOCKED BY HUMAN GOVERNANCE for frozen System/Templates edits | FROZEN_DOCUMENT with controlled-unfreeze prerequisite | Frozen documents cannot be edited by cleanup batches without explicit authorization. |
-| REPLACE Forge AI planning paths everywhere | REPLACE only invalid universalization; KEEP self-hosting paths | Blanket replacement would break Forge AI self-hosting. |
+| REPLACEAI-DOS planning paths everywhere | REPLACE only invalid universalization; KEEP self-hosting paths | Blanket replacement would breakAI-DOS self-hosting. |
 
 ### 32A.7 Cleanup Batch Impact
 
@@ -728,8 +728,8 @@ The audit must therefore distinguish a Forge AI physical path used as a Forge AI
 
 Validation for subsequent cleanup must verify both modes:
 
-1. Forge AI self-hosting still resolves Forge AI ProjectStatus and DevelopmentPhases correctly.
-2. External Target Repository operation does not inherit Forge AI physical planning paths as universal requirements.
+1.AI-DOS self-hosting still resolvesAI-DOS ProjectStatus and DevelopmentPhases correctly.
+2. External Target Repository operation does not inheritAI-DOS physical planning paths as universal requirements.
 3. Frozen System Layer, Template Library, and AGENTS v2 Core documents remain unchanged unless controlled unfreeze is authorized.
 4. Historical references are labeled or scoped as evidence, not active execution routing.
 5. `git diff --name-status` for each batch matches the batch's authorized file set.
@@ -738,11 +738,11 @@ Validation for subsequent cleanup must verify both modes:
 
 The revised execution order after Revision 1 is:
 
-1. **Target Path Normalization** — non-frozen target-path wording first; preserve Forge AI self-hosting.
+1. **Target Path Normalization** — non-frozen target-path wording first; preserveAI-DOS self-hosting.
 2. **Controlled Unfreeze (when required)** — System Layer, Template Library, Project Templates, or AGENTS v2 Core only if Human Governance explicitly authorizes.
 3. **Cleanup Batches** — execute temporary-artifact, navigation, RC1/RC2, Operational Core, evidence, and reference cleanup in revised order after target-path assumptions are corrected.
-4. **Repository Freeze** — freeze the rationalized Forge AI repository after validation.
-5. **Axis Suite Pilot** — validate external Target Repository operation only after Forge AI self-hosting and target-resolution behavior are stable.
+4. **Repository Freeze** — freeze the rationalizedAI-DOS repository after validation.
+5. **Axis Suite Pilot** — validate external Target Repository operation only afterAI-DOS self-hosting and target-resolution behavior are stable.
 
 ## 33. Audit Verdict
 
@@ -752,12 +752,12 @@ The repository has sufficient evidence to begin ordered cleanup batches. Human G
 
 ## 34. Recommended First Cleanup Batch
 
-Begin with **Target Path Normalization** under the follow-on task **FORGE-AI.V2.TARGET-PATH-002 — NON-FROZEN TARGET-PATH NORMALIZATION**.
+Begin with **Target Path Normalization** under the follow-on task **AI-DOS.V2.TARGET-PATH-002 — NON-FROZEN TARGET-PATH NORMALIZATION**.
 
 | Step | Action | Prerequisite | Validation |
 |:---|:---|:---|:---|
-| 1 | Normalize non-frozen reusable Framework, Operational Core, Command, Workflow, README, and report wording that universalizes Forge AI planning paths. | Revision 1 amendment accepted as the active audit baseline. | Path search; self-hosting check; external Target Repository declaration check. |
-| 2 | Preserve Forge AI self-hosting paths where they are scoped to Forge AI as the active Target Repository. | No broad replacement of Forge AI paths. | Confirm `VALID_FORGE_SELF_HOSTING` references remain accurate. |
+| 1 | Normalize non-frozen reusable Framework, Operational Core, Command, Workflow, README, and report wording that universalizesAI-DOS planning paths. | Revision 1 amendment accepted as the active audit baseline. | Path search; self-hosting check; external Target Repository declaration check. |
+| 2 | PreserveAI-DOS self-hosting paths where they are scoped toAI-DOS as the active Target Repository. | No broad replacement ofAI-DOS paths. | Confirm `VALID_FORGE_SELF_HOSTING` references remain accurate. |
 | 3 | Identify any frozen System Layer, Template Library, Project Template, or AGENTS v2 Core changes that require controlled unfreeze, but do not execute them. | Human Governance controlled-unfreeze decision. | `git diff --name-status`; frozen-family diff check. |
 
-The original Batch 1 temporary-artifact removal remains valid but is no longer the first execution step. It should run after target-path assumptions are normalized so later cleanup preserves both Forge AI self-hosting and external Target Repository operation.
+The original Batch 1 temporary-artifact removal remains valid but is no longer the first execution step. It should run after target-path assumptions are normalized so later cleanup preserves bothAI-DOS self-hosting and external Target Repository operation.

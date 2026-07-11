@@ -1,8 +1,8 @@
-# FORGE-A-004.7 — Engine Capability RFC
+# AI-DOS-A-004.7 — Engine Capability RFC
 
 | | |
 |:---|:---|
-| **Framework** | Forge AI v3 |
+| **Framework** |AI-DOS v3 |
 | **Document Class** | Architecture RFC |
 | **Domain** | Engine Capability Architecture |
 | **Confidentiality** | Internal — Governed |
@@ -13,7 +13,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-A-4-7` |
+| Identifier | `AI-DOS-A-4-7` |
 | Title | A.4.7 — Engine Capability RFC |
 | Version | `0.2.0-draft` |
 | Status | Draft |
@@ -27,7 +27,7 @@
 | Created | 2026-07-07 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.V2.RUNTIME.A-4-7` |
+| Traceability ID | `AI-DOS.V2.RUNTIME.A-4-7` |
 | Scope | Defines the Engine Capability foundation responsibility only as a specialization of A.4 Engine Platform Architecture. |
 | Out of Scope | Runtime Architecture redefinition, Engine Platform redefinition, individual Engine Specialization redefinition, implementation, certification, freeze decisions, ProjectStatus updates, and DevelopmentPhases updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
@@ -74,7 +74,7 @@
 
 ## 1. Executive Summary
 
-This RFC establishes the canonical architectural model for Engine Capability within the Forge AI v3 framework. Engine Capability represents the governed functional capacity that an Engine may offer, describing what an Engine can do independently of how it does it, when it may transition, or what its current observable condition is. The model is contract-bound, registry-backed, and kernel-resolved, ensuring that capability claims are always authorized, published, and validated before consumption.
+This RFC establishes the canonical architectural model for Engine Capability within theAI-DOS v3 framework. Engine Capability represents the governed functional capacity that an Engine may offer, describing what an Engine can do independently of how it does it, when it may transition, or what its current observable condition is. The model is contract-bound, registry-backed, and kernel-resolved, ensuring that capability claims are always authorized, published, and validated before consumption.
 
 The RFC defines eleven canonical capability categories — Context Processing, Knowledge Processing, Planning, Decision Making, Execution, Validation, Review, Certification, Memory, Governance, and Workflow — along with supplementary categories for Registry, Artifact Production, Graph Traversal, and Capability Discovery. It establishes a comprehensive declaration model with twelve required elements, a permission-aware discovery process, five composition patterns, and ten compatibility dimensions governing safe capability use across Engine-to-Engine, capability-to-contract, lifecycle, state, registry, standard, artifact, workflow, and security boundaries.
 
@@ -84,7 +84,7 @@ Additionally, this RFC defines ownership responsibilities across fifteen partici
 
 ## 2. Purpose
 
-The Engine Capability model defines what a Forge AI Engine is architecturally capable of providing.
+The Engine Capability model defines what aAI-DOS Engine is architecturally capable of providing.
 
 Capability represents Engine functionality. It describes the governed functional capacity an Engine may offer to the Engine Kernel, Engine Registry, Engine Discovery, Planning, Decision, Execution, Validation, Review, Certification, Agents, and Platform Adapters.
 
@@ -191,7 +191,7 @@ A.4.7 Engine Capability
 
 Engine Capability is not the Runtime. It does not execute work, schedule work, authorize lifecycle transitions, publish registry entries by itself, or represent current Engine condition.
 
-Engine Capability is the architectural declaration of functionality that other Forge AI systems may resolve, validate, compose, constrain, or reject through governed channels.
+Engine Capability is the architectural declaration of functionality that otherAI-DOS systems may resolve, validate, compose, constrain, or reject through governed channels.
 
 ### 4.1 Conceptual Placement
 
@@ -480,7 +480,7 @@ Engine Capability has distributed responsibilities but single-source declaration
 | Certification | Consumes validated capability evidence for certification handoff when applicable. |
 | Knowledge Graph | Stores capability-compatible artifacts and evidence only; it does not own live capability truth. |
 | Agents | Consume capabilities through governed discovery and resolution; they must not invent capabilities. |
-| Platform Adapters | Translate capability usage to platform-specific contexts without redefining Forge AI capability semantics. |
+| Platform Adapters | Translate capability usage to platform-specific contexts without redefiningAI-DOS capability semantics. |
 
 ### 11.1 Ownership Rules
 
@@ -710,7 +710,7 @@ Agents consume capabilities through governed discovery and Kernel resolution. Ag
 
 ### 17.13 Platform Adapters
 
-Platform Adapters translate capability consumption into platform-specific contexts. They may expose adapter-specific constraints, but they must not redefine Forge AI capability categories, ownership, compatibility, validation, or governance rules.
+Platform Adapters translate capability consumption into platform-specific contexts. They may expose adapter-specific constraints, but they must not redefineAI-DOS capability categories, ownership, compatibility, validation, or governance rules.
 
 ---
 
@@ -794,7 +794,7 @@ The following matrix identifies stakeholders affected by this RFC and the nature
 
 ## 22. Completion Report
 
-This RFC defines the Forge AI v3 Engine Capability architecture as a documentation-only, draft, non-canonical RFC.
+This RFC defines theAI-DOS v3 Engine Capability architecture as a documentation-only, draft, non-canonical RFC.
 
 The RFC establishes Capability as the contract-bound, registry-backed, kernel-resolved model of what an Engine can do. It separates Capability from Runtime implementation, Lifecycle, Engine State, Communication, Registry ownership, Knowledge Graph semantics, and Standards authority.
 

@@ -1,4 +1,4 @@
-# Forge AI — AGENTS v2 Roadmap
+#AI-DOS — AGENTS v2 Roadmap
 
 > Enterprise Edition v2.0.0-draft
 
@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | FORGE-AGENTS-ROADMAP |
+| Identifier | AI-DOS-AGENTS-ROADMAP |
 | Title | AGENTS v2 Roadmap |
 | Version | 2.0.0-draft |
 | Status | Draft |
@@ -20,7 +20,7 @@
 | Created | 2026-07-08 |
 | Last Updated | 2026-07-08 |
 | Lifecycle Phase | Draft |
-| Traceability ID | FORGE-AGENTS-ROADMAP |
+| Traceability ID | AI-DOS-AGENTS-ROADMAP |
 | Scope | Strategic evolution of AGENTS v2 |
 | Out of Scope | Runtime implementation |
 | Normative Authority | AGENTS.md |

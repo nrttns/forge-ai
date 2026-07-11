@@ -1,6 +1,6 @@
 # Template Library Freeze
 
-> Forge AI v2 · Template Library Freeze Declaration · Documentation-only governance record
+>AI-DOS v2 · Template Library Freeze Declaration · Documentation-only governance record
 
 ---
 
@@ -8,11 +8,11 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-FREEZE` |
+| Identifier | `AI-DOS-TPL-FREEZE` |
 | Title | Template Library Freeze |
 | Version | `0.1.0-draft` |
 | Status | Frozen Baseline Declaration |
-| Canonical Status | The Forge AI v2 Template Library is declared frozen as the canonical Template Library baseline by this governance record; individual templates remain subject to their own metadata, certification, approval, and promotion states. |
+| Canonical Status | TheAI-DOS v2 Template Library is declared frozen as the canonical Template Library baseline by this governance record; individual templates remain subject to their own metadata, certification, approval, and promotion states. |
 | Classification | Template Library Freeze Declaration |
 | Document Type | Governance Freeze Record |
 | Owner | Human Governance |
@@ -22,14 +22,14 @@
 | Created | 2026-07-10 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Frozen Baseline |
-| Traceability ID | `FORGE-AI.TEMPLATES.REPORTS.FREEZE` |
-| Scope | Formal documentation-only freeze declaration for the complete Forge AI v2 Template Library family set, based on the completed Template Library Global Audit and Template Library Freeze Review. |
+| Traceability ID | `AI-DOS.TEMPLATES.REPORTS.FREEZE` |
+| Scope | Formal documentation-only freeze declaration for the completeAI-DOS v2 Template Library family set, based on the completed Template Library Global Audit and Template Library Freeze Review. |
 | Out of Scope | Template certification, individual template approval, template content promotion, ProjectStatus updates, DevelopmentPhases updates, implementation authorization, runtime activation, engine freeze, governance freeze, repository freeze, template refactoring, template normalization, and new template-family creation. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/Architecture/A.1-Constitution.md` |
 | Normative References | `docs/AI/Templates/Reports/Template-Library-Global-Audit.md`; `docs/AI/Templates/Reports/Template-Library-Freeze-Review.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/Standards/TPL-001-RFC-Template-Standard.md` |
 | Dependencies | Completed Template Library Global Audit; completed Template Library Freeze Review; Human Governance instruction; Framework Governance process; STD-010; TPL-000; TPL-001. |
 | Consumes | Audit verdict, Freeze Review verdict, readiness evidence, governance boundaries, template standards, and Human Governance task instruction. |
-| Produces | Official Template Library freeze declaration and canonical Forge AI v2 Template Library baseline record. |
+| Produces | Official Template Library freeze declaration and canonicalAI-DOS v2 Template Library baseline record. |
 | Related Specifications | `docs/AI/Templates/README.md`; `docs/AI/Templates/Reports/Template-Library-Global-Audit.md`; `docs/AI/Templates/Reports/Template-Library-Freeze-Review.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/Standards/TPL-001-RFC-Template-Standard.md` |
 | Supersedes | None |
 | Superseded By | None |
@@ -42,7 +42,7 @@
 
 The Template Library Global Audit and Template Library Freeze Review have completed. The Global Audit reported `PASS WITH OBSERVATIONS`, found no architectural blockers, and recommended proceeding to Template Library Freeze Review. The Freeze Review reported `PASS WITH OBSERVATIONS` and recommended proceeding to Template Library Freeze.
 
-Based on that completed evidence chain and the current Human Governance instruction, this document formally declares the Forge AI v2 Template Library frozen as the canonical Template Library baseline for Forge AI v2.
+Based on that completed evidence chain and the current Human Governance instruction, this document formally declares theAI-DOS v2 Template Library frozen as the canonical Template Library baseline forAI-DOS v2.
 
 This freeze is documentation-only. It records baseline stability for the Template Library and does not certify templates, approve templates individually, promote template contents, update ProjectStatus, update DevelopmentPhases, activate runtime behavior, authorize implementation work, freeze engines, freeze runtime, freeze governance, or freeze the repository.
 
@@ -50,7 +50,7 @@ This freeze is documentation-only. It records baseline stability for the Templat
 
 ## Freeze Purpose
 
-The purpose of this document is to record the formal governance decision that the Forge AI v2 Template Library has reached a stable canonical baseline.
+The purpose of this document is to record the formal governance decision that theAI-DOS v2 Template Library has reached a stable canonical baseline.
 
 This freeze declaration confirms that:
 
@@ -58,7 +58,7 @@ This freeze declaration confirms that:
 - the Template Library has completed alignment;
 - the Template Library is internally consistent;
 - template families follow the governed template model;
-- the Template Library is frozen as the Forge AI v2 canonical template library baseline.
+- the Template Library is frozen as theAI-DOS v2 canonical template library baseline.
 
 The freeze applies to the Template Library baseline only. It does not alter the certification, approval, promotion, or lifecycle state of individual template contents unless a future Human Governance action explicitly does so.
 
@@ -83,7 +83,7 @@ No additional audit or review was performed by this freeze declaration.
 
 ## Freeze Scope
 
-The freeze applies to the complete Forge AI v2 Template Library family set under `docs/AI/Templates/` as evaluated by the Global Audit and Freeze Review.
+The freeze applies to the completeAI-DOS v2 Template Library family set under `docs/AI/Templates/` as evaluated by the Global Audit and Freeze Review.
 
 Frozen template families:
 
@@ -115,7 +115,7 @@ Core support artifacts are not part of the frozen template family set. `docs/AI/
 
 ## Freeze Declaration
 
-The Forge AI v2 Template Library is hereby declared frozen as the canonical Template Library baseline for Forge AI v2.
+TheAI-DOS v2 Template Library is hereby declared frozen as the canonical Template Library baseline forAI-DOS v2.
 
 This declaration records that:
 
@@ -128,7 +128,7 @@ This declaration records that:
 7. RFC-facing templates preserve TPL-001 applicability.
 8. The Template Library preserves Human Governance and Framework Governance authority.
 9. The Template Library does not create runtime, engine, ProjectStatus, certification, approval, or implementation authority.
-10. The Template Library is frozen as the Forge AI v2 canonical template library baseline.
+10. The Template Library is frozen as theAI-DOS v2 canonical template library baseline.
 
 This freeze declaration is the official freeze record for the Template Library.
 
@@ -151,7 +151,7 @@ Template Library Freeze does not mean:
 - runtime activation;
 - implementation authorization.
 
-Freeze applies only to the Forge AI v2 Template Library baseline identified in the Freeze Scope.
+Freeze applies only to theAI-DOS v2 Template Library baseline identified in the Freeze Scope.
 
 ---
 
@@ -229,7 +229,7 @@ Maintenance does not imply certification, approval, promotion, implementation au
 
 ## Conclusion
 
-The Forge AI v2 Template Library is hereby declared frozen as the canonical Template Library baseline for Forge AI v2.
+TheAI-DOS v2 Template Library is hereby declared frozen as the canonical Template Library baseline forAI-DOS v2.
 
 Future evolution shall occur only through Human Governance and the established Framework Governance process.
 

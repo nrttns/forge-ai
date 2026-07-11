@@ -1,6 +1,6 @@
 # A.4.3 — Engine Registry RFC
 
-> Forge AI v3 · Engine Architecture RFC
+>AI-DOS v3 · Engine Architecture RFC
 > Engine Registry · Draft / Non-canonical
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-A-004.3` |
+| Identifier | `AI-DOS-A-004.3` |
 | Title | A.4.3 — Engine Registry RFC |
 | Version | `0.3.0-draft` |
 | Status | RFC / Draft |
@@ -23,7 +23,7 @@
 | Created | 2026-07-07 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.V3.A.004.3` |
+| Traceability ID | `AI-DOS.V3.A.004.3` |
 | Scope | Defines the Engine Registry foundation responsibility only as a specialization of A.4 Engine Platform Architecture. |
 | Out of Scope | Runtime Architecture redefinition, Engine Platform redefinition, individual Engine Specialization redefinition, implementation, certification, freeze decisions, ProjectStatus updates, and DevelopmentPhases updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
@@ -41,13 +41,13 @@
 
 ## Executive Summary
 
-This RFC defines the Engine Registry as the single authoritative discovery and registration mechanism for all Forge AI v3 Engine instances. The Registry establishes what must be knowable about Engines and how that knowledge is governed, without prescribing implementation details such as storage technology, APIs, or runtime hosting. The Registry sits below the Engine Contract and adjacent to the Engine Kernel, publishing governed discoverability metadata that the Kernel consumes for coordination, lifecycle dispatch, and invocation routing. The Registry does not execute Engines, replace the Kernel, or own validation, certification, workflow, or Knowledge Graph semantics. It serves as the architectural boundary that prevents agents, tools, adapters, and individual Engines from inventing independent discovery systems. This RFC covers registration and deregistration models, discovery and metadata models, capability and dependency resolution, synchronization, validation and certification integration, traceability, governance rules, security constraints, and a comprehensive failure model.
+This RFC defines the Engine Registry as the single authoritative discovery and registration mechanism for allAI-DOS v3 Engine instances. The Registry establishes what must be knowable about Engines and how that knowledge is governed, without prescribing implementation details such as storage technology, APIs, or runtime hosting. The Registry sits below the Engine Contract and adjacent to the Engine Kernel, publishing governed discoverability metadata that the Kernel consumes for coordination, lifecycle dispatch, and invocation routing. The Registry does not execute Engines, replace the Kernel, or own validation, certification, workflow, or Knowledge Graph semantics. It serves as the architectural boundary that prevents agents, tools, adapters, and individual Engines from inventing independent discovery systems. This RFC covers registration and deregistration models, discovery and metadata models, capability and dependency resolution, synchronization, validation and certification integration, traceability, governance rules, security constraints, and a comprehensive failure model.
 
 ---
 
 ## Purpose
 
-The Engine Registry defines the single authoritative discovery and registration mechanism for all Forge AI Engine instances.
+The Engine Registry defines the single authoritative discovery and registration mechanism for allAI-DOS Engine instances.
 
 The Engine Registry exists so the Engine Kernel can discover available Engines, inspect their governed metadata, resolve their declared capabilities, understand their dependencies, observe their lifecycle and health metadata, and route validation or certification handoffs without allowing agents, tools, adapters, workflows, or individual Engines to invent independent discovery systems.
 
@@ -112,7 +112,7 @@ This RFC does not:
 
 This RFC is governed by the following authority chain, listed from highest to nearest:
 
-1. **Human Governance** — Final authority over all Forge AI architectural decisions, certification, and promotion.
+1. **Human Governance** — Final authority over allAI-DOS architectural decisions, certification, and promotion.
 2. **`AGENTS.md`** — Operational governance contract defining agent behavior, constraints, and authority boundaries.
 3. **`docs/AI/GOVERNANCE.md`** — Governance documentation defining AI consumption boundaries and authority constraints.
 4. **`docs/AI/FrameworkGovernance.md`** — Transitional v3 governance framework defining authority delegation, review, and approval processes.
@@ -528,7 +528,7 @@ Implementation-specific security controls (authentication, authorization, encryp
 
 ### DD-001: Registry as Single Discovery Authority
 
-**Context:** Forge AI needs a mechanism for Engine discoverability. The question is whether multiple discovery sources may coexist.
+**Context:**AI-DOS needs a mechanism for Engine discoverability. The question is whether multiple discovery sources may coexist.
 
 **Options considered:**
 1. Multiple competing discovery sources (file-based, convention-based, adapter-based) — rejected because they fragment discoverability truth, create inconsistent metadata, and allow agents or adapters to bypass governance.
@@ -577,7 +577,7 @@ Implementation-specific security controls (authentication, authorization, encryp
 | Review Authority | Enterprise Documentation Standards Board | Structural, metadata, STD-010 compliance, STD-003 terminology, and architectural quality review. |
 | Approval Authority | Human Governance | Final approval for promotion beyond Draft status. |
 
-The Registry System within the Forge AI Engine Architecture is the operational owner of Registry discoverability truth. This is distinct from the RFC ownership above. The Registry System owns:
+The Registry System within theAI-DOS Engine Architecture is the operational owner of Registry discoverability truth. This is distinct from the RFC ownership above. The Registry System owns:
 
 - Engine discoverability truth;
 - Registry entry completeness expectations;
@@ -857,8 +857,8 @@ This RFC is complete for draft purposes when:
 
 | Term | Definition |
 |:---|:---|
-| **Engine** | A governed computational unit within the Forge AI v3 Engine Architecture that declares capabilities, dependencies, and metadata through an Engine Contract. |
-| **Engine Registry** | The single authoritative discovery and registration mechanism for all Forge AI Engine instances, owned by the Registry System. |
+| **Engine** | A governed computational unit within theAI-DOS v3 Engine Architecture that declares capabilities, dependencies, and metadata through an Engine Contract. |
+| **Engine Registry** | The single authoritative discovery and registration mechanism for allAI-DOS Engine instances, owned by the Registry System. |
 | **Engine Kernel** | The primary consumer of the Engine Registry, responsible for loading, lifecycle dispatch, invocation routing, dependency resolution, and execution handoffs. |
 | **Engine Contract** | The architectural specification defining what an Engine must declare, including capabilities, dependencies, and metadata expectations. |
 | **Registration** | The governed act of making an Engine instance discoverable to the Engine Kernel through the Engine Registry. |
@@ -895,7 +895,7 @@ This RFC is complete for draft purposes when:
 
 | Reference | Identifier | Relationship |
 |:---|:---|:---|
-| A.3 Runtime Architecture | `FORGE-A-003` | Related Specification |
-| A.4 Engine Architecture | `FORGE-A-004` | Related Specification |
-| A.4.1 Engine Kernel | `FORGE-A-004.1` | Related Specification |
-| A.4.2 Engine Contract | `FORGE-A-004.2` | Related Specification |
+| A.3 Runtime Architecture | `AI-DOS-A-003` | Related Specification |
+| A.4 Engine Architecture | `AI-DOS-A-004` | Related Specification |
+| A.4.1 Engine Kernel | `AI-DOS-A-004.1` | Related Specification |
+| A.4.2 Engine Contract | `AI-DOS-A-004.2` | Related Specification |

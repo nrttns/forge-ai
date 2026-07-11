@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.COMMAND.AGENT-BUG-FIX` |
+| Identifier | `AI-DOS.COMMAND.AGENT-BUG-FIX` |
 | Title | Agent Bug Fix Command |
 | Version | `2.0.0-draft` |
 | Status | Draft |
@@ -20,7 +20,7 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Draft Alignment |
-| Traceability ID | `FORGE-AI.V2.OP-005` |
+| Traceability ID | `AI-DOS.V2.OP-005` |
 | Scope | Defines task execution behavior for bug-fix agents. |
 | Out of Scope | AGENTS.md, AIFramework, AIOrchestrator, AgentSystemPrompt, governance, ProjectStatus authority, Runtime, Engine RFCs, and templates. |
 | Normative Authority | `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; the ProjectStatus and DevelopmentPhases declared by the active Target Repository |

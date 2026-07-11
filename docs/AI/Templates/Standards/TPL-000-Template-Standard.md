@@ -1,6 +1,6 @@
 # TPL-000 — Template Standard
 
-> Forge AI v3 · Standards Library
+>AI-DOS v3 · Standards Library
 > Template Governance · Draft / Non-canonical
 
 ---
@@ -9,7 +9,7 @@
 
 | Field                  | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 |:-----------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Identifier             | `FORGE-TPL-000`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Identifier             | `AI-DOS-TPL-000`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | Title                  | TPL-000 — Template Standard                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | Version                | 0.1.0-draft                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | Status                 | Draft                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -23,8 +23,8 @@
 | Created                | 2026-07-09                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | Last Updated           | 2026-07-09                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | Lifecycle Phase        | Draft                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Traceability ID        | FORGE-AI.V3.TPL-000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Scope                  | Architecture, governance, lifecycle, taxonomy, validation model, authoring rules, and compliance requirements for every reusable template governed by Forge AI                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Traceability ID        | AI-DOS.V3.TPL-000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Scope                  | Architecture, governance, lifecycle, taxonomy, validation model, authoring rules, and compliance requirements for every reusable template governed by AI-DOS                                                                                                                                                                                                                                                                                                                                                                                                             |
 | Out of Scope           | Normalizing existing documents, implementing template tooling, redefining STD-010, redefining Governance, redefining Runtime, redefining Engine Platform                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | Normative Authority    | Human Governance; `AGENTS.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/Architecture/A.1-Constitution.md`                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | Normative References   | STD-010; STD-000; STD-003; M.0; M.1 (full paths below)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
@@ -55,7 +55,7 @@
 - `docs/AI/AgentSystemPrompt.md`
 - `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`
 - `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`
-- `docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md`
+- `docs/Roadmap/AI-DOS-Program-Architecture-Master-Roadmap-v4.md`
 - `docs/DevelopmentPhases/ProjectStatus.md`
 - `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`
 
@@ -69,9 +69,9 @@
 ## 1. Purpose
 
 
-TPL-000 is the single normative authority governing every reusable template within Forge AI. It establishes the rules by which templates are designed, authored, owned, versioned, validated, composed, inherited, deprecated, and retired across the entire `docs/AI/Templates/` directory tree.
+TPL-000 is the single normative authority governing every reusable template within AI-DOS. It establishes the rules by which templates are designed, authored, owned, versioned, validated, composed, inherited, deprecated, and retired across the entire `docs/AI/Templates/` directory tree.
 
-This standard exists because Forge AI requires a predictable, auditable, and governable system for producing documents from templates. Without a canonical template standard, templates proliferate with inconsistent structures, incompatible placeholders, undefined ownership, untracked lifecycle states, and no validation path from draft to canonical use. TPL-000 eliminates that inconsistency by defining one governing authority that every template must consume and every template-produced document must comply with through STD-010.
+This standard exists becauseAI-DOS requires a predictable, auditable, and governable system for producing documents from templates. Without a canonical template standard, templates proliferate with inconsistent structures, incompatible placeholders, undefined ownership, untracked lifecycle states, and no validation path from draft to canonical use. TPL-000 eliminates that inconsistency by defining one governing authority that every template must consume and every template-produced document must comply with through STD-010.
 
 TPL-000 does not define the content of any specific template instance. It defines the governance architecture, structural constraints, and compliance requirements that make templates safe for reuse across the Framework. Templates authored under TPL-000 produce documents that comply with STD-010. TPL-000 governs how templates are built; STD-010 governs how documents are structured.
 
@@ -95,7 +95,7 @@ TPL-000 does not govern one-off document authoring that does not use a template.
 ## 3. Goals
 
 
-- Establish a single, canonical template standard that every Forge AI template shall comply with.
+- Establish a single, canonical template standard that everyAI-DOS template shall comply with.
 - Define a clear taxonomy that classifies every template by purpose, document class, and domain.
 - Provide a deterministic placeholder grammar that enables automated validation and generation.
 - Ensure every template-produced document carries fully compliant STD-010 metadata.
@@ -157,7 +157,7 @@ Templates may define additional structural sections, domain-specific placeholder
 ## 6. Template Philosophy
 
 
-Templates exist to reduce authoring burden, enforce structural consistency, and ensure governance compliance across document production. A Forge AI template is not a mere starting point or suggestion outline — it is a governed artifact that carries normative weight when used to produce Framework documents.
+Templates exist to reduce authoring burden, enforce structural consistency, and ensure governance compliance across document production. AAI-DOS template is not a mere starting point or suggestion outline — it is a governed artifact that carries normative weight when used to produce Framework documents.
 
 The template philosophy rests on several core tenets. First, templates separate structure from content. The template defines the skeleton; the author provides domain-specific substance. This separation ensures that governance requirements (metadata, lifecycle, authority chains) are never accidentally omitted by the document author. Second, templates are consumable, not authoritative. A template produces a document; the document may become authoritative through governance approval. The template itself remains a generation artifact and never becomes Source of Truth. Third, templates are versioned and lifecycle-managed with the same rigor as the documents they produce. A template at Draft status produces Draft documents. A template at Canonical status may produce documents that are candidates for Canonical promotion, but the template does not grant Canonical status to its output — only governance can do that.
 
@@ -210,7 +210,7 @@ Templates are classified by the STD-010 document class they produce:
 
 ### 8.2 Domain Axis
 
-Templates are further classified by the Forge AI domain they serve:
+Templates are further classified by theAI-DOS domain they serve:
 
 | Domain | Description |
 |:---|:---|
@@ -401,7 +401,7 @@ Template ownership may be transferred by agreement between the current Owner and
 
 ## 13. Template Registry Model
 
-The Template Registry is a documentation-architecture concept that provides a consistent, queryable model for discovering, identifying, and resolving template references across the Forge AI template directory tree. The registry does not define an implementation — it defines the conceptual structure and behavioral contracts that any future registry implementation or manual discovery process must follow.
+The Template Registry is a documentation-architecture concept that provides a consistent, queryable model for discovering, identifying, and resolving template references across theAI-DOS template directory tree. The registry does not define an implementation — it defines the conceptual structure and behavioral contracts that any future registry implementation or manual discovery process must follow.
 
 ### 13.1 Purpose of the Registry
 
@@ -429,14 +429,14 @@ Each entry in the Template Registry carries the following metadata, derived from
 
 | Metadata Field | Source | Description |
 |:---|:---|:---|
-| Identifier | Template metadata | The template's `FORGE-TPL-NNN` identifier. |
+| Identifier | Template metadata | The template's `AI-DOS-TPL-NNN` identifier. |
 | Title | Template metadata | The template's full title. |
 | Version | Template metadata | Current version string. |
 | Status | Template metadata | Current lifecycle state. |
 | Compliance Level | Template metadata | Current compliance level (L1, L2, L3). |
 | Certification Status | Template metadata | Current certification status. |
 | Document Class | Template taxonomy (Section 8) | The document class this template produces. |
-| Domain | Template taxonomy (Section 8) | The Forge AI domain this template serves. |
+| Domain | Template taxonomy (Section 8) | TheAI-DOS domain this template serves. |
 | Complexity | Template taxonomy (Section 8) | The template's structural complexity level. |
 | Directory Path | File system | Repository-relative path to the template file. |
 | Inherits From | Template metadata | Parent template identifier, if any. |
@@ -456,7 +456,7 @@ Template discovery through the registry follows a defined resolution order. When
 
 ### 13.5 Template Lookup
 
-Template lookup by identifier is the most direct form of resolution. Given an identifier such as `FORGE-TPL-001`, the registry resolves it to the template file at the registered directory path. Lookup by identifier always returns exactly one result for active templates — identifier uniqueness is enforced by the registry model and validated by SV-003.
+Template lookup by identifier is the most direct form of resolution. Given an identifier such as `AI-DOS-TPL-001`, the registry resolves it to the template file at the registered directory path. Lookup by identifier always returns exactly one result for active templates — identifier uniqueness is enforced by the registry model and validated by SV-003.
 
 ### 13.6 Canonical Template Lookup
 
@@ -537,7 +537,7 @@ Version lookup ensures that template consumers can determine the correct templat
 
 ### 13.12 Registry Architecture Boundary
 
-The Template Registry is a documentation-architecture concept. It defines the structure and behavior of template metadata, relationships, and discovery within the Forge AI template governance model. The registry does not define an implementation — no database schema, API endpoint, CLI command, or runtime service is specified by this model. The registry model exists so that template governance is consistent whether discovery is performed manually (by reading directory READMEs and template metadata) or automatically (by a future tool that implements the registry contracts). Any implementation of the registry must conform to the discovery, lookup, and metadata contracts defined in this section, but TPL-000 does not require or mandate implementation.
+The Template Registry is a documentation-architecture concept. It defines the structure and behavior of template metadata, relationships, and discovery within theAI-DOS template governance model. The registry does not define an implementation — no database schema, API endpoint, CLI command, or runtime service is specified by this model. The registry model exists so that template governance is consistent whether discovery is performed manually (by reading directory READMEs and template metadata) or automatically (by a future tool that implements the registry contracts). Any implementation of the registry must conform to the discovery, lookup, and metadata contracts defined in this section, but TPL-000 does not require or mandate implementation.
 
 ---
 
@@ -738,12 +738,12 @@ TPL-NNN-{Descriptive-Name}.md
 Every template shall have a stable, unique identifier following this format:
 
 ```
-FORGE-TPL-NNN
+AI-DOS-TPL-NNN
 ```
 
 | Component | Description | Example |
 |:---|:---|:---|
-| `FORGE-` | Global Forge AI prefix | `FORGE-` |
+| `AI-DOS-` | GlobalAI-DOS prefix | `AI-DOS-` |
 | `TPL-` | Template family prefix | `TPL-` |
 | `NNN` | Three-digit sequential number matching filename | `000`, `001` |
 
@@ -753,10 +753,10 @@ FORGE-TPL-NNN
 Every template shall have a Traceability ID following the pattern:
 
 ```
-FORGE-AI.V3.TPL-NNN
+AI-DOS.V3.TPL-NNN
 ```
 
-This aligns with the STD-010 Traceability ID convention and ensures templates are traceable through the same governance and registry systems as other Forge AI artifacts.
+This aligns with the STD-010 Traceability ID convention and ensures templates are traceable through the same governance and registry systems as otherAI-DOS artifacts.
 
 ### 18.3Produced Document Identifier
 
@@ -807,8 +807,8 @@ Placeholders shall use double-curly-brace delimiters:
 
 | Type | Description | Validation Rule | Example Value |
 |:---|:---|:---|:---|
-| `TEXT` | Free-form text, single or multi-line. | Non-empty; may contain inline markdown. | `Forge AI Runtime Engine` |
-| `IDENTIFIER` | Machine-readable identifier matching a defined pattern. | Must match `^[A-Z][A-Z0-9-]+$`. | `FORGE-STD-010` |
+| `TEXT` | Free-form text, single or multi-line. | Non-empty; may contain inline markdown. | `AI-DOS Runtime Engine` |
+| `IDENTIFIER` | Machine-readable identifier matching a defined pattern. | Must match `^[A-Z][A-Z0-9-]+$`. | `AI-DOS-STD-010` |
 | `VERSION` | Version string following STD-010 version format. | Must match `^\d+\.\d+\.\d+(-\w+)?$`. | `0.1.0-draft` |
 | `DATE` | Date in ISO 8601 format. | Must match `^\d{4}-\d{2}-\d{2}$`. | `2026-07-09` |
 | `STATUS` | Lifecycle status from the defined status set. | Must be one of: Draft, Review, Approved, Canonical, Deprecated, Legacy, Archived, Retired. | `Draft` |
@@ -1822,7 +1822,7 @@ Brief description of the template category and its scope.
 ## Templates
 | File | Identifier | Version | Status | Compliance Level | Owner |
 |:---|:---|:---|:---|:---|:---|
-| TPL-NNN-*.md | FORGE-TPL-NNN | x.y.z | Status | L1/L2/L3 | Owner Name |
+| TPL-NNN-*.md | AI-DOS-TPL-NNN | x.y.z | Status | L1/L2/L3 | Owner Name |
 
 ## Governance
 - Review Authority: {name}
@@ -1923,7 +1923,7 @@ The following is the STD-010 metadata block for a hypothetical `TPL-001-RFC-Temp
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-001` |
+| Identifier | `AI-DOS-TPL-001` |
 | Title | TPL-001 — RFC Template Standard |
 | Version | 0.1.0-draft |
 | Status | Draft |
@@ -1937,8 +1937,8 @@ The following is the STD-010 metadata block for a hypothetical `TPL-001-RFC-Temp
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Draft |
-| Traceability ID | FORGE-AI.V3.TPL-001 |
-| Scope | Structural template standard for all RFC-class documents produced by Forge AI |
+| Traceability ID | AI-DOS.V3.TPL-001 |
+| Scope | Structural template standard for all RFC-class documents produced byAI-DOS |
 | Out of Scope | RFC content decisions, architecture review procedures, implementation guidance |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/FrameworkGovernance.md`; TPL-000 |
 | Normative References | STD-010; STD-000; STD-003; A.1; M.0; M.1 |
@@ -1983,7 +1983,7 @@ The following is the STD-010 metadata block for a hypothetical `TPL-001-RFC-Temp
 Given the placeholder values:
 
 ```
-IDENTIFIER = FORGE-A-004.8
+IDENTIFIER = AI-DOS-A-004.8
 TITLE = A.4.8 — Engine Kernel Registry RFC
 VERSION = 0.1.0-draft
 STATUS = Draft
@@ -1996,7 +1996,7 @@ The template produces:
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-A-004.8` |
+| Identifier | `AI-DOS-A-004.8` |
 | Title | A.4.8 — Engine Kernel Registry RFC |
 | Version | 0.1.0-draft |
 | Status | Draft |
@@ -2177,7 +2177,7 @@ The Template Capability Matrix provides a comprehensive view of all capabilities
 ## 45. Future Evolution
 
 
-TPL-000 is designed to evolve with the Forge AI Framework. The following areas are identified for future consideration but are explicitly out of scope for this version.
+TPL-000 is designed to evolve with theAI-DOS Framework. The following areas are identified for future consideration but are explicitly out of scope for this version.
 
 ### 45.1Template Tooling
 
@@ -2203,7 +2203,7 @@ Future versions may define:
 
 Future versions may define:
 
-- Template node representations in the Forge AI knowledge graph.
+- Template node representations in theAI-DOS knowledge graph.
 - Relationship edges between templates, standards, meta models, and produced documents.
 - Graph-based dependency and impact analysis.
 
@@ -2264,7 +2264,7 @@ The following is the minimal skeleton for a governed template file:
 ```markdown
 # TPL-NNN — {Template Title}
 
-> Forge AI v3 · Standards Library
+>AI-DOS v3 · Standards Library
 > {Classification} · {Status} / {Canonical Status}
 
 ---
@@ -2273,7 +2273,7 @@ The following is the minimal skeleton for a governed template file:
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-NNN` |
+| Identifier | `AI-DOS-TPL-NNN` |
 | Title | TPL-NNN — {Template Title} |
 | Version | {{VERSION}} |
 | Status | {{STATUS}} |
@@ -2362,7 +2362,7 @@ The following is the minimal skeleton for a governed template file:
 |:---|:---|
 | SV-001 | Has complete STD-010 metadata. |
 | SV-002 | Filename is `TPL-NNN-Name.md`. |
-| SV-003 | Identifier is `FORGE-TPL-NNN`. |
+| SV-003 | Identifier is `AI-DOS-TPL-NNN`. |
 | SV-004 | All required placeholders declared. |
 | SV-005 | All declared placeholders used. |
 | SV-006 | No undeclared placeholders. |
@@ -2483,7 +2483,7 @@ Complete mapping from Required Placeholder Set to STD-010 mandatory fields:
 
 **Summary**
 
-TPL-000 defines the draft Forge AI Template Standard. It establishes the canonical governance architecture for every reusable template under `docs/AI/Templates/`, covering template taxonomy, lifecycle, versioning, naming, identifiers, placeholder grammar, metadata generation, composition, inheritance, dependencies, compatibility, validation, compliance levels, certification, migration, legacy handling, review, approval, directory management, anti-patterns, and best practices.
+TPL-000 defines the draftAI-DOS Template Standard. It establishes the canonical governance architecture for every reusable template under `docs/AI/Templates/`, covering template taxonomy, lifecycle, versioning, naming, identifiers, placeholder grammar, metadata generation, composition, inheritance, dependencies, compatibility, validation, compliance levels, certification, migration, legacy handling, review, approval, directory management, anti-patterns, and best practices.
 
 TPL-000 consumes STD-010 exactly for all metadata requirements. It does not redefine, simplify, or override STD-010, Governance, Runtime, or Engine Platform. Templates governed by TPL-000 produce documents that comply with STD-010. TPL-000 governs how templates are authored; STD-010 governs how documents are authored.
 
@@ -2500,7 +2500,7 @@ TPL-000 consumes STD-010 exactly for all metadata requirements. It does not rede
 | Metadata block present | Pass |
 | All 25 mandatory fields present | Pass |
 | Metadata table format correct | Pass |
-| Identifier format correct (`FORGE-TPL-000`) | Pass |
+| Identifier format correct (`AI-DOS-TPL-000`) | Pass |
 | Version format correct (`0.1.0-draft`) | Pass |
 | Status correct (`Draft`) | Pass |
 | Canonical Status correct (Non-canonical) | Pass |

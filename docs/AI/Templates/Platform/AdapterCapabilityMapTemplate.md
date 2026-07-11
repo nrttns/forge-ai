@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-PLATFORM-ADAPTER-CAPABILITY-MAP` |
+| Identifier | `AI-DOS-TPL-PLATFORM-ADAPTER-CAPABILITY-MAP` |
 | Title | Adapter Capability Map Template |
 | Version | `0.2.0-draft` |
 | Status | Draft |
@@ -20,13 +20,13 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.TEMPLATES.PLATFORM.ADAPTER-CAPABILITY-MAP` |
-| Scope | Reusable output contract for mapping existing Forge AI capabilities to documented target-platform equivalents without creating implementation or authority. |
+| Traceability ID | `AI-DOS.TEMPLATES.PLATFORM.ADAPTER-CAPABILITY-MAP` |
+| Scope | Reusable output contract for mapping existingAI-DOS capabilities to documented target-platform equivalents without creating implementation or authority. |
 | Out of Scope | Implementing platform capabilities, connectors, APIs, runtime behavior, authentication, transport, registry persistence, platform-specific execution, governance ownership, certification authority, or ProjectStatus updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
 | Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/README.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/Runtime/A.4.3-Engine-Registry-RFC.md`; `docs/AI/Runtime/A.5.1-Context-Engine-RFC.md`; `docs/AI/Runtime/A.5.2-Knowledge-Engine-RFC.md`; `docs/AI/Runtime/A.5.12-Registry-Engine-RFC.md` |
 | Dependencies | STD-010 metadata schema; TPL-000 template governance; existing Platform Adapter, Integration, Runtime, Engine, Context, Knowledge, and Registry authorities |
-| Consumes | STD-010 metadata rules; TPL-000 placeholder grammar and validation requirements; existing Forge AI capability authorities |
+| Consumes | STD-010 metadata rules; TPL-000 placeholder grammar and validation requirements; existingAI-DOS capability authorities |
 | Produces | Adapter capability map documentation structure and placeholder manifest |
 | Related Specifications | Platform Adapter Template; Adapter Boundary Template; Adapter Validation Template; Integration templates |
 | Supersedes | None |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-Use this template to map Forge AI capabilities to target-platform equivalents for documentation and review. The produced map records whether a target platform can support a capability, which existing authority governs it, and what validation evidence is expected.
+Use this template to mapAI-DOS capabilities to target-platform equivalents for documentation and review. The produced map records whether a target platform can support a capability, which existing authority governs it, and what validation evidence is expected.
 
 ## 2. Authority Boundary
 
@@ -164,7 +164,7 @@ Every document produced from this template must begin with a STD-010-compliant `
 
 ## 5. Capability Map
 
-| Forge AI Capability | Platform Equivalent | Adapter Behavior | Authority Source | Validation Evidence |
+|AI-DOS Capability | Platform Equivalent | Adapter Behavior | Authority Source | Validation Evidence |
 |:---|:---|:---|:---|:---|
 | ProjectStatus consumption | {{PROJECTSTATUS_EQUIVALENT}} | {{PROJECTSTATUS_BEHAVIOR}} | {{PROJECTSTATUS_AUTHORITY}} | {{PROJECTSTATUS_EVIDENCE}} |
 | Command execution | {{COMMAND_EQUIVALENT}} | {{COMMAND_BEHAVIOR}} | {{COMMAND_AUTHORITY}} | {{COMMAND_EVIDENCE}} |

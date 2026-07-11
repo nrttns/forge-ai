@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.SYSTEM.EXECUTION-SEQUENCE` |
+| Identifier | `AI-DOS.SYSTEM.EXECUTION-SEQUENCE` |
 | Title | AI System Execution Sequence |
 | Version | `2.0.0-draft` |
 | Status | Draft |
@@ -20,8 +20,8 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Draft Operational Core Alignment |
-| Traceability ID | `FORGE-AI.V2.OP-005F` |
-| Scope | Execution ordering, safe execution procedure, file-scope enforcement, command/workflow/template handoff, validation handoff, completion evidence routing, stop-on-failure handling, and post-execution report structure for Forge AI agents. |
+| Traceability ID | `AI-DOS.V2.OP-005F` |
+| Scope | Execution ordering, safe execution procedure, file-scope enforcement, command/workflow/template handoff, validation handoff, completion evidence routing, stop-on-failure handling, and post-execution report structure forAI-DOS agents. |
 | Out of Scope | Authority resolution, boot sequence ownership, source-of-truth selection, context assembly, decision outcome selection, governance decisions, ProjectStatus ownership, Runtime definitions, Engine definitions, command definitions, workflow definitions, template definitions, certification, canonical promotion, and implementation beyond the active task scope. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
 | Normative References | `docs/AI/System/AuthorityModel.md`; `docs/AI/System/BootSequence.md`; `docs/AI/System/SourceOfTruth.md`; `docs/AI/System/ContextAssembly.md`; `docs/AI/System/DecisionModel.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-This document defines how Forge AI agents execute an approved decision outcome after `docs/AI/System/AuthorityModel.md`, `docs/AI/System/BootSequence.md`, `docs/AI/System/SourceOfTruth.md`, `docs/AI/System/ContextAssembly.md`, and `docs/AI/System/DecisionModel.md` have completed.
+This document defines howAI-DOS agents execute an approved decision outcome after `docs/AI/System/AuthorityModel.md`, `docs/AI/System/BootSequence.md`, `docs/AI/System/SourceOfTruth.md`, `docs/AI/System/ContextAssembly.md`, and `docs/AI/System/DecisionModel.md` have completed.
 
 ExecutionSequence determines how an allowed decision outcome is carried out safely. It answers what action is executed, which command, workflow, or template governs execution, which files may be modified, which files must not be modified, which validation must run, what completion evidence must be reported, and when execution must stop.
 

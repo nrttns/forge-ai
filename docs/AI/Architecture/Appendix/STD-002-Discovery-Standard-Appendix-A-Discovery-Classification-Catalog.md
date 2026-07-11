@@ -1,6 +1,6 @@
 # Appendix A — Discovery Classification Catalog
 
-> **Parent Document:** [STD-002 — Discovery Standard](./STD-002-Discovery-Standard.md) (`FORGE-STD-002`)
+> **Parent Document:** [STD-002 — Discovery Standard](./STD-002-Discovery-Standard.md) (`AI-DOS-STD-002`)
 > **Version:** 1.0.0-alpha
 > **Status:** Draft
 
@@ -11,7 +11,7 @@
 | Property | Value |
 |:---|:---|
 | **Document** | Appendix A — Discovery Classification Catalog |
-| **Identifier** | `FORGE-STD-002-APP-A` |
+| **Identifier** | `AI-DOS-STD-002-APP-A` |
 | **Version** | 1.0.0-alpha |
 | **Status** | Draft |
 | **Type** | Standard Appendix |
@@ -27,7 +27,7 @@
 
 ## Position
 
-This appendix defines the canonical classification system used by every Discovery artifact within the Forge AI Framework.
+This appendix defines the canonical classification system used by every Discovery artifact within theAI-DOS Framework.
 
 It is the single authoritative source for assigning Discovery domains, discovery types, severity levels, confidence levels, ownership, lifecycle state, and classification metadata.
 
@@ -87,7 +87,7 @@ This appendix is complete when:
 
 ## Overview
 
-The Discovery Classification Catalog establishes the canonical taxonomy used to classify every Discovery artifact created within the Forge AI Framework.
+The Discovery Classification Catalog establishes the canonical taxonomy used to classify every Discovery artifact created within theAI-DOS Framework.
 
 Classification ensures that observations, architectural discoveries, runtime findings, governance gaps, documentation issues, and planning insights are organized consistently before they become Findings, Risks, Recommendations, or Decisions.
 
@@ -158,7 +158,7 @@ The purpose of this appendix is fulfilled when every Discovery artifact can be c
 
 ## Overview
 
-The Discovery Classification Philosophy defines the foundational principles governing how every Discovery artifact shall be classified throughout the Forge AI Framework.
+The Discovery Classification Philosophy defines the foundational principles governing how every Discovery artifact shall be classified throughout theAI-DOS Framework.
 
 Classification is not an administrative activity. It is an architectural responsibility that ensures Discoveries remain consistent, comparable, traceable, and reusable across all Framework components.
 
@@ -334,7 +334,7 @@ This philosophical model is considered complete when:
 
 ## Completion Statement
 
-The Discovery Classification Philosophy establishes the immutable principles governing how Discovery artifacts are classified within the Forge AI Framework.
+The Discovery Classification Philosophy establishes the immutable principles governing how Discovery artifacts are classified within theAI-DOS Framework.
 
 These principles become mandatory for every consumer of STD-002 and shall remain stable unless superseded through Framework Governance.
 
@@ -670,7 +670,7 @@ The Discovery Classification Model is complete when:
 
 ## Completion Statement
 
-The Discovery Classification Model establishes the canonical metadata architecture for every Discovery artifact within the Forge AI Framework.
+The Discovery Classification Model establishes the canonical metadata architecture for every Discovery artifact within theAI-DOS Framework.
 
 All subsequent Framework Standards shall consume this model rather than redefining Discovery metadata.
 
@@ -994,7 +994,7 @@ The Primary Domain Catalog is complete when:
 
 ## Completion Statement
 
-The Primary Discovery Domain Catalog establishes the canonical architectural classification system for every Discovery artifact within the Forge AI Framework.
+The Primary Discovery Domain Catalog establishes the canonical architectural classification system for every Discovery artifact within theAI-DOS Framework.
 
 Every future Framework Standard consuming Discovery artifacts shall reference this catalog instead of defining alternative domain taxonomies.
 
@@ -1358,7 +1358,7 @@ The Secondary Tag model is complete when:
 
 The Secondary Classification Tag Model establishes the canonical semantic enrichment system for Discovery artifacts.
 
-It complements Primary Domains while preserving deterministic classification across the Forge AI Framework.
+It complements Primary Domains while preserving deterministic classification across theAI-DOS Framework.
 
 # 7. Discovery Types
 
@@ -1998,7 +1998,7 @@ SEV-6
 
 Purpose
 
-Threatens the integrity of the Forge AI Framework itself.
+Threatens the integrity of theAI-DOS Framework itself.
 
 Human Governance involvement becomes mandatory.
 
@@ -2457,7 +2457,7 @@ The Confidence Model is complete when:
 
 The Confidence Model establishes the canonical measure of evidential certainty for Discovery artifacts.
 
-It enables trustworthy AI-assisted reasoning while preserving transparency, traceability, and governance throughout the Forge AI Framework.
+It enables trustworthy AI-assisted reasoning while preserving transparency, traceability, and governance throughout theAI-DOS Framework.
 
 # 10. Discovery Ownership Model
 
@@ -2790,13 +2790,13 @@ The Ownership Model is complete when:
 
 The Discovery Ownership Model establishes the canonical governance responsibility model for Discovery artifacts.
 
-It separates accountability, authority, stewardship, maintenance, review, and consumption into explicit architectural roles, ensuring consistent governance across the Forge AI Framework.
+It separates accountability, authority, stewardship, maintenance, review, and consumption into explicit architectural roles, ensuring consistent governance across theAI-DOS Framework.
 
 # 11. Discovery Lifecycle State Machine
 
 ## Overview
 
-The Discovery Lifecycle State Machine defines the canonical lifecycle governing every Discovery artifact within the Forge AI Framework.
+The Discovery Lifecycle State Machine defines the canonical lifecycle governing every Discovery artifact within theAI-DOS Framework.
 
 Unlike a simple lifecycle diagram, the State Machine defines:
 
@@ -3169,13 +3169,13 @@ The Lifecycle State Machine is complete when:
 
 The Discovery Lifecycle State Machine establishes the canonical governance lifecycle for Discovery artifacts.
 
-It ensures deterministic progression, traceability, governance compliance, and safe AI-assisted lifecycle management throughout the Forge AI Framework.
+It ensures deterministic progression, traceability, governance compliance, and safe AI-assisted lifecycle management throughout theAI-DOS Framework.
 
 # 12. Discovery Relationship Model
 
 ## Overview
 
-The Discovery Relationship Model defines the canonical relationships between Discovery artifacts and every downstream artifact within the Forge AI Framework.
+The Discovery Relationship Model defines the canonical relationships between Discovery artifacts and every downstream artifact within theAI-DOS Framework.
 
 A Discovery never exists in isolation.
 
@@ -3536,7 +3536,7 @@ The Relationship Model is complete when:
 
 The Discovery Relationship Model establishes the canonical relationship architecture for Discovery artifacts.
 
-It provides a deterministic, governance-controlled graph connecting Discovery to every downstream artifact while preserving complete traceability throughout the Forge AI Framework.
+It provides a deterministic, governance-controlled graph connecting Discovery to every downstream artifact while preserving complete traceability throughout theAI-DOS Framework.
 
 # 13. AI Classification & Decision Rules
 
@@ -3839,7 +3839,7 @@ This section is complete when:
 
 The AI Classification & Decision Rules establish the constitutional operating boundaries for AI systems interacting with Discovery artifacts.
 
-They ensure that AI enhances architectural analysis while preserving transparency, traceability, governance, and human authority throughout the Forge AI Framework.
+They ensure that AI enhances architectural analysis while preserving transparency, traceability, governance, and human authority throughout theAI-DOS Framework.
 
 # 14. Canonical Examples
 
@@ -4244,7 +4244,7 @@ Canonical examples are complete when:
 
 ## Completion Statement
 
-These canonical examples establish the reference implementation for Discovery classification throughout the Forge AI Framework.
+These canonical examples establish the reference implementation for Discovery classification throughout theAI-DOS Framework.
 
 Future Framework Standards shall reference these examples rather than redefining equivalent scenarios.
 
@@ -4252,7 +4252,7 @@ Future Framework Standards shall reference these examples rather than redefining
 
 ## Overview
 
-The Discovery Compliance Checklist defines the mandatory compliance requirements that every Discovery artifact shall satisfy before it can be considered compliant with the Forge AI Discovery Standard.
+The Discovery Compliance Checklist defines the mandatory compliance requirements that every Discovery artifact shall satisfy before it can be considered compliant with theAI-DOS Discovery Standard.
 
 This checklist provides a uniform validation baseline for:
 
@@ -4527,5 +4527,5 @@ The Compliance Checklist is complete when:
 
 The Discovery Compliance Checklist establishes the canonical validation baseline for all Discovery artifacts.
 
-It ensures that every Discovery entering the Forge AI ecosystem satisfies consistent governance, metadata, classification, evidence, lifecycle, relationship, and traceability requirements before it may be accepted as a compliant architectural artifact.
+It ensures that every Discovery entering theAI-DOS ecosystem satisfies consistent governance, metadata, classification, evidence, lifecycle, relationship, and traceability requirements before it may be accepted as a compliant architectural artifact.
 

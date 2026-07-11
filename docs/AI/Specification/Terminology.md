@@ -113,4 +113,4 @@ A framework adapter is not a fork of the framework.
 
 It is a project-specific application of the framework that may define framework-specific authorities, project status files, phases, stages, historical sprints, commands, and quality gates while preserving framework-level terminology.
 
-Forge AI is the first framework adapter.
+AI-DOS is the first framework adapter.

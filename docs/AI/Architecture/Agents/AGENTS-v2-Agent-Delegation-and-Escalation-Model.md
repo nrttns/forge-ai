@@ -1,4 +1,4 @@
-# Forge AI — AGENTS v2 Agent Delegation and Escalation Model
+#AI-DOS — AGENTS v2 Agent Delegation and Escalation Model
 
 ---
 
@@ -6,8 +6,8 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.AGENTS.V2.AGENT-DELEGATION-AND-ESCALATION-MODEL` |
-| Title | Forge AI — AGENTS v2 Agent Delegation and Escalation Model |
+| Identifier | `AI-DOS.AGENTS.V2.AGENT-DELEGATION-AND-ESCALATION-MODEL` |
+| Title |AI-DOS — AGENTS v2 Agent Delegation and Escalation Model |
 | Version | 0.1.0-draft |
 | Status | Draft |
 | Canonical Status | Non-canonical until reviewed, approved, and promoted through Human Governance / Framework Governance |
@@ -20,7 +20,7 @@
 | Created | 2026-07-08 |
 | Last Updated | 2026-07-08 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.ARCHITECTURE.AGENTS.V2.DELEGATION-ESCALATION` |
+| Traceability ID | `AI-DOS.ARCHITECTURE.AGENTS.V2.DELEGATION-ESCALATION` |
 | Scope | Documentation-level AGENTS v2 agent delegation and escalation model, including delegation philosophy, delegation contracts, participants, preconditions, payloads, acceptance, rejection, escalation triggers, escalation paths, escalation outcomes, validation rules, and governance boundaries. |
 | Out of Scope | Delegation runtime implementation, scheduling, queues, dispatch, routing, orchestration, APIs, storage, CLI, UI, transport, messaging runtime, execution, swarm behavior, platform adapters, Engine RFC work, Runtime redefinition, Engine Platform redefinition, Governance redefinition, Standards redefinition, M.0 redefinition, M.1 redefinition, STD-010 redefinition, and ProjectStatus updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Architecture.md` |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-This document defines the AGENTS v2 agent delegation and escalation model for Forge AI.
+This document defines the AGENTS v2 agent delegation and escalation model for AI-DOS.
 
 Its purpose is to describe how future AGENTS v2 agent architecture may represent documentation-level delegation requests, delegation boundaries, delegation acceptance, delegation rejection, escalation triggers, escalation paths, escalation outcomes, and validation requirements without defining execution behavior or implementation mechanisms.
 

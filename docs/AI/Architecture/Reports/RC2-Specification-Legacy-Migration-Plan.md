@@ -3,11 +3,11 @@
 ## 1. Status
 
 Status: Planning Report / Documentation-only / No Move Performed  
-Project: Forge AI  
+Project: AI-DOS  
 Document Type: Legacy Migration Plan  
 Scope: `docs/AI/Specification/` only  
 Created: 2026-07-07  
-Authority Premise: Forge AI v3 is the target architecture, while RC2 remains the operational compatibility layer until approved v3 replacements exist.
+Authority Premise:AI-DOS v3 is the target architecture, while RC2 remains the operational compatibility layer until approved v3 replacements exist.
 
 This report does not move, rename, delete, or rewrite any RC2 Specification file. It does not update `docs/ProjectStatus.md`. It plans a safe future migration of the RC2 Specification directory after valuable source material has been harvested into v3 architecture artifacts or explicitly waived by governance.
 
@@ -69,7 +69,7 @@ Not eligible for movement now:
 | `docs/AI/Specification/Constitution.md` | RC2 framework constitution | Purpose, vision, mission, objectives, audience, scope, foundational philosophy, core principles, constitutional invariants, relationship to other RC2 modules. | High: referenced as current AI Framework Constitution by active authority chains. |
 | `docs/AI/Specification/FrameworkSpecification.md` | Core RC2 framework specification | Core architecture, planning model, workflow engine, command system, template system, review system, validation, documentation, state management, orchestration. | High: defines subsystem boundaries consumed by operational documents. |
 | `docs/AI/Specification/GovernanceModel.md` | RC2 governance specification | Governance philosophy, hierarchy, human authority, decision classification, ownership governance, quality gates, certification, escalation, compliance, governance evolution. | High: overlaps with project-level governance and future v3 governance standards. |
-| `docs/AI/Specification/ReferenceArchitecture.md` | RC2 reference architecture | High-level architecture, logical layers, information flow, authority flow, framework adapter model, Forge AI adapter position, future adapter examples, extension readiness, roadmap, architectural principles. | Medium-high: contains useful diagrams and one stale `ForgeAI2` path requiring cleanup before reuse. |
+| `docs/AI/Specification/ReferenceArchitecture.md` | RC2 reference architecture | High-level architecture, logical layers, information flow, authority flow, framework adapter model,AI-DOS adapter position, future adapter examples, extension readiness, roadmap, architectural principles. | Medium-high: contains useful diagrams and one stale `AI-DOS2` path requiring cleanup before reuse. |
 | `docs/AI/Specification/RuntimeModel.md` | RC2 runtime specification | Runtime philosophy, agent lifecycle, runtime layers, context management, memory strategy, multi-agent coordination, swarm coordination, runtime communication, runtime invariants. | High: future v3 runtime architecture is not yet fully represented in promoted documents. |
 | `docs/AI/Specification/Terminology.md` | RC2 canonical terminology | AI Framework vocabulary, state terms, planning terms, command/workflow/template terms, adapter terms. | High: terms must be reconciled with v3 meta-model vocabulary before move. |
 
@@ -78,9 +78,9 @@ Not eligible for movement now:
 | Source file | Valuable content | Target v3 destination | Action |
 | --- | --- | --- | --- |
 | `docs/AI/Specification/Constitution.md` | Framework-independent mission; documentation-driven development; architecture-before-code; self-planning agents; core principles; constitutional invariants; human authority. | `docs/AI/Architecture/A.1-Constitution.md`, with deltas tracked in a future constitutional alignment report if needed. | Harvest |
-| `docs/AI/Specification/FrameworkSpecification.md` | Core subsystem list; planning hierarchy; workflow state machine; command boundaries; template contract model; review outcomes; validation-before-review model; state management model; orchestration relationship. | `docs/AI/Meta/M.0-Framework-Meta-Model.md`, `docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md`, future v3 workflow/command/template/validation standards. | Harvest |
+| `docs/AI/Specification/FrameworkSpecification.md` | Core subsystem list; planning hierarchy; workflow state machine; command boundaries; template contract model; review outcomes; validation-before-review model; state management model; orchestration relationship. | `docs/AI/Meta/M.0-Framework-Meta-Model.md`, `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md`, future v3 workflow/command/template/validation standards. | Harvest |
 | `docs/AI/Specification/GovernanceModel.md` | Human authority model; decision classification; single-owner governance; quality gate sequence and outcomes; certification criteria; escalation model; conservative governance evolution rules. | `docs/AI/FrameworkGovernance.md`, `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`, future v3 governance/certification standard. | Harvest |
-| `docs/AI/Specification/ReferenceArchitecture.md` | Logical layer model; information flow; authority flow; adapter rules; extension roadmap; architectural principles. | `docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md`, future v3 reference/runtime architecture, future adapter standard. | Harvest |
+| `docs/AI/Specification/ReferenceArchitecture.md` | Logical layer model; information flow; authority flow; adapter rules; extension roadmap; architectural principles. | `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md`, future v3 reference/runtime architecture, future adapter standard. | Harvest |
 | `docs/AI/Specification/RuntimeModel.md` | Agent lifecycle; runtime layer separation; context rules; memory strategy; multi-agent coordination rules; conflict resolution; swarm lifecycle; artifact-based runtime communication. | Future v3 runtime architecture, future agent/runtime standard, future multi-agent/swarm standard, `docs/AI/Meta/M.0-Framework-Meta-Model.md` for concept alignment. | Harvest blocker |
 | `docs/AI/Specification/Terminology.md` | Canonical definitions for Agent, Authority, Certification, Command, Context, Governance, Knowledge, Memory, Planning, Project State, Review, Runtime, State, Swarm, Task, Template, Validation, Workflow; state taxonomy; planning sequence. | `docs/AI/Meta/M.0-Framework-Meta-Model.md`, `docs/AI/Meta/M.1-Artifact-Meta-Model.md`, future v3 glossary/terminology standard. | Harvest blocker |
 
@@ -227,7 +227,7 @@ These files either remain operational, own live project state, provide active go
 ### Phase 2 — Content Harvest
 
 - Compare `Constitution.md` against `docs/AI/Architecture/A.1-Constitution.md`.
-- Compare `FrameworkSpecification.md` against `docs/AI/Meta/M.0-Framework-Meta-Model.md`, `docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md`, and future standards needs.
+- Compare `FrameworkSpecification.md` against `docs/AI/Meta/M.0-Framework-Meta-Model.md`, `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md`, and future standards needs.
 - Compare `GovernanceModel.md` against `docs/AI/FrameworkGovernance.md` and `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`.
 - Compare `ReferenceArchitecture.md` against the v3 Blueprint RFC and future adapter/runtime architecture needs.
 - Compare `RuntimeModel.md` against future v3 runtime, agent, context, memory, multi-agent, and swarm architecture needs.

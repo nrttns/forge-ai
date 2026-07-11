@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-PROJECT-REACT` |
+| Identifier | `AI-DOS-TPL-PROJECT-REACT` |
 | Title | React Project Template |
 | Version | `0.2.0-draft` |
 | Status | Draft |
@@ -20,7 +20,7 @@
 | Created | 2026-07-10 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.TEMPLATES.PROJECT.REACT` |
+| Traceability ID | `AI-DOS.TEMPLATES.PROJECT.REACT` |
 | Scope | Reusable output contract for react project adoption documentation. |
 | Out of Scope | Project implementation logic, scaffolding behavior, code generation, runtime behavior, deployment logic, CI/CD behavior, package management execution, framework-specific execution, certification decisions, registry updates, or ProjectStatus updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |

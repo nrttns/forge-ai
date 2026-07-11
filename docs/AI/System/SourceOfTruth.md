@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.SYSTEM.SOURCE-OF-TRUTH` |
+| Identifier | `AI-DOS.SYSTEM.SOURCE-OF-TRUTH` |
 | Title | AI System Source of Truth |
 | Version | `2.0.0-draft` |
 | Status | Draft |
@@ -20,8 +20,8 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Draft Operational Core Alignment |
-| Traceability ID | `FORGE-AI.V2.OP-005C` |
-| Scope | Source-of-truth identification, authority lookup, domain-to-authority mapping, conflict detection, source validation, and escalation recommendation for Forge AI agents. |
+| Traceability ID | `AI-DOS.V2.OP-005C` |
+| Scope | Source-of-truth identification, authority lookup, domain-to-authority mapping, conflict detection, source validation, and escalation recommendation forAI-DOS agents. |
 | Out of Scope | Governance decisions, architecture decisions, Runtime definitions, Engine definitions, ProjectStatus ownership, command definitions, workflow definitions, template definitions, certification, canonical promotion, and implementation. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
 | Normative References | `docs/AI/System/AuthorityModel.md`; `docs/AI/System/BootSequence.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-This document defines how Forge AI agents determine the authoritative source for any information needed during execution.
+This document defines howAI-DOS agents determine the authoritative source for any information needed during execution.
 
 The Source of Truth procedure preserves separation between governance, architecture, operational state, roadmap sequence, operational execution guidance, commands, workflows, templates, reports, reviews, and conversational task input.
 

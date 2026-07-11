@@ -11,7 +11,7 @@ Extends: `docs/AI/Commands/AgentTaskCommand.md`
 
 # Purpose
 
-This checklist defines the minimum review requirements for every implementation, audit, documentation update, refactor, and bug fix performed within Forge AI.
+This checklist defines the minimum review requirements for every implementation, audit, documentation update, refactor, and bug fix performed within AI-DOS.
 
 Review certifies work before project state advances.
 

@@ -1,6 +1,6 @@
 # STD-000 — Framework Standards
 
-> **Forge AI v3 · Standards Library Governance**
+> **AI-DOS v3 · Standards Library Governance**
 > Standards Library · Root Standard
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-STD-000` |
+| Identifier | `AI-DOS-STD-000` |
 | Title | STD-000 — Framework Standards |
 | Version | 3.2.0 |
 | Status | Draft |
@@ -23,7 +23,7 @@
 | Created | 2026-07-04 |
 | Last Updated | 2026-07-07 |
 | Lifecycle Phase | Draft |
-| Traceability ID | FORGE-STD-000 |
+| Traceability ID | AI-DOS-STD-000 |
 | Scope | Standards library governance |
 | Out of Scope | Individual standard implementations and certification |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/FrameworkGovernance.md` |
@@ -102,7 +102,7 @@
 | Property | Value |
 |:---|:---|
 | **Document** | STD-000 — Framework Standards |
-| **Identifier** | `FORGE-STD-000` |
+| **Identifier** | `AI-DOS-STD-000` |
 | **Version** | 3.2.0 |
 | **Status** | Draft |
 | **Type** | Framework Standard |
@@ -115,7 +115,7 @@
 
 ### Standard Position
 
-STD-000 is the root governance document for the Forge AI Standards Library.
+STD-000 is the root governance document for theAI-DOS Standards Library.
 
 It defines how Framework Standards are identified, structured, governed, validated, certified, versioned, migrated, and consumed.
 
@@ -125,7 +125,7 @@ Every future STD-\* document shall derive its standard structure and lifecycle e
 
 STD-000 does not replace the Constitution or the Meta Model.
 
-It consumes both and translates them into a reusable standardization system for the Forge AI Framework.
+It consumes both and translates them into a reusable standardization system for theAI-DOS Framework.
 
 ```mermaid
 graph TD
@@ -216,7 +216,7 @@ STD-000 produces:
 
 ### Success Criteria
 
-This document is successful when every Forge AI Framework Standard can be:
+This document is successful when everyAI-DOS Framework Standard can be:
 
 - Identified consistently
 - Structured consistently
@@ -239,9 +239,9 @@ The Status section becomes the canonical identity record for STD-000 — Framewo
 
 ### Purpose of This Preamble
 
-This preamble establishes the intent, philosophy, and governing context of the Forge AI Standards Library.
+This preamble establishes the intent, philosophy, and governing context of theAI-DOS Standards Library.
 
-Framework Standards exist to provide a common, reusable, and governed foundation for all recurring architectural models, schemas, processes, and practices used throughout the Forge AI Framework.
+Framework Standards exist to provide a common, reusable, and governed foundation for all recurring architectural models, schemas, processes, and practices used throughout theAI-DOS Framework.
 
 ### Why Standards Exist
 
@@ -301,7 +301,7 @@ Standards define how reusable Framework concepts are modeled, governed, validate
 
 ### Completion Statement
 
-The Preamble establishes the philosophical and governance foundation for the Forge AI Standards Library and prepares all subsequent sections of STD-000.
+The Preamble establishes the philosophical and governance foundation for theAI-DOS Standards Library and prepares all subsequent sections of STD-000.
 
 ---
 
@@ -309,7 +309,7 @@ The Preamble establishes the philosophical and governance foundation for the For
 
 ### Overview
 
-The purpose of the Framework Standards Library is to provide a canonical, reusable, and governed collection of standards that eliminate duplication across the Forge AI Framework.
+The purpose of the Framework Standards Library is to provide a canonical, reusable, and governed collection of standards that eliminate duplication across theAI-DOS Framework.
 
 Framework Standards capture recurring architectural patterns, governance models, schemas, lifecycle definitions, validation rules, and reference structures so they can be defined once and reused consistently.
 
@@ -367,7 +367,7 @@ This section is complete when the purpose, objectives, goals, outcomes, non-goal
 
 ### Completion Statement
 
-The Purpose section establishes why the Forge AI Standards Library exists and how it contributes to consistency, governance, and long-term architectural sustainability across the Framework.
+The Purpose section establishes why theAI-DOS Standards Library exists and how it contributes to consistency, governance, and long-term architectural sustainability across the Framework.
 
 ---
 
@@ -375,7 +375,7 @@ The Purpose section establishes why the Forge AI Standards Library exists and ho
 
 ### Overview
 
-This section defines the constitutional and operational boundaries of the Forge AI Standards Library.
+This section defines the constitutional and operational boundaries of theAI-DOS Standards Library.
 
 The scope identifies what Framework Standards govern, what they intentionally exclude, and how they interact with other Framework layers.
 
@@ -474,7 +474,7 @@ This section is complete when the boundaries, inclusions, exclusions, dependency
 
 ### Completion Statement
 
-The Scope section establishes the operational boundaries of the Forge AI Standards Library and ensures that Framework Standards remain focused on reusable, governed, and technology-neutral architectural models.
+The Scope section establishes the operational boundaries of theAI-DOS Standards Library and ensures that Framework Standards remain focused on reusable, governed, and technology-neutral architectural models.
 
 ---
 
@@ -482,7 +482,7 @@ The Scope section establishes the operational boundaries of the Forge AI Standar
 
 ### Overview
 
-This section defines the authority model governing the Forge AI Standards Library.
+This section defines the authority model governing theAI-DOS Standards Library.
 
 Authority determines who may create, approve, interpret, modify, certify, deprecate, and archive Framework Standards.
 
@@ -553,7 +553,7 @@ This section is complete when authority hierarchy, responsibilities, delegation 
 
 ### Completion Statement
 
-The Authority section establishes the governing authority chain for the Forge AI Standards Library and ensures that every Framework Standard derives its legitimacy from constitutional governance.
+The Authority section establishes the governing authority chain for theAI-DOS Standards Library and ensures that every Framework Standard derives its legitimacy from constitutional governance.
 
 ---
 
@@ -561,7 +561,7 @@ The Authority section establishes the governing authority chain for the Forge AI
 
 ### Overview
 
-This section defines how the Framework Standards Library depends upon and specializes the Forge AI Framework Meta Model (M.0).
+This section defines how the Framework Standards Library depends upon and specializes theAI-DOS Framework Meta Model (M.0).
 
 M.0 defines the common conceptual language of the Framework. STD-000 defines how that language is transformed into reusable Framework Standards.
 
@@ -640,7 +640,7 @@ The Relationship to M.0 section establishes the Meta Model as the shared concept
 
 The Standards Philosophy defines the foundational beliefs that guide the creation, evolution, and governance of every Framework Standard.
 
-Framework Standards exist to maximize consistency, reuse, traceability, and long-term maintainability across the Forge AI Framework.
+Framework Standards exist to maximize consistency, reuse, traceability, and long-term maintainability across theAI-DOS Framework.
 
 ### Philosophy Statement
 
@@ -911,14 +911,14 @@ Every Framework Standard shall define:
 Canonical format:
 
 ```
-FORGE-STD-000
-FORGE-STD-001
-FORGE-STD-002
+AI-DOS-STD-000
+AI-DOS-STD-001
+AI-DOS-STD-002
 ```
 
 **Rules:**
 
-- Prefix: `FORGE`
+- Prefix: `AI-DOS`
 - Type: `STD`
 - Numeric identifier: three digits
 - Immutable after publication
@@ -974,7 +974,7 @@ This section is complete when identifier rules, naming conventions, version iden
 
 ### Completion Statement
 
-The Standards Identity section establishes the permanent identity model for every Framework Standard, ensuring stable references, governance continuity, and long-term traceability across the Forge AI Standards Library. For the comprehensive machine-readable metadata schema, see [Section 26 — Canonical Metadata Schema](#26-canonical-metadata-schema).
+The Standards Identity section establishes the permanent identity model for every Framework Standard, ensuring stable references, governance continuity, and long-term traceability across theAI-DOS Standards Library. For the comprehensive machine-readable metadata schema, see [Section 26 — Canonical Metadata Schema](#26-canonical-metadata-schema).
 
 ---
 
@@ -1070,7 +1070,7 @@ The Standards Structure section establishes the official template for all Framew
 
 ### Overview
 
-This section defines how Framework Standards relate to one another and to other document families within the Forge AI Framework.
+This section defines how Framework Standards relate to one another and to other document families within theAI-DOS Framework.
 
 The relationship model ensures consistency, traceability, dependency control, and clear architectural boundaries.
 
@@ -1167,7 +1167,7 @@ The Standards Relationships section establishes the canonical relationship model
 
 ### Overview
 
-This section defines the governance model for the Forge AI Standards Library.
+This section defines the governance model for theAI-DOS Standards Library.
 
 Governance ensures that Framework Standards are created, reviewed, approved, maintained, and retired through controlled and transparent processes.
 
@@ -1244,7 +1244,7 @@ This section is complete when governance roles, workflow, responsibilities, cons
 
 ### Completion Statement
 
-The Governance section establishes the operating model for managing the Forge AI Standards Library throughout its lifecycle while preserving constitutional authority, consistency, and long-term maintainability.
+The Governance section establishes the operating model for managing theAI-DOS Standards Library throughout its lifecycle while preserving constitutional authority, consistency, and long-term maintainability.
 
 ---
 
@@ -1332,7 +1332,7 @@ This section is complete when validation principles, workflow, quality gates, ev
 
 ### Completion Statement
 
-The Validation section establishes the canonical quality assurance model for the Forge AI Standards Library, ensuring every Framework Standard is verified before governance approval and certification.
+The Validation section establishes the canonical quality assurance model for theAI-DOS Standards Library, ensuring every Framework Standard is verified before governance approval and certification.
 
 ---
 
@@ -1423,7 +1423,7 @@ This section is complete when certification principles, prerequisites, workflow,
 
 ### Completion Statement
 
-The Certification section establishes the canonical acceptance process for Framework Standards and ensures that only governed, validated, and evidence-backed standards become part of the Forge AI Standards Library. For a multi-level certification model, see [Section 27 — Certification Levels](#27-certification-levels).
+The Certification section establishes the canonical acceptance process for Framework Standards and ensures that only governed, validated, and evidence-backed standards become part of theAI-DOS Standards Library. For a multi-level certification model, see [Section 27 — Certification Levels](#27-certification-levels).
 
 ---
 
@@ -1698,7 +1698,7 @@ This section is complete when reference categories, integrity rules, constraints
 
 ### Completion Statement
 
-The References section establishes a consistent and traceable reference model for the Forge AI Standards Library, ensuring every Framework Standard can identify and consume authoritative sources in a predictable manner.
+The References section establishes a consistent and traceable reference model for theAI-DOS Standards Library, ensuring every Framework Standard can identify and consume authoritative sources in a predictable manner.
 
 ---
 
@@ -1706,7 +1706,7 @@ The References section establishes a consistent and traceable reference model fo
 
 ### Overview
 
-This glossary defines the canonical terminology used throughout the Forge AI Standards Library.
+This glossary defines the canonical terminology used throughout theAI-DOS Standards Library.
 
 Unless explicitly overridden by a higher-authority document, these definitions shall be used consistently across all Framework Standards.
 
@@ -1756,7 +1756,7 @@ This glossary is complete when core terminology is consistently defined and reus
 
 ### Completion Statement
 
-The Glossary establishes the shared vocabulary for Framework Standards and promotes consistent communication throughout the Forge AI Framework.
+The Glossary establishes the shared vocabulary for Framework Standards and promotes consistent communication throughout theAI-DOS Framework.
 
 ---
 
@@ -1825,7 +1825,7 @@ This section is complete when the next standard, roadmap, dependency expectation
 
 ### Completion Statement
 
-STD-000 is complete. It establishes the governing framework for the Forge AI Standards Library and provides the canonical foundation upon which all future Framework Standards shall be authored, governed, validated, certified, versioned, and maintained.
+STD-000 is complete. It establishes the governing framework for theAI-DOS Standards Library and provides the canonical foundation upon which all future Framework Standards shall be authored, governed, validated, certified, versioned, and maintained.
 
 ---
 
@@ -1836,7 +1836,7 @@ STD-000 is complete. It establishes the governing framework for the Forge AI Sta
 
 ### Overview
 
-This section defines the official taxonomy of standard categories within the Forge AI Standards Library. While [Section 8 — Standards Classification](#8-standards-classification) establishes the governance classification (Core, Supporting, Extension, Platform, Project), this section defines the **domain taxonomy** — what functional domain a standard addresses.
+This section defines the official taxonomy of standard categories within theAI-DOS Standards Library. While [Section 8 — Standards Classification](#8-standards-classification) establishes the governance classification (Core, Supporting, Extension, Platform, Project), this section defines the **domain taxonomy** — what functional domain a standard addresses.
 
 Every Framework Standard shall be assigned exactly one domain taxonomy category in addition to its governance classification. The two classification dimensions are independent and complementary.
 
@@ -1895,7 +1895,7 @@ This section is complete when every domain taxonomy category is defined with sco
 
 ### Completion Statement
 
-The Standards Taxonomy provides the domain-level classification system for the Forge AI Standards Library, complementing the governance classification and enabling precise categorization, navigation, and governance of all Framework Standards.
+The Standards Taxonomy provides the domain-level classification system for theAI-DOS Standards Library, complementing the governance classification and enabling precise categorization, navigation, and governance of all Framework Standards.
 
 ---
 
@@ -2263,7 +2263,7 @@ This section defines the canonical, machine-readable metadata schema that every 
 
 | Field | Type | Required | Description |
 |:---|:---|:---:|:---|
-| **id** | String | Yes | The canonical identifier (format: `FORGE-STD-NNN`). See [Section 10 — Identifier Format](#10-standards-identity). |
+| **id** | String | Yes | The canonical identifier (format: `AI-DOS-STD-NNN`). See [Section 10 — Identifier Format](#10-standards-identity). |
 | **title** | String | Yes | The canonical title of the standard. |
 | **version** | String | Yes | The current version (format: `MAJOR.MINOR.PATCH[-STATUS]`). See [Section 16 — Versioning](#16-versioning). |
 | **owner** | String | Yes | The accountable party or role responsible for the standard. See [Section 5 — Authority](#5-authority). |
@@ -2295,7 +2295,7 @@ Standards authored before the adoption of this schema shall include a metadata b
 ### Schema Example
 
 ```yaml
-id: FORGE-STD-001
+id: AI-DOS-STD-001
 title: Discovery Standard
 version: 1.0.0-draft
 owner: Architecture Owner
@@ -2303,10 +2303,10 @@ authority: Framework Governance
 classification: Core
 status: Draft
 dependencies:
-  - FORGE-STD-000
-  - FORGE-META-000
+  - AI-DOS-STD-000
+  - AI-DOS-META-000
 consumers:
-  - FORGE-STD-002
+  - AI-DOS-STD-002
 produces:
   - Discovery Artifact
   - Discovery Schema
@@ -2334,7 +2334,7 @@ This section is complete when the full metadata schema, lifecycle sub-schema, ex
 
 ### Completion Statement
 
-The Canonical Metadata Schema provides the machine-readable specification for standard metadata, enabling automated tooling, registry integration, and consistent metadata processing across the Forge AI Standards Library.
+The Canonical Metadata Schema provides the machine-readable specification for standard metadata, enabling automated tooling, registry integration, and consistent metadata processing across theAI-DOS Standards Library.
 
 ---
 
@@ -2441,7 +2441,7 @@ Every Framework Standard shall be registered with the following information:
 
 | Field | Description | Source |
 |:---|:---|:---|
-| **Identifier** | The canonical `FORGE-STD-NNN` identifier. | [Section 10](#10-standards-identity) |
+| **Identifier** | The canonical `AI-DOS-STD-NNN` identifier. | [Section 10](#10-standards-identity) |
 | **Version** | The current version of the standard. | [Section 16](#16-versioning) |
 | **Owner** | The accountable party responsible for the standard. | [Section 5](#5-authority) |
 | **Authority** | The governing authority for the standard. | [Section 5](#5-authority) |
@@ -2454,15 +2454,15 @@ Every Framework Standard shall be registered with the following information:
 
 | Identifier | Version | Owner | Authority | Dependencies | Consumers | Superseded By | Status |
 |:---|:---|:---|:---|:---|:---|:---|:---|
-| `FORGE-STD-000` | 3.1.0 | Framework Governance | A.1, M.0 | A.1, M.0 | STD-001–STD-008 | — | Canonical (L5) |
-| `FORGE-STD-001` | — | Architecture Owner | Framework Governance | STD-000, M.0 | STD-002 | — | Proposed (L0) |
-| `FORGE-STD-002` | — | Architecture Owner | Framework Governance | STD-001, STD-000, M.0 | STD-003 | — | Proposed (L0) |
-| `FORGE-STD-003` | — | Architecture Owner | Framework Governance | STD-002, STD-000, M.0 | STD-004 | — | Proposed (L0) |
-| `FORGE-STD-004` | — | Architecture Owner | Framework Governance | STD-003, STD-000, M.0 | STD-008 | — | Proposed (L0) |
-| `FORGE-STD-005` | — | Validation Owner | Framework Governance | STD-000, M.0 | STD-001–STD-004, STD-008 | — | Proposed (L0) |
-| `FORGE-STD-006` | — | Architecture Owner | Framework Governance | STD-000, M.0 | STD-001–STD-004, STD-005 | — | Proposed (L0) |
-| `FORGE-STD-007` | — | Metrics Owner | Framework Governance | STD-000, M.0 | STD-008 | — | Proposed (L0) |
-| `FORGE-STD-008` | — | Architecture Owner | Framework Governance | STD-004, STD-000, M.0 | — | — | Proposed (L0) |
+| `AI-DOS-STD-000` | 3.1.0 | Framework Governance | A.1, M.0 | A.1, M.0 | STD-001–STD-008 | — | Canonical (L5) |
+| `AI-DOS-STD-001` | — | Architecture Owner | Framework Governance | STD-000, M.0 | STD-002 | — | Proposed (L0) |
+| `AI-DOS-STD-002` | — | Architecture Owner | Framework Governance | STD-001, STD-000, M.0 | STD-003 | — | Proposed (L0) |
+| `AI-DOS-STD-003` | — | Architecture Owner | Framework Governance | STD-002, STD-000, M.0 | STD-004 | — | Proposed (L0) |
+| `AI-DOS-STD-004` | — | Architecture Owner | Framework Governance | STD-003, STD-000, M.0 | STD-008 | — | Proposed (L0) |
+| `AI-DOS-STD-005` | — | Validation Owner | Framework Governance | STD-000, M.0 | STD-001–STD-004, STD-008 | — | Proposed (L0) |
+| `AI-DOS-STD-006` | — | Architecture Owner | Framework Governance | STD-000, M.0 | STD-001–STD-004, STD-005 | — | Proposed (L0) |
+| `AI-DOS-STD-007` | — | Metrics Owner | Framework Governance | STD-000, M.0 | STD-008 | — | Proposed (L0) |
+| `AI-DOS-STD-008` | — | Architecture Owner | Framework Governance | STD-004, STD-000, M.0 | — | — | Proposed (L0) |
 
 ### Registry Governance
 
@@ -2485,7 +2485,7 @@ This section is complete when the registry purpose, requirements, current entrie
 
 ### Completion Statement
 
-The Standards Registry provides the authoritative inventory for the Forge AI Standards Library, serving as the single source of truth for standard status, dependencies, and relationships.
+The Standards Registry provides the authoritative inventory for theAI-DOS Standards Library, serving as the single source of truth for standard status, dependencies, and relationships.
 
 ---
 
@@ -2504,7 +2504,7 @@ This section defines the canonical Standard Decision Record (SDR) — a structur
 | Field | Description |
 |:---|:---|
 | **Decision ID** | Unique identifier (format: `SDR-STD-___-<SEQ>`). |
-| **Standard** | The `FORGE-STD-*` identifier of the affected standard. |
+| **Standard** | The `AI-DOS-STD-*` identifier of the affected standard. |
 | **Decision** | A concise statement of the decision made. |
 | **Context** | The situation, problem, or requirement that motivated the decision. |
 | **Alternatives** | The options that were considered. |
@@ -2519,7 +2519,7 @@ This section defines the canonical Standard Decision Record (SDR) — a structur
 | Field | Value |
 |:---|:---|
 | **Decision ID** | `SDR-STD-___-<SEQ>` |
-| **Standard** | `FORGE-STD-___` |
+| **Standard** | `AI-DOS-STD-___` |
 | **Date** | |
 | **Owner** | |
 | **Authority** | |
@@ -2580,7 +2580,7 @@ This section is complete when the decision record schema, template, rules, and r
 
 ### Completion Statement
 
-The Standard Decision Record provides the canonical template for documenting and preserving significant standard decisions, ensuring traceability, accountability, and governance continuity across the Forge AI Standards Library.
+The Standard Decision Record provides the canonical template for documenting and preserving significant standard decisions, ensuring traceability, accountability, and governance continuity across theAI-DOS Standards Library.
 
 ---
 
@@ -2693,7 +2693,7 @@ The AI Consumption Rules establish the constitutional boundaries for AI systems 
 
 ### Executive Summary
 
-STD-000 remains the canonical Standards Governance document. This section acknowledges the Forge AI v3 Engine Platform introduced by [A.4 — Engine Architecture RFC](../../Runtime/A.4-Engine-Architecture-RFC.md) and aligns standards governance with that architecture without duplicating or redefining it.
+STD-000 remains the canonical Standards Governance document. This section acknowledges theAI-DOS v3 Engine Platform introduced by [A.4 — Engine Architecture RFC](../../Runtime/A.4-Engine-Architecture-RFC.md) and aligns standards governance with that architecture without duplicating or redefining it.
 
 The Engine Platform is a Framework execution-coordination concept. STD-000 governs how standards are authored, validated, certified, versioned, registered, and consumed by Engine specifications; it does not define engine internals, implementation mechanisms, APIs, protocols, data stores, hosts, or process models.
 
@@ -2751,7 +2751,7 @@ This section is an alignment layer only. It shall not be interpreted as a replac
 | **Validation** | Verification against requirements, standards, gates, evidence, and scope. | Standards, Runtime evidence, Engine artifacts, Knowledge Graph evidence. | Review, certification, implementation scope. |
 | **Certification** | Governed recognition of compliance after validation and review. | Validation evidence, review outcomes, standards, governance decisions. | AI self-certification, implementation, standards authorship. |
 | **Agent Runtime / AI Agents** | Delegated execution and evidence production within approved scope. | Standards, Knowledge Graph, Engine Contracts, Runtime context, Workflow decisions. | Canonical standards, graph semantics, architecture, certification. |
-| **Platform Adapters** | Translation between Forge AI concepts and target platform operations. | Standards, Engine Contracts, Runtime requirements, Registry entries. | Framework concepts, standards, graph semantics, Engine architecture. |
+| **Platform Adapters** | Translation betweenAI-DOS concepts and target platform operations. | Standards, Engine Contracts, Runtime requirements, Registry entries. | Framework concepts, standards, graph semantics, Engine architecture. |
 | **Individual Engines** | Specialized governed capability within an Engine Contract. | Standards, Knowledge Graph, Runtime, Registry, Workflow, Validation, Certification inputs. | Other Engines' ownership, standards governance, graph semantics, Human Governance. |
 
 ### Execution Relationship
@@ -2866,7 +2866,7 @@ STD-000 is publication-ready for governance review when the following conditions
 
 ### Publication Readiness Statement
 
-This realignment preserves approved governance principles, maintains STD-000's constitutional position as the root Standards Library governance standard, and aligns STD-000 with the Forge AI v3 Runtime and Engine Architecture without duplicating A.3 or A.4.
+This realignment preserves approved governance principles, maintains STD-000's constitutional position as the root Standards Library governance standard, and aligns STD-000 with theAI-DOS v3 Runtime and Engine Architecture without duplicating A.3 or A.4.
 
 ## Appendices
 

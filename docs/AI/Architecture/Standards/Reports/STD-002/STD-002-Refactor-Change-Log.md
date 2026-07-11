@@ -16,7 +16,7 @@
 - **Compliance Impact:** Metadata now matches required STD-002 identity specification
 
 **2. Section: 1. Status (Document Identity Table)**
-- **Change:** Depends On expanded to include FORGE-STD-001 and FORGE-A-001
+- **Change:** Depends On expanded to include AI-DOS-STD-001 and AI-DOS-A-001
 - **Reason:** STD-002 consumes STD-001 Knowledge Graph; governance requires A.1 and M.0 (Required Fix #6)
 - **Compliance Impact:** Authority chain now fully declared: A.1, M.0, STD-000, STD-001
 
@@ -51,12 +51,12 @@
 - **Compliance Impact:** Reference table now shows correct standard numbers
 
 **9. Section: 20. Next Standard**
-- **Change:** Next Standard renumbered: FORGE-STD-002→FORGE-STD-003, title includes STD-003, dependency section updated STD-001→STD-002 / STD-002→STD-003
+- **Change:** Next Standard renumbered: AI-DOS-STD-002→AI-DOS-STD-003, title includes STD-003, dependency section updated STD-001→STD-002 / STD-002→STD-003
 - **Reason:** Correct canonical successor is STD-003 Finding Standard (Required Fix #7)
 - **Compliance Impact:** Next Standard section now correctly identifies STD-003 as successor with proper dependency
 
 **10. Section: 22. Discovery Metadata Schema (Canonical Metadata Schema)**
-- **Change:** Canonical YAML example: 'standard: FORGE-STD-001' → 'FORGE-STD-002'
+- **Change:** Canonical YAML example: 'standard: AI-DOS-STD-001' → 'AI-DOS-STD-002'
 - **Reason:** Self-referential identifier correction (Required Fix #1)
 - **Compliance Impact:** Metadata schema example now correctly references STD-002
 
@@ -84,7 +84,7 @@
 ### STD-002-Discovery-YAML-Schema.md
 
 **1. Section: Document Header (Parent Standard)**
-- **Change:** Parent Standard: 'STD-001 — Discovery Standard (FORGE-STD-001)' → 'STD-002 — Discovery Standard (FORGE-STD-002)'
+- **Change:** Parent Standard: 'STD-001 — Discovery Standard (AI-DOS-STD-001)' → 'STD-002 — Discovery Standard (AI-DOS-STD-002)'
 - **Reason:** Identity and authority normalization (Required Fixes #1, #3)
 - **Compliance Impact:** Parent standard reference now correctly identifies STD-002
 
@@ -180,12 +180,12 @@
 ### STD-002-Discovery-Standard-Appendix-A-Discovery-Classification-Catalog.md
 
 **1. Section: Document Header (Parent Document)**
-- **Change:** Parent Document: 'STD-001 — Discovery Standard (FORGE-STD-001)' → 'STD-002 — Discovery Standard (FORGE-STD-002)'
+- **Change:** Parent Document: 'STD-001 — Discovery Standard (AI-DOS-STD-001)' → 'STD-002 — Discovery Standard (AI-DOS-STD-002)'
 - **Reason:** Identity normalization (Required Fixes #1, #8)
 - **Compliance Impact:** Parent document reference now correctly identifies STD-002
 
 **2. Section: 1. Status (Document Identity Table)**
-- **Change:** Identifier: 'FORGE-STD-001-APP-A' → 'FORGE-STD-002-APP-A'
+- **Change:** Identifier: 'AI-DOS-STD-001-APP-A' → 'AI-DOS-STD-002-APP-A'
 - **Reason:** Identity normalization (Required Fix #1)
 - **Compliance Impact:** Appendix identifier now correctly uses STD-002 prefix
 
@@ -224,6 +224,6 @@ The following changes were identified during post-script verification and applie
 ### STD-002-Discovery-Standard.md
 
 **36. Section: 22. Discovery Metadata Schema (Canonical Metadata Schema — related_artifacts)**
-- **Change:** 'FORGE-STD-002' → 'FORGE-STD-003', 'FORGE-STD-005' → 'FORGE-STD-006'
+- **Change:** 'AI-DOS-STD-002' → 'AI-DOS-STD-003', 'AI-DOS-STD-005' → 'AI-DOS-STD-006'
 - **Reason:** Related artifacts in the canonical metadata example referenced downstream standards with old numbering (Required Fix #2)
 - **Compliance Impact:** Metadata schema example now shows correct downstream standard identifiers

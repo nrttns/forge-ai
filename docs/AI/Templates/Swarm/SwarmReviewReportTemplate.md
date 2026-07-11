@@ -1,6 +1,6 @@
 # Swarm Review Report Template
 
-> Forge AI v2 · Swarm Templates<br>
+>AI-DOS v2 · Swarm Templates<br>
 > Template Artifact · Draft / Non-canonical
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-SWARM-REVIEW-REPORT` |
+| Identifier | `AI-DOS-TPL-SWARM-REVIEW-REPORT` |
 | Title | Swarm Review Report Template |
 | Version | `2.0.0-draft` |
 | Status | Draft |
@@ -23,7 +23,7 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Operational Core Alignment |
-| Traceability ID | `FORGE-AI.V2.TEMPLATES.SWARM.REVIEW-REPORT` |
+| Traceability ID | `AI-DOS.V2.TEMPLATES.SWARM.REVIEW-REPORT` |
 | Scope | Defines the reusable documentation structure for reviewing completed swarm work for scope, ownership, validation, merge safety, certification readiness, findings, verdict, and recommended next step. |
 | Out of Scope | Swarm authority redefinition, multi-agent authority redefinition, runtime authority redefinition, orchestration authority creation, governance authority creation, review authority creation, certification authority creation, ProjectStatus updates, swarm execution implementation, consensus algorithm definition, orchestration logic definition, runtime behavior implementation, merge algorithm definition, scheduling definition, synchronization definition, engine implementation, architecture redefinition, and canonical promotion. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |

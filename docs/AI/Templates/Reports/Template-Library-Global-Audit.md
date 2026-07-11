@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-GLOBAL-AUDIT` |
+| Identifier | `AI-DOS-TPL-GLOBAL-AUDIT` |
 | Title | Template Library Global Audit |
 | Version | `0.2.0-draft` |
 | Status | Draft |
@@ -20,8 +20,8 @@
 | Created | 2026-07-10 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.TEMPLATES.REPORTS.GLOBAL-AUDIT` |
-| Scope | Evidence-only semantic audit of the complete Forge AI Template Library under `docs/AI/Templates/`, including the requested template families, Template Library README, existing family README files, Project Template Selection Guide, TPL-000, and TPL-001. |
+| Traceability ID | `AI-DOS.TEMPLATES.REPORTS.GLOBAL-AUDIT` |
+| Scope | Evidence-only semantic audit of the completeAI-DOS Template Library under `docs/AI/Templates/`, including the requested template families, Template Library README, existing family README files, Project Template Selection Guide, TPL-000, and TPL-001. |
 | Out of Scope | Template approval, Template Library freeze, certification, canonical promotion, ProjectStatus updates, DevelopmentPhases updates, template refactoring, template normalization, template rewriting, runtime implementation, and governance-authority creation. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/Architecture/A.1-Constitution.md` |
 | Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/Standards/TPL-001-RFC-Template-Standard.md` |

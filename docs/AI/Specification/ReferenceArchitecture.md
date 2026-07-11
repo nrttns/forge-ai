@@ -146,11 +146,11 @@ Adapters must not redefine framework principles, canonical terminology, planning
 
 ---
 
-# Forge AI Adapter Position
+#AI-DOS Adapter Position
 
-Forge AI is the first framework implementation of the AI Framework.
+AI-DOS is the first framework implementation of the AI Framework.
 
-Forge AI remains governed by:
+AI-DOS remains governed by:
 
 ```text
 AGENTS.md
@@ -161,7 +161,7 @@ docs/AI/AIOrchestrator.md
     ↓
 docs/ProjectStatus.md
     ↓
-docs/DevelopmentPhases/ForgeAI2-DevelopmentPhases.md
+docs/DevelopmentPhases/AI-DOS2-DevelopmentPhases.md
     ↓
 docs/AI/FrameworkGovernance.md
     ↓
@@ -172,7 +172,7 @@ Current Stage Document
 Historical Capability Specification
 ```
 
-Forge AI-specific architecture remains in Forge AI documents. The AI Framework core remains framework-independent.
+AI-DOS-specific architecture remains inAI-DOS documents. The AI Framework core remains framework-independent.
 
 ---
 

@@ -1,4 +1,4 @@
-# Forge AI v2 System Layer Freeze
+#AI-DOS v2 System Layer Freeze
 
 ---
 
@@ -6,8 +6,8 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.SYSTEM.LAYER-FREEZE` |
-| Title | Forge AI v2 System Layer Freeze |
+| Identifier | `AI-DOS.SYSTEM.LAYER-FREEZE` |
+| Title |AI-DOS v2 System Layer Freeze |
 | Version | `1.1.0-draft` |
 | Status | Draft |
 | Canonical Status | Non-canonical freeze record until reviewed, approved, and promoted through Framework Governance |
@@ -20,8 +20,8 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft System Layer Freeze |
-| Traceability ID | `FORGE-AI.V2.OP-005H` |
-| Scope | Completed Forge AI v2 System Layer baseline, System document inventory, operational freeze state, and baseline ownership. |
+| Traceability ID | `AI-DOS.V2.OP-005H` |
+| Scope | CompletedAI-DOS v2 System Layer baseline, System document inventory, operational freeze state, and baseline ownership. |
 | Out of Scope | Governance, Runtime, Engine, templates, commands, workflows, certification, ProjectStatus modification, audits, reviews, verification reports, and redesign recommendations. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
 | Normative References | `docs/AI/System/README.md`; `docs/AI/System/TargetRepositoryResolution.md`; `docs/AI/System/AuthorityModel.md`; `docs/AI/System/BootSequence.md`; `docs/AI/System/SourceOfTruth.md`; `docs/AI/System/ContextAssembly.md`; `docs/AI/System/DecisionModel.md`; `docs/AI/System/ExecutionSequence.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-This document freezes the completed Forge AI v2 System Layer.
+This document freezes the completedAI-DOS v2 System Layer.
 
 It records the completed operational baseline for the System Layer as a freeze record. It does not audit, review, certify, verify, score, redesign, or promote the System Layer.
 
@@ -74,7 +74,7 @@ This freeze record does not cover:
 
 ## 3. Frozen Components
 
-The Forge AI v2 System Layer baseline freezes exactly these components:
+TheAI-DOS v2 System Layer baseline freezes exactly these components:
 
 1. `AuthorityModel.md`
 2. `BootSequence.md`
@@ -97,13 +97,13 @@ The frozen System Layer baseline records the following guarantees:
 4. The ProjectStatus path has been updated to `docs/DevelopmentPhases/ProjectStatus.md`.
 5. The Operational Core is aligned with the System Layer.
 6. The System Layer is STD-010 compliant.
-7. The System Layer now resolves the active Target Repository before BootSequence loads target-project state under controlled extension `FORGE-AI.V2.SYSTEM-EXT-001`.
+7. The System Layer now resolves the active Target Repository before BootSequence loads target-project state under controlled extension `AI-DOS.V2.SYSTEM-EXT-001`.
 
 ---
 
 ## 5. Relationship to Operational Core
 
-The Forge AI v2 Operational Core consumes this frozen System Layer.
+TheAI-DOS v2 Operational Core consumes this frozen System Layer.
 
 The following Operational Core documents consume the System Layer baseline:
 
@@ -169,7 +169,7 @@ This freeze record does not modify ProjectStatus and does not activate downstrea
 
 | Field | Value |
 |:---|:---|
-| Authorization | `FORGE-AI.V2.SYSTEM-EXT-001` |
+| Authorization | `AI-DOS.V2.SYSTEM-EXT-001` |
 | Extension | Target Repository Resolution controlled System Layer extension |
 | Completion State | Complete after validation |
 | Freeze State | Re-frozen after amendment |

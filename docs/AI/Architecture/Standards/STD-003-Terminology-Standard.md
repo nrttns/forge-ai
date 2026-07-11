@@ -4,7 +4,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-STD-003` |
+| Identifier | `AI-DOS-STD-003` |
 | Title | STD-003 — Canonical Terminology Standard |
 | Version | 4.0.0-draft |
 | Status | Draft |
@@ -18,7 +18,7 @@
 | Created | 2026-07-07 |
 | Last Updated | 2026-07-08 |
 | Lifecycle Phase | Draft |
-| Traceability ID | FORGE-AI.V4.PHASE-1.STD-003 |
+| Traceability ID | AI-DOS.V4.PHASE-1.STD-003 |
 | Scope | Canonical Framework terminology, naming, synonyms, and terminology consumption rules |
 | Out of Scope | Runtime implementation, engine implementation, tooling, schemas, APIs, registries, project code, roadmap changes, and canonical promotion |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Architecture/A.0-Framework-Audit.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; `docs/DevelopmentPhases/ProjectStatus.md` |
@@ -38,7 +38,7 @@
 
 | Version | Date | Author | Description |
 |:---|:---|:---|:---|
-| 4.0.0-draft | 2026-07-08 | Framework Architecture Team | Refactored into canonical terminology authority for Forge AI Phase 1 Meta Foundation. |
+| 4.0.0-draft | 2026-07-08 | Framework Architecture Team | Refactored into canonical terminology authority forAI-DOS Phase 1 Meta Foundation. |
 | 3.x-draft | 2026-07-07 | Framework Architecture Team | Earlier terminology candidate and glossary-oriented vocabulary. |
 
 ---
@@ -80,7 +80,7 @@
 
 ## 1. Status
 
-STD-003 is the Forge AI **Canonical Terminology Standard** for the active roadmap stage: Phase 1 — Meta Foundation, Stage STD-003 Terminology Standard. It establishes the single authoritative vocabulary layer that standards, runtime specifications, engine specifications, the operational layer, registries, knowledge graph projections, validation reports, review records, and future RFCs must consume.
+STD-003 is theAI-DOS **Canonical Terminology Standard** for the active roadmap stage: Phase 1 — Meta Foundation, Stage STD-003 Terminology Standard. It establishes the single authoritative vocabulary layer that standards, runtime specifications, engine specifications, the operational layer, registries, knowledge graph projections, validation reports, review records, and future RFCs must consume.
 
 STD-003 is architecture-only. It does not implement runtime behavior, engines, tooling, schemas, APIs, registries, migrations, or project code. It does not modify roadmap state and does not certify itself.
 
@@ -138,7 +138,7 @@ graph TD
 
 ## 2. Purpose
 
-The purpose of STD-003 is to make Forge AI terminology stable, governed, traceable, and reusable across every Framework layer.
+The purpose of STD-003 is to makeAI-DOS terminology stable, governed, traceable, and reusable across every Framework layer.
 
 STD-003 shall:
 
@@ -156,7 +156,7 @@ STD-003 shall not define implementations, storage models, APIs, tools, runtime b
 
 ## 3. Terminology Philosophy
 
-Forge AI uses terminology as architecture. A term is not merely prose; it is a governed label attached to one concept, one owner, one definition, and one allowed usage scope.
+AI-DOS uses terminology as architecture. A term is not merely prose; it is a governed label attached to one concept, one owner, one definition, and one allowed usage scope.
 
 ### 3.1 Principles
 
@@ -247,7 +247,7 @@ The following table is the canonical vocabulary registry for STD-003. Each row i
 | Evidence | Verifiable support for validation, review, certification, findings, recommendations, decisions, or traceability claims. | Evidence / Validation System | M.0; STD-000 | Use for traceable support. | Do not use for unsupported assertions, opinions, or assumptions. | Validation; Review; Certification; Finding |
 | Execution | The act of carrying out approved work through commands, workflows, runtime coordination, or assigned tasks. | Runtime / Operational Layer | AIOrchestrator | Use for task performance under governance. | Do not use as authority creation or certification. | Command; Workflow; Task; Runtime |
 | Finding | A validated or reviewable conclusion derived from discoveries and evidence. | Discovery / Review System | STD-002 | Use for assessed conclusions. | Do not use for raw discovery, opinion, recommendation, or decision. | Discovery; Evidence; Recommendation |
-| Framework | The platform-independent Forge AI system of constitutional principles, governance, standards, meta models, runtime architecture, engines, operations, validation, and certification. | Framework Governance | AGENTS.md; A.1 | Use for the complete AI Development Operating System. | Do not use for a product-specific stack, adapter, or implementation framework. | Architecture; Governance; Platform |
+| Framework | The platform-independentAI-DOS system of constitutional principles, governance, standards, meta models, runtime architecture, engines, operations, validation, and certification. | Framework Governance | AGENTS.md; A.1 | Use for the complete AI Development Operating System. | Do not use for a product-specific stack, adapter, or implementation framework. | Architecture; Governance; Platform |
 | Governance | The authority, decision, ownership, approval, validation, review, certification, and change-control system that preserves Framework integrity. | Framework Governance | A.1; STD-000 | Use for rules controlling Framework evolution and compliance. | Do not use as a synonym for management preference or local process. | Authority; Approval; Decision |
 | Identity | The stable identifier and naming contract that makes an entity, artifact, term, standard, or registry entry addressable and traceable. | Framework Meta Model | M.0; M.1 | Use for persistent addressability. | Do not reduce to filename, title, URL, or storage key alone. | Namespace; Registry; Traceability |
 | Knowledge | Persistent documented information approved or available for Framework use and reusable across execution cycles. | Knowledge System | M.0; STD-001 | Use for durable Framework information. | Do not use as a synonym for Discovery, Memory, Context, or database content. | Knowledge Graph; Discovery; Memory |
@@ -258,8 +258,8 @@ The following table is the canonical vocabulary registry for STD-003. Each row i
 | Namespace | A governed naming scope that prevents identity collision and clarifies ownership or classification. | Framework Meta Model / Registry | M.0; STD-010 | Use for scoped identity and naming domains. | Do not use as an implementation package or filesystem folder by default. | Identity; Registry; Artifact Family |
 | Node | The graph representation of an entity, artifact, term, concept, decision, or other governed object. | Knowledge Graph | STD-001 | Use for graph objects. | Do not use as a synonym for document, database row, box, or generic record. | Relationship; Knowledge Graph; Registry |
 | Ownership | The explicit accountable owner for a concept, artifact, subsystem, decision, standard, or term. | Governance | A.1; STD-000 | Use for accountability and responsibility boundaries. | Do not use for informal participation or ambiguous shared control where singular ownership is required. | Authority; Governance; Registry |
-| Platform | A target environment, host, product, framework, language, or runtime ecosystem that can be adapted to Forge AI without redefining the Framework. | Platform Adapter System | AGENTS.md; A.1 | Use for external implementation environments. | Do not make a platform the source of Framework truth. | Adapter; Framework; Runtime |
-| Project | A governed application of Forge AI with its own status, planning state, artifacts, validation evidence, and implementation scope. | Project Governance | ProjectStatus | Use for concrete governed workspaces or implementations. | Do not use as a synonym for Framework. | State; Task; Capability |
+| Platform | A target environment, host, product, framework, language, or runtime ecosystem that can be adapted toAI-DOS without redefining the Framework. | Platform Adapter System | AGENTS.md; A.1 | Use for external implementation environments. | Do not make a platform the source of Framework truth. | Adapter; Framework; Runtime |
+| Project | A governed application ofAI-DOS with its own status, planning state, artifacts, validation evidence, and implementation scope. | Project Governance | ProjectStatus | Use for concrete governed workspaces or implementations. | Do not use as a synonym for Framework. | State; Task; Capability |
 | Recommendation | A proposed action or direction derived from findings, risks, evidence, or governance needs. | Discovery / Governance | STD-002 | Use for proposed next action before decision. | Do not use as a decision, approval, or requirement unless accepted by authority. | Finding; Decision; Approval |
 | Registry | A governed index of identities, artifacts, terms, standards, engine capabilities, or graph objects that supports lookup and uniqueness without becoming authority by itself. | Registry System | Engine Registry RFC; STD-000 | Use for indexes and catalogs. | Do not use as database, source of truth, or governing authority. | Identity; Namespace; Node |
 | Relationship | A governed connection between two entities, artifacts, terms, documents, standards, or graph nodes with explicit type and meaning. | Framework Meta Model / Knowledge Graph | M.0; STD-001; STD-010 | Use for typed and traceable connections. | Do not use for loose mention, untyped reference, or diagram arrow without semantics. | Dependency; Traceability; Node |
@@ -329,7 +329,7 @@ Reserved terms are protected terms that shall not be repurposed in downstream do
 
 | Reserved Term | Reserved For | Rule |
 |:---|:---|:---|
-| Framework | Forge AI Framework as a platform-independent AI Development Operating System. | Shall not mean application framework or product stack. |
+| Framework |AI-DOS Framework as a platform-independent AI Development Operating System. | Shall not mean application framework or product stack. |
 | Constitution | Highest Framework architectural principles below Human Governance and AGENTS.md. | Shall not mean local policy. |
 | Meta Model | M.0 and M.1 conceptual modeling authority. | Shall not mean implementation model. |
 | Artifact | Governed Framework object under M.1. | Shall not mean arbitrary file. |
@@ -412,7 +412,7 @@ graph TD
 
 Authority vocabulary shall use the following terms precisely:
 
-- **Human Governance**: the highest decision authority over Forge AI.
+- **Human Governance**: the highest decision authority over AI-DOS.
 - **Constitution**: the permanent Framework principles and invariants.
 - **Normative Authority**: sources that govern, override, approve, constrain, or invalidate an artifact.
 - **Approval Authority**: role or body authorized to approve or promote an artifact.
@@ -570,7 +570,7 @@ A registry may help locate authority but does not become authority unless a high
 
 ## 22. Planning Vocabulary
 
-Planning vocabulary follows the Forge AI planning hierarchy.
+Planning vocabulary follows theAI-DOS planning hierarchy.
 
 ```text
 Framework
@@ -766,7 +766,7 @@ STD-003 quality gates are documentation and architecture validation gates:
 
 STD-003 succeeds when:
 
-- it is the single canonical terminology authority for Forge AI vocabulary;
+- it is the single canonical terminology authority forAI-DOS vocabulary;
 - every required Framework term has one governed definition;
 - definitions identify owner, source, allowed usage, prohibited usage, and related terms;
 - synonyms and ambiguous terms are governed;

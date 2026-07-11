@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-MIGRATION-PLAN` |
+| Identifier | `AI-DOS-TPL-MIGRATION-PLAN` |
 | Title | Migration Plan Template |
 | Version | `0.2.0-draft` |
 | Status | Draft |
@@ -20,7 +20,7 @@
 | Created | 2026-07-10 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.TEMPLATES.MIGRATION.PLAN` |
+| Traceability ID | `AI-DOS.TEMPLATES.MIGRATION.PLAN` |
 | Scope | Reusable output contract for planning a governed migration from an old structure, adapter, document set, implementation, or framework version to a new one. |
 | Out of Scope | Implementing migration logic, compatibility behavior, runtime conversion, automated upgrades, deprecation execution, governance decisions, certification decisions, registry updates, or ProjectStatus updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |

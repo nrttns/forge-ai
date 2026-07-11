@@ -1,13 +1,13 @@
 # A.5.3 — Planning Engine RFC
 
-> Forge AI v4 · Engine Architecture RFC
+>AI-DOS v4 · Engine Architecture RFC
 > Phase 2 Engine Specialization · Draft / Non-canonical
 
 ---
 
 ## 1. Status
 
-This RFC is a draft, non-canonical Engine Architecture RFC for the Planning Engine, the third individual Engine specialization in Phase 2 of the Forge AI v4 Engine Platform.
+This RFC is a draft, non-canonical Engine Architecture RFC for the Planning Engine, the third individual Engine specialization in Phase 2 of theAI-DOS v4 Engine Platform.
 
 Canonical Status: Non-canonical until reviewed and approved.
 
@@ -19,7 +19,7 @@ This document defines the architecture of the Planning Engine within the approve
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-A-5-3` |
+| Identifier | `AI-DOS-A-5-3` |
 | Title | A.5.3 — Planning Engine RFC |
 | Version | `0.2.0-draft` |
 | Status | Draft |
@@ -33,7 +33,7 @@ This document defines the architecture of the Planning Engine within the approve
 | Created | 2026-07-08 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.V2.RUNTIME.A-5-3` |
+| Traceability ID | `AI-DOS.V2.RUNTIME.A-5-3` |
 | Scope | Defines the Planning Engine specialization only, including its responsibilities, inputs, outputs, lifecycle participation, validation expectations, AI consumption rules, and handoff contract. |
 | Out of Scope | Runtime Architecture redefinition, Engine Platform redefinition, Engine Foundation redefinition, other Engine Specialization redefinition, implementation, certification, freeze decisions, ProjectStatus updates, and DevelopmentPhases updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
@@ -816,7 +816,7 @@ The Planning Engine's plans, steps, and dependency graphs may be projected into 
 - Certification evidence reviewed by Enterprise Documentation Standards Board.
 - Cross-engine alignment verified against A.5.1 and A.5.2 output contracts.
 - Certification does not imply canonical status.
-- Evidence traceable to Traceability ID: `FORGE-AI.V4.PHASE-2.ENGINE-03`.
+- Evidence traceable to Traceability ID: `AI-DOS.V4.PHASE-2.ENGINE-03`.
 
 ---
 
@@ -1191,7 +1191,7 @@ Created the third Phase 2 Engine specialization RFC — A.5.3 Planning Engine �
 - Metadata heading uses exact `## Document Metadata` format.
 - All 27 mandatory STD-010 fields are present; conditionally mandatory fields are evaluated and included only when applicable.
 - RFC class expectations met: parent architecture identified, non-canonical status stated, review and approval authority explicit, normative authority separated from dependencies.
-- Identifier `FORGE-A-5-3` follows the normalized Runtime RFC family identifier convention.
+- Identifier `AI-DOS-A-5-3` follows the normalized Runtime RFC family identifier convention.
 - Version `0.2.0-draft` follows `major.minor.patch-status` format.
 
 ### Remaining Risks

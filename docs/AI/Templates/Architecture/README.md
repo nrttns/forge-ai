@@ -20,7 +20,7 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Draft |
-| Traceability ID | FORGE-AI.TEMPLATES.ARCHITECTURE.INDEX |
+| Traceability ID | AI-DOS.TEMPLATES.ARCHITECTURE.INDEX |
 | Scope | Index and usage rules for the Architecture template family |
 | Out of Scope | Creating new templates, renaming templates, defining architecture, approving produced documents, or updating ProjectStatus |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |

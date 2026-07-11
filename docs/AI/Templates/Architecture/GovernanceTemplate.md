@@ -20,7 +20,7 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Draft |
-| Traceability ID | FORGE-AI.TEMPLATES.ARCHITECTURE.GOVERNANCE |
+| Traceability ID | AI-DOS.TEMPLATES.ARCHITECTURE.GOVERNANCE |
 | Scope | Reusable template for governance documents in the Architecture template family |
 | Out of Scope | Creating new governance bodies, approving exceptions, or superseding Framework Governance |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |

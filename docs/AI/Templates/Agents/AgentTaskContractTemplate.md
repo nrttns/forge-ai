@@ -1,6 +1,6 @@
 # Agent Task Contract Template
 
-> Forge AI v2 · Agent Templates<br>
+>AI-DOS v2 · Agent Templates<br>
 > Template Artifact · Draft / Non-canonical
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-AGENTS-TASK-CONTRACT` |
+| Identifier | `AI-DOS-TPL-AGENTS-TASK-CONTRACT` |
 | Title | Agent Task Contract Template |
 | Version | `2.0.0-draft` |
 | Status | Draft |
@@ -23,7 +23,7 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Operational Core Alignment |
-| Traceability ID | `FORGE-AI.V2.TEMPLATES.AGENTS.TASK-CONTRACT` |
+| Traceability ID | `AI-DOS.V2.TEMPLATES.AGENTS.TASK-CONTRACT` |
 | Scope | Defines the reusable structure for a bounded executable task for an agent, including objective, authority chain, scope, inputs, allowed actions, forbidden actions, deliverables, validation requirements, completion reporting, blockers, and checklist. |
 | Out of Scope | Agent authority redefinition, runtime authority redefinition, engine authority redefinition, workflow authority creation, orchestration authority creation, validation authority creation, review authority creation, certification authority creation, governance authority creation, swarm activation, ProjectStatus updates, runtime implementation, orchestration implementation, engine implementation, architecture redefinition, and canonical promotion. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |

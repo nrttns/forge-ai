@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-PROJECT-SYMFONY` |
+| Identifier | `AI-DOS-TPL-PROJECT-SYMFONY` |
 | Title | Symfony Project Template |
 | Version | `0.2.0-draft` |
 | Status | Draft |
@@ -20,7 +20,7 @@
 | Created | 2026-07-10 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.TEMPLATES.PROJECT.SYMFONY` |
+| Traceability ID | `AI-DOS.TEMPLATES.PROJECT.SYMFONY` |
 | Scope | Reusable output contract for symfony project adoption documentation. |
 | Out of Scope | Project implementation logic, scaffolding behavior, code generation, runtime behavior, deployment logic, CI/CD behavior, package management execution, framework-specific execution, certification decisions, registry updates, or ProjectStatus updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |

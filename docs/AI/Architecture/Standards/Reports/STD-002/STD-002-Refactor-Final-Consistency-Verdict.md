@@ -18,7 +18,7 @@ The STD-002 Discovery package has been refactored to address identity normalizat
 |:---|:---|:---|
 | 1. Normalize STD-002 identity | **Complete** | All self-referential STD-001 references corrected to STD-002 across 5 files. |
 | 2. Normalize downstream standards | **Complete** | Downstream references renumbered (STD-002→003, STD-003→004, STD-004→005, STD-005→006) in Discovery Standard, Appendix A. |
-| 3. Normalize authority | **Complete** | Depends On expanded to include FORGE-STD-001 and FORGE-A-001. Graph Model authority corrected. |
+| 3. Normalize authority | **Complete** | Depends On expanded to include AI-DOS-STD-001 and AI-DOS-A-001. Graph Model authority corrected. |
 | 4. Remove graph ownership duplication | **Partially Complete** | Key sections reframed as Discovery-specific projections of STD-001. Metadata corrected. However, the bulk of the 3206-line Graph Model document retains duplicated STD-01 canonical content. This requires a governance decision (see Remaining Issues #1). |
 | 5. Normalize schema references | **Complete** | JSON and YAML schema .md documents corrected. Executable schemas were already correct. |
 | 6. Normalize Discovery Standard metadata | **Complete** | Classification, Depends On, Consumed By all corrected. |

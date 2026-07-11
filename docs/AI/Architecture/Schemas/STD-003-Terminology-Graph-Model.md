@@ -1,6 +1,6 @@
 # STD-003 — Terminology Graph Model
 
-> **Forge AI v3 · Architecture Schema**  
+> **AI-DOS v3 · Architecture Schema**  
 > Companion graph model for `STD-003 — Terminology Standard`
 
 ---
@@ -8,7 +8,7 @@
 | Property | Value |
 |:---|:---|
 | **Document** | STD-003 — Terminology Graph Model |
-| **Identifier** | `FORGE-SCHEMA-STD-003-GRAPH` |
+| **Identifier** | `AI-DOS-SCHEMA-STD-003-GRAPH` |
 | **Version** | `0.1.0-draft` |
 | **Status** | Draft / Candidate Schema |
 | **Type** | Graph Model Schema |
@@ -20,7 +20,7 @@
 
 ## 1. Purpose
 
-This schema defines the candidate graph representation for Forge AI terminology. It makes each terminology entry addressable, relatable, referenceable, and validation-ready without promoting STD-003 to canonical status.
+This schema defines the candidate graph representation forAI-DOS terminology. It makes each terminology entry addressable, relatable, referenceable, and validation-ready without promoting STD-003 to canonical status.
 
 ## 2. Graph Pattern
 

@@ -1,6 +1,6 @@
 # Engine RFC Certification Review
 
-> Forge AI v4 · Phase 2 Engine Foundation  
+>AI-DOS v4 · Phase 2 Engine Foundation  
 > Certification-readiness review report · Evidence and recommendation only
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.V4.PHASE-2.ENGINE-RFC-CERTIFICATION-REVIEW` |
+| Identifier | `AI-DOS.V4.PHASE-2.ENGINE-RFC-CERTIFICATION-REVIEW` |
 | Title | Engine RFC Certification Review |
 | Version | `1.0.0-draft` |
 | Status | Draft |
@@ -23,7 +23,7 @@
 | Created | 2026-07-08 |
 | Last Updated | 2026-07-08 |
 | Lifecycle Phase | Draft Review |
-| Traceability ID | `FORGE-AI.V4.PHASE-2.ENGINE-RFC-CERTIFICATION-REVIEW` |
+| Traceability ID | `AI-DOS.V4.PHASE-2.ENGINE-RFC-CERTIFICATION-REVIEW` |
 | Scope | Final certification-readiness review of the Phase 2 Engine Foundation RFC series, including A.3, A.4, A.4.1 through A.4.7, A.5.0, and A.5.1 through A.5.12. |
 | Out of Scope | Runtime RFC edits, Engine RFC edits, implementation, source code, ProjectStatus updates, roadmap updates, canonical promotion, certification execution, and approval decisions. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
@@ -223,7 +223,7 @@ The Phase 2 Engine Foundation is ready to proceed to canonical review as a compl
 | Is it internally consistent? | Yes. Engine boundaries, ownership, lifecycle, state, operations, events, capabilities, and handoffs are internally consistent, with only non-blocking editorial observations. |
 | Is it governance compliant? | Yes. Authority, review, approval, promotion, certification, ProjectStatus, and frozen-area boundaries are preserved. |
 | Is it ready for canonical review? | Yes. The package is ready for Human Governance / Framework Governance canonical review. |
-| Is it ready to become the certified Engine Foundation baseline for Forge AI? | Yes, as a certification candidate after Human Governance / Framework Governance canonical review and explicit approval; this report does not itself certify or promote the baseline. |
+| Is it ready to become the certified Engine Foundation baseline for AI-DOS? | Yes, as a certification candidate after Human Governance / Framework Governance canonical review and explicit approval; this report does not itself certify or promote the baseline. |
 
 ## Completion Report
 

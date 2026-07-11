@@ -1,4 +1,4 @@
-# Forge AI — AGENTS v2 Agent Capability and Role Catalog
+#AI-DOS — AGENTS v2 Agent Capability and Role Catalog
 
 ---
 
@@ -6,8 +6,8 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.AGENTS.V2.AGENT-CAPABILITY-AND-ROLE-CATALOG` |
-| Title | Forge AI — AGENTS v2 Agent Capability and Role Catalog |
+| Identifier | `AI-DOS.AGENTS.V2.AGENT-CAPABILITY-AND-ROLE-CATALOG` |
+| Title |AI-DOS — AGENTS v2 Agent Capability and Role Catalog |
 | Version | 0.1.0-draft |
 | Status | Draft |
 | Canonical Status | Non-canonical until reviewed, approved, and promoted through Human Governance / Framework Governance |
@@ -20,7 +20,7 @@
 | Created | 2026-07-08 |
 | Last Updated | 2026-07-08 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.ARCHITECTURE.AGENTS.V2.CAPABILITY-ROLE-CATALOG` |
+| Traceability ID | `AI-DOS.ARCHITECTURE.AGENTS.V2.CAPABILITY-ROLE-CATALOG` |
 | Scope | Documentation-level AGENTS v2 capability model, role catalog, core role families, capability-to-role mapping, role assignment rules, validation expectations, and deferred boundaries. |
 | Out of Scope | Routing implementation, runtime execution, swarm behavior, platform adapters, Engine RFC work, Runtime redefinition, Engine Platform redefinition, Governance redefinition, Standards redefinition, M.0 redefinition, M.1 redefinition, STD-010 redefinition, and ProjectStatus updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Architecture.md` |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-This document defines the AGENTS v2 agent capability and role catalog for Forge AI.
+This document defines the AGENTS v2 agent capability and role catalog for AI-DOS.
 
 Its purpose is to describe, at the documentation and architecture-specification level, the capability categories and governed role definitions that future AGENTS v2 agent identities may reference after appropriate review and approval.
 

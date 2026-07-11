@@ -1,4 +1,4 @@
-# Forge AI — Governance Policy v2
+#AI-DOS — Governance Policy v2
 
 ---
 
@@ -6,8 +6,8 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-FRAMEWORK-GOVERNANCE` |
-| Title | Forge AI — Governance Policy v2 |
+| Identifier | `AI-DOS-FRAMEWORK-GOVERNANCE` |
+| Title |AI-DOS — Governance Policy v2 |
 | Version | 0.3.0-draft |
 | Status | Draft |
 | Canonical Status | Non-canonical until reviewed, approved, and explicitly promoted by Human Governance |
@@ -20,7 +20,7 @@
 | Created | 2026-07-08 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-FRAMEWORK-GOVERNANCE` |
+| Traceability ID | `AI-DOS-FRAMEWORK-GOVERNANCE` |
 | Scope | Governance policy for principles, lifecycle, decision priority, ownership, review, validation, certification, canonical review, approval, promotion, change control, conflict resolution, exceptions, metrics, AI execution, and escalation decisions. |
 | Out of Scope | Repository governance navigation, authority matrices, document taxonomy, ProjectStatus replacement, roadmap replacement, constitutional redefinition, standards redefinition, Runtime redesign, Engine redesign, Engine RFC work, implementation planning, operational-layer refactor, legacy migration, and frozen-area activation. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/Architecture/A.1-Constitution.md` when applicable. |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-This document is the Forge AI governance-policy authority. It defines how governance decisions are prioritized, reviewed, validated, certified, approved, promoted, recorded, escalated, and evolved.
+This document is theAI-DOS governance-policy authority. It defines how governance decisions are prioritized, reviewed, validated, certified, approved, promoted, recorded, escalated, and evolved.
 
 This document preserves the current governance model. It clarifies and expands policy without redesigning Governance Atlas navigation, Runtime architecture, Engine architecture, ProjectStatus, Development Phases, standards, or implementation behavior.
 
@@ -125,7 +125,7 @@ This policy does not:
 
 ## 4. Governance Principles
 
-Forge AI governance follows these permanent principles:
+AI-DOS governance follows these permanent principles:
 
 1. **Human authority is final.** Human Governance is the final authority for approval, promotion, exceptions, and unresolved conflicts.
 2. **Policy is separate from navigation.** Governance Atlas routes readers to authorities; this document defines governance decision policy.
@@ -271,7 +271,7 @@ A completion report may recommend review, approval, certification, promotion, or
 
 ## 10. Approval Gates
 
-Forge AI governance recognizes the following approval gates:
+AI-DOS governance recognizes the following approval gates:
 
 | Gate | Purpose | Outcome Boundary |
 |:---|:---|:---|

@@ -15,11 +15,11 @@ Every change applied to STD-001 during this remediation is documented below. All
 
 | # | Finding ID | Modified Section | Change Description | Compliance Impact |
 |:---|:---|:---|:---|:---|
-| 1 | AUD-2.26 | Document Header | Replaced self-referencing Authority (`STD-001`) with canonical authority chain: STD-000 (`FORGE-STD-000`), M.0 (`FORGE-META-000`), A.1 (`FORGE-A-001`). | Resolves authority chain gap per STD-000 §5. |
+| 1 | AUD-2.26 | Document Header | Replaced self-referencing Authority (`STD-001`) with canonical authority chain: STD-000 (`AI-DOS-STD-000`), M.0 (`AI-DOS-META-000`), A.1 (`AI-DOS-A-001`). | Resolves authority chain gap per STD-000 §5. |
 | 2 | AUD-2.8, AUD-2.51 | Document Header | Replaced non-standard Classification with `Core` (per §8) and added Domain Taxonomy `Schema Standards` (per §21). Added Compliance Level (`L1 — Draft`) and Certification Level (`Not yet certified`). | Resolves classification misalignment per STD-000 §8, §21, §24, §27. |
 | 3 | AUD-2.28 | Document Metadata | Added `Maintainers: Framework Architecture Team` field to metadata table. | Resolves missing mandatory metadata per STD-000 §11. |
 | 4 | AUD-2.53 | Document Metadata | Replaced duplicate Document Metadata block (§1.1) with streamlined Document Identity section that references the canonical metadata above rather than duplicating it. | Eliminates editorial duplicate; preserves single source of truth. |
-| 5 | AUD-2.53 | Identifier | Changed Identifier from `FORGE-STD-001-GRAPH` to `FORGE-STD-001` to conform with STD-000 §10 identifier format (`FORGE-STD-NNN`). | Resolves identifier format per STD-000 §10. |
+| 5 | AUD-2.53 | Identifier | Changed Identifier from `AI-DOS-STD-001-GRAPH` to `AI-DOS-STD-001` to conform with STD-000 §10 identifier format (`AI-DOS-STD-NNN`). | Resolves identifier format per STD-000 §10. |
 | 6 | — | Revision History | Added version `3.0.1-beta` entry for this remediation. | Version traceability. |
 | 7 | AUD-13-A1, AUD-13-M0, AUD-13-S000, AUD-3-PS | Related Documents | Replaced informal references with canonical identifiers. Removed incorrect `Parent Standard: STD-002` reference. Added STD-000, M.0, A.1 as normative references. | Resolves cross-reference integrity per STD-000 §18, dependency correctness per §22. |
 | 8 | AUD-15-AI | §3.17 Principle 15 | Added explicit prohibition: "No AI system shall duplicate canonical graph truth." | Aligns with STD-000 §30 AI Consumption Rules. |
@@ -134,7 +134,7 @@ The refactored STD-001 now contains all 20 mandatory sections required by STD-00
 
 All required metadata fields from STD-000 §10 and §11 are populated (Identifier, Canonical Title, Version, Status, Classification, Authority, Owner, Maintainers, Creation Date, Last Updated). Additional governance metadata from STD-000 §21–§28 is declared (Domain Taxonomy, Compliance Level, Certification Level, Dependency Matrix, Capability Matrix, Canonical Metadata Schema).
 
-The authority chain is complete and references canonical identifiers (FORGE-STD-000, FORGE-META-000, FORGE-A-001). Cross-references use canonical identifiers throughout. Normative language is consistent (shall/shall not).
+The authority chain is complete and references canonical identifiers (AI-DOS-STD-000, AI-DOS-META-000, AI-DOS-A-001). Cross-references use canonical identifiers throughout. Normative language is consistent (shall/shall not).
 
 **What remains:**
 

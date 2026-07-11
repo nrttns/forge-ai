@@ -1,6 +1,6 @@
 # Memory Architecture Template
 
-> Forge AI v2 · Memory Templates<br>
+>AI-DOS v2 · Memory Templates<br>
 > Template Artifact · Draft / Non-canonical
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-MEMORY-ARCHITECTURE` |
+| Identifier | `AI-DOS-TPL-MEMORY-ARCHITECTURE` |
 | Title | Memory Architecture Template |
 | Version | `2.0.0-draft` |
 | Status | Draft |
@@ -23,12 +23,12 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Operational Core Alignment |
-| Traceability ID | `FORGE-AI.V2.TEMPLATES.MEMORY.ARCHITECTURE` |
+| Traceability ID | `AI-DOS.V2.TEMPLATES.MEMORY.ARCHITECTURE` |
 | Scope | Defines the reusable structure for documenting how reusable learning is captured, reviewed, approved, stored, retrieved, invalidated, and bounded by existing knowledge, memory, standards, and governance authorities. |
 | Out of Scope | Memory authority redefinition, knowledge authority redefinition, source authority creation, registry authority creation, validation authority creation, review authority creation, certification authority creation, governance authority creation, ProjectStatus updates, runtime implementation, engine implementation, storage implementation, retrieval implementation, architecture redefinition, and canonical promotion. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
 | Normative References | `docs/AI/Architecture/Standards/STD-001-Knowledge-Graph-Standard.md`; `docs/AI/Architecture/Standards/STD-002-Discovery-Standard.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/README.md`; `docs/AI/Runtime/A.5.9-Memory-Engine-RFC.md` |
-| Dependencies | STD-001 knowledge graph rules; STD-002 discovery rules; STD-003 terminology; STD-010 metadata schema; TPL-000 template governance; Memory Engine RFC; Forge AI template library |
+| Dependencies | STD-001 knowledge graph rules; STD-002 discovery rules; STD-003 terminology; STD-010 metadata schema; TPL-000 template governance; Memory Engine RFC;AI-DOS template library |
 | Consumes | STD-001 graph and relationship concepts; STD-002 discovery and evidence concepts; STD-003 canonical terminology; STD-010 mandatory metadata fields; TPL-000 placeholder grammar, lifecycle, taxonomy, compliance model, and validation requirements; Memory Engine architecture boundaries |
 | Produces | Reusable memory architecture artifact structure |
 | Related Specifications | `docs/AI/Templates/Memory/`; `docs/AI/Templates/Knowledge/`; `docs/AI/Templates/README.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md` |

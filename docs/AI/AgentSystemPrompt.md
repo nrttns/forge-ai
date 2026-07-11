@@ -1,4 +1,4 @@
-# Forge AI — AI Agent System Prompt
+#AI-DOS — AI Agent System Prompt
 
 ---
 
@@ -6,8 +6,8 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.OPERATIONAL.CORE.AGENT-SYSTEM-PROMPT` |
-| Title | Forge AI — AI Agent System Prompt |
+| Identifier | `AI-DOS.OPERATIONAL.CORE.AGENT-SYSTEM-PROMPT` |
+| Title |AI-DOS — AI Agent System Prompt |
 | Version | `2.0.0-draft` |
 | Status | Draft |
 | Canonical Status | Permanent tool-facing agent behavior contract; non-canonical until reviewed, approved, and explicitly promoted by Human Governance |
@@ -20,15 +20,15 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Draft Operational Core Alignment |
-| Traceability ID | `FORGE-AI.V2.OP-004` |
-| Scope | Defines executable Forge AI v2 behavior rules for AI coding assistants that consume repository authority, classify tasks, assemble context, execute within scope, validate outputs, report blockers, and produce completion evidence. |
+| Traceability ID | `AI-DOS.V2.OP-004` |
+| Scope | Defines executableAI-DOS v2 behavior rules for AI coding assistants that consume repository authority, classify tasks, assemble context, execute within scope, validate outputs, report blockers, and produce completion evidence. |
 | Out of Scope | Repository bootloader authority, Governance Atlas ownership, Framework Governance decision policy, ProjectStatus updates, roadmap ownership, Runtime redesign, Engine redesign, Engine RFC creation, command implementation, workflow implementation, template modification, certification, canonical promotion, and implementation activation. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; the ProjectStatus and DevelopmentPhases declared by the active Target Repository |
 | Normative References | `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/Templates/README.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md`; `docs/AI/Operational/Operational-Core-Replacement-Matrix.md` |
 | Dependencies | Governance Core; Meta Foundation; Standards Foundation; Runtime Architecture; Engine Platform; Engine Foundation RFC family; Operational Core replacement plan; active ProjectStatus and DevelopmentPhases roadmap. |
 | Consumes | Human task instruction, repository boot sequence, governance navigation, governance decision policy, operational state, roadmap sequence, constitutional principles, meta models, terminology, metadata requirements, Runtime Architecture, Engine Architecture, Engine Specialization template, AI Framework entry rules, AI Orchestrator routing rules, template category map, commands, workflows, validation artifacts, and task-specific authorities. |
 | Produces | Tool-facing agent behavior rules, required boot behavior, authority consumption behavior, task classification behavior, context assembly behavior, execution-scope discipline, validation behavior, completion-report behavior, blocker reporting behavior, and ProjectStatus boundary behavior. |
-| Related Specifications | `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md` (Forge AI self-hosting related specification only); `docs/AI/Operational/Operational-Core-Replacement-Matrix.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/Templates/README.md` |
+| Related Specifications | `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/Roadmap/AI-DOS-Program-Architecture-Master-Roadmap-v4.md` (AI-DOS self-hosting related specification only); `docs/AI/Operational/Operational-Core-Replacement-Matrix.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/Templates/README.md` |
 | Supersedes | Prior tool-facing prompt wording in this file while preserving this file as the in-place Agent System Prompt document. |
 | Superseded By | None |
 | Promotion Requirements | Framework Governance review, Human Governance review, validation against Governance Atlas, ProjectStatus, DevelopmentPhases, STD-010, Runtime Architecture, Engine Architecture, Operational Core replacement plan, and explicit Human Governance promotion authorization. |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-The Agent System Prompt is the Forge AI v2 tool-facing agent behavior contract. It translates `docs/AI/AIFramework.md` and `docs/AI/AIOrchestrator.md` into executable behavior for AI coding assistants working in the repository.
+The Agent System Prompt is theAI-DOS v2 tool-facing agent behavior contract. It translates `docs/AI/AIFramework.md` and `docs/AI/AIOrchestrator.md` into executable behavior for AI coding assistants working in the repository.
 
 This document tells an AI agent how to behave while consuming authority. It does not create authority. It does not replace `AGENTS.md`, the Governance Atlas, Framework Governance, ProjectStatus, DevelopmentPhases, the Constitution, Meta Models, Standards, Runtime Architecture, Engine Architecture, Engine RFCs, commands, workflows, or templates.
 
@@ -93,7 +93,7 @@ This document does not:
 
 ## 3. Authority Chain
 
-Agents shall consume the authority chain in this order for Forge AI v2 work:
+Agents shall consume the authority chain in this order forAI-DOS v2 work:
 
 ```text
 Human Governance / active task instruction
@@ -112,7 +112,7 @@ docs/AI/FrameworkGovernance.md governance decision policy when applicable
     ↓
 <DEVELOPMENT_PHASES_PATH> roadmap sequence loaded from the resolved Target Repository
     ↓
-docs/Roadmap/Forge-AI-Program-Architecture-Master-Roadmap-v4.md strategic program structure when applicable for Forge AI self-hosting only
+docs/Roadmap/AI-DOS-Program-Architecture-Master-Roadmap-v4.md strategic program structure when applicable forAI-DOS self-hosting only
     ↓
 docs/AI/Architecture/A.1-Constitution.md
     ↓
@@ -142,7 +142,7 @@ Behavior rules:
 
 ## 4. Relationship to AGENTS.md
 
-`AGENTS.md` is the AI-DOS Provider entry and, in Forge AI self-hosting only, also contains Target Repository declaration inputs. This Agent System Prompt is not a second `AGENTS.md`.
+`AGENTS.md` is the AI-DOS Provider entry and, inAI-DOS self-hosting only, also contains Target Repository declaration inputs. This Agent System Prompt is not a second `AGENTS.md`.
 
 Agents shall:
 
@@ -365,7 +365,7 @@ Agents shall stop and report a blocker when:
 - requested work introduces unauthorized implementation scope;
 - ProjectStatus update authority is unclear;
 - certification, canonical promotion, approval, or implementation activation is implied but not explicitly authorized;
-- obsolete operational authority conflicts with current Forge AI v2 authority.
+- obsolete operational authority conflicts with currentAI-DOS v2 authority.
 
 A blocker report shall identify the conflict, cite the relevant authority where possible, and recommend resolution options aligned to Human Governance.
 
@@ -391,7 +391,7 @@ Agents shall not use removed operational paths, specification-directory referenc
 
 ## 17. Historical Context
 
-This file previously served as a reusable tool-facing prompt for an earlier operational compatibility layer. The Forge AI v2 refactor preserves the filename, inbound references, and tool-facing role while replacing obsolete boot, authority, status, and prior compatibility wording with the current Operational Core behavior contract.
+This file previously served as a reusable tool-facing prompt for an earlier operational compatibility layer. TheAI-DOS v2 refactor preserves the filename, inbound references, and tool-facing role while replacing obsolete boot, authority, status, and prior compatibility wording with the current Operational Core behavior contract.
 
 Historical compatibility-layer references are not active operating rules. They are retained only to explain why this file remains in place and why no parallel prompt document should be created.
 
@@ -402,4 +402,4 @@ Historical compatibility-layer references are not active operating rules. They a
 | Version | Status | Notes |
 |:---|:---|:---|
 | pre-2.0 | Historical | Earlier tool-facing prompt wording aligned to prior compatibility-layer operations and obsolete path assumptions. |
-| `2.0.0-draft` | Draft | In-place Forge AI v2 refactor for `FORGE-AI.V2.OP-004`; aligned with current Governance, ProjectStatus path, DevelopmentPhases roadmap, AIFramework, AIOrchestrator, Runtime Architecture, Engine Architecture, and Operational Core replacement boundaries. |
+| `2.0.0-draft` | Draft | In-placeAI-DOS v2 refactor for `AI-DOS.V2.OP-004`; aligned with current Governance, ProjectStatus path, DevelopmentPhases roadmap, AIFramework, AIOrchestrator, Runtime Architecture, Engine Architecture, and Operational Core replacement boundaries. |

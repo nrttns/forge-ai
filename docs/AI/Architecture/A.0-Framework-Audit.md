@@ -1,6 +1,6 @@
 # A.0 — Framework Audit
 
-> **Forge AI v3 · Master Architecture Audit**
+> **AI-DOS v3 · Master Architecture Audit**
 > Phase A — Framework Core · Stage A.0
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AUDIT-A.0` |
+| Identifier | `AI-DOS-AUDIT-A.0` |
 | Title | A.0 — Framework Audit |
 | Version | 3.0.0-beta |
 | Status | Draft |
@@ -23,7 +23,7 @@
 | Created | 2026-07-03 |
 | Last Updated | 2026-07-07 |
 | Lifecycle Phase | Draft |
-| Traceability ID | FORGE-AUDIT-A.0 |
+| Traceability ID | AI-DOS-AUDIT-A.0 |
 | Scope | Framework Core architecture audit |
 | Out of Scope | Implementation, certification, and project state updates |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/FrameworkGovernance.md` |
@@ -44,8 +44,8 @@
 
 | Version | Date | Author | Description |
 |:---|:---|:---|:---|
-| 3.0.0-beta | 2026-07-03 | Forge AI Framework | Refactored for publication quality; normalized formatting, terminology, and cross-references. |
-| 3.0.0-alpha | 2026-07-03 | Forge AI Framework | Initial draft of the Master Architecture Audit. |
+| 3.0.0-beta | 2026-07-03 |AI-DOS Framework | Refactored for publication quality; normalized formatting, terminology, and cross-references. |
+| 3.0.0-alpha | 2026-07-03 |AI-DOS Framework | Initial draft of the Master Architecture Audit. |
 
 ---
 
@@ -85,13 +85,13 @@
 | Property | Value |
 |:---|:---|
 | **Document** | A.0 — Framework Audit |
-| **Identifier** | `FORGE-AUDIT-A.0` |
+| **Identifier** | `AI-DOS-AUDIT-A.0` |
 | **Version** | 3.0.0-beta |
 | **Status** | Draft |
 | **Type** | Master Architecture Audit |
 | **Classification** | Framework Core |
 | **Authority** | Constitution (Pending), Framework Governance |
-| **Owner** | Forge AI Framework |
+| **Owner** |AI-DOS Framework |
 | **Maintainers** | Framework Architecture Team |
 | **Phase** | Phase A — Framework Core |
 | **Stage** | A.0 — Framework Audit |
@@ -100,7 +100,7 @@
 
 ### Audit Position
 
-The Framework Audit is the first architectural activity of the Forge AI v3 redesign program. It establishes the verified architectural baseline of the existing Framework before any redesign, migration, or implementation work begins. No architectural decision made during the redesign may contradict the findings of this audit unless explicitly approved by human governance.
+The Framework Audit is the first architectural activity of theAI-DOS v3 redesign program. It establishes the verified architectural baseline of the existing Framework before any redesign, migration, or implementation work begins. No architectural decision made during the redesign may contradict the findings of this audit unless explicitly approved by human governance.
 
 This audit serves as the architectural baseline for every Framework Core redesign activity. All subsequent Framework Core documents consume the verified outputs of this audit.
 
@@ -108,7 +108,7 @@ This audit serves as the architectural baseline for every Framework Core redesig
 
 ```mermaid
 graph TD
-    subgraph Forge_AI_v3["Forge AI v3"]
+    subgraph AI_DOS_v3["AI-DOS v3"]
         direction LR
         A["Phase A — Framework Core"]
     end
@@ -224,15 +224,15 @@ This section is complete when the document identity is established, audit author
 
 ### Overview
 
-The Framework Audit is the foundational architectural assessment for the Forge AI v3 redesign initiative. Before introducing new architecture, the Framework must first be fully understood in its current form. This audit establishes a verified architectural baseline by identifying every major Framework capability, ownership boundary, dependency relationship, documentation artifact, and governance rule.
+The Framework Audit is the foundational architectural assessment for theAI-DOS v3 redesign initiative. Before introducing new architecture, the Framework must first be fully understood in its current form. This audit establishes a verified architectural baseline by identifying every major Framework capability, ownership boundary, dependency relationship, documentation artifact, and governance rule.
 
 The purpose of this audit is not to redesign the Framework. Its purpose is to discover, document, validate, and classify the existing architecture using evidence-driven analysis. Only after this audit has been completed may architectural redesign begin.
 
 ### Why This Audit Exists
 
-The previous generations of Forge AI successfully established a documentation-first and governance-first methodology for AI-assisted software development. As the Framework evolved, additional capabilities — including planning, workflows, commands, validation, testing, certification, templates, orchestration, and project governance — were introduced incrementally.
+The previous generations ofAI-DOS successfully established a documentation-first and governance-first methodology for AI-assisted software development. As the Framework evolved, additional capabilities — including planning, workflows, commands, validation, testing, certification, templates, orchestration, and project governance — were introduced incrementally.
 
-Before Forge AI can evolve into a complete AI Development Operating System (AI-DOS), the Framework requires a comprehensive architectural assessment to answer fundamental questions such as:
+BeforeAI-DOS can evolve into a complete AI Development Operating System (AI-DOS), the Framework requires a comprehensive architectural assessment to answer fundamental questions such as:
 
 - What currently exists?
 - What is canonical?
@@ -276,7 +276,7 @@ This audit establishes:
 - Planning boundaries
 - Validation boundaries
 
-These findings collectively define the architectural baseline from which Forge AI v3 is derived.
+These findings collectively define the architectural baseline from whichAI-DOS v3 is derived.
 
 ### Governance Purpose
 
@@ -293,7 +293,7 @@ This audit is intended to become a permanent historical artifact within the Fram
 
 ### Completion Statement
 
-The Purpose of this audit is fulfilled when the existing Framework has been completely understood, accurately documented, and objectively classified, providing a trusted architectural foundation for the Forge AI v3 Framework Core redesign.
+The Purpose of this audit is fulfilled when the existing Framework has been completely understood, accurately documented, and objectively classified, providing a trusted architectural foundation for theAI-DOS v3 Framework Core redesign.
 
 ### Design Note — Architecture Discovery Document (ADD)
 
@@ -305,7 +305,7 @@ Although this document is currently organized as A.0 — Framework Audit, it is 
 
 ### Overview
 
-The Framework Audit defines the measurable objectives that must be achieved before the Forge AI v3 Framework Core redesign can proceed. The audit is considered complete only when every objective has been satisfied using documented architectural evidence.
+The Framework Audit defines the measurable objectives that must be achieved before theAI-DOS v3 Framework Core redesign can proceed. The audit is considered complete only when every objective has been satisfied using documented architectural evidence.
 
 ### Primary Objectives
 
@@ -360,7 +360,7 @@ This section is complete when the objectives are measurable, verifiable, and acc
 
 ### Overview
 
-The Audit Principles define the mandatory rules governing every Framework-level architectural audit performed within Forge AI. These principles ensure that audit results remain objective, repeatable, traceable, and suitable as inputs for architectural decision-making.
+The Audit Principles define the mandatory rules governing every Framework-level architectural audit performed within AI-DOS. These principles ensure that audit results remain objective, repeatable, traceable, and suitable as inputs for architectural decision-making.
 
 ### Core Principles
 
@@ -386,7 +386,7 @@ This section is complete when the governing principles for Framework audits are 
 
 ### Overview
 
-The Framework Audit defines the architectural boundaries of the Forge AI Framework Core redesign. Its scope intentionally covers every canonical Framework component that contributes to governance, planning, execution, validation, documentation, and long-term evolution. The audit evaluates the Framework as a complete architectural system rather than as isolated documents or implementation artifacts.
+The Framework Audit defines the architectural boundaries of theAI-DOS Framework Core redesign. Its scope intentionally covers every canonical Framework component that contributes to governance, planning, execution, validation, documentation, and long-term evolution. The audit evaluates the Framework as a complete architectural system rather than as isolated documents or implementation artifacts.
 
 ### Scope Objectives
 
@@ -486,14 +486,14 @@ These activities belong to subsequent Framework Core documents.
 
 ### Boundary Rules
 
-- **Framework Only.** The audit evaluates the Forge AI Framework itself. It does not evaluate projects built on top of the Framework.
+- **Framework Only.** The audit evaluates theAI-DOS Framework itself. It does not evaluate projects built on top of the Framework.
 - **Architecture Before Implementation.** Architecture is evaluated independently from implementation quality.
 - **Canonical Sources Only.** Only approved canonical documentation may be used as authoritative evidence. Historical documents, reference material, and work-in-progress artifacts may support analysis but must never override canonical sources.
 - **Evidence-Based Findings.** Every observation, finding, recommendation, and conclusion must be supported by verifiable evidence.
 
 ### Scope Limitations
 
-The Framework Audit represents a snapshot of the Framework at the beginning of the Forge AI v3 redesign initiative. Changes introduced after the audit begins are evaluated separately and do not alter the historical validity of this document.
+The Framework Audit represents a snapshot of the Framework at the beginning of theAI-DOS v3 redesign initiative. Changes introduced after the audit begins are evaluated separately and do not alter the historical validity of this document.
 
 ### Rationale
 
@@ -608,7 +608,7 @@ The Audit Methodology is complete when the audit lifecycle, execution phases, ev
 
 ### Overview
 
-The Framework Inventory establishes the complete architectural inventory of the Forge AI Framework. It identifies every canonical subsystem, its architectural role, ownership expectations, and relationship to the overall Framework. The inventory is descriptive rather than prescriptive — it records what exists before redesign decisions are made.
+The Framework Inventory establishes the complete architectural inventory of theAI-DOS Framework. It identifies every canonical subsystem, its architectural role, ownership expectations, and relationship to the overall Framework. The inventory is descriptive rather than prescriptive — it records what exists before redesign decisions are made.
 
 ### Inventory Objectives
 
@@ -742,7 +742,7 @@ The Framework Inventory is complete when every canonical Framework subsystem has
 
 ### Overview
 
-The Authority Analysis defines the authoritative decision hierarchy of the Forge AI Framework. Its purpose is to identify which architectural authority governs every major decision and to ensure that no responsibility is controlled by multiple competing authorities. Authority determines who has the right to define, approve, interpret, and evolve architectural truth.
+The Authority Analysis defines the authoritative decision hierarchy of theAI-DOS Framework. Its purpose is to identify which architectural authority governs every major decision and to ensure that no responsibility is controlled by multiple competing authorities. Authority determines who has the right to define, approve, interpret, and evolve architectural truth.
 
 ### Objectives
 
@@ -758,7 +758,7 @@ This analysis shall:
 
 ```mermaid
 graph TD
-    A["Human Governance"] --> B["Forge AI Constitution"]
+    A["Human Governance"] --> B["AI-DOS Constitution"]
     B --> C["Framework Governance"]
     C --> D["Framework Architecture"]
     D --> E["Project Status"]
@@ -777,7 +777,7 @@ graph TD
 | Domain | Authority | Responsibilities |
 |:---|:---|:---|
 | Human Governance | Human Governance | Strategic direction, final approval, exceptions, and conflict resolution. |
-| Constitution | Forge AI Constitution | Immutable Framework principles and constitutional rules. |
+| Constitution |AI-DOS Constitution | Immutable Framework principles and constitutional rules. |
 | Framework Governance | Framework Governance | Governance policies, compliance rules, and architectural oversight. |
 | Framework Architecture | Architecture Owner | Canonical architectural models, layering, and dependency direction. |
 | Project Status | Project Status Owner | Current operational truth of the Framework and active work. |
@@ -822,7 +822,7 @@ The Authority Analysis is complete when every major decision domain has a single
 
 ### Overview
 
-The Ownership Analysis defines the architectural ownership model of the Forge AI Framework. Ownership identifies the single responsible authority for every architectural capability, subsystem, document, runtime component, and governance responsibility. Unlike authority, which determines who may decide, ownership determines who is accountable for the lifecycle of an architectural asset.
+The Ownership Analysis defines the architectural ownership model of theAI-DOS Framework. Ownership identifies the single responsible authority for every architectural capability, subsystem, document, runtime component, and governance responsibility. Unlike authority, which determines who may decide, ownership determines who is accountable for the lifecycle of an architectural asset.
 
 ### Objectives
 
@@ -916,7 +916,7 @@ The Ownership Analysis is complete when every architectural responsibility has a
 
 ### Overview
 
-The Dependency Analysis defines how architectural components within the Forge AI Framework may depend on one another. Its purpose is to ensure a predictable, maintainable, and governance-driven dependency model that preserves architectural integrity throughout the Framework lifecycle. Dependency analysis evaluates relationships between architectural layers rather than implementation-specific imports.
+The Dependency Analysis defines how architectural components within theAI-DOS Framework may depend on one another. Its purpose is to ensure a predictable, maintainable, and governance-driven dependency model that preserves architectural integrity throughout the Framework lifecycle. Dependency analysis evaluates relationships between architectural layers rather than implementation-specific imports.
 
 ### Objectives
 
@@ -1017,7 +1017,7 @@ The Dependency Analysis is complete when dependency direction, dependency rules,
 
 ### Overview
 
-The Documentation Audit evaluates the complete documentation landscape of the Forge AI Framework. Its objective is to identify the role, authority, ownership, quality, and lifecycle status of every document that contributes to the Framework. Documentation is treated as an architectural asset and therefore follows the same governance expectations as runtime components.
+The Documentation Audit evaluates the complete documentation landscape of theAI-DOS Framework. Its objective is to identify the role, authority, ownership, quality, and lifecycle status of every document that contributes to the Framework. Documentation is treated as an architectural asset and therefore follows the same governance expectations as runtime components.
 
 ### Objectives
 
@@ -1095,7 +1095,7 @@ A governed documentation model prevents architectural drift, contradictory guida
 
 ### Architectural Implications
 
-The Documentation Audit establishes the canonical documentation map used by Governance, Runtime, Planning, Validation, and future Framework certification. Its findings drive documentation migration and consolidation during the Forge AI v3 redesign.
+The Documentation Audit establishes the canonical documentation map used by Governance, Runtime, Planning, Validation, and future Framework certification. Its findings drive documentation migration and consolidation during theAI-DOS v3 redesign.
 
 ### Completion Statement
 
@@ -1107,7 +1107,7 @@ The Documentation Audit is complete when every Framework document has been class
 
 ### Overview
 
-The Terminology Audit establishes a single canonical vocabulary for the Forge AI Framework. Its purpose is to identify, classify, normalize, and govern the terminology used throughout the Framework to eliminate ambiguity, duplication, and inconsistent interpretation. Terminology is treated as an architectural asset and therefore requires governance, ownership, and lifecycle management.
+The Terminology Audit establishes a single canonical vocabulary for theAI-DOS Framework. Its purpose is to identify, classify, normalize, and govern the terminology used throughout the Framework to eliminate ambiguity, duplication, and inconsistent interpretation. Terminology is treated as an architectural asset and therefore requires governance, ownership, and lifecycle management.
 
 ### Objectives
 
@@ -1117,7 +1117,7 @@ The Terminology Audit shall:
 - Detect duplicated and conflicting terminology.
 - Define preferred canonical terms.
 - Record deprecated terms and accepted synonyms.
-- Prepare the canonical glossary for Forge AI v3.
+- Prepare the canonical glossary forAI-DOS v3.
 
 ### Terminology Classification
 
@@ -1193,7 +1193,7 @@ The Terminology Audit is complete when every major Framework concept has a prefe
 
 ### Overview
 
-The Runtime Audit evaluates the current execution model of the Forge AI Framework. Its purpose is to identify how the Framework boots, assembles context, plans work, executes tasks, validates results, performs review, certifies outcomes, and updates project knowledge. The audit documents the current runtime architecture before introducing the Forge AI v3 AI Development Operating System (AI-DOS) runtime model.
+The Runtime Audit evaluates the current execution model of theAI-DOS Framework. Its purpose is to identify how the Framework boots, assembles context, plans work, executes tasks, validates results, performs review, certifies outcomes, and updates project knowledge. The audit documents the current runtime architecture before introducing theAI-DOS v3 AI Development Operating System (AI-DOS) runtime model.
 
 ### Objectives
 
@@ -1292,7 +1292,7 @@ The Runtime Audit is complete when the current runtime lifecycle, execution resp
 
 ### Overview
 
-The Planning Audit evaluates the current planning architecture of the Forge AI Framework. Its purpose is to understand how work is initiated, decomposed, governed, prioritized, tracked, and completed before introducing the Forge AI v3 Planning Engine. The audit documents planning behavior, ownership, decision boundaries, and lifecycle interactions without redesigning them.
+The Planning Audit evaluates the current planning architecture of theAI-DOS Framework. Its purpose is to understand how work is initiated, decomposed, governed, prioritized, tracked, and completed before introducing theAI-DOS v3 Planning Engine. The audit documents planning behavior, ownership, decision boundaries, and lifecycle interactions without redesigning them.
 
 ### Objectives
 
@@ -1362,7 +1362,7 @@ A consistent planning model enables predictable execution, governance, and long-
 
 ### Architectural Implications
 
-The Planning Audit provides the architectural baseline for the Forge AI v3 Planning Engine and future planning-related governance. All redesign decisions affecting planning shall reference the findings documented in this audit.
+The Planning Audit provides the architectural baseline for theAI-DOS v3 Planning Engine and future planning-related governance. All redesign decisions affecting planning shall reference the findings documented in this audit.
 
 ### Completion Statement
 
@@ -1374,7 +1374,7 @@ The Planning Audit is complete when the planning hierarchy, planning responsibil
 
 ### Overview
 
-The Validation Audit evaluates the current validation architecture of the Forge AI Framework. Its purpose is to understand how architectural quality is verified, how evidence is collected, how quality gates are enforced, and how validation contributes to governance before the Forge AI v3 Validation Engine is introduced. The audit documents the existing validation model without redefining it.
+The Validation Audit evaluates the current validation architecture of theAI-DOS Framework. Its purpose is to understand how architectural quality is verified, how evidence is collected, how quality gates are enforced, and how validation contributes to governance before theAI-DOS v3 Validation Engine is introduced. The audit documents the existing validation model without redefining it.
 
 ### Objectives
 
@@ -1467,7 +1467,7 @@ A governed validation model ensures that architectural decisions are supported b
 
 ### Architectural Implications
 
-The Validation Audit becomes the primary architectural input for the Forge AI v3 Validation Engine, Quality Gate model, and Certification workflow. Future validation capabilities shall preserve these principles unless superseded by approved governance.
+The Validation Audit becomes the primary architectural input for theAI-DOS v3 Validation Engine, Quality Gate model, and Certification workflow. Future validation capabilities shall preserve these principles unless superseded by approved governance.
 
 ### Completion Statement
 
@@ -1479,7 +1479,7 @@ The Validation Audit is complete when the validation lifecycle, evidence model, 
 
 ### Overview
 
-The Agent Audit evaluates the current agent architecture of the Forge AI Framework. Its purpose is to understand how AI agents are defined, governed, coordinated, constrained, and integrated into the Framework before introducing the Forge AI v3 Agent Runtime. The audit documents the current agent model without redesigning it.
+The Agent Audit evaluates the current agent architecture of theAI-DOS Framework. Its purpose is to understand how AI agents are defined, governed, coordinated, constrained, and integrated into the Framework before introducing theAI-DOS v3 Agent Runtime. The audit documents the current agent model without redesigning it.
 
 ### Objectives
 
@@ -1565,7 +1565,7 @@ A governed agent model enables scalable AI collaboration while preserving archit
 
 ### Architectural Implications
 
-The Agent Audit becomes the architectural baseline for the Forge AI v3 Agent Runtime, Agent Registry, Capability Model, and future multi-agent collaboration. It also provides the required inputs for the subsequent [Swarm Audit](#17-swarm-audit).
+The Agent Audit becomes the architectural baseline for theAI-DOS v3 Agent Runtime, Agent Registry, Capability Model, and future multi-agent collaboration. It also provides the required inputs for the subsequent [Swarm Audit](#17-swarm-audit).
 
 ### Completion Statement
 
@@ -1577,7 +1577,7 @@ The Agent Audit is complete when agent roles, capabilities, ownership, lifecycle
 
 ### Overview
 
-The Swarm Audit evaluates the current and anticipated multi-agent collaboration model of the Forge AI Framework. Its purpose is to establish the architectural baseline for coordinated agent execution before introducing the Forge AI v3 Swarm Runtime. Unlike the [Agent Audit](#16-agent-audit), which evaluates individual agents, the Swarm Audit focuses on how multiple agents cooperate to achieve a shared objective.
+The Swarm Audit evaluates the current and anticipated multi-agent collaboration model of theAI-DOS Framework. Its purpose is to establish the architectural baseline for coordinated agent execution before introducing theAI-DOS v3 Swarm Runtime. Unlike the [Agent Audit](#16-agent-audit), which evaluates individual agents, the Swarm Audit focuses on how multiple agents cooperate to achieve a shared objective.
 
 ### Objectives
 
@@ -1661,7 +1661,7 @@ A governed swarm architecture enables scalable AI collaboration while preserving
 
 ### Architectural Implications
 
-The Swarm Audit provides the architectural baseline for the Forge AI v3 Swarm Runtime, Swarm Coordinator, Agent Collaboration Model, and distributed execution capabilities. Its findings also influence Runtime, Context, Knowledge, and Memory architecture.
+The Swarm Audit provides the architectural baseline for theAI-DOS v3 Swarm Runtime, Swarm Coordinator, Agent Collaboration Model, and distributed execution capabilities. Its findings also influence Runtime, Context, Knowledge, and Memory architecture.
 
 ### Completion Statement
 
@@ -1673,7 +1673,7 @@ The Swarm Audit is complete when swarm architecture, collaboration model, govern
 
 ### Overview
 
-The Missing Concepts analysis identifies architectural concepts that are absent, incomplete, or insufficiently defined within the current Forge AI Framework. Its purpose is not to redesign these concepts, but to document their absence, assess their architectural impact, and establish the redesign backlog for Forge AI v3. Every identified concept shall be supported by documented evidence gathered during this audit.
+The Missing Concepts analysis identifies architectural concepts that are absent, incomplete, or insufficiently defined within the currentAI-DOS Framework. Its purpose is not to redesign these concepts, but to document their absence, assess their architectural impact, and establish the redesign backlog forAI-DOS v3. Every identified concept shall be supported by documented evidence gathered during this audit.
 
 ### Objectives
 
@@ -1752,7 +1752,7 @@ The Missing Concepts register becomes the master backlog for the Framework Core 
 
 ### Completion Statement
 
-The Missing Concepts analysis is complete when architectural gaps have been identified, classified, prioritized, mapped to target documents, and accepted as the redesign backlog for Forge AI v3.
+The Missing Concepts analysis is complete when architectural gaps have been identified, classified, prioritized, mapped to target documents, and accepted as the redesign backlog forAI-DOS v3.
 
 ---
 
@@ -1760,7 +1760,7 @@ The Missing Concepts analysis is complete when architectural gaps have been iden
 
 ### Overview
 
-The Migration Strategy defines the architectural approach for evolving the existing Forge AI Framework into the Forge AI v3 Framework Core. Its purpose is to ensure that migration is governed, incremental, traceable, and evidence-driven. This section documents the migration architecture. It does not authorize implementation.
+The Migration Strategy defines the architectural approach for evolving the existingAI-DOS Framework into theAI-DOS v3 Framework Core. Its purpose is to ensure that migration is governed, incremental, traceable, and evidence-driven. This section documents the migration architecture. It does not authorize implementation.
 
 ### Objectives
 
@@ -1862,7 +1862,7 @@ The Migration Strategy is complete when migration principles, compatibility mode
 
 ### Overview
 
-The Recommendations section consolidates the architectural conclusions produced throughout the Framework Audit. Recommendations are evidence-based architectural proposals intended to guide the Forge AI v3 Framework Core redesign. They are advisory until accepted through Framework governance.
+The Recommendations section consolidates the architectural conclusions produced throughout the Framework Audit. Recommendations are evidence-based architectural proposals intended to guide theAI-DOS v3 Framework Core redesign. They are advisory until accepted through Framework governance.
 
 ### Objectives
 
@@ -1877,7 +1877,7 @@ The Recommendations shall:
 ### Strategic Recommendations
 
 - **R1 — Establish a Canonical Framework Core.** Consolidate architectural truth into a single, governed Framework Core with clearly defined ownership and authority.
-- **R2 — Introduce an AI Development Operating System.** Evolve Forge AI from a documentation-first framework into an AI Development Operating System (AI-DOS) with explicit runtime, engine, and governance models.
+- **R2 — Introduce an AI Development Operating System.** EvolveAI-DOS from a documentation-first framework into an AI Development Operating System (AI-DOS) with explicit runtime, engine, and governance models.
 - **R3 — Formalize Engine-Based Architecture.** Introduce dedicated Planning, Runtime, Context, Knowledge, Memory, Validation, Review, and Certification engines with clearly defined responsibilities.
 - **R4 — Strengthen Governance.** Separate governance, ownership, authority, planning, execution, and validation into distinct architectural domains.
 - **R5 — Standardize Documentation.** Adopt a single documentation lifecycle, canonical terminology, and unified document classification model.

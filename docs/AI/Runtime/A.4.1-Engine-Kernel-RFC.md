@@ -1,6 +1,6 @@
 # A.4.1 — Engine Kernel RFC
 
-> Forge AI v3 · Engine Architecture RFC
+>AI-DOS v3 · Engine Architecture RFC
 > Engine Kernel · Draft / Non-canonical
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-A-004.1` |
+| Identifier | `AI-DOS-A-004.1` |
 | Title | A.4.1 — Engine Kernel RFC |
 | Version | `0.2.0-draft` |
 | Status | RFC / Draft |
@@ -23,7 +23,7 @@
 | Created | 2026-07-07 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.V3.A.004.1` |
+| Traceability ID | `AI-DOS.V3.A.004.1` |
 | Scope | Engine Kernel RFC documentation-only architecture |
 | Out of Scope | Implementation, runtime behavior changes, certification, and ProjectStatus updates |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/FrameworkGovernance.md` |
@@ -41,15 +41,15 @@
 
 ## Executive Summary
 
-This RFC defines the Engine Kernel as the single shared execution coordination foundation for all Forge AI Engines. It establishes one governed execution path — Runtime hosts, Kernel coordinates, Engines execute — and prohibits any subsystem from creating parallel execution authorities. The Kernel governs Engine loading, registration, discovery, lifecycle, invocation, dependency resolution, state separation, telemetry, validation handoff, registry synchronization, and failure handling while consuming authority from higher-order governance and producing coordination outputs for downstream Engines, standards, and the Knowledge Graph.
+This RFC defines the Engine Kernel as the single shared execution coordination foundation for allAI-DOS Engines. It establishes one governed execution path — Runtime hosts, Kernel coordinates, Engines execute — and prohibits any subsystem from creating parallel execution authorities. The Kernel governs Engine loading, registration, discovery, lifecycle, invocation, dependency resolution, state separation, telemetry, validation handoff, registry synchronization, and failure handling while consuming authority from higher-order governance and producing coordination outputs for downstream Engines, standards, and the Knowledge Graph.
 
 ---
 
 ## Purpose
 
-The Engine Kernel exists to define the single shared execution coordination foundation for all Forge AI Engines.
+The Engine Kernel exists to define the single shared execution coordination foundation for allAI-DOS Engines.
 
-Forge AI requires Engines to execute governed capabilities without allowing Runtime, Workflow, Registry, Standards, Knowledge Graph, agents, tools, adapters, or individual Engines to create competing execution systems. The Engine Kernel provides the common coordination layer for Engine loading, registration, lifecycle, invocation, dependency resolution, state separation, telemetry, validation handoff, registry synchronization, and failure handling.
+AI-DOS requires Engines to execute governed capabilities without allowing Runtime, Workflow, Registry, Standards, Knowledge Graph, agents, tools, adapters, or individual Engines to create competing execution systems. The Engine Kernel provides the common coordination layer for Engine loading, registration, lifecycle, invocation, dependency resolution, state separation, telemetry, validation handoff, registry synchronization, and failure handling.
 
 The purpose of this RFC is to eliminate architectural drift toward parallel execution paths by stating one governed execution coordination model:
 
@@ -114,7 +114,7 @@ This RFC does not define or perform:
 
 This RFC is governed by the following authority chain, listed from highest to nearest:
 
-1. **Human Governance** — Final authority over all Forge AI architectural decisions, certification, and promotion.
+1. **Human Governance** — Final authority over allAI-DOS architectural decisions, certification, and promotion.
 2. **`AGENTS.md`** — Operational governance contract defining agent behavior, constraints, and authority boundaries.
 3. **`docs/FrameworkGovernance.md`** — Transitional v3 governance framework defining authority delegation, review, and approval processes.
 4. **`docs/AI/Architecture/A.1-Constitution.md`** — Constitutional authority governing framework-level principles, rights, and structural constraints.
@@ -130,7 +130,7 @@ This RFC is governed by the following authority chain, listed from highest to ne
 This RFC consumes the following normative references:
 
 1. `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` — Document metadata format and mandatory field definitions.
-2. `docs/AI/Architecture/A.1-Constitution.md` — Constitutional principles governing all Forge AI artifacts.
+2. `docs/AI/Architecture/A.1-Constitution.md` — Constitutional principles governing allAI-DOS artifacts.
 3. `docs/AI/Meta/M.0-Framework-Meta-Model.md` — Framework meta-model defining core conceptual primitives.
 4. `docs/AI/Meta/M.1-Artifact-Meta-Model.md` — Artifact meta-model defining the common governed artifact contract.
 5. `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md` — Standards library governance, lifecycle, and validation rules.
@@ -180,7 +180,7 @@ This diagram describes responsibility adjacency, not authority inversion. Agents
 
 ### Engine Kernel Responsibilities
 
-The Engine Kernel is responsible for shared execution coordination across all Forge AI Engines.
+The Engine Kernel is responsible for shared execution coordination across allAI-DOS Engines.
 
 | Responsibility | Kernel Role |
 |:---|:---|
@@ -220,7 +220,7 @@ Parallel execution paths are prohibited because they would:
 - make certification evidence unreliable;
 - compromise platform independence by embedding execution rules in specific tools or adapters.
 
-Forge AI requires one governed execution coordination model so that execution remains auditable, traceable, reviewable, and governable.
+AI-DOS requires one governed execution coordination model so that execution remains auditable, traceable, reviewable, and governable.
 
 #### Subsystems at Risk
 
@@ -392,7 +392,7 @@ No Kernel optimization, automation feature, agent preference, tool shortcut, or 
 
 ### DD-001: Single Execution Authority Through Engine Kernel
 
-**Context:** Forge AI requires Engines to execute governed capabilities. The question is whether multiple subsystems may independently coordinate Engine execution.
+**Context:**AI-DOS requires Engines to execute governed capabilities. The question is whether multiple subsystems may independently coordinate Engine execution.
 
 **Options considered:**
 1. Distributed coordination where Runtime, Workflow, Registry, and Standards each manage their own Engine dispatch — rejected because it fragments authority, creates inconsistent lifecycle state, and makes certification evidence unreliable.
@@ -402,7 +402,7 @@ No Kernel optimization, automation feature, agent preference, tool shortcut, or 
 
 ### DD-002: Nine-Layer Responsibility Adjacency Model
 
-**Context:** The Engine Kernel needs a clear structural position within the Forge AI architecture. The question is how to define its relationship to Runtime, Engines, and consumers.
+**Context:** The Engine Kernel needs a clear structural position within theAI-DOS architecture. The question is how to define its relationship to Runtime, Engines, and consumers.
 
 **Options considered:**
 1. Kernel as part of Runtime — rejected because it would allow Runtime to become a second Engine dispatcher.
@@ -545,7 +545,7 @@ The Kernel shall not redefine standards, create standards, supersede standards, 
 
 ### Agent / Tool / Kernel Boundary
 
-Codex-like tools, Claude Code-like tools, Cursor-like assistants, CLI tools, IDE tools, Forge-native agents, automation runners, and platform adapters must invoke Engines through Runtime + Kernel.
+Codex-like tools, Claude Code-like tools, Cursor-like assistants, CLI tools, IDE tools, AI-DOS-native agents, automation runners, and platform adapters must invoke Engines through Runtime + Kernel.
 
 Agents and tools shall not own lifecycle, registry, validation, certification, canonical artifact truth, dependency resolution, or Engine discovery. They may request work, provide inputs, execute host-supported operations, report evidence, and receive outputs, but they remain consumers of governed Engine coordination.
 

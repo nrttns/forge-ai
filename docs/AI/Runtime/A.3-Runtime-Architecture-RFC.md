@@ -1,6 +1,6 @@
 # A.3 — Runtime Architecture RFC
 
-> **Forge AI v3 · Runtime Architecture RFC**
+> **AI-DOS v3 · Runtime Architecture RFC**
 > Runtime Architecture · Draft / Non-Canonical
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-A-3` |
+| Identifier | `AI-DOS-A-3` |
 | Title | A.3 — Runtime Architecture RFC |
 | Version | `0.2.0-draft` |
 | Status | Draft |
@@ -23,7 +23,7 @@
 | Created | 2026-07-07 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.V2.RUNTIME.A-3` |
+| Traceability ID | `AI-DOS.V2.RUNTIME.A-3` |
 | Scope | Defines Runtime Architecture only, including Runtime responsibilities, Runtime lifecycle boundaries, and Runtime coordination concepts for the Runtime RFC family. |
 | Out of Scope | Engine Platform redefinition, Engine Foundation redefinition, Engine Specialization redefinition, implementation, runtime behavior changes, certification, freeze decisions, ProjectStatus updates, and DevelopmentPhases updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
@@ -41,7 +41,7 @@
 
 ## Executive Summary
 
-This RFC defines the v3 Runtime Architecture for Forge AI by harvesting RC2 runtime concepts into a governed, documentation-only architectural model. It establishes the Runtime Kernel, nine runtime layers, the agent lifecycle, context assembly, memory strategy, Knowledge Graph consumption, validation, review, certification handoff, multi-agent and swarm coordination, and runtime invariants — all operating under the principle that runtime consumes authority but never creates it. This RFC resolves the runtime harvest blocker identified by the RC2 Specification Harvest Report and provides a candidate architecture for governance review.
+This RFC defines the v3 Runtime Architecture forAI-DOS by harvesting RC2 runtime concepts into a governed, documentation-only architectural model. It establishes the Runtime Kernel, nine runtime layers, the agent lifecycle, context assembly, memory strategy, Knowledge Graph consumption, validation, review, certification handoff, multi-agent and swarm coordination, and runtime invariants — all operating under the principle that runtime consumes authority but never creates it. This RFC resolves the runtime harvest blocker identified by the RC2 Specification Harvest Report and provides a candidate architecture for governance review.
 
 ---
 
@@ -49,7 +49,7 @@ This RFC defines the v3 Runtime Architecture for Forge AI by harvesting RC2 runt
 
 The purpose of this RFC is to harvest the runtime concepts identified as missing from the v3 target set and provide a v3 Runtime Architecture candidate for review.
 
-This RFC translates RC2 runtime concepts into v3 architecture language while preserving the core Forge AI constraints:
+This RFC translates RC2 runtime concepts into v3 architecture language while preserving the coreAI-DOS constraints:
 
 - runtime consumes authority; it does not create authority;
 - runtime executes governed workflows; it does not redefine standards;
@@ -113,7 +113,7 @@ This RFC does not:
 
 This RFC is governed by the following authority chain, listed from highest to nearest:
 
-1. **Human Governance** — Final authority over all Forge AI architectural decisions, certification, and promotion.
+1. **Human Governance** — Final authority over allAI-DOS architectural decisions, certification, and promotion.
 2. **`AGENTS.md`** — Operational governance contract defining agent behavior, constraints, and authority boundaries.
 3. **`docs/AI/FrameworkGovernance.md`** — Transitional v3 governance framework defining authority delegation, review, and approval processes.
 4. **`docs/AI/Architecture/A.1-Constitution.md`** — Constitutional authority governing framework-level principles, rights, and structural constraints.
@@ -141,14 +141,14 @@ Runtime authority boundaries are:
 This RFC consumes the following normative references:
 
 1. `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` — Document metadata format and mandatory field definitions.
-2. `docs/AI/Architecture/A.1-Constitution.md` — Constitutional principles governing all Forge AI artifacts.
+2. `docs/AI/Architecture/A.1-Constitution.md` — Constitutional principles governing allAI-DOS artifacts.
 3. `docs/AI/Meta/M.0-Framework-Meta-Model.md` — Framework meta-model defining core conceptual primitives.
 4. `docs/AI/Meta/M.1-Artifact-Meta-Model.md` — Artifact meta-model defining the common governed artifact contract.
 5. `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md` — Standards library governance, lifecycle, and validation rules.
 6. `docs/AI/Architecture/Standards/STD-001-Knowledge-Graph-Standard.md` — Knowledge Graph semantics, node types, edge types, and traversal rules.
 7. `docs/AI/Architecture/Reports/RC2-Specification-Harvest-Report.md` — RC2 harvest report identifying missing runtime concepts.
 8. `docs/AI/Specification/RuntimeModel.md` — RC2 runtime model serving as the primary source for harvested concepts.
-9. `docs/AI/Architecture/Blueprint/Forge-AI-Blueprint-v1.0-RFC.md` — v1.0 blueprint providing architectural context.
+9. `docs/AI/Architecture/Blueprint/AI-DOS-Blueprint-v1.0-RFC.md` — v1.0 blueprint providing architectural context.
 
 ---
 
@@ -169,7 +169,7 @@ This RFC depends on the following upstream documents, systems, and concepts:
 
 ### Runtime Philosophy
 
-The Forge AI Runtime is a governed execution environment for AI-assisted development. It exists to assemble authoritative context, coordinate execution, invoke agents or automation, collect evidence, run validation, prepare review, and hand certification decisions to governance.
+TheAI-DOS Runtime is a governed execution environment for AI-assisted development. It exists to assemble authoritative context, coordinate execution, invoke agents or automation, collect evidence, run validation, prepare review, and hand certification decisions to governance.
 
 An AI agent is not an autonomous architect. It is a delegated executor and reasoning participant operating within documented architectural constraints.
 
@@ -526,7 +526,7 @@ When conflict cannot be resolved by existing authority, runtime must stop and es
 
 ### Runtime Invariants
 
-Every Forge AI runtime implementation should preserve these invariants:
+EveryAI-DOS runtime implementation should preserve these invariants:
 
 1. Runtime consumes architecture and governance; it does not create them.
 2. Runtime executes governed workflows but does not redefine standards.
@@ -539,7 +539,7 @@ Every Forge AI runtime implementation should preserve these invariants:
 9. Review occurs before certification.
 10. Certification occurs before project state update.
 11. RC2 operational compatibility remains valid until replaced through governance.
-12. Platform adapters may extend runtime integration but may not redefine Forge AI runtime architecture.
+12. Platform adapters may extend runtime integration but may not redefineAI-DOS runtime architecture.
 13. Multi-agent and swarm execution must preserve explicit ownership and unified validation.
 14. Runtime communication must be traceable through artifacts or evidence.
 15. Runtime must report blockers when authority, scope, ownership, state, validation, or review is unclear.
@@ -564,7 +564,7 @@ Every Forge AI runtime implementation should preserve these invariants:
 
 **Options considered:**
 1. Monolithic runtime model — rejected because it conflates concerns such as context assembly, execution, validation, and certification.
-2. Three-layer model (input, execution, output) — rejected as too coarse to capture the distinct responsibilities required by Forge AI governance.
+2. Three-layer model (input, execution, output) — rejected as too coarse to capture the distinct responsibilities required byAI-DOS governance.
 3. Nine-layer model — selected because it provides explicit separation for context assembly, coordination, execution, evidence, validation, review preparation, certification handoff, and memory candidacy, each with clear boundaries and ownership.
 
 **Rationale:** The nine-layer model maps directly to the governed workflow sequence (documentation → context → execution → evidence → validation → review → certification → memory) and ensures that no layer oversteps its authority boundaries.

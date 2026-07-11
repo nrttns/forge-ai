@@ -1,4 +1,4 @@
-# Forge AI — AGENTS v2 Master Architecture Specification
+#AI-DOS — AGENTS v2 Master Architecture Specification
 
 > AGENTS v2 Specification Family Entry Point · Draft / Non-canonical / Documentation-only
 
@@ -8,8 +8,8 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.AGENTS.V2.MASTER-ARCHITECTURE` |
-| Title | Forge AI — AGENTS v2 Master Architecture Specification |
+| Identifier | `AI-DOS.AGENTS.V2.MASTER-ARCHITECTURE` |
+| Title |AI-DOS — AGENTS v2 Master Architecture Specification |
 | Version | 0.1.0-draft |
 | Status | Draft |
 | Canonical Status | Non-canonical until reviewed, approved, and promoted through Human Governance / Framework Governance |
@@ -22,7 +22,7 @@
 | Created | 2026-07-08 |
 | Last Updated | 2026-07-08 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.ARCHITECTURE.AGENTS.V2.MASTER` |
+| Traceability ID | `AI-DOS.ARCHITECTURE.AGENTS.V2.MASTER` |
 | Scope | Documentation-only master entry point for the AGENTS v2 specification family, including architecture stack, authority consumption, specification ownership, agent/runtime/engine separation, roadmap summary, freeze readiness, forbidden content, deferred areas, and completion checklist. |
 | Out of Scope | Implementation, runtime execution, APIs, storage, scheduling, queues, dispatch, routing, orchestration, CLI, UI, transport, messaging runtime, swarm runtime, platform adapters, Engine RFC continuation, Runtime redefinition, Engine Platform redefinition, Governance redefinition, Standards redefinition, M.0 redefinition, M.1 redefinition, STD-010 redefinition, ProjectStatus updates, certification, approval, or canonical promotion. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
@@ -40,7 +40,7 @@
 
 ## 1. Executive Summary
 
-This document is the master entry point for the Forge AI AGENTS v2 specification family.
+This document is the master entry point for theAI-DOS AGENTS v2 specification family.
 
 AGENTS v2 is a draft, documentation-only, non-canonical, and not-certified architecture track until Human Governance and Framework Governance complete the required review, approval, promotion, and certification steps. This document coordinates the AGENTS v2 family; it does not replace, redefine, or duplicate the specialized AGENTS v2 specifications.
 

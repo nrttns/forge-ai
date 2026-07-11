@@ -1,6 +1,6 @@
 # Appendix B: Constitutional Case Studies
 
-> **Parent Document:** [A.1 — Constitution](../A.1-Constitution.md) (`FORGE-ARCH-A.1`)
+> **Parent Document:** [A.1 — Constitution](../A.1-Constitution.md) (`AI-DOS-ARCH-A.1`)
 > **Version:** 3.0.0-beta
 > **Status:** Draft
 
@@ -10,7 +10,7 @@
 
 This appendix provides illustrative constitutional case studies derived from the principles, rules, invariants, violation categories, amendment procedures, and compliance expectations defined in [A.1 — Constitution](./A.1-Constitution.md). Each case study demonstrates how constitutional governance applies in realistic architectural scenarios, serving as a reference for governance reviews, compliance assessments, and architectural decision-making.
 
-Case studies are fictional but architecturally grounded. They illustrate constitutional mechanisms without introducing new architectural concepts not already present in the parent document or the broader Forge AI Framework.
+Case studies are fictional but architecturally grounded. They illustrate constitutional mechanisms without introducing new architectural concepts not already present in the parent document or the broaderAI-DOS Framework.
 
 ---
 

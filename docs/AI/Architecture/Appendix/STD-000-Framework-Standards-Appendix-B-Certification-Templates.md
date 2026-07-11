@@ -1,6 +1,6 @@
 # Appendix B: Certification Templates
 
-> **Parent Document:** [STD-000 — Framework Standards](./STD-000-Framework-Standards.md) (`FORGE-STD-000`)
+> **Parent Document:** [STD-000 — Framework Standards](./STD-000-Framework-Standards.md) (`AI-DOS-STD-000`)
 > **Version:** 3.0.0-beta
 > **Status:** Draft
 
@@ -10,7 +10,7 @@
 
 This appendix provides the canonical certification templates for every Framework Standard progressing through the [Certification Workflow](./STD-000-Framework-Standards.md#15-certification). The templates are derived directly from the certification prerequisites, decision model, and record schema defined in [Section 15 — Certification](./STD-000-Framework-Standards.md#15-certification) of STD-000.
 
-These templates ensure that every certification decision is documented, evidence-based, traceable, and governed consistently across the Forge AI Standards Library.
+These templates ensure that every certification decision is documented, evidence-based, traceable, and governed consistently across theAI-DOS Standards Library.
 
 ---
 
@@ -46,7 +46,7 @@ These templates ensure that every certification decision is documented, evidence
 
 | Field | Value |
 |:---|:---|
-| **Standard Identifier** | `FORGE-STD-___` |
+| **Standard Identifier** | `AI-DOS-STD-___` |
 | **Version** | |
 | **Assessment Date** | |
 | **Assessor** | |
@@ -66,7 +66,7 @@ These templates ensure that every certification decision is documented, evidence
 | Field | Value |
 |:---|:---|
 | **Certification ID** | `CERT-STD-___-<SEQ>` |
-| **Standard Identifier** | `FORGE-STD-___` |
+| **Standard Identifier** | `AI-DOS-STD-___` |
 | **Version** | |
 | **Certification Date** | |
 | **Certifying Authority** | |
@@ -127,7 +127,7 @@ These templates ensure that every certification decision is documented, evidence
 | Field | Value |
 |:---|:---|
 | **Certification ID** | `CERT-STD-___-<SEQ>` |
-| **Standard Identifier** | `FORGE-STD-___` |
+| **Standard Identifier** | `AI-DOS-STD-___` |
 | **Standard Title** | |
 | **Version Certified** | |
 | **Certification Date** | |
@@ -155,7 +155,7 @@ graph LR
 | Field | Description | Value |
 |:---|:---|:---|
 | **Certification ID** | Unique identifier for this certification instance. | |
-| **Standard Identifier** | The `FORGE-STD-*` identifier being certified. | |
+| **Standard Identifier** | The `AI-DOS-STD-*` identifier being certified. | |
 | **Version** | The version of the standard being certified. | |
 | **Certification Date** | Date the certification decision was made. | |
 | **Certifying Authority** | The authority that approved the certification. | |
@@ -175,15 +175,15 @@ graph LR
 
 | Standard | Identifier | Version | Lifecycle State | Validation Status | Certification Status | Certified Date | Conditions |
 |:---|:---|:---|:---|:---|:---|:---|:---|
-| STD-000 | `FORGE-STD-000` | 3.0.0-beta | Draft | — | — | — | — |
-| STD-001 | `FORGE-STD-001` | — | Proposed | — | — | — | — |
-| STD-002 | `FORGE-STD-002` | — | Proposed | — | — | — | — |
-| STD-003 | `FORGE-STD-003` | — | Proposed | — | — | — | — |
-| STD-004 | `FORGE-STD-004` | — | Proposed | — | — | — | — |
-| STD-005 | `FORGE-STD-005` | — | Proposed | — | — | — | — |
-| STD-006 | `FORGE-STD-006` | — | Proposed | — | — | — | — |
-| STD-007 | `FORGE-STD-007` | — | Proposed | — | — | — | — |
-| STD-008 | `FORGE-STD-008` | — | Proposed | — | — | — | — |
+| STD-000 | `AI-DOS-STD-000` | 3.0.0-beta | Draft | — | — | — | — |
+| STD-001 | `AI-DOS-STD-001` | — | Proposed | — | — | — | — |
+| STD-002 | `AI-DOS-STD-002` | — | Proposed | — | — | — | — |
+| STD-003 | `AI-DOS-STD-003` | — | Proposed | — | — | — | — |
+| STD-004 | `AI-DOS-STD-004` | — | Proposed | — | — | — | — |
+| STD-005 | `AI-DOS-STD-005` | — | Proposed | — | — | — | — |
+| STD-006 | `AI-DOS-STD-006` | — | Proposed | — | — | — | — |
+| STD-007 | `AI-DOS-STD-007` | — | Proposed | — | — | — | — |
+| STD-008 | `AI-DOS-STD-008` | — | Proposed | — | — | — | — |
 
 ### B.6.2 Certification Decision Distribution
 
@@ -241,7 +241,7 @@ A recertification may be required when:
 | Field | Value |
 |:---|:---|
 | **Recertification ID** | `RECERT-STD-___-<SEQ>` |
-| **Standard Identifier** | `FORGE-STD-___` |
+| **Standard Identifier** | `AI-DOS-STD-___` |
 | **Previous Certification ID** | |
 | **Previous Version Certified** | |
 | **New Version** | |

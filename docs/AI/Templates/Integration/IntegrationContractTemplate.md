@@ -1,6 +1,6 @@
 # Integration Contract Template
 
-> Forge AI v2 · Integration Templates<br>
+>AI-DOS v2 · Integration Templates<br>
 > Template Artifact · Draft / Non-canonical
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-INTEGRATION-CONTRACT` |
+| Identifier | `AI-DOS-TPL-INTEGRATION-CONTRACT` |
 | Title | Integration Contract Template |
 | Version | `2.0.0-draft` |
 | Status | Draft |
@@ -23,8 +23,8 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Operational Core Alignment |
-| Traceability ID | `FORGE-AI.V2.TEMPLATES.INTEGRATION.CONTRACT` |
-| Scope | Defines the reusable documentation structure for a governed integration between Forge AI, a project, a platform, a tool, or an external system. |
+| Traceability ID | `AI-DOS.V2.TEMPLATES.INTEGRATION.CONTRACT` |
+| Scope | Defines the reusable documentation structure for a governed integration between AI-DOS, a project, a platform, a tool, or an external system. |
 | Out of Scope | Integration authority redefinition, connector authority redefinition, external-tool authority redefinition, platform-adapter authority redefinition, runtime authority redefinition, API authority creation, registry authority creation, governance authority creation, review authority creation, certification authority creation, ProjectStatus updates, connector implementation, API implementation, platform-adapter implementation, runtime behavior implementation, external tool behavior implementation, authentication flow implementation, transport protocol definition, registry persistence implementation, architecture redefinition, and canonical promotion. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
 | Normative References | `AGENTS.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/Architecture/Agents/AGENTS-v2.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/README.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Templates/Knowledge/KnowledgeRegistryTemplate.md`; `docs/AI/Templates/Platform/`; `docs/AI/Templates/Context/`; `docs/AI/Templates/Knowledge/` |
@@ -43,7 +43,7 @@
 
 ## 1. Purpose
 
-Defines the reusable documentation structure for a governed integration between Forge AI, a project, a platform, a tool, or an external system.
+Defines the reusable documentation structure for a governed integration between AI-DOS, a project, a platform, a tool, or an external system.
 
 This template is an output contract only. It consumes existing AGENTS, Runtime, Engine, Context, Knowledge, Registry, Platform, STD-010, and TPL-000 authority without redefining integration, connector, external-tool, platform-adapter, runtime, API, governance, review, certification, registry, or ProjectStatus authority.
 

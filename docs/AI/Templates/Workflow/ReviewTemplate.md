@@ -20,12 +20,12 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Draft |
-| Traceability ID | FORGE-AI.TEMPLATES.WORKFLOW.REVIEW |
+| Traceability ID | AI-DOS.TEMPLATES.WORKFLOW.REVIEW |
 | Scope | Reusable template for review documents in the Workflow template family |
 | Out of Scope | Implementation, validation execution, certification by itself, approval, or ProjectStatus updates |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
 | Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/README.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md` |
-| Dependencies | STD-010 metadata schema; TPL-000 template governance; Forge AI template routing; Operational Core workflow, command, and orchestration authorities |
+| Dependencies | STD-010 metadata schema; TPL-000 template governance;AI-DOS template routing; Operational Core workflow, command, and orchestration authorities |
 | Consumes | STD-010 mandatory metadata fields; TPL-000 placeholder grammar, lifecycle, taxonomy, compliance model, and validation requirements; existing workflow, command, and orchestration routing authority |
 | Produces | Review document |
 | Related Specifications | Workflow template family files under `docs/AI/Templates/Workflow/` |

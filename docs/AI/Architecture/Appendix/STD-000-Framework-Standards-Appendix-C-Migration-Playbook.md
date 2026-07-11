@@ -1,6 +1,6 @@
 # Appendix C: Migration Playbook
 
-> **Parent Document:** [STD-000 — Framework Standards](../Standards/STD-000-Framework-Standards.md) (`FORGE-STD-000`)
+> **Parent Document:** [STD-000 — Framework Standards](../Standards/STD-000-Framework-Standards.md) (`AI-DOS-STD-000`)
 > **Version:** 3.0.0-beta
 > **Status:** Draft
 
@@ -8,7 +8,7 @@
 
 ## C.1 Purpose
 
-This appendix provides the canonical migration playbook for the Forge AI Standards Library. It operationalizes the migration principles, triggers, workflow, planning requirements, compatibility strategies, and deprecation rules defined in [Section 17 — Migration](./STD-000-Framework-Standards.md#17-migration) of STD-000.
+This appendix provides the canonical migration playbook for theAI-DOS Standards Library. It operationalizes the migration principles, triggers, workflow, planning requirements, compatibility strategies, and deprecation rules defined in [Section 17 — Migration](./STD-000-Framework-Standards.md#17-migration) of STD-000.
 
 The playbook serves as a step-by-step reference for Standards Owners, Framework Governance, and consuming documents when a Framework Standard requires migration due to deprecation, breaking changes, Meta Model evolution, constitutional amendments, or structural reorganization.
 
@@ -46,8 +46,8 @@ Before initiating a migration, the trigger shall be assessed and classified.
 |:---|:---|
 | **Migration ID** | `MIG-STD-___-<SEQ>` |
 | **Trigger Type** | |
-| **Source Standard** | `FORGE-STD-___` |
-| **Target Standard** | `FORGE-STD-___` (or "N/A" for deprecation without successor) |
+| **Source Standard** | `AI-DOS-STD-___` |
+| **Target Standard** | `AI-DOS-STD-___` (or "N/A" for deprecation without successor) |
 | **Trigger Date** | |
 | **Assessment Owner** | |
 | **Preliminary Impact Assessment** | |
@@ -217,8 +217,8 @@ This template implements the migration plan schema defined in [Section 17 — Mi
 |:---|:---|
 | **Migration ID** | `MIG-STD-___-<SEQ>` |
 | **Migration Title** | |
-| **Source Standard** | `FORGE-STD-___` (Version: ) |
-| **Target Standard** | `FORGE-STD-___` (Version: ) |
+| **Source Standard** | `AI-DOS-STD-___` (Version: ) |
+| **Target Standard** | `AI-DOS-STD-___` (Version: ) |
 | **Trigger Type** | |
 | **Migration Rationale** | |
 | **Compatibility Strategy** | ☐ Fully Compatible ☐ Partially Compatible ☐ Breaking Change ☐ Historical Preservation Only |
@@ -286,10 +286,10 @@ graph LR
 | Field | Value |
 |:---|:---|
 | **Migration ID** | `MIG-STD-___-<SEQ>` |
-| **Deprecated Standard** | `FORGE-STD-___` |
+| **Deprecated Standard** | `AI-DOS-STD-___` |
 | **Deprecated Version** | |
 | **Deprecation Date** | |
-| **Successor Standard** | `FORGE-STD-___` (or "N/A") |
+| **Successor Standard** | `AI-DOS-STD-___` (or "N/A") |
 | **Successor Version** | |
 | **Reason for Deprecation** | |
 | **Migration Guidance Reference** | |
@@ -376,9 +376,9 @@ This template produces the permanent migration record.
 | Field | Value |
 |:---|:---|
 | **Migration ID** | `MIG-STD-___-<SEQ>` |
-| **Source Standard** | `FORGE-STD-___` |
+| **Source Standard** | `AI-DOS-STD-___` |
 | **Source Version** | |
-| **Target Standard** | `FORGE-STD-___` |
+| **Target Standard** | `AI-DOS-STD-___` |
 | **Target Version** | |
 | **Trigger Type** | |
 | **Compatibility Strategy** | |

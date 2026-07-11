@@ -1,6 +1,6 @@
 # STD-002 — Discovery JSON Schema
 
-> **Parent Standard:** [STD-002 — Discovery Standard](../Standards/STD-002-Discovery-Standard.md) (`FORGE-STD-002`)  
+> **Parent Standard:** [STD-002 — Discovery Standard](../Standards/STD-002-Discovery-Standard.md) (`AI-DOS-STD-002`)  
 > **Related Appendix:** [Appendix A — Discovery Classification Catalog](../Appendix/STD-002-Discovery-Standard-Appendix-A-Discovery-Classification-Catalog.md)  
 > **Executable Schema:** [`STD-002-Discovery.schema.json`](./STD-002-Discovery.schema.json)  
 > **Version:** 1.0.0-alpha  
@@ -13,7 +13,7 @@
 | Property | Value                             |
 |:---|:----------------------------------|
 | **Document** | STD-002 — Discovery JSON Schema   |
-| **Identifier** | `FORGE-STD-002-SCHEMA-JSON`       |
+| **Identifier** | `AI-DOS-STD-002-SCHEMA-JSON`       |
 | **Version** | 1.0.0-alpha                       |
 | **Status** | Draft                             |
 | **Type** | Technical Schema Specification    |
@@ -29,7 +29,7 @@
 
 ## 2. Purpose
 
-This document defines the canonical JSON Schema representation for Forge AI Discovery artifacts.
+This document defines the canonical JSON Schema representation forAI-DOS Discovery artifacts.
 
 The schema exists to make Discovery records machine-readable, validatable, portable, and consumable by AI Agents, Runtime systems, Validation Engines, Review Engines, Certification workflows, and future platform adapters.
 
@@ -359,7 +359,7 @@ Breaking changes require a new major schema version.
   "metadata": {
     "labels": ["architecture", "dependency"],
     "keywords": ["runtime", "governance", "cycle"],
-    "project": "Forge AI"
+    "project": "AI-DOS"
   }
 }
 ```
@@ -368,6 +368,6 @@ Breaking changes require a new major schema version.
 
 ## 20. Completion Statement
 
-This document defines the human-readable specification for the Forge AI Discovery JSON Schema.
+This document defines the human-readable specification for theAI-DOS Discovery JSON Schema.
 
 The executable schema is maintained in `STD-002-Discovery.schema.json` and shall be treated as the machine-readable validation contract for STD-002 Discovery artifacts.

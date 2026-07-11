@@ -1,4 +1,4 @@
-# Forge AI — AGENTS v2 Agent Communication and Coordination
+#AI-DOS — AGENTS v2 Agent Communication and Coordination
 
 ---
 
@@ -6,8 +6,8 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.AGENTS.V2.AGENT-COMMUNICATION-AND-COORDINATION` |
-| Title | Forge AI — AGENTS v2 Agent Communication and Coordination |
+| Identifier | `AI-DOS.AGENTS.V2.AGENT-COMMUNICATION-AND-COORDINATION` |
+| Title |AI-DOS — AGENTS v2 Agent Communication and Coordination |
 | Version | 0.1.0-draft |
 | Status | Draft |
 | Canonical Status | Non-canonical until reviewed, approved, and promoted through Human Governance / Framework Governance |
@@ -20,7 +20,7 @@
 | Created | 2026-07-08 |
 | Last Updated | 2026-07-08 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.ARCHITECTURE.AGENTS.V2.COMMUNICATION-COORDINATION` |
+| Traceability ID | `AI-DOS.ARCHITECTURE.AGENTS.V2.COMMUNICATION-COORDINATION` |
 | Scope | Documentation-level AGENTS v2 agent communication and coordination model, communication contracts, logical message categories, request / response expectations, event expectations, context exchange expectations, validation rules, and governance boundaries. |
 | Out of Scope | Runtime messaging, transport protocols, queues, brokers, APIs, networking, scheduling, execution, orchestration, routing implementation, context runtime, swarm behavior, platform adapters, Engine RFC work, Runtime redefinition, Engine Platform redefinition, Governance redefinition, Standards redefinition, M.0 redefinition, M.1 redefinition, STD-010 redefinition, and ProjectStatus updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Architecture.md` |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-This document defines the AGENTS v2 agent communication and coordination model for Forge AI.
+This document defines the AGENTS v2 agent communication and coordination model for AI-DOS.
 
 Its purpose is to describe, at the documentation and architecture-specification level, how future AGENTS v2 agent identities may express communication intent, exchange logical context, and coordinate documentation-level responsibilities without defining runtime messaging, transport, scheduling, routing, orchestration, or execution.
 

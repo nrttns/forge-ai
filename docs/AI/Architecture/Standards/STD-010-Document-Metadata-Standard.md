@@ -1,6 +1,6 @@
 # STD-010 — Document Metadata Standard
 
-> Forge AI v3 · Standards Library  
+>AI-DOS v3 · Standards Library  
 > Document Metadata · Draft / Non-canonical
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-STD-010` |
+| Identifier | `AI-DOS-STD-010` |
 | Title | STD-010 — Document Metadata Standard |
 | Version | 0.1.0-draft |
 | Status | Draft |
@@ -23,8 +23,8 @@
 | Created | 2026-07-07 |
 | Last Updated | 2026-07-07 |
 | Lifecycle Phase | Draft |
-| Traceability ID | FORGE-STD-010 |
-| Scope | Mandatory metadata model for Forge AI documents |
+| Traceability ID | AI-DOS-STD-010 |
+| Scope | Mandatory metadata model forAI-DOS documents |
 | Out of Scope | Normalizing documents, rewriting RFCs, updating ProjectStatus, and implementing tooling |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/FrameworkGovernance.md` |
 | Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md` |
@@ -42,9 +42,9 @@
 
 ## 2. Executive Summary
 
-STD-010 defines the mandatory metadata model that every Forge AI document shall follow after this standard is approved and adopted through Framework Governance.
+STD-010 defines the mandatory metadata model that everyAI-DOS document shall follow after this standard is approved and adopted through Framework Governance.
 
-The standard exists because Forge AI documents currently use inconsistent headers, mixed authority chains, uneven ownership metadata, incomplete lifecycle metadata, and ambiguous relationship labels. The Engine Platform Consistency Review identified these inconsistencies as a mandatory quality gate before metadata normalization and individual Engine RFC development.
+The standard exists becauseAI-DOS documents currently use inconsistent headers, mixed authority chains, uneven ownership metadata, incomplete lifecycle metadata, and ambiguous relationship labels. The Engine Platform Consistency Review identified these inconsistencies as a mandatory quality gate before metadata normalization and individual Engine RFC development.
 
 STD-010 separates document governance into explicit metadata fields. In particular, this standard distinguishes:
 
@@ -70,7 +70,7 @@ This standard does not normalize existing documents. It does not rewrite A.4, re
 
 ### 3.1 Purpose of Metadata
 
-Document metadata is the identity, governance, traceability, ownership, lifecycle, and relationship contract for a Forge AI document.
+Document metadata is the identity, governance, traceability, ownership, lifecycle, and relationship contract for aAI-DOS document.
 
 Metadata shall allow humans, AI agents, validation systems, review systems, certification systems, registries, knowledge graph projections, and future tooling to answer:
 
@@ -97,7 +97,7 @@ Metadata shall allow humans, AI agents, validation systems, review systems, cert
 
 ### 3.2 Metadata Principles
 
-Forge AI metadata shall preserve these principles:
+AI-DOS metadata shall preserve these principles:
 
 - Identity before reference.
 - Authority before dependency.
@@ -142,7 +142,7 @@ This standard defines metadata requirements only. It does not implement validati
 
 ### 4.1 Mandatory Metadata Block
 
-Every Forge AI document shall include a metadata block near the top of the document after the title and introductory classification block.
+EveryAI-DOS document shall include a metadata block near the top of the document after the title and introductory classification block.
 
 The required section heading shall be:
 
@@ -159,11 +159,11 @@ The required table shape shall be:
 
 ### 4.2 Mandatory Fields
 
-The following fields are mandatory for every Forge AI document unless a governed exception is recorded.
+The following fields are mandatory for everyAI-DOS document unless a governed exception is recorded.
 
 | Field | Requirement | Example |
 |:---|:---|:---|
-| Identifier | Stable machine-readable document identifier. | `FORGE-STD-010` |
+| Identifier | Stable machine-readable document identifier. | `AI-DOS-STD-010` |
 | Title | Human-readable document title. | STD-010 — Document Metadata Standard |
 | Version | Semantic or governed version string. | `0.1.0-draft` |
 | Status | Current working status. | Draft |
@@ -177,7 +177,7 @@ The following fields are mandatory for every Forge AI document unless a governed
 | Created | Creation date in `YYYY-MM-DD` format. | 2026-07-07 |
 | Last Updated | Last material update date in `YYYY-MM-DD` format. | 2026-07-07 |
 | Lifecycle Phase | Current lifecycle phase. | Draft |
-| Traceability ID | Stable trace identifier for governance, audit, review, and registry use. | `FORGE-AI.V3.STD-010` |
+| Traceability ID | Stable trace identifier for governance, audit, review, and registry use. | `AI-DOS.V3.STD-010` |
 | Scope | What the document governs, defines, or covers. | Mandatory document metadata model |
 | Out of Scope | What the document explicitly does not do. | Existing document normalization |
 | Normative Authority | Documents or governance bodies that can override or govern this document. | `AGENTS.md`, A.1, STD-000 |
@@ -231,24 +231,24 @@ Metadata field values shall not:
 
 ### 4.5 Identifier Rules
 
-Identifiers shall be stable and unique within Forge AI.
+Identifiers shall be stable and unique within AI-DOS.
 
 Recommended identifier prefixes:
 
 | Prefix | Document Family |
 |:---|:---|
-| `FORGE-A` | Architecture documents and RFCs |
-| `FORGE-STD` | Standards |
-| `FORGE-META` | Meta Models |
-| `FORGE-BP` | Blueprints |
-| `FORGE-AUD` | Audits |
-| `FORGE-REP` | Reports |
-| `FORGE-SPEC` | Specifications |
-| `FORGE-ROAD` | Roadmaps |
-| `FORGE-MIG` | Migration documents |
-| `FORGE-GOV` | Governance documents |
-| `FORGE-HIST` | Historical documents |
-| `FORGE-LEGACY` | Legacy documents |
+| `AI-DOS-A` | Architecture documents and RFCs |
+| `AI-DOS-STD` | Standards |
+| `AI-DOS-META` | Meta Models |
+| `AI-DOS-BP` | Blueprints |
+| `AI-DOS-AUD` | Audits |
+| `AI-DOS-REP` | Reports |
+| `AI-DOS-SPEC` | Specifications |
+| `AI-DOS-ROAD` | Roadmaps |
+| `AI-DOS-MIG` | Migration documents |
+| `AI-DOS-GOV` | Governance documents |
+| `AI-DOS-HIST` | Historical documents |
+| `AI-DOS-LEGACY` | Legacy documents |
 
 ### 4.6 Version Rules
 
@@ -484,7 +484,7 @@ Metadata expectations:
 
 ### 7.1 Lifecycle States
 
-Forge AI documents shall use the following lifecycle states.
+AI-DOS documents shall use the following lifecycle states.
 
 | State | Meaning | Allowed Use |
 |:---|:---|:---|
@@ -556,7 +556,7 @@ Allowed values:
 
 ### 8.1 Metadata Requirement
 
-Every new Forge AI document shall include STD-010 metadata after STD-010 is approved and adopted.
+Every newAI-DOS document shall include STD-010 metadata after STD-010 is approved and adopted.
 
 Existing documents shall not be considered invalid solely because they predate STD-010. Existing documents require governed migration before metadata nonconformance may be treated as a quality failure.
 
@@ -621,7 +621,7 @@ STD-010 does not authorize bulk rewriting by itself.
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-STD-011` |
+| Identifier | `AI-DOS-STD-011` |
 | Title | STD-011 — Example Standard |
 | Version | `0.1.0-draft` |
 | Status | Draft |
@@ -635,7 +635,7 @@ STD-010 does not authorize bulk rewriting by itself.
 | Created | 2026-07-07 |
 | Last Updated | 2026-07-07 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.V3.STD-011` |
+| Traceability ID | `AI-DOS.V3.STD-011` |
 | Scope | Example metadata standardization pattern |
 | Out of Scope | Tooling implementation |
 | Normative Authority | Human Governance; `AGENTS.md`; STD-000 |
@@ -657,7 +657,7 @@ STD-010 does not authorize bulk rewriting by itself.
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-A-004.8` |
+| Identifier | `AI-DOS-A-004.8` |
 | Title | A.4.8 — Example Engine RFC |
 | Version | `0.1.0-draft` |
 | Status | Draft |
@@ -671,7 +671,7 @@ STD-010 does not authorize bulk rewriting by itself.
 | Created | 2026-07-07 |
 | Last Updated | 2026-07-07 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.V3.A4.8` |
+| Traceability ID | `AI-DOS.V3.A4.8` |
 | Scope | Example Engine architecture proposal |
 | Out of Scope | Implementation code and ProjectStatus updates |
 | Normative Authority | Human Governance; `AGENTS.md`; A.1; STD-000 |
@@ -693,7 +693,7 @@ STD-010 does not authorize bulk rewriting by itself.
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AUD-001` |
+| Identifier | `AI-DOS-AUD-001` |
 | Title | AUD-001 — Example Consistency Audit |
 | Version | `1.0.0-draft` |
 | Status | Draft |
@@ -707,7 +707,7 @@ STD-010 does not authorize bulk rewriting by itself.
 | Created | 2026-07-07 |
 | Last Updated | 2026-07-07 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.V3.AUD-001` |
+| Traceability ID | `AI-DOS.V3.AUD-001` |
 | Scope | Consistency assessment |
 | Out of Scope | Implementing corrections |
 | Normative Authority | Human Governance; `AGENTS.md` |
@@ -728,7 +728,7 @@ STD-010 does not authorize bulk rewriting by itself.
 
 ### 10.1 Migration Purpose
 
-The purpose of metadata migration is to normalize Forge AI documents without changing their approved architecture, governance meaning, or historical record.
+The purpose of metadata migration is to normalizeAI-DOS documents without changing their approved architecture, governance meaning, or historical record.
 
 ### 10.2 Migration Principles
 
@@ -810,7 +810,7 @@ Metadata migration shall not:
 
 ## 12. Completion Report
 
-STD-010 defines the draft Forge AI Document Metadata Standard.
+STD-010 defines the draftAI-DOS Document Metadata Standard.
 
 It establishes the mandatory metadata model for standards, RFCs, meta models, blueprints, audits, reports, specifications, roadmaps, migration documents, governance documents, future Engine RFCs, legacy documents, and historical documents.
 

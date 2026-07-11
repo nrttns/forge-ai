@@ -1,6 +1,6 @@
 # Appendix C: Constitutional Decision Patterns
 
-> **Parent Document:** [A.1 — Constitution](../A.1-Constitution.md) (`FORGE-ARCH-A.1`)  
+> **Parent Document:** [A.1 — Constitution](../A.1-Constitution.md) (`AI-DOS-ARCH-A.1`)  
 > **Version:** 3.0.0-beta  
 > **Status:** Draft
 
@@ -8,7 +8,7 @@
 
 ## C.1 Purpose
 
-This appendix defines reusable constitutional decision patterns for the Forge AI Framework.
+This appendix defines reusable constitutional decision patterns for theAI-DOS Framework.
 
 Decision Patterns translate the principles, authority rules, source-of-truth rules, evidence expectations, violation categories, and amendment constraints defined in [A.1 — Constitution](../A.1-Constitution.md) into repeatable decision structures.
 

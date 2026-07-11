@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.V4.PHASE-2.ENGINE-RFC-AUDIT-00` |
+| Identifier | `AI-DOS.V4.PHASE-2.ENGINE-RFC-AUDIT-00` |
 | Title | A.5 — Engine RFC Inventory and Compliance Review |
 | Version | `0.1.0-draft` |
 | Status | Draft |
@@ -20,7 +20,7 @@
 | Created | 2026-07-08 |
 | Last Updated | 2026-07-08 |
 | Lifecycle Phase | Draft Review |
-| Traceability ID | `FORGE-AI.V4.PHASE-2.ENGINE-RFC-AUDIT-00` |
+| Traceability ID | `AI-DOS.V4.PHASE-2.ENGINE-RFC-AUDIT-00` |
 | Scope | Inventory and compliance review of the existing Runtime Architecture, Engine Platform, Engine Platform sub-RFCs, A.5.0 Engine Specialization RFC Template, and A.5.1 through A.5.7 individual Engine RFCs. |
 | Out of Scope | Editing Runtime RFCs, Engine RFCs, ProjectStatus, DevelopmentPhases, standards, meta models, source code, implementation, APIs, persistence, databases, vector databases, Neo4j implementation, prompts, LLM behavior, agents, swarm runtime, certification, canonical promotion, and ProjectStatus updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |

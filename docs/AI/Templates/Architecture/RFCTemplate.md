@@ -20,7 +20,7 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Draft |
-| Traceability ID | FORGE-AI.TEMPLATES.ARCHITECTURE.RFC |
+| Traceability ID | AI-DOS.TEMPLATES.ARCHITECTURE.RFC |
 | Scope | Reusable template for TPL-001-compliant RFC documents in the Architecture template family |
 | Out of Scope | Runtime RFC or Engine RFC specialization; use domain-specific RFC templates where provided |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |

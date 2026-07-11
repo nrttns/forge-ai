@@ -1,6 +1,6 @@
 # Appendix A: Validation Checklist
 
-> **Parent Document:** [STD-000 — Framework Standards](../Standards/STD-000-Framework-Standards.md) (`FORGE-STD-000`)
+> **Parent Document:** [STD-000 — Framework Standards](../Standards/STD-000-Framework-Standards.md) (`AI-DOS-STD-000`)
 > **Version:** 3.0.0-beta
 > **Status:** Draft
 
@@ -182,7 +182,7 @@ Every validation shall produce a record conforming to the following schema:
 | Field | Description |
 |:---|:---|
 | **Validation ID** | Unique identifier for the validation instance. |
-| **Standard Identifier** | The `FORGE-STD-*` identifier being validated. |
+| **Standard Identifier** | The `AI-DOS-STD-*` identifier being validated. |
 | **Version** | The version of the standard being validated. |
 | **Validation Date** | Date the validation was performed. |
 | **Validator** | Person or role performing the validation. |

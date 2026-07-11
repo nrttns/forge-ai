@@ -14,7 +14,7 @@ Authority: `docs/AI/Lifecycle/README.md`
 
 This document defines support expectations for AI Framework lifecycle stages.
 
-Support means documentation and process compatibility for framework adopters. It does not mean runtime software support, application support, hosting support, infrastructure support, or product support for Forge AI source code.
+Support means documentation and process compatibility for framework adopters. It does not mean runtime software support, application support, hosting support, infrastructure support, or product support forAI-DOS source code.
 
 ---
 

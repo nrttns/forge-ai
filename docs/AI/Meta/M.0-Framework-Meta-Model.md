@@ -1,7 +1,7 @@
 # M.0 — Framework Meta Model
 
-> **Forge AI v4 · Meta Foundation**<br>
-> Canonical semantic type system for Forge AI Architecture, Standards, Governance, Runtime, Engines, Knowledge, Context, AI Operations, Validation, Review, and Certification.
+> **AI-DOS v4 · Meta Foundation**<br>
+> Canonical semantic type system forAI-DOS Architecture, Standards, Governance, Runtime, Engines, Knowledge, Context, AI Operations, Validation, Review, and Certification.
 
 ---
 
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-META-M.0` |
+| Identifier | `AI-DOS-META-M.0` |
 | Title | M.0 — Framework Meta Model |
 | Version | 4.0.0-draft |
 | Status | Draft |
@@ -23,8 +23,8 @@
 | Created | 2026-07-04 |
 | Last Updated | 2026-07-07 |
 | Lifecycle Phase | Draft |
-| Traceability ID | FORGE-META-M.0 |
-| Scope | Canonical semantic type system and dependency model for Forge AI Framework artifacts |
+| Traceability ID | AI-DOS-META-M.0 |
+| Scope | Canonical semantic type system and dependency model forAI-DOS Framework artifacts |
 | Out of Scope | Runtime implementation, engine implementation, registries, storage schemas, platform adapters, project code, and M.1 alignment |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Architecture/A.0-Framework-Audit.md` |
 | Normative References | `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
@@ -41,7 +41,7 @@
 
 ## 1. Status
 
-M.0 is the canonical semantic model of the Forge AI Framework.
+M.0 is the canonical semantic model of theAI-DOS Framework.
 
 It is the Phase 1 Meta Foundation artifact that transforms the prior metadata-oriented M.0 document into the Framework-wide type system from which all governed Framework artifacts, standards, runtime specifications, engine specifications, knowledge projections, capability models, operational documents, and platform adapter specifications derive.
 
@@ -86,7 +86,7 @@ M.0 sits below constitutional authority and above downstream semantic consumers.
 
 ## 2. Purpose
 
-The purpose of M.0 is to provide the single canonical semantic type system of Forge AI.
+The purpose of M.0 is to provide the single canonical semantic type system of AI-DOS.
 
 M.0 exists so that every Framework artifact can answer the same foundational questions consistently:
 
@@ -127,7 +127,7 @@ M.0 is intentionally platform-independent. Programming languages, databases, fra
 
 ## 4. Framework Meta Type System
 
-The Framework Meta Type System is the canonical set of semantic abstractions used to describe Forge AI.
+The Framework Meta Type System is the canonical set of semantic abstractions used to describe AI-DOS.
 
 ### 4.1 Meta Type Definition
 
@@ -206,7 +206,7 @@ M.0 owns the following canonical Meta Types.
 
 ## 6. Artifact Hierarchy
 
-Artifact is the root abstraction for every governed thing in Forge AI.
+Artifact is the root abstraction for every governed thing in AI-DOS.
 
 ```mermaid
 graph TD
@@ -302,10 +302,10 @@ An identity shall be:
 
 | Family | Example | Use |
 |:---|:---|:---|
-| Meta | `FORGE-META-M.0` | Meta model documents and semantic foundations. |
-| Architecture | `FORGE-ARCH-A.1` | Architecture and constitutional documents. |
-| Audit | `FORGE-AUDIT-A.0` | Audit records and reports. |
-| Standard | `FORGE-STD-000` | Standards Library documents. |
+| Meta | `AI-DOS-META-M.0` | Meta model documents and semantic foundations. |
+| Architecture | `AI-DOS-ARCH-A.1` | Architecture and constitutional documents. |
+| Audit | `AI-DOS-AUDIT-A.0` | Audit records and reports. |
+| Standard | `AI-DOS-STD-000` | Standards Library documents. |
 | Evidence | `EVID-000001` | Evidence records. |
 | Finding | `FIND-000001` | Findings. |
 | Recommendation | `REC-000001` | Recommendations. |
@@ -795,7 +795,7 @@ A completion report for M.0 alignment should include evidence that:
 
 M.0 alignment is successful when:
 
-- M.0 is the canonical semantic model of Forge AI;
+- M.0 is the canonical semantic model of AI-DOS;
 - every Framework artifact can derive from the Framework Meta Type System;
 - M.0 owns Framework Meta Types, hierarchy, artifact abstraction, identity abstraction, metadata abstraction, lifecycle abstraction, authority abstraction, ownership abstraction, relationship abstraction, dependency abstraction, capability abstraction, runtime abstraction, engine abstraction, context abstraction, knowledge abstraction, and AI semantic model;
 - Runtime, Engines, Knowledge Graph, Standards, M.1, and AI Operations consume M.0 without redefining M.0 concepts;

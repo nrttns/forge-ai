@@ -31,7 +31,7 @@ Certification outcomes
 
 # Purpose
 
-This document defines how Forge AI templates must be authored, named, structured, validated, reviewed, and evolved.
+This document defines howAI-DOS templates must be authored, named, structured, validated, reviewed, and evolved.
 
 The goal is to make every template predictable for humans, AI agents, automation, validators, reviewers, and future swarms.
 

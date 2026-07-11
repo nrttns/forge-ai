@@ -1,7 +1,7 @@
-# Forge AI Blueprint v1.0 — RFC
+#AI-DOS Blueprint v1.0 — RFC
 
-> **Forge AI · Architectural Blueprint · Request for Comments**
-> Big-picture architecture map for the Forge AI governed AI framework.
+> **AI-DOS · Architectural Blueprint · Request for Comments**
+> Big-picture architecture map for theAI-DOS governed AI framework.
 
 ---
 
@@ -9,8 +9,8 @@
 
 | Property            | Value                                                                                          |
 |:--------------------|:-----------------------------------------------------------------------------------------------|
-| **Document**        | Forge AI Blueprint v1.0 — RFC                                                                  |
-| **Identifier**      | `FORGE-ARCH-BP-001`                                                                            |
+| **Document**        |AI-DOS Blueprint v1.0 — RFC                                                                  |
+| **Identifier**      | `AI-DOS-ARCH-BP-001`                                                                            |
 | **Version**         | `1.0.0-rc-draft`                                                                               |
 | **Status**          | Draft · RFC                                                                                    |
 | **Type**            | Architectural Blueprint (RFC)                                                                  |
@@ -22,7 +22,7 @@
 | **Last Updated**    | 2026-07-06                                                                                     |
 | **Depends On**      | `A.1`, `M.0`, `M.1`, `STD-000`, `STD-001`, `STD-002`                                           |
 | **Consumed By**     | Framework Architecture documents, Runtime specifications, Governance processes, AI Agent specs |
-| **Produces**        | Forge AI architectural map, authority boundaries, layer responsibilities, phased roadmap      |
+| **Produces**        |AI-DOS architectural map, authority boundaries, layer responsibilities, phased roadmap      |
 
 ---
 
@@ -44,7 +44,7 @@
 1. [Status](#1-status)
 2. [Executive Summary](#2-executive-summary)
 3. [Vision](#3-vision)
-4. [Why Forge AI Exists](#4-why-forge-ai-exists)
+4. [WhyAI-DOS Exists](#4-why-ai-dos-exists)
 5. [Architectural Problem Statement](#5-architectural-problem-statement)
 6. [Architectural Principles](#6-architectural-principles)
 7. [System Overview](#7-system-overview)
@@ -79,7 +79,7 @@
 
 ## 1. Status
 
-This document is the **Forge AI Blueprint v1.0 — Request for Comments**. It is published as a Draft RFC for Framework Governance review. It is not a Canonical Framework Architecture document, and it does not by itself introduce, modify, or supersede any Framework Standard.
+This document is the **AI-DOS Blueprint v1.0 — Request for Comments**. It is published as a Draft RFC for Framework Governance review. It is not a Canonical Framework Architecture document, and it does not by itself introduce, modify, or supersede any Framework Standard.
 
 The purpose of this Blueprint is to stop fragmented standard writing by establishing a single architectural map showing how the Constitution, the Meta Models, the Standards Library, the Knowledge Graph, the Artifact Model, the Registries, the Workflows, the Runtime, the AI Agents, the Swarm, and the Enterprise Governance layer fit together. Each of those concerns is owned by its own governing document; this Blueprint only describes how they relate.
 
@@ -91,9 +91,9 @@ This RFC shall be revised through Framework Governance. Promotion of this Bluepr
 
 ## 2. Executive Summary
 
-Forge AI is not a documentation system. Forge AI is a **governed AI framework** in which architectural knowledge is modeled as governed Artifacts, indexed in Registries, connected through a canonical Knowledge Graph, moved through governed Workflows, executed by a governed Runtime, and acted upon by AI Agents and Swarms that propose, validate, refactor, and reason — but never self-certify. Human Governance remains the final authority at every layer.
+AI-DOS is not a documentation system.AI-DOS is a **governed AI framework** in which architectural knowledge is modeled as governed Artifacts, indexed in Registries, connected through a canonical Knowledge Graph, moved through governed Workflows, executed by a governed Runtime, and acted upon by AI Agents and Swarms that propose, validate, refactor, and reason — but never self-certify. Human Governance remains the final authority at every layer.
 
-The Forge AI stack is intentionally stratified. The Constitution ([A.1](../A.1-Constitution.md)) owns immutable governance invariants. The Framework Meta Model ([M.0](../M.0-Framework-Meta-Model.md)) owns the conceptual type system from which every governed object is derived. The Artifact Meta Model ([M.1](../M.1-Artifact-Meta-Model.md)) owns the canonical Artifact contract inherited by all specialized Artifact types. The Framework Standards root ([STD-000](../Standards/STD-000-Framework-Standards.md)) owns how standards themselves are written and governed. The Knowledge Graph Standard ([STD-001](../Standards/STD-001-Knowledge-Graph-Standard.md)) owns the canonical graph semantics into which every Artifact is projected. Specialized Artifact standards such as the Discovery Standard ([STD-002](../Standards/STD-002-Discovery-Standard.md)) own the domain-specific contract for one Artifact type without redefining the common contract.
+TheAI-DOS stack is intentionally stratified. The Constitution ([A.1](../A.1-Constitution.md)) owns immutable governance invariants. The Framework Meta Model ([M.0](../M.0-Framework-Meta-Model.md)) owns the conceptual type system from which every governed object is derived. The Artifact Meta Model ([M.1](../M.1-Artifact-Meta-Model.md)) owns the canonical Artifact contract inherited by all specialized Artifact types. The Framework Standards root ([STD-000](../Standards/STD-000-Framework-Standards.md)) owns how standards themselves are written and governed. The Knowledge Graph Standard ([STD-001](../Standards/STD-001-Knowledge-Graph-Standard.md)) owns the canonical graph semantics into which every Artifact is projected. Specialized Artifact standards such as the Discovery Standard ([STD-002](../Standards/STD-002-Discovery-Standard.md)) own the domain-specific contract for one Artifact type without redefining the common contract.
 
 This Blueprint exists because, in the absence of an explicit architectural map, individual standards tend to drift. Identity gets redefined per standard. Lifecycle states get invented locally. Authority gets borrowed silently. AI agents begin to behave as if they could certify their own output. Registries begin to act as if they were the source of truth. The Knowledge Graph becomes a serialization detail rather than the canonical representation. Each of those drifts, taken alone, is small; taken together, they collapse the framework's governance guarantees.
 
@@ -103,17 +103,17 @@ The remedy is an explicit, layered, authority-respecting architecture in which e
 
 ## 3. Vision
 
-The long-term vision of Forge AI is an architecture in which governed knowledge, governed execution, and governed intelligence are not three separate systems but one continuous fabric. A Discovery observed in reality is captured as a governed Artifact, projected into the Knowledge Graph, linked by typed relationships to Evidence, Findings, Risks, Recommendations, and Decisions, consumed by Workflows that promote it through governed lifecycle states, validated by deterministic Runtime traversal, reasoned over by AI Agents that must justify every conclusion by a traversable graph path, and ultimately approved or rejected by Human Governance before any architectural change becomes canonical.
+The long-term vision ofAI-DOS is an architecture in which governed knowledge, governed execution, and governed intelligence are not three separate systems but one continuous fabric. A Discovery observed in reality is captured as a governed Artifact, projected into the Knowledge Graph, linked by typed relationships to Evidence, Findings, Risks, Recommendations, and Decisions, consumed by Workflows that promote it through governed lifecycle states, validated by deterministic Runtime traversal, reasoned over by AI Agents that must justify every conclusion by a traversable graph path, and ultimately approved or rejected by Human Governance before any architectural change becomes canonical.
 
 In that vision, AI is a first-class participant in the framework — but it is a delegated participant. AI Agents may propose new Artifacts, transform existing ones, surface latent relationships in the Knowledge Graph, and recommend lifecycle transitions. They may not redefine standards, duplicate canonical truth, override the authority chain, or self-certify their own output as Accepted or Canonical. The boundary between what AI may do and what only Human Governance may do is not a policy preference; it is a constitutional invariant.
 
-The vision is therefore not "AI running the framework." The vision is a framework whose governance is strong enough that AI can be safely embedded at every layer — proposing, validating, refactoring, and reasoning — without ever being able to silently become the authority. Forge AI's success is measured by the absence of two failure modes simultaneously: governance so loose that AI drifts into self-certification, and governance so rigid that the framework cannot evolve at the pace required by real architectural work.
+The vision is therefore not "AI running the framework." The vision is a framework whose governance is strong enough that AI can be safely embedded at every layer — proposing, validating, refactoring, and reasoning — without ever being able to silently become the authority. AI-DOS's success is measured by the absence of two failure modes simultaneously: governance so loose that AI drifts into self-certification, and governance so rigid that the framework cannot evolve at the pace required by real architectural work.
 
 ---
 
-## 4. Why Forge AI Exists
+## 4. WhyAI-DOS Exists
 
-Forge AI exists because the alternative architectures fail in predictable, repeatable ways.
+AI-DOS exists because the alternative architectures fail in predictable, repeatable ways.
 
 The first alternative is the **documentation-only architecture**, in which architectural knowledge lives in Markdown files connected by informal prose references. This model collapses the moment the corpus grows beyond a small team: terminology drifts, references rot, lifecycle states are inferred from filenames, and there is no canonical graph against which an AI agent can reason deterministically. Findings, Risks, Recommendations, and Decisions each redefine their own identity, ownership, and lifecycle models, producing a stack that is unreadable to machines and unmaintainable for humans.
 
@@ -121,13 +121,13 @@ The second alternative is the **database-only architecture**, in which architect
 
 The third alternative is the **AI-first architecture**, in which an AI agent is given broad authority to read the corpus, propose changes, and self-promote its output into canonical status. This model fails because AI confidence is not validation, AI-generated content is not evidence, and AI reasoning that cannot be reproduced as a traversable graph path is hallucination. Without an explicit authority boundary, the framework gradually becomes whatever the AI says it is, and Human Governance loses the ability to verify what is canonical.
 
-Forge AI is designed to avoid all three failure modes by holding four positions simultaneously: knowledge is canonical and lives in the graph; serialization is derived and lives in files, registries, and DTOs; AI is delegated and lives inside explicit authority boundaries; and Human Governance is supreme and lives at the top of an unbroken authority chain. Forge AI exists to make that combination sustainable across years of evolution, not just for an initial release.
+AI-DOS is designed to avoid all three failure modes by holding four positions simultaneously: knowledge is canonical and lives in the graph; serialization is derived and lives in files, registries, and DTOs; AI is delegated and lives inside explicit authority boundaries; and Human Governance is supreme and lives at the top of an unbroken authority chain.AI-DOS exists to make that combination sustainable across years of evolution, not just for an initial release.
 
 ---
 
 ## 5. Architectural Problem Statement
 
-The Forge AI framework must satisfy a set of architectural constraints that, taken together, are not satisfied by any single existing pattern. Specifically, the framework shall:
+TheAI-DOS framework must satisfy a set of architectural constraints that, taken together, are not satisfied by any single existing pattern. Specifically, the framework shall:
 
 - **Preserve canonical truth across representations.** The same Artifact shall be expressible as a Markdown document, a JSON object, a YAML file, a registry entry, a graph node, a runtime DTO, and an OpenAPI payload, and all of those representations shall be derived projections of one canonical object rather than competing sources of truth.
 - **Prevent authority drift across layers.** No layer shall redefine concepts owned by a higher-authority layer. The Constitution shall not be redefined by Standards; Standards shall not be redefined by the Runtime; the Runtime shall not be redefined by AI Agents; and AI Agents shall not redefine anything they do not own.
@@ -167,7 +167,7 @@ The following principles govern every layer described in this Blueprint. They ar
 
 ### 6.1 Key Architectural Rules
 
-The following eleven rules are the binding authority invariants of the Forge AI architecture. Each rule is owned by the source document indicated in parentheses; this Blueprint restates them in consolidated form for orientation only. Where this restatement conflicts with a source document, the source prevails.
+The following eleven rules are the binding authority invariants of theAI-DOS architecture. Each rule is owned by the source document indicated in parentheses; this Blueprint restates them in consolidated form for orientation only. Where this restatement conflicts with a source document, the source prevails.
 
 1. **A.1 owns constitutional authority.** The Constitution ([A.1](../A.1-Constitution.md)) is the sole owner of immutable governance invariants, the authority chain, evidence principles, and constitutional violations. No lower document may redefine constitutional authority. (Source: A.1; reflected in M.0 §12, STD-000 §5.)
 2. **M.0 owns framework meta concepts.** The Framework Meta Model ([M.0](../M.0-Framework-Meta-Model.md)) is the sole owner of Artifact, Entity, Relationship, Identity, Lifecycle, State, Authority, Ownership, Evidence, Validation, Review, Certification, and Reference as framework-level meta concepts. Standards may specialize these concepts; they may not redefine them. (Source: M.0 §5, §6, §7, §8, §9, §10, §11, §12, §13, §14, §15, §16, §17, §18.)
@@ -187,13 +187,13 @@ These eleven rules are the load-bearing invariants of the architecture. Every su
 
 ## 7. System Overview
 
-Forge AI is a layered framework in which each layer consumes the canonical output of the layers below it and produces canonical input for the layers above it. The layers, in authority order from highest to lowest, are: Human Governance; the Constitution (A.1); the Framework Meta Model (M.0); the Artifact Meta Model (M.1); the Framework Standards (STD-000 and the standards it governs, including STD-001 Knowledge Graph and STD-002+ Artifact standards); the Knowledge Graph projected from those standards; the Artifact instances themselves; the Registries that index them; the Workflows that move them; the Runtime that executes them; the AI Agents that reason over them; the Swarms that coordinate agents; and the Enterprise Governance functions that certify, audit, and report on the whole.
+AI-DOS is a layered framework in which each layer consumes the canonical output of the layers below it and produces canonical input for the layers above it. The layers, in authority order from highest to lowest, are: Human Governance; the Constitution (A.1); the Framework Meta Model (M.0); the Artifact Meta Model (M.1); the Framework Standards (STD-000 and the standards it governs, including STD-001 Knowledge Graph and STD-002+ Artifact standards); the Knowledge Graph projected from those standards; the Artifact instances themselves; the Registries that index them; the Workflows that move them; the Runtime that executes them; the AI Agents that reason over them; the Swarms that coordinate agents; and the Enterprise Governance functions that certify, audit, and report on the whole.
 
-The system is intentionally not a single application. It is a set of governed contracts, each owned by a specific document, that together constrain how knowledge is captured, stored, related, evolved, executed, and reasoned over. Implementations of those contracts — graph databases, registry services, workflow engines, runtime kernels, agent runtimes — are projections of the contracts, not the contracts themselves. A Forge AI deployment may swap its Neo4j graph database for a different storage engine, its Python Runtime for a Rust Runtime, or its LLM provider for a different vendor, without violating the architecture, provided the new implementation conforms to the same canonical contracts.
+The system is intentionally not a single application. It is a set of governed contracts, each owned by a specific document, that together constrain how knowledge is captured, stored, related, evolved, executed, and reasoned over. Implementations of those contracts — graph databases, registry services, workflow engines, runtime kernels, agent runtimes — are projections of the contracts, not the contracts themselves. AAI-DOS deployment may swap its Neo4j graph database for a different storage engine, its Python Runtime for a Rust Runtime, or its LLM provider for a different vendor, without violating the architecture, provided the new implementation conforms to the same canonical contracts.
 
 ### Diagram 1 — Full Stack Architecture
 
-The following diagram shows the full Forge AI stack as a directed authority-and-consumption graph. Solid arrows represent normative authority flow (higher authority governs lower). The diagram is structural, not temporal: the layers coexist and continuously consume one another's canonical output.
+The following diagram shows the fullAI-DOS stack as a directed authority-and-consumption graph. Solid arrows represent normative authority flow (higher authority governs lower). The diagram is structural, not temporal: the layers coexist and continuously consume one another's canonical output.
 
 ```mermaid
 graph TD
@@ -250,7 +250,7 @@ graph TD
 
 ## 8. Layered Architecture
 
-The Forge AI stack is organized into ten layers. Each layer has a single primary responsibility, a single owning document family, and a single direction of authority consumption (downward only). Layers are not organizational groupings; they are authority boundaries. A layer may consume the canonical output of any lower-authority layer, but it may not redefine the contract of any layer above it.
+TheAI-DOS stack is organized into ten layers. Each layer has a single primary responsibility, a single owning document family, and a single direction of authority consumption (downward only). Layers are not organizational groupings; they are authority boundaries. A layer may consume the canonical output of any lower-authority layer, but it may not redefine the contract of any layer above it.
 
 ### Diagram 2 — Layered Architecture
 
@@ -317,7 +317,7 @@ The matrix above is the canonical layer map for the rest of this Blueprint. Each
 
 ## 9. Governance Layer
 
-The Governance Layer is the highest-authority layer in the Forge AI stack. It comprises Human Governance and the Constitution ([A.1](../A.1-Constitution.md)). Its primary responsibility is to define immutable governance invariants and to serve as the final escalation authority for every dispute, exception, or constitutional question raised by any lower layer.
+The Governance Layer is the highest-authority layer in theAI-DOS stack. It comprises Human Governance and the Constitution ([A.1](../A.1-Constitution.md)). Its primary responsibility is to define immutable governance invariants and to serve as the final escalation authority for every dispute, exception, or constitutional question raised by any lower layer.
 
 The Governance Layer is intentionally small. It does not define Artifact identity, lifecycle, schema, or graph semantics; those belong to the Meta Model, Artifact, and Standards layers. It does not define how standards are written; that belongs to STD-000. It does not define how the graph is traversed; that belongs to STD-001. The Governance Layer defines only the invariants that no lower layer may violate and the escalation path by which any lower layer may request clarification, exception, or amendment.
 
@@ -355,7 +355,7 @@ The Standards Layer is strictly higher authority than the Knowledge Graph, Artif
 
 ## 12. Knowledge Graph Layer
 
-The Knowledge Graph Layer is the canonical representation of all governed architectural knowledge in Forge AI. It is owned by [STD-001 — Knowledge Graph Standard](../Standards/STD-001-Knowledge-Graph-Standard.md). Its primary responsibility is to preserve architectural relationships and to enable deterministic, explainable reasoning by both humans and AI.
+The Knowledge Graph Layer is the canonical representation of all governed architectural knowledge in AI-DOS. It is owned by [STD-001 — Knowledge Graph Standard](../Standards/STD-001-Knowledge-Graph-Standard.md). Its primary responsibility is to preserve architectural relationships and to enable deterministic, explainable reasoning by both humans and AI.
 
 The Knowledge Graph is not a storage engine. It is a canonical model in which every Discovery, Finding, Recommendation, Risk, Evidence, Decision, Standard, Workflow, Runtime Component, Agent, and Swarm is represented as a node, and every governed connection between those objects is represented as a typed, directional edge. Concrete storage technologies — Neo4j, RDF stores, PostgreSQL-backed graph schemas — are implementation projections of the canonical model. STD-001 defines the model; implementations conform to it.
 
@@ -481,7 +481,7 @@ Enterprise Governance specifications — including the canonical Audit Standard 
 
 ## 21. Data / Knowledge Flow
 
-The Forge AI data flow is a pipeline that begins with observable reality and ends with governed architectural change. Each stage of the pipeline transforms knowledge from one form to another, and each transformation is governed by an explicit contract owned by an explicit standard. The pipeline is reversible for audit purposes (any canonical Artifact can be traced back to its originating observation) and monotonic for governance purposes (knowledge never silently degrades from canonical to speculative).
+TheAI-DOS data flow is a pipeline that begins with observable reality and ends with governed architectural change. Each stage of the pipeline transforms knowledge from one form to another, and each transformation is governed by an explicit contract owned by an explicit standard. The pipeline is reversible for audit purposes (any canonical Artifact can be traced back to its originating observation) and monotonic for governance purposes (knowledge never silently degrades from canonical to speculative).
 
 The canonical data flow, derived from [STD-001 §2.4 — Representation Layers](../Standards/STD-001-Knowledge-Graph-Standard.md#24-representation-layers) and [STD-002 §3 — Purpose](../Standards/STD-002-Discovery-Standard.md#3-purpose), is:
 
@@ -633,7 +633,7 @@ The dependency map describes which layers and documents depend on which. Depende
 | **STD-004 — Recommendation Standard** (Planned) | STD-000, STD-003, M.1, A.1 | STD-008 (Planned) |
 | **STD-005 — Risk Standard** (Planned) | STD-000, M.1, A.1 | STD-001–STD-004, STD-008 |
 | **STD-006 — Evidence Standard** (Planned) | STD-000, M.1, A.1 | STD-001–STD-005 |
-| **Forge AI Blueprint v1.0 — RFC** (this document) | A.1, M.0, M.1, STD-000, STD-001, STD-002 | (none — Blueprint is consumed for orientation only) |
+| **AI-DOS Blueprint v1.0 — RFC** (this document) | A.1, M.0, M.1, STD-000, STD-001, STD-002 | (none — Blueprint is consumed for orientation only) |
 
 ### Layer-Level Dependencies
 
@@ -700,12 +700,12 @@ The ownership map is the single source of truth for "who defines what." Any conf
 
 ## 27. Current State
 
-The Forge AI framework is currently in an early-mid foundation stage. The constitutional, meta-model, and standards-governance foundation is in place; the Knowledge Graph and the first specialized Artifact standard (Discovery) are drafted; the operational layers (Registry, Workflow, Runtime, AI Agent, Swarm, Enterprise Governance) are not yet governed by Canonical specifications. This section describes what exists today, as of the publication of this Blueprint.
+TheAI-DOS framework is currently in an early-mid foundation stage. The constitutional, meta-model, and standards-governance foundation is in place; the Knowledge Graph and the first specialized Artifact standard (Discovery) are drafted; the operational layers (Registry, Workflow, Runtime, AI Agent, Swarm, Enterprise Governance) are not yet governed by Canonical specifications. This section describes what exists today, as of the publication of this Blueprint.
 
 ### Currently Drafted or Canonical
 
 - **A.1 — Constitution**: referenced by every lower document as the constitutional authority. The Constitution defines immutable invariants, the authority chain, evidence principles, and constitutional violations. It is the floor of the framework.
-- **M.0 — Framework Meta Model**: drafted. Defines Artifact, Entity, Relationship, Identity, Lifecycle, State, Authority, Ownership, Evidence, Validation, Review, Certification, and Reference. Status: Draft, identifier `FORGE-META-M.0`, version `1.0.0-draft`.
+- **M.0 — Framework Meta Model**: drafted. Defines Artifact, Entity, Relationship, Identity, Lifecycle, State, Authority, Ownership, Evidence, Validation, Review, Certification, and Reference. Status: Draft, identifier `AI-DOS-META-M.0`, version `1.0.0-draft`.
 - **M.1 — Artifact Meta Model**: drafted at `3.0.0-beta`, status Beta. Defines the canonical Artifact contract: identity model, lifecycle model (Draft → Observed → Verified → Accepted → Consumed → Historical → Archived), Artifact anatomy, and extension rules. Classification: Canonical Artifact Model.
 - **STD-000 — Framework Standards**: drafted at `3.1.0`, status Draft. Defines standards lifecycle, classification, taxonomy, compliance levels, certification levels, Standards Registry, Standard Decision Records, and AI Consumption Rules. The Standards Registry currently lists STD-000 as Canonical (L5) and STD-001 through STD-008 as Proposed (L0).
 - **STD-001 — Knowledge Graph Standard**: drafted at `3.0.0-beta`/`3.0.1-beta`, status Draft, compliance level L1. Defines the canonical graph model, node model, edge model, topology, AI Traversal Rules, Runtime Traversal Rules, Neo4j mapping (informative), and graph validation.
@@ -739,7 +739,7 @@ The current state is sufficient to begin governed evolution of the framework. It
 
 ## 28. Target State
 
-The target state of the Forge AI framework is a fully governed, layered, authority-respecting architecture in which every layer is owned by a Canonical specification, every Artifact conforms to the M.1 contract, every Knowledge Graph projection is governed by STD-001, every lifecycle transition is governed by a Canonical Workflow, every execution is governed by a Canonical Runtime, every AI action is governed by a Canonical AI Agent Specification, every Swarm is governed by a Canonical Swarm Specification, and every enterprise function is governed by Canonical Enterprise Governance Specifications.
+The target state of theAI-DOS framework is a fully governed, layered, authority-respecting architecture in which every layer is owned by a Canonical specification, every Artifact conforms to the M.1 contract, every Knowledge Graph projection is governed by STD-001, every lifecycle transition is governed by a Canonical Workflow, every execution is governed by a Canonical Runtime, every AI action is governed by a Canonical AI Agent Specification, every Swarm is governed by a Canonical Swarm Specification, and every enterprise function is governed by Canonical Enterprise Governance Specifications.
 
 In the target state, the following properties hold:
 
@@ -760,7 +760,7 @@ The target state is explicitly not "AI runs the framework." AI is a delegated pa
 
 ## 29. Roadmap
 
-The Forge AI roadmap is organized into ten phases. Each phase delivers a Canonical (or near-Canonical) artifact that closes a specific operational gap identified in Section 27. Phases are ordered by dependency: later phases consume the canonical output of earlier phases. Phases are not strictly sequential in time — some adjacent phases may overlap — but no phase may declare Canonical status before its dependency phases have declared Canonical status.
+TheAI-DOS roadmap is organized into ten phases. Each phase delivers a Canonical (or near-Canonical) artifact that closes a specific operational gap identified in Section 27. Phases are ordered by dependency: later phases consume the canonical output of earlier phases. Phases are not strictly sequential in time — some adjacent phases may overlap — but no phase may declare Canonical status before its dependency phases have declared Canonical status.
 
 ### Phase 1 — Constitutional Foundation
 
@@ -911,7 +911,7 @@ The following decisions are open as of the publication of this Blueprint RFC. Th
 
 **D8 — Blueprint promotion path.** The path by which this Blueprint RFC may be promoted to Canonical status is not yet defined. Framework Governance shall define the promotion criteria (cross-layer review, dependency validation, owner endorsement) and the target document family (A.* architecture document, standalone Blueprint family, or other).
 
-**D9 — Knowledge Graph storage technology.** STD-001 §2.5.4 declares the graph model technology-independent and mentions Neo4j, PostgreSQL, RDF, GraphQL, JSON, YAML, and OpenAPI as implementation choices. Whether Forge AI shall recommend a default storage technology, or remain strictly technology-neutral, is open.
+**D9 — Knowledge Graph storage technology.** STD-001 §2.5.4 declares the graph model technology-independent and mentions Neo4j, PostgreSQL, RDF, GraphQL, JSON, YAML, and OpenAPI as implementation choices. WhetherAI-DOS shall recommend a default storage technology, or remain strictly technology-neutral, is open.
 
 **D10 — AI Agent context assembly contract.** The mechanisms by which AI Agents assemble context from the Knowledge Graph (query patterns, context window budgets, truncation rules, evidence selection) are not yet specified. The AI Agent Specification (Phase 8) shall define these, but the architectural principles that constrain them may need to be asserted earlier in this Blueprint.
 
@@ -924,7 +924,7 @@ The following checklist verifies that this Blueprint satisfies the requirements 
 - [x] Status section declares the document as Draft RFC.
 - [x] Executive Summary states the Blueprint's purpose.
 - [x] Vision describes the long-term target.
-- [x] Why Forge AI Exists explains the alternative-architecture failures.
+- [x] WhyAI-DOS Exists explains the alternative-architecture failures.
 - [x] Architectural Problem Statement lists the seven cross-cutting constraints.
 - [x] Architectural Principles state P1–P10.
 - [x] System Overview includes Diagram 1 (Full Stack Architecture).
@@ -990,10 +990,10 @@ The following checklist verifies that this Blueprint satisfies the requirements 
 | Future AI Agent Specification (Planned) | Will define Agent roles, boundaries, context assembly, and proposal rules. |
 | Future Swarm Specification (Planned) | Will define Swarm composition, inter-Agent messaging, and output aggregation. |
 | Future Enterprise Governance Specifications (Planned) | Will define Audit, Compliance, Dashboard, and Reporting standards. |
-| [Forge AI Blueprint v1.0 RFC Change Log](./Forge-AI-Blueprint-v1.0-RFC-Change-Log.md) | Companion change log for this Blueprint RFC. |
+| [AI-DOS Blueprint v1.0 RFC Change Log](./AI-DOS-Blueprint-v1.0-RFC-Change-Log.md) | Companion change log for this Blueprint RFC. |
 
 ---
 
 ## Completion Statement
 
-This Blueprint is complete as an RFC. It defines the big-picture architecture of Forge AI, the layer boundaries, the ownership map, the authority chain, the data and AI execution flows, the current and target states, and a ten-phase roadmap. It does not redefine, duplicate, or supersede any source document. It is published for Framework Governance review and shall be revised through governed process before promotion to Canonical status.
+This Blueprint is complete as an RFC. It defines the big-picture architecture of AI-DOS, the layer boundaries, the ownership map, the authority chain, the data and AI execution flows, the current and target states, and a ten-phase roadmap. It does not redefine, duplicate, or supersede any source document. It is published for Framework Governance review and shall be revised through governed process before promotion to Canonical status.

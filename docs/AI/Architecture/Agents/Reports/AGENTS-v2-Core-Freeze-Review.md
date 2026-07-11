@@ -1,4 +1,4 @@
-# Forge AI — AGENTS v2 Core Freeze Review
+#AI-DOS — AGENTS v2 Core Freeze Review
 
 > AGENTS v2 Core Freeze Audit · Draft / Non-canonical / Documentation-only
 
@@ -8,8 +8,8 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.AGENTS.V2.CORE-FREEZE-REVIEW` |
-| Title | Forge AI — AGENTS v2 Core Freeze Review |
+| Identifier | `AI-DOS.AGENTS.V2.CORE-FREEZE-REVIEW` |
+| Title |AI-DOS — AGENTS v2 Core Freeze Review |
 | Version | 0.1.0-draft |
 | Status | Draft |
 | Canonical Status | Non-canonical until reviewed, approved, and accepted by Human Governance / Framework Governance |
@@ -22,7 +22,7 @@
 | Created | 2026-07-08 |
 | Last Updated | 2026-07-08 |
 | Lifecycle Phase | Draft Review |
-| Traceability ID | `FORGE-AI.ARCHITECTURE.AGENTS.V2.CORE-FREEZE-REVIEW` |
+| Traceability ID | `AI-DOS.ARCHITECTURE.AGENTS.V2.CORE-FREEZE-REVIEW` |
 | Scope | Documentation-only audit of the AGENTS v2 specification family for metadata compliance, authority consistency, ownership consistency, source-of-truth separation, agent/runtime/engine boundaries, runtime consumption boundaries, frozen-area protections, ProjectStatus policy, roadmap alignment, deferred scope, implementation non-activation, and readiness for AGENTS v2 Core Freeze. |
 | Out of Scope | ProjectStatus updates, AGENTS.md changes, FrameworkGovernance changes, Governance Atlas changes, Runtime RFC changes, Engine RFC changes, Standards changes, Meta Model changes, implementation work, runtime activation, certification, approval, promotion, or canonicalization. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |

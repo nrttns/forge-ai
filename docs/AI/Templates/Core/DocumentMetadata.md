@@ -5,13 +5,13 @@
 Status: Draft for Review  
 Document Type: Template Authoring Standard  
 Authority: `docs/AI/AIFramework.md`  
-Applies To: All Forge AI and AI Framework documentation templates
+Applies To: AllAI-DOS and AI Framework documentation templates
 
 ---
 
 # Purpose
 
-This document defines the canonical metadata model used by Forge AI documentation templates.
+This document defines the canonical metadata model used byAI-DOS documentation templates.
 
 Metadata makes every document understandable by humans, AI agents, automation, reviewers, validators, and future swarms before the body of the document is interpreted.
 

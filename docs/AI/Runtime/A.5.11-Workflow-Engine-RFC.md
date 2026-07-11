@@ -1,13 +1,13 @@
 # A.5.11 — Workflow Engine RFC
 
-> Forge AI v4 · Engine Architecture RFC
+>AI-DOS v4 · Engine Architecture RFC
 > Phase 2 Engine Specialization · Draft / Non-canonical
 
 ---
 
 ## 1. Status
 
-This RFC is a draft, non-canonical Engine Architecture RFC for the Workflow Engine, the eleventh individual Engine specialization in Phase 2 of the Forge AI v4 Engine Platform.
+This RFC is a draft, non-canonical Engine Architecture RFC for the Workflow Engine, the eleventh individual Engine specialization in Phase 2 of theAI-DOS v4 Engine Platform.
 
 Canonical Status: Non-canonical until reviewed and approved.
 
@@ -19,7 +19,7 @@ This document defines the architecture of the Workflow Engine within the approve
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-A-5-11` |
+| Identifier | `AI-DOS-A-5-11` |
 | Title | A.5.11 — Workflow Engine RFC |
 | Version | `0.2.0-draft` |
 | Status | Draft |
@@ -33,7 +33,7 @@ This document defines the architecture of the Workflow Engine within the approve
 | Created | 2026-07-08 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.V2.RUNTIME.A-5-11` |
+| Traceability ID | `AI-DOS.V2.RUNTIME.A-5-11` |
 | Scope | Defines the Workflow Engine specialization only, including its responsibilities, inputs, outputs, lifecycle participation, validation expectations, AI consumption rules, and handoff contract. |
 | Out of Scope | Runtime Architecture redefinition, Engine Platform redefinition, Engine Foundation redefinition, other Engine Specialization redefinition, implementation, certification, freeze decisions, ProjectStatus updates, and DevelopmentPhases updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
@@ -51,7 +51,7 @@ This document defines the architecture of the Workflow Engine within the approve
 
 ## 3. Purpose
 
-The Workflow Engine exists to provide a single architectural authority for defining, managing, and orchestrating workflows that span multiple Engines within the Forge AI v4 Engine Platform. The Engine Platform defines a powerful set of specialized Engines — Context, Knowledge, Planning, Decision, Execution, Validation, Review, Certification, Memory, and Governance — each with clearly bounded responsibilities. However, the platform does not define how these Engines are composed into executable workflows. Without a Workflow Engine, workflow orchestration logic would be scattered across Engine implementations, ad hoc invocation sequences, or external orchestration layers, leading to inconsistent execution patterns, untracked workflow state, ungoverned cross-engine coordination, and no unified workflow artifact for observability and audit.
+The Workflow Engine exists to provide a single architectural authority for defining, managing, and orchestrating workflows that span multiple Engines within theAI-DOS v4 Engine Platform. The Engine Platform defines a powerful set of specialized Engines — Context, Knowledge, Planning, Decision, Execution, Validation, Review, Certification, Memory, and Governance — each with clearly bounded responsibilities. However, the platform does not define how these Engines are composed into executable workflows. Without a Workflow Engine, workflow orchestration logic would be scattered across Engine implementations, ad hoc invocation sequences, or external orchestration layers, leading to inconsistent execution patterns, untracked workflow state, ungoverned cross-engine coordination, and no unified workflow artifact for observability and audit.
 
 A workflow, in the context of this Engine, is a versioned, immutable definition that specifies an ordered or conditionally-branching sequence of Engine operations — called workflow steps — along with the data flow contracts between those steps, governance requirements per step, and the expected completion conditions. Workflows are the primary mechanism through which the Engine Platform's capabilities are composed into end-to-end processing sequences. Each workflow execution — called a workflow instance — produces a Workflow Artifact that documents the complete execution history, step results, and workflow-level outcome.
 

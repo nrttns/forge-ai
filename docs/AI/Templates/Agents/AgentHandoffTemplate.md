@@ -1,6 +1,6 @@
 # Agent Handoff Template
 
-> Forge AI v2 · Agent Templates<br>
+>AI-DOS v2 · Agent Templates<br>
 > Template Artifact · Draft / Non-canonical
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-AGENTS-HANDOFF` |
+| Identifier | `AI-DOS-TPL-AGENTS-HANDOFF` |
 | Title | Agent Handoff Template |
 | Version | `2.0.0-draft` |
 | Status | Draft |
@@ -23,7 +23,7 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Operational Core Alignment |
-| Traceability ID | `FORGE-AI.V2.TEMPLATES.AGENTS.HANDOFF` |
+| Traceability ID | `AI-DOS.V2.TEMPLATES.AGENTS.HANDOFF` |
 | Scope | Defines the reusable structure for transferring scoped work, context, findings, evidence, risks, required reading, artifacts, and receiver instructions from one agent or role to another. |
 | Out of Scope | Agent authority redefinition, runtime authority redefinition, engine authority redefinition, workflow authority creation, orchestration authority creation, validation authority creation, review authority creation, certification authority creation, governance authority creation, swarm activation, ProjectStatus updates, runtime implementation, orchestration implementation, engine implementation, architecture redefinition, and canonical promotion. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |

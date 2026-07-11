@@ -14,7 +14,7 @@ Authority: `docs/AI/Lifecycle/README.md`
 
 This document defines how AI Framework versions are named and how changes are classified.
 
-Versioning applies to the AI Framework documentation, operating model, validation expectations, project templates, tooling rules, and lifecycle governance. It does not version Forge AI historical sprints, product phases, product stages, or source-code releases.
+Versioning applies to the AI Framework documentation, operating model, validation expectations, project templates, tooling rules, and lifecycle governance. It does not versionAI-DOS historical sprints, product phases, product stages, or source-code releases.
 
 ---
 
@@ -148,7 +148,7 @@ Major changes require explicit migration guidance and must follow the Deprecatio
 
 ## Historical Capability Identifiers Are Not Framework Versions
 
-Historical Capability identifiers belong to Forge AI implementation history.
+Historical Capability identifiers belong toAI-DOS implementation history.
 
 Examples such as `AXIS-V2.SPRINT-67.12` are immutable historical capability records. They are not AI Framework versions and must never be renumbered, reinterpreted, or used as substitutes for framework lifecycle versions.
 

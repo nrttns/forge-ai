@@ -1,6 +1,6 @@
 # Validation Template
 
-> Forge AI v2 · Validation Templates<br>
+>AI-DOS v2 · Validation Templates<br>
 > Template Artifact · Draft / Non-canonical
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-VALIDATION-VALIDATION` |
+| Identifier | `AI-DOS-TPL-VALIDATION-VALIDATION` |
 | Title | Validation Template |
 | Version | `2.0.0-draft` |
 | Status | Draft |
@@ -23,12 +23,12 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Operational Core Alignment |
-| Traceability ID | `FORGE-AI.V2.TEMPLATES.VALIDATION.VALIDATION` |
+| Traceability ID | `AI-DOS.V2.TEMPLATES.VALIDATION.VALIDATION` |
 | Scope | Defines the reusable structure for validation artifacts that record scope, authority consumption, evidence, results, quality gates, risks, and next action. |
 | Out of Scope | Governance redesign, certification authority, approval authority, ProjectStatus updates, runtime behavior, engine behavior, implementation, and canonical promotion. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
 | Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/README.md`; `docs/AI/Validation/AIFrameworkValidation.md`; `docs/AI/Validation/ValidationLifecycle.md`; `docs/AI/Validation/ValidationLevels.md`; `docs/AI/Validation/ValidationCertification.md` |
-| Dependencies | STD-010 metadata schema; TPL-000 template governance; Forge AI template library; existing validation, review, certification, and governance authorities |
+| Dependencies | STD-010 metadata schema; TPL-000 template governance;AI-DOS template library; existing validation, review, certification, and governance authorities |
 | Consumes | STD-010 mandatory metadata fields; TPL-000 placeholder grammar, lifecycle, taxonomy, compliance model, and validation requirements; existing validation lifecycle, validation-level, certification-relationship, and governance-routing guidance |
 | Produces | Reusable validation artifact structure for evidence capture, validation result reporting, quality-gate tracking, risk recording, and recommended next action |
 | Related Specifications | `docs/AI/Templates/README.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Certification/` |

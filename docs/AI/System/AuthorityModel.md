@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-AI.SYSTEM.AUTHORITY-MODEL` |
+| Identifier | `AI-DOS.SYSTEM.AUTHORITY-MODEL` |
 | Title | AI System Authority Model |
 | Version | `2.0.0-draft` |
 | Status | Draft |
@@ -20,8 +20,8 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.V2.OP-005A` |
-| Scope | Tool-facing authority resolution, conflict handling, human override handling, generated task authority rules, and escalation rules for agents operating in Forge AI. |
+| Traceability ID | `AI-DOS.V2.OP-005A` |
+| Scope | Tool-facing authority resolution, conflict handling, human override handling, generated task authority rules, and escalation rules for agents operating in AI-DOS. |
 | Out of Scope | Repository bootloader authority, governance atlas ownership, framework governance policy, operational state, roadmap sequencing, constitutional authority, meta models, standards, runtime architecture, engine RFCs, operational core ownership, commands, workflows, templates, certification, promotion, and ProjectStatus updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/DevelopmentPhases/ProjectStatus.md`; `docs/DevelopmentPhases/ForgeAI-DevelopmentPhases.md` |
 | Normative References | `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md` |
@@ -38,7 +38,7 @@
 
 ## 1. Purpose
 
-This document defines the tool-facing authority resolution procedure agents use while executing Forge AI tasks.
+This document defines the tool-facing authority resolution procedure agents use while executingAI-DOS tasks.
 
 It makes authority handling explicit for tools and agents after repository boot has established the applicable task boundary. It is not a second `AGENTS.md`, and it does not redefine Governance, AIFramework, AIOrchestrator, AgentSystemPrompt, ProjectStatus, the roadmap, or any architecture authority.
 
@@ -105,7 +105,7 @@ The AI System Authority Model does not own:
 
 ## 4. Current Authority Order
 
-Agents shall resolve authority for Forge AI v2 System Layer execution in this order:
+Agents shall resolve authority forAI-DOS v2 System Layer execution in this order:
 
 ```text
 Human Governance

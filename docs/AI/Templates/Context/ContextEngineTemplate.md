@@ -1,6 +1,6 @@
 # Context Engine Template
 
-> Forge AI v2 · Context Templates<br>
+>AI-DOS v2 · Context Templates<br>
 > Template Artifact · Draft / Non-canonical
 
 ---
@@ -9,7 +9,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-CONTEXT-ENGINE` |
+| Identifier | `AI-DOS-TPL-CONTEXT-ENGINE` |
 | Title | Context Engine Template |
 | Version | `2.0.0-draft` |
 | Status | Draft |
@@ -23,12 +23,12 @@
 | Created | 2026-07-09 |
 | Last Updated | 2026-07-09 |
 | Lifecycle Phase | Operational Core Alignment |
-| Traceability ID | `FORGE-AI.V2.TEMPLATES.CONTEXT.ENGINE` |
+| Traceability ID | `AI-DOS.V2.TEMPLATES.CONTEXT.ENGINE` |
 | Scope | Defines the reusable structure for documenting how task-specific context is assembled, bounded, refreshed, used, validated, and released. |
 | Out of Scope | Context authority redefinition, knowledge authority redefinition, memory authority redefinition, source authority creation, registry authority creation, validation authority creation, review authority creation, certification authority creation, governance authority creation, ProjectStatus updates, runtime implementation, engine implementation, context storage implementation, architecture redefinition, and canonical promotion. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
 | Normative References | `docs/AI/Architecture/Standards/STD-001-Knowledge-Graph-Standard.md`; `docs/AI/Architecture/Standards/STD-002-Discovery-Standard.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/README.md`; `docs/AI/System/ContextAssembly.md`; `docs/AI/Runtime/A.5.1-Context-Engine-RFC.md` |
-| Dependencies | STD-001 knowledge graph rules; STD-002 discovery rules; STD-003 terminology; STD-010 metadata schema; TPL-000 template governance; System Context Assembly; Context Engine RFC; Forge AI template library |
+| Dependencies | STD-001 knowledge graph rules; STD-002 discovery rules; STD-003 terminology; STD-010 metadata schema; TPL-000 template governance; System Context Assembly; Context Engine RFC;AI-DOS template library |
 | Consumes | STD-001 graph and relationship concepts; STD-002 discovery and evidence concepts; STD-003 canonical terminology; STD-010 mandatory metadata fields; TPL-000 placeholder grammar, lifecycle, taxonomy, compliance model, and validation requirements; context assembly and Context Engine boundaries |
 | Produces | Reusable context engine artifact structure |
 | Related Specifications | `docs/AI/Templates/Context/`; `docs/AI/Templates/Knowledge/`; `docs/AI/Templates/Memory/`; `docs/AI/Templates/README.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md` |

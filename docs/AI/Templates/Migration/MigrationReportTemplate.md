@@ -6,7 +6,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-TPL-MIGRATION-REPORT` |
+| Identifier | `AI-DOS-TPL-MIGRATION-REPORT` |
 | Title | Migration Report Template |
 | Version | `0.2.0-draft` |
 | Status | Draft |
@@ -20,7 +20,7 @@
 | Created | 2026-07-10 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.TEMPLATES.MIGRATION.REPORT` |
+| Traceability ID | `AI-DOS.TEMPLATES.MIGRATION.REPORT` |
 | Scope | Reusable output contract for reporting migration results, changes made, validation results, compatibility findings, rollback status, risks, and recommended next step. |
 | Out of Scope | Implementing migration logic, compatibility behavior, runtime conversion, automated upgrades, deprecation execution, governance decisions, certification decisions, registry updates, or ProjectStatus updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |

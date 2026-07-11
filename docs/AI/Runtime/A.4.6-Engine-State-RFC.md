@@ -1,8 +1,8 @@
-# FORGE-A-004.6 — Engine State RFC
+# AI-DOS-A-004.6 — Engine State RFC
 
 | | |
 |:---|:---|
-| **Framework** | Forge AI v3 |
+| **Framework** |AI-DOS v3 |
 | **Document Class** | Architecture RFC |
 | **Domain** | Engine State Architecture |
 | **Confidentiality** | Internal — Governed |
@@ -13,7 +13,7 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `FORGE-A-4-6` |
+| Identifier | `AI-DOS-A-4-6` |
 | Title | A.4.6 — Engine State RFC |
 | Version | `0.2.0-draft` |
 | Status | Draft |
@@ -27,7 +27,7 @@
 | Created | 2026-07-07 |
 | Last Updated | 2026-07-10 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `FORGE-AI.V2.RUNTIME.A-4-6` |
+| Traceability ID | `AI-DOS.V2.RUNTIME.A-4-6` |
 | Scope | Defines the Engine State foundation responsibility only as a specialization of A.4 Engine Platform Architecture. |
 | Out of Scope | Runtime Architecture redefinition, Engine Platform redefinition, individual Engine Specialization redefinition, implementation, certification, freeze decisions, ProjectStatus updates, and DevelopmentPhases updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
@@ -73,7 +73,7 @@
 
 ## 1. Executive Summary
 
-This RFC establishes the canonical architectural model for Engine State within the Forge AI v3 framework. Engine State represents the current observable runtime condition of an Engine as reflected through the Engine Kernel, published by the Engine Registry, consumed by Engine Communication, verified by Validation, and considered by Certification. The model is intentionally separated from Engine Lifecycle, which governs legal transitions, while State describes what the Engine's current observable condition actually is.
+This RFC establishes the canonical architectural model for Engine State within theAI-DOS v3 framework. Engine State represents the current observable runtime condition of an Engine as reflected through the Engine Kernel, published by the Engine Registry, consumed by Engine Communication, verified by Validation, and considered by Certification. The model is intentionally separated from Engine Lifecycle, which governs legal transitions, while State describes what the Engine's current observable condition actually is.
 
 The RFC defines twelve canonical state categories — Unknown, Healthy, Ready, Busy, Waiting, Suspended, Recovering, Degraded, Unavailable, Failed, Retired, and Archived — each with precise architectural meaning and behavioral constraints. It establishes distributed ownership with a single authoritative observable state, a governed synchronization model ensuring Kernel coordination, Lifecycle authorization, and Registry publication remain aligned, and a least-privilege visibility model protecting state information as governance-relevant runtime data.
 
@@ -83,7 +83,7 @@ Additionally, this RFC defines state invariants, state events, validation rules,
 
 ## 2. Purpose
 
-The Engine State model defines the canonical observable runtime state of a Forge AI Engine.
+The Engine State model defines the canonical observable runtime state of aAI-DOS Engine.
 
 Engine State represents the current observable condition of an Engine as reflected through the Engine Kernel, published by the Engine Registry, consumed by Engine Communication, checked by Engine Lifecycle, verified by Validation, and considered by Certification.
 
@@ -649,7 +649,7 @@ This RFC is complete when it has defined:
 
 ### 21.1 Work Completed
 
-This RFC defines the Forge AI v3 Engine State architecture as a documentation-only, draft, non-canonical specification.
+This RFC defines theAI-DOS v3 Engine State architecture as a documentation-only, draft, non-canonical specification.
 
 It establishes:
 
@@ -679,7 +679,7 @@ This RFC did not:
 
 ### 21.3 Review Readiness
 
-This RFC is ready for architectural review as a draft, non-canonical Engine Architecture RFC. Certification, promotion, or amendment requires the applicable Forge AI governance process.
+This RFC is ready for architectural review as a draft, non-canonical Engine Architecture RFC. Certification, promotion, or amendment requires the applicableAI-DOS governance process.
 
 ---
 
