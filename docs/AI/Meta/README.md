@@ -69,11 +69,13 @@ Read the Meta Core first:
 Then read Enterprise Semantic Profiles selectively according to the semantic concern in use:
 
 - `M.4-Lifecycle-and-Status-Meta-Model.md` when lifecycle, status, transition, promotion, deprecation, archival, historical classification, canonical status, validation status, review status, certification status, availability status, or operational status binding semantics are applicable.
+- `M.5-Evidence-and-Traceability-Meta-Model.md` when evidence, evidence claims, assertions, sources, references, links, chains, graphs, collections, snapshots, version bindings, scope, confidence, trust, quality, freshness, completeness, integrity, authenticity, provenance, lineage, traceability, dependencies, consumers, producers, requirements, obligations, or validation-binding semantics are applicable.
 - `M.6-Versioning-and-Supersession-Meta-Model.md` when versioning, revision, version reference, lineage, supersession, replacement, amendment, rollback, migration-obligation, or version-claim semantics are applicable.
+- `M.7-Compatibility-Meta-Model.md` when compatibility, compatibility claims, scopes, categories, profiles, matrices, rules, contracts, boundaries, constraints, requirements, exceptions, breaking changes, non-breaking changes, behavioral compatibility, structural compatibility, semantic compatibility, version compatibility, artifact compatibility, interface compatibility, schema compatibility, contract compatibility, runtime compatibility semantics, or engine compatibility semantics are applicable.
 
 The approved dependency model is a governed DAG, not a mandatory linear chain. Numbering identifies family position and stable reference names; numbering does not mean that every later Meta authority depends on every lower-numbered authority.
 
-M.5 Evidence and M.7 Compatibility remain pending; no placeholder file is registered here.
+M.5 Evidence and M.7 Compatibility are implemented Enterprise Semantic Profiles. No placeholder files are registered for M.8 or M.9.
 
 ---
 
@@ -96,11 +98,13 @@ M.3 owns relationship semantics.
 
 M.4 owns lifecycle and status semantics.
 
+M.5 owns evidence and traceability semantics.
+
 M.6 owns versioning, lineage, supersession, replacement, version-reference, and migration-obligation semantics.
 
-M.5 Evidence remains pending and is not an active file dependency. M.7 Compatibility remains pending and owns future compatibility interpretation after approval.
+M.7 owns compatibility semantics.
 
-No downstream AI-DOS domain may redefine a concept owned by M.0, M.1, M.2, M.3, M.4, or M.6. Downstream domains may specialize Meta concepts only within their own domain boundaries.
+No downstream AI-DOS domain may redefine a concept owned by M.0, M.1, M.2, M.3, M.4, M.5, M.6, or M.7. Downstream domains may specialize Meta concepts only within their own domain boundaries.
 
 ---
 
@@ -143,16 +147,18 @@ Downstream consumers inherit Meta meanings. They do not become Meta authority by
 | Artifact | Responsibility | Boundary |
 |:---|:---|:---|
 | `M.4-Lifecycle-and-Status-Meta-Model.md` | Lifecycle and status semantic authority for lifecycle profiles, lifecycle states, status dimensions, transitions, transition authority bindings, promotion, deprecation, archival, historical classification, canonical status, validation status, review status, certification status, availability status, and operational status bindings. | Does not define Target Project planning, ProjectStatus, DevelopmentPhases, Roadmap, release schedule, runtime state machine implementation, approval workflow mechanics, evidence taxonomy, version numbering, or compatibility. |
-| M.5 Evidence | Pending Enterprise Semantic Profile for evidence semantics. | No placeholder file exists; current documents must not create an active dependency on a nonexistent M.5 artifact. |
+| `M.5-Evidence-and-Traceability-Meta-Model.md` | Evidence and traceability semantic authority for evidence, evidence claims, evidence assertions, evidence sources, origins, references, links, chains, graphs, collections, sets, contexts, snapshots, version bindings, scope, confidence, trust, quality, freshness, completeness, integrity, authenticity, provenance, lineage, traceability, dependencies, consumers, producers, requirements, obligations, and validation bindings. | Does not define validation procedures, review procedures, certification, governance decisions, approval workflow, implementation tooling, repository scanning, audit execution, graph database implementation, or runtime evidence collection. |
 | `M.6-Versioning-and-Supersession-Meta-Model.md` | Versioning and supersession semantic authority for versions, revisions, version identity, version references, lineage, supersession, replacement, amendment, rollback, deprecation binding, migration obligation, version authority binding, and version claims. | Does not define release schedule, deployment, package manager behavior, Git branching procedure, source-control workflow, project planning, compatibility semantics, evidence semantics, or schema syntax. |
-| M.7 Compatibility | Pending Enterprise Semantic Profile for compatibility interpretation. | No placeholder file exists; compatibility meaning remains deferred until M.7 is approved. |
+| `M.7-Compatibility-Meta-Model.md` | Compatibility semantic authority for compatibility claims, scopes, categories, backward compatibility, forward compatibility, bidirectional compatibility, partial compatibility, conditional compatibility, matrices, profiles, rules, contracts, boundaries, constraints, requirements, exceptions, breaking changes, non-breaking changes, behavioral compatibility, structural compatibility, semantic compatibility, version compatibility, artifact compatibility, interface compatibility, schema compatibility, contract compatibility, runtime compatibility semantics, and engine compatibility semantics. | Does not define migration execution, release policy, deployment strategy, adapter implementation, runtime implementation, engine implementation, package management, or source-control workflow. |
 
 ### Selective DAG Dependencies
 
 | Authority | Required Upstream Semantics | Does Not Depend On |
 |:---|:---|:---|
-| M.4 | M.0; M.2; M.3; M.1 only for artifact lifecycle bindings. | M.6, pending M.5, pending M.7. |
-| M.6 | M.0; M.2; M.3; M.1 only for artifact version bindings; M.4 only for lifecycle effects of deprecation, supersession, replacement, archival, historical retention, promotion of a version, and revocation of a version. | Pending M.5 as an active file dependency; pending M.7 compatibility interpretation. |
+| M.4 | M.0; M.2; M.3; M.1 only for artifact lifecycle bindings. | M.5, M.6, M.7. |
+| M.5 | M.0; M.1; M.2; M.3. | M.4, M.6, M.7. |
+| M.6 | M.0; M.2; M.3; M.1 only for artifact version bindings; M.4 only for lifecycle effects of deprecation, supersession, replacement, archival, historical retention, promotion of a version, and revocation of a version. | M.5 as an active semantic dependency; M.7 compatibility interpretation. |
+| M.7 | M.0; M.1; M.2; M.3; M.4; M.5; M.6. | Future M.8 and M.9 authorities. |
 
 ---
 
@@ -168,4 +174,4 @@ The reconstructed Meta Family now expresses only semantic authority boundaries a
 
 ## 8. Completion Status
 
-AI-DOS META CORE RECONSTRUCTION COMPLETE.
+AI-DOS META FAMILY UPDATED WITH M.5 EVIDENCE AND M.7 COMPATIBILITY SEMANTIC AUTHORITIES.
