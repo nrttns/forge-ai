@@ -1,255 +1,138 @@
-# AI System Decision Model
+<!--
+Identifier: AI-DOS.SYSTEM.DECISIONMODEL
+Title: Decision Model
+Version: 2.0.0
+Status: Active
+Owner: AI-DOS System Layer
+Updated: 2026-07-13
+-->
 
----
+# Decision Model
 
 ## Document Metadata
 
 | Field | Value |
 |:---|:---|
-| Identifier | `AI-DOS.SYSTEM.DECISION-MODEL` |
-| Title | AI System Decision Model |
-| Version | `2.0.0-draft` |
-| Status | Draft |
-| Canonical Status | Non-canonical until reviewed, approved, and promoted through Framework Governance |
-| Classification | System Layer Decision Procedure |
-| Document Type | Tool-Facing Decision Procedure |
-| Owner | AI Operational Layer / Human Governance |
-| Maintainers | Framework Architecture Team |
-| Review Authority | Human Governance / Framework Governance |
+| Identifier | `AI-DOS.SYSTEM.DECISIONMODEL` |
+| Title | Decision Model |
+| Version | `2.0.0` |
+| Status | Active |
+| Classification | AI-DOS System Layer |
+| Document Type | System Procedure |
+| Owner | AI-DOS System Layer |
 | Approval Authority | Human Governance |
-| Created | 2026-07-09 |
-| Last Updated | 2026-07-09 |
-| Lifecycle Phase | Draft Operational Core Alignment |
-| Traceability ID | `AI-DOS.V2.OP-005E` |
-| Scope | Decision classification, safe-action selection, stop/proceed rules, escalation decisions, command or workflow routing decisions, ProjectStatus update recommendation decisions, blocker decisions, and validation or review routing decisions forAI-DOS agents. |
-| Out of Scope | Authority resolution, source-of-truth ownership, context assembly, governance decisions, ProjectStatus ownership, Runtime definitions, Engine definitions, command definitions, workflow definitions, template definitions, execution, certification, canonical promotion, and implementation. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` |
-| Normative References | `docs/AI/System/AuthorityModel.md`; `docs/AI/System/BootSequence.md`; `docs/AI/System/SourceOfTruth.md`; `docs/AI/System/ContextAssembly.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
-| Dependencies | Repository bootloader, AuthorityModel authority resolution, BootSequence loading order, SourceOfTruth domain mapping, ContextAssembly context packet, Governance Atlas navigation, Framework Governance policy, ProjectStatus operational state, DevelopmentPhases roadmap sequence, Operational Core documents, and task-specific constraints. |
-| Consumes | Human task instruction, AuthorityModel procedure, BootSequence procedure, SourceOfTruth map, ContextAssembly packet, ProjectStatus state, DevelopmentPhases roadmap position, frozen-area boundaries, task-specific constraints, available command/workflow/template routes, validation requirements, missing inputs, and conflict state. |
-| Produces | Allowed decision outcome, decision rationale, blocker report, escalation recommendation, command/workflow/template routing decision, ProjectStatus update recommendation, validation or review routing decision, and execution handoff boundary. |
-| Related Specifications | `docs/AI/System/ExecutionSequence.md`; `docs/AI/System/ContextAssembly.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md`; Commands; Workflows; Templates; validation and review artifacts |
-| Supersedes | Prior AI System Decision Model operating-procedure drafts. |
-| Superseded By | None |
-| Promotion Requirements | Human Governance review, Framework Governance review, STD-010 metadata validation, decision-outcome validation, ProjectStatus policy validation, roadmap validation, frozen-area validation, and explicit Human Governance promotion authorization. |
-| Certification Status | Not certified |
+| Last Updated | 2026-07-13 |
+| Scope | safe decision selection after authority resolution. |
+| Out of Scope | Target operation design, target-owned management models, Runtime implementation, Engine implementation, command definitions, workflow definitions, template definitions, certification, and implementation changes. |
+| Normative Authority | Human Governance; AI-DOS System Layer documents. |
+| Dependencies | `docs/AI/System/README.md`, `docs/AI/System/TargetRepositoryResolution.md`, `docs/AI/System/BootSequence.md`, `docs/AI/System/ContextAssembly.md`; generic Target Context supplied by invocation. |
+| Inputs | Invocation Context; Resolved Target Context; Target Objectives; Target Constraints; Target Authority Inputs; Target Execution Boundaries; Target Validation Requirements. |
+| Outputs | System Layer handoff evidence; authority or blocker findings; prepared execution boundary. |
+| Related Specifications | `docs/AI/System/README.md`, `docs/AI/System/TargetRepositoryResolution.md`, `docs/AI/System/BootSequence.md`, `docs/AI/System/ContextAssembly.md`, `docs/AI/System/AuthorityModel.md`, `docs/AI/System/SourceOfTruth.md`, `docs/AI/System/ExecutionSequence.md`, `docs/AI/System/SystemLayerFreeze.md`. |
 
 ---
 
 ## 1. Purpose
 
-This document defines howAI-DOS agents choose the next safe action after authority resolution, boot, source-of-truth selection, and context assembly.
+Decision Model selects proceed, stop, escalate, or report outcomes. It is part of the AI-DOS startup path and remains independent of any target-owned management, sequencing, or status model.
 
-DecisionModel determines the safe operational decision after context is assembled. It answers whether an agent should proceed, stop, ask for Human Governance, recommend a ProjectStatus update, route to a command, route to a workflow, route to validation or review, or report a blocker.
+This document describes how AI-DOS starts and prepares capability execution. It does not prescribe how any target operates.
 
-This document consumes `docs/AI/System/AuthorityModel.md`, `docs/AI/System/BootSequence.md`, `docs/AI/System/SourceOfTruth.md`, and `docs/AI/System/ContextAssembly.md`. It does not redefine authority resolution, boot order, source-of-truth ownership, context assembly, Governance, ProjectStatus, Runtime, Engine, commands, workflows, templates, execution, certification, or canonical promotion.
+## 2. Canonical System Flow
 
----
+```text
+Repository Entry
+        ↓
+Invocation Context
+        ↓
+Target Repository Resolution
+        ↓
+Resolved Target Context
+        ↓
+Context Assembly
+        ↓
+Authority Resolution
+        ↓
+Decision Model
+        ↓
+Execution Sequence
+        ↓
+Operational Core
+```
 
-## 2. Scope
-
-### 2.1 In Scope
-
-This procedure covers:
-
-1. Decision classification.
-2. Safe-action selection.
-3. Stop/proceed rules.
-4. Escalation decisions.
-5. Command or workflow routing decisions.
-6. ProjectStatus update recommendation decisions.
-7. Blocker decisions.
-8. Validation or review routing decisions.
-
-### 2.2 Out of Scope
-
-This procedure does not own:
-
-1. Authority resolution.
-2. Source-of-truth ownership.
-3. Context assembly.
-4. Governance decisions.
-5. ProjectStatus ownership.
-6. Runtime definitions.
-7. Engine definitions.
-8. Commands.
-9. Workflows.
-10. Templates.
-11. Execution.
-12. Certification.
-13. Canonical promotion.
-
----
-
-## 3. Operational Responsibilities
-
-### 3.1 Owns
-
-The AI System Decision Model owns:
-
-- decision classification;
-- safe-action selection;
-- stop/proceed rules;
-- escalation decision;
-- command/workflow routing decision;
-- ProjectStatus update recommendation decision;
-- blocker decision;
-- validation/review routing decision.
-
-### 3.2 Does Not Own
-
-The AI System Decision Model does not own:
-
-- authority resolution;
-- source-of-truth ownership;
-- context assembly;
-- governance decisions;
-- ProjectStatus ownership;
-- Runtime definitions;
-- Engine definitions;
-- commands;
-- workflows;
-- templates;
-- execution;
-- certification;
-- canonical promotion.
-
----
-
-## 4. Decision Inputs
-
-Agents shall make decisions from the assembled and validated context. Decision inputs include:
-
-- Human Task;
-- Authority Set;
-- Source of Truth Map;
-- Context Packet;
-- ProjectStatus state;
-- DevelopmentPhases roadmap position;
-- frozen areas;
-- task-specific constraints;
-- available command/workflow/template route;
-- validation requirements;
-- missing inputs;
-- conflict state.
-
-Conversation may be an active task input only when it does not conflict with higher authority, explicit file restrictions, ProjectStatus policy, roadmap order, or frozen-area boundaries. Decisions must not rely on memory when documented context is required.
-
----
-
-## 5. Decision Outcomes
-
-The Decision Model may select only one of the following outcomes:
-
-| Outcome | Meaning |
+| Step | System Meaning |
 |:---|:---|
-| `PROCEED` | Continue to bounded execution because authority, source, context, file-safety, roadmap, frozen-area, and validation conditions are satisfied. |
-| `STOP_BLOCKER` | Stop because a blocker prevents safe execution. |
-| `ESCALATE_HUMAN_GOVERNANCE` | Stop and request Human Governance decision because the issue cannot be resolved within agent authority. |
-| `ROUTE_COMMAND` | Route to the applicable command artifact as an execution aid after higher authority is confirmed. |
-| `ROUTE_WORKFLOW` | Route to the applicable workflow artifact as an execution aid after higher authority is confirmed. |
-| `ROUTE_TEMPLATE` | Route to the applicable template artifact as an execution aid after higher authority is confirmed. |
-| `RECOMMEND_PROJECTSTATUS_UPDATE` | Recommend, but do not perform, a ProjectStatus update. |
-| `AUTHORIZE_PROJECTSTATUS_UPDATE_ONLY_IF_EXPLICITLY_REQUESTED` | Allow ProjectStatus update handling only when the active task explicitly requests that update. |
-| `REQUEST_MISSING_CONTEXT` | Stop and request required context that is missing. |
-| `REPORT_CONFLICT` | Report an authority, source, context, file-safety, roadmap, or validation conflict. |
-| `DEFER` | Defer action because safe execution depends on a later authorized decision or missing prerequisite. |
+| Repository Entry | The entry point that hands control to AI-DOS startup rules. |
+| Invocation Context | The explicit request, scope, constraints, and supplied target inputs. |
+| Target Repository Resolution | The procedure that identifies the active Target Repository and creates Resolved Target Context. |
+| Resolved Target Context | The normalized target-supplied context accepted by AI-DOS. |
+| Context Assembly | The procedure that assembles temporary execution context from accepted inputs. |
+| Authority Resolution | The procedure that orders applicable authority inputs and detects conflicts. |
+| Decision Model | The procedure that chooses the safe next decision. |
+| Execution Sequence | The procedure that prepares bounded capability execution. |
+| Operational Core | The downstream AI-DOS capability area receiving prepared work. |
 
-No other decision outcome is allowed.
+## 3. Accepted Context Model
 
----
+AI-DOS accepts only the following target concepts in the System Layer:
 
-## 6. Decision Procedure
+| Concept | Meaning |
+|:---|:---|
+| Invocation Context | The explicit invocation request and supplied work boundary. |
+| Resolved Target Context | The normalized target context produced by Target Repository Resolution. |
+| Applicable Target Resources | Target-supplied resources needed for the authorized work. |
+| Target Objectives | The requested outcomes within the invocation. |
+| Target Constraints | Limits, exclusions, safety rules, and environmental restrictions. |
+| Target Authority Inputs | Authority-bearing inputs supplied or identified for the target. |
+| Target Execution Boundaries | File, artifact, scope, and action boundaries for execution. |
+| Target Validation Requirements | Checks or evidence expected for the work. |
 
-Agents shall use this decision procedure after context is assembled:
+No additional target-owned planning, status, sequencing, or management construct is required by this System Layer document.
 
-1. Confirm authority set.
-2. Confirm ProjectStatus and roadmap position.
-3. Confirm source-of-truth map.
-4. Confirm context packet completeness.
-5. Check frozen areas.
-6. Check file-safety restrictions.
-7. Check task type.
-8. Check missing inputs.
-9. Check conflicts.
-10. Select an allowed decision outcome.
-11. Record decision rationale.
-12. Hand off to execution, blocker report, or completion report.
+## 4. Responsibilities
 
-The decision rationale shall identify the relevant authority, context, blocker, route, or validation requirement that supports the selected outcome.
+Decision Model shall:
 
----
+1. Preserve AI-DOS as a reusable provider.
+2. Consume only `Invocation Context, Resolved Target Context, Applicable Target Resources, Target Objectives, Target Constraints, Target Authority Inputs, Target Execution Boundaries, and Target Validation Requirements`.
+3. Treat missing required input as a blocker.
+4. Keep target-owned operating models outside the System Layer.
+5. Produce clear handoff evidence for the next System Layer procedure.
 
-## 7. Stop Rules
+## 5. Procedure
 
-Agents shall stop when:
+| Order | Action | Output |
+|:---|:---|:---|
+| 1 | Confirm the current step in the canonical flow. | Flow position known. |
+| 2 | Read only applicable System Layer inputs and accepted Target Context. | Input set known. |
+| 3 | Validate that required target inputs are present and bounded. | Context readiness or blocker. |
+| 4 | Identify authority conflicts or missing validation requirements. | Conflict report or cleared handoff. |
+| 5 | Hand off to the next canonical System Layer step. | Prepared System Layer output. |
 
-- authority is missing;
-- ProjectStatus state is required but unavailable;
-- source-of-truth conflict exists;
-- context is incomplete;
-- task crosses a frozen area without authorization;
-- task requires implementation without authorization;
-- task requests ProjectStatus update without explicit authorization;
-- task conflicts with governance;
-- validation requirements cannot be determined.
+## 6. Boundaries
 
-When a stop rule applies, the decision outcome shall be `STOP_BLOCKER`, `ESCALATE_HUMAN_GOVERNANCE`, `REQUEST_MISSING_CONTEXT`, `REPORT_CONFLICT`, or `DEFER`.
+This document must not require, infer, update, or depend on target-owned management artifacts. It must remain valid when a target supplies only the accepted context model and no other operating structure.
 
----
+## 7. Blockers
 
-## 8. ProjectStatus Decision Rules
+Report a blocker when:
 
-DecisionModel may recommend a ProjectStatus update when operational state appears affected or a completed milestone may need recording.
+- Invocation Context is absent or ambiguous.
+- Resolved Target Context is unavailable when required.
+- Target Authority Inputs conflict.
+- Target Execution Boundaries are missing for requested changes.
+- Target Validation Requirements are required but unavailable.
 
-DecisionModel may not authorize or perform a ProjectStatus update unless the active task explicitly requests ProjectStatus update handling.
+## 8. Validation Checklist
 
-A ProjectStatus recommendation shall be reported separately from any file changes and shall not be applied as an incidental side effect of documentation, review, architecture, implementation, validation, or refactor work.
+| Check | Required Result |
+|:---|:---|
+| Canonical flow preserved | Yes |
+| Accepted context model only | Yes |
+| Target-owned management models required | No |
+| Runtime or Engine implementation introduced | No |
+| System Layer handoff clear | Yes |
 
----
+## 9. Handoff
 
-## 9. Validation Rules
-
-Agents shall validate decisions before routing to execution or reporting completion:
-
-1. Decision outcome is one of the allowed outcomes.
-2. Decision rationale cites authority or context.
-3. Decision does not rely on memory.
-4. Decision does not merge conflicting authorities.
-5. Decision preserves frozen-area boundaries.
-6. Decision respects explicit file restrictions.
-7. Decision does not route to execution when a blocker exists.
-8. Decision does not treat commands, workflows, templates, reports, reviews, generated artifacts, or conversation as higher authority.
-9. Decision does not perform ProjectStatus update handling unless explicitly requested.
-10. Decision routes validation or review only when required validation inputs are available or the missing inputs are reported.
-
----
-
-## 10. Escalation Rules
-
-If a safe decision cannot be selected, agents shall:
-
-1. Stop.
-2. Report the blocker.
-3. List missing authority, missing context, or conflict state.
-4. Recommend a Human Governance decision or governance review.
-5. Do not guess.
-6. Do not proceed by memory.
-7. Do not invent authority, context, validation requirements, or ProjectStatus state.
-
-Agents shall also escalate when the selected decision would require approval, certification, canonical promotion, frozen-area activation, or ProjectStatus update handling beyond the active task authorization.
-
----
-
-## 11. Completion Report Expectations
-
-Completion reports for tasks using this procedure should include:
-
-- selected decision outcome;
-- decision rationale;
-- authority and context used;
-- ProjectStatus and DevelopmentPhases status when relevant;
-- blocker, conflict, missing context, or escalation when present;
-- command, workflow, template, validation, or review route when selected;
-- ProjectStatus update recommendation when applicable;
-- recommended next step.
+The output of this document is a bounded System Layer handoff to the next canonical step. The handoff contains only the accepted context model, authority findings, blockers, validation expectations, and execution boundary evidence.

@@ -1,262 +1,138 @@
-# AI System Execution Sequence
+<!--
+Identifier: AI-DOS.SYSTEM.EXECUTIONSEQUENCE
+Title: Execution Sequence
+Version: 2.0.0
+Status: Active
+Owner: AI-DOS System Layer
+Updated: 2026-07-13
+-->
 
----
+# Execution Sequence
 
 ## Document Metadata
 
 | Field | Value |
 |:---|:---|
-| Identifier | `AI-DOS.SYSTEM.EXECUTION-SEQUENCE` |
-| Title | AI System Execution Sequence |
-| Version | `2.0.0-draft` |
-| Status | Draft |
-| Canonical Status | Non-canonical until reviewed, approved, and promoted through Framework Governance |
-| Classification | System Layer Execution Procedure |
-| Document Type | Tool-Facing Execution Procedure |
-| Owner | AI Operational Layer / Human Governance |
-| Maintainers | Framework Architecture Team |
-| Review Authority | Human Governance / Framework Governance |
+| Identifier | `AI-DOS.SYSTEM.EXECUTIONSEQUENCE` |
+| Title | Execution Sequence |
+| Version | `2.0.0` |
+| Status | Active |
+| Classification | AI-DOS System Layer |
+| Document Type | System Procedure |
+| Owner | AI-DOS System Layer |
 | Approval Authority | Human Governance |
-| Created | 2026-07-09 |
-| Last Updated | 2026-07-09 |
-| Lifecycle Phase | Draft Operational Core Alignment |
-| Traceability ID | `AI-DOS.V2.OP-005F` |
-| Scope | Execution ordering, safe execution procedure, file-scope enforcement, command/workflow/template handoff, validation handoff, completion evidence routing, stop-on-failure handling, and post-execution report structure forAI-DOS agents. |
-| Out of Scope | Authority resolution, boot sequence ownership, source-of-truth selection, context assembly, decision outcome selection, governance decisions, ProjectStatus ownership, Runtime definitions, Engine definitions, command definitions, workflow definitions, template definitions, certification, canonical promotion, and implementation beyond the active task scope. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` |
-| Normative References | `docs/AI/System/AuthorityModel.md`; `docs/AI/System/BootSequence.md`; `docs/AI/System/SourceOfTruth.md`; `docs/AI/System/ContextAssembly.md`; `docs/AI/System/DecisionModel.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
-| Dependencies | Repository bootloader, AuthorityModel authority resolution, BootSequence loading order, SourceOfTruth domain mapping, ContextAssembly context packet, DecisionModel outcome, Governance Atlas navigation, Framework Governance policy, ProjectStatus operational state, DevelopmentPhases roadmap sequence, Operational Core documents, and task-specific command, workflow, template, or validation requirements. |
-| Consumes | Approved DecisionModel outcome, human task instruction, authority set, context packet, source-of-truth map, ProjectStatus state, DevelopmentPhases roadmap position, frozen areas, file-safety constraints, command route, workflow route, template route, validation requirements, and missing-input or blocker state. |
-| Produces | Safe execution handoff, file-scope enforcement, validation handoff, stop-on-failure report, completion evidence, post-execution completion report, ProjectStatus update recommendation when applicable, and recommended next step. |
-| Related Specifications | `docs/AI/System/DecisionModel.md`; `docs/AI/System/ContextAssembly.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md`; Commands; Workflows; Templates; validation and review artifacts |
-| Supersedes | Prior AI System Execution Sequence operating-procedure drafts. |
-| Superseded By | None |
-| Promotion Requirements | Human Governance review, Framework Governance review, STD-010 metadata validation, execution-sequence validation, file-safety validation, ProjectStatus policy validation, roadmap validation, frozen-area validation, and explicit Human Governance promotion authorization. |
-| Certification Status | Not certified |
+| Last Updated | 2026-07-13 |
+| Scope | bounded AI-DOS capability execution preparation. |
+| Out of Scope | Target operation design, target-owned management models, Runtime implementation, Engine implementation, command definitions, workflow definitions, template definitions, certification, and implementation changes. |
+| Normative Authority | Human Governance; AI-DOS System Layer documents. |
+| Dependencies | `docs/AI/System/README.md`, `docs/AI/System/TargetRepositoryResolution.md`, `docs/AI/System/BootSequence.md`, `docs/AI/System/ContextAssembly.md`; generic Target Context supplied by invocation. |
+| Inputs | Invocation Context; Resolved Target Context; Target Objectives; Target Constraints; Target Authority Inputs; Target Execution Boundaries; Target Validation Requirements. |
+| Outputs | System Layer handoff evidence; authority or blocker findings; prepared execution boundary. |
+| Related Specifications | `docs/AI/System/README.md`, `docs/AI/System/TargetRepositoryResolution.md`, `docs/AI/System/BootSequence.md`, `docs/AI/System/ContextAssembly.md`, `docs/AI/System/AuthorityModel.md`, `docs/AI/System/SourceOfTruth.md`, `docs/AI/System/DecisionModel.md`, `docs/AI/System/SystemLayerFreeze.md`. |
 
 ---
 
 ## 1. Purpose
 
-This document defines howAI-DOS agents execute an approved decision outcome after `docs/AI/System/AuthorityModel.md`, `docs/AI/System/BootSequence.md`, `docs/AI/System/SourceOfTruth.md`, `docs/AI/System/ContextAssembly.md`, and `docs/AI/System/DecisionModel.md` have completed.
+Execution Sequence hands prepared work to the Operational Core. It is part of the AI-DOS startup path and remains independent of any target-owned management, sequencing, or status model.
 
-ExecutionSequence determines how an allowed decision outcome is carried out safely. It answers what action is executed, which command, workflow, or template governs execution, which files may be modified, which files must not be modified, which validation must run, what completion evidence must be reported, and when execution must stop.
+This document describes how AI-DOS starts and prepares capability execution. It does not prescribe how any target operates.
 
-This document consumes the System Layer procedures named above. It does not redefine authority resolution, boot order, source-of-truth selection, context assembly, decision outcome selection, Governance, ProjectStatus, Runtime, Engine, commands, workflows, templates, certification, or canonical promotion.
+## 2. Canonical System Flow
 
----
+```text
+Repository Entry
+        ↓
+Invocation Context
+        ↓
+Target Repository Resolution
+        ↓
+Resolved Target Context
+        ↓
+Context Assembly
+        ↓
+Authority Resolution
+        ↓
+Decision Model
+        ↓
+Execution Sequence
+        ↓
+Operational Core
+```
 
-## 2. Scope
+| Step | System Meaning |
+|:---|:---|
+| Repository Entry | The entry point that hands control to AI-DOS startup rules. |
+| Invocation Context | The explicit request, scope, constraints, and supplied target inputs. |
+| Target Repository Resolution | The procedure that identifies the active Target Repository and creates Resolved Target Context. |
+| Resolved Target Context | The normalized target-supplied context accepted by AI-DOS. |
+| Context Assembly | The procedure that assembles temporary execution context from accepted inputs. |
+| Authority Resolution | The procedure that orders applicable authority inputs and detects conflicts. |
+| Decision Model | The procedure that chooses the safe next decision. |
+| Execution Sequence | The procedure that prepares bounded capability execution. |
+| Operational Core | The downstream AI-DOS capability area receiving prepared work. |
 
-### 2.1 In Scope
+## 3. Accepted Context Model
 
-This procedure covers:
+AI-DOS accepts only the following target concepts in the System Layer:
 
-1. Execution ordering.
-2. Safe execution procedure.
-3. File-scope enforcement.
-4. Command, workflow, or template handoff.
-5. Validation handoff.
-6. Completion evidence routing.
-7. Stop-on-failure handling.
-8. Post-execution report structure.
+| Concept | Meaning |
+|:---|:---|
+| Invocation Context | The explicit invocation request and supplied work boundary. |
+| Resolved Target Context | The normalized target context produced by Target Repository Resolution. |
+| Applicable Target Resources | Target-supplied resources needed for the authorized work. |
+| Target Objectives | The requested outcomes within the invocation. |
+| Target Constraints | Limits, exclusions, safety rules, and environmental restrictions. |
+| Target Authority Inputs | Authority-bearing inputs supplied or identified for the target. |
+| Target Execution Boundaries | File, artifact, scope, and action boundaries for execution. |
+| Target Validation Requirements | Checks or evidence expected for the work. |
 
-### 2.2 Out of Scope
+No additional target-owned planning, status, sequencing, or management construct is required by this System Layer document.
 
-This procedure does not own:
+## 4. Responsibilities
 
-1. Authority resolution.
-2. Boot sequence.
-3. Source-of-truth selection.
-4. Context assembly.
-5. Decision outcome selection.
-6. Governance decisions.
-7. ProjectStatus ownership.
-8. Runtime definitions.
-9. Engine definitions.
-10. Commands.
-11. Workflows.
-12. Templates.
-13. Certification.
-14. Canonical promotion.
+Execution Sequence shall:
 
----
+1. Preserve AI-DOS as a reusable provider.
+2. Consume only `Invocation Context, Resolved Target Context, Applicable Target Resources, Target Objectives, Target Constraints, Target Authority Inputs, Target Execution Boundaries, and Target Validation Requirements`.
+3. Treat missing required input as a blocker.
+4. Keep target-owned operating models outside the System Layer.
+5. Produce clear handoff evidence for the next System Layer procedure.
 
-## 3. Operational Responsibilities
+## 5. Procedure
 
-### 3.1 Owns
+| Order | Action | Output |
+|:---|:---|:---|
+| 1 | Confirm the current step in the canonical flow. | Flow position known. |
+| 2 | Read only applicable System Layer inputs and accepted Target Context. | Input set known. |
+| 3 | Validate that required target inputs are present and bounded. | Context readiness or blocker. |
+| 4 | Identify authority conflicts or missing validation requirements. | Conflict report or cleared handoff. |
+| 5 | Hand off to the next canonical System Layer step. | Prepared System Layer output. |
 
-The AI System Execution Sequence owns:
+## 6. Boundaries
 
-- execution ordering;
-- safe execution procedure;
-- file-scope enforcement;
-- command/workflow/template handoff;
-- validation handoff;
-- completion evidence routing;
-- stop-on-failure handling;
-- post-execution report structure.
+This document must not require, infer, update, or depend on target-owned management artifacts. It must remain valid when a target supplies only the accepted context model and no other operating structure.
 
-### 3.2 Does Not Own
+## 7. Blockers
 
-The AI System Execution Sequence does not own:
+Report a blocker when:
 
-- authority resolution;
-- boot sequence;
-- source-of-truth selection;
-- context assembly;
-- decision outcome selection;
-- governance decisions;
-- ProjectStatus ownership;
-- Runtime definitions;
-- Engine definitions;
-- commands;
-- workflows;
-- templates;
-- certification;
-- canonical promotion.
+- Invocation Context is absent or ambiguous.
+- Resolved Target Context is unavailable when required.
+- Target Authority Inputs conflict.
+- Target Execution Boundaries are missing for requested changes.
+- Target Validation Requirements are required but unavailable.
 
----
+## 8. Validation Checklist
 
-## 4. Execution Inputs
+| Check | Required Result |
+|:---|:---|
+| Canonical flow preserved | Yes |
+| Accepted context model only | Yes |
+| Target-owned management models required | No |
+| Runtime or Engine implementation introduced | No |
+| System Layer handoff clear | Yes |
 
-Execution may begin only from an approved DecisionModel outcome and a bounded task context. Execution inputs include:
+## 9. Handoff
 
-- approved DecisionModel outcome;
-- human task instruction;
-- authority set;
-- context packet;
-- source-of-truth map;
-- ProjectStatus state;
-- DevelopmentPhases roadmap position;
-- frozen areas;
-- file-safety constraints;
-- command route;
-- workflow route;
-- template route;
-- validation requirements;
-- missing-input or blocker state.
-
-Execution must not rely on memory when an input is required by authority, context, source-of-truth, file-safety, roadmap, or validation rules.
-
----
-
-## 5. Allowed Execution Outcomes
-
-Execution may proceed only for these DecisionModel outcomes:
-
-- `PROCEED`;
-- `ROUTE_COMMAND`;
-- `ROUTE_WORKFLOW`;
-- `ROUTE_TEMPLATE`;
-- `AUTHORIZE_PROJECTSTATUS_UPDATE_ONLY_IF_EXPLICITLY_REQUESTED`.
-
-For all other DecisionModel outcomes, execution must stop and produce a blocker or completion report:
-
-- `STOP_BLOCKER`;
-- `ESCALATE_HUMAN_GOVERNANCE`;
-- `RECOMMEND_PROJECTSTATUS_UPDATE`;
-- `REQUEST_MISSING_CONTEXT`;
-- `REPORT_CONFLICT`;
-- `DEFER`.
-
-A recommendation to update ProjectStatus is not an executable ProjectStatus update authorization.
-
----
-
-## 6. Execution Procedure
-
-Agents shall execute using this sequence:
-
-1. Confirm DecisionModel outcome is executable.
-2. Confirm authority set.
-3. Confirm context packet completeness.
-4. Confirm source-of-truth map.
-5. Confirm ProjectStatus and roadmap boundaries.
-6. Confirm frozen-area and file-safety constraints.
-7. Select command, workflow, or template handoff if applicable.
-8. Execute only approved task scope.
-9. Avoid unrelated file edits.
-10. Run required validation.
-11. Stop on validation failure.
-12. Produce completion report.
-13. Recommend next step.
-14. Recommend ProjectStatus update only when applicable.
-15. Perform ProjectStatus update only when explicitly authorized.
-
-Execution shall remain bounded by the human task instruction, authority set, source-of-truth map, context packet, DecisionModel outcome, file-safety restrictions, and validation requirements.
-
----
-
-## 7. File-Safety Rules
-
-Agents shall enforce these file-safety rules during execution:
-
-1. Modify only files explicitly in scope.
-2. Do not perform opportunistic cleanup.
-3. Do not refactor adjacent files.
-4. Do not move, delete, or rename files unless explicitly authorized.
-5. Do not modify ProjectStatus unless explicitly authorized.
-6. Do not modify Runtime, Engine, Governance, or Standards documents unless explicitly in scope.
-7. Do not create parallel v2 files unless explicitly authorized.
-8. Do not modify commands, workflows, or templates unless explicitly in scope.
-9. Do not convert a recommendation into a file change without authorization.
-10. Stop when file-safety constraints conflict with the requested execution.
-
----
-
-## 8. Validation Handoff Rules
-
-Execution must hand off to validation using the validation requirements selected by DecisionModel or task authority.
-
-Validation handoff shall identify:
-
-- validation command or check to run;
-- expected scope of validation;
-- files or artifacts covered by validation;
-- known environment limitations;
-- validation failure handling;
-- evidence to report in the completion report.
-
-If validation requirements cannot be determined, agents shall stop, report a blocker, and not declare success.
-
-Validation failure does not authorize unrelated fixes, expanded scope, ProjectStatus updates, certification, or canonical promotion. The agent may fix validation failures only when the fix remains within the active task scope and file-safety boundary.
-
----
-
-## 9. Completion Report Rules
-
-A completion report must include:
-
-- summary;
-- files modified;
-- sections changed;
-- old references removed when applicable;
-- validation results;
-- ProjectStatus policy confirmation;
-- risks or blockers;
-- commit hash if committed;
-- recommended next step.
-
-The report shall distinguish completed execution, blocked execution, validation failure, deferred work, ProjectStatus recommendation, and explicit ProjectStatus update authorization when applicable.
-
----
-
-## 10. Escalation Rules
-
-If execution cannot safely continue, agents shall:
-
-1. Stop.
-2. Report the blocker.
-3. List the reason.
-4. List affected files.
-5. List missing authority, context, or validation.
-6. Recommend a Human Governance decision or governance review.
-
-Agents shall also escalate when execution would require approval, certification, canonical promotion, frozen-area activation, ProjectStatus update handling, file movement, deletion, renaming, or out-of-scope document changes without explicit authorization.
-
----
-
-## 11. Completion Report Expectations
-
-Completion reports for tasks using this procedure should show that execution followed the approved DecisionModel outcome, preserved file-safety constraints, performed required validation, and stopped or escalated when safe execution was not possible.
+The output of this document is a bounded System Layer handoff to the next canonical step. The handoff contains only the accepted context model, authority findings, blockers, validation expectations, and execution boundary evidence.

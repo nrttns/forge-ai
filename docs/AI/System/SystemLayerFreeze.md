@@ -1,175 +1,138 @@
-#AI-DOS v2 System Layer Freeze
+<!--
+Identifier: AI-DOS.SYSTEM.SYSTEMLAYERFREEZE
+Title: System Layer Freeze
+Version: 2.0.0
+Status: Active
+Owner: AI-DOS System Layer
+Updated: 2026-07-13
+-->
 
----
+# System Layer Freeze
 
 ## Document Metadata
 
 | Field | Value |
 |:---|:---|
-| Identifier | `AI-DOS.SYSTEM.LAYER-FREEZE` |
-| Title |AI-DOS v2 System Layer Freeze |
-| Version | `1.1.0-draft` |
-| Status | Draft |
-| Canonical Status | Non-canonical freeze record until reviewed, approved, and promoted through Framework Governance |
-| Classification | System Layer Freeze Record |
-| Document Type | Operational Baseline Freeze Record |
-| Owner | AI Operational Layer / Human Governance |
-| Maintainers | Framework Architecture Team |
-| Review Authority | Human Governance / Framework Governance |
+| Identifier | `AI-DOS.SYSTEM.SYSTEMLAYERFREEZE` |
+| Title | System Layer Freeze |
+| Version | `2.0.0` |
+| Status | Active |
+| Classification | AI-DOS System Layer |
+| Document Type | System Procedure |
+| Owner | AI-DOS System Layer |
 | Approval Authority | Human Governance |
-| Created | 2026-07-09 |
-| Last Updated | 2026-07-10 |
-| Lifecycle Phase | Draft System Layer Freeze |
-| Traceability ID | `AI-DOS.V2.OP-005H` |
-| Scope | CompletedAI-DOS v2 System Layer baseline, System document inventory, operational freeze state, and baseline ownership. |
-| Out of Scope | Governance, Runtime, Engine, templates, commands, workflows, certification, ProjectStatus modification, audits, reviews, verification reports, and redesign recommendations. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` |
-| Normative References | `docs/AI/System/README.md`; `docs/AI/System/TargetRepositoryResolution.md`; `docs/AI/System/AuthorityModel.md`; `docs/AI/System/BootSequence.md`; `docs/AI/System/SourceOfTruth.md`; `docs/AI/System/ContextAssembly.md`; `docs/AI/System/DecisionModel.md`; `docs/AI/System/ExecutionSequence.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
-| Dependencies | Completed System Layer procedure documents including TargetRepositoryResolution.md, System Layer README, Operational Core documents, Governance Atlas navigation, Framework Governance policy, ProjectStatus operational state, and DevelopmentPhases roadmap sequence. |
-| Consumes | System Layer procedure baseline, System Layer navigation index, Operational Core consumption model, current authority paths, metadata requirements, and Human Governance task instruction. |
-| Produces | System Layer freeze record, frozen component inventory, baseline guarantees, frozen responsibility summary, change policy, completion state, and next-layer transition statement. |
-| Related Specifications | `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Templates/README.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
-| Supersedes | None |
-| Superseded By | None |
-| Promotion Requirements | Human Governance review, Framework Governance review, STD-010 metadata validation, System Layer inventory validation, operational-baseline validation, ProjectStatus policy validation, roadmap validation, frozen-area validation, and explicit Human Governance promotion authorization. |
-| Certification Status | Not certified |
+| Last Updated | 2026-07-13 |
+| Scope | freeze criteria for System Layer procedures. |
+| Out of Scope | Target operation design, target-owned management models, Runtime implementation, Engine implementation, command definitions, workflow definitions, template definitions, certification, and implementation changes. |
+| Normative Authority | Human Governance; AI-DOS System Layer documents. |
+| Dependencies | `docs/AI/System/README.md`, `docs/AI/System/TargetRepositoryResolution.md`, `docs/AI/System/BootSequence.md`, `docs/AI/System/ContextAssembly.md`; generic Target Context supplied by invocation. |
+| Inputs | Invocation Context; Resolved Target Context; Target Objectives; Target Constraints; Target Authority Inputs; Target Execution Boundaries; Target Validation Requirements. |
+| Outputs | System Layer handoff evidence; authority or blocker findings; prepared execution boundary. |
+| Related Specifications | `docs/AI/System/README.md`, `docs/AI/System/TargetRepositoryResolution.md`, `docs/AI/System/BootSequence.md`, `docs/AI/System/ContextAssembly.md`, `docs/AI/System/AuthorityModel.md`, `docs/AI/System/SourceOfTruth.md`, `docs/AI/System/DecisionModel.md`, `docs/AI/System/ExecutionSequence.md`. |
 
 ---
 
 ## 1. Purpose
 
-This document freezes the completedAI-DOS v2 System Layer.
+System Layer Freeze records the stable System Layer boundary. It is part of the AI-DOS startup path and remains independent of any target-owned management, sequencing, or status model.
 
-It records the completed operational baseline for the System Layer as a freeze record. It does not audit, review, certify, verify, score, redesign, or promote the System Layer.
+This document describes how AI-DOS starts and prepares capability execution. It does not prescribe how any target operates.
 
-This document does not redefine System procedures. The frozen System Layer procedure documents retain their own responsibilities, scope, and operating rules.
+## 2. Canonical System Flow
 
----
+```text
+Repository Entry
+        ↓
+Invocation Context
+        ↓
+Target Repository Resolution
+        ↓
+Resolved Target Context
+        ↓
+Context Assembly
+        ↓
+Authority Resolution
+        ↓
+Decision Model
+        ↓
+Execution Sequence
+        ↓
+Operational Core
+```
 
-## 2. Scope
-
-### 2.1 In Scope
-
-This freeze record covers:
-
-1. System Layer baseline.
-2. System document inventory.
-3. Operational freeze.
-4. Baseline ownership.
-
-### 2.2 Out of Scope
-
-This freeze record does not cover:
-
-1. Governance.
-2. Runtime.
-3. Engine.
-4. Templates.
-5. Commands.
-6. Workflows.
-7. Certification.
-8. ProjectStatus modification.
-
----
-
-## 3. Frozen Components
-
-TheAI-DOS v2 System Layer baseline freezes exactly these components:
-
-1. `AuthorityModel.md`
-2. `BootSequence.md`
-3. `SourceOfTruth.md`
-4. `ContextAssembly.md`
-5. `DecisionModel.md`
-6. `ExecutionSequence.md`
-7. `TargetRepositoryResolution.md`
-8. `README.md`
-
----
-
-## 4. Baseline Guarantees
-
-The frozen System Layer baseline records the following guarantees:
-
-1. All System Layer documents are aligned.
-2. Obsolete RC2 authority has been removed.
-3. Obsolete Specification references have been removed.
-4. The ProjectStatus path has been updated to `docs/Projects/ForgeAI/Planning/ProjectStatus.md`.
-5. The Operational Core is aligned with the System Layer.
-6. The System Layer is STD-010 compliant.
-7. The System Layer now resolves the active Target Repository before BootSequence loads target-project state under controlled extension `AI-DOS.V2.SYSTEM-EXT-001`.
-
----
-
-## 5. Relationship to Operational Core
-
-TheAI-DOS v2 Operational Core consumes this frozen System Layer.
-
-The following Operational Core documents consume the System Layer baseline:
-
-1. `docs/AI/AIFramework.md`
-2. `docs/AI/AIOrchestrator.md`
-3. `docs/AI/AgentSystemPrompt.md`
-
-The System Layer provides the tool-facing procedural baseline for Target Repository Resolution, authority, boot, source-of-truth selection, context assembly, decision handling, and execution sequencing. The Operational Core uses that baseline as its operating foundation and does not replace the frozen System Layer responsibilities.
-
----
-
-## 6. Change Policy
-
-Future changes to the System Layer:
-
-1. Must be incremental.
-2. Must preserve compatibility with this frozen baseline.
-3. Must not introduce parallel System procedures.
-4. Must not replace frozen responsibilities.
-
-Future work may extend the System Layer only by preserving the baseline responsibilities recorded in this freeze document.
-
----
-
-## 7. Frozen Responsibilities
-
-The frozen System Layer responsibilities are:
-
-| Responsibility | Frozen Baseline |
+| Step | System Meaning |
 |:---|:---|
-| Target Repository Resolution | Establish the active Target Repository and resolve project-resource declarations before boot. |
-| Authority | Resolve applicable authority, task authority, conflict handling, and escalation boundaries. |
-| Boot | Load the resolved repository, governance, operational-state, roadmap, Operational Core, System Layer, and task-specific authorities in the correct order. |
-| Source | Identify the correct source of truth for each task domain and preserve source hierarchy. |
-| Context | Assemble bounded, authority-aware task context without importing unrelated or future-scope material. |
-| Decision | Select the safe operational outcome within authority, roadmap, frozen-area, and task boundaries. |
-| Execution | Execute the approved decision path safely, validate results, preserve file safety, and report completion evidence. |
+| Repository Entry | The entry point that hands control to AI-DOS startup rules. |
+| Invocation Context | The explicit request, scope, constraints, and supplied target inputs. |
+| Target Repository Resolution | The procedure that identifies the active Target Repository and creates Resolved Target Context. |
+| Resolved Target Context | The normalized target-supplied context accepted by AI-DOS. |
+| Context Assembly | The procedure that assembles temporary execution context from accepted inputs. |
+| Authority Resolution | The procedure that orders applicable authority inputs and detects conflicts. |
+| Decision Model | The procedure that chooses the safe next decision. |
+| Execution Sequence | The procedure that prepares bounded capability execution. |
+| Operational Core | The downstream AI-DOS capability area receiving prepared work. |
 
----
+## 3. Accepted Context Model
 
-## 8. Completion State
+AI-DOS accepts only the following target concepts in the System Layer:
 
-| State | Value |
+| Concept | Meaning |
 |:---|:---|
-| System Layer Status | COMPLETE |
-| Operational Status | FROZEN |
-| Consumption Status | ACTIVE |
+| Invocation Context | The explicit invocation request and supplied work boundary. |
+| Resolved Target Context | The normalized target context produced by Target Repository Resolution. |
+| Applicable Target Resources | Target-supplied resources needed for the authorized work. |
+| Target Objectives | The requested outcomes within the invocation. |
+| Target Constraints | Limits, exclusions, safety rules, and environmental restrictions. |
+| Target Authority Inputs | Authority-bearing inputs supplied or identified for the target. |
+| Target Execution Boundaries | File, artifact, scope, and action boundaries for execution. |
+| Target Validation Requirements | Checks or evidence expected for the work. |
 
----
+No additional target-owned planning, status, sequencing, or management construct is required by this System Layer document.
 
-## 9. Next Layer
+## 4. Responsibilities
 
-The next work begins with:
+System Layer Freeze shall:
 
-1. `TPL-000`
-2. `TPL-001`
-3. Templates Alignment
-4. Axis Suite Pilot
+1. Preserve AI-DOS as a reusable provider.
+2. Consume only `Invocation Context, Resolved Target Context, Applicable Target Resources, Target Objectives, Target Constraints, Target Authority Inputs, Target Execution Boundaries, and Target Validation Requirements`.
+3. Treat missing required input as a blocker.
+4. Keep target-owned operating models outside the System Layer.
+5. Produce clear handoff evidence for the next System Layer procedure.
 
-This freeze record does not modify ProjectStatus and does not activate downstream work by itself.
+## 5. Procedure
 
-## 10. Controlled Extension Record
+| Order | Action | Output |
+|:---|:---|:---|
+| 1 | Confirm the current step in the canonical flow. | Flow position known. |
+| 2 | Read only applicable System Layer inputs and accepted Target Context. | Input set known. |
+| 3 | Validate that required target inputs are present and bounded. | Context readiness or blocker. |
+| 4 | Identify authority conflicts or missing validation requirements. | Conflict report or cleared handoff. |
+| 5 | Hand off to the next canonical System Layer step. | Prepared System Layer output. |
 
-| Field | Value |
+## 6. Boundaries
+
+This document must not require, infer, update, or depend on target-owned management artifacts. It must remain valid when a target supplies only the accepted context model and no other operating structure.
+
+## 7. Blockers
+
+Report a blocker when:
+
+- Invocation Context is absent or ambiguous.
+- Resolved Target Context is unavailable when required.
+- Target Authority Inputs conflict.
+- Target Execution Boundaries are missing for requested changes.
+- Target Validation Requirements are required but unavailable.
+
+## 8. Validation Checklist
+
+| Check | Required Result |
 |:---|:---|
-| Authorization | `AI-DOS.V2.SYSTEM-EXT-001` |
-| Extension | Target Repository Resolution controlled System Layer extension |
-| Completion State | Complete after validation |
-| Freeze State | Re-frozen after amendment |
+| Canonical flow preserved | Yes |
+| Accepted context model only | Yes |
+| Target-owned management models required | No |
+| Runtime or Engine implementation introduced | No |
+| System Layer handoff clear | Yes |
+
+## 9. Handoff
+
+The output of this document is a bounded System Layer handoff to the next canonical step. The handoff contains only the accepted context model, authority findings, blockers, validation expectations, and execution boundary evidence.

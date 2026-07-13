@@ -1,243 +1,138 @@
-# AI System Operating Layer
+<!--
+Identifier: AI-DOS.SYSTEM.README
+Title: AI-DOS System Layer
+Version: 2.0.0
+Status: Active
+Owner: AI-DOS System Layer
+Updated: 2026-07-13
+-->
 
----
+# AI-DOS System Layer
 
 ## Document Metadata
 
-| Field                  | Value                                                                                                                                                                                                                                                                                                                                                                                 |
-|:-----------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Identifier             | `AI-DOS.SYSTEM.README`                                                                                                                                                                                                                                                                                                                                                              |
-| Title                  | AI System Operating Layer                                                                                                                                                                                                                                                                                                                                                             |
-| Version                | `2.0.0-draft`                                                                                                                                                                                                                                                                                                                                                                         |
-| Status                 | Draft                                                                                                                                                                                                                                                                                                                                                                                 |
-| Canonical Status       | Non-canonical until reviewed, approved, and promoted through Framework Governance                                                                                                                                                                                                                                                                                                     |
-| Classification         | System Layer Index and Navigation Map                                                                                                                                                                                                                                                                                                                                                 |
-| Document Type          | Tool-Facing System Index                                                                                                                                                                                                                                                                                                                                                              |
-| Owner                  | AI Operational Layer / Human Governance                                                                                                                                                                                                                                                                                                                                               |
-| Maintainers            | Framework Architecture Team                                                                                                                                                                                                                                                                                                                                                           |
-| Review Authority       | Human Governance / Framework Governance                                                                                                                                                                                                                                                                                                                                               |
-| Approval Authority     | Human Governance                                                                                                                                                                                                                                                                                                                                                                      |
-| Created                | 2026-07-09                                                                                                                                                                                                                                                                                                                                                                            |
-| Last Updated           | 2026-07-09                                                                                                                                                                                                                                                                                                                                                                            |
-| Lifecycle Phase        | Draft Operational Core Alignment                                                                                                                                                                                                                                                                                                                                                      |
-| Traceability ID        | `AI-DOS.V2.OP-005G`                                                                                                                                                                                                                                                                                                                                                                 |
-| Scope                  | System Layer navigation, System procedure index, System responsibility map, System execution flow summary, and tool-facing cognitive model overview forAI-DOS agents.                                                                                                                                                                                                              |
-| Out of Scope           | Individual procedure details, Governance, ProjectStatus, Runtime, Engine, AIFramework, AIOrchestrator, AgentSystemPrompt, command definitions, workflow definitions, template definitions, certification, canonical promotion, and implementation.                                                                                                                                    |
-| Normative Authority    | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`                                                                                                                                                                                               |
-| Normative References   | `docs/AI/System/AuthorityModel.md`; `docs/AI/System/BootSequence.md`; `docs/AI/System/SourceOfTruth.md`; `docs/AI/System/ContextAssembly.md`; `docs/AI/System/DecisionModel.md`; `docs/AI/System/ExecutionSequence.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
-| Dependencies           | Repository bootloader, System Layer procedure documents, Governance Atlas navigation, Framework Governance policy, ProjectStatus operational state, DevelopmentPhases roadmap sequence, and Operational Core documents.                                                                                                                                                               |
-| Consumes               | Human task instruction, System Layer procedure documents, AIFramework operational entry point, AIOrchestrator routing, AgentSystemPrompt behavior rules, ProjectStatus operational state, and DevelopmentPhases roadmap sequence.                                                                                                                                                     |
-| Produces               | System Layer index, System procedure navigation map, responsibility map, execution flow summary, usage rules, and completion criteria.                                                                                                                                                                                                                                                |
-| Related Specifications | `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`                                                                                                                                       |
-| Supersedes             | Prior AI System Operating Layer index drafts.                                                                                                                                                                                                                                                                                                                                         |
-| Superseded By          | None                                                                                                                                                                                                                                                                                                                                                                                  |
-| Promotion Requirements | Human Governance review, Framework Governance review, STD-010 metadata validation, System Layer map validation, responsibility-map validation, ProjectStatus policy validation, roadmap validation, frozen-area validation, and explicit Human Governance promotion authorization.                                                                                                    |
-| Certification Status   | Not certified                                                                                                                                                                                                                                                                                                                                                                         |
+| Field | Value |
+|:---|:---|
+| Identifier | `AI-DOS.SYSTEM.README` |
+| Title | AI-DOS System Layer |
+| Version | `2.0.0` |
+| Status | Active |
+| Classification | AI-DOS System Layer |
+| Document Type | System Procedure |
+| Owner | AI-DOS System Layer |
+| Approval Authority | Human Governance |
+| Last Updated | 2026-07-13 |
+| Scope | System Layer architecture and startup boundaries. |
+| Out of Scope | Target operation design, target-owned management models, Runtime implementation, Engine implementation, command definitions, workflow definitions, template definitions, certification, and implementation changes. |
+| Normative Authority | Human Governance; AI-DOS System Layer documents. |
+| Dependencies | `docs/AI/System/TargetRepositoryResolution.md`, `docs/AI/System/BootSequence.md`, `docs/AI/System/ContextAssembly.md`, `docs/AI/System/AuthorityModel.md`; generic Target Context supplied by invocation. |
+| Inputs | Invocation Context; Resolved Target Context; Target Objectives; Target Constraints; Target Authority Inputs; Target Execution Boundaries; Target Validation Requirements. |
+| Outputs | System Layer handoff evidence; authority or blocker findings; prepared execution boundary. |
+| Related Specifications | `docs/AI/System/TargetRepositoryResolution.md`, `docs/AI/System/BootSequence.md`, `docs/AI/System/ContextAssembly.md`, `docs/AI/System/AuthorityModel.md`, `docs/AI/System/SourceOfTruth.md`, `docs/AI/System/DecisionModel.md`, `docs/AI/System/ExecutionSequence.md`, `docs/AI/System/SystemLayerFreeze.md`. |
 
 ---
 
 ## 1. Purpose
 
-This README is theAI-DOS v2 System Layer index and navigation map.
+AI-DOS System Layer maps the documentation set and canonical startup flow. It is part of the AI-DOS startup path and remains independent of any target-owned management, sequencing, or status model.
 
-The System Layer defines the tool-facing cognitive procedure for AI agents:
+This document describes how AI-DOS starts and prepares capability execution. It does not prescribe how any target operates.
+
+## 2. Canonical System Flow
 
 ```text
+Repository Entry
+        ↓
+Invocation Context
+        ↓
 Target Repository Resolution
-    ↓
-Boot
-    ↓
-Authority
-    ↓
-Source of Truth
-    ↓
+        ↓
+Resolved Target Context
+        ↓
 Context Assembly
-    ↓
-Decision
-    ↓
-Execution
+        ↓
+Authority Resolution
+        ↓
+Decision Model
+        ↓
+Execution Sequence
+        ↓
+Operational Core
 ```
 
-This README summarizes the System Layer only. It does not redefine the System Layer procedure documents, Governance, ProjectStatus, Runtime, Engine, AIFramework, AIOrchestrator, AgentSystemPrompt, commands, workflows, templates, certification, or canonical promotion.
-
----
-
-## 2. Scope
-
-### 2.1 In Scope
-
-This README covers:
-
-1. System Layer navigation.
-2. System procedure index.
-3. System responsibility map.
-4. System execution flow summary.
-5. Tool-facing cognitive model overview.
-6. Usage rules for agents.
-7. Completion criteria for this index.
-
-### 2.2 Out of Scope
-
-This README does not own:
-
-1. Individual procedure details.
-2. Governance.
-3. ProjectStatus.
-4. Runtime.
-5. Engine.
-6. AIFramework.
-7. AIOrchestrator.
-8. AgentSystemPrompt.
-9. Commands.
-10. Workflows.
-11. Templates.
-12. Certification.
-13. Canonical promotion.
-
----
-
-## 3. Operational Responsibilities
-
-### 3.1 Owns
-
-The AI System Operating Layer README owns:
-
-- System Layer navigation;
-- System procedure index;
-- System responsibility map;
-- System execution flow summary;
-- tool-facing cognitive model overview.
-
-### 3.2 Does Not Own
-
-The AI System Operating Layer README does not own:
-
-- individual procedure details;
-- Governance;
-- ProjectStatus;
-- Runtime;
-- Engine;
-- AIFramework;
-- AIOrchestrator;
-- AgentSystemPrompt;
-- commands;
-- workflows;
-- templates;
-- certification;
-- canonical promotion.
-
----
-
-## 4. System Layer Map
-
-The System Layer consists of exactly these procedure documents:
-
-```text
-docs/AI/System/TargetRepositoryResolution.md
-docs/AI/System/BootSequence.md
-docs/AI/System/AuthorityModel.md
-docs/AI/System/SourceOfTruth.md
-docs/AI/System/ContextAssembly.md
-docs/AI/System/DecisionModel.md
-docs/AI/System/ExecutionSequence.md
-```
-
-This README is the navigation index for those documents. It is not a substitute for reading the applicable procedure document.
-
----
-
-## 5. Responsibility Map
-
-| Procedure Document | Responsibility Summary |
+| Step | System Meaning |
 |:---|:---|
-| `docs/AI/System/TargetRepositoryResolution.md` | Establishes the active Target Repository and resolves project-resource declarations before boot. |
-| `docs/AI/System/BootSequence.md` | Defines repository boot order. |
-| `docs/AI/System/AuthorityModel.md` | Resolves authority and conflict handling. |
-| `docs/AI/System/SourceOfTruth.md` | Identifies canonical source per domain. |
-| `docs/AI/System/ContextAssembly.md` | Defines bounded task context. |
-| `docs/AI/System/DecisionModel.md` | Selects safe operational outcome. |
-| `docs/AI/System/ExecutionSequence.md` | Executes approved decision outcome safely. |
+| Repository Entry | The entry point that hands control to AI-DOS startup rules. |
+| Invocation Context | The explicit request, scope, constraints, and supplied target inputs. |
+| Target Repository Resolution | The procedure that identifies the active Target Repository and creates Resolved Target Context. |
+| Resolved Target Context | The normalized target-supplied context accepted by AI-DOS. |
+| Context Assembly | The procedure that assembles temporary execution context from accepted inputs. |
+| Authority Resolution | The procedure that orders applicable authority inputs and detects conflicts. |
+| Decision Model | The procedure that chooses the safe next decision. |
+| Execution Sequence | The procedure that prepares bounded capability execution. |
+| Operational Core | The downstream AI-DOS capability area receiving prepared work. |
 
----
+## 3. Accepted Context Model
 
-## 6. Execution Flow Diagram
+AI-DOS accepts only the following target concepts in the System Layer:
 
-Agents should understand the System Layer flow as:
+| Concept | Meaning |
+|:---|:---|
+| Invocation Context | The explicit invocation request and supplied work boundary. |
+| Resolved Target Context | The normalized target context produced by Target Repository Resolution. |
+| Applicable Target Resources | Target-supplied resources needed for the authorized work. |
+| Target Objectives | The requested outcomes within the invocation. |
+| Target Constraints | Limits, exclusions, safety rules, and environmental restrictions. |
+| Target Authority Inputs | Authority-bearing inputs supplied or identified for the target. |
+| Target Execution Boundaries | File, artifact, scope, and action boundaries for execution. |
+| Target Validation Requirements | Checks or evidence expected for the work. |
 
-```text
-Human Task
-    ↓
-docs/AI/System/TargetRepositoryResolution.md
-    ↓
-docs/AI/System/BootSequence.md
-    ↓
-docs/AI/System/AuthorityModel.md
-    ↓
-docs/AI/System/SourceOfTruth.md
-    ↓
-docs/AI/System/ContextAssembly.md
-    ↓
-docs/AI/System/DecisionModel.md
-    ↓
-docs/AI/System/ExecutionSequence.md
-    ↓
-Completion Report
-```
+No additional target-owned planning, status, sequencing, or management construct is required by this System Layer document.
 
-The flow summarizes navigation. The procedure documents define the operative rules.
+## 4. Responsibilities
 
----
+AI-DOS System Layer shall:
 
-## 7. Relationship to Operational Core
+1. Preserve AI-DOS as a reusable provider.
+2. Consume only `Invocation Context, Resolved Target Context, Applicable Target Resources, Target Objectives, Target Constraints, Target Authority Inputs, Target Execution Boundaries, and Target Validation Requirements`.
+3. Treat missing required input as a blocker.
+4. Keep target-owned operating models outside the System Layer.
+5. Produce clear handoff evidence for the next System Layer procedure.
 
-The System Layer is tool-facing procedure. It consumes the Operational Core documents and does not replace them:
+## 5. Procedure
 
-- `docs/AI/AIFramework.md` remains the Operational Core entry point.
-- `docs/AI/AIOrchestrator.md` remains the orchestration and routing reference.
-- `docs/AI/AgentSystemPrompt.md` remains the agent behavior reference.
-- `docs/Projects/ForgeAI/Planning/ProjectStatus.md` remains operational state.
-- `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` remains roadmap sequence.
+| Order | Action | Output |
+|:---|:---|:---|
+| 1 | Confirm the current step in the canonical flow. | Flow position known. |
+| 2 | Read only applicable System Layer inputs and accepted Target Context. | Input set known. |
+| 3 | Validate that required target inputs are present and bounded. | Context readiness or blocker. |
+| 4 | Identify authority conflicts or missing validation requirements. | Conflict report or cleared handoff. |
+| 5 | Hand off to the next canonical System Layer step. | Prepared System Layer output. |
 
----
+## 6. Boundaries
 
-## 8. Usage Rules
+This document must not require, infer, update, or depend on target-owned management artifacts. It must remain valid when a target supplies only the accepted context model and no other operating structure.
 
-Agents shall:
+## 7. Blockers
 
-1. Read this README only as navigation.
-2. Read the actual procedure document for rules.
-3. Not treat README summaries as replacing procedure documents.
-4. Not use this README to override `docs/AI/System/AuthorityModel.md`.
-5. Not use this README to override `docs/AI/System/BootSequence.md`.
-6. Not use this README to override `docs/AI/System/SourceOfTruth.md`.
-7. Not use this README to override `docs/AI/System/ContextAssembly.md`.
-8. Not use this README to override `docs/AI/System/DecisionModel.md`.
-9. Not use this README to override `docs/AI/System/ExecutionSequence.md`.
-10. Not use this README to update ProjectStatus, authorize certification, or promote any document.
+Report a blocker when:
 
----
+- Invocation Context is absent or ambiguous.
+- Resolved Target Context is unavailable when required.
+- Target Authority Inputs conflict.
+- Target Execution Boundaries are missing for requested changes.
+- Target Validation Requirements are required but unavailable.
 
-## 9. Completion Criteria
+## 8. Validation Checklist
 
-This README is complete when:
+| Check | Required Result |
+|:---|:---|
+| Canonical flow preserved | Yes |
+| Accepted context model only | Yes |
+| Target-owned management models required | No |
+| Runtime or Engine implementation introduced | No |
+| System Layer handoff clear | Yes |
 
-- all seven System procedure documents are listed;
-- each responsibility is clear;
-- no obsolete authority remains;
-- this README does not redefine procedure documents;
-- this README has STD-010 metadata.
+## 9. Handoff
 
----
-
-## 10. Completion Report Expectations
-
-Completion reports for changes to this README should identify:
-
-- sections updated;
-- System Layer map changes;
-- responsibility map changes;
-- execution flow changes;
-- obsolete references removed;
-- validation performed;
-- risks or blockers;
-- recommended next step.
+The output of this document is a bounded System Layer handoff to the next canonical step. The handoff contains only the accepted context model, authority findings, blockers, validation expectations, and execution boundary evidence.

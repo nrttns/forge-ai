@@ -1,227 +1,138 @@
-# AI System Boot Sequence
+<!--
+Identifier: AI-DOS.SYSTEM.BOOTSEQUENCE
+Title: Boot Sequence
+Version: 2.0.0
+Status: Active
+Owner: AI-DOS System Layer
+Updated: 2026-07-13
+-->
 
----
+# Boot Sequence
 
 ## Document Metadata
 
 | Field | Value |
 |:---|:---|
-| Identifier | `AI-DOS.SYSTEM.BOOT-SEQUENCE` |
-| Title | AI System Boot Sequence |
-| Version | `2.0.0-draft` |
-| Status | Draft |
-| Canonical Status | Non-canonical until reviewed, approved, and promoted through Framework Governance |
-| Classification | System Layer Boot Procedure |
-| Document Type | Tool-Facing Boot Procedure |
-| Owner | AI Operational Layer / Human Governance |
-| Maintainers | Framework Architecture Team |
-| Review Authority | Human Governance / Framework Governance |
+| Identifier | `AI-DOS.SYSTEM.BOOTSEQUENCE` |
+| Title | Boot Sequence |
+| Version | `2.0.0` |
+| Status | Active |
+| Classification | AI-DOS System Layer |
+| Document Type | System Procedure |
+| Owner | AI-DOS System Layer |
 | Approval Authority | Human Governance |
-| Created | 2026-07-09 |
-| Last Updated | 2026-07-09 |
-| Lifecycle Phase | Draft Operational Core Alignment |
-| Traceability ID | `AI-DOS.V2.OP-005B` |
-| Scope | Repository boot procedure, document loading order, context assembly order, boot validation, and boot failure handling forAI-DOS agents. |
-| Out of Scope | Governance redesign, authority decisions, Runtime ownership, Engine ownership, command definitions, workflow definitions, template definitions, ProjectStatus updates, certification, promotion, and implementation. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` |
-| Normative References | `docs/AI/System/TargetRepositoryResolution.md`; `docs/AI/System/AuthorityModel.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
-| Dependencies | Target Repository Resolution Result, resolved Target AGENTS path, repository bootloader, AuthorityModel authority resolution, AIFramework operational entry point, AIOrchestrator execution routing, AgentSystemPrompt agent behavior rules, active ProjectStatus, DevelopmentPhases roadmap, and task-specific runtime, engine, command, workflow, and template documents when required. |
-| Consumes | Human task instruction, Target Repository Resolution Result, resolved Target Repository root, resolved Target AGENTS path, target-project resource declarations, protected areas, validation context, AGENTS.md bootloader rules, AuthorityModel authority procedure, AIFramework operational guidance, AIOrchestrator routing rules, AgentSystemPrompt behavior constraints, relevant runtime and engine authorities, commands, workflows, templates, validation expectations, ProjectStatus operational state, and DevelopmentPhases roadmap sequence. |
-| Produces | System Layer boot sequence, document loading order, context assembly order, boot validation expectations, boot failure handling, and completion-report expectations. |
-| Related Specifications | `docs/AI/System/SourceOfTruth.md`; `docs/AI/System/ContextAssembly.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md`; Commands; Workflows; Templates |
-| Supersedes | Prior AI System Boot Sequence operating-procedure drafts. |
-| Superseded By | None |
-| Promotion Requirements | Human Governance review, Framework Governance review, STD-010 metadata validation, authority-chain validation, ProjectStatus policy validation, roadmap validation, frozen-area validation, and explicit Human Governance promotion authorization. |
-| Certification Status | Not certified |
+| Last Updated | 2026-07-13 |
+| Scope | startup ordering after Target Repository Resolution. |
+| Out of Scope | Target operation design, target-owned management models, Runtime implementation, Engine implementation, command definitions, workflow definitions, template definitions, certification, and implementation changes. |
+| Normative Authority | Human Governance; AI-DOS System Layer documents. |
+| Dependencies | `docs/AI/System/README.md`, `docs/AI/System/TargetRepositoryResolution.md`, `docs/AI/System/ContextAssembly.md`, `docs/AI/System/AuthorityModel.md`; generic Target Context supplied by invocation. |
+| Inputs | Invocation Context; Resolved Target Context; Target Objectives; Target Constraints; Target Authority Inputs; Target Execution Boundaries; Target Validation Requirements. |
+| Outputs | System Layer handoff evidence; authority or blocker findings; prepared execution boundary. |
+| Related Specifications | `docs/AI/System/README.md`, `docs/AI/System/TargetRepositoryResolution.md`, `docs/AI/System/ContextAssembly.md`, `docs/AI/System/AuthorityModel.md`, `docs/AI/System/SourceOfTruth.md`, `docs/AI/System/DecisionModel.md`, `docs/AI/System/ExecutionSequence.md`, `docs/AI/System/SystemLayerFreeze.md`. |
 
 ---
 
 ## 1. Purpose
 
-This document defines theAI-DOS v2 System Layer boot procedure used by AI agents before executing repository work.
+Boot Sequence loads only the inputs needed to prepare AI-DOS execution. It is part of the AI-DOS startup path and remains independent of any target-owned management, sequencing, or status model.
 
-Boot consumes the Target Repository Resolution Result, then establishes the task instruction, authority path, document loading order, context assembly order, execution boundary, validation expectation, and completion-report requirement. It prevents agents from relying on stale memory, conversational assumptions, undocumented authority, or lower-level execution aids that conflict with higher authority.
+This document describes how AI-DOS starts and prepares capability execution. It does not prescribe how any target operates.
 
-This document requires `docs/AI/System/TargetRepositoryResolution.md` as a precondition and consumes `docs/AI/System/AuthorityModel.md`. It does not redefine AuthorityModel, Governance, Framework Governance, ProjectStatus, Runtime, Engine, commands, workflows, or templates.
-
----
-
-## 2. Scope
-
-### 2.1 In Scope
-
-This boot procedure covers:
-
-1. Repository boot procedure after Target Repository Resolution.
-2. Document loading order.
-3. Context assembly order.
-4. Boot validation.
-5. Boot failure handling.
-6. Completion-report expectations for boot-related execution.
-
-### 2.2 Out of Scope
-
-This boot procedure does not:
-
-1. Own governance.
-2. Make authority decisions.
-3. Redefine or own Runtime architecture.
-4. Redefine or own Engine architecture.
-5. Define commands.
-6. Define workflows.
-7. Define templates.
-8. Update or reinterpret ProjectStatus.
-9. Approve, certify, promote, or canonicalize any artifact.
-
----
-
-## 3. Operational Responsibilities
-
-### 3.1 Owns
-
-The AI System Boot Sequence owns:
-
-- repository boot procedure after Target Repository Resolution;
-- document loading order;
-- context assembly order;
-- boot validation;
-- boot failure handling.
-
-### 3.2 Does Not Own
-
-The AI System Boot Sequence does not own:
-
-- Target Repository selection or discovery;
-- governance;
-- authority decisions;
-- Runtime;
-- Engine;
-- commands;
-- workflows;
-- templates;
-- ProjectStatus.
-
----
-
-## 4. Boot Sequence
-
-Agents shall use the following boot sequence forAI-DOS v2 System Layer execution:
+## 2. Canonical System Flow
 
 ```text
-Human Task
-    ↓
-docs/AI/System/TargetRepositoryResolution.md
-    ↓
-AGENTS.md
-    ↓
-docs/AI/System/AuthorityModel.md
-    ↓
-docs/AI/AIFramework.md
-    ↓
-docs/AI/AIOrchestrator.md
-    ↓
-docs/AI/AgentSystemPrompt.md
-    ↓
-Relevant Runtime / Engine documents (only if required)
-    ↓
-Commands
-    ↓
-Workflows
-    ↓
-Templates
-    ↓
-Execution
-    ↓
-Validation
-    ↓
-Completion Report
+Repository Entry
+        ↓
+Invocation Context
+        ↓
+Target Repository Resolution
+        ↓
+Resolved Target Context
+        ↓
+Context Assembly
+        ↓
+Authority Resolution
+        ↓
+Decision Model
+        ↓
+Execution Sequence
+        ↓
+Operational Core
 ```
 
-Rules:
+| Step | System Meaning |
+|:---|:---|
+| Repository Entry | The entry point that hands control to AI-DOS startup rules. |
+| Invocation Context | The explicit request, scope, constraints, and supplied target inputs. |
+| Target Repository Resolution | The procedure that identifies the active Target Repository and creates Resolved Target Context. |
+| Resolved Target Context | The normalized target-supplied context accepted by AI-DOS. |
+| Context Assembly | The procedure that assembles temporary execution context from accepted inputs. |
+| Authority Resolution | The procedure that orders applicable authority inputs and detects conflicts. |
+| Decision Model | The procedure that chooses the safe next decision. |
+| Execution Sequence | The procedure that prepares bounded capability execution. |
+| Operational Core | The downstream AI-DOS capability area receiving prepared work. |
 
-1. Begin with the human task instruction and the resolved Target Repository context produced by `docs/AI/System/TargetRepositoryResolution.md`.
-2. Consume the resolved Target Repository root, Target AGENTS path, target-project resource declarations, protected areas, and validation context before loading target-project state.
-3. Use the resolved Target AGENTS path as the repository bootloader and do not independently rediscover or override the Target Repository.
-4. Use `docs/AI/System/AuthorityModel.md` to resolve tool-facing authority questions after the bootloader establishes the task boundary.
-5. Load `docs/AI/AIFramework.md`, `docs/AI/AIOrchestrator.md`, and `docs/AI/AgentSystemPrompt.md` in that order for Operational Core guidance.
-6. Load Runtime and Engine documents only when the active task requires Runtime or Engine authority.
-7. Load commands, workflows, and templates only as execution aids after higher authority and operational context are understood.
-8. Execute only within the active task boundary.
-9. Validate according to the task type and governing authorities.
-10. End with a completion report that records scope, modified files, validation, risks, and recommended next step.
+## 3. Accepted Context Model
 
----
+AI-DOS accepts only the following target concepts in the System Layer:
 
-## 5. Context Assembly Order
+| Concept | Meaning |
+|:---|:---|
+| Invocation Context | The explicit invocation request and supplied work boundary. |
+| Resolved Target Context | The normalized target context produced by Target Repository Resolution. |
+| Applicable Target Resources | Target-supplied resources needed for the authorized work. |
+| Target Objectives | The requested outcomes within the invocation. |
+| Target Constraints | Limits, exclusions, safety rules, and environmental restrictions. |
+| Target Authority Inputs | Authority-bearing inputs supplied or identified for the target. |
+| Target Execution Boundaries | File, artifact, scope, and action boundaries for execution. |
+| Target Validation Requirements | Checks or evidence expected for the work. |
 
-After reading the required boot documents, agents assemble context in this order:
+No additional target-owned planning, status, sequencing, or management construct is required by this System Layer document.
 
-1. Human task objective and explicit file restrictions.
-2. Target Repository Resolution Result: resolved Target Repository root, Target AGENTS path, target-project resource declarations, protected areas, and validation context.
-3. Repository bootloader requirements from the resolved Target AGENTS path.
-4. Authority resolution requirements from `docs/AI/System/AuthorityModel.md`.
-5. Operational Core guidance from `docs/AI/AIFramework.md`.
-6. Execution routing from `docs/AI/AIOrchestrator.md`.
-7. Agent behavior constraints from `docs/AI/AgentSystemPrompt.md`.
-8. Operational state from `docs/Projects/ForgeAI/Planning/ProjectStatus.md`.
-9. Roadmap sequence from `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`.
-10. Relevant Runtime or Engine authorities, only when required by the active task.
-11. Relevant commands, workflows, templates, checklists, and validation artifacts.
-12. Source files or documents explicitly in scope for the task.
+## 4. Responsibilities
 
-Lower-level execution aids cannot override higher authority, ProjectStatus policy, roadmap order, frozen-area boundaries, or explicit human file restrictions.
+Boot Sequence shall:
 
----
+1. Preserve AI-DOS as a reusable provider.
+2. Consume only `Invocation Context, Resolved Target Context, Applicable Target Resources, Target Objectives, Target Constraints, Target Authority Inputs, Target Execution Boundaries, and Target Validation Requirements`.
+3. Treat missing required input as a blocker.
+4. Keep target-owned operating models outside the System Layer.
+5. Produce clear handoff evidence for the next System Layer procedure.
 
-## 6. Boot Validation
+## 5. Procedure
 
-Before execution, agents shall validate that:
+| Order | Action | Output |
+|:---|:---|:---|
+| 1 | Confirm the current step in the canonical flow. | Flow position known. |
+| 2 | Read only applicable System Layer inputs and accepted Target Context. | Input set known. |
+| 3 | Validate that required target inputs are present and bounded. | Context readiness or blocker. |
+| 4 | Identify authority conflicts or missing validation requirements. | Conflict report or cleared handoff. |
+| 5 | Hand off to the next canonical System Layer step. | Prepared System Layer output. |
 
-1. The active task type is classified.
-2. Target Repository Resolution has completed with `RESOLVED` status.
-3. Required boot documents are readable.
-4. The active ProjectStatus path is `docs/Projects/ForgeAI/Planning/ProjectStatus.md`.
-5. The roadmap path is `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`.
-6. Frozen-area boundaries are known when relevant.
-7. Task-specific authority documents have been identified.
-8. File restrictions are understood.
-9. Validation commands or checks have been selected for the task type.
-10. No lower-level command, workflow, template, or generated task conflicts with higher authority.
+## 6. Boundaries
 
----
+This document must not require, infer, update, or depend on target-owned management artifacts. It must remain valid when a target supplies only the accepted context model and no other operating structure.
 
-## 7. Boot Failure Handling
+## 7. Blockers
 
-Stop and report a blocker when:
+Report a blocker when:
 
-- Target Repository Resolution is incomplete, ambiguous, conflicting, or unsafe;
-- the resolved Target AGENTS path is missing or unreadable;
-- `docs/AI/System/AuthorityModel.md` is missing or unreadable;
-- required Operational Core documents are missing or unreadable;
-- `docs/Projects/ForgeAI/Planning/ProjectStatus.md` is missing or unreadable when operational state is required;
-- `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` is missing or unreadable when roadmap sequence is required;
-- the active task type cannot be classified;
-- authority or ownership conflicts cannot be resolved through the authority order;
-- the requested work conflicts with explicit file restrictions, ProjectStatus policy, roadmap order, or frozen-area boundaries;
-- validation, review, certification, approval, promotion, or ProjectStatus update requirements are ambiguous;
-- source code changes are required but the active task does not authorize source code changes.
+- Invocation Context is absent or ambiguous.
+- Resolved Target Context is unavailable when required.
+- Target Authority Inputs conflict.
+- Target Execution Boundaries are missing for requested changes.
+- Target Validation Requirements are required but unavailable.
 
-The completion report shall identify the blocker, cite the governing boundary when possible, and recommend a Human Governance resolution path.
+## 8. Validation Checklist
 
----
+| Check | Required Result |
+|:---|:---|
+| Canonical flow preserved | Yes |
+| Accepted context model only | Yes |
+| Target-owned management models required | No |
+| Runtime or Engine implementation introduced | No |
+| System Layer handoff clear | Yes |
 
-## 8. Completion Report Expectations
+## 9. Handoff
 
-A completion report for work governed by this boot sequence should include:
-
-- summary;
-- files modified;
-- boot sequence confirmation;
-- authority validation;
-- roadmap validation;
-- ProjectStatus policy confirmation;
-- validation commands and results;
-- risks or blockers;
-- recommended next step.
-
-Agents may recommend a ProjectStatus update when operational state is affected, but shall not update ProjectStatus unless the task explicitly authorizes that change.
+The output of this document is a bounded System Layer handoff to the next canonical step. The handoff contains only the accepted context model, authority findings, blockers, validation expectations, and execution boundary evidence.
