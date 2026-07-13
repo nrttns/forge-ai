@@ -1,17 +1,7 @@
 # A.5.5 — Execution Engine RFC
 
 >AI-DOS v4 · Engine Architecture RFC
-> Phase 2 Engine Specialization · Draft / Non-canonical
-
----
-
-## 1. Status
-
-This RFC is a draft, non-canonical Engine Architecture RFC for the Execution Engine, the fifth individual Engine specialization in Phase 2 of theAI-DOS v4 Engine Platform.
-
-Canonical Status: Non-canonical until reviewed and approved.
-
-This document defines the architecture of the Execution Engine within the approved Engine Platform. It specializes the Engine Platform by defining the Execution Engine's purpose, responsibilities, inputs, outputs, internal model, operations, events, ownership, and handoff contract. It does not redefine runtime, metadata, terminology, artifacts, engine lifecycle, engine state, registry, capability, authority, ownership, implementation, persistence, platform adapter, agent runtime, swarm runtime, or ProjectStatus models established upstream.
+> Engine Specialization · Draft / Non-canonical
 
 ---
 
@@ -21,7 +11,7 @@ This document defines the architecture of the Execution Engine within the approv
 |:---|:---|
 | Identifier | `AI-DOS-A-5-5` |
 | Title | A.5.5 — Execution Engine RFC |
-| Version | `0.2.0-draft` |
+| Version | `0.3.0-draft` |
 | Status | Draft |
 | Canonical Status | Non-canonical until reviewed, approved, and explicitly promoted by Human Governance |
 | Classification | Engine Specialization Architecture |
@@ -31,45 +21,78 @@ This document defines the architecture of the Execution Engine within the approv
 | Review Authority | Framework Governance |
 | Approval Authority | Human Governance |
 | Created | 2026-07-08 |
-| Last Updated | 2026-07-10 |
+| Last Updated | 2026-07-13 |
 | Lifecycle Phase | Draft |
-| Traceability ID | `AI-DOS.V2.RUNTIME.A-5-5` |
-| Scope | Defines the Execution Engine specialization only, including its responsibilities, inputs, outputs, lifecycle participation, validation expectations, AI consumption rules, and handoff contract. |
-| Out of Scope | Runtime Architecture redefinition, Engine Platform redefinition, Engine Foundation redefinition, other Engine Specialization redefinition, implementation, certification, freeze decisions, ProjectStatus updates, and DevelopmentPhases updates. |
+| Traceability ID | `AI-DOS.V3.A.005.5` |
+| Scope | Defines the Execution Engine specialization only, including its purpose, mission, responsibilities, non-responsibilities, internal model, resolution rules, state, invariants, validation rules, consumed inputs, produced outputs, operations, events, ownership, handoff contract, and lifecycle participation within the AI-DOS v4 Engine Platform. |
+| Out of Scope | Runtime Architecture redefinition, Engine Platform redefinition, Engine Foundation redefinition, other Engine Specialization redefinition, implementation, certification execution, freeze decisions, ProjectStatus updates, and DevelopmentPhases updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
-| Normative References | `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/Standards/TPL-001-RFC-Template-Standard.md` |
-| Dependencies | A.3 Runtime Architecture; A.4 Engine Architecture; A.4.1 through A.4.7 Engine Foundation RFCs; A.5.0 Engine Specialization RFC Template; STD-003; STD-010; TPL-000; TPL-001. |
-| Consumes | Runtime Architecture, Engine Platform Architecture, Engine Foundation RFCs, A.5.0 specialization template, canonical terminology, metadata rules, upstream Engine handoff outputs where applicable, and repository-normalization instructions. |
+| Normative References | `docs/AI/Templates/Standards/TPL-001-RFC-Template-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md` |
+| Dependencies | A.3 Runtime Architecture; A.4 Engine Architecture; A.4.1 through A.4.7 Engine Foundation RFCs; A.5.0 Engine Specialization RFC Template; A.5.1 Context Engine RFC; A.5.2 Knowledge Engine RFC; A.5.3 Planning Engine RFC; A.5.4 Decision Engine RFC; STD-003; STD-010; TPL-000; TPL-001. |
+| Consumes | Runtime Architecture, Engine Platform Architecture, Engine Foundation RFCs, A.5.0 specialization template, canonical terminology, metadata rules, upstream Engine handoff outputs (decision artifacts from Decision Engine, validated plans from Planning Engine, context snapshots from Context Engine, procedural knowledge from Knowledge Engine), and repository-normalization instructions. |
 | Produces | Execution Engine architecture specification, Execution Engine responsibility boundaries, inputs, outputs, validation expectations, AI consumption rules, and handoff contract. |
-| Related Specifications | `docs/AI/Runtime/README.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md` |
+| Related Specifications | `docs/AI/Runtime/README.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md`; `docs/AI/Runtime/A.5.1-Context-Engine-RFC.md`; `docs/AI/Runtime/A.5.2-Knowledge-Engine-RFC.md`; `docs/AI/Runtime/A.5.3-Planning-Engine-RFC.md`; `docs/AI/Runtime/A.5.4-Decision-Engine-RFC.md` |
 | Supersedes | None |
 | Superseded By | None |
-| Promotion Requirements | STD-010 metadata validation, STD-003 terminology validation, TPL-001 RFC-structure validation, Runtime README navigation alignment, ownership-boundary validation, Framework Governance review, Human Governance approval, and explicit canonical promotion. |
+| Promotion Requirements | STD-010 metadata validation, STD-003 terminology validation, TPL-001 RFC-structure validation, A.5.0 template compliance, TPL-001 specialization compliance, Runtime README navigation alignment, ownership-boundary validation, Framework Governance review, Human Governance approval, and explicit canonical promotion. |
 | Certification Status | Not certified |
+
+<details>
+<summary>Metadata Value Expansion</summary>
+
+**Normative References (full paths):**
+
+- `docs/AI/Templates/Standards/TPL-001-RFC-Template-Standard.md`
+- `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`
+- `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`
+- `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`
+
+**Consumed Authorities:**
+
+- TPL-001: RFC mandatory section structure (20 sections), specialization model, validation rules, optional section catalog, anti-patterns
+- TPL-000: template lifecycle, template taxonomy, placeholder grammar, naming conventions, validation model, compliance levels, certification requirements, directory structure, composition and inheritance model
+- STD-010: metadata field definitions, relationship taxonomy, document class expectations, lifecycle model, governance rules
+- STD-003: canonical terminology for RFC-related vocabulary
+- A.3: Runtime Architecture as the governing architectural context
+- A.4: Engine Platform Architecture as the governing engine context
+- A.4.1–A.4.7: Engine Foundation RFCs as the governing engine capability and contract context
+- A.5.0: Engine Specialization RFC Template as the governing template contract, section mapping, and validation model
+- A.5.1: Context Engine RFC as the upstream context provider for precondition verification
+- A.5.2: Knowledge Engine RFC as the upstream knowledge provider for procedural knowledge and constraint entities
+- A.5.3: Planning Engine RFC as the upstream plan provider for validated plans, step definitions, and dependency graphs
+- A.5.4: Decision Engine RFC as the upstream decision provider for authorized decision artifacts and execution triggers
+
+</details>
 
 ---
 
-## 3. Purpose
+## Executive Summary
+
+A.5.5 defines the architecture of the Execution Engine, the fifth individual Engine specialization in Phase 2 of the AI-DOS v4 Engine Platform. The Execution Engine is the primary action Engine in the pipeline — it carries out validated plans that have been authorized by the Decision Engine by executing individual plan steps in dependency order, producing verifiable step results, and generating structured execution feedback for upstream Engines. While the Context Engine (A.5.1) provides the state of the world, the Knowledge Engine (A.5.2) provides domain knowledge, the Planning Engine (A.5.3) produces plan structures, and the Decision Engine (A.5.4) selects and authorizes plans, the Execution Engine is the component that actually advances the system from its current state toward the goal by executing plan steps and producing observable side effects on the system’s state. This RFC specializes A.5.0 (which specializes TPL-001) by defining the Execution Engine’s purpose, mission, responsibilities, internal model, resolution rules, state characteristics, invariants, validation rules, consumed inputs, produced outputs, operations, events, ownership, handoff contract, and lifecycle behaviour. It does not redefine Runtime, Engine Platform, Engine Foundation, or any upstream standard. The Execution Engine is architecturally unique in that it is the only Engine in the pipeline that produces observable side effects and operates with strict determinism — no AI/LLM involvement in step processing, ordering, scheduling, or error recovery.
+
+---
+
+## Purpose
+
+### Engine Purpose
 
 The Execution Engine exists to carry out validated plans that have been authorized by the Decision Engine. While the Context Engine (A.5.1) provides the state of the world, the Knowledge Engine (A.5.2) provides domain knowledge, the Planning Engine (A.5.3) produces the plan structure, and the Decision Engine (A.5.4) selects and authorizes the plan, the Execution Engine is the component that actually advances the system from its current state toward the goal by executing individual plan steps in the correct order and producing verifiable results.
 
-A step execution, in the context of this Engine, is the deterministic processing of a single plan step: satisfying its preconditions, performing the step's defined operation within the Engine Platform's execution environment, producing step results and postconditions, and recording the execution for auditability. Step executions are the primary output of the Execution Engine. Step results are consumed by the Validation Engine (A.5.6, future) for correctness verification, by the Planning Engine (A.5.3) for plan revision triggers, and by the Context Engine (A.5.1) for state updates.
+A step execution, in the context of this Engine, is the deterministic processing of a single plan step: satisfying its preconditions, performing the step’s defined operation within the Engine Platform’s execution environment, producing step results and postconditions, and recording the execution for auditability. Step executions are the primary output of the Execution Engine. Step results are consumed by the Validation Engine (A.5.6, future) for correctness verification, by the Planning Engine (A.5.3) for plan revision triggers, and by the Context Engine (A.5.1) for state updates.
 
 Without a dedicated Execution Engine, the system would have no structured mechanism for executing plan steps, managing step state, respecting dependency ordering, or producing execution feedback. Peer Engines would need to independently determine how and when to execute steps, leading to out-of-order execution, violated dependencies, non-deterministic side effects, and no audit trail. The Execution Engine eliminates these risks by centralizing step execution, state management, ordering enforcement, and feedback production.
 
-The Execution Engine's purpose aligns with Engine Capability domain "Task Execution" as defined by A.4.7. The Execution Engine uniquely owns the capability of executing plan steps in dependency order, managing step lifecycle state, parallelizing independent steps, producing step results, and generating execution feedback to upstream Engines.
+The Execution Engine’s purpose aligns with Engine Capability domain “Task Execution” as defined by A.4.7. The Execution Engine uniquely owns the capability of executing plan steps in dependency order, managing step lifecycle state, parallelizing independent steps, producing step results, and generating execution feedback to upstream Engines.
 
-The Execution Engine does not decide which plan to execute — that is the Decision Engine's responsibility. The Execution Engine does not generate plans — that is the Planning Engine's responsibility. The Execution Engine defines the architectural contract for execution operations: what a step execution entails, how ordering is enforced, how parallelization works, how failures are handled, and how execution results are handed off to downstream consumers.
+The Execution Engine does not decide which plan to execute — that is the Decision Engine’s responsibility. The Execution Engine does not generate plans — that is the Planning Engine’s responsibility. The Execution Engine defines the architectural contract for execution operations: what a step execution entails, how ordering is enforced, how parallelization works, how failures are handled, and how execution results are handed off to downstream consumers.
 
----
-
-## 4. Mission
+### Engine Mission
 
 The mission of the Execution Engine is to faithfully execute authorized plan steps in dependency order, producing verifiable step results and structured execution feedback while maintaining full auditability and deterministic behaviour.
 
 This mission translates into five mission-level objectives:
 
-1. **Ordering Fidelity** — Every step is executed only after all its strong dependencies have completed successfully. The execution order respects the topological sort of the plan's dependency graph. Independent steps (no strong dependency relationship) may be executed in parallel when the parallelization policy permits. No step executes before its preconditions are satisfied.
+1. **Ordering Fidelity** — Every step is executed only after all its strong dependencies have completed successfully. The execution order respects the topological sort of the plan’s dependency graph. Independent steps (no strong dependency relationship) may be executed in parallel when the parallelization policy permits. No step executes before its preconditions are satisfied.
 
 2. **State Determinism** — Given the same authorized plan, the same decision artifact, and the same initial context, the Execution Engine produces the same step results in the same order. Execution is deterministic: no randomness, no external service calls that vary, and no AI/LLM involvement in step processing. This supports reproducibility and auditability.
 
@@ -81,57 +104,647 @@ This mission translates into five mission-level objectives:
 
 ---
 
-## 5. Engine Responsibilities
+## Scope
+
+### In Scope
+
+A.5.5 governs:
+
+1. The Execution Engine’s architectural purpose, mission, and capability domain within the Engine Platform.
+2. The Execution Engine’s responsibilities for execution intake, step ordering, step execution, step state management, parallelization, execution feedback production, and execution lifecycle management.
+3. The Execution Engine’s non-responsibilities and boundary definitions with all peer Engines and platform components.
+4. The Execution Engine’s position in the Engine topology, data flow characterization, and unavailability impact.
+5. The Execution Engine’s internal model: the six-stage processing pipeline (Execution Intake, Order Resolver, Step Scheduler, Step Executor, Result Collector, Feedback Dispatcher).
+6. The Execution Engine’s resolution rules for ambiguity, conflict, and revision scope.
+7. The Execution Engine’s state dimensions, consistency rules, and recovery requirements.
+8. The Execution Engine’s eight invariants and validation rules for inputs, execution, and state transitions.
+9. The Execution Engine’s consumed inputs (execution commands, decision artifacts, plans, context, knowledge, configuration) and produced outputs (step results, execution feedback, execution metadata, execution events).
+10. The Execution Engine’s operations (execution, query, retry) and events (emitted and reacted to).
+11. The Execution Engine’s lifecycle behaviour within the A.4.4 Engine Lifecycle model.
+12. The Execution Engine’s ownership contract and handoff contract.
+13. The Execution Engine’s AI consumption boundaries (none in core architecture).
+
+### Out of Scope
+
+A.5.5 does not:
+
+1. Source code, implementation files, and code repositories.
+2. REST endpoints, API definitions, GraphQL schemas, gRPC service definitions, and transport protocols.
+3. Persistence mechanisms, database schema design, Neo4j implementation, and vector database configuration.
+4. Caching strategies, cache invalidation, and cache infrastructure.
+5. LLM call orchestration, prompt engineering, model selection, token management, and inference optimization.
+6. Agent runtime design, agent lifecycle management, and agent communication protocols.
+7. Swarm runtime design, swarm coordination, and swarm topology management.
+8. Platform adapter specifications and adapter lifecycle management.
+9. ProjectStatus updates, project tracking, and milestone reporting.
+10. Certification execution and canonical promotion.
+11. Step operation logic definition or implementation.
+12. Resource provisioning and capacity planning.
+13. Distributed execution across multiple nodes or clusters.
+14. UI/UX design and visualization of execution progress.
+15. Redefine Runtime Architecture (A.3), Engine Platform Architecture (A.4), or any Engine Foundation RFC (A.4.1 through A.4.7).
+16. Redefine any other Engine Specialization (A.5.1, A.5.2, A.5.3, A.5.4, A.5.6+).
+
+### Future Consumers
+
+| Consumer | Consumption Pattern | Expected Execution Usage |
+|:---|:---|:---|
+| **Validation Engine (A.5.6, future)** | Pull on demand | Retrieves step results for correctness verification against plan requirements and success criteria |
+| **Memory Engine (A.5.9, future)** | Push subscription (completed executions) | Stores execution contexts, step results, and execution traces for pattern recognition and performance analysis |
+| **Planning Engine (A.5.3)** | Event-driven (step feedback) | Consumes step completion and failure events for plan revision evaluation and plan lifecycle state updates |
+| **Decision Engine (A.5.4)** | Event-driven (execution progress) | Consumes execution completion events for decision validity monitoring |
+| **Context Engine (A.5.1)** | Event-driven (state changes) | Consumes step postconditions and side effects for contextual state updates |
+| **Engine Platform (A.4)** | Event-driven | Consumes lifecycle events for platform-level monitoring |
+| **Knowledge Graph Projection** | Asynchronous | Consumes execution, step, and phase metadata for graph-based analysis |
+
+---
+
+## Normative Authority
+
+| Authority | Relationship |
+|:---|:---|
+| Human Governance | Ultimate approval and canonical promotion authority for this RFC. |
+| `AGENTS.md` | Defines the AI agent behavioural boundaries and operational constraints that all AI-authored documents shall observe. |
+| `docs/AI/GOVERNANCE.md` | Establishes the governance framework, review processes, and approval workflows that this RFC shall follow. |
+| `docs/AI/FrameworkGovernance.md` | Defines framework-level governance policies, conflict resolution, exception handling, and escalation procedures. |
+
+This section follows the Universal Section Contract (A.5.0 Section 9). The Normative Authority for this RFC is identical to the normative authority defined by A.5.0 and TPL-001 — no Engine-specific normative authorities are introduced or redefined.
+
+---
+
+## Normative References
+
+| Reference | Full Path | Consumption |
+|:---|:---|:---|
+| TPL-001 | `docs/AI/Templates/Standards/TPL-001-RFC-Template-Standard.md` | Governing RFC template standard; A.5.5 follows TPL-001’s 20 mandatory sections with Engine-specific subsections. |
+| TPL-000 | `docs/AI/Templates/Standards/TPL-000-Template-Standard.md` | Governing template standard; defines template lifecycle, taxonomy, and compliance levels. |
+| STD-010 | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` | Governing metadata standard; defines the metadata schema, mandatory fields, and version rules. |
+| STD-003 | `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md` | Canonical terminology standard; defines the terminology that this RFC shall use. |
+
+This section follows the Universal Section Contract (A.5.0 Section 9). The Normative References for this RFC are identical to those defined by A.5.0 and TPL-001 — no Engine-specific normative references are introduced or redefined.
+
+---
+
+## Dependencies
+
+| Dependency | Relationship | Impact if Missing |
+|:---|:---|:---|
+| A.3 Runtime Architecture | Governing architectural context for all Runtime documents including Engine RFCs | Execution Engine would lack the architectural context that defines its operational environment |
+| A.4 Engine Architecture | Governing Engine Platform definition, capability model, and contract framework | Execution Engine would lack the platform boundary that separates Engine specialization from platform definition |
+| A.4.1 Engine Kernel RFC | Kernel contract and mediation rules | Execution Engine could not define its interaction with the Kernel layer’s execution environment |
+| A.4.2 Engine Metadata RFC | Metadata model for Engine identity, classification, and tracking | Execution Engine would lack a consistent metadata foundation |
+| A.4.3 Engine Registry RFC | Registry services for Engine discovery and consumer management | Execution Engine could not register as a Task Execution capability provider or discover peer Engines |
+| A.4.4 Engine Lifecycle RFC | Lifecycle state machine that the Execution Engine specializes in its Lifecycle section | Execution Engine could not define Engine-specific lifecycle transitions within the platform model |
+| A.4.5 Engine Communication RFC | Communication types, modes, and failure/recovery model | Execution Engine could not define Engine-specific communication patterns for feedback dispatch |
+| A.4.6 Engine State RFC | State categories, visibility model, and synchronization rules | Execution Engine could not define Engine-specific state management for execution contexts and step states |
+| A.4.7 Engine Capability RFC | Capability taxonomy and registration model | Execution Engine could not reference the “Task Execution” capability domain |
+| A.5.0 Engine Specialization RFC Template | Governing template contract, section mapping, and validation model | Execution Engine would lack the structural contract that ensures TPL-001 compliance |
+| A.5.1 Context Engine RFC | Context snapshot production for precondition verification and state update consumption | Execution Engine could not verify step preconditions or deliver state change events |
+| A.5.2 Knowledge Engine RFC | Procedural knowledge and constraint entity production | Execution Engine could not retrieve domain-specific step execution patterns |
+| A.5.3 Planning Engine RFC | Validated plan production with step definitions and dependency graphs | Execution Engine could not execute — it requires a validated plan to process |
+| A.5.4 Decision Engine RFC | Authorized decision artifact production and execution triggers | Execution Engine could not begin execution — it requires an authorized decision |
+| STD-010 | Document metadata schema and compliance rules | Metadata would be inconsistent and non-compliant |
+| STD-003 | Canonical terminology | Terminology would be inconsistent across Engine RFCs |
+| TPL-000 | Template governance and lifecycle model | Template would lack governing template authority |
+| TPL-001 | RFC template standard and mandatory section structure | RFC would lack the structural foundation it specializes |
+
+---
+
+## Architecture
+
+### Engine Position
+
+#### Topological Position
+
+The Execution Engine is the primary action Engine in the pipeline. It sits downstream of all information and reasoning Engines and is the first Engine that produces system-state-changing side effects. It consumes decisions and plans, and produces step results and execution feedback.
+
+```
+  ┐────────┘     ┐────────┘     ┐────────┘     ┐────────┘
+  │   Context     │     │  Knowledge   │     │  Planning    │     │  Decision    │
+  │   Engine      │     │  Engine      │     │  Engine      │     │  Engine      │
+  │  (A.5.1)      │     │  (A.5.2)     │     │  (A.5.3)     │     │  (A.5.4)     │
+  │  Snapshots    │     │  Procedures  │     │  Validated   │     │  Authorized  │
+  │               │     │              │     │  Plans       │     │  Decisions   │
+  └────┬──────┘     └────┬──────┘     └────┬──────┘     └────┬──────┘
+         │                     │                     │                     │
+         │  (context for       │  (step            │  (plan +           │  (decision
+         │   precondition      │   procedures)      │   dependency       │   artifact +
+         │   checks)          │                     │   graph)          │   constraints)
+         │                     │                     │                     │
+         └──────┬──────┬──────┬──────┬──────┬──────┘
+                    │                     │                     │
+                    ▼                     ▼                     ▼
+       ┌───────────────────────────────────────────────┐
+       │                      Execution Engine                            │
+       │                        (A.5.5)                                   │
+       │  Intake → Order → Schedule → Execute → Collect → Feedback        │
+       └───┬─────────────┬───────────────┬────────────┬───┘
+           │                 │                  │                  │
+    └──────┬─────────────────────────────────────┬─────────────────┬──────┬──────┬──────┘
+    ▼                        ▼                         ▼                  ▼
+┌───────────┐         ┌───────────────┐          ┌───────────┐       ┌───────────┐
+│ Context  │         │   Planning   │          │Validation│       │  Memory  │
+│ Engine   │         │   Engine     │          │ Engine   │       │  Engine  │
+│ (A.5.1)  │         │   (A.5.3)    │          │ (A.5.6)  │       │ (A.5.9)  │
+│ (updates)│         │  (feedback)  │          │(results) │       │(history) │
+└───────────┘         └───────────────┘          └───────────┘       └───────────┘
+```
+
+#### Data Flow Characterization
+
+The Execution Engine has a well-defined input-output pattern:
+
+- **From Decision Engine** — Authorized decision artifacts containing the selected plan reference, execution constraints, and authorization metadata. The Execution Engine consumes decision artifacts as the trigger to begin execution.
+- **From Planning Engine** — Validated plans with step definitions, dependency graphs, preconditions, postconditions, and expected outcomes. The Execution Engine pulls the plan referenced by the decision artifact.
+- **From Context Engine** — Resolved context snapshots for precondition verification and state grounding. The Execution Engine pulls context at the start of each execution phase to verify preconditions.
+- **From Knowledge Engine** — Procedural knowledge for step execution patterns and constraint entities for precondition evaluation. The Execution Engine pulls knowledge based on step type and domain.
+- **To Context Engine** — State change events from step postconditions and side effects. The Context Engine updates the contextual state based on execution results.
+- **To Planning Engine** — Step completion and failure feedback for plan revision evaluation and plan lifecycle state updates.
+- **To Decision Engine** — Execution progress events for decision validity monitoring.
+- **To Validation Engine** — Step results for correctness verification against plan requirements.
+- **To Memory Engine** — Completed execution records for pattern recognition and learning.
+
+The Execution Engine’s topology is a transformer with side effects — it receives plans and authorization, executes steps that change system state, and produces results and feedback. It is the only Engine in the pipeline that produces observable side effects on the system’s state.
+
+#### Unavailability Impact
+
+If the Execution Engine is unavailable, no plan steps can be executed. Authorized decision artifacts accumulate without being processed. The system cannot make progress on any active goals. The Engine Platform’s graceful degradation model (A.4.4) should define fallback behaviour — the Execution Engine defines what “no-execution” means but does not define how the system compensates. A possible fallback is queuing execution commands for later processing when the Execution Engine recovers.
+
+### Internal Engine Model
+
+#### Conceptual Overview
+
+The Execution Engine’s internal model consists of six processing stages that transform an authorized decision into completed step results:
+
+```
+Execution Intake → Order Resolver → Step Scheduler → Step Executor → Result Collector → Feedback Dispatcher
+       ↑                                                                           │
+       │                    ┌─────────────────────────────────────────────────┘
+       │                    │
+       └────────────────────┬────────────────────────────────────────┬────────────┘
+                    (cancellation: active executions may be cancelled
+                     when Decision Engine emits supersession/cancellation events)
+```
+
+#### Execution Intake
+
+The Execution Intake stage receives and validates execution commands:
+
+1. **Command Validation** — Validates the execution command structure: decision artifact reference valid, decision in “authorized” state, execution constraints structurally valid, requesting Engine authenticated.
+2. **Decision Retrieval** — Retrieves the authorized decision artifact from the Decision Engine. Verifies that the decision has not been superseded or cancelled since the command was issued.
+3. **Plan Retrieval** — Retrieves the validated plan referenced by the decision artifact from the Planning Engine. Verifies that the plan is in “validated” or “active” state with a complete dependency graph and validation report.
+4. **Execution Context Creation** — Creates an execution context that binds the decision artifact, the plan, and the execution constraints into a single execution scope. The execution context is assigned a unique identifier and enters the “initialized” lifecycle state.
+5. **Intake Record** — Produces an intake record documenting the decision artifact, plan version, execution constraints, and any warnings (staleness flags, knowledge gaps).
+
+The Execution Intake stage is deterministic: the same command and the same upstream state produce the same intake record and execution context.
+
+#### Order Resolver
+
+The Order Resolver transforms the plan’s dependency graph into an executable ordering:
+
+1. **Topological Sort** — Computes a topological sort of the plan’s dependency graph, producing an ordered list of execution phases. Each phase contains steps whose strong dependencies are all in preceding phases.
+2. **Parallelization Analysis** — Within each phase, identifies steps that can execute concurrently (no shared resource conflicts, no execution constraints requiring sequential order). Steps within a phase are marked as “parallelizable” or “sequential” based on the parallelization policy and decision constraints.
+3. **Precondition Verification** — For each step in the first executable phase, verifies that preconditions are satisfiable against the current context snapshot. Steps whose preconditions are not satisfiable are flagged for deferred execution or escalation.
+4. **Execution Order Record** — Produces an execution order record documenting the phases, the steps within each phase, the parallelization assignments, and any precondition warnings.
+
+The Order Resolver is deterministic: the same dependency graph and the same context produce the same execution order.
+
+#### Step Scheduler
+
+The Step Scheduler manages the transition of steps from “pending” to “ready” to “executing”:
+
+1. **Phase Advancement** — When all steps in the current phase have reached terminal state (completed, failed, skipped, cancelled), the Step Scheduler advances to the next phase.
+2. **Readiness Check** — For each step in the next phase, verifies that all strong dependency steps have completed successfully (not failed, skipped, or cancelled). If a dependency has failed, the dependent step is transitioned to “skipped” with the reason “dependency failed”.
+3. **Concurrency Control** — Enforces the parallelization limit by queuing ready steps and dispatching them as execution slots become available. If the concurrency limit is 1, steps execute sequentially.
+4. **Retry Evaluation** — When a step fails, evaluates the retry policy: if the failure type is retryable and the retry count has not been exceeded, the step is returned to the “ready” queue with an incremented retry counter. If the retry limit is exceeded, the step is transitioned to “failed”.
+5. **Failure Containment** — When a step fails (after retry exhaustion), applies the failure containment policy: if the policy is “halt”, all subsequent phases are cancelled; if the policy is “continue”, steps in subsequent phases that do not depend on the failed step may still execute.
+
+The Step Scheduler is deterministic: the same step states and the same policies produce the same scheduling decisions.
+
+#### Step Executor
+
+The Step Executor processes individual step executions:
+
+1. **Step Dispatch** — Transitions the step from “ready” to “executing” and begins processing the step’s defined operation within the Engine Platform’s execution environment.
+2. **Precondition Confirmation** — Immediately before execution, confirms that preconditions are still satisfiable. If the context has changed since scheduling, re-evaluates preconditions. If preconditions are no longer satisfiable, the step is transitioned to “failed” with reason “precondition violation at execution time”.
+3. **Operation Execution** — Executes the step’s operation. The operation is a deterministic, self-contained unit of work defined in the plan step. The Execution Engine provides the execution environment (context access, knowledge access) but does not define the operation logic.
+4. **Result Capture** — Captures the step result: outcome, postconditions (verified against the plan step’s expected postconditions), side effects produced, execution duration, and resource consumption.
+5. **State Transition** — Transitions the step to “completed” (if outcome is success) or “failed” (if outcome is failure). Records the step result and emits the appropriate event.
+
+The Step Executor is deterministic: the same step definition, context, and knowledge produce the same step result.
+
+#### Result Collector
+
+The Result Collector aggregates step results into phase-level and execution-level summaries:
+
+1. **Phase Completion Detection** — Monitors the state of all steps in the current phase. When all steps have reached terminal state, determines the phase outcome: “completed” (all steps completed), “partially completed” (some steps completed, some failed or skipped), or “failed” (all steps failed or no steps completed).
+2. **Phase Summary Production** — Produces a phase summary containing: phase identifier, step outcomes, phase outcome, total phase duration, and any flags or warnings.
+3. **Execution Completion Detection** — When all phases have been processed, determines the execution outcome: “completed” (all steps completed), “partially completed” (some steps completed, some failed or skipped), or “failed” (critical failure or no steps completed).
+4. **Execution Summary Production** — Produces an execution summary containing: execution context identifier, decision reference, plan reference, overall outcome, step outcome counts, phase outcome counts, total execution duration, and any flags or warnings.
+
+The Result Collector is deterministic: the same step results and phase definitions produce the same summaries.
+
+#### Feedback Dispatcher
+
+The Feedback Dispatcher delivers execution feedback to upstream Engines:
+
+1. **Step Feedback Dispatch** — After each step completes or fails, dispatches step execution feedback to the Planning Engine (for plan revision evaluation) and the Context Engine (for state updates from postconditions and side effects).
+2. **Phase Feedback Dispatch** — After each phase completes, dispatches phase completion feedback to the Planning Engine (for plan progress tracking) and the Decision Engine (for decision validity monitoring).
+3. **Execution Feedback Dispatch** — After the entire execution completes, fails, or is cancelled, dispatches the execution completion summary to the Planning Engine, Decision Engine, Memory Engine, and audit systems.
+4. **Feedback Acknowledgment Tracking** — Tracks feedback delivery acknowledgments from consuming Engines. If a consuming Engine is unreachable, the feedback is queued for delivery per the Engine Communication retry model (A.4.5).
+
+The Feedback Dispatcher is deterministic: the same step results and phase summaries produce the same feedback payloads. Delivery timing may vary due to network conditions but the feedback content does not.
+
+### Resolution Rules
+
+#### Ambiguity Resolution
+
+| Ambiguity | Resolution Rule |
+|:---|:---|
+| Execution command lacks explicit constraints | Default execution constraints applied (sequential execution, no timeout, halt-on-failure) |
+| Step has missing procedural knowledge | Generic execution pattern applied; knowledge-gap warning in execution record |
+| Precondition evaluation yields indeterminate result (stale context) | Precondition treated as failed; step deferred to next context refresh cycle |
+| Multiple valid topological orderings | Deterministic tiebreaker applied: steps ordered by step identifier (lexicographic) within each phase |
+| Phase has both parallelizable and non-parallelizable steps | Non-parallelizable steps execute first within the phase; parallelizable steps execute after non-parallelizable steps complete |
+
+#### Conflict Resolution
+
+| Conflict | Resolution Rule |
+|:---|:---|
+| Decision superseded during execution | Current execution cancelled after grace period; new decision triggers new execution |
+| Plan revised during execution | Current execution continues with original plan (plans are immutable); Planning Engine notified of revision; new execution may be triggered for revised plan |
+| Context change invalidates in-progress step’s postconditions | Step completes (already in “executing” state); postcondition mismatch flagged in step result; Planning Engine notified for plan revision evaluation |
+| Step failure with retryable failure type | Retry per retry policy; if retries exhausted, step marked “failed”; failure containment policy applied |
+| Execution timeout exceeded for a step | Step forcibly transitioned to “failed” with reason “timeout”; failure containment policy applied |
+
+#### Revision Scope Rules
+
+| Trigger Type | Default Scope | Expanded Scope When |
+|:---|:---|:---|
+| Decision superseded | Entire execution cancelled | Always entire execution |
+| Decision cancelled | Entire execution cancelled | Always entire execution |
+| Context change during execution | Re-evaluate preconditions for pending steps | Expanded to re-evaluate completed step postconditions if context change is major |
+| Plan revised (new version available) | No impact on current execution (original plan is immutable) | Governance may request execution restart with revised plan |
+| Step failure (single) | Retry if policy permits; contain failure if not | Expanded to phase-level evaluation if failure affects shared resources |
+| Step failure (multiple in same phase) | Halt execution if halt-on-failure policy; continue independent steps if continue-on-failure | Expanded to full execution halt if more than 50% of phase steps failed |
+
+### Engine State
+
+#### State Dimensions
+
+| Dimension | Description | Volatility |
+|:---|:---|:---|
+| **Configuration State** | Retry policy, parallelization limits, execution timeout, failure containment policy, cancellation grace period | Low — governance-authorized changes only |
+| **Active Executions State** | Current set of active execution contexts with their step states, phase progress, and decision references | High — changes with every step state transition |
+| **Execution Archive State** | Historical execution contexts (completed, failed, cancelled) with their full records and step results | Low — append-only; grows over time |
+| **Pending Commands State** | Queued execution commands awaiting processing | High — changes with every incoming command |
+| **In-Flight Steps State** | Steps currently in “executing” state across all active execution contexts | High — changes with step dispatch and completion |
+| **Feedback Queue State** | Feedback events awaiting delivery to upstream Engines | Medium — changes with step completions and delivery acknowledgments |
+| **Context Reference State** | Most recent Context Engine snapshot version used for precondition verification | Medium — updates with context events |
+| **Knowledge Reference State** | Procedural knowledge entity versions used in active step executions | Medium — updates with knowledge events |
+| **Decision Reference State** | Decision artifact versions bound to active execution contexts | Medium — updates with decision events |
+| **Plan Reference State** | Plan versions referenced by active execution contexts | Low — plans are immutable during execution |
+| **Lifecycle State** | Current Engine lifecycle phase (per A.4.4) | Low — changes only at lifecycle transitions |
+
+#### State Consistency
+
+- Active Executions State is consistent with the Decision Reference State — every active execution context references a valid, authorized decision artifact.
+- Active Executions State is consistent with the Plan Reference State — every active execution context references a valid plan version.
+- Active Executions State is consistent with the In-Flight Steps State — every step in “executing” state belongs to an active execution context.
+- Step states within an execution context are consistent with the dependency graph — no step is “completed” while a step it strongly depends on is not “completed”.
+- The Feedback Queue State is consistent with the Active Executions State — every queued feedback event references a valid execution context or step result.
+- The Execution Archive State contains only execution contexts that have been fully transitioned out of the active state.
+
+#### State Recovery
+
+Recovery-critical state: Active Executions State (all execution contexts with step states), In-Flight Steps State (steps that were executing at shutdown), completed step results for active executions, Decision Reference State, Plan Reference State, and Configuration State. The Pending Commands State and Feedback Queue State are transient. On recovery, the Execution Engine assumes the persistence layer provides the execution data and evaluates each active execution context for resumability.
+
+### AI Consumption Rules
+
+This section follows the Universal Section Contract (A.5.0 Section 9). The AI Consumption Rules for this RFC are governance-consistent with the A.5.0 template’s structural expectations.
+
+#### AI Consumption Boundary
+
+The Execution Engine does not invoke LLMs or AI models as part of its core architecture. Step ordering, scheduling, precondition verification, step execution, result capture, and feedback dispatch are all deterministic operations based on defined rules, plan structures, dependency graphs, and knowledge entities. The Execution Engine does not use AI for step processing, error recovery, precondition evaluation, or execution ordering.
+
+#### When AI May Be Involved
+
+The Execution Engine may execute steps that were planned or decided with AI assistance in other Engines. In this case, the Execution Engine treats the steps the same as any other steps — they are executed according to the plan’s dependency order and the step’s defined operation. The Execution Engine does not need to know whether a step, plan, or decision originated from an AI-assisted process. Similarly, procedural knowledge retrieved from the Knowledge Engine may have been authored with AI assistance, but the Execution Engine applies it deterministically regardless of origin.
+
+#### Prohibited AI Usage
+
+- The Execution Engine shall not use LLM calls to execute plan steps.
+- The Execution Engine shall not use LLM calls to determine execution order.
+- The Execution Engine shall not use LLM calls to evaluate preconditions or postconditions.
+- The Execution Engine shall not use LLM calls to handle step failures or decide retry strategies.
+- The Execution Engine shall not use prompt engineering or model selection in any capacity.
+
+### Runtime Interaction Rules
+
+This section follows the Universal Section Contract (A.5.0 Section 9). The Runtime Interaction Rules for this RFC are governance-consistent with the A.5.0 template’s structural expectations and the A.4.5 Engine Communication model.
+
+#### Interaction Model
+
+The Execution Engine’s interactions follow the Engine Communication model (A.4.5):
+
+- **Synchronous interactions**: Execution commands, execution queries, and manual retry requests are synchronous request-response patterns. The requesting Engine waits for the Execution Engine to acknowledge the command or return the query result. Note that execution itself is asynchronous — the command is acknowledged synchronously, but step execution proceeds asynchronously.
+- **Asynchronous interactions**: Cancellation events (from Decision Engine), context change events (from Context Engine), and knowledge update events (from Knowledge Engine) are processed asynchronously.
+- **Event-driven interactions**: Step lifecycle events, phase completion events, and execution termination events are emitted asynchronously to all subscribed consumers.
+
+#### Concurrency Rules
+
+- Multiple execution contexts may be active concurrently if they operate on different decision artifacts (and thus different plans and goals).
+- Execution contexts for the same decision artifact are prohibited (Invariant 4: Execution Context Uniqueness).
+- Within an execution context, step parallelization is bounded by the configured concurrency limit.
+- Step queries do not block step execution and vice versa.
+- Cancellation commands are processed immediately and take priority over normal execution flow.
+- Feedback dispatch does not block step execution — feedback is queued and dispatched asynchronously.
+
+#### Timeout and Boundedness
+
+- Each step execution is bounded by the configured execution timeout.
+- Phase advancement is bounded by the slowest step in the phase (plus timeout).
+- Total execution is bounded by the sum of all phase durations (or by cancellation/timeout).
+- No unbounded loops or recursive operations exist in the Execution Engine’s processing pipeline.
+- The retry limit provides a hard bound on the number of execution attempts per step.
+
+### Extension Model
+
+This section follows the Universal Section Contract (A.5.0 Section 9). The Extension Model for this RFC is governance-consistent with the A.5.0 template’s structural expectations.
+
+#### Extension Points
+
+| Extension Point | Description | Governance |
+|:---|:---|:---|
+| Custom step execution patterns | Additional execution patterns for specific step types or domains | Must define pattern structure, precondition handling, and result capture; registered through Engine configuration |
+| Custom precondition evaluators | Additional precondition types beyond standard context-based evaluation | Must be deterministic and produce boolean results; registered through Engine configuration |
+| Custom failure containment strategies | Alternative strategies beyond “halt” and “continue” | Must define strategy behaviour for all failure scenarios; requires Framework Governance approval |
+| Custom feedback transformers | Additional feedback formatting or routing rules | Must not drop or alter feedback content; registered through Engine configuration |
+
+#### Extension Constraints
+
+- Extensions must not modify the Execution Engine’s invariants (Section 15, Invariant 1 through Invariant 8).
+- Extensions must not introduce non-deterministic behaviour.
+- Extensions must not bypass the decision-authorization-before-execution requirement.
+- Extensions must not alter the step state machine transitions.
+- Extensions that affect step execution semantics or failure handling require Framework Governance review.
+- Extensions must be backward-compatible — existing execution records must remain valid after an extension is added.
+
+### Knowledge Graph Integration
+
+This section follows the Universal Section Contract (A.5.0 Section 9). The Knowledge Graph Integration for this RFC is governance-consistent with the A.5.0 template’s structural expectations.
+
+#### Integration Model
+
+The Execution Engine’s execution contexts, step results, and execution traces may be projected into the knowledge graph for cross-reference, historical analysis, and execution pattern mining. Integration is mediated through the Engine Platform’s knowledge graph projection layer.
+
+#### Projection Points
+
+| Projection | Content | Purpose |
+|:---|:---|:---|
+| Execution Context Node | Execution context identifier, decision reference, plan reference, overall outcome, start/end timestamps | Enable execution-level queries and historical tracking |
+| Step Result Node | Step result identifier, step identifier, outcome, duration, resource consumption | Enable step-level analysis and performance tracking |
+| Execution Phase Node | Phase identifier, execution context, step outcomes, phase duration | Enable phase-level analysis and bottleneck identification |
+| Execution-Decision Edge | Execution context, decision version | Enable execution-to-decision traceability |
+| Execution-Plan Edge | Execution context, plan version | Enable execution-to-plan traceability |
+| Step Dependency Execution Edge | From-step result, to-step result, dependency type | Enable dependency execution pattern analysis |
+| Execution Feedback Edge | Execution context, feedback event, consuming Engine | Enable feedback delivery tracking |
+
+#### Integration Constraints
+
+- Projection is downstream and non-blocking.
+- The Execution Engine produces projection data; it does not define the graph schema or query model.
+- Projection failures do not affect the Execution Engine’s operation.
+
+### Performance Characteristics
+
+This section follows the Universal Section Contract (A.5.0 Section 9). The Performance Characteristics for this RFC are governance-consistent with the A.5.0 template’s structural expectations.
+
+#### Expected Performance Bounds
+
+| Characteristic | Expected Bound | Notes |
+|:---|:---|:---|
+| Step execution latency | Per-step; bounded by step complexity, execution timeout, and retry policy | Deterministic; no AI/LLM |
+| Phase execution latency | Per-phase; bounded by slowest step in phase (plus timeout) | Parallelizable steps reduce wall-clock time |
+| Total execution latency | Per-plan; bounded by sum of phase latencies | Deterministic given fixed step durations |
+| Query latency | Constant time per query | Execution context, step result, and record lookups |
+| Feedback dispatch latency | Per-event; bounded by Engine Communication delivery model | Asynchronous; does not block execution |
+
+#### Scalability Characteristics
+
+- Supports multiple concurrent execution contexts for different goals.
+- Execution archive grows over time; compaction archives oldest non-referenced executions when limits are reached.
+- Plan and decision retrieval is bounded by the Planning Engine’s and Decision Engine’s query limits.
+- Step parallelization provides concurrency within a single execution context, bounded by the configured concurrency limit.
+
+#### Non-Goals
+
+- No specific latency numbers (implementation concern).
+- No throughput targets (implementation concern).
+- No resource allocation specifications (platform concern).
+
+### Security & Governance
+
+This section follows the Universal Section Contract (A.5.0 Section 9). The Security & Governance for this RFC are governance-consistent with the A.5.0 template’s structural expectations.
+
+#### Security Boundaries
+
+- **Step result immutability** — Produced step results cannot be tampered with. Mutation of a versioned step result is a violation of Invariant 2 (Step Result Immutability).
+- **Request authentication** — Source authentication is handled by Engine Communication (A.4.5).
+- **Consumer authorization** — Managed by Engine Registry (A.4.3).
+- **Configuration integrity** — Retry policy, parallelization limits, and failure containment policy changes require governance authorization.
+- **Execution visibility** — All execution contexts, step results, and execution records are visible to registered peer Engines. Fine-grained access control is out of scope.
+- **Cancellation authority** — Only the Decision Engine (via decision supersession/cancellation) or governance may cancel an active execution. Peer Engines cannot cancel executions they did not authorize.
+
+#### Governance Constraints
+
+- Retry policy is a governance artifact — changes require Framework Governance approval.
+- Failure containment policy is a governance artifact.
+- Execution timeout is a governance artifact.
+- Manual step retry (beyond automatic retry policy) requires governance authorization.
+- Cancellation of in-progress executions requires a valid reason from the Decision Engine or governance.
+- The Execution Engine does not evaluate whether a step’s side effects are desirable — that is a Decision Engine and Validation Engine concern.
+
+---
+
+## Design Decisions
+
+### DD-1: Six-Stage Pipeline with Deterministic Stages
+
+**Context**: The Execution Engine must transform an authorized decision into completed step results through a well-defined processing pipeline. The prior version of this RFC (pre-TPL-001 alignment) used a six-stage pipeline model (Execution Intake, Order Resolver, Step Scheduler, Step Executor, Result Collector, Feedback Dispatcher) that established clear boundaries between processing concerns.
+
+**Options considered**: (a) Merge Order Resolver and Step Scheduler into a single “Scheduling” stage; (b) Keep the six-stage pipeline; (c) Introduce a seventh “Precondition Validator” stage between scheduling and execution.
+
+**Decision**: Option (b). The six-stage pipeline is preserved because each stage has a distinct, non-overlapping responsibility, and merging stages would reduce the clarity of the internal model without providing architectural benefit. The precondition validation concern is handled by the Step Executor’s “Precondition Confirmation” step, which re-evaluates preconditions immediately before execution — a seventh stage would add latency without increasing correctness guarantees since the Step Scheduler already performs initial precondition evaluation for readiness determination.
+
+**Rationale**: Each stage produces a deterministic, inspectable output that feeds the next stage. The Order Resolver produces an execution order, the Step Scheduler produces scheduling decisions, the Step Executor produces step results, the Result Collector produces summaries, and the Feedback Dispatcher produces feedback events. This pipeline structure supports auditability, debugging, and testing at each stage boundary.
+
+### DD-2: Cancellation Handling via Grace Period Rather Than Immediate Termination
+
+**Context**: When a decision is superseded or cancelled, the Execution Engine must stop the corresponding execution. The question is whether in-flight steps should be terminated immediately or allowed to complete within a grace period.
+
+**Options considered**: (a) Immediate termination of all in-flight steps; (b) Grace period allowing in-flight steps to complete naturally; (c) Configurable per-execution (decision artifact specifies the behaviour).
+
+**Decision**: Option (b) with configurable grace period. In-flight steps are allowed to complete within the configured grace period. After the grace period, remaining in-flight steps are forcibly terminated. The grace period duration is a configuration input governed by governance.
+
+**Rationale**: Immediate termination (option a) risks leaving the system in an inconsistent state — a step may have partially applied side effects that cannot be rolled back. A grace period (option b) allows in-flight steps to complete atomically, producing complete step results that document their outcome. This supports the Invariant 2 (Step Result Immutability) requirement by ensuring that every step that begins execution produces a complete result. The grace period is bounded to prevent indefinite execution.
+
+### DD-3: Plan Immutability During Execution
+
+**Context**: The Planning Engine may produce revised plan versions while an execution is in progress. The Execution Engine must define how it handles plan revisions during active execution.
+
+**Options considered**: (a) Switch to the revised plan mid-execution; (b) Continue with the original plan and notify the Planning Engine of the revision; (c) Cancel the current execution and restart with the revised plan.
+
+**Decision**: Option (b). The Execution Engine continues with the original plan (which is immutable per Planning Engine Invariant 2). The Planning Engine is notified of the revision via feedback, and a separate execution may be triggered for the revised plan. The execution context remains bound to the original plan version.
+
+**Rationale**: Switching plans mid-execution (option a) would violate the decision binding invariant (each execution is bound to exactly one decision, which references exactly one plan version). Automatic cancellation and restart (option c) would violate the separation of concerns — the Decision Engine decides whether to supersede, and the Execution Engine executes what is authorized. Continuing with the original plan preserves determinism (Invariant 1: the same plan always produces the same execution order and results) and allows the Decision Engine to make an informed choice about whether to supersede the current execution.
+
+### DD-4: Failure Containment via Policy Configuration Rather Than Fixed Behaviour
+
+**Context**: When a step fails, the Execution Engine must decide whether to halt the entire execution or continue with independent steps. This decision affects the system’s resilience versus its predictability.
+
+**Options considered**: (a) Always halt execution on any step failure; (b) Always continue with independent steps; (c) Configurable via a failure containment policy (governance artifact).
+
+**Decision**: Option (c). The failure containment behaviour is determined by a governance-configured policy with two standard strategies: “halt” (terminate the entire execution on any step failure) and “continue” (allow steps that do not depend on the failed step to proceed). Extension points allow additional strategies with Framework Governance approval.
+
+**Rationale**: A fixed “halt” policy (option a) maximizes predictability but reduces resilience — a single non-critical step failure would stop the entire execution. A fixed “continue” policy (option b) maximizes resilience but may produce confusing partial results. Making the policy configurable (option c) allows governance to choose the appropriate behaviour per execution context, with “halt” as the default for safety.
+
+### DD-5: No AI Involvement in Core Execution Architecture
+
+**Context**: Other Engines in the pipeline (Context, Knowledge, Planning, Decision) may involve AI/LLM processing in their core architectures. The Execution Engine must define whether and how AI is involved in its operations.
+
+**Options considered**: (a) Allow AI-assisted execution for complex step types; (b) Prohibit all AI involvement in execution; (c) Allow AI for precondition evaluation only.
+
+**Decision**: Option (b). The Execution Engine’s core architecture involves zero AI/LLM involvement. Step ordering, scheduling, precondition verification, step execution, result capture, and feedback dispatch are all deterministic operations. This decision is reflected in the AI Consumption Rules section and is a non-negotiable architectural invariant.
+
+**Rationale**: AI involvement would introduce non-determinism, which directly violates the mission objectives of Ordering Fidelity, State Determinism, and Result Verifiability. The Execution Engine is the only Engine that produces observable side effects — any non-determinism in execution would make the system’s state changes unrepeatable and unauditable. AI-assisted decisions in other Engines are acceptable because those Engines produce plans and decisions (informational artifacts), not state changes. The Execution Engine executes what was decided; the decision quality is the Decision Engine’s responsibility.
+
+---
+
+## Ownership
+
+### Engine Ownership
+
+#### Accountable Owner
+
+**Role**: Framework Architecture Team
+
+The Framework Architecture Team is the single accountable owner for the Execution Engine’s architectural correctness, governance alignment, and certification readiness. The Execution Engine is the only Engine in the pipeline that produces observable side effects on the system’s state, making its correctness, determinism, and failure containment properties critical to the overall system’s reliability. Centralized architectural control is essential to ensure that execution behaviour remains predictable and auditable.
+
+#### Maintained Boundaries
+
+| Boundary | Owner Controls | Outside Owner Scope |
+|:---|:---|:---|
+| Step execution ordering rules | Yes | Persistence implementation |
+| Retry policy design | Yes | Step operation logic |
+| Failure containment strategies | Yes | Resource provisioning |
+| Execution lifecycle design | Yes | Platform persistence |
+| Parallelization model | Yes | Distributed execution |
+| Extension model governance | Yes | Extension implementations |
+
+#### Decision Rights
+
+| Decision Type | Owner Authority | Requires Governance Escalation |
+|:---|:---|:---|
+| Internal model changes | Autonomous | No |
+| New step execution patterns | Autonomous for standard patterns | Yes for patterns that alter execution semantics |
+| Retry policy changes | Autonomous for minor adjustments within approved range | Yes for new retry strategies or significant limit changes |
+| Failure containment strategy changes | Autonomous for selecting existing strategies | Yes for new strategies |
+| Parallelization limit changes | Autonomous within governance-approved range | Yes for changes that affect system resource consumption |
+| Cancellation grace period changes | Autonomous for minor adjustments | Yes for grace period removal |
+
+#### Validation Obligations
+
+- All 20 TPL-001 sections present with substantive content.
+- All 16 Specializable subsections contain Engine-specific content.
+- All eight invariants preserved.
+- All responsibilities map to operations.
+- All lifecycle transitions produce events.
+- STD-010 and STD-003 compliant.
+- No implementation scope.
+- Cross-engine alignment verified with A.5.1, A.5.2, A.5.3, and A.5.4.
+
+#### Review Obligations
+
+Present to Enterprise Documentation Standards Board:
+
+- Complete RFC with all sections.
+- Responsibility-to-operation traceability matrix.
+- Lifecycle-to-event traceability matrix.
+- Invariant test specification.
+- STD-010 and STD-003 compliance evidence.
+- Cross-engine alignment verification reports with A.5.1, A.5.2, A.5.3, and A.5.4.
+
+#### Certification Responsibilities
+
+- Template compliance matrix.
+- STD-010 metadata validation checklist.
+- STD-003 terminology audit report.
+- Invariant test results.
+- Determinism verification evidence.
+- Cross-engine alignment evidence with A.5.1, A.5.2, A.5.3, and A.5.4.
+- Ordering fidelity test results.
+- Failure containment test results.
+
+#### Ownership Handoff Limitations
+
+Ownership transfer requires governance-authorized transition recorded in the Engine Registry. The transition must transfer all obligations, preserve evidence and traceability, and not occur silently or implicitly.
+
+---
+
+## Responsibilities
+
+### Engine Responsibilities
 
 The Execution Engine is accountable for the following architectural responsibilities, grouped by functional domain:
 
-### 5.1 Execution Intake
+#### Execution Intake
 
 - Receive execution commands that contain a decision artifact (referencing the authorized plan) and optional execution constraints from the Decision Engine or from governance.
-- Validate that the decision artifact is in "authorized" state and references a valid, immutable plan version.
-- Validate that the plan is in "active" or "validated" state with a complete dependency graph.
+- Validate that the decision artifact is in “authorized” state and references a valid, immutable plan version.
+- Validate that the plan is in “active” or “validated” state with a complete dependency graph.
 - Determine whether all preconditions for the first execution phase are satisfiable given the current context.
 
-### 5.2 Step Ordering and Scheduling
+#### Step Ordering and Scheduling
 
-- Compute the execution order from the plan's dependency graph using topological sorting. The topological sort produces a set of execution phases where each phase contains steps that can execute concurrently (no strong dependencies between them).
+- Compute the execution order from the plan’s dependency graph using topological sorting. The topological sort produces a set of execution phases where each phase contains steps that can execute concurrently (no strong dependencies between them).
 - Identify the next executable phase: all steps whose strong dependencies have completed successfully and whose preconditions are satisfiable in the current context.
 - Schedule steps within a phase for execution, respecting any execution constraints from the decision artifact (e.g., resource limits, sequential execution directives).
 - Detect when no further steps can be executed (deadlock or dependency satisfaction failure) and report this condition.
 
-### 5.3 Step Execution
+#### Step Execution
 
-- Execute individual plan steps by invoking the step's defined operation within the Engine Platform's execution environment. The step operation is a deterministic, self-contained unit of work defined by the plan step.
-- Before execution: verify that the step's preconditions are satisfied (all strong dependency steps completed, all precondition predicates evaluate to true against the current context).
+- Execute individual plan steps by invoking the step’s defined operation within the Engine Platform’s execution environment. The step operation is a deterministic, self-contained unit of work defined by the plan step.
+- Before execution: verify that the step’s preconditions are satisfied (all strong dependency steps completed, all precondition predicates evaluate to true against the current context).
 - During execution: the step operation runs to completion, producing a step result. The Execution Engine does not interrupt or cancel a running step — it waits for completion.
-- After execution: record the step result (outcome, postconditions, side effects, timestamp) and update the step's state.
+- After execution: record the step result (outcome, postconditions, side effects, timestamp) and update the step’s state.
 
-### 5.4 Step State Management
+#### Step State Management
 
 - Manage each step through its execution lifecycle: pending, ready, executing, completed, failed, skipped, cancelled.
 - **Pending** — Step has not yet been considered for execution. Initial state for all steps.
-- **Ready** — Step's strong dependencies are all completed; preconditions are satisfiable; step is queued for execution.
+- **Ready** — Step’s strong dependencies are all completed; preconditions are satisfiable; step is queued for execution.
 - **Executing** — Step is currently being processed. Only steps in this state produce side effects.
 - **Completed** — Step has finished successfully; postconditions are true; step result recorded.
 - **Failed** — Step has finished unsuccessfully; failure reason recorded; dependents are blocked.
 - **Skipped** — Step was not executed because a dependency failed or governance cancelled it; reason recorded.
 - **Cancelled** — Step execution was cancelled by governance or by a decision supersession event.
 
-### 5.5 Parallelization
+#### Parallelization
 
 - Identify steps within the same execution phase that can execute concurrently. These are steps with no strong dependency relationship to each other and no shared resource conflicts.
 - Execute parallelizable steps concurrently, subject to the parallelization constraints from the decision artifact and the configured concurrency limits.
 - Track in-flight parallel executions and collect their results before advancing to the next execution phase.
-- If a parallel step fails, complete all other parallel steps in the phase before evaluating the failure's impact on subsequent phases.
+- If a parallel step fails, complete all other parallel steps in the phase before evaluating the failure’s impact on subsequent phases.
 
-### 5.6 Execution Feedback Production
+#### Execution Feedback Production
 
 - Produce step-level execution feedback after each step completes or fails. Feedback includes: step identifier, step outcome, postconditions, side effects, execution duration, and resource consumption.
 - Produce phase-level completion feedback after all steps in a phase have completed. Feedback includes: phase identifier, completed step count, failed step count, and phase outcome.
 - Produce plan-level completion feedback when all steps in the plan have been processed. Feedback includes: overall outcome (completed, partially completed, failed), step outcome summary, and total execution duration.
 - Deliver feedback to the Planning Engine (step and plan level), Decision Engine (plan level), and Context Engine (state changes from step postconditions and side effects).
 
-### 5.7 Execution Lifecycle Management
+#### Execution Lifecycle Management
 
 - Manage execution contexts through their lifecycle: initialized, executing, completing, completed, failed, cancelled.
 - An execution context represents a single plan execution, bound to a specific decision artifact.
@@ -141,7 +754,9 @@ The Execution Engine is accountable for the following architectural responsibili
 
 ---
 
-## 6. Non Responsibilities
+## Non Responsibilities
+
+### Engine Non Responsibilities
 
 The Execution Engine is explicitly not responsible for the following concerns. Each non-responsibility is paired with the component that owns it:
 
@@ -163,91 +778,42 @@ The Execution Engine is explicitly not responsible for the following concerns. E
 | Invoking LLMs for step execution or error recovery | AI Consumption layer (out of scope) |
 | Scheduling execution timing or cron-based triggers | External scheduler (out of scope) |
 
-The Execution Engine's boundary is defined by the transition from authorized decision to completed step results. It defines the architectural contract for execution operations without implementing step logic, resource allocation, or persistence.
+The Execution Engine’s boundary is defined by the transition from authorized decision to completed step results. It defines the architectural contract for execution operations without implementing step logic, resource allocation, or persistence.
+
+**Prohibitions**:
+
+- Unvalidated handoff — all step results must pass validation before transfer to consuming Engines.
+- Implicit acceptance by the receiving Engine in any handoff.
+- Execution without a valid, authorized decision artifact.
+- Modification of produced step results after creation.
+- Parallel step execution that violates dependency ordering.
+- AI/LLM involvement in step ordering, scheduling, or execution.
 
 ---
 
-## 7. Engine Position
+## Interfaces
 
-### 7.1 Topological Position
-
-The Execution Engine is the primary action Engine in the pipeline. It sits downstream of all information and reasoning Engines and is the first Engine that produces system-state-changing side effects. It consumes decisions and plans, and produces step results and execution feedback.
-
-```
-  ┌──────────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
-  │   Context     │     │  Knowledge   │     │  Planning    │     │  Decision    │
-  │   Engine      │     │  Engine      │     │  Engine      │     │  Engine      │
-  │  (A.5.1)      │     │  (A.5.2)     │     │  (A.5.3)     │     │  (A.5.4)     │
-  │  Snapshots    │     │  Procedures  │     │  Validated   │     │  Authorized  │
-  │               │     │              │     │  Plans       │     │  Decisions   │
-  └──────┬───────┘     └──────┬───────┘     └──────┬───────┘     └──────┬───────┘
-         │                     │                     │                     │
-         │  (context for       │  (step            │  (plan +           │  (decision
-         │   precondition      │   procedures)      │   dependency       │   artifact +
-         │   checks)          │                     │   graph)          │   constraints)
-         │                     │                     │                     │
-         └──────────┬──────────┴──────────┬──────────┴──────────┬──────────┘
-                    │                     │                     │
-                    ▼                     ▼                     ▼
-       ┌─────────────────────────────────────────────────────────────────┐
-       │                      Execution Engine                            │
-       │                        (A.5.5)                                   │
-       │  Intake → Order → Schedule → Execute → Collect → Feedback        │
-       └───┬─────────────────┬──────────────────┬──────────────────┬────┘
-           │                 │                  │                  │
-    ┌──────┘                 │                  └──────┐           └──────┐
-    ▼                        ▼                         ▼                  ▼
-┌──────────┐         ┌──────────────┐          ┌──────────┐       ┌──────────┐
-│ Context  │         │   Planning   │          │Validation│       │  Memory  │
-│ Engine   │         │   Engine     │          │ Engine   │       │  Engine  │
-│ (A.5.1)  │         │   (A.5.3)    │          │ (A.5.6)  │       │ (A.5.9)  │
-│ (updates)│         │  (feedback)  │          │(results) │       │(history) │
-└──────────┘         └──────────────┘          └──────────┘       └──────────┘
-```
-
-### 7.2 Data Flow Characterization
-
-The Execution Engine has a well-defined input-output pattern:
-
-- **From Decision Engine** — Authorized decision artifacts containing the selected plan reference, execution constraints, and authorization metadata. The Execution Engine consumes decision artifacts as the trigger to begin execution.
-- **From Planning Engine** — Validated plans with step definitions, dependency graphs, preconditions, postconditions, and expected outcomes. The Execution Engine pulls the plan referenced by the decision artifact.
-- **From Context Engine** — Resolved context snapshots for precondition verification and state grounding. The Execution Engine pulls context at the start of each execution phase to verify preconditions.
-- **From Knowledge Engine** — Procedural knowledge for step execution patterns and constraint entities for precondition evaluation. The Execution Engine pulls knowledge based on step type and domain.
-- **To Context Engine** — State change events from step postconditions and side effects. The Context Engine updates the contextual state based on execution results.
-- **To Planning Engine** — Step completion and failure feedback for plan revision evaluation and plan lifecycle state updates.
-- **To Decision Engine** — Execution progress events for decision validity monitoring.
-- **To Validation Engine** — Step results for correctness verification against plan requirements.
-- **To Memory Engine** — Completed execution records for pattern recognition and learning.
-
-The Execution Engine's topology is a transformer with side effects — it receives plans and authorization, executes steps that change system state, and produces results and feedback. It is the only Engine in the pipeline that produces observable side effects on the system's state.
-
-### 7.3 Unavailability Impact
-
-If the Execution Engine is unavailable, no plan steps can be executed. Authorized decision artifacts accumulate without being processed. The system cannot make progress on any active goals. The Engine Platform's graceful degradation model (A.4.4) should define fallback behaviour — the Execution Engine defines what "no-execution" means but does not define how the system compensates. A possible fallback is queuing execution commands for later processing when the Execution Engine recovers.
-
----
-
-## 8. Consumed Inputs
+### Consumed Inputs
 
 The Execution Engine requires the following typed inputs:
 
-### 8.1 Execution Commands
+#### Execution Commands
 
 | Input | Type | Source | Validation | Missing/Malformed Handling |
 |:---|:---|:---|:---|:---|
-| Execution Command | Structured command (decision artifact reference, execution constraints, requesting Engine) | Decision Engine, governance | Decision artifact in "authorized" state; plan reference valid; execution constraints structurally valid | Command rejected; rejection notice with specific errors |
-| Cancellation Command | Structured command (execution context identifier, cancellation reason, requesting Engine) | Decision Engine (on `Decision Cancelled`/`Decision Superseded`), governance | Execution context identifier valid and in "executing" state | Command rejected if execution not in progress |
-| Execution Query | Structured request (execution context identifier or step identifier, query type) | Peer Engines, audit systems | Identifier format valid | Query rejected with "not found" if not found |
+| Execution Command | Structured command (decision artifact reference, execution constraints, requesting Engine) | Decision Engine, governance | Decision artifact in “authorized” state; plan reference valid; execution constraints structurally valid | Command rejected; rejection notice with specific errors |
+| Cancellation Command | Structured command (execution context identifier, cancellation reason, requesting Engine) | Decision Engine (on `Decision Cancelled`/`Decision Superseded`), governance | Execution context identifier valid and in “executing” state | Command rejected if execution not in progress |
+| Execution Query | Structured request (execution context identifier or step identifier, query type) | Peer Engines, audit systems | Identifier format valid | Query rejected with “not found” if not found |
 
-### 8.2 Plan and Decision Inputs
+#### Plan and Decision Inputs
 
 | Input | Type | Source | Validation | Missing/Malformed Handling |
 |:---|:---|:---|:---|:---|
-| Decision Artifact | Versioned decision artifact with selected plan reference, evaluation summary, risk assessment, and execution constraints | Decision Engine (A.5.4) | Decision in "authorized" state; selected plan reference valid; no unresolved escalations | Execution rejected; "invalid decision" error |
-| Validated Plan | Versioned plan with steps, dependency graph, constraints, success criteria, and validation report | Planning Engine (A.5.3) | Plan in "validated" or "active" state; dependency graph acyclic; validation report attached | Execution blocked; plan retrieval failure reported |
+| Decision Artifact | Versioned decision artifact with selected plan reference, evaluation summary, risk assessment, and execution constraints | Decision Engine (A.5.4) | Decision in “authorized” state; selected plan reference valid; no unresolved escalations | Execution rejected; “invalid decision” error |
+| Validated Plan | Versioned plan with steps, dependency graph, constraints, success criteria, and validation report | Planning Engine (A.5.3) | Plan in “validated” or “active” state; dependency graph acyclic; validation report attached | Execution blocked; plan retrieval failure reported |
 | Plan Dependency Graph | Topologically sortable DAG of step dependencies | Planning Engine (A.5.3) | Graph is a DAG; topological sort produces a valid ordering | Execution blocked; dependency graph invalid |
 
-### 8.3 Context and Knowledge Inputs
+#### Context and Knowledge Inputs
 
 | Input | Type | Source | Validation | Missing/Malformed Handling |
 |:---|:---|:---|:---|:---|
@@ -255,7 +821,7 @@ The Execution Engine requires the following typed inputs:
 | Procedural Knowledge | Step execution patterns and procedures | Knowledge Engine (A.5.2) | Procedural entities validated and active | Step execution proceeds with generic execution pattern; knowledge-gap warning |
 | Constraint Knowledge | Domain constraints for precondition evaluation | Knowledge Engine (A.5.2) | Constraint entities validated and active | Default constraints applied; missing constraints flagged |
 
-### 8.4 Configuration Inputs
+#### Configuration Inputs
 
 | Input | Type | Source | Validation | Missing/Malformed Handling |
 |:---|:---|:---|:---|:---|
@@ -267,19 +833,17 @@ The Execution Engine requires the following typed inputs:
 
 All inputs are versioned. Execution commands carry a command identifier and timestamp. Decision references carry the Decision Engine artifact version. Plan references carry the Planning Engine plan version. Context references carry the Context Engine snapshot version.
 
----
-
-## 9. Produced Outputs
+### Produced Outputs
 
 The Execution Engine produces the following typed outputs:
 
-### 9.1 Step Results
+#### Step Results
 
 | Output | Type | Consumer(s) | Versioning | Validation Criteria |
 |:---|:---|:---|:---|:---|
 | Step Result | Versioned result containing step identifier, execution context, outcome (completed/failed/skipped), preconditions at execution time, postconditions after execution, side effects produced, execution duration, and resource consumption | Validation Engine (primary), Planning Engine (feedback), audit systems | Immutable per step execution; step may have multiple results across plan versions | Outcome consistent with step definition; postconditions documented; side effects enumerated |
 
-### 9.2 Execution Feedback
+#### Execution Feedback
 
 | Output | Type | Consumer(s) | Versioning | Validation Criteria |
 |:---|:---|:---|:---|:---|
@@ -287,20 +851,20 @@ The Execution Engine produces the following typed outputs:
 | Phase Completion Feedback | Per-phase summary (phase ID, step outcomes, phase outcome) | Planning Engine, Decision Engine | Event-scoped; references execution phase | All phase steps accounted for |
 | Execution Completion Summary | Per-execution summary (overall outcome, step outcome counts, total duration, decision reference) | Planning Engine, Decision Engine, audit systems, Memory Engine | Event-scoped; references execution context | All steps accounted for; overall outcome consistent with step outcomes |
 
-### 9.3 Execution Metadata
+#### Execution Metadata
 
 | Output | Type | Consumer(s) | Versioning | Validation Criteria |
 |:---|:---|:---|:---|:---|
 | Execution Record | Full record of the execution process: decision reference, plan reference, step execution order, step results, phase transitions, timing | Audit systems, explainability, Memory Engine | Immutable per execution context | All references valid; execution chain complete |
 | Execution Trace | Ordered log of all execution operations and state transitions | Audit systems, debugging | Immutable per execution context | Chronologically ordered; no gaps |
 
-### 9.4 Execution Events
+#### Execution Events
 
 | Output | Type | Consumer(s) | Versioning | Validation Criteria |
 |:---|:---|:---|:---|:---|
-| Step Started | Event emitted when a step enters "executing" state | Audit systems, Planning Engine | Event-scoped; references step and execution context | Step in "ready" state prior |
-| Step Completed | Event emitted when a step finishes successfully | Planning Engine, Context Engine, audit systems | Event-scoped; references step result | Step result with "completed" outcome |
-| Step Failed | Event emitted when a step finishes unsuccessfully | Planning Engine, Decision Engine, audit systems | Event-scoped; references step result and failure reason | Step result with "failed" outcome; failure reason documented |
+| Step Started | Event emitted when a step enters “executing” state | Audit systems, Planning Engine | Event-scoped; references step and execution context | Step in “ready” state prior |
+| Step Completed | Event emitted when a step finishes successfully | Planning Engine, Context Engine, audit systems | Event-scoped; references step result | Step result with “completed” outcome |
+| Step Failed | Event emitted when a step finishes unsuccessfully | Planning Engine, Decision Engine, audit systems | Event-scoped; references step result and failure reason | Step result with “failed” outcome; failure reason documented |
 | Phase Completed | Event emitted when all steps in a phase have finished | Planning Engine, audit systems | Event-scoped; references phase and step outcomes | All phase steps in terminal state |
 | Execution Completed | Event emitted when all plan steps have been processed | Planning Engine, Decision Engine, Context Engine, Memory Engine, audit systems | Event-scoped; references execution context and decision artifact | All steps in terminal state; overall outcome assigned |
 | Execution Failed | Event emitted when execution cannot proceed (unrecoverable failure) | Planning Engine, Decision Engine, Context Engine, audit systems | Event-scoped; references execution context and failing step | Failure reason documented |
@@ -308,318 +872,16 @@ The Execution Engine produces the following typed outputs:
 
 All step results are immutable once produced. Re-execution of a step (via plan revision and new execution) produces a new step result with a new identifier. Output contracts are explicit enough for consuming Engines to validate received results against the schemas defined here.
 
----
+### Engine Operations
 
-## 10. Engine Lifecycle
-
-### 10.1 Initialization
-
-The Execution Engine initializes when the Engine Platform starts. During initialization:
-
-- Registers with the Engine Registry (A.4.3) as a Task Execution capability provider.
-- Loads configuration inputs (retry policy, parallelization limits, execution timeout, failure containment policy, cancellation grace period).
-- Establishes communication channels with the Context Engine, Knowledge Engine, Planning Engine, Decision Engine, and potential consuming Engines via the Engine Communication model (A.4.5).
-- Subscribes to decision authorization events from the Decision Engine and decision cancellation/supersession events.
-- Emits an `Execution Engine Initialized` event.
-
-### 10.2 Startup
-
-After initialization:
-
-- Confirms connectivity with the Context Engine, Knowledge Engine, Planning Engine, and Decision Engine.
-- Verifies that context pull, knowledge retrieval, plan retrieval, and decision retrieval operations succeed.
-- Performs a readiness check by processing a test execution command with a known minimal plan.
-- Transitions to steady-state operation upon successful readiness confirmation.
-
-### 10.3 Steady-State Operation
-
-In steady state, the Execution Engine:
-
-- Accepts and processes execution commands (step ordering, scheduling, execution, result collection).
-- Monitors for cancellation events from the Decision Engine (`Decision Cancelled`, `Decision Superseded`).
-- Monitors for context changes from the Context Engine that may affect in-progress execution.
-- Processes execution queries from peer Engines and audit systems.
-- Produces step results, execution feedback, and execution records for auditability.
-
-The Execution Engine operates on a command-driven model — it executes plans when an authorized decision artifact is received, not on a periodic cycle. Cancellation events are processed asynchronously and take priority over normal execution flow.
-
-### 10.4 Degradation
-
-If the Context Engine is temporarily unavailable, the Execution Engine continues executing steps but preconditions that depend on contextual state are verified against the last known context, with staleness warnings in the execution record. If the Knowledge Engine is temporarily unavailable, the Execution Engine uses generic execution patterns for steps that reference procedural knowledge, flagging the knowledge gap. If the Planning Engine is temporarily unavailable, the Execution Engine can continue executing already-retrieved plans but cannot fetch plan updates or revisions.
-
-If the Execution Engine itself is degraded (e.g., resource pressure reducing parallelization capacity), it continues to accept execution commands but may reduce concurrency, executing steps more sequentially while emitting an `Execution Engine Degraded` event.
-
-### 10.5 Shutdown
-
-During graceful shutdown:
-
-- Stops accepting new execution commands.
-- Completes in-flight step executions or cancels them after the grace period.
-- Persists all active execution state (execution contexts, step states, step results, pending feedback).
-- Emits an `Execution Engine Shutdown` event with a summary of active executions.
-- Deregisters from the Engine Registry.
-
-Non-graceful shutdown (crash, kill) results in state loss for in-flight step executions. Recovery-critical state (execution contexts, completed step results) must be persisted before shutdown completes.
-
-### 10.6 Recovery
-
-On restart after non-graceful shutdown:
-
-- Re-registers with the Engine Registry.
-- Re-establishes communication channels.
-- Retrieves the current context from the Context Engine.
-- Re-subscribes to events from the Decision Engine, Planning Engine, and Context Engine.
-- Recovers active execution state from the persistence layer (execution contexts with step states, completed step results, pending feedback).
-- For execution contexts where some steps were completed but the execution was interrupted: evaluates whether the completed steps are still valid (context and plan have not been superseded). If valid, resumes execution from the next pending phase. If invalid, marks the execution as "failed due to recovery" and notifies the Planning Engine.
-- Emits an `Execution Engine Recovered` event.
-- Resumes steady-state operation.
-
-Recovery-critical state: all active execution contexts with their step states, all completed step results, the most recent decision and plan references, and configuration inputs. In-flight step executions that were interrupted are treated as failed and subject to retry policy evaluation.
-
----
-
-## 11. Internal Engine Model
-
-### 11.1 Conceptual Overview
-
-The Execution Engine's internal model consists of six processing stages that transform an authorized decision into completed step results:
-
-```
-Execution Intake → Order Resolver → Step Scheduler → Step Executor → Result Collector → Feedback Dispatcher
-       ↑                                                                           │
-       │                    ┌──────────────────────────────────────────────────────┘
-       │                    │
-       └────────────────────┘
-                    (cancellation: active executions may be cancelled
-                     when Decision Engine emits supersession/cancellation events)
-```
-
-### 11.2 Execution Intake
-
-The Execution Intake stage receives and validates execution commands:
-
-1. **Command Validation** — Validates the execution command structure: decision artifact reference valid, decision in "authorized" state, execution constraints structurally valid, requesting Engine authenticated.
-
-2. **Decision Retrieval** — Retrieves the authorized decision artifact from the Decision Engine. Verifies that the decision has not been superseded or cancelled since the command was issued.
-
-3. **Plan Retrieval** — Retrieves the validated plan referenced by the decision artifact from the Planning Engine. Verifies that the plan is in "validated" or "active" state with a complete dependency graph and validation report.
-
-4. **Execution Context Creation** — Creates an execution context that binds the decision artifact, the plan, and the execution constraints into a single execution scope. The execution context is assigned a unique identifier and enters the "initialized" lifecycle state.
-
-5. **Intake Record** — Produces an intake record documenting the decision artifact, plan version, execution constraints, and any warnings (staleness flags, knowledge gaps).
-
-The Execution Intake stage is deterministic: the same command and the same upstream state produce the same intake record and execution context.
-
-### 11.3 Order Resolver
-
-The Order Resolver transforms the plan's dependency graph into an executable ordering:
-
-1. **Topological Sort** — Computes a topological sort of the plan's dependency graph, producing an ordered list of execution phases. Each phase contains steps whose strong dependencies are all in preceding phases.
-
-2. **Parallelization Analysis** — Within each phase, identifies steps that can execute concurrently (no shared resource conflicts, no execution constraints requiring sequential order). Steps within a phase are marked as "parallelizable" or "sequential" based on the parallelization policy and decision constraints.
-
-3. **Precondition Verification** — For each step in the first executable phase, verifies that preconditions are satisfiable against the current context snapshot. Steps whose preconditions are not satisfiable are flagged for deferred execution or escalation.
-
-4. **Execution Order Record** — Produces an execution order record documenting the phases, the steps within each phase, the parallelization assignments, and any precondition warnings.
-
-The Order Resolver is deterministic: the same dependency graph and the same context produce the same execution order.
-
-### 11.4 Step Scheduler
-
-The Step Scheduler manages the transition of steps from "pending" to "ready" to "executing":
-
-1. **Phase Advancement** — When all steps in the current phase have reached terminal state (completed, failed, skipped, cancelled), the Step Scheduler advances to the next phase.
-
-2. **Readiness Check** — For each step in the next phase, verifies that all strong dependency steps have completed successfully (not failed, skipped, or cancelled). If a dependency has failed, the dependent step is transitioned to "skipped" with the reason "dependency failed".
-
-3. **Concurrency Control** — Enforces the parallelization limit by queuing ready steps and dispatching them as execution slots become available. If the concurrency limit is 1, steps execute sequentially.
-
-4. **Retry Evaluation** — When a step fails, evaluates the retry policy: if the failure type is retryable and the retry count has not been exceeded, the step is returned to the "ready" queue with an incremented retry counter. If the retry limit is exceeded, the step is transitioned to "failed".
-
-5. **Failure Containment** — When a step fails (after retry exhaustion), applies the failure containment policy: if the policy is "halt", all subsequent phases are cancelled; if the policy is "continue", steps in subsequent phases that do not depend on the failed step may still execute.
-
-The Step Scheduler is deterministic: the same step states and the same policies produce the same scheduling decisions.
-
-### 11.5 Step Executor
-
-The Step Executor processes individual step executions:
-
-1. **Step Dispatch** — Transitions the step from "ready" to "executing" and begins processing the step's defined operation within the Engine Platform's execution environment.
-
-2. **Precondition Confirmation** — Immediately before execution, confirms that preconditions are still satisfiable. If the context has changed since scheduling, re-evaluates preconditions. If preconditions are no longer satisfiable, the step is transitioned to "failed" with reason "precondition violation at execution time".
-
-3. **Operation Execution** — Executes the step's operation. The operation is a deterministic, self-contained unit of work defined in the plan step. The Execution Engine provides the execution environment (context access, knowledge access) but does not define the operation logic.
-
-4. **Result Capture** — Captures the step result: outcome, postconditions (verified against the plan step's expected postconditions), side effects produced, execution duration, and resource consumption.
-
-5. **State Transition** — Transitions the step to "completed" (if outcome is success) or "failed" (if outcome is failure). Records the step result and emits the appropriate event.
-
-The Step Executor is deterministic: the same step definition, context, and knowledge produce the same step result.
-
-### 11.6 Result Collector
-
-The Result Collector aggregates step results into phase-level and execution-level summaries:
-
-1. **Phase Completion Detection** — Monitors the state of all steps in the current phase. When all steps have reached terminal state, determines the phase outcome: "completed" (all steps completed), "partially completed" (some steps completed, some failed or skipped), or "failed" (all steps failed or no steps completed).
-
-2. **Phase Summary Production** — Produces a phase summary containing: phase identifier, step outcomes, phase outcome, total phase duration, and any flags or warnings.
-
-3. **Execution Completion Detection** — When all phases have been processed, determines the execution outcome: "completed" (all steps completed), "partially completed" (some steps completed, some failed or skipped), or "failed" (critical failure or no steps completed).
-
-4. **Execution Summary Production** — Produces an execution summary containing: execution context identifier, decision reference, plan reference, overall outcome, step outcome counts, phase outcome counts, total execution duration, and any flags or warnings.
-
-The Result Collector is deterministic: the same step results and phase definitions produce the same summaries.
-
-### 11.7 Feedback Dispatcher
-
-The Feedback Dispatcher delivers execution feedback to upstream Engines:
-
-1. **Step Feedback Dispatch** — After each step completes or fails, dispatches step execution feedback to the Planning Engine (for plan revision evaluation) and the Context Engine (for state updates from postconditions and side effects).
-
-2. **Phase Feedback Dispatch** — After each phase completes, dispatches phase completion feedback to the Planning Engine (for plan progress tracking) and the Decision Engine (for decision validity monitoring).
-
-3. **Execution Feedback Dispatch** — After the entire execution completes, fails, or is cancelled, dispatches the execution completion summary to the Planning Engine, Decision Engine, Memory Engine, and audit systems.
-
-4. **Feedback Acknowledgment Tracking** — Tracks feedback delivery acknowledgments from consuming Engines. If a consuming Engine is unreachable, the feedback is queued for delivery per the Engine Communication retry model (A.4.5).
-
-The Feedback Dispatcher is deterministic: the same step results and phase summaries produce the same feedback payloads. Delivery timing may vary due to network conditions but the feedback content does not.
-
----
-
-## 12. Resolution Rules
-
-### 12.1 Ambiguity Resolution
-
-| Ambiguity | Resolution Rule |
-|:---|:---|
-| Execution command lacks explicit constraints | Default execution constraints applied (sequential execution, no timeout, halt-on-failure) |
-| Step has missing procedural knowledge | Generic execution pattern applied; knowledge-gap warning in execution record |
-| Precondition evaluation yields indeterminate result (stale context) | Precondition treated as failed; step deferred to next context refresh cycle |
-| Multiple valid topological orderings | Deterministic tiebreaker applied: steps ordered by step identifier (lexicographic) within each phase |
-| Phase has both parallelizable and non-parallelizable steps | Non-parallelizable steps execute first within the phase; parallelizable steps execute after non-parallelizable steps complete |
-
-### 12.2 Conflict Resolution
-
-| Conflict | Resolution Rule |
-|:---|:---|
-| Decision superseded during execution | Current execution cancelled after grace period; new decision triggers new execution |
-| Plan revised during execution | Current execution continues with original plan (plans are immutable); Planning Engine notified of revision; new execution may be triggered for revised plan |
-| Context change invalidates in-progress step's postconditions | Step completes (already in "executing" state); postcondition mismatch flagged in step result; Planning Engine notified for plan revision evaluation |
-| Step failure with retryable failure type | Retry per retry policy; if retries exhausted, step marked "failed"; failure containment policy applied |
-| Execution timeout exceeded for a step | Step forcibly transitioned to "failed" with reason "timeout"; failure containment policy applied |
-
-### 12.3 Revision Scope Rules
-
-| Trigger Type | Default Scope | Expanded Scope When |
-|:---|:---|:---|
-| Decision superseded | Entire execution cancelled | Always entire execution |
-| Decision cancelled | Entire execution cancelled | Always entire execution |
-| Context change during execution | Re-evaluate preconditions for pending steps | Expanded to re-evaluate completed step postconditions if context change is major |
-| Plan revised (new version available) | No impact on current execution (original plan is immutable) | Governance may request execution restart with revised plan |
-| Step failure (single) | Retry if policy permits; contain failure if not | Expanded to phase-level evaluation if failure affects shared resources |
-| Step failure (multiple in same phase) | Halt execution if halt-on-failure policy; continue independent steps if continue-on-failure | Expanded to full execution halt if more than 50% of phase steps failed |
-
----
-
-## 13. Validation Rules
-
-### 13.1 Input Validation
-
-| Validation | Rule | Failure Mode |
-|:---|:---|:---|
-| Execution command schema | Command structure matches the expected schema (decision reference, execution constraints) | Command rejected; specific violations listed |
-| Decision artifact validity | Decision artifact in "authorized" state; selected plan reference valid; no unresolved escalations | Command rejected; "invalid decision" error |
-| Plan reference validity | Referenced plan exists, is in "validated" or "active" state, and has a complete dependency graph | Execution blocked; plan retrieval failure reported |
-| Dependency graph validity | Dependency graph is a DAG; topological sort produces valid ordering | Execution blocked; "invalid dependency graph" error |
-| Context reference validity | Referenced context snapshot version is accessible | Execution proceeds with last known context; staleness warning |
-| Knowledge reference validity | Referenced procedural knowledge entities are accessible and active | Execution proceeds with generic patterns; knowledge-gap warning |
-| Execution constraint validity | Constraints structurally valid and non-contradictory | Invalid constraints ignored; default constraints applied |
-
-### 13.2 Execution Validation (Critical Checks)
-
-Every execution must pass the following critical validation checks before step execution begins:
-
-| Check | Rule | Failure Mode |
-|:---|:---|:---|
-| **Decision authorization** | Decision artifact is in "authorized" state and has not been superseded or cancelled | Execution blocked; "unauthorized decision" error |
-| **Plan immutability** | Referenced plan is immutable (validated per Planning Engine Invariant 2) | Execution blocked; "mutable plan" error |
-| **Dependency graph acyclicity** | The dependency graph is a DAG with a valid topological ordering | Execution blocked; cycle edges identified |
-| **Initial preconditions satisfiable** | At least the first execution phase's step preconditions are satisfiable | Execution blocked; unsatisfiable preconditions listed |
-| **Execution context uniqueness** | No other active execution context exists for the same decision artifact | Execution blocked; "duplicate execution" error |
-
-### 13.3 Execution Validation (Advisory Checks)
-
-Advisory checks produce warnings but do not block execution:
-
-| Check | Rule | Advisory Condition |
-|:---|:---|:---|
-| **Context freshness** | Context snapshot used is within the freshness window | Warning if context is stale |
-| **Knowledge freshness** | Procedural knowledge used is within the freshness window | Warning if knowledge is stale |
-| **Plan age** | Plan has not been superseded by a newer version | Warning if a newer plan version exists for the same goal |
-| **Risk awareness** | Decision artifact's risk assessment has been reviewed | Informational; no blocking |
-| **Resource headroom** | Estimated total resource consumption is within available limits (per context) | Warning if resource utilization exceeds 80% |
-
-### 13.4 State Transition Validation
-
-| Transition | Validation | Failure Mode |
-|:---|:---|:---|
-| Initialized → Executing | All critical validation checks pass; first phase steps have at least one ready step | Transition blocked; validation failures listed |
-| Executing → Completed | All steps in terminal state; overall outcome "completed" | Transition updated by Result Collector |
-| Executing → Failed | Unrecoverable failure; failure containment policy applied; no further steps executable | Transition updated by Step Scheduler |
-| Executing → Cancelled | Cancellation command received from Decision Engine or governance | Transition immediate; in-flight steps completed or terminated per grace period |
-| Completed → Archived | No active references from any Engine or task | Transition blocked if active references exist |
-| Failed → Archived | No active references; failure analysis complete | Transition blocked if analysis pending |
-
----
-
-## 14. Engine Invariants
-
-The following properties must always hold for the Execution Engine regardless of state, inputs, or operations:
-
-### Invariant 1: Step Execution Ordering
-
-Every step executes only after all its strong dependencies have completed successfully. No step transitions to "executing" state unless every step it strongly depends on is in "completed" state. The execution order is a valid topological ordering of the plan's dependency graph.
-
-### Invariant 2: Step Result Immutability
-
-Once a step result has been produced (step transitioned to "completed" or "failed"), the step result cannot be modified. Re-execution of a step (via a new plan version and new execution context) produces a new step result with a new identifier. No operation on the Execution Engine mutates a produced step result.
-
-### Invariant 3: Decision Binding
-
-Every execution context is bound to exactly one authorized decision artifact. No execution proceeds without a valid decision authorization. If the decision is superseded or cancelled, the execution is cancelled.
-
-### Invariant 4: Execution Context Uniqueness
-
-For any given decision artifact, there is at most one active (non-completed, non-failed, non-cancelled, non-archived) execution context. A decision artifact cannot be executed concurrently by multiple execution contexts.
-
-### Invariant 5: Feedback Completeness
-
-Every step state transition produces feedback. Every phase completion produces feedback. Every execution termination produces a completion summary. No step execution, phase completion, or execution termination occurs without corresponding feedback being dispatched to the appropriate consuming Engines.
-
-### Invariant 6: Plan Immutability During Execution
-
-The plan referenced by an execution context does not change during execution. The plan is immutable (per Planning Engine Invariant 2), and the Execution Engine never switches to a different plan version during an active execution. Plan revisions produce new execution contexts.
-
-### Invariant 7: Step State Machine Integrity
-
-Every step in an execution context is in exactly one state at any given time. State transitions follow the defined state machine: pending → ready → executing → completed/failed/skipped, or pending → cancelled, or ready → cancelled. No step transitions backward (e.g., from "completed" to "executing").
-
-### Invariant 8: Side Effect Traceability
-
-Every side effect produced during step execution is attributed to a specific step result within a specific execution context. No side effect occurs without a traceable origin. The execution record documents the chain from execution context → step → step result → side effects.
-
----
-
-## 15. Engine Operations
-
-### 15.1 Execution Operations
+#### Execution Operations
 
 | Operation | Purpose | Inputs | Outputs | Side Effects | Failure Modes |
 |:---|:---|:---|:---|:---|:---|
 | `execute_plan(decision_ref, execution_constraints)` | Execute the plan authorized by a decision artifact | Execution command (decision reference, constraints) | Execution context; step results; execution completion summary | Step state transitions; context updates; feedback to upstream Engines | Decision invalid; plan invalid; precondition unsatisfiable; execution failure |
 | `cancel_execution(execution_context_id, reason)` | Cancel an active execution | Execution context identifier, cancellation reason | `Execution Cancelled` event; step states updated | In-flight steps completed or terminated per grace period; feedback dispatched | Execution not active (error); execution already completed (error) |
 
-### 15.2 Query Operations
+#### Query Operations
 
 | Operation | Purpose | Inputs | Outputs | Side Effects | Failure Modes |
 |:---|:---|:---|:---|:---|:---|
@@ -628,24 +890,22 @@ Every side effect produced during step execution is attributed to a specific ste
 | `get_execution_record(context_id)` | Retrieve the full execution record | Execution context identifier | Execution record with step results, phase summaries, and timing | None | Context or record not found (error) |
 | `get_execution_trace(context_id)` | Retrieve the ordered execution trace | Execution context identifier | Chronologically ordered log of all execution operations | None | Context or trace not found (error) |
 
-### 15.3 Retry Operations
+#### Retry Operations
 
 | Operation | Purpose | Inputs | Outputs | Side Effects | Failure Modes |
 |:---|:---|:---|:---|:---|:---|
-| `retry_step(context_id, step_id)` | Manually retry a failed step (governance-authorized) | Execution context identifier, step identifier | Step re-enters "ready" state; new execution attempt | Retry counter incremented; feedback dispatched | Step not in "failed" state (error); retry limit exceeded (error); governance authorization required |
+| `retry_step(context_id, step_id)` | Manually retry a failed step (governance-authorized) | Execution context identifier, step identifier | Step re-enters “ready” state; new execution attempt | Retry counter incremented; feedback dispatched | Step not in “failed” state (error); retry limit exceeded (error); governance authorization required |
 
 Operations are idempotent where applicable. `execute_plan` with the same decision reference and an already-active execution context returns the existing execution context. `cancel_execution` with a duplicate cancellation command returns the existing cancellation acknowledgment.
 
----
+### Engine Events
 
-## 16. Engine Events
-
-### 16.1 Events Emitted
+#### Events Emitted
 
 | Event | Trigger | Payload | Consumers | Expected Consumer Response |
 |:---|:---|:---|:---|:---|
 | `Execution Engine Initialized` | Startup completes | Configuration summary, registered capability, parallelization limits | All peer Engines, Engine Lifecycle (A.4.4) | Acknowledge; submit execution commands |
-| `Step Started` | Step enters "executing" state | Execution context, step identifier, precondition snapshot | Audit systems, Planning Engine | Monitor; Planning Engine updates plan step state |
+| `Step Started` | Step enters “executing” state | Execution context, step identifier, precondition snapshot | Audit systems, Planning Engine | Monitor; Planning Engine updates plan step state |
 | `Step Completed` | Step finishes successfully | Step result (outcome, postconditions, side effects, duration) | Planning Engine, Context Engine, audit systems | Context Engine updates state; Planning Engine tracks progress |
 | `Step Failed` | Step finishes unsuccessfully | Step result (failure reason, duration, partial postconditions) | Planning Engine, Decision Engine, audit systems | Planning Engine evaluates plan revision; Decision Engine monitors decision validity |
 | `Phase Completed` | All steps in a phase reach terminal state | Phase identifier, step outcomes, phase outcome | Planning Engine, audit systems | Planning Engine tracks plan progress |
@@ -656,14 +916,14 @@ Operations are idempotent where applicable. `execute_plan` with the same decisio
 | `Execution Engine Shutdown` | Execution Engine enters graceful shutdown | State summary (active executions, in-flight steps) | All peer Engines, Engine Lifecycle (A.4.4) | Cease execution commands |
 | `Execution Engine Recovered` | Execution Engine completes restart recovery | Recovery timestamp, recovered execution count, resumed count | All peer Engines, Engine Lifecycle (A.4.4) | Resume execution commands |
 
-### 16.2 Events Reacted To
+#### Events Reacted To
 
 | Event | Source | Response |
 |:---|:---|:---|
 | `Decision Authorized` | Decision Engine (A.5.4) | Execution command may be issued for the authorized decision |
 | `Decision Superseded` | Decision Engine (A.5.4) | Cancel any active execution for the superseded decision |
 | `Decision Cancelled` | Decision Engine (A.5.4) | Cancel any active execution for the cancelled decision |
-| `Decision Revised` | Decision Engine (A.5.4) | If the revised decision's selected plan differs, cancel current execution (new execution may be triggered separately) |
+| `Decision Revised` | Decision Engine (A.5.4) | If the revised decision’s selected plan differs, cancel current execution (new execution may be triggered separately) |
 | `Context Updated` | Context Engine (A.5.1) | Re-evaluate preconditions for pending steps in active executions |
 | `Context Compacted` | Context Engine (A.5.1) | Update context references for active executions |
 | `Knowledge Superseded` | Knowledge Engine (A.5.2) | If superseded knowledge affects in-progress or pending step procedures, flag in execution record |
@@ -671,411 +931,11 @@ Operations are idempotent where applicable. `execute_plan` with the same decisio
 | `Engine Deregistered` | Engine Registry (A.4.3) | Remove the Engine from the consumer or producer list |
 | `Configuration Updated` | Governance or Engine configuration | Reload retry policy, parallelization limits, and failure containment policy |
 
----
+### Engine Handoff Contract
 
-## 17. Dependencies
+This subsection defines the contract for transferring validated outputs from the Execution Engine to downstream consumers. All eight mandatory elements from A.5.0 Section 9 (Engine Handoff Contract) are addressed below.
 
-The Execution Engine depends on the following upstream components, consistent with the Universal Section Contract (Section 4 of A.5.0):
-
-- **Engine Platform (A.4)** — Capability model, Engine contract, overall architectural context.
-- **Engine Kernel (A.4.1)** — Execution environment and foundational Engine services.
-- **Engine Contract (A.4.2)** — Contract interface the Execution Engine must implement.
-- **Engine Registry (A.4.3)** — Registry services for Engine discovery and consumer management.
-- **Engine Lifecycle (A.4.4)** — Lifecycle state machine specialized by Section 10.
-- **Engine Communication (A.4.5)** — Inter-Engine messaging and event delivery.
-- **Engine State (A.4.6)** — State model for the Execution Engine's internal state.
-- **Engine Capability (A.4.7)** — Maps the Execution Engine to "Task Execution" capability domain.
-- **Context Engine (A.5.1)** — Provides resolved context snapshots for precondition verification and receives state change events from step execution. The Execution Engine depends on the Context Engine being registered but can operate on the last known context if the Context Engine is temporarily unavailable.
-- **Knowledge Engine (A.5.2)** — Provides procedural knowledge for step execution patterns. The Execution Engine depends on the Knowledge Engine being registered but can operate with generic execution patterns if the Knowledge Engine is temporarily unavailable.
-- **Planning Engine (A.5.3)** — Provides validated plans with step definitions and dependency graphs. The Execution Engine depends on the Planning Engine being registered; it cannot execute without a plan.
-- **Decision Engine (A.5.4)** — Provides authorized decision artifacts that trigger and authorize execution. The Execution Engine depends on the Decision Engine being registered; it cannot begin execution without an authorized decision.
-- **STD-010, STD-003, STD-000, M.0, M.1** — Standards and meta-models as defined in Normative References.
-
----
-
-## 18. Engine State
-
-### 18.1 State Dimensions
-
-| Dimension | Description | Volatility |
-|:---|:---|:---|
-| **Configuration State** | Retry policy, parallelization limits, execution timeout, failure containment policy, cancellation grace period | Low — governance-authorized changes only |
-| **Active Executions State** | Current set of active execution contexts with their step states, phase progress, and decision references | High — changes with every step state transition |
-| **Execution Archive State** | Historical execution contexts (completed, failed, cancelled) with their full records and step results | Low — append-only; grows over time |
-| **Pending Commands State** | Queued execution commands awaiting processing | High — changes with every incoming command |
-| **In-Flight Steps State** | Steps currently in "executing" state across all active execution contexts | High — changes with step dispatch and completion |
-| **Feedback Queue State** | Feedback events awaiting delivery to upstream Engines | Medium — changes with step completions and delivery acknowledgments |
-| **Context Reference State** | Most recent Context Engine snapshot version used for precondition verification | Medium — updates with context events |
-| **Knowledge Reference State** | Procedural knowledge entity versions used in active step executions | Medium — updates with knowledge events |
-| **Decision Reference State** | Decision artifact versions bound to active execution contexts | Medium — updates with decision events |
-| **Plan Reference State** | Plan versions referenced by active execution contexts | Low — plans are immutable during execution |
-| **Lifecycle State** | Current Engine lifecycle phase (per A.4.4) | Low — changes only at lifecycle transitions |
-
-### 18.2 State Consistency
-
-- Active Executions State is consistent with the Decision Reference State — every active execution context references a valid, authorized decision artifact.
-- Active Executions State is consistent with the Plan Reference State — every active execution context references a valid plan version.
-- Active Executions State is consistent with the In-Flight Steps State — every step in "executing" state belongs to an active execution context.
-- Step states within an execution context are consistent with the dependency graph — no step is "completed" while a step it strongly depends on is not "completed".
-- The Feedback Queue State is consistent with the Active Executions State — every queued feedback event references a valid execution context or step result.
-- The Execution Archive State contains only execution contexts that have been fully transitioned out of the active state.
-
-### 18.3 State Recovery
-
-Recovery-critical state: Active Executions State (all execution contexts with step states), In-Flight Steps State (steps that were executing at shutdown), completed step results for active executions, Decision Reference State, Plan Reference State, and Configuration State. The Pending Commands State and Feedback Queue State are transient. On recovery, the Execution Engine assumes the persistence layer provides the execution data and evaluates each active execution context for resumability.
-
----
-
-## 19. AI Consumption Rules
-
-### 19.1 AI Consumption Boundary
-
-The Execution Engine does not invoke LLMs or AI models as part of its core architecture. Step ordering, scheduling, precondition verification, step execution, result capture, and feedback dispatch are all deterministic operations based on defined rules, plan structures, dependency graphs, and knowledge entities. The Execution Engine does not use AI for step processing, error recovery, precondition evaluation, or execution ordering.
-
-### 19.2 When AI May Be Involved
-
-The Execution Engine may execute steps that were planned or decided with AI assistance in other Engines. In this case, the Execution Engine treats the steps the same as any other steps — they are executed according to the plan's dependency order and the step's defined operation. The Execution Engine does not need to know whether a step, plan, or decision originated from an AI-assisted process. Similarly, procedural knowledge retrieved from the Knowledge Engine may have been authored with AI assistance, but the Execution Engine applies it deterministically regardless of origin.
-
-### 19.3 Prohibited AI Usage
-
-- The Execution Engine shall not use LLM calls to execute plan steps.
-- The Execution Engine shall not use LLM calls to determine execution order.
-- The Execution Engine shall not use LLM calls to evaluate preconditions or postconditions.
-- The Execution Engine shall not use LLM calls to handle step failures or decide retry strategies.
-- The Execution Engine shall not use prompt engineering or model selection in any capacity.
-
----
-
-## 20. Runtime Interaction Rules
-
-### 20.1 Interaction Model
-
-The Execution Engine's interactions follow the Engine Communication model (A.4.5):
-
-- **Synchronous interactions**: Execution commands, execution queries, and manual retry requests are synchronous request-response patterns. The requesting Engine waits for the Execution Engine to acknowledge the command or return the query result. Note that execution itself is asynchronous — the command is acknowledged synchronously, but step execution proceeds asynchronously.
-- **Asynchronous interactions**: Cancellation events (from Decision Engine), context change events (from Context Engine), and knowledge update events (from Knowledge Engine) are processed asynchronously.
-- **Event-driven interactions**: Step lifecycle events, phase completion events, and execution termination events are emitted asynchronously to all subscribed consumers.
-
-### 20.2 Concurrency Rules
-
-- Multiple execution contexts may be active concurrently if they operate on different decision artifacts (and thus different plans and goals).
-- Execution contexts for the same decision artifact are prohibited (Invariant 4).
-- Within an execution context, step parallelization is bounded by the configured concurrency limit.
-- Step queries do not block step execution and vice versa.
-- Cancellation commands are processed immediately and take priority over normal execution flow.
-- Feedback dispatch does not block step execution — feedback is queued and dispatched asynchronously.
-
-### 20.3 Timeout and Boundedness
-
-- Each step execution is bounded by the configured execution timeout.
-- Phase advancement is bounded by the slowest step in the phase (plus timeout).
-- Total execution is bounded by the sum of all phase durations (or by cancellation/timeout).
-- No unbounded loops or recursive operations exist in the Execution Engine's processing pipeline.
-- The retry limit provides a hard bound on the number of execution attempts per step.
-
----
-
-## 21. Extension Model
-
-### 21.1 Extension Points
-
-| Extension Point | Description | Governance |
-|:---|:---|:---|
-| Custom step execution patterns | Additional execution patterns for specific step types or domains | Must define pattern structure, precondition handling, and result capture; registered through Engine configuration |
-| Custom precondition evaluators | Additional precondition types beyond standard context-based evaluation | Must be deterministic and produce boolean results; registered through Engine configuration |
-| Custom failure containment strategies | Alternative strategies beyond "halt" and "continue" | Must define strategy behaviour for all failure scenarios; requires Framework Governance approval |
-| Custom feedback transformers | Additional feedback formatting or routing rules | Must not drop or alter feedback content; registered through Engine configuration |
-
-### 21.2 Extension Constraints
-
-- Extensions must not modify the Execution Engine's invariants (Section 14).
-- Extensions must not introduce non-deterministic behaviour.
-- Extensions must not bypass the decision-authorization-before-execution requirement.
-- Extensions must not alter the step state machine transitions.
-- Extensions that affect step execution semantics or failure handling require Framework Governance review.
-- Extensions must be backward-compatible — existing execution records must remain valid after an extension is added.
-
----
-
-## 22. Knowledge Graph Integration
-
-### 22.1 Integration Model
-
-The Execution Engine's execution contexts, step results, and execution traces may be projected into the knowledge graph for cross-reference, historical analysis, and execution pattern mining. Integration is mediated through the Engine Platform's knowledge graph projection layer.
-
-### 22.2 Projection Points
-
-| Projection | Content | Purpose |
-|:---|:---|:---|
-| Execution Context Node | Execution context identifier, decision reference, plan reference, overall outcome, start/end timestamps | Enable execution-level queries and historical tracking |
-| Step Result Node | Step result identifier, step identifier, outcome, duration, resource consumption | Enable step-level analysis and performance tracking |
-| Execution Phase Node | Phase identifier, execution context, step outcomes, phase duration | Enable phase-level analysis and bottleneck identification |
-| Execution-Decision Edge | Execution context, decision version | Enable execution-to-decision traceability |
-| Execution-Plan Edge | Execution context, plan version | Enable execution-to-plan traceability |
-| Step Dependency Execution Edge | From-step result, to-step result, dependency type | Enable dependency execution pattern analysis |
-| Execution Feedback Edge | Execution context, feedback event, consuming Engine | Enable feedback delivery tracking |
-
-### 22.3 Integration Constraints
-
-- Projection is downstream and non-blocking.
-- The Execution Engine produces projection data; it does not define the graph schema or query model.
-- Projection failures do not affect the Execution Engine's operation.
-
----
-
-## 23. Certification Requirements
-
-### 23.1 Required Certifications
-
-| Certification | Requirement | Evidence |
-|:---|:---|:---|
-| **Template Compliance** | All 31 sections present and compliant with A.5.0 template | Section-by-section compliance matrix |
-| **STD-010 Metadata Compliance** | Document Metadata fully compliant with STD-010 Section 4 | Metadata validation checklist |
-| **STD-003 Terminology Compliance** | All terms conform to STD-003 | Terminology audit report |
-| **Invariant Verifiability** | All eight invariants (Section 14) are testable | Invariant test specification |
-| **Determinism Verification** | Same decision + plan + context produces same step results across 100 consecutive runs | Determinism test evidence |
-| **Cross-Engine Alignment** | Context Engine, Knowledge Engine, Planning Engine, and Decision Engine consumption contracts are compatible | Cross-Engine alignment verification |
-| **Completeness Check** | All responsibilities (Section 5) map to operations (Section 15) | Traceability matrix |
-| **Event Completeness** | All lifecycle transitions (Section 10) produce events (Section 16) | Traceability matrix |
-
-### 23.2 Certification Gates
-
-- Certification evidence reviewed by Enterprise Documentation Standards Board.
-- Cross-engine alignment verified against A.5.1, A.5.2, A.5.3, and A.5.4 output contracts.
-- Certification does not imply canonical status.
-- Evidence traceable to Traceability ID: `AI-DOS.V4.PHASE-2.ENGINE-05`.
-
----
-
-## 24. Performance Characteristics
-
-### 24.1 Expected Performance Bounds
-
-| Characteristic | Expected Bound | Notes |
-|:---|:---|:---|
-| Step execution latency | Per-step; bounded by step complexity, execution timeout, and retry policy | Deterministic; no AI/LLM |
-| Phase execution latency | Per-phase; bounded by slowest step in phase (plus timeout) | Parallelizable steps reduce wall-clock time |
-| Total execution latency | Per-plan; bounded by sum of phase latencies | Deterministic given fixed step durations |
-| Query latency | Constant time per query | Execution context, step result, and record lookups |
-| Feedback dispatch latency | Per-event; bounded by Engine Communication delivery model | Asynchronous; does not block execution |
-
-### 24.2 Scalability Characteristics
-
-- Supports multiple concurrent execution contexts for different goals.
-- Execution archive grows over time; compaction archives oldest non-referenced executions when limits are reached.
-- Plan and decision retrieval is bounded by the Planning Engine's and Decision Engine's query limits.
-- Step parallelization provides concurrency within a single execution context, bounded by the configured concurrency limit.
-
-### 24.3 Non-Goals
-
-- No specific latency numbers (implementation concern).
-- No throughput targets (implementation concern).
-- No resource allocation specifications (platform concern).
-
----
-
-## 25. Security & Governance
-
-### 25.1 Security Boundaries
-
-- **Step result immutability** — Produced step results cannot be tampered with. Mutation of a versioned step result is a violation of Invariant 2.
-- **Request authentication** — Source authentication is handled by Engine Communication (A.4.5).
-- **Consumer authorization** — Managed by Engine Registry (A.4.3).
-- **Configuration integrity** — Retry policy, parallelization limits, and failure containment policy changes require governance authorization.
-- **Execution visibility** — All execution contexts, step results, and execution records are visible to registered peer Engines. Fine-grained access control is out of scope.
-- **Cancellation authority** — Only the Decision Engine (via decision supersession/cancellation) or governance may cancel an active execution. Peer Engines cannot cancel executions they did not authorize.
-
-### 25.2 Governance Constraints
-
-- Retry policy is a governance artifact — changes require Framework Governance approval.
-- Failure containment policy is a governance artifact.
-- Execution timeout is a governance artifact.
-- Manual step retry (beyond automatic retry policy) requires governance authorization.
-- Cancellation of in-progress executions requires a valid reason from the Decision Engine or governance.
-- The Execution Engine does not evaluate whether a step's side effects are desirable — that is a Decision Engine and Validation Engine concern.
-
----
-
-## 26. Out of Scope
-
-The following concerns are explicitly out of scope:
-
-- Source code, implementation files, and code repositories
-- REST endpoints, API definitions, GraphQL schemas, gRPC service definitions, and transport protocols
-- Persistence mechanisms, database schema design, Neo4j implementation, and vector database configuration
-- Caching strategies, cache invalidation, and cache infrastructure
-- LLM call orchestration, prompt engineering, model selection, token management, and inference optimization
-- Agent runtime design, agent lifecycle management, and agent communication protocols
-- Swarm runtime design, swarm coordination, and swarm topology management
-- Platform adapter specifications and adapter lifecycle management
-- ProjectStatus updates, project tracking, and milestone reporting
-- Certification execution and canonical promotion
-- Step operation logic definition or implementation
-- Resource provisioning and capacity planning
-- Distributed execution across multiple nodes or clusters
-- UI/UX design and visualization of execution progress
-
----
-
-## 27. Future Consumers
-
-| Consumer | Consumption Pattern | Expected Execution Usage |
-|:---|:---|:---|
-| **Validation Engine (A.5.6, future)** | Pull on demand | Retrieves step results for correctness verification against plan requirements and success criteria |
-| **Memory Engine (A.5.9, future)** | Push subscription (completed executions) | Stores execution contexts, step results, and execution traces for pattern recognition and performance analysis |
-| **Planning Engine (A.5.3)** | Event-driven (step feedback) | Consumes step completion and failure events for plan revision evaluation and plan lifecycle state updates |
-| **Decision Engine (A.5.4)** | Event-driven (execution progress) | Consumes execution completion events for decision validity monitoring |
-| **Context Engine (A.5.1)** | Event-driven (state changes) | Consumes step postconditions and side effects for contextual state updates |
-| **Engine Platform (A.4)** | Event-driven | Consumes lifecycle events for platform-level monitoring |
-| **Knowledge Graph Projection** | Asynchronous | Consumes execution, step, and phase metadata for graph-based analysis |
-
----
-
-## 28. Success Criteria
-
-### 28.1 Architectural Success Criteria
-
-| Criterion | Measurable Condition | Verification Method |
-|:---|:---|:---|
-| **Template compliance** | All 31 sections present and compliant with A.5.0 | Section audit |
-| **STD-010 compliance** | Document Metadata passes all STD-010 checks | STD-010 validation checklist |
-| **Invariant testability** | All eight invariants are testable assertions | Invariant test suite |
-| **Determinism** | Same inputs produce same step results across 100 consecutive runs | Determinism test suite |
-| **Completeness** | Every responsibility maps to an operation | Traceability matrix |
-| **Event coverage** | Every lifecycle transition produces an event | Traceability matrix |
-
-### 28.2 Functional Success Criteria
-
-| Criterion | Measurable Condition | Verification Method |
-|:---|:---|:---|
-| **Ordering fidelity** | No step executes before its strong dependencies complete | Dependency order audit |
-| **Step result immutability** | No produced step result is modified after creation | Immutability audit |
-| **Feedback completeness** | Every step state transition has corresponding feedback | Feedback audit |
-| **Decision binding** | No execution proceeds without a valid authorized decision | Decision reference audit |
-| **Cancellation integrity** | Cancellation halts execution within grace period; no orphaned steps | Cancellation test |
-| **Failure containment** | Failed steps do not cause uncontrolled cascading failures | Failure containment test |
-
-### 28.3 Governance Success Criteria
-
-| Criterion | Measurable Condition | Verification Method |
-|:---|:---|:---|
-| **Ownership clarity** | Exactly one accountable owner named | Governance review |
-| **Handoff readiness** | Handoff contract defines prerequisites, evidence, and gates | Governance review |
-| **Scope compliance** | No implementation or AI details in any section | Scope audit |
-| **Cross-Engine alignment** | Context, Knowledge, Planning, and Decision Engine contracts compatible | Cross-Engine alignment verification |
-
----
-
-## 29. Completion Checklist
-
-| Requirement | Status |
-|:---|:---|
-| All 31 sections present in A.5.0 template order | Complete |
-| Section 1 (Status) present with platform alignment statement | Complete |
-| Section 2 (Document Metadata) STD-010-compliant | Complete |
-| Section 3 (Purpose) provides Engine-specific content with capability domain mapping | Complete |
-| Section 4 (Mission) provides testable mission-level objectives | Complete |
-| Section 5 (Engine Responsibilities) provides grouped, verifiable responsibilities | Complete |
-| Section 6 (Non Responsibilities) maps each exclusion to an owning component | Complete |
-| Section 7 (Engine Position) describes topology and data flow | Complete |
-| Section 8 (Consumed Inputs) defines typed inputs with validation and failure handling | Complete |
-| Section 9 (Produced Outputs) defines typed outputs with versioning and validation | Complete |
-| Section 10 (Engine Lifecycle) describes all lifecycle transitions within A.4.4 | Complete |
-| Section 11 (Internal Engine Model) describes six-stage pipeline with cancellation handling | Complete |
-| Section 12 (Resolution Rules) defines ambiguity, conflict, and revision scope resolution | Complete |
-| Section 13 (Validation Rules) defines input, execution, advisory, and state transition validation | Complete |
-| Section 14 (Engine Invariants) states eight testable invariants | Complete |
-| Section 15 (Engine Operations) enumerates operations with full signatures | Complete |
-| Section 16 (Engine Events) enumerates emitted and consumed events | Complete |
-| Section 17 (Dependencies) lists all upstream dependencies including all four upstream Engines | Complete |
-| Section 18 (Engine State) describes state dimensions, consistency, and recovery | Complete |
-| Section 19 (AI Consumption Rules) defines AI invocation boundaries | Complete |
-| Section 20 (Runtime Interaction Rules) defines synchronous/asynchronous and concurrency rules | Complete |
-| Section 21 (Extension Model) describes extension points and constraints | Complete |
-| Section 22 (Knowledge Graph Integration) describes projection points | Complete |
-| Section 23 (Certification Requirements) defines certification gates and evidence | Complete |
-| Section 24 (Performance Characteristics) states performance bounds | Complete |
-| Section 25 (Security & Governance) states security boundaries and governance constraints | Complete |
-| Section 26 (Out of Scope) lists all mandatory exclusions | Complete |
-| Section 27 (Future Consumers) identifies downstream consumers | Complete |
-| Section 28 (Success Criteria) defines measurable conditions | Complete |
-| Section 29 (Completion Checklist) all items addressed | Complete |
-| Section 30 (Engine Ownership) names accountable owner and governance obligations | Complete |
-| Section 31 (Engine Handoff Contract) defines handoff prerequisites and certification gates | Complete |
-
----
-
-## 30. Engine Ownership
-
-### Accountable Owner
-
-**Role**: Framework Architecture Team
-
-The Framework Architecture Team is the single accountable owner for the Execution Engine's architectural correctness, governance alignment, and certification readiness. The Execution Engine is the only Engine in the pipeline that produces observable side effects on the system's state, making its correctness, determinism, and failure containment properties critical to the overall system's reliability. Centralized architectural control is essential to ensure that execution behaviour remains predictable and auditable.
-
-### Maintained Boundaries
-
-| Boundary | Owner Controls | Outside Owner Scope |
-|:---|:---|:---|
-| Step execution ordering rules | Yes | Persistence implementation |
-| Retry policy design | Yes | Step operation logic |
-| Failure containment strategies | Yes | Resource provisioning |
-| Execution lifecycle design | Yes | Platform persistence |
-| Parallelization model | Yes | Distributed execution |
-| Extension model governance | Yes | Extension implementations |
-
-### Decision Rights
-
-| Decision Type | Owner Authority | Requires Governance Escalation |
-|:---|:---|:---|
-| Internal model changes | Autonomous | No |
-| New step execution patterns | Autonomous for standard patterns | Yes for patterns that alter execution semantics |
-| Retry policy changes | Autonomous for minor adjustments within approved range | Yes for new retry strategies or significant limit changes |
-| Failure containment strategy changes | Autonomous for selecting existing strategies | Yes for new strategies |
-| Parallelization limit changes | Autonomous within governance-approved range | Yes for changes that affect system resource consumption |
-| Cancellation grace period changes | Autonomous for minor adjustments | Yes for grace period removal |
-
-### Validation Obligations
-
-- All 31 sections compliant with A.5.0.
-- All invariants preserved.
-- All responsibilities map to operations.
-- All lifecycle transitions produce events.
-- STD-010 and STD-003 compliant.
-- No implementation scope.
-- Cross-engine alignment verified with A.5.1, A.5.2, A.5.3, and A.5.4.
-
-### Review Obligations
-
-Present to Enterprise Documentation Standards Board:
-
-- Complete RFC with all sections.
-- Responsibility-to-operation traceability matrix.
-- Lifecycle-to-event traceability matrix.
-- Invariant test specification.
-- STD-010 and STD-003 compliance evidence.
-- Cross-engine alignment verification reports with A.5.1, A.5.2, A.5.3, and A.5.4.
-
-### Certification Responsibilities
-
-- Template compliance matrix.
-- STD-010 metadata validation checklist.
-- STD-003 terminology audit report.
-- Invariant test results.
-- Determinism verification evidence.
-- Cross-engine alignment evidence with A.5.1, A.5.2, A.5.3, and A.5.4.
-- Ordering fidelity test results.
-- Failure containment test results.
-
-### Ownership Handoff Limitations
-
-Ownership transfer requires governance-authorized transition recorded in the Engine Registry. The transition must transfer all obligations, preserve evidence and traceability, and not occur silently or implicitly.
-
----
-
-## 31. Engine Handoff Contract
-
-### Handoff Prerequisites
+#### Handoff Prerequisites
 
 Before the Execution Engine hands off step results to the Validation Engine, or execution completion summaries to downstream Engines, the following conditions must be satisfied:
 
@@ -1087,7 +947,7 @@ Before the Execution Engine hands off step results to the Validation Engine, or 
 6. The decision artifact and plan version referenced by the execution are documented.
 7. The Execution Engine is in steady-state or degraded lifecycle phase.
 
-### Required Evidence
+#### Required Evidence
 
 | Evidence | Description | Retention |
 |:---|:---|:---|
@@ -1101,18 +961,18 @@ Before the Execution Engine hands off step results to the Validation Engine, or 
 | Feedback delivery status | Status of feedback delivery to each upstream Engine | Same as execution |
 | Context reference | Context Engine snapshot versions used during execution | Same as execution |
 
-### Validated Outputs
+#### Validated Outputs
 
 - Step results (immutable, versioned, with full execution metadata).
 - Execution records (immutable, per execution context).
 - Execution summaries (immutable, per execution context).
 - Execution traces (immutable, per execution context).
 
-### Snapshot Expectations
+#### Snapshot Expectations
 
 Step results are immutable once produced. The Validation Engine receives step results that are guaranteed not to change. If a step needs to be re-executed (via plan revision and new execution), a new step result with a new identifier is produced. The original step result remains unchanged for auditability.
 
-### Receiving Consumers
+#### Receiving Consumers
 
 1. Validation Engine (A.5.6, future) — primary consumer of step results
 2. Memory Engine (A.5.9, future) — consumer of execution records and completion summaries
@@ -1120,18 +980,18 @@ Step results are immutable once produced. The Validation Engine receives step re
 4. Decision Engine (A.5.4) — consumer of execution completion summaries
 5. Context Engine (A.5.1) — consumer of state change events from step postconditions
 
-### Failure Handling
+#### Failure Handling
 
 | Failure Type | Handling | Escalation |
 |:---|:---|:---|
-| Step failure (retryable) | Retry per policy; step returns to "ready" state | If retries exhausted, step marked "failed"; failure containment applied |
-| Step failure (non-retryable) | Step marked "failed"; failure containment applied | Planning Engine notified for plan revision |
-| Phase failure (all steps failed) | Phase marked "failed"; execution outcome depends on failure containment policy | If "halt" policy, execution terminated; Planning Engine notified |
-| Execution timeout | Step or execution marked "failed" with "timeout" reason | Planning Engine notified for plan revision |
+| Step failure (retryable) | Retry per policy; step returns to “ready” state | If retries exhausted, step marked “failed”; failure containment applied |
+| Step failure (non-retryable) | Step marked “failed”; failure containment applied | Planning Engine notified for plan revision |
+| Phase failure (all steps failed) | Phase marked “failed”; execution outcome depends on failure containment policy | If “halt” policy, execution terminated; Planning Engine notified |
+| Execution timeout | Step or execution marked “failed” with “timeout” reason | Planning Engine notified for plan revision |
 | Decision superseded during execution | Execution cancelled; in-flight steps completed per grace period | New execution may be triggered for new decision |
 | Consumer unreachable | Feedback queued for delivery; execution continues | After retry exhaustion per A.4.5, consumer marked unreachable; feedback retained for later retrieval |
 
-### Audit Record Expectations
+#### Audit Record Expectations
 
 Every handoff produces an audit record:
 
@@ -1143,12 +1003,12 @@ Every handoff produces an audit record:
 - Feedback delivery status.
 - Overall execution outcome.
 
-### Certification Gates
+#### Certification Gates
 
 1. **Pre-handoff validation** — Step results are immutable and complete.
 2. **Evidence completeness** — All required evidence items present.
 3. **Consumer readiness** — Receiving Engine registered and reachable (or feedback queued).
-4. **Invariant preservation** — All eight invariants (Section 14) hold.
+4. **Invariant preservation** — All eight invariants hold.
 5. **Cross-engine consistency** — Decision, plan, context, and knowledge references valid.
 6. **Feedback completeness** — All upstream Engines have received (or have queued) their feedback.
 
@@ -1156,58 +1016,277 @@ If any gate fails for execution-level handoffs, the execution record is still pr
 
 ---
 
-## 32. Validation Checklist
+## Lifecycle
 
-### STD-010 Metadata Validation
+### Engine Lifecycle
 
-| Check | Status |
-|:---|:---|
-| Metadata heading is exactly `## Document Metadata` | Pass |
-| Table shape is exactly `\| Field \| Value \|` with left-aligned columns | Pass |
-| All 27 mandatory STD-010 fields present | Pass |
-| Conditionally mandatory fields evaluated and included only when applicable | Pass |
-| Normative Authority does not include references, dependencies, consumed documents, or related documents | Pass |
-| Normative References, Dependencies, Consumes, Produces, Related Specifications are separate fields | Pass |
-| `Canonical Status` explicitly states non-canonical | Pass |
-| Exactly one Owner identified | Pass |
-| Version format follows STD-010 Section 4.6 | Pass |
-| Complete metadata does not claim canonical status | Pass |
+This section specializes the A.4.4 Engine Lifecycle model for the Execution Engine. The Execution Engine’s lifecycle behaviour is defined by the following transitions:
 
-### Structural Validation
+#### Initialization
 
-| Check | Status |
-|:---|:---|
-| Section order follows A.5.0 Section 5.1 order | Pass |
-| All 31 sections present | Pass |
-| Universal Contract (A.5.0 Section 4) compliance for every section | Pass |
-| No mandatory section omitted or merged | Pass |
-| No section redefines upstream Engine Platform models | Pass |
+The Execution Engine initializes when the Engine Platform starts. During initialization:
 
-### Scope Validation
+- Registers with the Engine Registry (A.4.3) as a Task Execution capability provider.
+- Loads configuration inputs (retry policy, parallelization limits, execution timeout, failure containment policy, cancellation grace period).
+- Establishes communication channels with the Context Engine, Knowledge Engine, Planning Engine, Decision Engine, and potential consuming Engines via the Engine Communication model (A.4.5).
+- Subscribes to decision authorization events from the Decision Engine and decision cancellation/supersession events.
+- Emits an `Execution Engine Initialized` event.
 
-| Check | Status |
-|:---|:---|
-| No implementation details (code, APIs, schemas) | Pass |
-| No AI/LLM consumption in core architecture | Pass |
-| No persistence mechanism specification | Pass |
-| No agent or swarm runtime design | Pass |
+#### Startup
 
-### Content Quality Validation
+After initialization:
 
-| Check | Status |
-|:---|:---|
-| All invariants are testable assertions | Pass |
-| All operations have complete signatures (purpose, inputs, outputs, side effects, failure modes) | Pass |
-| All events have complete payloads and consumer expectations | Pass |
-| All responsibilities map to at least one operation | Pass |
-| All lifecycle transitions produce events | Pass |
-| Cross-engine consumption contracts are explicit and typed | Pass |
+- Confirms connectivity with the Context Engine, Knowledge Engine, Planning Engine, and Decision Engine.
+- Verifies that context pull, knowledge retrieval, plan retrieval, and decision retrieval operations succeed.
+- Performs a readiness check by processing a test execution command with a known minimal plan.
+- Transitions to steady-state operation upon successful readiness confirmation.
 
+#### Steady-State Operation
 
-## 33. Completion Report
+In steady state, the Execution Engine:
 
-Completion reporting shall identify metadata, terminology, ownership, authority, dependency, cross-reference, and validation changes without declaring certification, freeze, approval, or canonical promotion.
+- Accepts and processes execution commands (step ordering, scheduling, execution, result collection).
+- Monitors for cancellation events from the Decision Engine (`Decision Cancelled`, `Decision Superseded`).
+- Monitors for context changes from the Context Engine that may affect in-progress execution.
+- Processes execution queries from peer Engines and audit systems.
+- Produces step results, execution feedback, and execution records for auditability.
 
+The Execution Engine operates on a command-driven model — it executes plans when an authorized decision artifact is received, not on a periodic cycle. Cancellation events are processed asynchronously and take priority over normal execution flow.
+
+#### Degradation
+
+If the Context Engine is temporarily unavailable, the Execution Engine continues executing steps but preconditions that depend on contextual state are verified against the last known context, with staleness warnings in the execution record. If the Knowledge Engine is temporarily unavailable, the Execution Engine uses generic execution patterns for steps that reference procedural knowledge, flagging the knowledge gap. If the Planning Engine is temporarily unavailable, the Execution Engine can continue executing already-retrieved plans but cannot fetch plan updates or revisions.
+
+If the Execution Engine itself is degraded (e.g., resource pressure reducing parallelization capacity), it continues to accept execution commands but may reduce concurrency, executing steps more sequentially while emitting an `Execution Engine Degraded` event.
+
+#### Shutdown
+
+During graceful shutdown:
+
+- Stops accepting new execution commands.
+- Completes in-flight step executions or cancels them after the grace period.
+- Persists all active execution state (execution contexts, step states, step results, pending feedback).
+- Emits an `Execution Engine Shutdown` event with a summary of active executions.
+- Deregisters from the Engine Registry.
+
+Non-graceful shutdown (crash, kill) results in state loss for in-flight step executions. Recovery-critical state (execution contexts, completed step results) must be persisted before shutdown completes.
+
+#### Recovery
+
+On restart after non-graceful shutdown:
+
+- Re-registers with the Engine Registry.
+- Re-establishes communication channels.
+- Retrieves the current context from the Context Engine.
+- Re-subscribes to events from the Decision Engine, Planning Engine, and Context Engine.
+- Recovers active execution state from the persistence layer (execution contexts with step states, completed step results, pending feedback).
+- For execution contexts where some steps were completed but the execution was interrupted: evaluates whether the completed steps are still valid (context and plan have not been superseded). If valid, resumes execution from the next pending phase. If invalid, marks the execution as “failed due to recovery” and notifies the Planning Engine.
+- Emits an `Execution Engine Recovered` event.
+- Resumes steady-state operation.
+
+Recovery-critical state: all active execution contexts with their step states, all completed step results, the most recent decision and plan references, and configuration inputs. In-flight step executions that were interrupted are treated as failed and subject to retry policy evaluation.
+
+---
+
+## Validation
+
+### Engine Invariants
+
+The following properties must always hold for the Execution Engine regardless of state, inputs, or operations. Each invariant is a testable assertion that can be verified programmatically.
+
+#### Invariant 1: Step Execution Ordering
+
+Every step executes only after all its strong dependencies have completed successfully. No step transitions to “executing” state unless every step it strongly depends on is in “completed” state. The execution order is a valid topological ordering of the plan’s dependency graph.
+
+#### Invariant 2: Step Result Immutability
+
+Once a step result has been produced (step transitioned to “completed” or “failed”), the step result cannot be modified. Re-execution of a step (via a new plan version and new execution context) produces a new step result with a new identifier. No operation on the Execution Engine mutates a produced step result.
+
+#### Invariant 3: Decision Binding
+
+Every execution context is bound to exactly one authorized decision artifact. No execution proceeds without a valid decision authorization. If the decision is superseded or cancelled, the execution is cancelled.
+
+#### Invariant 4: Execution Context Uniqueness
+
+For any given decision artifact, there is at most one active (non-completed, non-failed, non-cancelled, non-archived) execution context. A decision artifact cannot be executed concurrently by multiple execution contexts.
+
+#### Invariant 5: Feedback Completeness
+
+Every step state transition produces feedback. Every phase completion produces feedback. Every execution termination produces a completion summary. No step execution, phase completion, or execution termination occurs without corresponding feedback being dispatched to the appropriate consuming Engines.
+
+#### Invariant 6: Plan Immutability During Execution
+
+The plan referenced by an execution context does not change during execution. The plan is immutable (per Planning Engine Invariant 2), and the Execution Engine never switches to a different plan version during an active execution. Plan revisions produce new execution contexts.
+
+#### Invariant 7: Step State Machine Integrity
+
+Every step in an execution context is in exactly one state at any given time. State transitions follow the defined state machine: pending → ready → executing → completed/failed/skipped, or pending → cancelled, or ready → cancelled. No step transitions backward (e.g., from “completed” to “executing”).
+
+#### Invariant 8: Side Effect Traceability
+
+Every side effect produced during step execution is attributed to a specific step result within a specific execution context. No side effect occurs without a traceable origin. The execution record documents the chain from execution context → step → step result → side effects.
+
+### Validation Rules
+
+#### Input Validation
+
+| Validation | Rule | Failure Mode |
+|:---|:---|:---|
+| Execution command schema | Command structure matches the expected schema (decision reference, execution constraints) | Command rejected; specific violations listed |
+| Decision artifact validity | Decision artifact in “authorized” state; selected plan reference valid; no unresolved escalations | Command rejected; “invalid decision” error |
+| Plan reference validity | Referenced plan exists, is in “validated” or “active” state, and has a complete dependency graph | Execution blocked; plan retrieval failure reported |
+| Dependency graph validity | Dependency graph is a DAG; topological sort produces valid ordering | Execution blocked; “invalid dependency graph” error |
+| Context reference validity | Referenced context snapshot version is accessible | Execution proceeds with last known context; staleness warning |
+| Knowledge reference validity | Referenced procedural knowledge entities are accessible and active | Execution proceeds with generic patterns; knowledge-gap warning |
+| Execution constraint validity | Constraints structurally valid and non-contradictory | Invalid constraints ignored; default constraints applied |
+
+#### Execution Validation (Critical Checks)
+
+Every execution must pass the following critical validation checks before step execution begins:
+
+| Check | Rule | Failure Mode |
+|:---|:---|:---|
+| **Decision authorization** | Decision artifact is in “authorized” state and has not been superseded or cancelled | Execution blocked; “unauthorized decision” error |
+| **Plan immutability** | Referenced plan is immutable (validated per Planning Engine Invariant 2) | Execution blocked; “mutable plan” error |
+| **Dependency graph acyclicity** | The dependency graph is a DAG with a valid topological ordering | Execution blocked; cycle edges identified |
+| **Initial preconditions satisfiable** | At least the first execution phase’s step preconditions are satisfiable | Execution blocked; unsatisfiable preconditions listed |
+| **Execution context uniqueness** | No other active execution context exists for the same decision artifact | Execution blocked; “duplicate execution” error |
+
+#### Execution Validation (Advisory Checks)
+
+Advisory checks produce warnings but do not block execution:
+
+| Check | Rule | Advisory Condition |
+|:---|:---|:---|
+| **Context freshness** | Context snapshot used is within the freshness window | Warning if context is stale |
+| **Knowledge freshness** | Procedural knowledge used is within the freshness window | Warning if knowledge is stale |
+| **Plan age** | Plan has not been superseded by a newer version | Warning if a newer plan version exists for the same goal |
+| **Risk awareness** | Decision artifact’s risk assessment has been reviewed | Informational; no blocking |
+| **Resource headroom** | Estimated total resource consumption is within available limits (per context) | Warning if resource utilization exceeds 80% |
+
+#### State Transition Validation
+
+| Transition | Validation | Failure Mode |
+|:---|:---|:---|
+| Initialized → Executing | All critical validation checks pass; first phase steps have at least one ready step | Transition blocked; validation failures listed |
+| Executing → Completed | All steps in terminal state; overall outcome “completed” | Transition updated by Result Collector |
+| Executing → Failed | Unrecoverable failure; failure containment policy applied; no further steps executable | Transition updated by Step Scheduler |
+| Executing → Cancelled | Cancellation command received from Decision Engine or governance | Transition immediate; in-flight steps completed or terminated per grace period |
+| Completed → Archived | No active references from any Engine or task | Transition blocked if active references exist |
+| Failed → Archived | No active references; failure analysis complete | Transition blocked if analysis pending |
+
+### Certification Requirements
+
+This section follows the Universal Section Contract (A.5.0 Section 9). The Certification Requirements for this RFC are governance-consistent with the A.5.0 template’s structural expectations.
+
+#### Required Certifications
+
+| Certification | Requirement | Evidence |
+|:---|:---|:---|
+| **Template Compliance** | All 20 TPL-001 sections present and compliant with A.5.0 template | Section-by-section compliance matrix |
+| **STD-010 Metadata Compliance** | Document Metadata fully compliant with STD-010 Section 4 | Metadata validation checklist |
+| **STD-003 Terminology Compliance** | All terms conform to STD-003 | Terminology audit report |
+| **Invariant Verifiability** | All eight invariants are testable | Invariant test specification |
+| **Determinism Verification** | Same decision + plan + context produces same step results across 100 consecutive runs | Determinism test evidence |
+| **Cross-Engine Alignment** | Context Engine, Knowledge Engine, Planning Engine, and Decision Engine consumption contracts are compatible | Cross-Engine alignment verification |
+| **Completeness Check** | All responsibilities map to operations | Traceability matrix |
+| **Event Completeness** | All lifecycle transitions produce events | Traceability matrix |
+
+#### Certification Gates
+
+- Certification evidence reviewed by Enterprise Documentation Standards Board.
+- Cross-engine alignment verified against A.5.1, A.5.2, A.5.3, and A.5.4 output contracts.
+- Certification does not imply canonical status.
+- Evidence traceable to Traceability ID: `AI-DOS.V3.A.005.5`.
+
+---
+
+## Risks
+
+### Risk-1: Grace Period Timeout Leading to Partial Side Effects
+
+**Severity**: High
+**Likelihood**: Low
+**Impact**: If the cancellation grace period expires before in-flight steps complete, the Execution Engine forcibly terminates those steps. This may leave the system in a partially-updated state where some side effects have been applied and others have not, violating the expectation of atomic step execution.
+**Mitigation**: The grace period is a governance-configurable parameter with a default that is sufficient for the longest-expected step duration. The Execution Engine documents which steps were forcibly terminated in the execution record, enabling the Planning Engine to evaluate whether a compensating execution is needed. Invariant 2 (Step Result Immutability) still holds — even forcibly terminated steps produce a “failed” step result with the partial state documented.
+
+### Risk-2: Stale Context Leading to Invalid Precondition Verification
+
+**Severity**: Medium
+**Likelihood**: Medium
+**Impact**: If the Context Engine is temporarily unavailable, the Execution Engine uses the last known context for precondition verification. Steps executed against stale context may have their preconditions satisfied at verification time but violated at execution time if the context has changed.
+**Mitigation**: The Step Executor’s “Precondition Confirmation” step re-evaluates preconditions immediately before execution. If preconditions are no longer satisfiable, the step is failed with reason “precondition violation at execution time.” The staleness is documented in the execution record. Advisory validation checks produce warnings for stale context.
+
+### Risk-3: Dependency Graph Complexity Causing Phase Explosion
+
+**Severity**: Medium
+**Likelihood**: Low
+**Impact**: Plans with highly parallel dependency structures may produce a large number of execution phases with very few steps each, increasing scheduling overhead and reducing the effectiveness of parallelization.
+**Mitigation**: The Order Resolver uses standard topological sort algorithms that are well-understood and efficient. Phase explosion is an inherent property of the dependency graph, not a bug. The Execution Engine’s bounded concurrency limit prevents resource exhaustion regardless of phase count. The performance impact is documented in the Performance Characteristics section.
+
+### Risk-4: Failure Containment “Continue” Policy Producing Confusing Partial Results
+
+**Severity**: Medium
+**Likelihood**: Medium
+**Impact**: When the failure containment policy is set to “continue,” steps that do not depend on the failed step may still execute. The resulting partial execution may be confusing to downstream consumers who receive a mix of successful and failed step results, and the overall execution outcome may not clearly communicate the intent.
+**Mitigation**: The execution summary explicitly documents which steps completed, which failed, and which were skipped. Phase summaries document per-phase outcomes. The Result Collector determines the overall execution outcome (“partially completed”) which signals to consumers that the execution was not fully successful. The Validation Engine (A.5.6, future) can evaluate partial results against plan requirements to determine whether the partial execution is acceptable.
+
+### Risk-5: Cross-Engine Alignment Drift with Upstream Engines
+
+**Severity**: High
+**Likelihood**: Low
+**Impact**: If the Context Engine, Knowledge Engine, Planning Engine, or Decision Engine changes their output contracts (e.g., new fields in decision artifacts, changed plan step structure, different context snapshot format), the Execution Engine’s input validation may reject valid inputs or accept invalid inputs, leading to execution failures or incorrect behaviour.
+**Mitigation**: Cross-engine alignment is verified as part of certification requirements. The Execution Engine’s input validation rules are explicit and versioned, making alignment gaps detectable. Any upstream Engine contract change triggers an alignment review for all consuming Engines.
+
+### Risk-6: Determinism Assurance Under Concurrent Execution
+
+**Severity**: Medium
+**Likelihood**: Low
+**Impact**: While individual step execution is deterministic, concurrent step execution within a phase may produce step results in non-deterministic order (the order in which parallel steps complete may vary). If downstream consumers depend on result order within a phase, this could cause inconsistent behaviour across executions with the same plan.
+**Mitigation**: The Execution Engine produces step results that are independent of completion order — each step result is attributed to its step and execution context, not to its position in a sequence. Phase summaries aggregate results regardless of order. The execution record documents the actual order of completion, but the Execution Engine’s guarantees (invariants, determinism) apply to the dependency-respecting execution order, not to the wall-clock completion order of parallel steps.
+
+---
+
+## Open Questions
+
+1. **OQ-1: Should the Execution Engine support checkpoint-based execution resumption for long-running plans?** Current recovery semantics treat interrupted executions as partially failed and subject to Planning Engine re-evaluation. For plans with many steps or long-running steps, a checkpoint mechanism that persists intermediate execution state could enable more efficient resumption. This would require extending the persistence contract and defining checkpoint granularity, which interacts with the platform persistence layer (currently out of scope).
+
+2. **OQ-2: How should the Execution Engine handle step dependencies that cross execution boundaries?** The current model assumes all steps in a plan are executed within a single execution context. If a Planning Engine produces a plan where a step in one execution depends on a step result from a different execution (different decision, different plan), the Execution Engine cannot satisfy that dependency. Defining cross-execution dependencies would require a plan versioning and step result lookup mechanism beyond the current design.
+
+3. **OQ-3: Should the failure containment policy support per-step override?** The current model applies a single failure containment policy to the entire execution. Some plans may benefit from per-step failure handling (e.g., critical steps use “halt” while non-critical steps use “continue”). This would require extending the plan step definition to include a failure handling directive, which interacts with the Planning Engine’s step definition model.
+
+4. **OQ-4: How should the Execution Engine’s parallelization interact with the platform resource management layer?** The current model uses a configured concurrency limit as a static bound. If the platform resource management layer (out of scope) provides dynamic resource availability signals, the Execution Engine could adapt its parallelization in real time. Defining this interaction requires coordination with the platform resource management architecture, which has not been defined.
+
+---
+
+## Completion Criteria
+
+A.5.5 shall be considered complete when all of the following are true:
+
+1. All 20 TPL-001 mandatory sections are present with substantive content.
+2. All 16 Specializable subsections contain Engine-specific content (Engine Purpose, Engine Mission, Engine Responsibilities, Engine Non Responsibilities, Engine Position, Internal Engine Model, Resolution Rules, Engine State, Engine Invariants, Validation Rules, Consumed Inputs, Produced Outputs, Engine Operations, Engine Events, Engine Ownership, Engine Handoff Contract).
+3. The Engine Ownership Contract’s seven mandatory elements are defined with Execution Engine-specific content.
+4. The Engine Handoff Contract’s eight mandatory elements are defined with Execution Engine-specific content.
+5. All eight invariants are testable assertions.
+6. All responsibilities map to at least one operation.
+7. All lifecycle transitions produce events.
+8. STD-010 metadata is fully compliant (all mandatory fields, correct table shape, correct heading).
+9. TPL-001 specialization compliance is verified (no mandatory sections removed, no conflicts with TPL-001 governance boundaries, Engine-specific content as subsections within TPL-001 sections).
+10. Cross-engine alignment verified with A.5.1 (Context Engine), A.5.2 (Knowledge Engine), A.5.3 (Planning Engine), and A.5.4 (Decision Engine).
+11. No legacy traceability prefix in Traceability ID or anywhere in the document.
+12. No Completion Report section (content migrated to Design Decisions, Risks, and Validation).
+13. Version History records the refactoring from 0.2.0-draft (pre-TPL-001) to 0.3.0-draft (TPL-001 compliant).
+
+---
+
+## Version History
+
+| Version | Status | Notes |
+|:---|:---|:---|
+| `0.2.0-draft` | Draft | Initial creation as independent Engine Specialization RFC with 32-section flat structure. Pre-TPL-001 alignment. Traceability ID: AI-DOS.V2.RUNTIME.A-5-5. |
+| `0.3.0-draft` | Draft | Refactored to TPL-001 compliance: remapped from 32 independent sections to TPL-001’s 20 mandatory output sections with Engine-specific subsections. Added 5 Design Decisions, 6 Risks, 4 Open Questions, Engine Ownership with 7 mandatory elements, Engine Handoff Contract with 8 mandatory elements. Removed Completion Report (content migrated to Design Decisions, Risks, Validation). Removed standalone Status section (content merged into Executive Summary). Updated Traceability ID to AI-DOS.V3.A.005.5. Zero legacy traceability prefix references. All content preserved; no authority changes. |
+
+---
 
 ## Family Normalization Notes
 
