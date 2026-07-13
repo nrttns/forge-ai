@@ -397,3 +397,8 @@ Recommended purpose:
 Define the governed documentation model for agent identity and the agent registry, including required fields, ownership, traceability, lifecycle references, validation expectations, and governance boundaries.
 
 The next document should remain documentation-only unless Human Governance explicitly authorizes implementation scope and roadmap alignment permits that work.
+
+
+## Runtime and Engine Authority Alignment Note — 2026-07-13
+
+This foundation consumes upstream Runtime Architecture (`A.3`), Engine Platform (`A.4` and `A.4.1` through `A.4.7`), and Engine Specialization RFCs (`A.5.0` through `A.5.12`). Agent Architecture owns agent-facing contracts only and may not redefine runtime execution, Engine Platform behavior, or individual Engine specialization responsibilities. The AGENTS v2 family inventory and pending disposition boundaries are maintained in `docs/AI/Architecture/Agents/README.md`.

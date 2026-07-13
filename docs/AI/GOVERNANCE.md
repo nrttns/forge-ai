@@ -1027,3 +1027,101 @@ Validation is external to this document and must be reported by the completing a
 ### Recommended Next Step
 
 Submit this draft for Human Governance / Framework Governance review. Do not modify Target resources unless explicitly authorized.
+
+
+## Authority Inventory Alignment Addendum — 2026-07-13
+
+This addendum corrects the central authority inventory after the Agent + Engine authority alignment. It does not redesign governed Agent or Engine content. Human Governance remains final approval authority. AI-DOS product truth under `docs/AI/` must remain reusable and Target-independent.
+
+### Corrected Governance Layer Map
+
+| Layer | Authority Role | Primary Inventory | Notes |
+|:---|:---|:---|:---|
+| Human Governance | Normative finality and promotion authority | Human decisions and approved governance records | Final approval, certification, and override authority. |
+| AI-DOS Governance and Constitutional Authority | Framework governance constraints | `docs/AI/GOVERNANCE.md`, Constitution, Framework Governance | Cannot be overridden by lower layers. |
+| Meta and Standards | Terminology, metadata, templates, document quality | `docs/AI/Meta/`, `docs/AI/Architecture/Standards/` | Cross-cutting constraints. |
+| Runtime Architecture | Runtime architectural ownership | `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md` | Consumed by Engine Platform and Agent Architecture. |
+| Engine Platform | Engine kernel, contract, registry, lifecycle, communication, state, capability platform | `docs/AI/Runtime/A.4*` | Owns Engine Platform boundaries. |
+| Engine Specialization RFC Family | Individual Engine specialization ownership | A.5.0-A.5.12 | Owns specialization responsibilities only. |
+| Agent Architecture | Agent architecture contracts | AGENTS v2 family | Consumes Runtime and Engine authorities. |
+| Operational Core | Invocation-time procedures and execution consumption | Operational documents | Consumes Agent and Engine architecture; does not redefine them. |
+| Commands / Workflows / Templates | Reusable execution procedures | Command, workflow, template documents | Procedure layer only. |
+
+### Corrected Agent Architecture Governance
+
+`AGENTS-v1-draft.md` is not the sole current Agent Architecture authority. The active inventory is the AGENTS v2 family: `AGENTS-v2.md` as family master, `AGENTS-v2-Architecture.md` as foundation, and the domain authorities enumerated in `docs/AI/Architecture/Agents/README.md`. `AGENTS-v1-draft.md` is retained as historical predecessor / superseded candidate until Human Governance disposition.
+
+### Corrected Engine RFC Governance
+
+| RFC | Engine / Template | Authority Classification |
+|:---|:---|:---|
+| `A.5.0` | `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md` — Engine Specialization RFC Template | ENGINE SPECIALIZATION TEMPLATE |
+| `A.5.1` | `docs/AI/Runtime/A.5.1-Context-Engine-RFC.md` — Context Engine | CONTEXT ENGINE AUTHORITY |
+| `A.5.2` | `docs/AI/Runtime/A.5.2-Knowledge-Engine-RFC.md` — Knowledge Engine | KNOWLEDGE ENGINE AUTHORITY |
+| `A.5.3` | `docs/AI/Runtime/A.5.3-Planning-Engine-RFC.md` — Planning Engine | PLANNING ENGINE AUTHORITY |
+| `A.5.4` | `docs/AI/Runtime/A.5.4-Decision-Engine-RFC.md` — Decision Engine | DECISION ENGINE AUTHORITY |
+| `A.5.5` | `docs/AI/Runtime/A.5.5-Execution-Engine-RFC.md` — Execution Engine | EXECUTION ENGINE AUTHORITY |
+| `A.5.6` | `docs/AI/Runtime/A.5.6-Validation-Engine-RFC.md` — Validation Engine | VALIDATION ENGINE AUTHORITY |
+| `A.5.7` | `docs/AI/Runtime/A.5.7-Review-Engine-RFC.md` — Review Engine | REVIEW ENGINE AUTHORITY |
+| `A.5.8` | `docs/AI/Runtime/A.5.8-Certification-Engine-RFC.md` — Certification Engine | CERTIFICATION ENGINE AUTHORITY |
+| `A.5.9` | `docs/AI/Runtime/A.5.9-Memory-Engine-RFC.md` — Memory Engine | MEMORY ENGINE AUTHORITY |
+| `A.5.10` | `docs/AI/Runtime/A.5.10-Governance-Engine-RFC.md` — Governance Engine | GOVERNANCE ENGINE AUTHORITY |
+| `A.5.11` | `docs/AI/Runtime/A.5.11-Workflow-Engine-RFC.md` — Workflow Engine | WORKFLOW ENGINE AUTHORITY |
+| `A.5.12` | `docs/AI/Runtime/A.5.12-Registry-Engine-RFC.md` — Registry Engine | REGISTRY ENGINE AUTHORITY |
+
+### Corrected Document Authority Matrix Entries
+
+| Document | Authority Domain | Authority Type | May Redefine | May Not Redefine |
+|:---|:---|:---|:---|:---|
+| `docs/AI/Architecture/Agents/AGENTS-v2.md` | AGENTS v2 family master and inventory | Architectural ownership | AGENTS v2 family navigation and authority relationships | Runtime, Engine Platform, Engine specializations, Operational Core, Target resources |
+| `docs/AI/Architecture/Agents/AGENTS-v2-Architecture.md` | AGENTS v2 foundation | Architectural ownership | Agent architecture foundation | Governance, Runtime, Engine Platform, A.5 specializations |
+| `docs/AI/Architecture/Agents/AGENTS-v1-draft.md` | Historical Agent predecessor | Historical evidence | Nothing without promotion | Current AGENTS v2 authority |
+| `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md` | A.5 specialization RFC template | Template authority | A.5.x structure | Individual engine behavior |
+| `docs/AI/Runtime/A.5.1-A.5.12` | Engine specialization domains | Specialization ownership | Individual Engine responsibility within A.5 boundary | Runtime A.3, Engine Platform A.4, Agent Architecture |
+
+### Corrected Document Ownership Matrix Entries
+
+| Domain | Owner | Primary Documents | Consumers |
+|:---|:---|:---|:---|
+| Agent Architecture family | Human Governance / Framework Architecture Team | AGENTS v2 family | Runtime consumers, Operational Core, validation/review processes |
+| Engine Specializations | Framework Architecture Team | A.5.0-A.5.12 | Runtime, Agent Architecture, Operational Core |
+| Runtime Architecture | Framework Architecture Team | A.3 | Engine Platform, Engine specializations, Agent Architecture |
+| Engine Platform | Framework Architecture Team | A.4, A.4.1-A.4.7 | A.5 specializations, Agent Architecture, Operational Core |
+
+### Corrected Consumes / Produces Matrix Entries
+
+| Layer | Consumes | Produces |
+|:---|:---|:---|
+| A.5 Engine Specializations | Human Governance, Governance Atlas, Meta, Standards, A.3, A.4/A.4.1-A.4.7, A.5.0 | Engine-specific responsibilities, inputs, outputs, handoff contracts |
+| AGENTS v2 family | Human Governance, Governance Atlas, Meta, Standards, A.3, A.4, A.5 specializations | Agent identity, capability, lifecycle, communication, workflow, delegation, runtime-consumption, validation/review contracts |
+| Operational Core | Governance, Runtime, Engine, Agent Architecture | Execution evidence and bounded procedure outcomes |
+
+### Corrected Dependency Matrix Entries
+
+| Dependent | Required Upstream | Dependency Type |
+|:---|:---|:---|
+| A.5.0-A.5.12 | A.3 and A.4/A.4.1-A.4.7 | Runtime and Engine Platform dependency |
+| AGENTS v2 family | A.3, A.4, A.5.0-A.5.12 | Runtime / Engine consumption dependency |
+| Operational Core | AGENTS v2 family and Runtime/Engine RFCs | Execution consumption dependency |
+
+### Corrected Document Classification Matrix Entries
+
+| Document Family | Classification | Status |
+|:---|:---|:---|
+| AGENTS v2 family | Agent Architecture | Draft / non-canonical until promoted |
+| AGENTS v1 draft | Historical Agent Authority / superseded candidate | Historical predecessor pending disposition |
+| A.5.0 | Engine Specialization Template | Draft / non-canonical |
+| A.5.1-A.5.12 | Engine Specialization Architecture | Draft / non-canonical |
+
+### Corrected Decision Classification and Authority Entries
+
+| Decision | Primary Authority | AI Role | Approval Gate |
+|:---|:---|:---|:---|
+| Promote AGENTS v2 authority | Human Governance | Inventory, validate, recommend | Human Governance approval |
+| Disposition AGENTS v1 | Human Governance | Identify conflicts and recommend | Human Governance approval |
+| Disposition planning-named Agent artifacts | Human Governance | Analyze role and contamination | Human Governance approval |
+| Change A.5 specialization ownership | Human Governance / Framework Governance | Draft correction task and evidence | Human Governance / Framework Governance approval |
+
+### Corrected Repository Navigation and Mandatory Reading
+
+For Agent/Engine authority work, read: `docs/AI/GOVERNANCE.md`, Runtime README, A.3, A.4/A.4.1-A.4.7, A.5.0-A.5.12, Agent README, `AGENTS-v2.md`, `AGENTS-v2-Architecture.md`, and relevant AGENTS v2 domain authorities. Agent reports are evidence, not governing architecture.

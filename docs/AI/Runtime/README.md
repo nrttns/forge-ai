@@ -313,3 +313,24 @@ Validation for this README includes:
 | [`../Architecture/Standards/STD-010-Document-Metadata-Standard.md`](../Architecture/Standards/STD-010-Document-Metadata-Standard.md) | Document metadata standard. |
 | [`../Templates/Standards/TPL-000-Template-Standard.md`](../Templates/Standards/TPL-000-Template-Standard.md) | Template governance standard. |
 | [`../Templates/Standards/TPL-001-RFC-Template-Standard.md`](../Templates/Standards/TPL-001-RFC-Template-Standard.md) | RFC template standard. |
+
+
+## A.5 Engine Specialization Inventory Alignment — 2026-07-13
+
+Runtime authority is separated as follows: `A.3` owns Runtime Architecture; `A.4` and `A.4.1` through `A.4.7` own the Engine Platform; `A.5.0` through `A.5.12` own Engine Specialization template and specialization domains. Agent Architecture consumes these Runtime and Engine authorities and does not redefine them.
+
+| RFC | Engine / Template | Relationship to Agent Architecture |
+|:---|:---|:---|
+| `A.5.0` | `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md` — Engine Specialization RFC Template | Consumed by AGENTS v2 as upstream Engine specialization authority; not redefined by Agent Architecture. |
+| `A.5.1` | `docs/AI/Runtime/A.5.1-Context-Engine-RFC.md` — Context Engine | Consumed by AGENTS v2 as upstream Engine specialization authority; not redefined by Agent Architecture. |
+| `A.5.2` | `docs/AI/Runtime/A.5.2-Knowledge-Engine-RFC.md` — Knowledge Engine | Consumed by AGENTS v2 as upstream Engine specialization authority; not redefined by Agent Architecture. |
+| `A.5.3` | `docs/AI/Runtime/A.5.3-Planning-Engine-RFC.md` — Planning Engine | Consumed by AGENTS v2 as upstream Engine specialization authority; not redefined by Agent Architecture. |
+| `A.5.4` | `docs/AI/Runtime/A.5.4-Decision-Engine-RFC.md` — Decision Engine | Consumed by AGENTS v2 as upstream Engine specialization authority; not redefined by Agent Architecture. |
+| `A.5.5` | `docs/AI/Runtime/A.5.5-Execution-Engine-RFC.md` — Execution Engine | Consumed by AGENTS v2 as upstream Engine specialization authority; not redefined by Agent Architecture. |
+| `A.5.6` | `docs/AI/Runtime/A.5.6-Validation-Engine-RFC.md` — Validation Engine | Consumed by AGENTS v2 as upstream Engine specialization authority; not redefined by Agent Architecture. |
+| `A.5.7` | `docs/AI/Runtime/A.5.7-Review-Engine-RFC.md` — Review Engine | Consumed by AGENTS v2 as upstream Engine specialization authority; not redefined by Agent Architecture. |
+| `A.5.8` | `docs/AI/Runtime/A.5.8-Certification-Engine-RFC.md` — Certification Engine | Consumed by AGENTS v2 as upstream Engine specialization authority; not redefined by Agent Architecture. |
+| `A.5.9` | `docs/AI/Runtime/A.5.9-Memory-Engine-RFC.md` — Memory Engine | Consumed by AGENTS v2 as upstream Engine specialization authority; not redefined by Agent Architecture. |
+| `A.5.10` | `docs/AI/Runtime/A.5.10-Governance-Engine-RFC.md` — Governance Engine | Consumed by AGENTS v2 as upstream Engine specialization authority; not redefined by Agent Architecture. |
+| `A.5.11` | `docs/AI/Runtime/A.5.11-Workflow-Engine-RFC.md` — Workflow Engine | Consumed by AGENTS v2 as upstream Engine specialization authority; not redefined by Agent Architecture. |
+| `A.5.12` | `docs/AI/Runtime/A.5.12-Registry-Engine-RFC.md` — Registry Engine | Consumed by AGENTS v2 as upstream Engine specialization authority; not redefined by Agent Architecture. |

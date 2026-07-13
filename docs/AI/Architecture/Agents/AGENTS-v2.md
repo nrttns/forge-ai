@@ -421,3 +421,8 @@ flowchart TB
     FG --> R
     FA -. maintains .-> AgentsV2
 ```
+
+
+## Authority Inventory Alignment Note — 2026-07-13
+
+The current AGENTS v2 family inventory is recorded in `docs/AI/Architecture/Agents/README.md`. `AGENTS-v2.md` is the family master; `AGENTS-v2-Architecture.md` is the architecture foundation; the domain documents own identity/registry, capability/role, lifecycle/governance boundaries, communication/coordination, workflow, delegation/escalation, runtime consumption, and validation/review domains. `AGENTS-v1-draft.md` is historical predecessor / superseded candidate and is not the sole current Agent Architecture authority. AGENTS v2 consumes Runtime Architecture A.3, Engine Platform A.4/A.4.1-A.4.7, and Engine Specialization RFCs A.5.0-A.5.12; it does not redefine them.
