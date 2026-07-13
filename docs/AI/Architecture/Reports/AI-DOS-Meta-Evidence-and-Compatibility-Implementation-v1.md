@@ -56,9 +56,11 @@ M.7 defines semantic meaning only and explicitly excludes migration execution, r
 The Meta README now states:
 
 - M.5 consumes M.0, M.1, M.2, and M.3.
-- M.7 consumes M.0, M.1, M.2, M.3, M.4, M.5, and M.6.
+- Required dependencies: M.7 consumes M.0, M.2, M.3, M.5, and M.6.
+- Conditional dependencies: M.7 consumes M.1 when compatibility applies to artifacts, artifact representations, artifact schemas, or artifact consumption interfaces; M.7 consumes M.4 when compatibility claims produce, restrict, or depend on lifecycle/status effects.
+- Non-dependencies: M.1 and M.4 are not universal prerequisites for M.7; future M.8 and M.9 authorities are not dependencies.
 
-The resulting dependency model remains a DAG. M.5 does not depend on M.7. M.7 depends on M.5 because compatibility claims may consume evidence semantics.
+The resulting dependency model remains a DAG. Family numbering does not imply consumption of every lower-numbered family. M.5 does not depend on M.7. M.7 depends on M.5 because compatibility claims may consume evidence semantics.
 
 ## M.5/M.7 Boundary
 
@@ -83,24 +85,28 @@ Existing Meta authority ownership is preserved:
 - M.4 remains lifecycle and status semantic authority.
 - M.6 remains versioning and supersession semantic authority.
 
-M.5 and M.7 reference upstream concepts only through consumption and do not redefine them.
+M.5 and M.7 reference upstream concepts only through consumption and do not redefine them. No intended duplicate semantic ownership was identified within the implemented M.5 and M.7 boundaries. Downstream alignment remains pending.
 
 ## Information Preservation
 
 No existing Meta authority was redesigned. No M.0 through M.4 or M.6 document was modified. The README registration adds M.5 and M.7 without removing existing registered authorities.
 
-## Validation Results
+## Executed Validation Results
 
-Planned validation commands:
-
-- `git diff --check`
-- `git diff --name-only`
-- `git status --short`
-- `rg -n "ProjectStatus|DevelopmentPhases|Roadmap|Sprint|ForgeAI|Forge AI|Target Repository" docs/AI/Meta`
-- `rg -n "Evidence|Compatibility|Traceability|Breaking Change|Backward Compatibility|Forward Compatibility" docs/AI/Meta`
-- `test -f docs/AI/Meta/M.5-Evidence-and-Traceability-Meta-Model.md`
-- `test -f docs/AI/Meta/M.7-Compatibility-Meta-Model.md`
-- `test -f docs/AI/Architecture/Reports/AI-DOS-Meta-Evidence-and-Compatibility-Implementation-v1.md`
+| Validation | Command | Result | Evidence |
+| :--------- | :------ | :----: | :------- |
+| Whitespace and patch integrity | `git diff --check` | PASS | Command completed with exit code 0. |
+| Changed-file boundary validation | `git diff --name-status` and `git diff --name-only` | PASS | Output listed only `docs/AI/Meta/README.md`, `docs/AI/Meta/M.7-Compatibility-Meta-Model.md`, and `docs/AI/Architecture/Reports/AI-DOS-Meta-Evidence-and-Compatibility-Implementation-v1.md`. |
+| Working-tree status review | `git status --short` | PASS | Output listed only the three authorized modified files. |
+| Target contamination search | `git diff -U0 -- docs/AI/Meta/README.md docs/AI/Meta/M.7-Compatibility-Meta-Model.md docs/AI/Architecture/Reports/AI-DOS-Meta-Evidence-and-Compatibility-Implementation-v1.md | rg "^\+" | rg -n <target-contamination-pattern>` | PASS | No active Target contamination matches were returned. |
+| Evidence/compatibility terminology search | `rg -n "Evidence|Compatibility|Traceability|Breaking Change|Backward Compatibility|Forward Compatibility" docs/AI/Meta docs/AI/Architecture/Reports/AI-DOS-Meta-Evidence-and-Compatibility-Implementation-v1.md` | PASS | Command returned expected M.5, M.7, README, and report terminology matches. |
+| M.5 existence check | `test -f docs/AI/Meta/M.5-Evidence-and-Traceability-Meta-Model.md` | PASS | Command completed with exit code 0. |
+| M.7 existence check | `test -f docs/AI/Meta/M.7-Compatibility-Meta-Model.md` | PASS | Command completed with exit code 0. |
+| Implementation-report existence check | `test -f docs/AI/Architecture/Reports/AI-DOS-Meta-Evidence-and-Compatibility-Implementation-v1.md` | PASS | Command completed with exit code 0. |
+| README registration check | `rg -n "M\.5-Evidence-and-Traceability-Meta-Model|M\.7-Compatibility-Meta-Model|Required upstream: M\.0, M\.2, M\.3, M\.5, M\.6|Conditional upstream: M\.1 for artifact compatibility; M\.4 for lifecycle/status compatibility effects" docs/AI/Meta/README.md` | PASS | Command returned README registration and selective dependency matches. |
+| Mandatory-all-lower-families search | `rg -n <mandatory-all-lower-families-pattern> docs/AI/Meta/README.md docs/AI/Meta/M.7-Compatibility-Meta-Model.md docs/AI/Architecture/Reports/AI-DOS-Meta-Evidence-and-Compatibility-Implementation-v1.md` | PASS | No active statement making all lower-numbered Meta families mandatory for M.7 was returned. |
+| Selective dependency check | `rg -n "Required Upstream|Required Dependencies|Conditional Upstream|Conditional Dependencies|M\.5|M\.6|artifact compatibility|lifecycle.*compatibility" docs/AI/Meta/README.md docs/AI/Meta/M.7-Compatibility-Meta-Model.md docs/AI/Architecture/Reports/AI-DOS-Meta-Evidence-and-Compatibility-Implementation-v1.md` | PASS | Command returned required M.5/M.6 and conditional artifact/lifecycle compatibility dependency statements. |
+| Report evidence wording check | `rg -n <report-evidence-wording-pattern> docs/AI/Architecture/Reports/AI-DOS-Meta-Evidence-and-Compatibility-Implementation-v1.md` | PASS | `Executed Validation Results` and recorded PASS rows were returned; the obsolete planned-validation label had zero active matches. |
 
 ## Risks
 
@@ -110,15 +116,10 @@ Planned validation commands:
 
 ## Final Verdict
 
-M.5 Evidence and Traceability Meta Model and M.7 Compatibility Meta Model have been implemented as documentation-only, reusable, Target-independent, non-canonical, Human-Governed semantic authorities. Existing Meta ownership is preserved, no placeholder files were created for M.8 or M.9, and the Meta dependency model remains a DAG.
+M.5 Evidence and Traceability Meta Model and M.7 Compatibility Meta Model have been implemented as documentation-only, reusable, Target-independent, non-canonical, Human-Governed semantic authorities. Existing Meta ownership is preserved, M.7 uses selective dependencies, no placeholder files were created for M.8 or M.9, and the Meta dependency model remains a DAG.
 
 ## Next Recommendation
 
 FORGE-AI.V2.AI-DOS-META-EXTENSION-SCHEMA-IMPLEMENTATION-001
-
-IMPLEMENT
-
-M.8 EXTENSION
-M.9 SCHEMA
-
-META AUTHORITIES
+— IMPLEMENT M.8 EXTENSION AND
+M.9 SCHEMA & VALIDATION META AUTHORITIES

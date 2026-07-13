@@ -158,7 +158,7 @@ Downstream consumers inherit Meta meanings. They do not become Meta authority by
 | M.4 | M.0; M.2; M.3; M.1 only for artifact lifecycle bindings. | M.5, M.6, M.7. |
 | M.5 | M.0; M.1; M.2; M.3. | M.4, M.6, M.7. |
 | M.6 | M.0; M.2; M.3; M.1 only for artifact version bindings; M.4 only for lifecycle effects of deprecation, supersession, replacement, archival, historical retention, promotion of a version, and revocation of a version. | M.5 as an active semantic dependency; M.7 compatibility interpretation. |
-| M.7 | M.0; M.1; M.2; M.3; M.4; M.5; M.6. | Future M.8 and M.9 authorities. |
+| M.7 | Required upstream: M.0, M.2, M.3, M.5, M.6. Conditional upstream: M.1 for artifact compatibility; M.4 for lifecycle/status compatibility effects. | M.1 as a universal prerequisite; M.4 as a universal prerequisite; future M.8 and M.9 authorities. |
 
 ---
 

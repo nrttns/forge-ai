@@ -13,7 +13,7 @@
 | Owner | Human Governance |
 | Approval Authority | Human Governance |
 | Last Updated | 2026-07-13 |
-| Scope | Reusable AI-DOS compatibility, compatibility claim, scope, category, backward compatibility, forward compatibility, bidirectional compatibility, partial compatibility, conditional compatibility, matrix, profile, rule, contract, boundary, constraint, requirement, exception, breaking change, non-breaking change, behavioral compatibility, structural compatibility, semantic compatibility, version compatibility, artifact compatibility, interface compatibility, schema compatibility, contract compatibility, runtime compatibility semantics, and engine compatibility semantics. |
+| Scope | Reusable AI-DOS compatibility, compatibility claim, compatibility scope, compatibility direction, compatibility degree, compatibility profile, compatibility matrix, compatibility contract, compatibility requirement, compatibility exception, breaking change, non-breaking change, structural compatibility, semantic compatibility, behavioral compatibility, version compatibility, schema compatibility, interface compatibility, and contract compatibility semantics. |
 | Out of Scope | migration execution, release policy, deployment strategy, adapter implementation, runtime implementation, engine implementation, package management, source-control workflow, implementation guidance, certification, approval workflow, planning, roadmap content, and operational procedures. |
 
 ---
@@ -28,25 +28,28 @@ M.7 is a semantic authority only. It does not define how migration is executed, 
 
 ## 3. Authority and Dependency Position
 
-M.7 is an Enterprise Semantic Profile in the Meta family. It consumes:
+M.7 is an Enterprise Semantic Profile in the Meta family. Its required dependencies are:
 
 - M.0 for Framework, Semantic Entity, Authority, Ownership, Boundary, Constraint, Context, and root reusable AI-DOS meanings;
-- M.1 for artifact participation, artifact families, artifact types, artifact instances, artifact bindings, artifact representations, and artifact consumption boundaries;
 - M.2 for identity, identifiers, namespaces, aliases, canonical references, historical identity, collisions, equivalence, version-independent references, and version-specific references;
 - M.3 for relationship form, compatibility relationships, dependency relationships, endpoint interpretation, cardinality, direction, and constraint structure;
-- M.4 for lifecycle and status effects that may be associated with compatibility declarations, deprecations, historical classification, canonical status, availability status, validation status, review status, and certification status;
 - M.5 for evidence claims, evidence references, evidence scope, traceability, provenance, confidence, completeness, integrity, and validation bindings associated with compatibility claims;
 - M.6 for version, revision, version reference, lineage, supersession, replacement, rollback, migration obligation semantics, and version claims.
 
-M.7 does not redefine any upstream authority. It interprets compatibility using upstream meanings.
+M.7 conditionally consumes:
+
+- M.1 when compatibility applies to artifacts, artifact representations, artifact schemas, or artifact consumption interfaces;
+- M.4 when compatibility claims produce, restrict, or depend on lifecycle/status effects.
+
+M.7 does not redefine Artifact, Identity, Relationship, Lifecycle, Evidence, Versioning, validation procedure, migration execution, release policy, adapter implementation, runtime behavior, or engine behavior. It interprets compatibility using upstream meanings only when those meanings are required by the compatibility scope. Family numbering does not imply consumption of every lower-numbered family.
 
 ---
 
 ## 4. Scope
 
-M.7 owns reusable semantics for Compatibility, Compatibility Claim, Compatibility Scope, Compatibility Category, Backward Compatibility, Forward Compatibility, Bidirectional Compatibility, Partial Compatibility, Conditional Compatibility, Compatibility Matrix, Compatibility Profile, Compatibility Rule, Compatibility Contract, Compatibility Boundary, Compatibility Constraint, Compatibility Requirement, Compatibility Exception, Breaking Change, Non-breaking Change, Behavioral Compatibility, Structural Compatibility, Semantic Compatibility, Version Compatibility, Artifact Compatibility, Interface Compatibility, Schema Compatibility, Contract Compatibility, Runtime Compatibility, and Engine Compatibility.
+M.7 owns reusable semantics for Compatibility, Compatibility Claim, Compatibility Scope, Compatibility Direction, Compatibility Degree, Compatibility Profile, Compatibility Matrix, Compatibility Contract, Compatibility Requirement, Compatibility Exception, Breaking Change, Non-breaking Change, Structural Compatibility, Semantic Compatibility, Behavioral Compatibility, Version Compatibility, Schema Compatibility, Interface Compatibility, and Contract Compatibility.
 
-Runtime Compatibility and Engine Compatibility are semantic compatibility concepts only. They do not define runtime implementation or engine implementation.
+M.7 also owns compatibility category, compatibility rule, compatibility boundary, compatibility constraint, backward compatibility, forward compatibility, bidirectional compatibility, partial compatibility, and conditional compatibility semantics. M.7 owns compatibility interpretation for artifact, runtime-facing, and engine-facing compatibility claims when such claims are made, but it does not redefine artifact semantics, runtime behavior, or engine behavior.
 
 ---
 
@@ -169,7 +172,7 @@ A Compatibility Profile declares the compatibility categories, assumptions, rule
 
 M.7 consumes M.6 for version and migration-obligation meanings. M.7 may classify whether a version relationship is compatible, incompatible, partially compatible, conditionally compatible, or unknown. It does not execute migration.
 
-M.7 consumes M.4 for lifecycle and status effects that reference compatibility. A compatibility classification may inform deprecation, historical classification, availability, review, validation, or certification status in downstream domains, but M.7 does not own those status dimensions.
+M.7 conditionally consumes M.4 when compatibility claims produce, restrict, or depend on lifecycle/status effects. A compatibility classification may inform deprecation, historical classification, availability, review, validation, or certification status in downstream domains, but M.7 does not own those status dimensions.
 
 Migration obligation remains owned by M.6. Migration execution is out of scope for M.7.
 
