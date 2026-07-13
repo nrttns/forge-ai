@@ -58,15 +58,22 @@ The Meta Family is not responsible for:
 
 ## 3. Reading Order
 
-Read the Meta Family in this order:
+Read the Meta Core first:
 
-1. `README.md` — family entry, scope, authority boundary, and reading order.
+1. `README.md` — family entry, scope, authority boundary, dependency model, and reading guidance.
 2. `M.0-Framework-Meta-Model.md` — framework semantic root and reusable AI-DOS meanings.
 3. `M.1-Artifact-Meta-Model.md` — artifact semantics derived from M.0 without redefining M.0 concepts.
 4. `M.2-Identity-Meta-Model.md` — identity semantics derived from M.0 and consumed by artifact bindings and downstream domains.
 5. `M.3-Relationship-Meta-Model.md` — relationship semantics derived from M.0, informed by M.2 endpoint identity, and consumed by artifact bindings and downstream domains.
 
-Downstream consumers should read M.0 before M.1, M.2, and M.3, should read M.2 before M.3 where relationship endpoint identity matters, and should read all applicable Meta authorities before defining domain-specific semantics.
+Then read Enterprise Semantic Profiles selectively according to the semantic concern in use:
+
+- `M.4-Lifecycle-and-Status-Meta-Model.md` when lifecycle, status, transition, promotion, deprecation, archival, historical classification, canonical status, validation status, review status, certification status, availability status, or operational status binding semantics are applicable.
+- `M.6-Versioning-and-Supersession-Meta-Model.md` when versioning, revision, version reference, lineage, supersession, replacement, amendment, rollback, migration-obligation, or version-claim semantics are applicable.
+
+The approved dependency model is a governed DAG, not a mandatory linear chain. Numbering identifies family position and stable reference names; numbering does not mean that every later Meta authority depends on every lower-numbered authority.
+
+M.5 Evidence and M.7 Compatibility remain pending; no placeholder file is registered here.
 
 ---
 
@@ -87,7 +94,13 @@ M.2 owns identity semantics.
 
 M.3 owns relationship semantics.
 
-No downstream AI-DOS domain may redefine a concept owned by M.0, M.1, M.2, or M.3. Downstream domains may specialize Meta concepts only within their own domain boundaries.
+M.4 owns lifecycle and status semantics.
+
+M.6 owns versioning, lineage, supersession, replacement, version-reference, and migration-obligation semantics.
+
+M.5 Evidence remains pending and is not an active file dependency. M.7 Compatibility remains pending and owns future compatibility interpretation after approval.
+
+No downstream AI-DOS domain may redefine a concept owned by M.0, M.1, M.2, M.3, M.4, or M.6. Downstream domains may specialize Meta concepts only within their own domain boundaries.
 
 ---
 
@@ -115,13 +128,31 @@ Downstream consumers inherit Meta meanings. They do not become Meta authority by
 
 ## 6. Family Overview
 
+### Meta Core
+
 | Artifact | Responsibility | Boundary |
 |:---|:---|:---|
-| `README.md` | Meta Family entry, reading order, authority boundary, consumer map, and family overview. | Does not define framework or artifact semantics. |
+| `README.md` | Meta Family entry, reading guidance, authority boundary, dependency model, consumer map, and family overview. | Does not define framework, artifact, identity, relationship, lifecycle, status, versioning, or supersession semantics. |
 | `M.0-Framework-Meta-Model.md` | Framework Semantic Root for reusable AI-DOS product meanings. | Does not define artifact type-system details, runtime, engines, workflows, commands, templates, or planning. |
-| `M.1-Artifact-Meta-Model.md` | Artifact semantic model for artifact families, types, instances, bindings, representations, classification, discovery, and consumption. | Does not own identity semantics, relationship semantics, authority semantics, evidence semantics, compatibility semantics, runtime semantics, agent semantics, planning artifacts, or Target Project concepts. |
-| `M.2-Identity-Meta-Model.md` | Identity semantic model for identity, identifiers, namespaces, aliases, collisions, resolution, historical identity, version identity, registry identity, semantic identity, equivalence, and invariants. | Does not define runtime ids, database ids, session ids, filesystem ids, implementation ids, registries, storage, tooling, or execution behavior. |
-| `M.3-Relationship-Meta-Model.md` | Relationship semantic model for relationship types, endpoints, direction, cardinality, multiplicity, optionality, inverse, symmetry, transitivity, common relationship kinds, constraints, invalid relationships, and validation principles. | Does not define graph databases, runtime graphs, execution flow, workflow ordering, engine behavior, agent procedures, storage, tooling, or automation. |
+| `M.1-Artifact-Meta-Model.md` | Artifact semantic model for artifact families, types, instances, bindings, representations, classification, discovery, and consumption. | Does not own identity semantics, relationship semantics, lifecycle semantics, status semantics, versioning semantics, authority semantics, evidence semantics, compatibility semantics, runtime semantics, agent semantics, planning artifacts, or Target Project concepts. |
+| `M.2-Identity-Meta-Model.md` | Identity semantic model for identity, identifiers, namespaces, aliases, collisions, resolution, historical identity, version-independent references, version-specific references, registry identity, semantic identity, equivalence, and invariants. | Does not define runtime ids, database ids, session ids, filesystem ids, implementation ids, registries, storage, tooling, execution behavior, lifecycle states, or version lineage. |
+| `M.3-Relationship-Meta-Model.md` | Relationship semantic model for relationship types, endpoints, direction, cardinality, multiplicity, optionality, inverse, symmetry, transitivity, common relationship kinds, constraints, invalid relationships, and validation principles. | Does not define graph databases, runtime graphs, execution flow, workflow ordering, engine behavior, agent procedures, storage, tooling, automation, lifecycle effects, or version-lineage effects. |
+
+### Enterprise Semantic Profiles
+
+| Artifact | Responsibility | Boundary |
+|:---|:---|:---|
+| `M.4-Lifecycle-and-Status-Meta-Model.md` | Lifecycle and status semantic authority for lifecycle profiles, lifecycle states, status dimensions, transitions, transition authority bindings, promotion, deprecation, archival, historical classification, canonical status, validation status, review status, certification status, availability status, and operational status bindings. | Does not define Target Project planning, ProjectStatus, DevelopmentPhases, Roadmap, release schedule, runtime state machine implementation, approval workflow mechanics, evidence taxonomy, version numbering, or compatibility. |
+| M.5 Evidence | Pending Enterprise Semantic Profile for evidence semantics. | No placeholder file exists; current documents must not create an active dependency on a nonexistent M.5 artifact. |
+| `M.6-Versioning-and-Supersession-Meta-Model.md` | Versioning and supersession semantic authority for versions, revisions, version identity, version references, lineage, supersession, replacement, amendment, rollback, deprecation binding, migration obligation, version authority binding, and version claims. | Does not define release schedule, deployment, package manager behavior, Git branching procedure, source-control workflow, project planning, compatibility semantics, evidence semantics, or schema syntax. |
+| M.7 Compatibility | Pending Enterprise Semantic Profile for compatibility interpretation. | No placeholder file exists; compatibility meaning remains deferred until M.7 is approved. |
+
+### Selective DAG Dependencies
+
+| Authority | Required Upstream Semantics | Does Not Depend On |
+|:---|:---|:---|
+| M.4 | M.0; M.2; M.3; M.1 only for artifact lifecycle bindings. | M.6, pending M.5, pending M.7. |
+| M.6 | M.0; M.2; M.3; M.1 only for artifact version bindings; M.4 only for lifecycle effects of deprecation, supersession, replacement, archival, historical retention, promotion of a version, and revocation of a version. | Pending M.5 as an active file dependency; pending M.7 compatibility interpretation. |
 
 ---
 
