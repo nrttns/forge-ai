@@ -63,8 +63,10 @@ Read the Meta Family in this order:
 1. `README.md` — family entry, scope, authority boundary, and reading order.
 2. `M.0-Framework-Meta-Model.md` — framework semantic root and reusable AI-DOS meanings.
 3. `M.1-Artifact-Meta-Model.md` — artifact semantics derived from M.0 without redefining M.0 concepts.
+4. `M.2-Identity-Meta-Model.md` — identity semantics derived from M.0 and consumed by artifact bindings and downstream domains.
+5. `M.3-Relationship-Meta-Model.md` — relationship semantics derived from M.0, informed by M.2 endpoint identity, and consumed by artifact bindings and downstream domains.
 
-Downstream consumers should read M.0 before M.1 and should read both before defining domain-specific semantics.
+Downstream consumers should read M.0 before M.1, M.2, and M.3, should read M.2 before M.3 where relationship endpoint identity matters, and should read all applicable Meta authorities before defining domain-specific semantics.
 
 ---
 
@@ -81,7 +83,11 @@ M.0 owns framework semantics.
 
 M.1 owns artifact semantics.
 
-No downstream AI-DOS domain may redefine a concept owned by M.0 or M.1. Downstream domains may specialize Meta concepts only within their own domain boundaries.
+M.2 owns identity semantics.
+
+M.3 owns relationship semantics.
+
+No downstream AI-DOS domain may redefine a concept owned by M.0, M.1, M.2, or M.3. Downstream domains may specialize Meta concepts only within their own domain boundaries.
 
 ---
 
@@ -113,7 +119,9 @@ Downstream consumers inherit Meta meanings. They do not become Meta authority by
 |:---|:---|:---|
 | `README.md` | Meta Family entry, reading order, authority boundary, consumer map, and family overview. | Does not define framework or artifact semantics. |
 | `M.0-Framework-Meta-Model.md` | Framework Semantic Root for reusable AI-DOS product meanings. | Does not define artifact type-system details, runtime, engines, workflows, commands, templates, or planning. |
-| `M.1-Artifact-Meta-Model.md` | Artifact semantic model for artifact families, types, instances, bindings, representations, classification, discovery, and consumption. | Does not own relationship semantics, authority semantics, evidence semantics, compatibility semantics, runtime semantics, agent semantics, planning artifacts, or Target Project concepts. |
+| `M.1-Artifact-Meta-Model.md` | Artifact semantic model for artifact families, types, instances, bindings, representations, classification, discovery, and consumption. | Does not own identity semantics, relationship semantics, authority semantics, evidence semantics, compatibility semantics, runtime semantics, agent semantics, planning artifacts, or Target Project concepts. |
+| `M.2-Identity-Meta-Model.md` | Identity semantic model for identity, identifiers, namespaces, aliases, collisions, resolution, historical identity, version identity, registry identity, semantic identity, equivalence, and invariants. | Does not define runtime ids, database ids, session ids, filesystem ids, implementation ids, registries, storage, tooling, or execution behavior. |
+| `M.3-Relationship-Meta-Model.md` | Relationship semantic model for relationship types, endpoints, direction, cardinality, multiplicity, optionality, inverse, symmetry, transitivity, common relationship kinds, constraints, invalid relationships, and validation principles. | Does not define graph databases, runtime graphs, execution flow, workflow ordering, engine behavior, agent procedures, storage, tooling, or automation. |
 
 ---
 
