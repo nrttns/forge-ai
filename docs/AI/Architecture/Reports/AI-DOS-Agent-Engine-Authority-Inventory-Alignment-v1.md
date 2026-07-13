@@ -86,8 +86,8 @@ Disposition: **MARK SUPERSEDED CANDIDATE** pending Human Governance.
 | `AGENTS-v2-Agent-Delegation-and-Escalation-Model.md` | Delegation and escalation | AGENT DOMAIN AUTHORITY | Human Governance, Governance Atlas, Runtime/Engine where applicable | AGENTS v2 consumers / Operational Core | Draft/non-canonical; v1 historical; reports evidence |
 | `AGENTS-v2-Agent-Runtime-Consumption-Model.md` | Runtime consumption | AGENT RUNTIME CONSUMPTION CONTRACT | Human Governance, Governance Atlas, Runtime/Engine where applicable | AGENTS v2 consumers / Operational Core | Draft/non-canonical; v1 historical; reports evidence |
 | `AGENTS-v2-Agent-Validation-and-Review-Model.md` | Validation and review | AGENT VALIDATION CONTRACT | Human Governance, Governance Atlas, Runtime/Engine where applicable | AGENTS v2 consumers / Operational Core | Draft/non-canonical; v1 historical; reports evidence |
-| `AGENTS-V2-DevelopmentPhases.md` | Agent evolution sequencing candidate | AGENT EVOLUTION ARTIFACT | Human Governance, Governance Atlas, Runtime/Engine where applicable | AGENTS v2 consumers / Operational Core | Draft/non-canonical; v1 historical; reports evidence |
-| `AGENTS-V2-Roadmap.md` | Agent evolution direction candidate | AGENT EVOLUTION ARTIFACT | Human Governance, Governance Atlas, Runtime/Engine where applicable | AGENTS v2 consumers / Operational Core | Draft/non-canonical; v1 historical; reports evidence |
+| `AGENTS-v2-Capability-Maturity-Model.md` | Agent architecture maturity/readiness authority | AGENT ARCHITECTURE CAPABILITY MODEL | Human Governance, Governance Atlas, Runtime/Engine where applicable | AGENTS v2 consumers / Operational Core | Draft/non-canonical; v1 historical; reports evidence |
+| `AGENTS-v2-Capability-Evolution-Model.md` | Agent capability dependency/evolution authority | AGENT ARCHITECTURE CAPABILITY MODEL | Human Governance, Governance Atlas, Runtime/Engine where applicable | AGENTS v2 consumers / Operational Core | Draft/non-canonical; v1 historical; reports evidence |
 | `AGENTS-v1-draft.md` | Historical predecessor | HISTORICAL AGENT AUTHORITY | Human Governance, Governance Atlas, Runtime/Engine where applicable | AGENTS v2 consumers / Operational Core | Draft/non-canonical; v1 historical; reports evidence |
 | `Reports/AGENTS-v2-Core-Freeze-Review.md` | Review evidence | Review evidence | Human Governance, Governance Atlas, Runtime/Engine where applicable | AGENTS v2 consumers / Operational Core | Draft/non-canonical; v1 historical; reports evidence |
 
@@ -134,7 +134,7 @@ Runtime README previously did not make the full A.5.0-A.5.12 family sufficiently
 | Domain | Claiming Documents | Conflict | Resolution |
 |:---|:---|:---|:---|
 | Agent Architecture current authority | AGENTS v1 draft, AGENTS v2 master/foundation, Governance Atlas stale references | AGENTS v1 appeared as sole current authority in central inventory | Map AGENTS v2 family; mark v1 superseded candidate |
-| Agent evolution artifacts | AGENTS-v2 master, DevelopmentPhases, Roadmap | Planning-named files could be mistaken for Target lifecycle planning | Pending disposition; do not treat as Target Project planning |
+| Agent capability models | AGENTS-v2 master, Capability Maturity Model, Capability Evolution Model | Former planning-named files were realigned as AI-DOS Agent Architecture capability models | Final paths: `AGENTS-v2-Capability-Maturity-Model.md` and `AGENTS-v2-Capability-Evolution-Model.md` |
 | Engine specialization inventory | A.5 files, Runtime README, Governance Atlas | A.5 family incompletely discoverable centrally | Explicit A.5.0-A.5.12 inventory added |
 
 ## 15. Target Project Contamination Findings
@@ -145,8 +145,8 @@ Matches containing Forge AI project paths and project-state artifacts remain in 
 
 | File | ACTIVE PRODUCT VIOLATION | HISTORICAL EVIDENCE | FILE TITLE / DISPOSITION SUBJECT | GENERIC NON-TARGET CONCEPT |
 |:---|---:|---:|---:|---:|
-| `docs/AI/Architecture/Agents/AGENTS-V2-DevelopmentPhases.md` | 0 | 0 | 1 | 0 |
-| `docs/AI/Architecture/Agents/AGENTS-V2-Roadmap.md` | 0 | 0 | 5 | 0 |
+| `docs/AI/Architecture/Agents/AGENTS-v2-Capability-Maturity-Model.md` | 0 | 0 | 1 | 0 |
+| `docs/AI/Architecture/Agents/AGENTS-v2-Capability-Evolution-Model.md` | 0 | 0 | 5 | 0 |
 | `docs/AI/Architecture/Agents/AGENTS-v1-draft.md` | 0 | 47 | 0 | 0 |
 | `docs/AI/Architecture/Agents/AGENTS-v2-Agent-Capability-and-Role-Catalog.md` | 18 | 0 | 0 | 2 |
 | `docs/AI/Architecture/Agents/AGENTS-v2-Agent-Communication-and-Coordination.md` | 22 | 0 | 0 | 3 |
@@ -178,8 +178,8 @@ Matches containing Forge AI project paths and project-state artifacts remain in 
 
 | File | Actual Role | Naming Fit | Contamination | Preliminary Disposition |
 |:---|:---|:---|:---|:---|
-| `AGENTS-V2-DevelopmentPhases.md` | Agent capability-evolution sequencing / maturity-style planning artifact | Poor fit with project-lifecycle isolation because title says DevelopmentPhases | File title and some lifecycle terminology require disposition | KEEP AND RENAME CANDIDATE |
-| `AGENTS-V2-Roadmap.md` | Agent architecture evolution direction artifact | Poor fit because title says Roadmap | File title and strategic sequencing language require disposition | KEEP AND RENAME CANDIDATE |
+| `AGENTS-v2-Capability-Maturity-Model.md` | Agent architecture maturity/readiness authority | Final name removes project-lifecycle wording | Successor path: `docs/AI/Architecture/Agents/AGENTS-v2-Capability-Maturity-Model.md` | REALIGNED |
+| `AGENTS-v2-Capability-Evolution-Model.md` | Agent capability dependency/evolution authority | Final name removes project-lifecycle wording | Successor path: `docs/AI/Architecture/Agents/AGENTS-v2-Capability-Evolution-Model.md` | REALIGNED |
 
 ## 18. Authority Corrections Applied
 
@@ -198,7 +198,7 @@ Matches containing Forge AI project paths and project-state artifacts remain in 
 
 ## 19. Remaining Correction Requirements
 
-- Human Governance must decide planning-named Agent artifact disposition.
+- Human Governance disposition complete: former planning-named Agent artifacts are realigned as Agent architecture capability models.
 - Later correction must remove or reclassify read-only Agent domain references to ProjectStatus, DevelopmentPhases, Roadmap, and Forge AI paths.
 - Later Runtime/A.5 contamination correction should review generic lifecycle language versus Target lifecycle contamination, without editing A.5 bodies in this task.
 

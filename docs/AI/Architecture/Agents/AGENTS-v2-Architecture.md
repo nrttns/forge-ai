@@ -24,7 +24,7 @@
 | Scope | Foundational AGENTS v2 architecture boundaries for agent identity, roles, registries, metadata, lifecycle, governance boundaries, AI execution rules, and validation expectations. |
 | Out of Scope | Implementation, swarm runtime, multi-agent runtime activation, platform adapters, Engine RFC continuation, Runtime redefinition, Engine Platform redefinition, governance redefinition, standards redefinition, meta-model redefinition, and ProjectStatus updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` |
-| Normative References | `docs/AI/Architecture/Agents/AGENTS-v1-draft.md`; `docs/AI/Architecture/Agents/AGENTS-V2-Roadmap.md`; `docs/AI/Architecture/Agents/AGENTS-V2-DevelopmentPhases.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
+| Normative References | `docs/AI/Architecture/Agents/AGENTS-v1-draft.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Capability-Evolution-Model.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Capability-Maturity-Model.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
 | Dependencies | Governance Atlas v2 navigation; Framework Governance decision policy; ProjectStatus operational state; Development Phases roadmap; AGENTS v1 operating architecture; AGENTS v2 roadmap and development phases. |
 | Consumes | Repository bootloader rules; governance navigation; governance decision policy; roadmap state; frozen-area constraints; AGENTS v1; AGENTS v2 planning inputs; STD-010 metadata requirements. |
 | Produces | AGENTS v2 Architecture Foundation; agent foundation model; agent identity model; agent role model; agent registry model; agent capability registry model; agent metadata model; lifecycle boundaries; validation checklist. |
@@ -402,3 +402,8 @@ The next document should remain documentation-only unless Human Governance expli
 ## Runtime and Engine Authority Alignment Note — 2026-07-13
 
 This foundation consumes upstream Runtime Architecture (`A.3`), Engine Platform (`A.4` and `A.4.1` through `A.4.7`), and Engine Specialization RFCs (`A.5.0` through `A.5.12`). Agent Architecture owns agent-facing contracts only and may not redefine runtime execution, Engine Platform behavior, or individual Engine specialization responsibilities. The AGENTS v2 family inventory and pending disposition boundaries are maintained in `docs/AI/Architecture/Agents/README.md`.
+
+
+## Subordinate Capability Models
+
+`AGENTS-v2-Capability-Maturity-Model.md` and `AGENTS-v2-Capability-Evolution-Model.md` are subordinate Agent architecture capability models. They consume this architecture foundation and the AGENTS v2 family master; they do not become peer authorities and may not redefine foundation, Runtime, Engine, Operational Core, or Human Governance boundaries.
