@@ -8,230 +8,447 @@
 |:---|:---|
 | Identifier | `FORGE-AI.TARGET.PROJECT-STATUS` |
 | Title | Forge AI Operational State Model |
-| Version | `5.0.0-draft` |
+| Version | `5.1.0-draft` |
 | Status | Live Operational State |
 | Classification | Target Project Operational State |
 | Document Type | ProjectStatus |
 | Owner | Forge AI Target Project Governance |
 | Approval Authority | Human Governance |
-| Last Updated | 2026-07-11 |
+| Last Updated | `2026-07-14` |
 | Lifecycle Phase | Live Operational State |
-| Scope | Current AI-DOS capability state, evidence state, governance gate, autonomy maturity, program health, Target independence, purity, and next approved capability for Forge AI as the AI-DOS Development and Autonomy Enablement Target Project. |
-| Out of Scope | Roadmap definition, phase definition, AI-DOS architecture definition, implementation authorization, sprint tracking, backlog tracking, document inventory, historical logs, automatic state updates, and Human Governance replacement. |
-| Normative Authority | Human Governance; Forge AI Target Project contract; Forge AI mission and autonomy model. |
-| Consumes | `docs/Projects/ForgeAI/Mission/AGENTS.md`, `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-and-Autonomy-Model.md`, `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`, `docs/Projects/ForgeAI/Planning/Roadmap.md`, and current repository evidence. |
-| Produces | Current operational telemetry for AI-DOS capability maturity, evidence readiness, governance status, autonomy maturity, Target independence, and the next approved capability. |
+| Scope | Current Forge AI Target Project operational position, active capability, active task, execution authorization, evidence state, validation requirements, blockers, protected areas, completion criteria, and exactly one authorized next action. |
+| Out of Scope | Roadmap definition, phase definition, AI-DOS architecture definition, implementation design, backlog management, sprint tracking, document inventory, historical task log, automatic state updates, certification, and Human Governance replacement. |
+| Normative Authority | Human Governance; `docs/Projects/ForgeAI/Mission/AGENTS.md`; `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-and-Autonomy-Model.md` |
+| Consumes | `docs/Projects/ForgeAI/Mission/AGENTS.md`; `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-and-Autonomy-Model.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`; `docs/Projects/ForgeAI/Planning/Roadmap.md`; current repository evidence; accepted Human Governance decisions |
+| Produces | Live operational context for AI-DOS invocation, work selection, execution authorization, validation, evidence reporting, blockers, ProjectStatus update recommendations, and next-action resolution |
 | Update Rule | Update only through explicit Human Governance authorization or a dedicated ProjectStatus task. |
+| Certification Status | Not certified; live state record only |
 
-ProjectStatus reports current state only. It does not define strategy, define architecture, replace DevelopmentPhases, replace the roadmap, or authorize implementation.
+ProjectStatus reports current operational state.
+
+It does not define strategy, architecture, phases, roadmap direction, implementation design, certification, or Human Governance decisions.
 
 ---
 
 ## 1. Program Identity
 
-Forge AI is the **AI-DOS Development and Autonomy Enablement Target Project**.
+| Field | Current State |
+|:---|:---|
+| Target Repository | Forge AI |
+| Target Project Role | AI-DOS Development and Autonomy Enablement Target Project |
+| Framework Provider | AI-DOS |
+| Target Contract | `docs/Projects/ForgeAI/Mission/AGENTS.md` |
+| Mission Authority | `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-and-Autonomy-Model.md` |
+| DevelopmentPhases | `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` |
+| Roadmap | `docs/Projects/ForgeAI/Planning/Roadmap.md` |
+| ProjectStatus | `docs/Projects/ForgeAI/Planning/ProjectStatus.md` |
 
-Forge AI owns Target Project truth: mission application, planning state, live operational state, evidence, authorization, protected-area boundaries, and Human Governance decisions. AI-DOS owns reusable capability behavior and reusable product truth. ProjectStatus is Forge AI Target Project truth and is not part of `docs/AI/` reusable AI-DOS truth.
+Forge AI owns Target Project truth, mission, planning, live state, evidence, authorization, and protected-area declarations.
+
+AI-DOS owns reusable product truth and reusable capability behavior.
 
 ---
 
-## 2. Current Capability
-
-Exactly one capability is active.
+## 2. Current Operational Position
 
 | Field | Current State |
 |:---|:---|
-| Active Capability | Forge AI Operational State Model Realignment |
-| Objective | Rebuild ProjectStatus as the live operational telemetry model for AI-DOS capability, evidence, governance, autonomy, purity, and Target-independence state. |
-| Reason | Human Governance approved ProjectStatus realignment so the live state answers where AI-DOS is today, what capability is active, what evidence exists, which gate is active, what autonomy is proven, and what capability is approved next. |
-| Dependency | Forge AI mission and autonomy model, Target Project contract, DevelopmentPhases capability maturity model, roadmap capability streams, and current repository evidence. |
-| Boundary | Documentation-only ProjectStatus update; no roadmap, phase, mission, AGENTS, `docs/AI/`, architecture, implementation, cleanup, or external Target execution changes. |
+| Current Phase | Phase 3 — Execution, Validation, Review |
+| Current Capability | Evidence-Backed Execution and Review Capability |
+| Current Autonomy Level | Level 0 proven; Level 1 operationally demonstrated; Level 3 pilot in progress |
+| Current Program | AI-DOS Execution Program |
+| Current Execution Step | EP-1 — Pilot Execution #1 |
+| Target Repository | Forge AI |
+| Operational Readiness | Passed |
+| Readiness Verdict | `READY FOR PILOT` |
+| Pilot Blockers | None |
+| Architecture State | Stable; protected from speculative redesign |
+| Governing Principle | Evidence Before Refactor |
+
+The current operational objective is to prove that AI-DOS can move the Forge AI Target Repository forward by exactly one verified unit of work.
 
 ---
 
-## 3. Current Phase
+## 3. Active Task
 
-Current phase reference: **Phase 0 — Identity, Boundary, Purity**, with operational work aligned to the Phase 0 capability maturity emphasis on product-project separation, AI-DOS purity, Target independence, and protected-area respect.
-
-This section references the capability maturity phase defined by `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`; it does not redefine DevelopmentPhases.
-
----
-
-## 4. Capability Progress
-
-| Progress State | Current Evidence |
-|:---|:---|
-| Started | Human Governance issued `FORGE-AI.V2.PROJECTSTATUS-REALIGNMENT-001` with explicit scope, authorities, protected areas, required sections, validation expectations, and completion reporting requirements. |
-| In Progress | ProjectStatus is being reconstructed as the Forge AI Operational State Model within the authorized single-file scope. |
-| Validated | Pending completion of required searches and repository status checks for this task. |
-| Governance Pending | Human Governance review remains required before the rebuilt ProjectStatus is accepted as the authoritative live operational state. |
-| Completed | Not complete until validation passes, changes are committed, and governance can review the evidence package. |
-
----
-
-## 5. Evidence Status
-
-| Evidence Category | Current State | Evidence Summary |
-|:---|:---|:---|
-| Architecture evidence | Emerging | Mission, Target contract, DevelopmentPhases, and roadmap establish product/project separation, Target-first operation, and capability maturity framing. ProjectStatus does not define AI-DOS internals. |
-| Validation evidence | Pending | Required validation searches and git status confirmation must show only ProjectStatus changed and that forbidden historical patterns are absent. |
-| Review evidence | Pending | Human Governance review is required; this document separates operational review evidence from approval. |
-| Implementation evidence | Not applicable | Current work is documentation-only and does not authorize runtime, engine, cleanup, external Target, or architecture implementation. |
-| Purity evidence | Emerging | Current authority states `docs/AI/` contains reusable AI-DOS truth only, while ProjectStatus remains Forge AI Target Project truth. |
-| Target-independence evidence | Emerging | Current evidence supports boundary discipline and explicit Target Context; independent external Target execution evidence is not yet present. |
-
-Evidence is not fabricated. Missing validation, review, or independent Target proof remains recorded as pending or not present.
-
----
-
-## 6. Governance Gate
+Exactly one task is active.
 
 | Field | Current State |
 |:---|:---|
-| Current Gate | ProjectStatus Realignment Acceptance Gate |
-| Outcome Status | Pending |
-| Reason | The live operational state model has been authorized for reconstruction but has not yet been accepted by Human Governance after validation and review. |
-| Required Evidence | Single-file modification proof; required-section coverage; exactly one active Current Capability; exactly one Next Approved Capability; absence of sprint history and document-writing history; current-state-only framing; validation command output; completion report. |
-| Next Decision | Human Governance decides whether to accept ProjectStatus as the Forge AI Operational State Model or require revision. |
-
-Possible outcomes remain Accepted, Pending, Rejected, Deferred, or Blocked. The current outcome is **Pending**.
-
----
-
-## 7. Autonomy Status
-
-| Field | Current State |
-|:---|:---|
-| Current Level | Level 0 — Human-Directed Execution, with emerging Level 1 context-aware assistance evidence. |
-| Proof | Work is bounded by explicit Human Governance instructions, a single authorized file, protected-area exclusions, evidence requirements, validation expectations, and required completion reporting. |
-| Limitations | No accepted proof yet of independent planning maturity, autonomous workflow completion, recovery/replanning maturity, or external Target operation. Human Governance remains final. |
-| Next Maturity Objective | Prove Level 1 context-aware assistance through Target-first invocation records that show explicit context intake, boundary preservation, validation reporting, and safe blocker handling. |
-
-No higher autonomy maturity is claimed.
+| Active Task ID | `AI-DOS.PILOT.EXECUTION-001` |
+| Active Task Name | First Verified Target Repository Execution |
+| Task Type | Bounded Target Repository execution |
+| Objective | Resolve the Forge AI Target context, identify exactly one authorized executable unit of work, execute it, validate it, and produce completion evidence. |
+| Success Definition | One verified unit of Target Repository progress |
+| Failure Definition | No executable work can be resolved, execution crosses authority boundaries, protected areas are implicated without authorization, or validation fails |
+| Scope Expansion | Prohibited |
+| Second Work Unit | Prohibited |
+| Architecture Redesign | Prohibited |
+| Repository-Wide Alignment | Prohibited |
+| ProjectStatus Update | Not authorized by default |
 
 ---
 
-## 8. Program Health
+## 4. Execution Context
 
-| Health Area | Current State | Summary |
-|:---|:---|:---|
-| Strengths | Stable | Mission, Target contract, DevelopmentPhases, and roadmap now align around capability, evidence, governance, autonomy safety, purity, and Target independence. |
-| Risks | Active | ProjectStatus can drift into roadmap, backlog, historical log, or architecture authority if updates are not tightly governed. |
-| Blockers | None for current authorized edit | No blocker is known for reconstructing ProjectStatus within the single-file documentation-only scope. |
-| Technical Debt | Emerging | Repository and documentation structure still require alignment with the Target Project operating model. |
-| Architectural Debt | Managed | AI-DOS internals are intentionally not redefined here; architectural debt must remain outside ProjectStatus unless separately authorized. |
-| Governance Debt | Emerging | Human Governance acceptance records and evidence packages need consistent operational capture without turning ProjectStatus into a log. |
-
----
-
-## 9. AI-DOS Purity Status
-
-Current purity state: **Emerging and guarded**.
-
-The current authority boundary states that `docs/AI/` contains reusable AI-DOS truth only, while ProjectStatus is Forge AI Target Project truth. Current ProjectStatus preserves that separation by reporting operational Target state without inserting Forge AI planning state into reusable AI-DOS product truth.
-
-Audit-relevant evidence supports the need for continued purity checks, especially where self-hosting language could blur Forge AI Target Project truth with reusable AI-DOS truth. This section summarizes the purity posture only; it does not restate or replace any audit.
-
----
-
-## 10. Target Independence Status
-
-| Field | Current State |
-|:---|:---|
-| Current Target Independence | Emerging |
-| Known Coupling | Forge AI remains the self-application Target Project and supplies current Target Context, governance, evidence, and state. |
-| Known Contamination | No current contamination is asserted in this status model; continued audit is required before stronger claims. |
-| Remaining Work | Demonstrate repeatable Target-first invocation, validation, purity preservation, blocker handling, and independent Target operation without Forge AI project-state leakage. |
-
----
-
-## 11. Current Focus
-
-Exactly one strategic objective is active:
+### 4.1 Current Objective
 
 ```text
-Rebuild ProjectStatus into a live operational state model that reports AI-DOS capability, evidence, governance, autonomy, purity, Target independence, and the next approved capability without becoming a roadmap, backlog, sprint tracker, document inventory, implementation log, or architecture authority.
+Operate AI-DOS against the Forge AI Target Repository
+and complete exactly one verified unit of work.
+```
+
+### 4.2 Current Active Work
+
+```text
+Resolve the active Forge AI operational context,
+select exactly one bounded executable unit,
+execute it,
+validate it,
+and produce evidence.
+```
+
+### 4.3 Execution Status
+
+```text
+READY
+```
+
+### 4.4 Authorized Next Action
+
+```text
+Execute AI-DOS.PILOT.EXECUTION-001.
+```
+
+### 4.5 Completion Criteria
+
+The active task is complete only when all of the following are true:
+
+1. The Target Repository root `AGENTS.md` was read.
+2. The canonical Forge AI Target Project contract was resolved.
+3. ProjectStatus, DevelopmentPhases, and Roadmap were read.
+4. The current phase, capability, task, protected areas, and validation expectations were resolved.
+5. Exactly one executable unit of work was selected.
+6. The selection was declared before editing.
+7. Exactly that work unit was executed.
+8. Applicable validation passed.
+9. Changed-file boundaries were verified.
+10. Protected areas were preserved.
+11. Completion evidence was produced.
+12. No second work unit was executed.
+13. ProjectStatus was not modified unless explicitly authorized.
+
+---
+
+## 5. Work Selection Rules
+
+AI-DOS must resolve work from the current Target Project state.
+
+Selection order:
+
+```text
+ProjectStatus
+    ↓
+DevelopmentPhases
+    ↓
+Roadmap
+    ↓
+Task-specific authority
+```
+
+Rules:
+
+1. ProjectStatus is the live operational-state authority.
+2. DevelopmentPhases defines the current capability boundary.
+3. Roadmap resolves strategic priority among otherwise valid candidates.
+4. Existing active work must be preserved when it is executable.
+5. A new task must not be invented when an active task already exists.
+6. Exactly one independently verifiable work unit may be selected.
+7. The work must produce real Target Repository progress.
+8. Documentation qualifies only when the active task explicitly requires it and its completion constitutes verified progress.
+9. Architectural inconsistency alone is not sufficient reason to select architecture work.
+10. A missing architectural prerequisite is reported as a blocker; it is not fixed inside the pilot unless separately authorized.
+
+---
+
+## 6. Authorized Scope
+
+The current task may:
+
+- read declared Target Repository resources;
+- resolve current operational context;
+- inspect task-relevant files;
+- select one bounded executable work unit;
+- modify only files required by that work unit;
+- run applicable validation;
+- produce evidence;
+- recommend exactly one next step.
+
+The current task may not:
+
+- redesign AI-DOS;
+- create a new architectural layer;
+- create a new Standard, Meta Model, Blueprint, RFC family, Governance model, Runtime family, Engine family, Agent family, Command family, Workflow family, Template family, Knowledge model, Memory model, Validation model, Review model, Certification model, Testing model, or Operational Core model;
+- perform repository-wide alignment;
+- fix unrelated findings;
+- advance a future capability;
+- execute a second unit of work;
+- automatically update ProjectStatus.
+
+---
+
+## 7. Protected Areas
+
+| Protected Area | Current Rule |
+|:---|:---|
+| Root Target Project contract | Modify only through an explicitly authorized contract task. |
+| Mission and autonomy model | Read-only for the pilot. |
+| DevelopmentPhases | Read-only for the pilot. |
+| Roadmap | Read-only for the pilot. |
+| ProjectStatus | Read-only unless exact update authorization is provided. |
+| AI-DOS architecture baseline | Stable; no speculative redesign. |
+| Meta and Standards | Stable; change only if execution proves a blocking defect and a separate task is authorized. |
+| System, Runtime, Engines, Agents | Protected from opportunistic alignment and redesign. |
+| Commands, Workflows, Templates | Use only as required; do not refactor pre-emptively. |
+| Evidence records | Preserve provenance and do not fabricate or remove evidence. |
+| External Target scope | Axis Suite work remains inactive until the external pilot step. |
+
+A protected-area conflict must stop execution and be reported as a blocker.
+
+---
+
+## 8. Validation Requirements
+
+Every selected work unit must declare its validation plan before editing.
+
+Minimum validation evidence:
+
+| Validation Area | Requirement |
+|:---|:---|
+| Scope | Confirm only the declared work unit was executed. |
+| Changed files | List and verify all modified files. |
+| Syntax / structure | Run applicable syntax, schema, formatting, or structure checks. |
+| Tests | Run applicable Target-declared tests. |
+| Static validation | Run applicable linting, search, or static-analysis checks. |
+| Protected areas | Confirm no unauthorized protected area changed. |
+| Completion condition | Demonstrate that the selected work unit is complete. |
+| Repository status | Show repository state and unintended-change check. |
+| Failure transparency | Report failures, warnings, skipped checks, and environment limitations honestly. |
+
+Validation results must be classified as:
+
+```text
+PASS
+WARNING
+FAIL
+NOT RUN
+```
+
+The pilot cannot pass when required validation fails.
+
+---
+
+## 9. Evidence Requirements
+
+The completion evidence must contain:
+
+1. Target Repository identity.
+2. Resolved Target resources.
+3. Current phase and capability.
+4. Active task.
+5. Selected work unit.
+6. Selection rationale.
+7. Authorized scope.
+8. Expected and actual modified files.
+9. Validation commands and results.
+10. Completion-condition proof.
+11. Protected-area confirmation.
+12. Blockers and risks.
+13. Deviations from the declared plan.
+14. Remaining work explicitly excluded.
+15. ProjectStatus update policy confirmation.
+16. Exactly one recommended next step.
+
+---
+
+## 10. Operational Readiness Evidence
+
+| Area | Current State |
+|:---|:---|
+| Target Repository resolution | Passed |
+| Target contract resolution | Passed |
+| ProjectStatus resolution | Passed |
+| DevelopmentPhases resolution | Passed |
+| Roadmap resolution | Passed |
+| System boot sequence | Passed |
+| Authority resolution | Passed |
+| Active work determination | Passed |
+| Validation availability | Passed |
+| Completion reporting capability | Passed |
+| Pilot blocker count | 0 |
+
+Readiness verdict:
+
+```text
+READY FOR PILOT
 ```
 
 ---
 
-## 12. Next Approved Capability
-
-Only one next approved capability is identified.
+## 11. Capability and Autonomy State
 
 | Field | Current State |
 |:---|:---|
-| Next Approved Capability | Forge AI Target Project Structure Realignment |
-| Why | Human Governance identified the next authorized step as aligning Forge AI project document structure with the new Target Project operating model. |
-| Dependencies | Accepted ProjectStatus realignment evidence; preserved product/project separation; protected-area compliance; no unauthorized `docs/AI/`, mission, AGENTS, roadmap, or DevelopmentPhases changes. |
-| Expected Evidence | Structure alignment proposal or change evidence, affected-file list, protected-area review, purity check, Target-independence check, validation output, and governance-ready completion report. |
-| Expected Governance Gate | Target Project Structure Realignment Acceptance Gate. |
+| Accepted boundary capability | AI-DOS / Target separation established |
+| Accepted invocation readiness | Operational readiness passed |
+| Current capability under proof | Evidence-backed bounded execution |
+| Current autonomy claim | Human-directed execution with context-aware resolution |
+| Pilot autonomy objective | Demonstrate one bounded execution cycle with validation and evidence |
+| Not yet claimed | Recovery, replanning, autonomous workflow completion, external Target operation, multi-Target readiness |
+
+No autonomy level advances automatically because the pilot runs or passes.
+
+Human Governance must evaluate the evidence before accepting any maturity claim.
 
 ---
 
-## 13. Recent Governance Decisions
+## 12. Current Evidence State
 
-- `docs/AI/` contains only reusable AI-DOS truth.
-- ProjectStatus is Forge AI Target Project truth and reports current operational state.
-- Forge AI is the AI-DOS Development and Autonomy Enablement Target Project.
-- ProjectStatus is not a roadmap, backlog, sprint tracker, document inventory, or implementation log.
-- ProjectStatus must answer current AI-DOS capability, evidence, governance gate, autonomy proof, and next approved capability.
-
----
-
-## 14. Operational Metrics
-
-| Metric | Current Qualitative State | Basis |
+| Evidence Category | Current State | Summary |
 |:---|:---|:---|
-| Capability maturity | Emerging | Phase 0 boundary and purity capability is the current phase reference. |
-| Evidence completeness | Emerging | Mission, Target contract, phase, and roadmap evidence exist; validation and governance acceptance remain pending for this update. |
-| Governance readiness | Emerging | Gate, required evidence, and next decision are identified; acceptance is pending. |
-| Target independence | Emerging | Target-first boundary is established, but independent Target proof is not yet present. |
-| Purity | Guarded | Product/project separation is explicit; continued audit is required before verified status. |
-| Autonomy maturity | Level 0 proven; Level 1 emerging | Current work is human-directed with explicit Target Context and bounded execution. |
-| Review completeness | Pending | Human Governance review has not yet accepted this ProjectStatus reconstruction. |
-| Validation coverage | Pending | Required searches and repository checks must complete for this task. |
+| Architecture evidence | Available | Blueprint, Meta, Standards, System, Runtime, Engine, Agent, and operational-family consistency reviewed. |
+| Readiness evidence | Complete | Operational Readiness verdict is `READY FOR PILOT`. |
+| Pilot execution evidence | Pending | No pilot work unit has yet been completed. |
+| Validation evidence | Pending | Will be produced by the selected pilot work unit. |
+| Review evidence | Pending | Will be produced after pilot execution. |
+| Blocker evidence | None | No pre-pilot blocker was identified. |
+| External Target evidence | Not present | Axis Suite external pilot has not started. |
 
 ---
 
-## 15. Non-Goals
+## 13. Execution Program State
+
+```text
+Execution Program
+│
+├── EP-0  Operational Readiness                 COMPLETE
+├── EP-1  Pilot Execution #1                    ACTIVE
+├── EP-2  Evidence Review                       PENDING
+├── EP-3  Targeted Blocker Resolution           CONDITIONAL
+├── EP-4  Pilot Execution #2                    PENDING
+└── EP-5  Axis Suite External Target Pilot      PENDING
+```
+
+EP-3 is activated only when execution evidence proves a real blocker.
+
+Non-blocking observations do not activate EP-3.
+
+---
+
+## 14. Current Blockers and Risks
+
+### Blockers
+
+```text
+None known before pilot execution.
+```
+
+### Risks
+
+| Risk | Current Control |
+|:---|:---|
+| AI-DOS selects architecture work instead of executable work | Work-selection rules require real verified Target progress. |
+| Existing active task is replaced by a newly invented task | ProjectStatus remains the live operational-state authority. |
+| Scope expands after execution begins | The selected work unit must be declared before editing. |
+| More than one work unit is executed | Explicit one-unit stop rule. |
+| ProjectStatus changes automatically | Exact update authorization is required. |
+| Non-blocking audit findings trigger refactor | Only pilot blockers may activate targeted correction. |
+| Documentation is mistaken for progress | Documentation counts only when explicitly required by active work and independently verifiable. |
+
+---
+
+## 15. ProjectStatus Update Policy
+
+ProjectStatus may be modified only when:
+
+1. Human Governance explicitly authorizes the exact update;
+2. the active task is a dedicated ProjectStatus task; or
+3. the task instruction directly authorizes a specific operational-state transition.
+
+A successful pilot does not automatically authorize a ProjectStatus update.
+
+When update authority is absent, the completion report must provide:
+
+```text
+Recommended ProjectStatus Update
+```
+
+as a recommendation only.
+
+---
+
+## 16. Final Execution Verdict Model
+
+Pilot execution must end with exactly one verdict:
+
+```text
+PILOT EXECUTION PASSED
+```
+
+```text
+PILOT EXECUTION FAILED — BLOCKED
+```
+
+```text
+PILOT EXECUTION FAILED — VALIDATION FAILED
+```
+
+`PILOT EXECUTION PASSED` requires:
+
+- exactly one work unit completed;
+- work remained inside authorized scope;
+- applicable validation passed;
+- completion evidence exists;
+- protected areas were preserved;
+- no second work unit was executed.
+
+---
+
+## 17. Exactly One Authorized Next Action
+
+```text
+AI-DOS.PILOT.EXECUTION-001
+— Execute exactly one verified unit of work
+on the Forge AI Target Repository.
+```
+
+No other work is authorized by this ProjectStatus entry.
+
+---
+
+## 18. Non-Goals
 
 ProjectStatus does not:
 
-- define the roadmap;
-- define phases;
 - define AI-DOS architecture;
-- authorize implementation;
-- replace governance;
+- define the roadmap;
+- define DevelopmentPhases;
+- manage a backlog;
 - track sprints;
-- maintain a backlog;
-- inventory documents;
-- record document-writing history;
-- certify AI-DOS;
-- execute repository cleanup;
-- update `docs/AI/`; or
-- authorize external Target operation.
+- maintain a document inventory;
+- record a detailed historical task log;
+- approve or certify work;
+- authorize implementation by implication;
+- activate future capabilities;
+- automatically update itself;
+- authorize external Target execution;
+- replace Human Governance.
 
 ---
 
-## 16. Version History
+## 19. Version History
 
 | Version | Date | Description |
 |:---|:---|:---|
-| `5.0.0-draft` | 2026-07-11 | Rebuilt ProjectStatus as the Forge AI Operational State Model for current AI-DOS capability, evidence, governance, autonomy, purity, Target independence, and next approved capability state. |
-
----
-
-## Operational State Flow
-
-```mermaid
-stateDiagram-v2
-    [*] --> CurrentCapability
-    CurrentCapability --> Evidence
-    Evidence --> Validation
-    Validation --> GovernanceGate
-    GovernanceGate --> ApprovedNextCapability
-    GovernanceGate --> RevisionRequired
-    RevisionRequired --> CurrentCapability
-    ApprovedNextCapability --> [*]
-```
+| `5.0.0-draft` | 2026-07-11 | Rebuilt ProjectStatus as a capability, evidence, governance, autonomy, purity, and Target-independence operational-state model. |
+| `5.1.0-draft` | 2026-07-14 | Refactored ProjectStatus into an execution-oriented live operational contract for AI-DOS Pilot Execution #1, including active task, execution context, work-selection rules, authorization, protected areas, validation, evidence, completion criteria, and one authorized next action. |
