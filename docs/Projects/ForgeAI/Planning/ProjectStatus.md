@@ -8,7 +8,7 @@
 |:---|:---|
 | Identifier | `FORGE-AI.TARGET.PROJECT-STATUS` |
 | Title | Forge AI Operational State Model |
-| Version | `5.1.0-draft` |
+| Version | `5.2.0-draft` |
 | Status | Live Operational State |
 | Classification | Target Project Operational State |
 | Document Type | ProjectStatus |
@@ -55,17 +55,17 @@ AI-DOS owns reusable product truth and reusable capability behavior.
 |:---|:---|
 | Current Phase | Phase 3 — Execution, Validation, Review |
 | Current Capability | Evidence-Backed Execution and Review Capability |
-| Current Autonomy Level | Level 0 proven; Level 1 operationally demonstrated; Level 3 pilot in progress |
+| Current Autonomy Level | Level 0 proven; Level 1 operationally demonstrated; Level 3 pilot execution passed; maturity advancement pending evidence review |
 | Current Program | AI-DOS Execution Program |
-| Current Execution Step | EP-1 — Pilot Execution #1 |
+| Current Execution Step | EP-2 — Evidence Review |
 | Target Repository | Forge AI |
 | Operational Readiness | Passed |
-| Readiness Verdict | `READY FOR PILOT` |
+| Readiness Verdict | `PILOT EXECUTION PASSED` |
 | Pilot Blockers | None |
 | Architecture State | Stable; protected from speculative redesign |
 | Governing Principle | Evidence Before Refactor |
 
-The current operational objective is to prove that AI-DOS can move the Forge AI Target Repository forward by exactly one verified unit of work.
+The current operational objective is to review the accepted AI-DOS Pilot Execution #1 evidence and determine whether it identifies a proven execution blocker.
 
 ---
 
@@ -75,12 +75,12 @@ Exactly one task is active.
 
 | Field | Current State |
 |:---|:---|
-| Active Task ID | `AI-DOS.PILOT.EXECUTION-001` |
-| Active Task Name | First Verified Target Repository Execution |
-| Task Type | Bounded Target Repository execution |
-| Objective | Resolve the Forge AI Target context, identify exactly one authorized executable unit of work, execute it, validate it, and produce completion evidence. |
-| Success Definition | One verified unit of Target Repository progress |
-| Failure Definition | No executable work can be resolved, execution crosses authority boundaries, protected areas are implicated without authorization, or validation fails |
+| Active Task ID | `AI-DOS.EVIDENCE.REVIEW-001` |
+| Active Task Name | Evidence Review for Pilot Execution #1 |
+| Task Type | Bounded evidence review |
+| Objective | Review the completed AI-DOS Pilot Execution #1 evidence report and determine whether it identifies a proven execution blocker. |
+| Success Definition | Evidence review completed with findings on whether a proven execution blocker exists. |
+| Failure Definition | Evidence cannot be reviewed, review crosses authority boundaries, protected areas are implicated without authorization, or findings are unsupported by the evidence. |
 | Scope Expansion | Prohibited |
 | Second Work Unit | Prohibited |
 | Architecture Redesign | Prohibited |
@@ -94,18 +94,16 @@ Exactly one task is active.
 ### 4.1 Current Objective
 
 ```text
-Operate AI-DOS against the Forge AI Target Repository
-and complete exactly one verified unit of work.
+Review AI-DOS Pilot Execution #1 evidence
+and determine whether the evidence identifies a proven execution blocker.
 ```
 
 ### 4.2 Current Active Work
 
 ```text
-Resolve the active Forge AI operational context,
-select exactly one bounded executable unit,
-execute it,
-validate it,
-and produce evidence.
+Review the completed evidence report,
+record evidence-review findings,
+and identify whether EP-3 must activate because a proven execution blocker exists.
 ```
 
 ### 4.3 Execution Status
@@ -116,27 +114,19 @@ READY
 
 ### 4.4 Authorized Next Action
 
-```text
-Execute AI-DOS.PILOT.EXECUTION-001.
-```
+The exactly one authorized next action is stated in Section 17.
 
 ### 4.5 Completion Criteria
 
-The active task is complete only when all of the following are true:
+The active evidence-review task is complete only when all of the following are true:
 
-1. The Target Repository root `AGENTS.md` was read.
-2. The canonical Forge AI Target Project contract was resolved.
-3. ProjectStatus, DevelopmentPhases, and Roadmap were read.
-4. The current phase, capability, task, protected areas, and validation expectations were resolved.
-5. Exactly one executable unit of work was selected.
-6. The selection was declared before editing.
-7. Exactly that work unit was executed.
-8. Applicable validation passed.
-9. Changed-file boundaries were verified.
-10. Protected areas were preserved.
-11. Completion evidence was produced.
-12. No second work unit was executed.
-13. ProjectStatus was not modified unless explicitly authorized.
+1. The completed evidence report at `docs/Projects/ForgeAI/Reports/AI-DOS-Pilot-Execution-001-Evidence.md` was reviewed.
+2. Evidence-review findings were recorded.
+3. The review determined whether the evidence identifies a proven execution blocker.
+4. EP-3 was not activated unless the review identified a proven execution blocker.
+5. Protected areas were preserved.
+6. No second work unit was executed.
+7. ProjectStatus was not modified unless explicitly authorized.
 
 ---
 
@@ -318,9 +308,9 @@ Human Governance must evaluate the evidence before accepting any maturity claim.
 |:---|:---|:---|
 | Architecture evidence | Available | Blueprint, Meta, Standards, System, Runtime, Engine, Agent, and operational-family consistency reviewed. |
 | Readiness evidence | Complete | Operational Readiness verdict is `READY FOR PILOT`. |
-| Pilot execution evidence | Pending | No pilot work unit has yet been completed. |
-| Validation evidence | Pending | Will be produced by the selected pilot work unit. |
-| Review evidence | Pending | Will be produced after pilot execution. |
+| Pilot execution evidence | Complete | EP-1 — Pilot Execution #1 is complete; verdict is `PILOT EXECUTION PASSED`; evidence report: `docs/Projects/ForgeAI/Reports/AI-DOS-Pilot-Execution-001-Evidence.md`. |
+| Validation evidence | Complete | Pilot execution validation is recorded in `docs/Projects/ForgeAI/Reports/AI-DOS-Pilot-Execution-001-Evidence.md`. |
+| Review evidence | Active | EP-2 — Evidence Review is active. |
 | Blocker evidence | None | No pre-pilot blocker was identified. |
 | External Target evidence | Not present | Axis Suite external pilot has not started. |
 
@@ -332,14 +322,14 @@ Human Governance must evaluate the evidence before accepting any maturity claim.
 Execution Program
 │
 ├── EP-0  Operational Readiness                 COMPLETE
-├── EP-1  Pilot Execution #1                    ACTIVE
-├── EP-2  Evidence Review                       PENDING
+├── EP-1  Pilot Execution #1                    COMPLETE
+├── EP-2  Evidence Review                       ACTIVE
 ├── EP-3  Targeted Blocker Resolution           CONDITIONAL
 ├── EP-4  Pilot Execution #2                    PENDING
 └── EP-5  Axis Suite External Target Pilot      PENDING
 ```
 
-EP-3 is activated only when execution evidence proves a real blocker.
+EP-3 must activate only if EP-2 evidence review identifies a proven execution blocker.
 
 Non-blocking observations do not activate EP-3.
 
@@ -350,7 +340,7 @@ Non-blocking observations do not activate EP-3.
 ### Blockers
 
 ```text
-None known before pilot execution.
+None identified by the accepted pilot execution verdict; evidence review is active.
 ```
 
 ### Risks
@@ -375,7 +365,7 @@ ProjectStatus may be modified only when:
 2. the active task is a dedicated ProjectStatus task; or
 3. the task instruction directly authorizes a specific operational-state transition.
 
-A successful pilot does not automatically authorize a ProjectStatus update.
+The accepted Pilot Execution #1 verdict authorizes this specific ProjectStatus update only.
 
 When update authority is absent, the completion report must provide:
 
@@ -417,9 +407,9 @@ PILOT EXECUTION FAILED — VALIDATION FAILED
 ## 17. Exactly One Authorized Next Action
 
 ```text
-AI-DOS.PILOT.EXECUTION-001
-— Execute exactly one verified unit of work
-on the Forge AI Target Repository.
+AI-DOS.EVIDENCE.REVIEW-001
+— Review docs/Projects/ForgeAI/Reports/AI-DOS-Pilot-Execution-001-Evidence.md
+and determine whether it identifies a proven execution blocker.
 ```
 
 No other work is authorized by this ProjectStatus entry.
@@ -452,3 +442,4 @@ ProjectStatus does not:
 |:---|:---|:---|
 | `5.0.0-draft` | 2026-07-11 | Rebuilt ProjectStatus as a capability, evidence, governance, autonomy, purity, and Target-independence operational-state model. |
 | `5.1.0-draft` | 2026-07-14 | Refactored ProjectStatus into an execution-oriented live operational contract for AI-DOS Pilot Execution #1, including active task, execution context, work-selection rules, authorization, protected areas, validation, evidence, completion criteria, and one authorized next action. |
+| `5.2.0-draft` | 2026-07-14 | Recorded Human Governance acceptance of EP-1 Pilot Execution #1 as complete with verdict `PILOT EXECUTION PASSED`, activated EP-2 Evidence Review, preserved EP-3 as conditional on a proven execution blocker, and updated the authorized next action. |
