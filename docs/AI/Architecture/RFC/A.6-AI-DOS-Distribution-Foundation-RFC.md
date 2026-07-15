@@ -8,7 +8,7 @@
 |:---|:---|
 | Identifier | `AI-DOS.V2.ARCH-RFC-006` |
 | Title | A.6 — AI-DOS Distribution Foundation RFC |
-| Version | `0.1.0-draft` |
+| Version | `0.1.1-draft` |
 | Status | Draft |
 | Lifecycle State | Draft |
 | Canonical Status | Non-canonical until reviewed, approved, and promoted through Framework Governance |
@@ -34,7 +34,7 @@
 | Supersedes | None |
 | Superseded By | None |
 | Validation Profile | STD-010 metadata conformance profile; Architecture RFC content validation profile |
-| Review Status | Review Required |
+| Review Status | Human Governance Approved |
 | Certification Status | Not certified |
 
 ---
