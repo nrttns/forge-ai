@@ -58,7 +58,9 @@ When Human Governance supplies a sufficiently bounded task, route it through the
 
 ## 5. Project State Update
 
-After execution, validation, and evidence, consume `docs/AI/Workflows/ProjectStateUpdater.md` only when the exact Target state update is authorized.
+After execution, validation, and evidence, consume `docs/AI/Workflows/ProjectStateUpdater.md` when the exact Target state update is authorized.
+
+Human Governance approval intent that reaches a current lifecycle gate requiring an operational-state transition must route to `docs/AI/Workflows/ProjectStateUpdater.md` for derivation. TaskPlanner must not safe-stop, replace, or convert a uniquely derivable approval-state transition into capability-grounded repository work selection. TaskGenerationWorkflow is not required unless a separate executable repository work unit is actually selected.
 
 Otherwise, produce only a recommended state update.
 

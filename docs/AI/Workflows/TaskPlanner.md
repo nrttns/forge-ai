@@ -88,7 +88,7 @@ This document defines sequencing and routing behavior. It consumes the v2 Operat
 - Do not create parallel replacement files.
 - Do not move, delete, or rename files unless explicitly authorized.
 - Do not modify templates unless explicitly authorized.
-- Do not update the ProjectStatus declared by the active Target Repository (`<PROJECT_STATUS_PATH>`) unless explicitly authorized.
+- Do not update the ProjectStatus declared by the active Target Repository (`<PROJECT_STATUS_PATH>`). When the invocation is Human Governance approval intent and the current lifecycle gate requires an operational-state transition, route to ProjectStateUpdater instead of selecting or executing repository work.
 
 ## 7. Validation Rules
 
@@ -97,6 +97,15 @@ This document defines sequencing and routing behavior. It consumes the v2 Operat
 - Confirm old ProjectStatus paths are not introduced.
 - Confirm no obsolete authority references are introduced.
 - Run task-specific validation commands and report results honestly.
+
+
+## 8.0 Lifecycle Transition Routing
+
+TaskPlanner distinguishes capability-grounded repository work selection from lifecycle state transition.
+
+When the invocation expresses Human Governance approval intent and the current ProjectStatus, DevelopmentPhases, Roadmap, completed validation evidence, completed review evidence, and protected-boundary and dependency state show that the current lifecycle gate requires an operational-state transition, TaskPlanner must route to `docs/AI/Workflows/ProjectStateUpdater.md`. It must not return `NO CAPABILITY-GROUNDED WORK UNIT FOUND`, require TaskGenerationWorkflow, invent a repository work unit, or replace the approval-state transition with capability-grounded work selection.
+
+TaskPlanner may perform capability-grounded repository work selection only when an executable repository work unit must be selected. Approval decisions and lifecycle state transitions are not executable repository work units.
 
 ## 8. Planning Sequence
 
@@ -410,7 +419,7 @@ MAY QUALIFY after full authorization-threshold validation.
 | Audit / review | Audit command or review route |
 | Documentation | Documentation command |
 | Bug fix | Bug fix command |
-| State update | Project State Updater only when explicitly authorized |
+| State update | Project State Updater when explicitly authorized or when Human Governance approval intent uniquely derives the exact operational-state transition |
 | General | Base task command |
 
 ## 9. Completion Report Expectations

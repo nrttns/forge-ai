@@ -340,7 +340,7 @@ Review when applicable
     ↓
 Certification boundary when applicable
     ↓
-ProjectStateUpdater only when authorized
+ProjectStateUpdater when authorized or uniquely derivable approval intent requires lifecycle transition
 ```
 
 This is a tool-facing mandatory consumption order. It does not redefine ownership of any component.
@@ -405,7 +405,7 @@ When Human Governance supplies an already bounded task with explicit objective, 
 
 ### 10.9 ProjectStateUpdater Boundary
 
-After execution, validation, and evidence production, agents may consume `docs/AI/Workflows/ProjectStateUpdater.md` only when the active task explicitly authorizes the exact ProjectStatus update or Human Governance approval intent authorizes an exact state transition that is uniquely derivable from authoritative Target state. Approval intent is sufficient only when current Target operational state, active lifecycle gate, completed review evidence, DevelopmentPhases, Roadmap, dependencies, and protected boundaries jointly prove all of the following: current capability work is complete; validation passed; review completed without unresolved blocking findings; ProjectStatus records the current capability as accepted or ready for approval; exactly one valid next capability is identified; and no protected boundary or unmet dependency blocks transition. In that case, apply only the exact transition required to close the current gate, record current capability approval, activate the single next capability, update ProjectStatus, and stop before executing new-capability work. Without exact authorization or unique derivation, do not modify ProjectStatus; provide only a recommended ProjectStatus update and label it as a recommendation. State-Derived Execution does not grant automatic state-update authority.
+Agents may consume `docs/AI/Workflows/ProjectStateUpdater.md` after execution, validation, and evidence production when the active task explicitly authorizes the exact ProjectStatus update. Agents must also route Human Governance approval intent to ProjectStateUpdater when the current lifecycle gate requires an operational-state transition and the exact state transition is uniquely derivable from authoritative Target state. Approval intent is sufficient only when current Target operational state, active lifecycle gate, completed review evidence, DevelopmentPhases, Roadmap, dependencies, and protected boundaries jointly prove all of the following: current capability work is complete; validation passed; review completed without unresolved blocking findings; ProjectStatus records the current capability as accepted or ready for approval; exactly one valid next capability is identified; and no protected boundary or unmet dependency blocks transition. In that case, apply only the exact transition required to close the current gate, record current capability approval, activate the single next capability, update ProjectStatus, and stop before executing new-capability work. Without exact authorization or unique derivation, do not modify ProjectStatus; provide only a recommended ProjectStatus update and label it as a recommendation. State-Derived Execution does not grant automatic state-update authority.
 
 ## 11. Execution Boundaries
 
