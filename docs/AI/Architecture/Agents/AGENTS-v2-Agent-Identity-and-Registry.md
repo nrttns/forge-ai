@@ -28,7 +28,7 @@
 | Dependencies | AGENTS v2 Architecture Foundation; Governance Atlas v2 navigation; ProjectStatus operational state and frozen-area constraints; Development Phases roadmap; AGENTS v1 operating architecture; AGENTS v2 planning inputs; STD-010 metadata requirements. |
 | Consumes | AGENTS v2 foundation boundaries; repository bootloader rules; governance navigation; roadmap state; frozen-area constraints; AGENTS v1; AGENTS v2 roadmap and development phases; STD-010 metadata requirements. |
 | Produces | AGENTS v2 agent identity model; agent identifier rules; agent type model; agent role model; agent metadata model; agent registry entry model; agent capability link model; agent lifecycle state model; registry validation rules; deferred-scope checklist. |
-| Related Specifications | `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; Engine Platform RFC family. |
+| Related Specifications | `docs/AI/Architecture/Constitution/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/RFC/Runtime/A.3-Runtime-Architecture-RFC.md`; Engine Platform RFC family. |
 | Supersedes | None |
 | Superseded By | None |
 | Promotion Requirements | Human Governance review; Framework Governance review; validation against AGENTS v2 Architecture Foundation, Governance Atlas v2, ProjectStatus frozen areas, Development Phases roadmap, AGENTS v1 consumption, AGENTS v2 planning inputs, and STD-010 metadata requirements. |

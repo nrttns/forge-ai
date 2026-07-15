@@ -23,7 +23,7 @@
 | Traceability ID | `AI-DOS.TEMPLATES.REPORTS.GLOBAL-AUDIT` |
 | Scope | Evidence-only semantic audit of the completeAI-DOS Template Library under `docs/AI/Templates/`, including the requested template families, Template Library README, existing family README files, Project Template Selection Guide, TPL-000, and TPL-001. |
 | Out of Scope | Template approval, Template Library freeze, certification, canonical promotion, ProjectStatus updates, DevelopmentPhases updates, template refactoring, template normalization, template rewriting, runtime implementation, and governance-authority creation. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/Architecture/A.1-Constitution.md` |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/Architecture/Constitution/A.1-Constitution.md` |
 | Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/Standards/TPL-001-RFC-Template-Standard.md` |
 | Dependencies | Template Library inventory; Template Library README; existing family README files; Project Template Selection Guide; TPL-000; TPL-001; STD-010; Framework Governance; Constitution; repository bootloader. |
 | Consumes | Existing Template Library documents and governing authorities as audit evidence only. |
@@ -137,7 +137,7 @@ The following authorities were consumed only and were not redefined:
 | Authority | Audit Use |
 |:---|:---|
 | `AGENTS.md` | Repository boot sequence, task classification, file-safety boundaries, validation expectations, and completion-report requirements. |
-| `docs/AI/Architecture/A.1-Constitution.md` | Constitutional constraints, human authority, evidence discipline, and prohibition against unauthorized authority creation. |
+| `docs/AI/Architecture/Constitution/A.1-Constitution.md` | Constitutional constraints, human authority, evidence discipline, and prohibition against unauthorized authority creation. |
 | `docs/AI/FrameworkGovernance.md` | Governance lifecycle, authority boundaries, approval and promotion boundaries, AI execution boundaries, and conflict policy. |
 | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` | Metadata, ownership, lifecycle, traceability, promotion, and certification requirements. |
 | `docs/AI/Templates/Standards/TPL-000-Template-Standard.md` | Template authoring, placeholder, produced-document, lifecycle, validation, completion, compliance, and library organization expectations. |

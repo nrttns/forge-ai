@@ -24,7 +24,7 @@
 | Scope | Guidance for selecting the smallest correct Project template from the normalized Project template family. |
 | Out of Scope | Project implementation logic, scaffolding behavior, code generation, runtime behavior, deployment logic, CI/CD behavior, package management execution, framework-specific execution, certification decisions, registry updates, or ProjectStatus updates. |
 | Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
-| Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/README.md`; `docs/AI/Templates/Project/README.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/AI/Architecture/A.1-Constitution.md` |
+| Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/README.md`; `docs/AI/Templates/Project/README.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/AI/Architecture/Constitution/A.1-Constitution.md` |
 | Dependencies | STD-010 metadata schema; TPL-000 template governance; Project template family; project identity; target platform and architecture inputs |
 | Consumes | Existing Planning, Runtime, Architecture, Integration, Platform, Standards, and Governance authorities without redefining them |
 | Produces | Project template selection guidance |

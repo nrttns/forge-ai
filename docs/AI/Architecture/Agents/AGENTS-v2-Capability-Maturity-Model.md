@@ -23,7 +23,7 @@
 | Scope | Reusable AGENTS v2 architecture only; maturity states, readiness criteria, evidence requirements, acceptance boundaries, capability availability, and deferred activation boundaries. |
 | Out of Scope | Target Project planning; Target Project lifecycle; ProjectStatus; implementation schedule; Runtime or Engine redefinition; Operational Core activation. |
 | Normative Authority | Human Governance; AI-DOS Governance; AGENTS-v2 family master; AGENTS-v2 architecture foundation. |
-| Normative References | `docs/AI/Architecture/Agents/AGENTS-v2.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Architecture.md`; applicable Agent domain authorities; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; A.4 Engine Platform; relevant A.5 specializations where applicable; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`. |
+| Normative References | `docs/AI/Architecture/Agents/AGENTS-v2.md`; `docs/AI/Architecture/Agents/AGENTS-v2-Architecture.md`; applicable Agent domain authorities; `docs/AI/Architecture/RFC/Runtime/A.3-Runtime-Architecture-RFC.md`; A.4 Engine Platform; relevant A.5 specializations where applicable; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`. |
 | Dependencies | Applicable Agent domain authorities; A.3 Runtime; A.4 Engine Platform; relevant A.5 specializations where applicable. |
 | Consumes | Agent architecture authorities and validation evidence. |
 | Produces | Maturity/readiness model. |

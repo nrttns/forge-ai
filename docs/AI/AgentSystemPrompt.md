@@ -24,7 +24,7 @@
 | Scope | Defines executable AI-DOS v2 behavior rules for AI coding assistants that consume repository authority, classify tasks, assemble context, execute within scope, validate outputs, report blockers, and produce completion evidence. |
 | Out of Scope | Repository bootloader authority, Governance Atlas ownership, Framework Governance decision policy, Target resource modifications, Target Constraints ownership, Runtime redesign, Engine redesign, Engine RFC creation, command implementation, workflow implementation, template modification, certification, canonical promotion, and implementation activation. |
 | Normative Authority | Human Governance; Target invocation contract; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; Invocation Context and Resolved Target Context |
-| Normative References | `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/Templates/README.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md`; `docs/AI/Operational/Operational-Core-Replacement-Matrix.md` |
+| Normative References | `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/Templates/README.md`; `docs/AI/Architecture/Constitution/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Architecture/RFC/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Architecture/RFC/EnginePlatform/A.4-Engine-Architecture-RFC.md`; `docs/AI/Architecture/RFC/EngineSpecializations/A.5.0-Engine-Specialization-RFC-Template.md`; `docs/AI/Operational/Operational-Core-Replacement-Matrix.md` |
 | Dependencies | Governance Core; Meta Foundation; Standards Foundation; Runtime Architecture; Engine Platform; Engine Foundation RFC family; Operational Core replacement plan; Invocation Context and Resolved Target Context. |
 | Consumes | Human task instruction, repository boot sequence, governance navigation, governance decision policy, resolved context, Target Constraints, constitutional principles, meta models, terminology, metadata requirements, Runtime Architecture, Engine Architecture, Engine Specialization template, AI Framework entry rules, AI Orchestrator routing rules, template category map, commands, workflows, validation artifacts, and task-specific authorities. |
 | Produces | Tool-facing agent behavior rules, required boot behavior, authority consumption behavior, task classification behavior, context assembly behavior, execution-scope discipline, validation behavior, completion-report behavior, blocker reporting behavior, and Resolved Target Context boundary behavior. |
@@ -114,15 +114,15 @@ Applicable Target Resources loaded for the invocation
     ↓
 AI-DOS product architecture reference product architecture context when applicable for AI-DOS self-hosting only
     ↓
-docs/AI/Architecture/A.1-Constitution.md
+docs/AI/Architecture/Constitution/A.1-Constitution.md
     ↓
 docs/AI/Meta/M.0-Framework-Meta-Model.md and docs/AI/Meta/M.1-Artifact-Meta-Model.md
     ↓
 docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md and docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md
     ↓
-docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md
+docs/AI/Architecture/RFC/Runtime/A.3-Runtime-Architecture-RFC.md
     ↓
-docs/AI/Runtime/A.4-Engine-Architecture-RFC.md and Engine Specialization RFC family
+docs/AI/Architecture/RFC/EnginePlatform/A.4-Engine-Architecture-RFC.md and Engine Specialization RFC family
     ↓
 Operational Core: AIFramework / AIOrchestrator / AgentSystemPrompt
     ↓

@@ -28,7 +28,7 @@
 | Dependencies | Governance Atlas v2 navigation; Framework Governance decision policy; ProjectStatus operational state; Development Phases roadmap; AGENTS v1 operating architecture; AGENTS v2 roadmap and development phases. |
 | Consumes | Repository bootloader rules; governance navigation; governance decision policy; roadmap state; frozen-area constraints; AGENTS v1; AGENTS v2 planning inputs; STD-010 metadata requirements. |
 | Produces | AGENTS v2 Architecture Foundation; agent foundation model; agent identity model; agent role model; agent registry model; agent capability registry model; agent metadata model; lifecycle boundaries; validation checklist. |
-| Related Specifications | `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; Engine Platform RFC family. |
+| Related Specifications | `docs/AI/Architecture/Constitution/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/RFC/Runtime/A.3-Runtime-Architecture-RFC.md`; Engine Platform RFC family. |
 | Supersedes | None |
 | Superseded By | None |
 | Promotion Requirements | Human Governance review; Framework Governance review; validation against Governance Atlas v2, ProjectStatus frozen areas, Development Phases roadmap, AGENTS v1 consumption, AGENTS v2 planning inputs, and STD-010 metadata requirements. |

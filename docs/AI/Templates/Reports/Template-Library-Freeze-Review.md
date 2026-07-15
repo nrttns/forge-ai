@@ -25,7 +25,7 @@
 | Traceability ID | `AI-DOS.TEMPLATES.REPORTS.FREEZE-REVIEW` |
 | Scope | Evidence-based review of the completed Template Library Global Audit to determine whether theAI-DOS v2 Template Library is ready to proceed to Template Library Freeze. |
 | Out of Scope | Re-auditing the Template Library, modifying templates, refactoring templates, normalizing templates, freezing the Template Library, certifying templates, approving templates, canonical promotion, ProjectStatus updates, DevelopmentPhases updates, runtime implementation, and governance-authority creation. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/Architecture/A.1-Constitution.md` |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/Architecture/Constitution/A.1-Constitution.md` |
 | Normative References | `docs/AI/Templates/Reports/Template-Library-Global-Audit.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/Standards/TPL-001-RFC-Template-Standard.md` |
 | Dependencies | Completed Template Library Global Audit; repository bootloader; Constitution; Framework Governance; STD-010; TPL-000; TPL-001; Template Library readiness evidence. |
 | Consumes | Template Library Global Audit findings, observations, strengths, risks, readiness assessment, verdict, and recommendation. |
@@ -91,7 +91,7 @@ This review did not and shall not:
 | `docs/AI/Templates/Reports/Template-Library-Global-Audit.md` | Primary evidence source for audit quality, architectural readiness, governance readiness, freeze readiness, remaining observations, risks, verdict, and recommendation. |
 | `AGENTS.md` | Repository bootloader, task classification, documentation-only boundary, file-safety rules, validation routing, and completion-report expectations. |
 | `docs/AI/FrameworkGovernance.md` | Governance lifecycle, Human Governance authority, Framework Governance review role, promotion boundaries, freeze/readiness interpretation, and AI execution boundaries. |
-| `docs/AI/Architecture/A.1-Constitution.md` | Human authority, constitutional boundary preservation, evidence discipline, and prohibition against unauthorized authority creation. |
+| `docs/AI/Architecture/Constitution/A.1-Constitution.md` | Human authority, constitutional boundary preservation, evidence discipline, and prohibition against unauthorized authority creation. |
 | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` | Metadata, ownership, lifecycle, traceability, promotion, and certification expectations consumed by the Global Audit. |
 | `docs/AI/Templates/Standards/TPL-000-Template-Standard.md` | Template standard evidence consumed by the Global Audit for placeholder, produced-document, validation, completion, and template-authoring semantics. |
 | `docs/AI/Templates/Standards/TPL-001-RFC-Template-Standard.md` | RFC-template specialization evidence consumed by the Global Audit for RFC template applicability and non-RFC non-misuse. |

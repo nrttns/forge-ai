@@ -21,7 +21,7 @@
 | Scope | Repository governance navigation, authority mapping, ownership mapping, dependency mapping, document taxonomy, AI consumption guidance, review and promotion guidance. |
 | Out of Scope | Constitutional redefinition, Target Context replacement, Target Constraints replacement, standards creation, Runtime RFC creation, Engine RFC creation, AGENTS v1 activation, operational-layer refactor, legacy migration, implementation task preparation. |
 | Normative Authority | Target invocation contract; Human Governance; approved Framework Governance decisions. |
-| Normative References | `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`. |
+| Normative References | `docs/AI/Architecture/Constitution/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`. |
 | Dependencies | Target invocation contract; Invocation Context and Resolved Target Context; A.0; A.1; M.0; M.1; STD-000; STD-001; STD-002; STD-003; STD-010; A.3; A.4 through A.4.7; Agent architecture v1 draft; RC2 operational-layer documents. |
 | Consumes | Authority, lifecycle, taxonomy, terminology, metadata, runtime, engine, agent, and operational-layer documents. |
 | Produces | Governance atlas, repository navigation index, authority matrix, ownership matrix, classification matrix, AI consumption guide, governance quality checklist. |
@@ -768,7 +768,7 @@ Traceability prevents implementation, AI output, or operational convenience from
 | Target Constraints | Applicable Target Resources | Determine Target Constraints. |
 | Architecture | `docs/AI/Architecture/` | Constitution, audit, standards, agents. |
 | Meta | `docs/AI/Meta/` | Semantic and artifact models. |
-| Runtime | `docs/AI/Runtime/` | Runtime and engine RFCs. |
+| Runtime | `docs/AI/Architecture/RFC/Runtime/`, `docs/AI/Architecture/RFC/EnginePlatform/`, and `docs/AI/Architecture/RFC/EngineSpecializations/` | Runtime and engine RFCs. |
 | Operational | `docs/AI/AIFramework.md`, `docs/AI/AIOrchestrator.md`, `docs/AI/AgentSystemPrompt.md` | Frozen operational references. |
 | Specification | `docs/AI/Specification/` | RC2 specification modules and optional GovernanceModel. |
 
@@ -1040,8 +1040,8 @@ This addendum corrects the central authority inventory after the Agent + Engine 
 | Human Governance | Normative finality and promotion authority | Human decisions and approved governance records | Final approval, certification, and override authority. |
 | AI-DOS Governance and Constitutional Authority | Framework governance constraints | `docs/AI/GOVERNANCE.md`, Constitution, Framework Governance | Cannot be overridden by lower layers. |
 | Meta and Standards | Terminology, metadata, templates, document quality | `docs/AI/Meta/`, `docs/AI/Architecture/Standards/` | Cross-cutting constraints. |
-| Runtime Architecture | Runtime architectural ownership | `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md` | Consumed by Engine Platform and Agent Architecture. |
-| Engine Platform | Engine kernel, contract, registry, lifecycle, communication, state, capability platform | `docs/AI/Runtime/A.4*` | Owns Engine Platform boundaries. |
+| Runtime Architecture | Runtime architectural ownership | `docs/AI/Architecture/RFC/Runtime/A.3-Runtime-Architecture-RFC.md` | Consumed by Engine Platform and Agent Architecture. |
+| Engine Platform | Engine kernel, contract, registry, lifecycle, communication, state, capability platform | `docs/AI/Architecture/RFC/EnginePlatform/A.4*` | Owns Engine Platform boundaries. |
 | Engine Specialization RFC Family | Individual Engine specialization ownership | A.5.0-A.5.12 | Owns specialization responsibilities only. |
 | Agent Architecture | Agent architecture contracts | AGENTS v2 family | Consumes Runtime and Engine authorities. |
 | Operational Core | Invocation-time procedures and execution consumption | Operational documents | Consumes Agent and Engine architecture; does not redefine them. |
@@ -1055,19 +1055,19 @@ This addendum corrects the central authority inventory after the Agent + Engine 
 
 | RFC | Engine / Template | Authority Classification |
 |:---|:---|:---|
-| `A.5.0` | `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md` — Engine Specialization RFC Template | ENGINE SPECIALIZATION TEMPLATE |
-| `A.5.1` | `docs/AI/Runtime/A.5.1-Context-Engine-RFC.md` — Context Engine | CONTEXT ENGINE AUTHORITY |
-| `A.5.2` | `docs/AI/Runtime/A.5.2-Knowledge-Engine-RFC.md` — Knowledge Engine | KNOWLEDGE ENGINE AUTHORITY |
-| `A.5.3` | `docs/AI/Runtime/A.5.3-Planning-Engine-RFC.md` — Planning Engine | PLANNING ENGINE AUTHORITY |
-| `A.5.4` | `docs/AI/Runtime/A.5.4-Decision-Engine-RFC.md` — Decision Engine | DECISION ENGINE AUTHORITY |
-| `A.5.5` | `docs/AI/Runtime/A.5.5-Execution-Engine-RFC.md` — Execution Engine | EXECUTION ENGINE AUTHORITY |
-| `A.5.6` | `docs/AI/Runtime/A.5.6-Validation-Engine-RFC.md` — Validation Engine | VALIDATION ENGINE AUTHORITY |
-| `A.5.7` | `docs/AI/Runtime/A.5.7-Review-Engine-RFC.md` — Review Engine | REVIEW ENGINE AUTHORITY |
-| `A.5.8` | `docs/AI/Runtime/A.5.8-Certification-Engine-RFC.md` — Certification Engine | CERTIFICATION ENGINE AUTHORITY |
-| `A.5.9` | `docs/AI/Runtime/A.5.9-Memory-Engine-RFC.md` — Memory Engine | MEMORY ENGINE AUTHORITY |
-| `A.5.10` | `docs/AI/Runtime/A.5.10-Governance-Engine-RFC.md` — Governance Engine | GOVERNANCE ENGINE AUTHORITY |
-| `A.5.11` | `docs/AI/Runtime/A.5.11-Workflow-Engine-RFC.md` — Workflow Engine | WORKFLOW ENGINE AUTHORITY |
-| `A.5.12` | `docs/AI/Runtime/A.5.12-Registry-Engine-RFC.md` — Registry Engine | REGISTRY ENGINE AUTHORITY |
+| `A.5.0` | `docs/AI/Architecture/RFC/EngineSpecializations/A.5.0-Engine-Specialization-RFC-Template.md` — Engine Specialization RFC Template | ENGINE SPECIALIZATION TEMPLATE |
+| `A.5.1` | `docs/AI/Architecture/RFC/EngineSpecializations/A.5.1-Context-Engine-RFC.md` — Context Engine | CONTEXT ENGINE AUTHORITY |
+| `A.5.2` | `docs/AI/Architecture/RFC/EngineSpecializations/A.5.2-Knowledge-Engine-RFC.md` — Knowledge Engine | KNOWLEDGE ENGINE AUTHORITY |
+| `A.5.3` | `docs/AI/Architecture/RFC/EngineSpecializations/A.5.3-Planning-Engine-RFC.md` — Planning Engine | PLANNING ENGINE AUTHORITY |
+| `A.5.4` | `docs/AI/Architecture/RFC/EngineSpecializations/A.5.4-Decision-Engine-RFC.md` — Decision Engine | DECISION ENGINE AUTHORITY |
+| `A.5.5` | `docs/AI/Architecture/RFC/EngineSpecializations/A.5.5-Execution-Engine-RFC.md` — Execution Engine | EXECUTION ENGINE AUTHORITY |
+| `A.5.6` | `docs/AI/Architecture/RFC/EngineSpecializations/A.5.6-Validation-Engine-RFC.md` — Validation Engine | VALIDATION ENGINE AUTHORITY |
+| `A.5.7` | `docs/AI/Architecture/RFC/EngineSpecializations/A.5.7-Review-Engine-RFC.md` — Review Engine | REVIEW ENGINE AUTHORITY |
+| `A.5.8` | `docs/AI/Architecture/RFC/EngineSpecializations/A.5.8-Certification-Engine-RFC.md` — Certification Engine | CERTIFICATION ENGINE AUTHORITY |
+| `A.5.9` | `docs/AI/Architecture/RFC/EngineSpecializations/A.5.9-Memory-Engine-RFC.md` — Memory Engine | MEMORY ENGINE AUTHORITY |
+| `A.5.10` | `docs/AI/Architecture/RFC/EngineSpecializations/A.5.10-Governance-Engine-RFC.md` — Governance Engine | GOVERNANCE ENGINE AUTHORITY |
+| `A.5.11` | `docs/AI/Architecture/RFC/EngineSpecializations/A.5.11-Workflow-Engine-RFC.md` — Workflow Engine | WORKFLOW ENGINE AUTHORITY |
+| `A.5.12` | `docs/AI/Architecture/RFC/EngineSpecializations/A.5.12-Registry-Engine-RFC.md` — Registry Engine | REGISTRY ENGINE AUTHORITY |
 
 ### Corrected Document Authority Matrix Entries
 
@@ -1076,8 +1076,8 @@ This addendum corrects the central authority inventory after the Agent + Engine 
 | `docs/AI/Architecture/Agents/AGENTS-v2.md` | AGENTS v2 family master and inventory | Architectural ownership | AGENTS v2 family navigation and authority relationships | Runtime, Engine Platform, Engine specializations, Operational Core, Target resources |
 | `docs/AI/Architecture/Agents/AGENTS-v2-Architecture.md` | AGENTS v2 foundation | Architectural ownership | Agent architecture foundation | Governance, Runtime, Engine Platform, A.5 specializations |
 | `docs/AI/Architecture/Agents/AGENTS-v1-draft.md` | Historical Agent predecessor | Historical evidence | Nothing without promotion | Current AGENTS v2 authority |
-| `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md` | A.5 specialization RFC template | Template authority | A.5.x structure | Individual engine behavior |
-| `docs/AI/Runtime/A.5.1-A.5.12` | Engine specialization domains | Specialization ownership | Individual Engine responsibility within A.5 boundary | Runtime A.3, Engine Platform A.4, Agent Architecture |
+| `docs/AI/Architecture/RFC/EngineSpecializations/A.5.0-Engine-Specialization-RFC-Template.md` | A.5 specialization RFC template | Template authority | A.5.x structure | Individual engine behavior |
+| `docs/AI/Architecture/RFC/EngineSpecializations/A.5.1-A.5.12` | Engine specialization domains | Specialization ownership | Individual Engine responsibility within A.5 boundary | Runtime A.3, Engine Platform A.4, Agent Architecture |
 
 ### Corrected Document Ownership Matrix Entries
 

@@ -25,7 +25,7 @@
 | Traceability ID | `AI-DOS.TEMPLATES.REPORTS.FREEZE` |
 | Scope | Formal documentation-only freeze declaration for the completeAI-DOS v2 Template Library family set, based on the completed Template Library Global Audit and Template Library Freeze Review. |
 | Out of Scope | Template certification, individual template approval, template content promotion, ProjectStatus updates, DevelopmentPhases updates, implementation authorization, runtime activation, engine freeze, governance freeze, repository freeze, template refactoring, template normalization, and new template-family creation. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/Architecture/A.1-Constitution.md` |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/Architecture/Constitution/A.1-Constitution.md` |
 | Normative References | `docs/AI/Templates/Reports/Template-Library-Global-Audit.md`; `docs/AI/Templates/Reports/Template-Library-Freeze-Review.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/Standards/TPL-001-RFC-Template-Standard.md` |
 | Dependencies | Completed Template Library Global Audit; completed Template Library Freeze Review; Human Governance instruction; Framework Governance process; STD-010; TPL-000; TPL-001. |
 | Consumes | Audit verdict, Freeze Review verdict, readiness evidence, governance boundaries, template standards, and Human Governance task instruction. |
@@ -71,7 +71,7 @@ The freeze applies to the Template Library baseline only. It does not alter the 
 | `docs/AI/Templates/Reports/Template-Library-Global-Audit.md` | Evidence that the complete Template Library was semantically audited, found architecturally ready, and had no blocker findings. |
 | `docs/AI/Templates/Reports/Template-Library-Freeze-Review.md` | Evidence that the completed Global Audit was reviewed, found sufficient for Freeze readiness, and recommended proceeding to Template Library Freeze. |
 | `AGENTS.md` | Repository bootloader, task classification, file-safety rules, documentation-only boundaries, and completion expectations. |
-| `docs/AI/Architecture/A.1-Constitution.md` | Human authority, constitutional governance boundaries, evidence discipline, and prohibition against unauthorized authority creation. |
+| `docs/AI/Architecture/Constitution/A.1-Constitution.md` | Human authority, constitutional governance boundaries, evidence discipline, and prohibition against unauthorized authority creation. |
 | `docs/AI/FrameworkGovernance.md` | Governance lifecycle, Human Governance final authority, Framework Governance process, change control, promotion boundaries, and AI execution boundaries. |
 | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` | Metadata, ownership, lifecycle, traceability, promotion, and certification requirements for governed documents. |
 | `docs/AI/Templates/Standards/TPL-000-Template-Standard.md` | Template standard, template governance model, placeholder model, produced-document model, validation model, and template-family governance expectations. |
