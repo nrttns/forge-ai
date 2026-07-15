@@ -1,7 +1,6 @@
-# A.2 — AI-DOS / Target Repository Operational Boundary
+# A.2 — AI-DOS / Target Project Operational Boundary RFC
 
->AI-DOS v3 · Framework Core Architecture Specification
-> Phase A — Framework Core · Stage A.2
+> Architecture RFC · Product/Target separation · Execution-provider boundary
 
 ---
 
@@ -9,500 +8,376 @@
 
 | Field | Value |
 |:---|:---|
-| Identifier | `AI-DOS.V2.ARCH-002` |
-| Title | A.2 — AI-DOS / Target Repository Operational Boundary |
-| Version | 0.1.0-draft |
+| Identifier | `AI-DOS.V2.ARCH-RFC-002` |
+| Title | A.2 — AI-DOS / Target Project Operational Boundary RFC |
+| Version | `1.0.0-draft` |
 | Status | Draft |
-| Canonical Status | Non-canonical until reviewed, approved, and promoted through Framework Governance |
-| Classification | Framework Core |
-| Document Type | Architecture Specification |
-| Owner | Framework Governance |
-| Maintainers | Framework Architecture Team |
-| Review Authority | Enterprise Documentation Standards Board |
-| Approval Authority | Human Governance / Framework Governance |
+| Canonical Status | Non-canonical until reviewed, approved, and explicitly promoted by Human Governance |
+| Classification | Architecture RFC |
+| Document Type | RFC |
+| Artifact Family | Architecture Artifact |
+| Artifact Type | Architecture RFC |
+| Owner | Framework Architecture Team |
+| Review Authority | Framework Governance |
+| Approval Authority | Human Governance |
 | Created | 2026-07-10 |
-| Last Updated | 2026-07-10 |
-| Lifecycle Phase | Draft |
-| Traceability ID | AI-DOS.V2.ARCH-002 |
-| Scope | Repository-agnostic operational boundary betweenAI-DOS / AI-DOS, an active Target Repository, and the AI-DOS Agent that consumes both |
-| Out of Scope | Implementation, Runtime implementation design, Engine implementation design, AGENTS syntax, repository adapters, connectors, installation, schemas, configuration formats, new governance layers, repository cleanup, repository audit, ProjectStatus updates, and DevelopmentPhases updates |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/Architecture/Constitution/A.1-Constitution.md` |
-| Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/RFC/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Architecture/RFC/EnginePlatform/A.4-Engine-Architecture-RFC.md` |
-| Dependencies | A.1 Constitution, Governance Atlas, Framework Governance, Meta Models, Framework Standards, Runtime Architecture, Engine Architecture, Operational Core, System Layer, Target Repository boot declarations, ProjectStatus, DevelopmentPhases, protected-area declarations, and validation context |
-| Consumes | A.1 constitutional authority invariants, M.0 Framework concepts, M.1 Artifact concepts, STD-000 standards model, STD-003 terminology, STD-010 metadata, A.3 Runtime Architecture, A.4 Engine Architecture, System Layer procedures, Target Project Path Resolution findings, and repository rationalization audit context |
-| Produces | Operational boundary model, Framework truth and project truth separation, Target Repository resolution model, self-hosting model, external target model, responsibility matrix, authority matrix, design invariants, and stop conditions |
-| Related Specifications | `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/System/README.md`; `docs/AI/System/AuthorityModel.md`; `docs/AI/System/BootSequence.md`; `docs/AI/System/SourceOfTruth.md`; `docs/AI/System/ContextAssembly.md`; `docs/AI/System/DecisionModel.md`; `docs/AI/System/ExecutionSequence.md`; `docs/AI/System/SystemLayerFreeze.md`; `docs/AI/Architecture/Reports/Target-Project-Path-Resolution.md`; `docs/AI/Architecture/Reports/AI-DOS-Repository-Rationalization-Audit.md` |
-| Supersedes | None |
+| Last Updated | 2026-07-15 |
+| Scope | Defines the permanent ownership, authority, truth, context, execution, and evidence boundary among the AI-DOS product, a Target Project, and an Execution Provider. |
+| Out of Scope | Runtime internals, Engine internals, distribution packaging, provider implementation, Target planning design, Target state mutation, installation procedure, configuration syntax, and canonical promotion. |
+| Normative Authority | Human Governance; `docs/AI/Architecture/Constitution/A.1-Constitution.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
+| Normative References | `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
+| Dependencies | Human Governance; A.1 Constitution; applicable Governance, Meta, and Standards authorities. |
+| Consumes | Constitutional authority, product identity, artifact identity, terminology, metadata, ownership, and governance constraints. |
+| Produces | Product/Target boundary, truth-domain model, Target Context model, Execution Provider role, authority direction, self-application model, invariants, conformance requirements, and stop conditions. |
+| Downstream Conforming Specifications | A.3 Runtime Architecture RFC; A.4 Engine Platform RFC family; A.5 Engine Specialization RFC family; A.6 Distribution Foundation RFC; System Layer; Operational Core; Agent Architecture; provider and installation specifications. |
+| Historical Evidence | `docs/AI/Architecture/Discovery/A.0-Framework-Audit.md`; applicable architecture reports. Historical evidence is non-normative unless explicitly promoted. |
+| Supersedes | `AI-DOS.V2.ARCH-002` architecture-specification identity and the former AI-DOS self-hosting / AI-DOS Agent boundary model. |
 | Superseded By | None |
-| Promotion Requirements | Framework Governance review, approval, traceability validation, metadata validation, terminology validation, architecture consistency validation, and explicit promotion |
+| Promotion Requirements | Architecture consistency review, product-purity validation, dependency-direction validation, Framework Governance review, and explicit Human Governance promotion. |
 | Certification Status | Not certified |
 
 ---
 
-## 1. Executive Summary
+## 1. Decision
 
-This document defines the permanent operational boundary betweenAI-DOS / AI-DOS, an active Target Repository, and the AI-DOS Agent that consumes both. It establishes the repository-agnostic operating model in whichAI-DOS / AI-DOS provides general Framework operating rules, the Target Repository provides project truth, and the AI-DOS Agent resolves and consumes both without becoming a new source of truth.
+AI-DOS, a Target Project, and an Execution Provider are separate architectural concerns.
 
-The boundary is architectural, not implementation-specific. It does not define AGENTS syntax, configuration formats, schemas, adapters, connectors, APIs, registries, installation procedures, Runtime implementation, or Engine implementation.
-
-The core decision is simple:AI-DOS / AI-DOS owns Framework truth; the Target Repository owns project truth; the AI-DOS Agent applies both inside an authorized task boundary.
-
-```mermaid
-flowchart TD
-    HI[Human Instruction] --> TR[Target Repository]
-    TR --> TA[Target AGENTS.md]
-    TA --> TPT[Target Project Truth]
-    FA[AI-DOS / AI-DOS Rules] --> Agent[AI-DOS Agent]
-    TPT --> Agent
-    Agent --> Exec[Target Repository Execution]
+```text
+AI-DOS Product
+    +
+Resolved Target Context
+    ↓
+Execution Provider
+    ↓
+Bounded Target Execution and Evidence
 ```
 
-**Figure 1 — General Operating Model.**
+The governing decision is:
+
+1. AI-DOS owns reusable product truth and public operating contracts.
+2. A Target Project owns its mission, planning, operational state, architecture, source, constraints, validation requirements, and project-specific decisions.
+3. An Execution Provider consumes applicable AI-DOS product contracts and Resolved Target Context to perform only explicitly authorized work.
+4. Context assembly does not create a third source of truth.
+5. No participant may silently transfer ownership between product truth and Target truth.
 
 ## 2. Purpose
 
-The purpose of A.2 is to define whereAI-DOS / AI-DOS ends and where the Target Repository begins. This document bridges A.1 Constitution and A.3 Runtime Architecture by declaring the immutable ownership, authority, information, and execution boundaries that the Runtime must respect.
+This RFC defines where the reusable AI-DOS product ends and where a Target Project begins.
 
-A.2 exists soAI-DOS can operate on itself or on an external repository such as Axis Suite without confusing Framework truth with project truth.
+It provides the stable boundary that downstream Runtime, Engine, Distribution, System, Operational, Agent, and provider specifications must respect. It does not define those downstream architectures.
 
-## 3. Scope
+The RFC exists to prevent:
 
-This document is in scope for:
+- Target-specific planning from becoming AI-DOS product truth;
+- AI-DOS architecture from owning a Target's state or source;
+- an Execution Provider from becoming an authority source;
+- Forge AI self-application from being confused with AI-DOS product identity;
+- external Target operation from falling back to Forge AI paths or assumptions;
+- lower-level specifications from reversing product/Target ownership.
 
-- DefiningAI-DOS / AI-DOS as the general operating system for AI-assisted repository work.
-- Defining Target Repository ownership of project-specific truth.
-- Defining the AI-DOS Agent as a consumer and executor, not an owner of truth.
-- DefiningAI-DOS self-hosting as a specialization of the same model.
-- Defining external Target Repository operation without AI-DOS-specific fallback paths.
-- Defining logical path concepts at an architecture level only.
-- Defining responsibility, authority, invariants, stop conditions, and relationship to adjacent architecture.
+## 3. Architectural Parties
 
-## 4. Normative Position
+### 3.1 AI-DOS Product
 
-This document consumes existing authority. It does not redefine Human Governance, the AGENTS.md bootloader, the Governance Atlas, Framework Governance, the Constitution, Meta Models, Standards, Runtime Architecture, Engine Architecture, Operational Core, System Layer, Commands, Workflows, Templates, ProjectStatus, or DevelopmentPhases.
+AI-DOS is the reusable AI Operating System product.
 
-STD-010 governs this document metadata. STD-003 governs terminology. A.1 governs constitutional authority invariants. A.3 and A.4 operate within the A.2 boundary and do not replace it.
+AI-DOS may own reusable product authorities and assets including:
 
-## 5. AI-DOS Definition
+- Constitution and product governance;
+- Meta Models and Standards;
+- architecture RFCs;
+- Runtime and Engine contracts;
+- System Layer contracts;
+- Operational Core contracts;
+- reusable Agent Architecture;
+- reusable Commands, Workflows, and Templates;
+- distribution and installation contracts;
+- validation, review, certification, and evidence semantics.
 
-AI-DOS / AI-DOS is the general operating system for AI-assisted repository work. It provides Framework-level operating rules and reusable architectural assets that can be consumed by a AI-DOS Agent while operating against a selected Target Repository.
+AI-DOS does not own a Target Project's mission, Roadmap, DevelopmentPhases, ProjectStatus, source code, operational state, protected areas, validation commands, or project-specific decisions.
 
-AI-DOS / AI-DOS provides:
+### 3.2 Target Project
 
-- Constitution.
-- Governance.
-- Meta Models.
-- Framework Standards.
-- Runtime Architecture.
-- Engine Architecture.
-- System Layer.
-- Operational Core.
-- Commands.
-- Workflows.
-- Templates.
-- Validation Model.
-- Review Model.
-- Certification Model.
+A Target Project is an independent consumer and authority domain that uses AI-DOS for bounded work.
 
-AI-DOS / AI-DOS does not own target-project truth, target-project source code, target-project operational state, or target-project-specific governance decisions.
+A Target Project may own:
 
-## 6. Target Repository Definition
+- mission and product intent;
+- repository boot and local authority routing;
+- Roadmap, DevelopmentPhases, ProjectStatus, and capability state;
+- project architecture and design decisions;
+- source code and implementation state;
+- constraints, protected areas, and frozen areas;
+- validation commands and acceptance criteria;
+- project-specific governance and approval decisions;
+- project evidence and operational records.
 
-A Target Repository is the active repository selected as the subject of work. It is the source of project truth for the task. It provides repository-local authority routing, planning state, architecture, implementation context, protected-area rules, and validation context.
+A Target Project may consume AI-DOS contracts but shall not redefine AI-DOS constitutional or reusable product authority.
 
-A Target Repository provides:
+### 3.3 Execution Provider
 
-- Root `AGENTS.md`.
-- Project-specific instructions.
-- ProjectStatus.
-- DevelopmentPhases.
-- Roadmap.
-- Phase / stage / capability state.
-- Project architecture.
-- Source code.
-- Implementation state.
-- Project runtime configuration.
-- Validation commands.
-- Protected and frozen areas.
+An Execution Provider is the durable architectural role that resolves and applies AI-DOS contracts and Resolved Target Context within an authorized execution boundary.
 
-The Target Repository does not ownAI-DOS constitutional principles, Framework Standards, Runtime Architecture, Engine Architecture, System Layer, or general operating model.
+Execution Provider specializations may include:
 
-## 7. AI-DOS Agent Definition
+- an AI agent;
+- a Local CLI;
+- a Local MCP provider;
+- a Hosted Provider;
+- a future approved execution surface.
 
-The AI-DOS Agent is the execution participant that resolves, consumes, combines, and appliesAI-DOS / AI-DOS rules and Target Repository project truth inside an authorized task boundary.
+An Execution Provider may:
 
-The AI-DOS Agent consumes:
+- resolve an invocation;
+- consume an installed or otherwise authorized AI-DOS distribution;
+- resolve the Target Project;
+- assemble bounded context;
+- perform authorized work;
+- validate results;
+- produce evidence and completion reports.
 
--AI-DOS general operating rules.
-- Target Repository project truth.
+An Execution Provider does not own AI-DOS product truth or Target truth. It does not approve, promote, certify, release, or mutate protected state without explicit authority.
 
-The AI-DOS Agent produces:
+## 4. Truth Domains
 
-- Project-scoped planning.
-- Execution.
-- Validation.
-- Review.
-- Completion evidence.
+### 4.1 AI-DOS Product Truth
 
-The AI-DOS Agent owns neither Framework truth nor project truth. It does not certify, promote, canonicalize, or invent missing target-project truth.
+AI-DOS Product Truth consists of approved reusable product authorities, contracts, standards, architecture, and versioned product artifacts.
 
-## 8. Operational Boundary
+Product truth is independent of any single Target Project.
 
-The operational boundary separates three concerns:
+### 4.2 Target Truth
 
-1.AI-DOS / AI-DOS defines general Framework conduct.
-2. The Target Repository defines project-specific state and resources.
-3. The AI-DOS Agent applies the relevant authorities within the active task boundary.
+Target Truth consists of Target-owned identity, planning, state, architecture, source, constraints, validation requirements, and decisions.
 
-Neither side replaces the other.AI-DOS rules govern how work is conducted; Target Repository truth governs what the project is, what state it is in, which files and areas are protected, and which validation commands apply.
+Target Truth remains Target-owned whether the Target is Forge AI or an independent consumer.
 
-```mermaid
-flowchart TD
-    subgraph ForgeTruth[AI-DOS Truth]
-        FR[Framework rules]
-        OM[Operating model]
-    end
-    subgraph ProjectTruth[Target Project Truth]
-        PS[Project state]
-        PA[Architecture]
-        SV[Source / validation]
-    end
-    ForgeTruth --> Agent[AI-DOS Agent]
-    ProjectTruth --> Agent
+### 4.3 Distribution Truth
+
+A released distribution is an immutable, versioned representation of approved AI-DOS product truth prepared for consumption.
+
+Distribution truth does not include private development planning or Target-specific state.
+
+### 4.4 Assembled Context
+
+Resolved Target Context combines only the task-relevant portions of product truth and Target truth.
+
+Resolved context:
+
+- is bounded by the Invocation Context;
+- preserves source attribution and authority;
+- does not merge ownership;
+- does not become a new authority layer;
+- expires or is superseded according to applicable runtime rules.
+
+## 5. Authority Direction
+
+The product-side authority direction is:
+
+```text
+Human Governance
+    ↓
+A.1 Constitution
+    ↓
+Framework Governance / approved Meta / Standards
+    ↓
+A.2 Product / Target Operational Boundary RFC
+    ↓
+Downstream Runtime, Engine, Distribution, System, Operational,
+Agent, provider, and installation specifications
 ```
 
-**Figure 2 — Ownership Boundary.**
+A.3, A.4, A.5, A.6, System Layer, and Operational Core are downstream conforming authorities or realizations. They are not upstream dependencies of A.2.
 
-## 9. Responsibility and Ownership Model
+The Target-side authority direction is independently owned:
 
-AI-DOS / AI-DOS owns Framework truth, constitutional principles, Framework governance model, Framework standards, Runtime architecture definitions, Engine architecture definitions, System Layer procedures, general commands, general workflows, reusable templates, and general validation, review, and certification models.
-
-AI-DOS / AI-DOS does not own target-project ProjectStatus, DevelopmentPhases, roadmap, architecture, implementation, source code, runtime state, validation commands, protected areas, or project-specific governance decisions.
-
-The Target Repository owns its repository boot entry, project-specific authority routing, planning resources, active operational state, project architecture, source and implementation, validation commands, constraints, frozen areas, and project-specific decisions.
-
-The AI-DOS Agent owns execution accountability for the assigned task only. It owns neither side's truth.
-
-## 10. Framework Truth
-
-Framework truth is the set ofAI-DOS / AI-DOS authorities, standards, models, and reusable procedures that govern general AI-assisted work. Framework truth includes the Constitution, Governance Atlas, Framework Governance, Meta Models, Framework Standards, Runtime Architecture, Engine Architecture, System Layer, Operational Core, Commands, Workflows, Templates, and general validation, review, and certification models.
-
-Framework truth defines conduct, structure, and reusable architecture. It does not define the active state of an external Target Repository.
-
-## 11. Project Truth
-
-Project truth is the Target Repository's repository-local state and authority context. It includes root `AGENTS.md`, project-specific instructions, ProjectStatus, DevelopmentPhases, roadmap, phase / stage / capability state, project architecture, source code, implementation state, project runtime configuration, validation commands, protected areas, frozen areas, and project-specific decisions.
-
-Project truth defines the current project reality. It does not redefineAI-DOS Framework truth.
-
-## 12. Authority Boundary
-
-Higher Framework authority governs how work is conducted. Target-project authority governs project-specific truth. When both apply, the AI-DOS Agent must preserve single ownership:
-
-- Framework rules constrain process, governance, terminology, validation expectations, review expectations, and certification meaning.
-- Target Repository rules constrain project state, paths, source code, protected areas, validation commands, and project-specific decisions.
-- Conflicts are not merged silently. They are reported through the applicable escalation or blocker process.
-
-## 13. Information Ownership
-
-Information ownership follows origin and scope. AI-DOS-originated Framework information remains Framework truth. Target Repository-originated project information remains project truth. Completion evidence produced by the AI-DOS Agent belongs to the task record and must not be treated as a new source of project truth unless accepted by the Target Repository's authority process.
-
-The AI-DOS Agent may assemble context from both sides, but assembled context is not a third authority layer.
-
-## 14. Logical Path Concepts
-
-The following logical concepts are architecture-level placeholders used to describe boundary resolution:
-
-| Logical Concept | Meaning |
-|:---|:---|
-| `<TARGET_REPOSITORY_ROOT>` | The explicitly selected root of the active Target Repository. |
-| `<TARGET_AGENTS_PATH>` | The Target Repository boot entry path, resolved under `<TARGET_REPOSITORY_ROOT>`. |
-| `<PROJECT_STATUS_PATH>` | The Target Repository project-status resource, resolved under `<TARGET_REPOSITORY_ROOT>`. |
-| `<DEVELOPMENT_PHASES_PATH>` | The Target Repository roadmap / development-phases resource, resolved under `<TARGET_REPOSITORY_ROOT>`. |
-| `<PROJECT_ARCHITECTURE_PATH>` | Target-project architecture resources, resolved under `<TARGET_REPOSITORY_ROOT>`. |
-| `<SOURCE_ROOT>` | Target-project source location, resolved under `<TARGET_REPOSITORY_ROOT>`. |
-| `<VALIDATION_COMMANDS>` | Target-project validation commands or references declared by the Target Repository. |
-| `<PROTECTED_AREAS>` | Target-project protected and frozen areas declared by the Target Repository. |
-
-These concepts do not define syntax, YAML, JSON, schemas, environment variables, implementation classes, adapters, registries, APIs, or configuration formats.
-
-## 15. Target Repository Resolution Flow
-
-The AI-DOS Agent must use the following operating flow:
-
-1. Select the active Target Repository.
-2. Locate and read `<TARGET_REPOSITORY_ROOT>/AGENTS.md`.
-3. Resolve target-project resource declarations.
-4. Resolve all target-project paths relative to `<TARGET_REPOSITORY_ROOT>`.
-5. Read target ProjectStatus.
-6. Read target DevelopmentPhases.
-7. Load relevantAI-DOS authorities and operating rules.
-8. Load target-project architecture, source, protected-area, and validation context.
-9. Assemble the task context.
-10. Determine the authorized action.
-11. Execute inside the Target Repository.
-12. Validate using target-project commands.
-13. Review according toAI-DOS and target-project rules.
-14. Produce completion evidence.
-
-If the Target Repository does not provide required project declarations, the AI-DOS Agent must stop and report a blocker.AI-DOS self-hosting paths must never be used as fallback paths for an external Target Repository.
-
-## 16.AI-DOS Self-Hosting Model
-
-AI-DOS itself is a valid Target Repository. Self-hosting is a specialization of the same operating model, not a separate architecture.
-
-```mermaid
-flowchart TD
-    DOS[AI-DOS / AI-DOS] --> Repo[AI-DOS Repository as Target Repository]
-    Repo --> Agents[AI-DOS AGENTS.md]
-    Agents --> State[AI-DOS ProjectStatus / DevelopmentPhases]
-    State --> Agent[AI-DOS Agent]
+```text
+Target Human Authority
+    ↓
+Target-local authority and planning truth
+    ↓
+Resolved Target Context
 ```
 
-**Figure 3 — Self-Hosting Model.**
+These streams are assembled for execution without collapsing their ownership.
 
-ForAI-DOS self-hosting:
+## 6. Invocation and Context Boundary
 
-| Logical Concept | Self-Hosting Mapping |
-|:---|:---|
-| `<TARGET_REPOSITORY_ROOT>` |AI-DOS repository root |
-| `<TARGET_AGENTS_PATH>` | `AGENTS.md` |
-| `<PROJECT_STATUS_PATH>` | `docs/Projects/ForgeAI/Planning/ProjectStatus.md` |
-| `<DEVELOPMENT_PHASES_PATH>` | `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` |
+A valid invocation shall resolve at least:
 
-These paths are valid self-hosting mappings only. They are not universal Target Repository paths.
+- the requested outcome;
+- the selected Target Project;
+- the authorized AI-DOS product or distribution;
+- applicable Target authority inputs;
+- Target objectives and constraints;
+- Target execution boundaries;
+- Target validation requirements;
+- required evidence and completion expectations.
 
-## 17. External Target Repository Model
+AI-DOS architecture must not require Target resources to use one fixed filename, planning methodology, phase model, or lifecycle vocabulary unless a separate approved contract explicitly requires it.
 
-WhenAI-DOS operates on an external repository such as Axis Suite, the external repository is the Target Repository and owns its project truth.
+Target resources are consumed as resolved inputs, not as AI-DOS product authorities.
 
-```mermaid
-flowchart TD
-    DOS[AI-DOS / AI-DOS] --> Repo[Axis Suite Repository as Target Repository]
-    Repo --> Agents[Axis Suite AGENTS.md]
-    Agents --> State[Axis Suite ProjectStatus / DevelopmentPhases]
-    State --> Agent[AI-DOS Agent]
+## 7. Execution Boundary
+
+An Execution Provider shall:
+
+1. verify the invocation and Target selection;
+2. resolve applicable AI-DOS product authority;
+3. resolve Target-local authority and task context;
+4. preserve product/Target ownership boundaries;
+5. determine the authorized action;
+6. execute only within the authorized Target boundary;
+7. validate using applicable product and Target requirements;
+8. produce attributable evidence;
+9. stop before any unapproved state transition, certification, release, or scope expansion.
+
+The Execution Provider must stop and report a blocker when:
+
+- the Target cannot be resolved;
+- required authority is missing or conflicting;
+- product and Target ownership cannot be distinguished;
+- the requested action exceeds Target execution boundaries;
+- a protected or frozen area would be crossed without authority;
+- validation requirements cannot be determined;
+- the requested action would redefine AI-DOS product truth from Target state;
+- external Target execution would require Forge AI fallback paths.
+
+## 8. Forge AI Self-Application Model
+
+Forge AI is the Product Development and self-application Target Project for AI-DOS.
+
+```text
+AI-DOS Product
+    ↓ consumed by
+Forge AI Target Project
+    ↓ executed through
+Authorized Execution Provider
+    ↓ produces
+Product-development and Target evidence
 ```
 
-**Figure 4 — External Repository Model.**
+Forge AI may develop, validate, distribute, operate, and evolve AI-DOS under Human Governance. This does not make AI-DOS itself a Target Project.
 
-AI-DOS must not assume that Axis Suite or any other external Target Repository usesAI-DOS physical planning paths. Target-project resources must be declared by the active Target Repository and resolved relative to that repository root.
+Forge AI owns its own:
 
-This document does not define Axis Suite project paths or Axis Suite final `AGENTS.md` content.
+- mission;
+- Roadmap;
+- DevelopmentPhases;
+- ProjectStatus;
+- source and implementation state;
+- operational state;
+- product-development decisions and evidence.
 
-## 18. AI-DOS Agent Consumption Model
+AI-DOS owns reusable product contracts and released product truth. Forge AI Target truth must not be embedded in reusable AI-DOS architecture.
 
-The AI-DOS Agent consumes Framework truth and project truth as separate authority streams. It may combine them into a task context, but it must not merge ownership or treat one stream as a fallback for the other.
+Independent Target Projects use the same boundary model and must not depend on Forge AI paths, state, or planning.
 
-The AI-DOS Agent consumption model is:
+## 9. Responsibility Matrix
 
-1. UseAI-DOS / AI-DOS to determine general operating rules.
-2. Use the Target Repository to determine project-specific truth.
-3. Apply both inside the task's authorized boundary.
-4. Validate and review according to both sets of applicable rules.
-5. Produce completion evidence without promoting that evidence into authoritative project truth.
-
-## 19. Execution Context Model
-
-The execution context is the assembled set of applicable instructions, authorities, state records, source context, protected-area rules, and validation expectations. It is task-scoped and temporary.
-
-The execution context must include enough information to determine:
-
-- The active Target Repository root.
-- The applicable Target Repository boot instructions.
-- The current project phase, stage, objective, and protected areas.
-- The applicableAI-DOS authorities.
-- The relevant project architecture and source context.
-- The authorized action.
-- The validation and review expectations.
-
-The execution context does not become a durable authority or source of truth.
-
-## 20. Responsibility Matrix
-
-| Capability / Responsibility |AI-DOS / AI-DOS | Target Repository | AI-DOS Agent |
+| Concern | AI-DOS Product | Target Project | Execution Provider |
 |:---|:---|:---|:---|
-| Human Governance | Owner of final Framework authority | May identify project-specific human authority | Consumes and escalates to the applicable authority |
-| Constitution | Owns | Does not own | Consumes |
-| Framework Governance | Owns | Does not own | Consumes |
-| Meta Models | Owns | Does not own | Consumes |
-| Framework Standards | Owns | Does not own | Consumes |
-| Runtime Architecture | Owns general definition | Does not own AI-DOS Runtime definition | Consumes and operates within it |
-| Engine Architecture | Owns general definition | Does not own AI-DOS Engine definition | Consumes and operates within it |
-| System Layer | Owns general procedures | Does not own AI-DOS System Layer | Consumes |
-| Operational Core | Owns general model | Does not own AI-DOS Operational Core | Consumes |
-| Commands | Owns general command model and templates | Owns project-specific command availability and constraints | Consumes and applies |
-| Workflows | Owns general workflow model and templates | Owns project-specific workflow constraints | Consumes and applies |
-| Templates | Owns reusable templates | Owns project-specific template use or local variants | Consumes |
-| Validation Model | Owns general validation model | Owns project validation commands and expected checks | Applies and reports evidence |
-| Review Model | Owns general review model | Owns project-specific review requirements | Applies and reports evidence |
-| Certification Model | Owns certification meaning and model | Owns project-specific certification records when applicable | Does not certify; reports evidence |
-| Root AGENTS.md | Does not own external target boot file | Owns | Reads and follows |
-| ProjectStatus | Does not own target ProjectStatus | Owns | Reads; does not update unless authorized |
-| DevelopmentPhases | Does not own target DevelopmentPhases | Owns | Reads; does not update unless authorized |
-| Roadmap | Does not own target roadmap | Owns | Consumes |
-| Phase / Stage / Capability | Does not own target operational state | Owns | Consumes |
-| Project Architecture | Does not own target architecture | Owns | Consumes and may edit only when authorized |
-| Source Code | Does not own target source code | Owns | May edit only within task authority |
-| Implementation State | Does not own target implementation state | Owns | Consumes and reports changes |
-| Runtime Configuration | Does not own target runtime configuration | Owns | Consumes or edits only when authorized |
-| Validation Commands | Does not own target validation commands | Owns | Runs and reports results |
-| Protected Areas | Does not own target protected areas | Owns | Preserves and reports blockers |
-| Context Assembly | Owns general context assembly model | Owns target context inputs | Performs task-scoped assembly |
-| Decision Selection | Owns general decision principles | Owns project-specific state constraints | Selects authorized action within boundaries |
-| Execution | Defines general execution conduct | Owns repository execution surface | Performs authorized execution |
-| Completion Reporting | Owns general evidence expectations | Owns project-specific report requirements | Produces completion evidence |
+| Reusable constitutional and architecture authority | Owns | Consumes as applicable | Applies |
+| Target mission and planning | Must not own | Owns | Consumes as applicable |
+| Target source and implementation state | Must not own | Owns | May modify only when authorized |
+| Execution behavior | Defines reusable contracts | Defines Target constraints | Performs bounded execution |
+| Validation semantics | Defines reusable semantics | Defines Target-specific requirements | Executes and reports validation |
+| Approval and promotion | Human Governance-controlled | Target authority-controlled | Must not self-approve |
+| Evidence | Defines reusable evidence contracts | Owns accepted Target evidence | Produces attributable evidence |
+| Distribution | Owns product distribution contracts | Consumes approved distribution | May install or invoke when authorized |
 
-## 21. Authority Matrix
+## 10. Constitutional Invariants
 
-| Domain | General Authority | Target-Project Authority | Resolution Rule |
-|:---|:---|:---|:---|
-| Framework rules |AI-DOS / AI-DOS authorities | Target Repository may add local constraints | Framework authority governs conduct; local constraints narrow execution. |
-| Repository boot | AGENTS.md bootloader concept | Target root `AGENTS.md` | Read target boot instructions as the project-to-AI-DOS entry boundary. |
-| Project status | ProjectStatus concept and handling rules | Target ProjectStatus | Target ProjectStatus owns active project state. |
-| Project roadmap | DevelopmentPhases concept and sequencing rules | Target DevelopmentPhases / roadmap | Target roadmap owns project sequencing; Framework rules prohibit unauthorized skipping. |
-| Architecture | AI-DOS architecture for Framework domains | Target project architecture | Use AI-DOS architecture for Framework behavior and target architecture for project truth. |
-| Implementation | Framework execution conduct | Target source and implementation state | Execute only within target authorization and protected-area rules. |
-| Validation | General validation model | Target validation commands | Run target commands and apply Framework reporting expectations. |
-| Review | General review model | Target review requirements | Satisfy both without treating review as approval. |
-| Certification | General certification model | Target certification records when present | Do not self-certify; report evidence for authorized certification process. |
-| Frozen areas | General protected-area respect rule | Target protected and frozen areas | Target declarations govern file access; ambiguity is a blocker. |
-| Conflict resolution | Human Governance and Framework Governance | Target project authority chain | Do not merge conflicting authorities; escalate or report blocker. |
+The following invariants are mandatory:
 
-## 22. Design Invariants
+1. **Human Governance is final.**
+2. **AI-DOS and Target Project identities remain distinct.**
+3. **Forge AI is a Target Project, not the AI-DOS product.**
+4. **Every truth domain has one owning authority.**
+5. **Target planning and live state never become reusable AI-DOS product truth.**
+6. **An Execution Provider is never a source of product or Target truth.**
+7. **Resolved context preserves ownership and source attribution.**
+8. **External Target operation never falls back to Forge AI-specific paths.**
+9. **Downstream architecture may specialize this boundary but must not reverse it.**
+10. **Distribution exposes approved product truth without exposing private development truth.**
+11. **No implicit approval, certification, release, promotion, or state transition is permitted.**
+12. **Missing or conflicting authority requires safe stop and escalation.**
 
-1.AI-DOS never owns Target Repository project truth.
-2. Target Repository never ownsAI-DOS Framework truth.
-3. AI-DOS Agent does not become a new source of truth.
-4. AI-DOS Agent combines authorities but does not merge conflicting ownership.
-5. The active Target Repository root must be explicitly established.
-6. Target-project paths must resolve relative to the active Target Repository root.
-7. Target Repository `AGENTS.md` is the project-to-AI-DOS entry boundary.
-8.AI-DOS self-hosting paths are valid only whenAI-DOS is the Target Repository.
-9. External Target Repositories must declare their own planning, architecture, source, validation, and protected-area resources.
-10.AI-DOS self-hosting is not a parallel system.
-11. Self-hosting and external operation use the same architectural model.
-12. No external project may silently inherit AI-DOS-specific planning paths.
-13. No new adapter, registry, schema, or implementation layer is required to establish this boundary.
-14. The boundary must remain deterministic, repository-agnostic, and single-owner.
-15. Missing target-project declarations produce a blocker, never an inferred fallback.
+## 11. Downstream Conformance
 
-## 23. Failure and Stop Conditions
+### 11.1 Runtime Architecture
 
-The AI-DOS Agent must stop when:
+A.3 shall define runtime behavior within this boundary and shall not redefine product or Target ownership.
 
-- The active Target Repository cannot be identified.
-- Target `AGENTS.md` is missing.
-- Required project-resource declarations are missing.
-- Declared paths cannot be resolved.
--AI-DOS self-hosting paths are being applied to an external Target Repository.
-- Framework truth and project truth are treated as interchangeable.
-- Ownership conflicts cannot be resolved.
-- Protected-area rules are unavailable.
-- Validation commands are unavailable for an implementation task.
+### 11.2 Engine Platform and Specializations
 
-The AI-DOS Agent must report the missing information and must not invent target-project truth.
+A.4 and A.5 families shall consume bounded context and preserve authority direction. Engines shall not become sources of Target truth or product approval.
 
-## 24. Relationship to A.1 Constitution
+### 11.3 Distribution Foundation
 
-A.1 Constitution defines permanent principles, constitutional authority, source-of-truth expectations, governance principles, decision principles, evidence principles, and architectural invariants. A.2 consumes those principles and applies them to the operational boundary betweenAI-DOS / AI-DOS and a Target Repository.
+A.6 shall define how approved AI-DOS product truth is packaged and delivered without private repository or Target contamination.
 
-A.2 does not amend, supersede, or redefine A.1.
+### 11.4 System Layer and Operational Core
 
-## 25. Relationship to A.3 Runtime Architecture
+System and Operational documents shall resolve Invocation Context and Resolved Target Context without hard-coding Forge AI planning paths as reusable product requirements.
 
-A.3 Runtime Architecture defines runtime architecture operating within the A.2 boundary. Runtime coordination must respect thatAI-DOS owns Framework truth, the Target Repository owns project truth, and the AI-DOS Agent does not become a source of truth.
+### 11.5 Agent Architecture and Providers
 
-A.2 does not define Runtime implementation or Runtime component design.
+Agent and provider specifications shall treat `Execution Provider` as the stable role and their concrete agent, CLI, MCP, or hosted forms as specializations.
 
-## 26. Relationship to A.4 Engine Architecture
+## 12. Non-Goals
 
-A.4 Engine Architecture defines Engine architecture operating within the Runtime and within the A.2 boundary. Engine specialization must respect that Framework truth and project truth remain separately owned and that Engines do not acquire ownership of Target Repository project truth.
+This RFC does not:
 
-A.2 does not define Engine implementation or Engine component design.
+- define the Runtime lifecycle;
+- define Engine contracts or specialization behavior;
+- define distribution package formats;
+- define CLI, MCP, or hosted-provider implementation;
+- define a Target planning methodology;
+- require ProjectStatus, DevelopmentPhases, or Roadmap filenames;
+- authorize Target mutation;
+- approve or certify any downstream artifact;
+- make historical discovery evidence normative.
 
-## 27. Relationship to Operational Core
+## 13. Validation Requirements
 
-The Operational Core consumes and operationalizes this boundary through general procedures, commands, workflows, validation expectations, review expectations, and completion evidence patterns.
+A conforming repository state shall demonstrate:
 
-The Operational Core does not redefine Framework truth, project truth, or Target Repository ownership.
+- A.2 identifies as `AI-DOS.V2.ARCH-RFC-002`;
+- A.3 and A.4 are not listed as upstream dependencies or consumed authorities of A.2;
+- the active phrase `AI-DOS itself is a valid Target Repository` is absent;
+- Forge AI is defined as the self-application Target Project;
+- `Execution Provider` is the durable third role;
+- ProjectStatus, DevelopmentPhases, Roadmap, source, validation commands, and operational state are Target-owned;
+- external Target execution has no Forge AI fallback path;
+- downstream RFC and operational documents reference this boundary consistently.
 
-## 28. Relationship to System Layer
+## 14. Consequences
 
-The System Layer consumes this boundary through authority handling, boot sequence behavior, source-of-truth handling, context assembly, decision handling, execution sequencing, and freeze rules.
+### Positive Consequences
 
-The System Layer does not replace Target Repository declarations and must not useAI-DOS self-hosting paths as external-repository fallbacks.
+- AI-DOS remains reusable and Target-independent.
+- Forge AI can self-apply without contaminating product truth.
+- provider evolution from agent to CLI, MCP, or hosted operation remains compatible.
+- dependency direction becomes acyclic.
+- distribution architecture receives a stable ownership boundary.
+- external Target projects can consume AI-DOS without inheriting Forge AI planning.
 
-## 29. Future Extension Principles
+### Costs
 
-Future work may define:
+- downstream documents using `AI-DOS Agent` as the permanent architecture role must be reviewed;
+- documents that hard-code Target planning paths must be generalized;
+- self-hosting language must be replaced with self-application language;
+- navigation and metadata may require follow-up normalization.
 
-- Target Repository AGENTS declaration guidance.
-- External repository connection procedures.
-- Axis Suite pilot preparation.
-- Tooling-specific integration.
+## 15. Promotion Gate
 
-Future work must not:
+This RFC may be promoted only when:
 
-- Change the ownership boundary.
-- MakeAI-DOS own project truth.
-- Make Target Repository own Framework truth.
-- Introduce parallel boot models.
-- Create AI-DOS-specific universal project paths.
+1. Framework Governance confirms constitutional alignment with A.1;
+2. dependency-direction validation confirms no A.3/A.4 circularity;
+3. product-purity validation confirms no Forge AI Target truth is embedded as AI-DOS authority;
+4. downstream A.3 through A.6 relationship review is complete;
+5. Human Governance explicitly approves promotion.
 
-## 30. Out of Scope
-
-This document does not define:
-
-- Final AGENTS.md syntax.
-- YAML or JSON structures.
-- Machine-readable schemas.
-- Adapters.
-- Connectors.
-- Installation commands.
-- Repository discovery implementation.
-- Path-resolution implementation code.
-- CLI commands.
-- Runtime implementation.
-- Engine implementation.
-- Axis Suite project paths.
-- Axis Suite final `AGENTS.md`.
-- ProjectStatus updates.
-- DevelopmentPhases updates.
-- Repository cleanup actions.
-- Audit amendments.
-
-## 31. Architectural Decision
-
-A.2 establishes the repository-agnostic operational boundary forAI-DOS / AI-DOS:
-
--AI-DOS / AI-DOS provides the general operating system.
-- The Target Repository provides project truth.
-- The AI-DOS Agent consumes both and performs authorized work inside the Target Repository.
-- Neither side replaces the other.
-- Self-hosting and external repository operation use the same architectural model.
-- Missing target-project declarations are blockers, not opportunities for inferred fallback.
-
-## 32. Completion Criteria
-
-This document is complete when it provides:
-
-- STD-010 metadata.
-- A clear AI-DOS definition.
-- A clear Target Repository definition.
-- A clear AI-DOS Agent definition.
-- A clear operational boundary.
-- Responsibility and authority matrices.
-- Logical path concepts without syntax or implementation design.
-- Target Repository resolution flow.
-- Self-hosting and external-target models.
-- Design invariants.
-- Failure and stop conditions.
-- Relationships to A.1, A.3, Operational Core, and System Layer.
-- Explicit out-of-scope boundaries.
-
-## 33. Version History
-
-| Version | Date | Author | Description |
-|:---|:---|:---|:---|
-| 0.1.0-draft | 2026-07-10 | Framework Architecture Team | Initial draft defining the AI-DOS / Target Repository operational boundary. |
+Until promotion, this RFC remains a draft architecture authority candidate.
