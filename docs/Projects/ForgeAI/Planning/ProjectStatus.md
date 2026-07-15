@@ -8,7 +8,7 @@
 |:---|:---|
 | Identifier | `FORGE-AI.TARGET.PROJECT-STATUS` |
 | Title | Forge AI Operational State Model |
-| Version | `5.7.0-draft` |
+| Version | `5.8.0-draft` |
 | Status | Live Operational State |
 | Classification | Target Project Operational State |
 | Document Type | ProjectStatus |
@@ -53,19 +53,19 @@ AI-DOS owns reusable product truth and reusable capability behavior.
 
 | Field | Current State |
 |:---|:---|
-| Current Phase | Distribution Foundation Human Governance Review |
-| Current Capability | Distribution Foundation Architecture Ready for Review |
+| Current Phase | Distribution v1 Local CLI Package Activation |
+| Current Capability | Local CLI Package Work Activation |
 | Current Autonomy Level | Level 0 proven; Level 1 operationally demonstrated; Level 3 pilot execution passed twice; maturity advancement remains pending explicit Human Governance maturity acceptance |
 | Current Program | AI-DOS Distribution-Oriented Development Program |
-| Current Execution Step | D1 — Distribution Foundation Architecture and Package Contract |
+| Current Execution Step | D2 — Local CLI Package |
 | Target Repository | Forge AI |
 | Operational Readiness | Passed |
-| Readiness Verdict | `DISTRIBUTION FOUNDATION ARCHITECTURE READY FOR HUMAN GOVERNANCE REVIEW` |
+| Readiness Verdict | `LOCAL CLI PACKAGE WORK ACTIVATED BY HUMAN GOVERNANCE` |
 | Pilot Blockers | None |
 | Architecture State | Stable; protected from speculative redesign |
 | Governing Principle | Evidence Before Refactor |
 
-Human Governance accepted the AI-DOS distribution-oriented DevelopmentPhases and Roadmap realignment on 2026-07-15. The Distribution Foundation architecture/package-contract work unit has been completed and is ready for Human Governance review. This review state does not authorize CLI, MCP, hosted-provider, Axis Suite, feedback transport, or implementation work.
+Human Governance accepted the AI-DOS distribution-oriented DevelopmentPhases and Roadmap realignment on 2026-07-15. Human Governance then advanced the completed D1 Distribution Foundation architecture/package-contract review on 2026-07-15. D1 is accepted as planning evidence, and exactly one next work unit is activated: D2 Local CLI Package. This activation does not authorize MCP, hosted-provider, Axis Suite, feedback transport, external Target execution, or any second distribution step.
 
 ---
 
@@ -75,17 +75,17 @@ Exactly one task is active.
 
 | Field | Current State |
 |:---|:---|
-| Active Task ID | D1-HUMAN-GOVERNANCE-REVIEW |
-| Active Task Name | Distribution Foundation Architecture Human Governance Review |
-| Task Type | Human Governance review gate; non-implementation |
-| Objective | Human Governance reviews the completed Distribution Foundation architecture/package-contract update and decides whether to accept D1 as complete. |
-| Success Definition | Human Governance determines whether the completed Distribution Foundation architecture/package-contract update is accepted as D1 completion evidence. |
-| Failure Definition | Work expands beyond Human Governance review, mutates protected planning without authorization, begins implementation, or activates CLI, MCP, hosted-provider, Axis Suite, or feedback transport work. |
+| Active Task ID | D2-LOCAL-CLI-PACKAGE |
+| Active Task Name | Local CLI Package Work Unit |
+| Task Type | Distribution v1 local CLI package work; exactly one work unit |
+| Objective | Execute one bounded D2 Local CLI Package work unit that advances locally installable AI-DOS execution without requiring private repository access or mandatory network connection. |
+| Success Definition | One independently verifiable Local CLI Package work unit is completed with evidence for local installability, Target path handling, Target contract loading, bounded command behavior, local execution, validation/evidence output, local runtime-data storage, offline mode, uninstall, or rollback as applicable to the selected unit. |
+| Failure Definition | Work expands beyond one D2 Local CLI Package unit, mutates protected planning without authorization, activates MCP, hosted-provider, Axis Suite, feedback transport, external Target execution, or a second distribution step, or claims release readiness without Human Governance acceptance. |
 | Scope Expansion | Prohibited |
 | Second Work Unit | Prohibited |
 | Architecture Redesign | Prohibited outside the Distribution Foundation architecture/package-contract step |
 | Repository-Wide Alignment | Prohibited |
-| ProjectStatus Update | Authorized only for the Human Governance directive to record D1 review readiness |
+| ProjectStatus Update | Authorized only for the Human Governance directive to record D1 acceptance and D2 activation |
 
 ---
 
@@ -94,19 +94,19 @@ Exactly one task is active.
 ### 4.1 Current Objective
 
 ```text
-DISTRIBUTION FOUNDATION ARCHITECTURE READY FOR HUMAN GOVERNANCE REVIEW
+LOCAL CLI PACKAGE WORK ACTIVATED BY HUMAN GOVERNANCE
 ```
 
 ### 4.2 Current Active Work
 
 ```text
-D1 — Distribution Foundation architecture and package contract ready for Human Governance review
+D2 — Local CLI Package active for exactly one bounded work unit
 ```
 
 ### 4.3 Execution Status
 
 ```text
-DISTRIBUTION FOUNDATION ARCHITECTURE READY FOR HUMAN GOVERNANCE REVIEW
+LOCAL CLI PACKAGE WORK ACTIVATED BY HUMAN GOVERNANCE
 ```
 
 ### 4.4 Authorized Next Action
@@ -115,9 +115,9 @@ The exactly one authorized next action is stated in Section 17.
 
 ### 4.5 Completion Criteria
 
-The active step is complete because the Distribution Foundation architecture and package contract has been recorded for Human Governance review in `docs/AI/Architecture/RFC/A.6-AI-DOS-Distribution-Foundation-RFC.md`.
+The prior D1 step is complete and accepted because Human Governance advanced the completed Distribution Foundation architecture and package contract recorded in `docs/AI/Architecture/RFC/A.6-AI-DOS-Distribution-Foundation-RFC.md`.
 
-The completed step addressed only:
+The accepted D1 step addressed only:
 
 - build and packaging plan;
 - package manifest model;
@@ -127,7 +127,7 @@ The completed step addressed only:
 - compatibility matrix seed;
 - release-governance gate.
 
-The completed step did not begin CLI, MCP, hosted-provider, Axis Suite, feedback transport, or implementation work.
+The accepted D1 step did not begin CLI, MCP, hosted-provider, Axis Suite, feedback transport, or implementation work. D2 now authorizes exactly one Local CLI Package work unit and continues to prohibit MCP, hosted-provider, Axis Suite, feedback transport, external Target execution, and second distribution-step work.
 
 ---
 
@@ -325,8 +325,8 @@ Human Governance must evaluate the evidence before accepting any maturity claim.
 Distribution-Oriented Development Program
 │
 ├── D0  Private/Public Boundary                 ACCEPTED PLANNING DIRECTION
-├── D1  Distribution Foundation Architecture     READY FOR HUMAN GOVERNANCE REVIEW
-├── D2  Local CLI Package                        NOT ACTIVATED
+├── D1  Distribution Foundation Architecture     ACCEPTED PLANNING EVIDENCE
+├── D2  Local CLI Package                        ACTIVE
 ├── D3  Public System Interface                  NOT ACTIVATED
 ├── D4  Codex CLI Adapter                        NOT ACTIVATED
 ├── D5  Local MCP Provider                       NOT ACTIVATED
@@ -338,24 +338,24 @@ Distribution-Oriented Development Program
 └── D11 Multi-Target AI Highway                  NOT ACTIVATED
 ```
 
-Human Governance accepted the distribution-oriented DevelopmentPhases and Roadmap realignment on 2026-07-15. D1 Distribution Foundation Architecture is ready for Human Governance review.
+Human Governance accepted the distribution-oriented DevelopmentPhases and Roadmap realignment on 2026-07-15. Human Governance advanced D1 Distribution Foundation Architecture on 2026-07-15, accepting it as planning evidence and activating D2 Local CLI Package work.
 
 Current State
 
 ```text
-DISTRIBUTION FOUNDATION ARCHITECTURE READY FOR HUMAN GOVERNANCE REVIEW
+LOCAL CLI PACKAGE WORK ACTIVATED BY HUMAN GOVERNANCE
 ```
 
 Active review gate:
 
 ```text
-Review the completed Distribution Foundation architecture and package contract.
+Select and execute exactly one bounded Local CLI Package work unit.
 ```
 
 Prohibited activations:
 
 ```text
-Local CLI, Local MCP, hosted provider, Axis Suite, feedback transport, and implementation work remain not activated.
+Local MCP, hosted provider, Axis Suite, feedback transport, external Target execution, and any second distribution step remain not activated.
 ```
 
 ---
@@ -372,10 +372,10 @@ None identified by the accepted Pilot Execution #2 evidence or the confirmed EP-
 
 | Risk | Current Control |
 |:---|:---|
-| Distribution Foundation review expands into implementation | Current state is limited to Human Governance review of the completed architecture/package-contract update and explicitly excludes implementation. |
+| Local CLI work expands beyond one unit | Current state authorizes exactly one D2 Local CLI Package work unit and explicitly excludes MCP, hosted-provider, Axis Suite, feedback transport, external Target execution, and any second distribution step. |
 | Existing active task is replaced by a newly invented task | ProjectStatus remains the live operational-state authority. |
 | Scope expands after execution begins | The selected work unit must be declared before editing. |
-| More than one distribution step is executed | Explicit one-step activation limits work to D1 Distribution Foundation Architecture. |
+| More than one distribution step is executed | Explicit one-step activation limits work to D2 Local CLI Package. |
 | ProjectStatus changes automatically | Exact update authorization is required. |
 | Non-blocking audit findings trigger refactor | Only pilot blockers may activate targeted correction. |
 | Documentation is mistaken for progress | Documentation counts only when explicitly required by active work and independently verifiable. |
@@ -390,7 +390,7 @@ ProjectStatus may be modified only when:
 2. the active task is a dedicated ProjectStatus task; or
 3. the task instruction directly authorizes a specific operational-state transition.
 
-Human Governance acceptance of the distribution-oriented DevelopmentPhases and Roadmap realignment authorizes this ProjectStatus update to record the accepted planning direction and activate only the Distribution Foundation architecture step.
+Human Governance advancement on 2026-07-15 authorizes this ProjectStatus update to record D1 acceptance and activate only D2 Local CLI Package work.
 
 When update authority is absent, the completion report must provide:
 
@@ -404,38 +404,38 @@ as a recommendation only.
 
 ## 16. Final Execution Verdict Model
 
-The active Distribution Foundation architecture step must end with exactly one verdict:
+The active D2 Local CLI Package work unit must end with exactly one verdict:
 
 ```text
-DISTRIBUTION FOUNDATION ARCHITECTURE READY FOR HUMAN GOVERNANCE REVIEW
+LOCAL CLI PACKAGE WORK UNIT READY FOR HUMAN GOVERNANCE REVIEW
 ```
 
 ```text
-DISTRIBUTION FOUNDATION ARCHITECTURE BLOCKED
+LOCAL CLI PACKAGE WORK UNIT BLOCKED
 ```
 
 ```text
-DISTRIBUTION FOUNDATION ARCHITECTURE FAILED — VALIDATION FAILED
+LOCAL CLI PACKAGE WORK UNIT FAILED — VALIDATION FAILED
 ```
 
-`DISTRIBUTION FOUNDATION ARCHITECTURE READY FOR HUMAN GOVERNANCE REVIEW` requires:
+`LOCAL CLI PACKAGE WORK UNIT READY FOR HUMAN GOVERNANCE REVIEW` requires:
 
-- exactly one Distribution Foundation architecture/package-contract work unit completed;
-- no CLI, MCP, hosted-provider, Axis Suite, feedback transport, or implementation work begun;
-- affected artifacts remain inside authorized planning scope;
-- applicable documentation validation passed;
+- exactly one Local CLI Package work unit completed;
+- no MCP, hosted-provider, Axis Suite, feedback transport, external Target execution, or second distribution-step work begun;
+- affected artifacts remain inside authorized D2 scope;
+- applicable validation passed;
 - protected areas were preserved;
-- no second distribution step was activated.
+- no release readiness or maturity advancement was claimed.
 
 ---
 
 ## 17. Exactly One Authorized Next Action
 
 ```text
-HUMAN GOVERNANCE REVIEW OF D1 DISTRIBUTION FOUNDATION ARCHITECTURE
+EXECUTE EXACTLY ONE D2 LOCAL CLI PACKAGE WORK UNIT
 ```
 
-No CLI, MCP, hosted-provider, Axis Suite, feedback transport, implementation, or second distribution-step work is authorized by this ProjectStatus entry.
+No MCP, hosted-provider, Axis Suite, feedback transport, external Target execution, or second distribution-step work is authorized by this ProjectStatus entry.
 
 ---
 
@@ -455,7 +455,7 @@ ProjectStatus does not:
 - activate future capabilities;
 - automatically update itself;
 - authorize external Target execution;
-- authorize CLI, MCP, hosted-provider, Axis Suite, feedback transport, or implementation work;
+- authorize MCP, hosted-provider, Axis Suite, feedback transport, external Target execution, or second distribution-step work;
 - replace Human Governance.
 
 ---
@@ -472,3 +472,4 @@ ProjectStatus does not:
 | `5.5.0-draft` | 2026-07-15 | Corrected EP-5 semantics to identify active External Target Pilot Capability, require External Target Package availability before preparation, and set the authorized next action to wait for the package. |
 | `5.6.0-draft` | 2026-07-15 | Recorded Human Governance acceptance of the AI-DOS distribution-oriented DevelopmentPhases and Roadmap realignment, activated only the D1 Distribution Foundation architecture step, and explicitly kept CLI, MCP, hosted-provider, Axis Suite, feedback transport, and implementation work inactive. |
 | `5.7.0-draft` | 2026-07-15 | Recorded that the completed D1 Distribution Foundation architecture/package-contract update satisfied the active completion criteria, validation passed, and the operational state is ready for Human Governance review without activating CLI, MCP, hosted-provider, Axis Suite, feedback transport, implementation, or a second distribution step. |
+| `5.8.0-draft` | 2026-07-15 | Recorded Human Governance advancement from D1 review, accepted D1 as planning evidence, activated exactly one D2 Local CLI Package work unit, and preserved prohibitions on MCP, hosted-provider, Axis Suite, feedback transport, external Target execution, and second distribution-step work. |
