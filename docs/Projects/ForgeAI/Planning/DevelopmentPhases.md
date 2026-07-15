@@ -19,8 +19,8 @@
 | Traceability ID | `FORGE-AI.TARGET.DEVELOPMENT-PHASES` |
 | Scope | AI-DOS product capability maturity, private/public product boundary, runtime distribution, provider integration, independent Target operation, privacy-safe product evolution input, governed release progression, and multi-Target AI Highway operations as directed by Forge AI. |
 | Out of Scope | Distribution implementation, CLI implementation, MCP implementation, hosted-provider implementation, adapter implementation, API design, package layout creation, RFC creation, `docs/AI/` changes, live ProjectStatus updates, Axis Suite activation, certification, pricing, vendor selection, and automatic phase advancement. |
-| Normative Authority | Human Governance; Forge AI Target Project contract; `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-and-Autonomy-Model.md` |
-| Primary Authority | `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-and-Autonomy-Model.md` |
+| Normative Authority | Human Governance; Forge AI Target Project contract; `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-Product-and-Autonomy-Model.md` |
+| Primary Authority | `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-Product-and-Autonomy-Model.md` |
 | Consumes | Forge AI mission, Human Governance decisions, resolved Target Context, ProjectStatus evidence as read-only context, roadmap direction, execution evidence, distribution-readiness evidence, privacy evidence, and release-governance decisions. |
 | Produces | Capability-oriented Forge AI development phases, distribution maturity gates, provider-integration readiness criteria, privacy-safe evolution criteria, independent Target readiness criteria, evidence expectations, and governance gates for AI-DOS product evolution. |
 | Certification Status | Not certified |

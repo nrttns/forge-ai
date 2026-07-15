@@ -18,8 +18,8 @@
 | Lifecycle Phase | Live Operational State |
 | Scope | Current Forge AI Target Project operational position, active capability, active task, execution authorization, evidence state, validation requirements, blockers, protected areas, completion criteria, and exactly one authorized next action. |
 | Out of Scope | Roadmap definition, phase definition, AI-DOS architecture definition, implementation design, backlog management, sprint tracking, document inventory, historical task log, automatic state updates, certification, and Human Governance replacement. |
-| Normative Authority | Human Governance; `docs/Projects/ForgeAI/Mission/AGENTS.md`; `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-and-Autonomy-Model.md` |
-| Consumes | `docs/Projects/ForgeAI/Mission/AGENTS.md`; `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-and-Autonomy-Model.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`; `docs/Projects/ForgeAI/Planning/Roadmap.md`; current repository evidence; accepted Human Governance decisions |
+| Normative Authority | Human Governance; `docs/Projects/ForgeAI/Mission/AGENTS.md`; `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-Product-and-Autonomy-Model.md` |
+| Consumes | `docs/Projects/ForgeAI/Mission/AGENTS.md`; `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-Product-and-Autonomy-Model.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`; `docs/Projects/ForgeAI/Planning/Roadmap.md`; current repository evidence; accepted Human Governance decisions |
 | Produces | Live operational context for AI-DOS invocation, work selection, execution authorization, validation, evidence reporting, blockers, ProjectStatus update recommendations, and next-action resolution |
 | Update Rule | Update only through explicit Human Governance authorization or a dedicated ProjectStatus task. |
 | Certification Status | Not certified; live state record only |
@@ -38,7 +38,7 @@ It does not define strategy, architecture, phases, roadmap direction, implementa
 | Target Project Role | AI-DOS Development and Autonomy Enablement Target Project |
 | Framework Provider | AI-DOS |
 | Target Contract | `docs/Projects/ForgeAI/Mission/AGENTS.md` |
-| Mission Authority | `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-and-Autonomy-Model.md` |
+| Mission Authority | `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-Product-and-Autonomy-Model.md` |
 | DevelopmentPhases | `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` |
 | Roadmap | `docs/Projects/ForgeAI/Planning/Roadmap.md` |
 | ProjectStatus | `docs/Projects/ForgeAI/Planning/ProjectStatus.md` |

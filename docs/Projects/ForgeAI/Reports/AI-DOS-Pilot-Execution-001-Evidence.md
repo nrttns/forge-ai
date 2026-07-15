@@ -37,7 +37,7 @@ PILOT EXECUTION PASSED
 |:---|:---|
 | Repository entry contract | `AGENTS.md` |
 | Canonical Target Project contract | `docs/Projects/ForgeAI/Mission/AGENTS.md` |
-| Mission authority | `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-and-Autonomy-Model.md` |
+| Mission authority | `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-Product-and-Autonomy-Model.md` |
 | ProjectStatus | `docs/Projects/ForgeAI/Planning/ProjectStatus.md` |
 | DevelopmentPhases | `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` |
 | Roadmap | `docs/Projects/ForgeAI/Planning/Roadmap.md` |

@@ -25,7 +25,7 @@ Updated: 2026-07-15
 | Scope | Forge AI Target Project identity, declared Target resources, operational entry, protected areas, state-derived work resolution, execution authorization boundaries, validation expectations, evidence expectations, and state-update authority. |
 | Out of Scope | Execution-provider identity, provider discovery, provider startup, provider internal paths, provider architecture, workflow routing, command routing, runtime behavior, implementation design, automatic state updates, and planning-document redesign. |
 | Normative Authority | Human Governance |
-| Mission Source | `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-and-Autonomy-Model.md` |
+| Mission Source | `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-Product-and-Autonomy-Model.md` |
 | DevelopmentPhases | `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` |
 | Roadmap | `docs/Projects/ForgeAI/Planning/Roadmap.md` |
 | ProjectStatus | `docs/Projects/ForgeAI/Planning/ProjectStatus.md` |
@@ -41,7 +41,7 @@ Updated: 2026-07-15
 | Project Role | Development and autonomy enablement Target Project |
 | Project Truth Root | `docs/Projects/ForgeAI/` |
 | Product / Provider Truth Root | `docs/AI/` |
-| Mission Authority | `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-and-Autonomy-Model.md` |
+| Mission Authority | `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-Product-and-Autonomy-Model.md` |
 
 Forge AI owns its project mission, planning, operational state, evidence, authorization, protected areas, and Target resources.
 
@@ -55,7 +55,7 @@ This contract does not identify, select, invoke, or configure an execution provi
 
 Forge AI mission and autonomy direction are defined only by:
 
-`docs/Projects/ForgeAI/Mission/ForgeAI-Mission-and-Autonomy-Model.md`
+`docs/Projects/ForgeAI/Mission/ForgeAI-Mission-Product-and-Autonomy-Model.md`
 
 This contract consumes that mission authority but does not duplicate or redefine it.
 
@@ -69,7 +69,7 @@ Forge AI declares the following Target-owned resources:
 
 | Resource | Path | Purpose |
 |:---|:---|:---|
-| Mission | `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-and-Autonomy-Model.md` | Mission, autonomy direction, strategic constraints, and governance intent |
+| Mission | `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-Product-and-Autonomy-Model.md` | Mission, autonomy direction, strategic constraints, and governance intent |
 | ProjectStatus | `docs/Projects/ForgeAI/Planning/ProjectStatus.md` | Live operational state and exactly authorized next action |
 | DevelopmentPhases | `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` | Active capability boundary and maturity progression |
 | Roadmap | `docs/Projects/ForgeAI/Planning/Roadmap.md` | Capability direction, dependencies, advancement evidence, and strategic priority |
