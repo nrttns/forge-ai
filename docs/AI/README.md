@@ -1,14 +1,17 @@
-# AI Framework Navigation
+# AI-DOS Product Navigation
 
-This README is the active AI-DOS internal navigation entry point for the `docs/AI/` directory. It routes humans and AI agents to current AI-DOS v2 internal authorities and operational entry points.
+This README is the active navigation entry point for the reusable AI-DOS product under `docs/AI/`. It routes humans and execution participants to governance, architecture, System Layer, Operational Core, Commands, Workflows, and Templates.
 
-This README is navigation only. It does **not** replace the Invocation Context, TargetRepositoryResolution, BootSequence, the Governance Atlas, Framework Governance, Resolved Target Context, Applicable Target Resources, Operational Core, Runtime, System Layer, Commands, Workflows, Templates, or Human Governance.
+This README is navigation only. It does not create authority, identify a Target Repository, resolve Target truth, authorize execution, approve releases, or replace any owning specification.
 
-TargetRepositoryResolution and BootSequence precede normal internal navigation. TargetRepositoryResolution produces the Target Repository Resolution Result, and BootSequence consumes that result to load resolved Framework + Target Project context. This README consumes that loaded context for navigation; it does not identify a Target Repository, resolve a Target invocation-contract path, validate project declarations, or declare Target Project resources.
+## Product and Target Boundary
 
-## Current Authority and Navigation Chain
+- `docs/AI/` owns reusable AI-DOS product truth.
+- The active Target Project owns its source, ProjectStatus, DevelopmentPhases, Roadmap, protected areas, validation declarations, evidence, secrets, and live operational state.
+- Forge AI is the self-application Product Development Target Project; it is not AI-DOS itself.
+- External Targets must not inherit Forge AI paths, planning, state, memory, workflow, registry, evidence, or configuration.
 
-After TargetRepositoryResolution has completed and BootSequence has loaded the resolved context, use this internal navigation order unless the active task narrows the required authority set:
+## Entry and Context Chain
 
 ```text
 AI-DOS Provider invocation contract
@@ -17,42 +20,36 @@ TargetRepositoryResolution
     ↓
 BootSequence
     ↓
-docs/AI/GOVERNANCE.md
-    ↓
-docs/AI/FrameworkGovernance.md when governance decision policy is relevant
-    ↓
 Resolved Target Context
     ↓
-docs/AI/AIFramework.md
-    ↓
-docs/AI/System/README.md
-    ↓
-docs/AI/AIOrchestrator.md
-    ↓
-docs/AI/AgentSystemPrompt.md
-    ↓
-docs/AI/Architecture/RFC/Runtime/README.md when Runtime or Engine context is required
-    ↓
-docs/AI/Commands/ and docs/AI/Workflows/ when task execution requires them
-    ↓
-docs/AI/Templates/README.md when document generation is required
+AI-DOS governance, architecture, and operational authorities
 ```
 
-## Navigation Boundaries
+- `System/TargetRepositoryResolution.md` identifies and validates the invoked Target boundary.
+- `System/BootSequence.md` loads resolved AI-DOS and Target context.
+- Resolved Target Context contains only Target-provided authority and resources applicable to the invocation.
 
-- The Invocation Context is the external task invocation and supplied Target identity/context boundary.
-- `docs/AI/System/TargetRepositoryResolution.md` owns active Target Repository identification, Target invocation-contract discovery, declaration resolution, validation, blocker reporting, Resolution Result production, and BootSequence handoff.
-- `docs/AI/System/BootSequence.md` owns loading resolved Framework + Target Project context from the Resolution Result.
-- `docs/AI/GOVERNANCE.md` remains the Governance Atlas and governance navigation map.
-- `docs/AI/FrameworkGovernance.md` is used when governance decision policy is relevant after context is resolved and loaded.
-- Resolved Target Context is the validated and resolved set of Target-provided resources, objectives, constraints, authorities, execution boundaries, validation requirements, and applicable evidence.
-- Applicable Target Resources are Target-provided resources relevant to the current task without prescribed category or format.
-- Operational Core documents (`AIFramework.md`, `AIOrchestrator.md`, and `AgentSystemPrompt.md`) route execution within loaded authority; they do not create authority, rediscover the Target Repository, resolve project paths, validate Target declarations, rerun BootSequence, or modify Target resources.
-- Runtime, Command, Workflow, and Template documents are task-specific inputs and should be read only when required by the task.
+## Authority and Navigation Order
 
-## Target-Project Portability
+Use the narrowest authority set required by the active task:
 
-AI-DOS does not prescribe Target resource names, formats, categories, hierarchy, existence, sequencing, or methodology. For any Target Project, TargetRepositoryResolution reads the supplied invocation boundary and resolves only the context applicable to the invoked task. This README does not resolve Target resources, objectives, constraints, authority inputs, execution boundaries, validation requirements, protected boundaries, or provider references.
+```text
+Human Governance
+    ↓
+GOVERNANCE.md
+    ↓
+FrameworkGovernance.md when decision policy is relevant
+    ↓
+Architecture/Constitution/A.1-Constitution.md
+    ↓
+Architecture/RFC/Boundary/A.2-AI-DOS-Target-Repository-Operational-Boundary-RFC.md
+    ├── governed execution architecture
+    │   A.3 Runtime → A.4 Engine Platform → A.5 Engine Specializations
+    └── governed product distribution architecture
+        A.6 Distribution Foundation
+```
+
+Operational consumption then proceeds through the System Layer and Operational Core as required by the invocation.
 
 ## Active Directory Map
 
@@ -60,40 +57,53 @@ AI-DOS does not prescribe Target resource names, formats, categories, hierarchy,
 docs/AI/
 ├── README.md
 ├── GOVERNANCE.md
+├── FrameworkGovernance.md
 ├── AIFramework.md
 ├── AIOrchestrator.md
 ├── AgentSystemPrompt.md
 ├── Architecture/
-├── Commands/
-├── Architecture/RFC/
+│   ├── README.md
+│   ├── Constitution/
+│   ├── RFC/
+│   ├── Agents/
+│   ├── Discovery/
+│   ├── Reports/
+│   └── Standards/
+├── Meta/
 ├── System/
-├── Templates/
-└── Workflows/
+├── Commands/
+├── Workflows/
+└── Templates/
 ```
 
-## Core Documents
+## Core Navigation Targets
 
 | Area | Current Navigation Target |
 |:---|:---|
-| AI-DOS Provider entry | Target invocation contract |
+| AI-DOS product entry | `README.md` |
 | Target Repository resolution | `System/TargetRepositoryResolution.md` |
 | Resolved-context loading | `System/BootSequence.md` |
 | Governance Atlas | `GOVERNANCE.md` |
 | Governance decision policy | `FrameworkGovernance.md` |
-| Resolved Target Context | Resolved Target Context |
-| Applicable Target resources | Applicable Target Resources |
-| Operational Core entry | `AIFramework.md` |
-| System Layer index | `System/README.md` |
-| Orchestration | `AIOrchestrator.md` |
-| Agent behavior contract | `AgentSystemPrompt.md` |
-| Runtime / Engine navigation | `Architecture/RFC/Runtime/README.md` |
-| Template Library navigation | `Templates/README.md` |
+| Architecture root | `Architecture/README.md` |
+| Constitution | `Architecture/Constitution/A.1-Constitution.md` |
+| Architecture RFC families | `Architecture/RFC/README.md` |
+| Runtime family | `Architecture/RFC/Runtime/README.md` |
+| Distribution family | `Architecture/RFC/Distribution/` |
+| Agent Architecture | `Architecture/Agents/` |
+| Meta Models | `Meta/` |
+| System Layer | `System/README.md` |
+| Operational Core | `AIFramework.md`, `AIOrchestrator.md`, `AgentSystemPrompt.md` |
 | Commands | `Commands/` |
 | Workflows | `Workflows/` |
+| Template Library | `Templates/README.md` |
 
-## Execution Rule
+## Consumption Rules
 
-Agents should derive work only from the active task instruction, Invocation Context, loaded AI-DOS authority chain, and Resolved Target Context.
-- Applicable Target Resources are consumed only when relevant to the invoked task.
-- Runtime and Engine documents define architecture and specialization constraints; operational documents consume them.
-- AI execution participants may draft, edit, validate, and recommend, but shall not approve, certify, promote, or modify Target resources unless explicitly instructed by Human Governance.
+- Architecture defines reusable product contracts; operational documents consume them and do not redefine them.
+- A.4.x foundation RFCs are sibling contracts, not a sequential authority chain.
+- A.5.x specialization RFCs are capability peers, not a mandatory pipeline.
+- A.6 Distribution is a sibling branch to Runtime and Engine architecture under A.2.
+- Discovery and report artifacts are evidence unless explicitly promoted by Human Governance.
+- Runtime state, Engine state, workflow state, memory, and Target Project state remain distinct.
+- Execution participants may draft, edit, execute, validate, and recommend only within explicit authority. They may not approve, certify, promote, release, or mutate Target-owned truth without the required Human Governance or Target authority.
