@@ -8,7 +8,7 @@
 |:---|:---|
 | Identifier | `FORGE-AI.TARGET.PROJECT-STATUS` |
 | Title | Forge AI Operational State Model |
-| Version | `5.5.0-draft` |
+| Version | `5.6.0-draft` |
 | Status | Live Operational State |
 | Classification | Target Project Operational State |
 | Document Type | ProjectStatus |
@@ -53,19 +53,19 @@ AI-DOS owns reusable product truth and reusable capability behavior.
 
 | Field | Current State |
 |:---|:---|
-| Current Phase | Phase 3 — Execution, Validation, Review |
-| Current Capability | Evidence-Backed Execution and Review Capability |
-| Current Autonomy Level | Level 0 proven; Level 1 operationally demonstrated; Level 3 pilot execution passed twice; EP-2 confirmed; maturity advancement remains pending explicit Human Governance maturity acceptance |
-| Current Program | AI-DOS Execution Program |
-| Current Execution Step | EP-5 — External Target Pilot Capability |
+| Current Phase | Distribution Foundation Planning Activation |
+| Current Capability | Distribution Foundation Architecture Step |
+| Current Autonomy Level | Level 0 proven; Level 1 operationally demonstrated; Level 3 pilot execution passed twice; maturity advancement remains pending explicit Human Governance maturity acceptance |
+| Current Program | AI-DOS Distribution-Oriented Development Program |
+| Current Execution Step | D1 — Distribution Foundation Architecture and Package Contract |
 | Target Repository | Forge AI |
 | Operational Readiness | Passed |
-| Readiness Verdict | `WAITING FOR EXTERNAL TARGET PACKAGE` |
+| Readiness Verdict | `DISTRIBUTION FOUNDATION ARCHITECTURE STEP ACTIVE` |
 | Pilot Blockers | None |
 | Architecture State | Stable; protected from speculative redesign |
 | Governing Principle | Evidence Before Refactor |
 
-The current operational objective is to hold the External Target Pilot Capability active while waiting for Human Governance to supply an External Target Package. Capability activation does not mean an External Target Package is available, and it does not authorize preparation or execution work automatically.
+Human Governance accepted the AI-DOS distribution-oriented DevelopmentPhases and Roadmap realignment on 2026-07-15. The current operational objective is to activate only the Distribution Foundation architecture step. This activation does not authorize CLI, MCP, hosted-provider, Axis Suite, feedback transport, or implementation work.
 
 ---
 
@@ -75,17 +75,17 @@ Exactly one task is active.
 
 | Field | Current State |
 |:---|:---|
-| Active Task ID | None |
-| Active Task Name | None |
-| Task Type | Expected waiting state |
-| Objective | Wait for Human Governance to provide an External Target Package before any external Target preparation or execution work begins. |
-| Success Definition | Human Governance supplies an External Target Package that identifies the required authority, scope, protected areas, validation commands, and execution authorization. |
-| Failure Definition | Not applicable; absence of an External Target Package is an expected waiting state, not a blocker. |
+| Active Task ID | D1-ARCHITECTURE-FOUNDATION |
+| Active Task Name | Distribution Foundation Architecture Step |
+| Task Type | Planning architecture step; non-implementation |
+| Objective | Define the Distribution Foundation architecture and package contract as the only active step under the accepted distribution-oriented planning direction. |
+| Success Definition | Human Governance receives a bounded Distribution Foundation architecture/package-contract artifact or update for review, with no CLI, MCP, hosted-provider, Axis Suite, feedback transport, or implementation work begun. |
+| Failure Definition | Work expands beyond the Distribution Foundation architecture step, begins implementation, or activates CLI, MCP, hosted-provider, Axis Suite, or feedback transport work. |
 | Scope Expansion | Prohibited |
 | Second Work Unit | Prohibited |
-| Architecture Redesign | Prohibited |
+| Architecture Redesign | Prohibited outside the Distribution Foundation architecture/package-contract step |
 | Repository-Wide Alignment | Prohibited |
-| ProjectStatus Update | Not authorized by default |
+| ProjectStatus Update | Authorized only for this Human Governance state transition |
 
 ---
 
@@ -94,19 +94,19 @@ Exactly one task is active.
 ### 4.1 Current Objective
 
 ```text
-WAITING FOR EXTERNAL TARGET PACKAGE
+DISTRIBUTION FOUNDATION ARCHITECTURE STEP ACTIVE
 ```
 
 ### 4.2 Current Active Work
 
 ```text
-None
+D1 — Distribution Foundation architecture and package contract only
 ```
 
 ### 4.3 Execution Status
 
 ```text
-WAITING FOR EXTERNAL TARGET PACKAGE
+DISTRIBUTION FOUNDATION ARCHITECTURE STEP ACTIVE
 ```
 
 ### 4.4 Authorized Next Action
@@ -115,31 +115,19 @@ The exactly one authorized next action is stated in Section 17.
 
 ### 4.5 Completion Criteria
 
-No external Target preparation task is active until Human Governance supplies an External Target Package.
+The active step is complete when the Distribution Foundation architecture and package contract is recorded for Human Governance review.
 
-Human Governance must provide:
+The active step may address only:
 
-- External Target repository root
-- Target contract
-- operational state path
-- planning authority
-- protected areas
-- source scope
-- validation commands
-- execution authorization
+- build and packaging plan;
+- package manifest model;
+- version model;
+- signing and integrity criteria;
+- install, update, rollback, and uninstall criteria;
+- compatibility matrix seed;
+- release-governance gate.
 
-before any preparation work may begin.
-
-External Target Pilot semantics are:
-
-```text
-External Target Capability Active
-        ≠
-External Target Package Available
-```
-
-Preparation authorization begins only after a valid External Target Package is supplied.
-Execution authorization remains separate and must be explicitly supplied by Human Governance.
+The active step must not begin CLI, MCP, hosted-provider, Axis Suite, feedback transport, or implementation work.
 
 ---
 
@@ -195,6 +183,7 @@ The current task may not:
 - perform repository-wide alignment;
 - fix unrelated findings;
 - advance a future capability;
+- begin CLI, MCP, hosted-provider, Axis Suite, feedback transport, or implementation work;
 - execute a second unit of work;
 - automatically update ProjectStatus.
 
@@ -206,15 +195,15 @@ The current task may not:
 |:---|:---|
 | Root Target Project contract | Modify only through an explicitly authorized contract task. |
 | Mission and autonomy model | Read-only for the pilot. |
-| DevelopmentPhases | Read-only for the pilot. |
-| Roadmap | Read-only for the pilot. |
+| DevelopmentPhases | Read-only; distribution-oriented realignment accepted by Human Governance. |
+| Roadmap | Read-only; distribution-oriented realignment accepted by Human Governance. |
 | ProjectStatus | Read-only unless exact update authorization is provided. |
 | AI-DOS architecture baseline | Stable; no speculative redesign. |
 | Meta and Standards | Stable; change only if execution proves a blocking defect and a separate task is authorized. |
 | System, Runtime, Engines, Agents | Protected from opportunistic alignment and redesign. |
 | Commands, Workflows, Templates | Use only as required; do not refactor pre-emptively. |
 | Evidence records | Preserve provenance and do not fabricate or remove evidence. |
-| External Target scope | External Target preparation and execution remain inactive until Human Governance supplies an External Target Package and explicit authorization. |
+| External Target scope | Axis Suite and external Target preparation/execution remain inactive until separately authorized after required distribution and Target integration boundaries exist. |
 
 A protected-area conflict must stop execution and be reported as a blocker.
 
@@ -325,47 +314,48 @@ Human Governance must evaluate the evidence before accepting any maturity claim.
 | Validation evidence | Complete | Pilot execution validation is recorded in `docs/Projects/ForgeAI/Reports/AI-DOS-Pilot-Execution-001-Evidence.md` and `docs/Projects/ForgeAI/Reports/AI-DOS-Pilot-Execution-002-Evidence.md`. |
 | Review evidence | Complete | EP-2 — Evidence Review confirmed no proven execution blocker; findings report: `docs/Projects/ForgeAI/Reports/AI-DOS-Evidence-Review-001-Findings.md`. |
 | Blocker evidence | None | EP-2 confirmed no proven execution blocker; EP-3 is not activated. |
-| External Target Package | Not present | Human Governance has not supplied an External Target Package. |
-| External Target evidence | Not present | External Target preparation and execution have not started. |
+| Planning Realignment | Accepted | Human Governance accepted the AI-DOS distribution-oriented DevelopmentPhases and Roadmap realignment on 2026-07-15. |
+| External Target evidence | Not present | Axis Suite and external Target preparation/execution have not started and are not authorized by the active Distribution Foundation architecture step. |
 
 ---
 
 ## 13. Execution Program State
 
 ```text
-Execution Program
+Distribution-Oriented Development Program
 │
-├── EP-0  Operational Readiness                 COMPLETE
-├── EP-1  Pilot Execution #1                    COMPLETE
-├── EP-2  Evidence Review                       COMPLETE
-├── EP-3  Targeted Blocker Resolution           NOT ACTIVATED
-├── EP-4  Pilot Execution #2                    COMPLETE
-└── EP-5  External Target Pilot Capability      ACTIVE
+├── D0  Private/Public Boundary                 ACCEPTED PLANNING DIRECTION
+├── D1  Distribution Foundation Architecture     ACTIVE
+├── D2  Local CLI Package                        NOT ACTIVATED
+├── D3  Public System Interface                  NOT ACTIVATED
+├── D4  Codex CLI Adapter                        NOT ACTIVATED
+├── D5  Local MCP Provider                       NOT ACTIVATED
+├── D6  Evolution Capsule Model                  NOT ACTIVATED
+├── D7  Feedback Transport                       NOT ACTIVATED
+├── D8  Independent Axis Suite Pilot             NOT ACTIVATED
+├── D9  Managed Provider Architecture            NOT ACTIVATED
+├── D10 Managed Provider Pilot                   NOT ACTIVATED
+└── D11 Multi-Target AI Highway                  NOT ACTIVATED
 ```
 
-EP-3 did not activate because EP-2 evidence review identified no proven execution blocker.
-
-Pilot Execution #2 is complete because Human Governance accepted the evidence. EP-5 is active as the External Target Pilot Capability only.
-
-EP-5 does not mean External Target preparation has started. It distinguishes four separate states:
-
-| State | Current Value |
-|:---|:---|
-| Capability activation | Active |
-| Target Package availability | Not available |
-| Preparation authorization | Not authorized until an External Target Package is supplied |
-| Execution authorization | Not authorized until Human Governance explicitly supplies execution authorization |
+Human Governance accepted the distribution-oriented DevelopmentPhases and Roadmap realignment on 2026-07-15. Only D1 Distribution Foundation Architecture is active.
 
 Current State
 
 ```text
-WAITING FOR EXTERNAL TARGET PACKAGE
+DISTRIBUTION FOUNDATION ARCHITECTURE STEP ACTIVE
 ```
 
 Active work unit:
 
 ```text
-None
+Define the Distribution Foundation architecture and package contract only.
+```
+
+Prohibited activations:
+
+```text
+Local CLI, Local MCP, hosted provider, Axis Suite, feedback transport, and implementation work remain not activated.
 ```
 
 ---
@@ -382,10 +372,10 @@ None identified by the accepted Pilot Execution #2 evidence or the confirmed EP-
 
 | Risk | Current Control |
 |:---|:---|
-| AI-DOS selects architecture work instead of executable work | Work-selection rules require real verified Target progress. |
+| Distribution Foundation scope expands into implementation | Active step is limited to architecture/package-contract planning and explicitly excludes implementation. |
 | Existing active task is replaced by a newly invented task | ProjectStatus remains the live operational-state authority. |
 | Scope expands after execution begins | The selected work unit must be declared before editing. |
-| More than one work unit is executed | Explicit one-unit stop rule. |
+| More than one distribution step is executed | Explicit one-step activation limits work to D1 Distribution Foundation Architecture. |
 | ProjectStatus changes automatically | Exact update authorization is required. |
 | Non-blocking audit findings trigger refactor | Only pilot blockers may activate targeted correction. |
 | Documentation is mistaken for progress | Documentation counts only when explicitly required by active work and independently verifiable. |
@@ -400,7 +390,7 @@ ProjectStatus may be modified only when:
 2. the active task is a dedicated ProjectStatus task; or
 3. the task instruction directly authorizes a specific operational-state transition.
 
-The accepted Pilot Execution #2 evidence authorizes this specific ProjectStatus update only.
+Human Governance acceptance of the distribution-oriented DevelopmentPhases and Roadmap realignment authorizes this ProjectStatus update to record the accepted planning direction and activate only the Distribution Foundation architecture step.
 
 When update authority is absent, the completion report must provide:
 
@@ -414,40 +404,38 @@ as a recommendation only.
 
 ## 16. Final Execution Verdict Model
 
-External Target pilot work is not authorized while the current state is `WAITING FOR EXTERNAL TARGET PACKAGE`. After Human Governance supplies an External Target Package and preparation is authorized, External Target pilot preparation must end with exactly one verdict:
+The active Distribution Foundation architecture step must end with exactly one verdict:
 
 ```text
-EXTERNAL TARGET PILOT PREPARATION READY
+DISTRIBUTION FOUNDATION ARCHITECTURE READY FOR HUMAN GOVERNANCE REVIEW
 ```
 
 ```text
-EXTERNAL TARGET PILOT PREPARATION BLOCKED
+DISTRIBUTION FOUNDATION ARCHITECTURE BLOCKED
 ```
 
 ```text
-EXTERNAL TARGET PILOT PREPARATION FAILED — VALIDATION FAILED
+DISTRIBUTION FOUNDATION ARCHITECTURE FAILED — VALIDATION FAILED
 ```
 
-`EXTERNAL TARGET PILOT PREPARATION READY` requires:
+`DISTRIBUTION FOUNDATION ARCHITECTURE READY FOR HUMAN GOVERNANCE REVIEW` requires:
 
-- exactly one preparation work unit completed;
-- external Target authority, scope, validation expectations, protected boundaries, and evidence requirements are resolved;
-- work remained inside authorized scope;
-- applicable validation passed;
-- preparation evidence exists;
+- exactly one Distribution Foundation architecture/package-contract work unit completed;
+- no CLI, MCP, hosted-provider, Axis Suite, feedback transport, or implementation work begun;
+- affected artifacts remain inside authorized planning scope;
+- applicable documentation validation passed;
 - protected areas were preserved;
-- no external Target execution occurred without separate explicit authorization;
-- no second work unit was executed.
+- no second distribution step was activated.
 
 ---
 
 ## 17. Exactly One Authorized Next Action
 
 ```text
-WAIT FOR EXTERNAL TARGET PACKAGE
+DEFINE DISTRIBUTION FOUNDATION ARCHITECTURE AND PACKAGE CONTRACT
 ```
 
-No preparation work, execution work, repository inspection, evidence generation, blocker report generation, or other work is authorized by this ProjectStatus entry until Human Governance supplies an External Target Package.
+No CLI, MCP, hosted-provider, Axis Suite, feedback transport, implementation, or second distribution-step work is authorized by this ProjectStatus entry.
 
 ---
 
@@ -467,6 +455,7 @@ ProjectStatus does not:
 - activate future capabilities;
 - automatically update itself;
 - authorize external Target execution;
+- authorize CLI, MCP, hosted-provider, Axis Suite, feedback transport, or implementation work;
 - replace Human Governance.
 
 ---
@@ -481,3 +470,4 @@ ProjectStatus does not:
 | `5.3.0-draft` | 2026-07-14 | Recorded Human Governance confirmation of EP-2 Evidence Review, preserved EP-3 as not activated because no proven execution blocker was identified, activated EP-4 Pilot Execution #2, and updated the authorized next action. |
 | `5.4.0-draft` | 2026-07-15 | Recorded Human Governance acceptance of Pilot Execution #2 evidence, marked EP-4 complete, activated EP-5 Axis Suite External Target Pilot preparation, and updated the authorized next action. |
 | `5.5.0-draft` | 2026-07-15 | Corrected EP-5 semantics to identify active External Target Pilot Capability, require External Target Package availability before preparation, and set the authorized next action to wait for the package. |
+| `5.6.0-draft` | 2026-07-15 | Recorded Human Governance acceptance of the AI-DOS distribution-oriented DevelopmentPhases and Roadmap realignment, activated only the D1 Distribution Foundation architecture step, and explicitly kept CLI, MCP, hosted-provider, Axis Suite, feedback transport, and implementation work inactive. |
