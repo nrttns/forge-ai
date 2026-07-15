@@ -1,84 +1,191 @@
 # Forge AI
 
-Forge AI is a documentation-first AI development governance repository. It defines the authority chain, operational state, roadmap sequence, Runtime / Engine architecture, Operational Core guidance, and task-execution boundaries used by AI-assisted work in this repository.
+**Forge AI** is the Product Development Target Project for **AI-DOS**.
 
-This README is a repository overview and navigation aid only. It is **not** the repository bootloader, does not replace `AGENTS.md`, and does not redefine any governed authority.
+Forge AI uses AI-DOS to develop, validate, evolve, distribute, and continuously improve AI-DOS itself through a governed self-hosting development model.
 
-## Primary Entry Points
+Forge AI is **not** AI-DOS.
 
-Use the following entry points for Forge AI self-hosting work in this repository:
+AI-DOS is the reusable AI Operating System.
 
-```text
-AGENTS.md
-    ↓
-docs/AI/GOVERNANCE.md
-    ↓
-docs/AI/FrameworkGovernance.md when governance decision policy is relevant
-    ↓
-docs/Projects/ForgeAI/Planning/ProjectStatus.md
-    ↓
-docs/Projects/ForgeAI/Planning/DevelopmentPhases.md
-    ↓
-docs/AI/AIFramework.md
-    ↓
-docs/AI/System/README.md
-    ↓
-docs/AI/AIOrchestrator.md
-    ↓
-docs/AI/AgentSystemPrompt.md
-```
+---
 
-Additional task-specific routing:
+# Purpose
 
-- Use `docs/AI/Runtime/README.md` when Runtime or Engine context is required.
-- Use `docs/AI/Commands/` and `docs/AI/Workflows/` when task execution requires command or workflow guidance.
-- Use `docs/AI/Templates/README.md` when document generation or template selection is required.
+Forge AI exists to enable the governed development of AI-DOS.
 
-## Authority Boundaries
+It provides the operational Target environment in which AI-DOS can:
 
-- `AGENTS.md` is the repository bootloader for AI assistants.
-- `docs/AI/GOVERNANCE.md` is the Governance Atlas and navigation authority.
-- `docs/AI/FrameworkGovernance.md` is the governance decision-policy authority when decision policy is relevant.
-- `docs/Projects/ForgeAI/Planning/ProjectStatus.md` records current Forge AI operational state.
-- `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` defines roadmap sequence.
-- Operational Core documents route execution but do not replace governance, roadmap, Runtime, Engine, or ProjectStatus authority.
+* develop new capabilities,
+* validate architectural decisions,
+* produce implementation evidence,
+* evolve through Human Governance,
+* prepare future product distributions.
 
-## Target-Project Portability
+Forge AI owns the Target Project.
 
-For Forge AI self-hosting tasks, use the paths listed above in this repository.
+AI-DOS owns the reusable product.
 
-For another target project that adopts Forge AI practices, resolve that project's operational state, roadmap, commands, workflows, and templates through the target repository root and its own `AGENTS.md`. Do not assume Forge AI repository paths are universal for every project.
+---
 
-## Repository Map
+# Objectives
+
+The primary objectives of Forge AI are:
+
+* Develop AI-DOS as a reusable AI Operating System.
+* Validate every capability before promotion.
+* Produce evidence for Human Governance decisions.
+* Improve AI-DOS through controlled self-hosting.
+* Protect product architecture through authority-based development.
+* Prevent duplicate authorities and parallel architectural evolution.
+* Keep Target Project concerns separate from AI-DOS product truth.
+
+---
+
+# Self-Hosting Development Model
+
+Forge AI operates as the AI-DOS self-hosting Product Development Target Project.
+
+The operational model is:
 
 ```text
-.
-├── AGENTS.md
-├── README.md
-└── docs/
-    ├── FrameworkGovernance.md
-    ├── DevelopmentPhases/
-    │   ├── ProjectStatus.md
-    │   └── ForgeAI-DevelopmentPhases.md
-    └── AI/
-        ├── README.md
-        ├── GOVERNANCE.md
-        ├── AIFramework.md
-        ├── AIOrchestrator.md
-        ├── AgentSystemPrompt.md
-        ├── Architecture/
-        ├── Commands/
-        ├── Runtime/
-        ├── System/
-        ├── Templates/
-        └── Workflows/
+Human Governance
+        ↓
+Forge AI Target Project
+        ↓
+State-Derived Execution
+        ↓
+Capability Selection
+        ↓
+AI-DOS Product Authority
+        ↓
+Exactly One Capability-Grounded Work Unit
+        ↓
+Validation
+        ↓
+Evidence
+        ↓
+Human Governance
 ```
 
-## Working Rules for AI Agents
+Forge AI determines **what** should be developed.
 
-1. Start with `AGENTS.md`.
-2. Read the Governance Atlas and active operational state before executing work.
-3. Use Framework Governance only when governance decision policy is relevant.
-4. Read only task-specific authorities after classification.
-5. Preserve frozen-area, roadmap, and ProjectStatus boundaries.
-6. Validate changes and report completion evidence.
+AI-DOS determines **how** reusable product capabilities are evolved.
+
+---
+
+# Repository Responsibilities
+
+## Forge AI
+
+Forge AI owns:
+
+* Mission
+* ProjectStatus
+* DevelopmentPhases
+* Roadmap
+* Target planning
+* Validation
+* Evidence
+* Protected Areas
+* Operational State
+
+Forge AI never becomes the owner of AI-DOS product architecture.
+
+---
+
+## AI-DOS
+
+AI-DOS owns:
+
+* Product Architecture
+* Runtime
+* Operational Core
+* Engine Architecture
+* Public Interfaces
+* Distribution Architecture
+* Product Truth
+* Reusable Capabilities
+
+AI-DOS remains the reusable product independently of any Target Project.
+
+---
+
+# Human Governance
+
+Human Governance provides the operational control of the self-hosting development cycle.
+
+The intended Human Governance interaction model is intentionally minimal.
+
+## Advance
+
+```text
+HUMAN GOVERNANCE
+
+Advance.
+```
+
+Advance authorizes AI-DOS to:
+
+* derive the next capability-grounded work unit,
+* execute exactly one work unit,
+* validate the result,
+* stop.
+
+---
+
+## Review
+
+```text
+HUMAN GOVERNANCE
+
+Review.
+```
+
+Review authorizes AI-DOS to:
+
+* evaluate the completed work,
+* verify validation,
+* compare against completion criteria,
+* update the operational state when appropriate,
+* stop.
+
+---
+
+## Approve
+
+```text
+HUMAN GOVERNANCE
+
+Approve.
+```
+
+Approve authorizes Human Governance decisions such as:
+
+* capability promotion,
+* repository acceptance,
+* release progression,
+* governed product evolution.
+
+Approve does not authorize further development work.
+
+---
+
+# Core Principles
+
+Forge AI follows these principles:
+
+* AI-DOS is the product.
+* Forge AI is the Product Development Target Project.
+* Self-hosting changes execution, not ownership.
+* Product authority always remains with AI-DOS.
+* Target authority always remains with Forge AI.
+* Every work unit must be capability-grounded.
+* Every architectural change must respect existing authority ownership.
+* Human Governance remains the final decision authority.
+
+---
+
+# Vision
+
+Forge AI demonstrates that AI-DOS can safely develop itself through governed, evidence-based, capability-driven evolution without transferring product ownership from AI-DOS to the Target Project.
