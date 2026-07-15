@@ -256,7 +256,7 @@ Before ordinary task classification, agents shall determine whether Human Govern
 | Implementation task | Proceed only when implementation is explicitly authorized; read applicable Target boundary/authorized work authority, source-level instructions, protected-boundary checks, and validation commands. |
 | Review / audit task | Read the relevant review or audit template, Governance Atlas, Framework Governance when policy is needed, and affected domain authorities; report findings without mutation unless correction is explicitly authorized. |
 | Bounded correction task | Confirm the specified defect, affected artifact, authority basis, lifecycle gate, and explicit mutation authority; make only the minimal authorized correction and validation. |
-| Approval decision task | Treat approval as a governance decision boundary; do not implement, correct, certify, promote, commit, create PR metadata, or transition state unless the approval instruction explicitly authorizes that separate action. |
+| Approval decision task | Resolve approval intent from current Target operational state, active lifecycle gate, completed review evidence, DevelopmentPhases, Roadmap, dependencies, and protected boundaries; do not implement, correct, certify, promote, commit, create PR metadata, or transition state unless approval intent uniquely authorizes the exact lifecycle/state transition or the instruction separately authorizes that action. |
 | Operational-state transition task | Verify exact state, lifecycle, capability, certification, promotion, or ProjectStatus transition authority before mutation; otherwise recommend only. |
 | Safe-stop task | Stop before repository mutation, commit, PR creation, or state update and report the blocker, missing authority, or stopped condition. |
 
@@ -266,7 +266,7 @@ Natural-language-equivalent validation examples:
 |:---|:---|:---|
 | Review only | “Review the independent execution and report whether it complied.” / “Assess the run and list findings.” / “Revise esto y reporte hallazgos.” | Review / audit task; no correction, commit, PR, approval, or state transition. |
 | Bounded correction | “Correct the existing authority that caused review intent to mutate files.” / “Fix only that routing defect.” | Bounded correction task; minimal authorized mutation only. |
-| Approval decision | “Approve or reject the proposed change.” / “Decide whether this is acceptable.” | Approval decision task; decision only unless separate mutation authority is explicit. |
+| Approval decision | “Approve or reject the proposed change.” / “Decide whether this is acceptable.” | Approval decision task; derive the uniquely authorized lifecycle/state transition when current Target state makes it exact, otherwise decision only or safe-stop. |
 | Continuation | “Continue the project.” / “Advance the next authorized work.” | State-Derived Execution Invocation unless a bounded task is supplied; no capability transition by implication. |
 | Safe stop | “Stop after the assessment.” / “Do not change anything.” | Safe-stop or review-only behavior; no mutation. |
 
@@ -405,7 +405,7 @@ When Human Governance supplies an already bounded task with explicit objective, 
 
 ### 10.9 ProjectStateUpdater Boundary
 
-After execution, validation, and evidence production, agents may consume `docs/AI/Workflows/ProjectStateUpdater.md` only when the active task explicitly authorizes the exact ProjectStatus update or Human Governance explicitly authorizes the exact state transition. Without authorization, do not modify ProjectStatus; provide only a recommended ProjectStatus update and label it as a recommendation. State-Derived Execution does not grant automatic state-update authority.
+After execution, validation, and evidence production, agents may consume `docs/AI/Workflows/ProjectStateUpdater.md` only when the active task explicitly authorizes the exact ProjectStatus update or Human Governance approval intent authorizes an exact state transition that is uniquely derivable from authoritative Target state. Approval intent is sufficient only when current Target operational state, active lifecycle gate, completed review evidence, DevelopmentPhases, Roadmap, dependencies, and protected boundaries jointly prove all of the following: current capability work is complete; validation passed; review completed without unresolved blocking findings; ProjectStatus records the current capability as accepted or ready for approval; exactly one valid next capability is identified; and no protected boundary or unmet dependency blocks transition. In that case, apply only the exact transition required to close the current gate, record current capability approval, activate the single next capability, update ProjectStatus, and stop before executing new-capability work. Without exact authorization or unique derivation, do not modify ProjectStatus; provide only a recommended ProjectStatus update and label it as a recommendation. State-Derived Execution does not grant automatic state-update authority.
 
 ## 11. Execution Boundaries
 

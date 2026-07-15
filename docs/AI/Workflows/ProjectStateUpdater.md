@@ -69,6 +69,8 @@ This document defines sequencing and routing behavior. It consumes the v2 Operat
 - `docs/AI/AgentSystemPrompt.md`.
 - the ProjectStatus declared by the active Target Repository (`<PROJECT_STATUS_PATH>`).
 - the DevelopmentPhases declared by the active Target Repository (`<DEVELOPMENT_PHASES_PATH>`).
+- the Roadmap declared by the active Target Repository (`<ROADMAP_PATH>`).
+- Completed validation and review evidence for the current lifecycle gate.
 - Applicable task-specific authority documents and templates.
 
 ## 5. Outputs
@@ -85,10 +87,10 @@ This document defines sequencing and routing behavior. It consumes the v2 Operat
 - Do not create parallel replacement files.
 - Do not move, delete, or rename files unless explicitly authorized.
 - Do not modify templates unless explicitly authorized.
-- Do not update the ProjectStatus declared by the active Target Repository (`<PROJECT_STATUS_PATH>`) unless explicitly authorized.
-
-- It may update the ProjectStatus declared by the active Target Repository (`<PROJECT_STATUS_PATH>`) only when the active task explicitly authorizes a ProjectStatus update.
-- Without explicit authorization, it may only recommend an update in the completion report.
+- Do not update the ProjectStatus declared by the active Target Repository (`<PROJECT_STATUS_PATH>`) unless explicitly authorized by the active task or by uniquely derivable Human Governance approval intent.
+- Human Governance approval intent is not only an acknowledgment or artifact metadata decision. It must be resolved from the current Target operational state, active lifecycle gate, completed review evidence, DevelopmentPhases, Roadmap, and applicable transition constraints.
+- It may update the ProjectStatus declared by the active Target Repository (`<PROJECT_STATUS_PATH>`) only when the active task explicitly authorizes a ProjectStatus update or approval intent uniquely authorizes the exact operational-state transition.
+- Without explicit authorization or uniquely derivable approval intent, it may only recommend an update in the completion report.
 
 ## 7. Validation Rules
 
@@ -100,11 +102,13 @@ This document defines sequencing and routing behavior. It consumes the v2 Operat
 
 ## 8. State Update Sequence
 
-1. Confirm explicit authorization to update ProjectStatus.
+1. Confirm explicit authorization to update ProjectStatus or resolve Human Governance approval intent from authoritative Target state.
 2. Verify completion evidence, validation results, review status, and blockers.
-3. Identify the exact ProjectStatus fields in scope.
-4. Apply only authorized factual updates, or produce a recommended update if authorization is absent.
-5. Report the update, evidence, and next recommended action.
+3. For approval intent, confirm that current capability work is complete, validation passed, review completed without unresolved blocking findings, ProjectStatus records the current capability as accepted or ready for approval, DevelopmentPhases and Roadmap identify exactly one valid next capability, and no protected boundary or unresolved dependency blocks transition.
+4. Identify the exact ProjectStatus fields in scope and derive only the transition required to close the current lifecycle gate, record the current capability as approved, activate the single next capability, update ProjectStatus accordingly, and stop before executing work in the newly activated capability.
+5. Safe-stop without mutation when review has unresolved blocking findings, more than one next capability is possible, no next capability is authorized, a dependency is unmet, a protected boundary would be activated, or the required transition cannot be uniquely derived.
+6. Apply only authorized factual updates, or produce a recommended update if authorization is absent or derivation is not unique.
+7. Report the update, evidence, and next recommended action.
 
 ## 9. Completion Report Expectations
 
