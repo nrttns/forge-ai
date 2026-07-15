@@ -8,7 +8,7 @@
 |:---|:---|
 | Identifier | `AI-DOS.WORKFLOW.TASK-PLANNER` |
 | Title | Task Planner |
-| Version | `2.0.0-draft` |
+| Version | `2.0.1-draft` |
 | Status | Draft |
 | Canonical Status | Aligned with v2 Operational Core; non-canonical until Human Governance approval |
 | Classification | Task Planning Workflow |
@@ -18,7 +18,7 @@
 | Review Authority | Human Governance / Framework Governance |
 | Approval Authority | Human Governance |
 | Created | 2026-07-09 |
-| Last Updated | 2026-07-09 |
+| Last Updated | 2026-07-15 |
 | Lifecycle Phase | Draft Alignment |
 | Traceability ID | `AI-DOS.V2.OP-005` |
 | Scope | Defines sequencing and routing behavior for planning agents and orchestrators. |
@@ -74,6 +74,7 @@ This document defines sequencing and routing behavior. It consumes the v2 Operat
 ## 5. Outputs
 
 - Scoped task sequencing and routing plan.
+- Capability-grounded work-selection record when selecting repository work from active Target state.
 - Validation evidence appropriate to the task.
 - Completion report with risks, blockers, and recommended next step.
 
@@ -102,6 +103,51 @@ This document defines sequencing and routing behavior. It consumes the v2 Operat
 3. Classify the requested work type.
 4. Select the required workflow, command, and validation route.
 5. Produce an execution plan without executing the task.
+
+## 8.1 Capability-Grounded Work-Selection Sequence
+
+When Task Planner is responsible for deriving repository work from active Target state, it owns candidate discovery, evaluation, ranking, and selection. This sequence does not replace ProjectStatus authority, DevelopmentPhases authority, Roadmap authority, command execution, or task generation.
+
+Task Planner shall perform the following sequence in order:
+
+1. Resolve exactly one active task or exactly one authorized next action from the ProjectStatus declared by the active Target Repository (`<PROJECT_STATUS_PATH>`). ProjectStatus remains the live-state authority.
+2. Resolve the active phase and active capability from the DevelopmentPhases declared by the active Target Repository (`<DEVELOPMENT_PHASES_PATH>`). DevelopmentPhases remains the capability-boundary authority.
+3. Resolve the applicable capability advancement interpretation, expected outcomes, dependencies, evidence requirements, and non-progress rules from the active Target Repository Roadmap. Roadmap remains the capability-advancement authority.
+4. Inspect repository evidence only after the ProjectStatus, DevelopmentPhases, and Roadmap constraints above have been resolved.
+5. Produce a bounded candidate set of repository work units that directly contribute to the active capability.
+6. Reject candidates that are merely repository hygiene, README or navigation alignment, formatting, documentation cleanup, planning maintenance, status maintenance, audit or report generation, or incidental continuation of the nearest existing code surface unless that activity is explicitly the active capability objective.
+7. Evaluate every candidate against active-capability contribution, roadmap-outcome contribution, dependency relevance, reusable AI-DOS value, evidence value, bounded size, independent verifiability, protected-area safety, and validation availability.
+8. Rank candidates by grounded contribution to the active capability and select exactly one highest-grounded candidate.
+9. Do not select a candidate merely because it is easy, is close to recently modified files, extends the last implementation, has tests available, or makes the repository cleaner.
+10. If no candidate can be directly traced to the active capability and roadmap outcome, stop with exactly:
+
+```text
+NO CAPABILITY-GROUNDED WORK UNIT FOUND
+```
+
+Do not invent a useful-looking task.
+
+### Required Work Selection Evidence
+
+Before editing begins, Task Planner output shall record all of the following fields with supported values:
+
+- Active ProjectStatus Task
+- Active Phase
+- Active Capability
+- Applicable Roadmap Capability / Milestone
+- Required Capability Outcome
+- Repository Evidence Inspected
+- Candidate Work Units Considered
+- Rejected Candidates and Reasons
+- Selected Work Unit
+- Direct Capability Contribution
+- Reusable AI-DOS Contribution
+- Expected Files
+- Protected Areas
+- Validation Plan
+- Completion Condition
+
+A work unit is not authorized for execution when any required field is absent, unsupported, or not traceable to the active capability and roadmap outcome.
 
 | Work Type | Route |
 | --- | --- |

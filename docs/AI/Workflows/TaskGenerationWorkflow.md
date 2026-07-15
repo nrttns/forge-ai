@@ -8,7 +8,7 @@
 |:---|:---|
 | Identifier | `AI-DOS.WORKFLOW.TASK-GENERATION` |
 | Title | Task Generation Workflow |
-| Version | `2.0.0-draft` |
+| Version | `2.0.1-draft` |
 | Status | Draft |
 | Canonical Status | Aligned with v2 Operational Core; non-canonical until Human Governance approval |
 | Classification | Task Generation Workflow |
@@ -18,7 +18,7 @@
 | Review Authority | Human Governance / Framework Governance |
 | Approval Authority | Human Governance |
 | Created | 2026-07-09 |
-| Last Updated | 2026-07-09 |
+| Last Updated | 2026-07-15 |
 | Lifecycle Phase | Draft Alignment |
 | Traceability ID | `AI-DOS.V2.OP-005` |
 | Scope | Defines sequencing and routing behavior for planning agents and orchestrators. |
@@ -73,7 +73,7 @@ This document defines sequencing and routing behavior. It consumes the v2 Operat
 
 ## 5. Outputs
 
-- Scoped executable task statement.
+- Scoped executable task statement derived only from the completed Task Planner selection record.
 - Validation evidence appropriate to the task.
 - Completion report with risks, blockers, and recommended next step.
 
@@ -97,13 +97,31 @@ This document defines sequencing and routing behavior. It consumes the v2 Operat
 
 ## 8. Generation Sequence
 
-1. Consume the execution plan.
-2. Verify current state and task type.
-3. Define objective, scope, allowed work, forbidden work, deliverables, and validation.
-4. Select the governing command.
-5. Produce a temporary executable task statement for the orchestrator.
+Task Generation Workflow converts the completed Task Planner selection record into an executable task statement. It does not own task selection authority and must not substitute, broaden, reinterpret, or replace the selected work unit.
 
-Generated tasks must be derived from authorized state and planning inputs; they are not independent authority.
+1. Consume the completed Task Planner selection record.
+2. Verify that the record contains a selected work unit, capability trace, roadmap outcome trace, candidate rejection evidence, validation plan, and completion condition.
+3. Stop without generating an executable task statement when any required selection evidence is absent or unsupported, or when Task Planner returned exactly:
+
+```text
+NO CAPABILITY-GROUNDED WORK UNIT FOUND
+```
+
+4. Preserve the selected work unit exactly as the executable task objective.
+5. Preserve the capability trace, authorized scope, expected files, forbidden work, validation plan, completion condition, and exactly-one-work-unit stop boundary.
+6. Select the governing command only for executing the preserved selected work unit.
+7. Produce a temporary executable task statement for the orchestrator.
+
+Generated tasks must be derived only from the completed Task Planner selection record and authorized state and planning inputs; they are not independent authority.
+
+Task Generation Workflow must not generate an executable task when:
+
+- no selected work unit exists;
+- capability contribution is missing;
+- roadmap outcome trace is missing;
+- candidate rejection evidence is missing;
+- validation or completion condition is missing;
+- Task Planner returned `NO CAPABILITY-GROUNDED WORK UNIT FOUND`.
 
 ## 9. Completion Report Expectations
 
