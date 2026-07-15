@@ -239,9 +239,11 @@ Agents shall not infer Target context from memory. Agents shall not skip Resolve
 
 ## 9. Task Classification Rules
 
-Agents shall classify the active task before selecting files to modify or validation commands to run.
+Agents shall classify the active task before selecting files to modify, validation commands to run, commits to create, PR metadata to prepare, or state transitions to perform.
 
-Before ordinary task classification, agents shall determine whether Human Governance supplied an explicitly bounded executable task. If yes, agents shall use ordinary task classification and execution routing. If not, agents shall determine whether the invocation requests Target Repository progress. If yes, agents shall classify it as the first-class `State-Derived Execution Invocation`. If neither can be determined, agents shall stop and report insufficient invocation context.
+Classification shall resolve Human Governance intent from semantic meaning, requested outcome, active lifecycle gate, current Target operational state, applicable authority boundaries, and the presence or absence of explicit mutation authority. Agents shall not classify instructions by literal command words, fixed phrase matching, or language-specific wording. Equivalent intentions expressed through different wording or languages shall resolve to the same execution mode; different intentions using the same word shall not automatically resolve to the same execution mode.
+
+Before ordinary task classification, agents shall determine whether Human Governance supplied an explicitly bounded executable task with authority for the requested mutation. If yes, agents shall use ordinary task classification and execution routing for only that bounded task. If not, agents shall determine whether the invocation semantically requests Target Repository progress. If yes, agents shall classify it as the first-class `State-Derived Execution Invocation`. If neither can be determined, agents shall stop and report insufficient invocation context.
 
 | Task Type | Agent Behavior |
 |:---|:---|
@@ -252,7 +254,21 @@ Before ordinary task classification, agents shall determine whether Human Govern
 | Engine RFC task | Read A.5.0 template, M.0, M.1, STD-003, STD-010, A.3, A.4.x, and affected Engine RFCs. |
 | Target Constraints / context task | Read Resolved Target Context, Applicable Target Resources, Human Governance instruction, and Framework Governance when decision policy is involved. |
 | Implementation task | Proceed only when implementation is explicitly authorized; read applicable Target boundary/authorized work authority, source-level instructions, protected-boundary checks, and validation commands. |
-| Review / audit task | Read the relevant review or audit template, Governance Atlas, Framework Governance when policy is needed, and affected domain authorities. |
+| Review / audit task | Read the relevant review or audit template, Governance Atlas, Framework Governance when policy is needed, and affected domain authorities; report findings without mutation unless correction is explicitly authorized. |
+| Bounded correction task | Confirm the specified defect, affected artifact, authority basis, lifecycle gate, and explicit mutation authority; make only the minimal authorized correction and validation. |
+| Approval decision task | Treat approval as a governance decision boundary; do not implement, correct, certify, promote, commit, create PR metadata, or transition state unless the approval instruction explicitly authorizes that separate action. |
+| Operational-state transition task | Verify exact state, lifecycle, capability, certification, promotion, or ProjectStatus transition authority before mutation; otherwise recommend only. |
+| Safe-stop task | Stop before repository mutation, commit, PR creation, or state update and report the blocker, missing authority, or stopped condition. |
+
+Natural-language-equivalent validation examples:
+
+| Instruction meaning | Example wording | Required classification |
+|:---|:---|:---|
+| Review only | “Review the independent execution and report whether it complied.” / “Assess the run and list findings.” / “Revise esto y reporte hallazgos.” | Review / audit task; no correction, commit, PR, approval, or state transition. |
+| Bounded correction | “Correct the existing authority that caused review intent to mutate files.” / “Fix only that routing defect.” | Bounded correction task; minimal authorized mutation only. |
+| Approval decision | “Approve or reject the proposed change.” / “Decide whether this is acceptable.” | Approval decision task; decision only unless separate mutation authority is explicit. |
+| Continuation | “Continue the project.” / “Advance the next authorized work.” | State-Derived Execution Invocation unless a bounded task is supplied; no capability transition by implication. |
+| Safe stop | “Stop after the assessment.” / “Do not change anything.” | Safe-stop or review-only behavior; no mutation. |
 
 A State-Derived Execution invocation must not be automatically classified as implementation merely because the invocation includes the word implementation, source code exists, recent commits are implementation work, tests exist, build configuration exists, a nearby technical task is available, the previous selected work was implementation, or an obvious technical improvement is visible. Implementation-like wording in an unbounded progress request means derive the next work from authorized Target operational state through the mandatory planning chain; it does not authorize continuation of the nearest implementation surface.
 

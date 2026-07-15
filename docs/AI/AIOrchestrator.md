@@ -229,9 +229,22 @@ No lifecycle step should be skipped when it is relevant to the task. Human Gover
 
 ## 6. Workflow Routing
 
-The Orchestrator selects workflow handling based on the task type, active Resolved Target Context, Target Constraints, and task-specific authority set.
+The Orchestrator selects workflow handling based on the task type, active Resolved Target Context, Target Constraints, task-specific authority set, requested outcome, lifecycle gate, and explicit mutation authority. Human Governance instructions are classified by semantic intent rather than literal command words, fixed phrases, or language-specific wording. Equivalent meanings expressed with different wording or in different languages must route the same way; different meanings that reuse the same word must not automatically route the same way.
 
-When the invocation intent is `Continue`, `Resume`, or an equivalent continuation request and repository work must be derived from active Target state, workflow routing must use this handoff before command routing, implementation routing, execution coordination, or repository editing:
+The Orchestrator must resolve at least these execution modes before workflow routing:
+
+| Resolved Human Governance intent | Execution mode | Mutation authority | Required routing result |
+|:---|:---|:---|:---|
+| Advance the Target when no bounded work unit is supplied | State-derived execution | Only if Target state and active authority jointly authorize the exact mutation | Route through TaskPlanner before command routing or editing. |
+| Inspect, review, audit, assess, evaluate, compare, or provide findings | Review and assessment | No repository mutation, commit, PR, correction, approval, certification, promotion, or state transition unless explicitly and separately authorized | Route to review, audit, validation, or assessment behavior and report findings only. |
+| Correct a specified defect or bounded authority gap | Bounded correction | Only the exact correction authorized by Human Governance and current authority state | Route to documentation, bug-fix, or implementation behavior according to the affected artifact, preserving minimal scope. |
+| Decide whether to accept, approve, reject, defer, or authorize an exception | Approval decision | No correction or implementation unless the decision explicitly includes that separate mutation scope | Route to governance decision handling and record or report the decision boundary. |
+| Move live operational state, capability gate, lifecycle status, certification, promotion, or ProjectStatus | Operational-state transition | Only the exact transition explicitly authorized | Route through the applicable state-update or governance lifecycle authority after validation evidence exists. |
+| Halt, pause, wait, do not proceed, or indicate missing authority | Safe stop | No mutation | Stop before editing, committing, PR creation, or state update and report the blocker or stopped state. |
+
+Review intent does not inherently authorize correction, repository mutation, commit, or PR creation. Approval intent does not inherently authorize correction or implementation. Continuation intent does not inherently authorize a capability transition. Repository mutation is permitted only when the resolved Human Governance intent and the current authority state jointly authorize the exact mutation.
+
+When the invocation intent semantically requests continuation, progress, advancement, next work, or execution and repository work must be derived from active Target state, workflow routing must use this handoff before command routing, implementation routing, execution coordination, or repository editing:
 
 ```text
 AIOrchestrator Workflow Routing
