@@ -1,10 +1,10 @@
 <!--
 Identifier: FORGE-AI.REPOSITORY-ENTRY
 Title: AGENTS.md — Forge AI Repository Entry and Target Contract Discovery File
-Version: 1.0.0
+Version: 1.2.0
 Status: Active
 Owner: Forge AI Target Project Governance
-Updated: 2026-07-11
+Updated: 2026-07-15
 -->
 
 # AGENTS.md — Forge AI Repository Entry
@@ -32,7 +32,29 @@ The canonical contract owns Forge AI Target Project mission alignment, execution
 
 All AI agents and automation operating in this repository must read and follow the canonical Forge AI Target Project Contract before classifying, planning, editing, validating, reviewing, or reporting work.
 
-## 5. File Boundary
+The root repository entry resolves only the Forge AI Target Project Contract.
+
+It does not resolve, invoke, declare, or route an AI-DOS Provider.
+
+Any AI-DOS Provider invocation must be supplied independently by the external caller or execution host.
+
+The Target Project remains independent of AI-DOS internal paths and implementation.
+
+## 5. Loader Model
+
+The only loader flow permitted in this file is:
+
+```text
+Repository Entry
+    ↓
+Canonical Target Project Contract
+    ↓
+Target Project-owned resource resolution
+```
+
+Do not add any provider-side node after this flow.
+
+## 6. File Boundary
 
 `docs/AI/`
 : contains AI-DOS product truth.
@@ -40,7 +62,7 @@ All AI agents and automation operating in this repository must read and follow t
 `docs/Projects/ForgeAI/`
 : contains Forge AI Target Project truth.
 
-## 6. Non-Goals
+## 7. Non-Goals
 
 This repository entry file is not:
 
