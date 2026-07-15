@@ -2,7 +2,7 @@
   "name": "forge-ai",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/main.js",
   "scripts": {
     "dev": "tsx src/main.ts",
     "typecheck": "tsc --noEmit",
