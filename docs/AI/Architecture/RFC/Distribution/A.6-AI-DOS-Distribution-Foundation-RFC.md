@@ -1,6 +1,6 @@
 # A.6 — AI-DOS Distribution Foundation RFC
 
----
+> Product distribution architecture · Target-independent · Provider-neutral
 
 ## Document Metadata
 
@@ -8,450 +8,344 @@
 |:---|:---|
 | Identifier | `AI-DOS.V2.ARCH-RFC-006` |
 | Title | A.6 — AI-DOS Distribution Foundation RFC |
-| Version | `0.1.1-draft` |
+| Version | `1.0.0-draft` |
 | Status | Draft |
-| Lifecycle State | Draft |
-| Canonical Status | Non-canonical until reviewed, approved, and promoted through Framework Governance |
 | Classification | Architecture RFC |
-| Document Type | RFC |
-| Artifact Family | Architecture Artifact |
-| Artifact Type | Architecture RFC |
-| Owner | Framework Governance |
-| Maintainers | Framework Architecture Team |
-| Review Authority | Human Governance / Framework Governance |
+| Document Type | Distribution Foundation RFC |
+| Owner | Framework Architecture Team |
+| Review Authority | Framework Governance |
 | Approval Authority | Human Governance |
-| Created | 2026-07-15 |
-| Last Updated | 2026-07-15 |
-| Traceability ID | `AI-DOS.V2.ARCH-RFC-006` |
-| Scope | Distribution foundation architecture for packaging, distribution, versioning, installation, update, validation, and governance of AI-DOS as an AI Operating System delivered to independent Target Projects without exposing the private AI-DOS development repository. |
-| Out of Scope | Local CLI behavior, MCP protocol, hosted Provider architecture, AI-DOS System Interface, Evolution transport, Feedback protocol, Target integration details, runtime implementation, package-manager implementation, service implementation, repository publication workflow implementation, and Target Project planning mutation. |
-| Normative Authority | Human Governance; `docs/AI/Architecture/Constitution/A.1-Constitution.md`; `docs/AI/Architecture/RFC/Boundary/A.2-AI-DOS-Target-Repository-Operational-Boundary-RFC.md`; `docs/AI/FrameworkGovernance.md` |
-| Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/RFC/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Architecture/RFC/EnginePlatform/A.4-Engine-Architecture-RFC.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md` |
-| Depends On | Human Governance release decision; AI-DOS / Target Repository operational boundary; document metadata standard; terminology standard; Runtime and Engine architecture boundaries; Operational Core authority routing. |
-| Consumes | Constitutional authority, Framework Governance release authority, Target-independent product architecture, AI-DOS / Target Repository boundary rules, metadata and terminology requirements, Runtime and Engine boundaries, and Operational Core authority consumption rules. |
-| Produces | Distribution foundation model, private/public product boundary, distribution artifact model, package structure, manifest model, versioning policy, release channel model, signing and integrity requirements, compatibility model, installation/update/rollback/uninstall lifecycle boundaries, runtime discovery constraints, governance gates, risks, and future RFC dependency map. |
-| Related Specifications | `docs/AI/Architecture/Reports/AI-DOS-Blueprint-v1.0-RFC.md`; `docs/AI/System/BootSequence.md`; `docs/AI/System/SourceOfTruth.md`; `docs/AI/System/ContextAssembly.md`; `docs/AI/System/ExecutionSequence.md` |
-| Supersedes | None |
-| Superseded By | None |
-| Validation Profile | STD-010 metadata conformance profile; Architecture RFC content validation profile |
-| Review Status | Human Governance Approved |
+| Normative Authority | `docs/AI/Architecture/Constitution/A.1-Constitution.md`; `docs/AI/Architecture/RFC/Boundary/A.2-AI-DOS-Target-Repository-Operational-Boundary-RFC.md` |
+| Dependencies | A.1 Constitution, A.2 Product / Target Operational Boundary, applicable Meta Models and Standards |
+| Produces | Product release, package, manifest, integrity, compatibility, installation-lifecycle, and distribution-governance contracts |
+| Downstream Consumers | Release engineering, package manifest, signing, installation controller, CLI, MCP, hosted-provider, feedback, and Target-integration specifications |
 | Certification Status | Not certified |
 
----
+## 1. Decision
 
-## 1. Purpose
+AI-DOS shall be distributed as governed, versioned release artifacts assembled from approved product truth.
 
-This RFC defines the AI-DOS Distribution Foundation: the architectural contract for delivering AI-DOS to an independent Target Project without exposing the private AI-DOS development repository.
+Independent Target Projects shall not require access to the private AI-DOS development repository, Forge AI Target truth, unpublished product work, private governance evidence, or development history.
 
-The primary question answered by this RFC is:
+The distribution architecture is a sibling branch to Runtime architecture:
 
-> How is AI-DOS delivered to an independent Target Project without exposing the private AI-DOS development repository?
+```text
+A.1 Constitution
+    ↓
+A.2 Product / Target Operational Boundary
+    ├── A.3 Runtime → A.4 Engine Platform → A.5 Engine Specializations
+    └── A.6 Distribution Foundation
+```
 
-The answer is that AI-DOS is delivered as governed release artifacts produced from the private development repository, published through controlled distribution channels, verified by manifests and integrity metadata, installed into a Target-accessible product location, and consumed through explicit Target Project authority without granting the Target Project access to private development history, unpublished source, internal planning, private evidence, or governance workspaces.
+A.6 does not depend on Runtime, Engine Platform, Engine Specializations, System Layer, Operational Core, agents, workflows, or providers for its architectural authority. Released product artifacts may contain approved implementations or documents governed by those contracts, but those domains do not own distribution authority.
 
-This RFC establishes architecture only. It does not implement any runtime, CLI, MCP, provider, hosted service, installer, updater, registry, or package manager.
+## 2. Purpose
 
-## 2. Scope
+This RFC answers:
 
-This RFC is in scope for:
+> How is AI-DOS delivered to an independent Target Project without exposing private development truth or contaminating the reusable product with Target-owned truth?
 
-1. Defining AI-DOS as a distributable AI Operating System product.
-2. Separating the private AI-DOS development repository from public or Target-consumable distribution artifacts.
-3. Defining the artifact classes required for distribution.
-4. Defining the package structure expected of a distributable AI-DOS release.
-5. Defining a manifest model at the architectural level.
-6. Defining versioning policy for distributable releases.
-7. Defining release channels and channel governance.
-8. Defining signing, checksums, provenance, and integrity expectations.
-9. Defining compatibility declarations and Target Project compatibility boundaries.
-10. Defining installation, update, rollback, and uninstall lifecycle boundaries.
-11. Defining runtime discovery requirements without specifying runtime behavior.
-12. Defining governance and Human Governance release gates.
-13. Identifying risks and future RFC dependencies.
+It defines:
 
-## 3. Non-Goals
+- the private-development to released-product boundary;
+- required distribution artifact classes;
+- package and manifest responsibilities;
+- version, channel, integrity, provenance, and compatibility expectations;
+- install, update, rollback, uninstall, and discovery boundaries;
+- release governance and safe-stop conditions.
 
-This RFC does not define:
+It does not define executable tooling or transport-specific behavior.
 
-1. Local CLI behavior.
-2. MCP protocol.
-3. Hosted Provider architecture.
-4. AI-DOS System Interface.
-5. Evolution transport.
-6. Feedback protocol.
-7. Target integration details.
-8. Runtime implementation.
-9. Engine implementation.
-10. Agent implementation.
-11. Installer implementation.
-12. Updater implementation.
-13. Package-manager implementation.
-14. Service deployment architecture.
-15. Registry API behavior.
-16. Repository publication workflow implementation.
-17. Target Project planning mutation.
-18. ProjectStatus updates.
-19. DevelopmentPhases updates.
-20. Roadmap updates.
+## 3. Truth Domains
 
-References to installation, update, rollback, uninstall, discovery, signing, channels, or manifests are architectural boundaries only. They do not specify executable commands, protocol messages, service endpoints, daemon behavior, MCP tools, CLI flags, hosted Provider responsibilities, or Target-specific integration steps.
+Distribution shall preserve four distinct truth domains.
 
-## 4. Product Model
-
-AI-DOS is a governed AI Operating System product that can be delivered independently of its private development repository.
-
-The product model has four architectural layers:
-
-| Layer | Distribution Role |
-|:---|:---|
-| Private development repository | Human-Governed source workspace where AI-DOS is authored, reviewed, validated, and prepared for release. |
-| Release assembly boundary | Governance-controlled boundary that selects approved AI-DOS product content and excludes private development-only material. |
-| Distribution artifacts | Versioned, signed, integrity-checked product packages and metadata made available to consumers. |
-| Target Project installation | Target-accessible installed AI-DOS product instance consumed by Target Project authority and execution providers. |
-
-AI-DOS as a product includes governed framework documents, operational contracts, templates, standards, architecture artifacts, and other approved product resources. AI-DOS distribution does not require the Target Project to clone, inspect, or depend on the private development repository.
-
-The distributed product must remain Target-independent. A Target Project may consume the product, but the distributed product must not contain Target-owned ProjectStatus, Target-owned Roadmap, Target-specific protected-area declarations, Target secrets, Target private evidence, or Target implementation state unless a later Target integration RFC explicitly defines a governed Target-side artifact boundary.
-
-## 5. Distribution Principles
-
-AI-DOS distribution is governed by these principles:
-
-1. **Repository privacy**: independent Target Projects receive release artifacts, not private AI-DOS development repository access.
-2. **Artifact authority**: the distributable artifact is the product boundary consumed by a Target Project.
-3. **Human Governance release control**: no release channel receives a product artifact without explicit Human Governance release approval.
-4. **Deterministic identity**: every released package has a stable product identifier, version, channel, manifest, and integrity record.
-5. **Source-truth separation**: private development truth, released product truth, and Target Project truth remain separately owned.
-6. **No implicit implementation activation**: distribution architecture does not activate runtime, CLI, MCP, hosted Provider, or Target integration behavior.
-7. **Compatibility visibility**: every release declares compatibility expectations and breaking-change status.
-8. **Rollback readiness**: installation and update architecture must preserve a path to restore a prior known-good product version.
-9. **Uninstallability**: installation architecture must distinguish AI-DOS-owned installed product content from Target-owned files.
-10. **Validation before trust**: consumers must be able to validate identity, integrity, provenance, and compatibility before use.
-
-## 6. Private vs Public Product Boundary
-
-The private AI-DOS development repository may contain product source, drafts, planning state, review evidence, experiments, internal reports, governance deliberation support, development automation, unpublished artifacts, and self-hosting Target Project truth.
-
-A public or Target-consumable AI-DOS distribution artifact may contain only release-approved product content and release metadata.
-
-| Concern | Private Development Repository | Distribution Artifact |
+| Truth Domain | Owner | Distribution Treatment |
 |:---|:---|:---|
-| Development history | May contain full private history | Excluded |
-| Drafts not approved for release | May exist | Excluded unless explicitly released as draft product content |
-| Governance workspaces | May exist | Excluded except approved public governance metadata |
-| Product documents | Authored and reviewed | Included only if release-approved |
-| Product templates | Authored and reviewed | Included only if release-approved |
-| Product manifests | Generated or authored for release | Included |
-| Checksums and signatures | Produced during release | Included or published adjacent to artifacts |
-| Target Project state | May exist for self-hosting | Excluded from reusable AI-DOS product distribution |
-| Secrets and credentials | Must not be distributed | Excluded |
+| Private development truth | AI-DOS development governance | Never implicitly released |
+| AI-DOS product truth | AI-DOS product authority | Eligible for governed release assembly |
+| Released product truth | Release authority for a specific version and channel | Immutable release identity consumed by Targets |
+| Target Project truth | Target Project authority | Never imported into reusable AI-DOS release artifacts |
 
-The boundary must be enforced by release assembly and validation. A Target Project must be able to install AI-DOS without receiving private repository remotes, internal branches, unpublished files, private issue history, private commit history, private governance evidence, or self-hosting ProjectStatus.
+Forge AI is the self-application Product Development Target Project. Its ProjectStatus, DevelopmentPhases, Roadmap, source state, evidence, memory, workflow state, registry state, protected areas, and local configuration are Target truth and shall not enter reusable AI-DOS releases.
 
-## 7. Distribution Artifact Model
+## 4. Product Boundary
 
-An AI-DOS release consists of one or more distribution artifacts that together define a versioned product release.
+The distribution model contains four boundaries:
 
-Required artifact classes:
+```text
+Private Development Workspace
+    ↓ governed selection
+Release Assembly Boundary
+    ↓ validated output
+Distribution Artifact Set
+    ↓ Target-controlled acceptance
+Installed AI-DOS Product Instance
+```
 
-| Artifact Class | Purpose |
+### 4.1 Private Development Workspace
+
+May contain drafts, experiments, unpublished source, internal evidence, governance deliberation support, development automation, and Forge AI Target truth.
+
+### 4.2 Release Assembly Boundary
+
+Selects only explicitly approved product content and produces release metadata and evidence summaries. It shall reject ambiguous ownership, unapproved content, secrets, private history, and Target truth.
+
+### 4.3 Distribution Artifact Set
+
+Represents one governed AI-DOS release. It shall have a stable identity independent of private commit history.
+
+### 4.4 Installed Product Instance
+
+Is a Target-accessible copy or activation of released AI-DOS product truth. Installation does not transfer ownership of Target truth to AI-DOS and does not grant AI-DOS permission to mutate the Target.
+
+## 5. Required Distribution Artifacts
+
+A release shall contain or reference:
+
+| Artifact | Responsibility |
 |:---|:---|
-| Product package | Contains release-approved AI-DOS product content. |
-| Release manifest | Describes package identity, version, channel, contents, compatibility, integrity, and governance status. |
-| Integrity record | Provides checksums and signature references for package validation. |
-| Release notes | Summarize release scope, compatibility posture, known risks, and upgrade/rollback considerations. |
-| License / usage notice | States allowed use and distribution constraints, when applicable. |
-| Validation evidence summary | Provides release-validation results without exposing private development evidence beyond approved disclosure. |
+| Product package | Release-approved AI-DOS product content |
+| Release manifest | Identity, version, channel, content index, compatibility, integrity, and ownership boundaries |
+| Integrity record | Checksums, signature references, provenance, and verification status |
+| Release notes | Scope, compatibility posture, breaking changes, known risks, and lifecycle guidance |
+| Usage and disclosure notices | License, attribution, support, and disclosure posture where applicable |
+| Validation evidence summary | Approved release-validation result without leaking private evidence |
 
-Optional artifact classes may include a software bill of materials, provenance attestation, detached signatures, compatibility matrix, migration advisory, or archival bundle. Optional artifacts require future governance or release engineering definition before becoming mandatory.
+Optional artifacts may include an SBOM, provenance attestation, compatibility matrix, migration advisory, or archival bundle when governed by downstream specifications.
 
-## 8. Package Structure
+## 6. Package Contract
 
-A distribution package must separate product content from package metadata.
-
-Architectural package layout:
+A package shall separate product content from release metadata.
 
 ```text
 ai-dos-package/
 ├── product/
-│   └── <release-approved AI-DOS product content>
 ├── manifest/
-│   └── ai-dos-package-manifest.<format>
 ├── integrity/
-│   ├── checksums.<format>
-│   └── signatures.<format-or-detached-reference>
 ├── release-notes/
-│   └── <release notes artifact>
 └── notices/
-    └── <license, usage, attribution, and disclosure notices>
 ```
 
-This layout is conceptual. It does not mandate archive format, file extension, serialization format, compression method, package registry, transport mechanism, CLI command, installer command, hosted service, or Target Project destination path.
+This structure is conceptual. A.6 does not choose archive format, compression, registry, schema syntax, destination path, installer, protocol, service, or command syntax.
 
-The package must not include development-only repository metadata such as private `.git` history, unpublished branch state, private workspace files, unapproved drafts, local credentials, private governance records, or Target Project self-hosting state.
+A package shall not contain:
 
-## 9. Manifest Model
+- private repository history or remotes;
+- unapproved drafts or unpublished branches;
+- credentials, signing secrets, or private keys;
+- private governance evidence;
+- Forge AI or other Target-owned planning and state;
+- hidden provider configuration or provider-specific activation assumptions.
 
-Each AI-DOS distribution package must include a release manifest that allows a consumer or installation controller to understand what the package is before trusting or applying it.
+## 7. Manifest Contract
 
-The manifest must declare, at minimum:
+The release manifest shall declare at minimum:
 
-| Manifest Field | Architectural Requirement |
-|:---|:---|
-| Product identifier | Identifies the package as AI-DOS. |
-| Package identifier | Identifies the specific package artifact. |
-| Product version | Declares the AI-DOS release version. |
-| Release channel | Declares the channel from which the package is released. |
-| Release date | Declares the date approved for release. |
-| Governance status | States release approval posture and certification posture. |
-| Content index | Lists package contents or content roots. |
-| Integrity references | Points to checksums and signatures. |
-| Compatibility declaration | Declares supported compatibility range and breaking-change status. |
-| Minimum consumer expectations | Declares required consumer capabilities without specifying Target integration behavior. |
-| Rollback metadata | Identifies rollback-relevant version lineage. |
-| Uninstall boundary | Identifies AI-DOS-owned installed content boundaries. |
-| Source disclosure posture | States that the artifact is produced from the private development repository without exposing that repository. |
+- AI-DOS product identifier;
+- package identifier;
+- product version;
+- release channel;
+- release date;
+- governance and certification posture;
+- content index or content roots;
+- integrity and provenance references;
+- compatibility declaration;
+- breaking-change and deprecation status;
+- minimum consumer expectations;
+- rollback lineage;
+- AI-DOS-owned uninstall boundary;
+- source-disclosure posture.
 
-The manifest model is architectural only. This RFC does not define JSON, YAML, TOML, XML, Markdown, schema syntax, field serialization, registry format, CLI parsing, MCP resources, API endpoints, or package manager behavior.
+The manifest describes a product artifact. It shall not contain Target Project execution authorization, Target planning, Target secrets, or provider-local state.
 
-## 10. Versioning Policy
+## 8. Version and Release Channels
 
-AI-DOS distribution releases must use explicit product versions separate from private development repository commit identifiers.
+Every release shall have exactly one product version and one declared channel.
 
-Versioning requirements:
+Product versions shall be independent of private repository commit identifiers and shall support compatibility, update, rollback, and audit decisions.
 
-1. Every distributed package has exactly one product version.
-2. Product version must be visible in the manifest and release notes.
-3. Product version must not require Target Project access to private commit history.
-4. Version lineage must support compatibility evaluation and rollback decisions.
-5. Breaking changes must be declared in release notes and compatibility metadata.
-6. Pre-release versions must be distinguishable from stable release versions.
-7. Patch releases must be distinguishable from minor or major capability releases.
-8. Governance-approved emergency releases must still receive normal identity, manifest, integrity, and approval metadata.
+Baseline channels are:
 
-Recommended version classes:
+- Experimental;
+- Preview;
+- Stable;
+- Long-term Support, when explicitly governed;
+- Emergency.
 
-| Version Class | Meaning |
-|:---|:---|
-| Major | May introduce breaking product contract changes requiring explicit compatibility review. |
-| Minor | Adds or changes product capability without intentionally breaking declared compatibility. |
-| Patch | Corrects or clarifies released product content within the same compatibility line. |
-| Pre-release | Candidate, preview, alpha, beta, or release-candidate content not yet stable. |
-| Build metadata | Optional release assembly or provenance identifier that does not replace product version. |
+Channels express confidence and support posture. They are not transport mechanisms and do not imply registry, CLI, MCP, hosted-provider, or service availability.
 
-This policy does not define exact semantic-version syntax. A future release engineering RFC may select a concrete version grammar.
+## 9. Integrity and Provenance
 
-## 11. Release Channels
+Before trust or installation, a consumer shall be able to verify:
 
-AI-DOS distribution must separate release confidence and consumer intent through governed release channels.
+- package identity;
+- manifest identity;
+- content integrity;
+- signature or approved signature reference;
+- release authority;
+- provenance posture;
+- revocation or invalidation status where applicable.
 
-Baseline channels:
+Missing, mismatched, revoked, expired, ambiguous, or unverifiable integrity data requires safe stop.
 
-| Channel | Purpose | Governance Posture |
-|:---|:---|:---|
-| Experimental | Early product packaging validation and controlled evaluation. | Requires explicit Human Governance approval and prominent non-stable warning. |
-| Preview | Candidate distribution for limited external validation. | Requires release review, compatibility statement, and known-risk disclosure. |
-| Stable | General approved distribution for independent Target Projects. | Requires full Human Governance release gate satisfaction. |
-| Long-term Support | Extended compatibility and maintenance line, if approved. | Requires explicit support policy and maintenance commitment. |
-| Emergency | Urgent corrective release for safety, integrity, or critical correctness issues. | Requires explicit emergency release approval and post-release review. |
+A.6 does not select algorithms, key-management systems, certificate infrastructure, transparency logs, or signing tooling.
 
-Channels are governance categories, not transport mechanisms. This RFC does not define package registries, download endpoints, hosted services, CLI commands, MCP discovery, or deployment infrastructure.
+## 10. Compatibility
 
-## 12. Signing and Integrity
+A release shall declare:
 
-AI-DOS distribution must provide verifiable integrity before a Target Project trusts an artifact.
+- product version and compatibility range;
+- breaking changes;
+- deprecated and removed contracts;
+- minimum consumer capabilities;
+- migration advisory availability;
+- rollback limitations;
+- compatibility with applicable A.3–A.5 product contracts when those contracts are included or implemented by the release.
 
-Integrity requirements:
+Compatibility is a declaration, not proof of successful Target integration or execution. It does not override Target authority, validation commands, protected areas, or local policy.
 
-1. Each package must have checksums for the package and, when practical, major content roots.
-2. Each release must have a signature or signature reference bound to the package identity, version, channel, and manifest.
-3. The manifest must identify the integrity records that apply to the package.
-4. Release notes must identify whether integrity validation is required, optional, or unavailable for the channel.
-5. A package with missing, mismatched, expired, revoked, or unverifiable integrity records must be treated as unsafe until Human Governance or an approved validation authority resolves the issue.
-6. Signing authority must be distinct from ordinary authorship and must be governed by Human Governance release policy.
-7. Private signing material must never be included in a distribution artifact.
+## 11. Installation Lifecycle Boundary
 
-This RFC does not choose cryptographic algorithms, key-management tooling, certificate infrastructure, transparency log design, command syntax, or service architecture. Those decisions belong to future release engineering and governance RFCs.
+Installation consists conceptually of:
 
-## 13. Compatibility Model
+1. acquire an artifact from an approved channel;
+2. validate identity, manifest, integrity, provenance, and compatibility;
+3. stage content without modifying Target truth;
+4. determine AI-DOS-owned content and uninstall boundaries;
+5. activate or place the installed product instance;
+6. record installed version and validation result;
+7. verify installed content against the manifest.
 
-AI-DOS compatibility is declared by release metadata and bounded by the AI-DOS / Target Project operational boundary.
+Installation does not authorize Runtime startup, provider activation, Target mutation, workflow execution, MCP registration, or CLI behavior.
 
-A release must declare:
+## 12. Update and Rollback Boundary
 
-1. AI-DOS product version.
-2. Compatible prior AI-DOS versions or version ranges, when applicable.
-3. Breaking-change status.
-4. Required minimum consumer expectations.
-5. Deprecated content, if any.
-6. Removed content, if any.
-7. Migration advisory presence, if applicable.
-8. Rollback compatibility limitations, if any.
+An update shall:
 
-Compatibility declarations describe product-to-product and product-to-consumer expectations. They must not imply Target Project integration success, runtime execution success, hosted Provider availability, MCP support, CLI support, or Target-specific configuration correctness.
+1. discover a candidate release through an authorized mechanism;
+2. validate candidate identity and compatibility;
+3. compare candidate and installed versions;
+4. stage without destroying the known-good instance;
+5. preserve a rollback candidate;
+6. switch or replace only AI-DOS-owned product content;
+7. validate the resulting installed state;
+8. retain governed rollback evidence.
 
-Target Projects remain responsible for their own project truth, protected areas, validation commands, and operational state. AI-DOS release compatibility does not override Target Project authority.
+Rollback shall restore only a prior AI-DOS product instance. It shall not rewrite Target source, ProjectStatus, DevelopmentPhases, Roadmap, evidence, memory, workflow state, registry state, provider state, or protected areas.
 
-## 14. Installation Lifecycle
+Unverifiable prior-version integrity requires safe stop.
 
-Installation is the lifecycle by which a distribution artifact becomes available to a Target Project or execution provider as an installed AI-DOS product instance.
+## 13. Uninstall Boundary
 
-Architectural installation phases:
+Uninstall shall remove or deactivate only content and installation records identified as AI-DOS-owned.
 
-1. **Acquire artifact**: obtain package and adjacent release metadata from an approved channel.
-2. **Preflight validation**: validate identity, version, channel, manifest presence, integrity records, and compatibility declaration.
-3. **Stage package**: place package content in a temporary or isolated staging boundary.
-4. **Inspect manifest**: determine AI-DOS-owned content, version lineage, rollback metadata, and uninstall boundary.
-5. **Apply installation**: make release-approved product content available in an installed product boundary.
-6. **Record installation state**: record enough local state to identify installed version, manifest, integrity result, and rollback candidate.
-7. **Post-install validation**: verify installed content matches manifest and integrity expectations.
+It shall preserve Target truth and fail safely when ownership is ambiguous.
 
-This lifecycle does not define command names, path names, environment variables, package manager behavior, local CLI behavior, Target integration steps, MCP registration, hosted Provider activation, or runtime startup.
+Target-owned integration artifacts may be removed only through an explicit, opt-in Target integration contract governed separately from A.6.
 
-## 15. Update Lifecycle
+## 14. Product Discovery Boundary
 
-Update is the lifecycle by which an installed AI-DOS product instance moves from one version to another.
+An installed AI-DOS product instance shall expose enough approved metadata for a consumer to determine:
 
-Architectural update phases:
-
-1. **Discover candidate release**: identify a candidate package from an approved channel.
-2. **Validate candidate**: validate manifest, integrity, governance status, and compatibility metadata before applying.
-3. **Compare installed state**: compare candidate version and compatibility posture against installed version.
-4. **Stage candidate**: stage candidate without overwriting the known-good installed product boundary.
-5. **Prepare rollback point**: preserve enough prior state to return to the previous known-good version.
-6. **Apply update**: replace or switch the installed product boundary to the candidate release.
-7. **Validate updated state**: verify installed content, manifest identity, integrity, and version record.
-8. **Retain rollback metadata**: preserve rollback metadata according to governance and local policy.
-
-This lifecycle does not define update commands, background update services, automatic update behavior, network transport, registry polling, MCP tools, hosted Provider behavior, or Target integration behavior.
-
-## 16. Rollback Strategy
-
-Rollback restores a prior known-good AI-DOS product version when an update is unsafe, incompatible, incomplete, or rejected.
-
-Rollback requirements:
-
-1. Update lifecycle must preserve a rollback candidate before replacing or switching an installed version.
-2. The rollback candidate must have its own manifest and integrity records.
-3. Rollback must restore AI-DOS-owned product content only.
-4. Rollback must not rewrite Target Project truth, Target Project planning, Target source, Target protected areas, or Target evidence unless a later Target integration RFC explicitly defines such behavior and Human Governance authorizes it.
-5. Rollback must report version restored, validation result, and unresolved compatibility risks.
-6. Rollback must fail safely when prior version integrity cannot be validated.
-
-Rollback is a product installation-state operation. It is not Target Project state mutation and does not imply ProjectStatus, DevelopmentPhases, Roadmap, source code, runtime state, or provider state changes.
-
-## 17. Uninstall Strategy
-
-Uninstall removes or deactivates an installed AI-DOS product instance while preserving Target Project ownership.
-
-Uninstall requirements:
-
-1. The manifest must identify AI-DOS-owned installed content boundaries.
-2. Uninstall must remove or deactivate only AI-DOS-owned product content and installation records.
-3. Uninstall must not remove Target Project truth, Target source, Target validation assets, Target evidence, or Target-owned configuration unless a future Target integration RFC explicitly defines opt-in Target-owned cleanup behavior.
-4. Uninstall must preserve auditability of what was removed when governance or local policy requires an uninstall record.
-5. Uninstall must not require access to the private AI-DOS development repository.
-6. Uninstall must fail safely when ownership of a file or directory cannot be determined.
-
-This strategy does not specify uninstall commands, file paths, service shutdown behavior, registry behavior, MCP deregistration, CLI behavior, or hosted Provider deprovisioning.
-
-## 18. Runtime Discovery
-
-Runtime discovery is the architectural ability for a consumer to identify an installed AI-DOS product instance and read enough metadata to determine whether it can be consumed.
-
-Discovery requirements:
-
-1. Installed AI-DOS product instances must expose discoverable identity metadata.
-2. Discovery metadata must include product identifier, product version, release channel, manifest reference, integrity status or reference, and compatibility declaration.
-3. Discovery must distinguish installed AI-DOS product content from Target Project truth.
-4. Discovery must not require private development repository access.
-5. Discovery must not imply runtime startup, CLI behavior, MCP protocol, hosted Provider activation, or Target integration.
-6. Discovery failures must be treated as blockers before trust or execution.
-
-This RFC defines discovery requirements only. It does not define the System Interface, discovery file names, environment variables, IPC, registry APIs, MCP resources, CLI commands, hosted Provider discovery, or runtime behavior.
-
-## 19. Distribution Governance
-
-Distribution governance controls which product content may leave the private AI-DOS development boundary and under what release identity.
-
-Governance responsibilities:
-
-| Responsibility | Governance Requirement |
-|:---|:---|
-| Release content selection | Only release-approved product content may enter distribution artifacts. |
-| Private content exclusion | Release validation must check that private repository history, secrets, unapproved drafts, and self-hosting Target state are excluded. |
-| Version assignment | Product version must be assigned before release approval. |
-| Channel assignment | Release channel must be approved and visible in manifest metadata. |
-| Compatibility declaration | Breaking-change and compatibility posture must be reviewed. |
-| Integrity readiness | Checksums and signatures must be produced or explicitly waived by Human Governance for a non-stable channel. |
-| Evidence disclosure | Public validation summaries must avoid leaking private evidence while still supporting trust. |
-| Release record | Each release must have a durable release record sufficient for audit, rollback, and support decisions. |
-
-Distribution governance must remain separate from Target Project governance. A Target Project may decide whether to consume a release, but it does not approve AI-DOS product release unless Human Governance delegates such authority through a future governance RFC.
-
-## 20. Human Governance Release Gates
-
-An AI-DOS distribution release may proceed only when Human Governance approves the release gate for the target channel.
-
-Minimum release gates:
-
-1. **Scope gate**: release content is identified and bounded.
-2. **Private-boundary gate**: private development repository content that is not approved for distribution is excluded.
-3. **Metadata gate**: manifest, release notes, version, channel, compatibility declaration, and governance status are present.
-4. **Integrity gate**: checksums and signatures or approved channel-specific waivers are present.
-5. **Compatibility gate**: breaking-change posture and compatibility expectations are declared.
-6. **Validation gate**: release validation summary is complete for the channel.
-7. **Rollback gate**: rollback-relevant lineage and known rollback limitations are declared.
-8. **Uninstall gate**: AI-DOS-owned content boundaries are declared.
-9. **Risk gate**: known release risks are disclosed.
-10. **Approval gate**: Human Governance explicitly approves release to the declared channel.
-
-Passing technical checks is not release approval. Human Governance remains final for release authorization, promotion, emergency release acceptance, channel escalation, and waiver approval.
-
-## 21. Risks
-
-| Risk | Impact | Mitigation |
-|:---|:---|:---|
-| Private repository leakage | Exposes unpublished source, history, evidence, planning, or secrets. | Enforce release assembly boundary, private-boundary validation, and Human Governance release gates. |
-| Artifact tampering | Target Project installs untrusted or modified AI-DOS content. | Require manifests, checksums, signatures, and safe-stop behavior on integrity failure. |
-| Compatibility ambiguity | Target Projects cannot determine whether a release is safe to consume. | Require compatibility declarations, breaking-change status, and release notes. |
-| Distribution mistaken for implementation | Consumers infer CLI, MCP, hosted Provider, or runtime behavior from packaging architecture. | Keep lifecycle definitions architectural and defer executable behavior to future RFCs. |
-| Target truth contamination | AI-DOS package includes self-hosting Target Project state or external Target assumptions. | Exclude Target-owned planning and state from product artifacts. |
-| Rollback failure | Target Project cannot return to a prior known-good AI-DOS version. | Require rollback metadata, prior-version preservation, and integrity validation. |
-| Uninstall damage | Product removal deletes Target-owned files. | Require manifest-owned uninstall boundary and fail-safe ownership checks. |
-| Governance bypass | Artifacts are published without Human Governance approval. | Require release gates and durable release records. |
-| Channel confusion | Consumers install experimental content as stable. | Require channel metadata, release notes, and channel-specific warnings. |
-| Key-management weakness | Signing material compromise undermines trust. | Defer concrete key management to future RFC while requiring separation of signing authority and private key exclusion. |
-
-## 22. Future Authority and RFC Dependencies
-
-This RFC intentionally leaves executable behavior and transport-specific design to future RFCs. Future RFC references are dependency placeholders only; they do not authorize creation of parallel authorities.
-
-Before any future distribution-related authority is created, the proposed authority must be checked against existing AI-DOS product authorities, Target Project authorities, System Layer procedures, Operational Core documents, standards, runtime RFCs, engine RFCs, workflows, commands, templates, and governance records. If an existing authority owns the same semantic responsibility, the existing authority must be reused or corrected in place through its owning governance path. A new authority may be proposed only when no existing authority owns the required responsibility and Human Governance explicitly authorizes the new scope.
-
-Required or expected future authority dependencies include:
-
-| Future Authority Dependency | Dependency Purpose |
-|:---|:---|
-| Release Engineering and Artifact Assembly RFC | Define concrete release assembly workflow, validation evidence requirements, and artifact publication process. |
-| Package Manifest Schema RFC | Define concrete manifest syntax, schema, field validation, and compatibility with STD-010 / M.9 validation semantics. |
-| Signing and Provenance RFC | Define cryptographic algorithms, key management, signing authority, attestation, revocation, and verification procedures. |
-| Local Installation Controller RFC | Define local install, update, rollback, and uninstall mechanics without broadening this RFC into CLI behavior. |
-| AI-DOS System Interface RFC | Define how installed product instances expose approved system-facing discovery and control interfaces. |
-| Local CLI RFC | Define command-line behavior, if Human Governance authorizes a local CLI. |
-| MCP Provider RFC | Define MCP protocol exposure, if Human Governance authorizes MCP support. |
-| Hosted Provider RFC | Define hosted distribution or execution provider architecture, if Human Governance authorizes hosted operation. |
-| Evolution Transport RFC | Define release-to-release evolution transport, if needed. |
-| Feedback Protocol RFC | Define how Target Projects can send feedback or evidence without exposing private repositories or Target secrets. |
-| Target Integration RFC | Define Target-side integration details, if and only if Human Governance authorizes Target integration design. |
-
-No future RFC or authority artifact is automatically authorized by this document. Each requires existing-authority discovery, semantic ownership review, explicit Human Governance authorization, scope, validation expectations, and release or implementation boundaries.
-
----
-
-## Version History
-
-| Version | Date | Author | Description |
-|:---|:---|:---|:---|
-| `0.1.0-draft` | 2026-07-15 | Framework Architecture Team | Initial AI-DOS Distribution Foundation RFC defining package, distribution, versioning, install, update, rollback, uninstall, discovery, integrity, compatibility, and governance boundaries. |
-| `0.1.1-draft` | 2026-07-15 | Framework Architecture Team | Clarified future authority dependency handling to require existing-authority discovery, semantic ownership review, reuse of existing owning authority, and Human Governance authorization before any new authority artifact is proposed. |
+- product identity and version;
+- release channel;
+- manifest reference;
+- integrity posture;
+- compatibility declaration;
+- installed ownership boundary.
+
+Discovery does not imply execution authorization, Runtime startup, provider activation, CLI availability, MCP availability, or Target compatibility.
+
+## 15. Governance and Release Gates
+
+Human Governance remains final for product release authorization.
+
+Minimum gates are:
+
+1. release scope;
+2. private-boundary and Target-contamination validation;
+3. product-content approval;
+4. version and channel assignment;
+5. manifest completeness;
+6. integrity and provenance readiness;
+7. compatibility declaration;
+8. validation evidence summary;
+9. rollback and uninstall boundary readiness;
+10. risk disclosure;
+11. explicit release approval.
+
+Technical checks, Engine outputs, certification artifacts, provider results, or repository state do not independently authorize a release.
+
+## 16. Invariants
+
+1. A distribution artifact contains only release-approved product truth.
+2. Released product truth never silently includes Target truth.
+3. Forge AI paths, planning, state, memory, workflow, registry, and evidence are never defaults for external Targets.
+4. A package identity is independent of private repository history.
+5. Installation does not authorize Target mutation or execution.
+6. Update preserves a rollback boundary before replacing known-good content.
+7. Uninstall removes only AI-DOS-owned content.
+8. Integrity or ownership ambiguity causes safe stop.
+9. Providers and transports do not become release authorities.
+10. A.3–A.5 contracts may constrain compatibility but do not own A.6 distribution authority.
+
+## 17. Explicit Non-Ownership
+
+A.6 does not own:
+
+- AI-DOS private development process;
+- Target Project planning or state;
+- Runtime or Engine behavior;
+- release tooling implementation;
+- package schema syntax;
+- cryptographic implementation;
+- installer or updater implementation;
+- CLI, MCP, API, registry, or hosted-provider behavior;
+- Target integration mechanics;
+- feedback or evolution transport;
+- product release approval itself.
+
+## 18. Downstream Specifications
+
+Potential downstream specifications include:
+
+- Release Engineering and Artifact Assembly RFC;
+- Package Manifest Schema RFC;
+- Signing and Provenance RFC;
+- Local Installation Controller RFC;
+- AI-DOS System Interface RFC;
+- Local CLI RFC;
+- MCP Provider RFC;
+- Hosted Provider RFC;
+- Evolution Transport RFC;
+- Feedback Protocol RFC;
+- Target Integration RFC.
+
+This list authorizes no artifact automatically. Each proposal requires semantic ownership discovery, explicit scope, dependency review, Human Governance authorization, and proof that it does not create parallel authority.
+
+## 19. Conformance
+
+A downstream distribution mechanism conforms when it:
+
+- consumes released product truth rather than private development truth;
+- preserves the A.2 product/Target boundary;
+- validates identity, integrity, provenance, and compatibility before trust;
+- separates installed AI-DOS content from Target-owned content;
+- provides safe update, rollback, and uninstall boundaries;
+- avoids Forge AI fallback assumptions;
+- produces traceable release and installation evidence;
+- stops safely when authority, integrity, compatibility, or ownership is unresolved.
+
+## 20. Promotion
+
+Canonical promotion requires:
+
+- consistency with A.1 and A.2;
+- metadata and terminology conformance;
+- product-purity review;
+- Target-independence review;
+- Runtime/Engine compatibility-boundary review without dependency inversion;
+- distribution governance review;
+- Human Governance approval;
+- explicit promotion record.
