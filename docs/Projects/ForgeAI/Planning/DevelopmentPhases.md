@@ -1,4 +1,4 @@
-# Forge AI Development Phases
+# Forge AI AI-DOS Product Capability, Distribution, Provider Integration, Evolution, External Target Readiness, and AI Highway Operations Development Phases
 
 ---
 
@@ -7,877 +7,454 @@
 | Field | Value |
 |:---|:---|
 | Identifier | `FORGE-AI.TARGET.DEVELOPMENT-PHASES` |
-| Title | Forge AI Development Phases |
-| Version | `5.1.0-draft` |
+| Title | Forge AI AI-DOS Product Capability, Distribution, Provider Integration, Evolution, External Target Readiness, and AI Highway Operations Development Phases |
+| Version | `6.0.0-draft` |
 | Status | Draft |
-| Canonical Status | Active Forge AI Target Project strategic development program; not an AI-DOS lifecycle and not a universal phase model for external Target Projects |
-| Classification | Target Project Strategic Capability Program |
+| Canonical Status | Active Forge AI Target Project strategic development program; not AI-DOS product truth and not a universal lifecycle for external Target Projects |
+| Classification | Target Project Strategic Product Capability Program |
 | Document Type | Development Phase Program |
 | Owner | Forge AI Target Project Governance |
 | Approval Authority | Human Governance |
-| Last Updated | 2026-07-11 |
+| Last Updated | 2026-07-15 |
 | Traceability ID | `FORGE-AI.TARGET.DEVELOPMENT-PHASES` |
-| Scope | AI-DOS capability maturity, evidence maturity, autonomy progression, governance checkpoints, reusable outcomes, and external Target readiness as directed by Forge AI. |
-| Out of Scope | AI-DOS internal architecture, AI-DOS implementation design, live ProjectStatus updates, roadmap replacement, sprint planning, cleanup execution, repository disposition, certification, and automatic phase advancement. |
+| Scope | AI-DOS product capability maturity, private/public product boundary, runtime distribution, provider integration, independent Target operation, privacy-safe product evolution input, governed release progression, and multi-Target AI Highway operations as directed by Forge AI. |
+| Out of Scope | Distribution implementation, CLI implementation, MCP implementation, hosted-provider implementation, adapter implementation, API design, package layout creation, RFC creation, `docs/AI/` changes, live ProjectStatus updates, Axis Suite activation, certification, pricing, vendor selection, and automatic phase advancement. |
 | Normative Authority | Human Governance; Forge AI Target Project contract; `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-and-Autonomy-Model.md` |
 | Primary Authority | `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-and-Autonomy-Model.md` |
-| Consumes | Forge AI mission, Human Governance decisions, resolved Target Context, ProjectStatus evidence, roadmap direction, and execution evidence. |
-| Produces | Capability-oriented Forge AI development phases, governance gates, evidence expectations, autonomy progression model, and maturity criteria for AI-DOS development. |
+| Consumes | Forge AI mission, Human Governance decisions, resolved Target Context, ProjectStatus evidence as read-only context, roadmap direction, execution evidence, distribution-readiness evidence, privacy evidence, and release-governance decisions. |
+| Produces | Capability-oriented Forge AI development phases, distribution maturity gates, provider-integration readiness criteria, privacy-safe evolution criteria, independent Target readiness criteria, evidence expectations, and governance gates for AI-DOS product evolution. |
 | Certification Status | Not certified |
 
 ---
 
 ## 1. Purpose
 
-This document defines Forge AI's strategic development program for maturing AI-DOS as a reusable, Target-independent capability system.
+This document defines Forge AI's complete capability maturity program for developing, distributing, validating, operating, and evolving AI-DOS as a reusable AI Operating System.
 
-The phases answer one governing question:
+The phase program answers:
 
 ```text
-What capability must AI-DOS gain next?
+What reusable AI-DOS product capability
+must be acquired next,
+what evidence proves it,
+and what Human Governance decision
+permits progression?
 ```
 
-Forge AI is the AI-DOS Development and Autonomy Enablement Target Project. These phases belong to Forge AI and describe AI-DOS capability maturity under Forge AI governance. They are not an AI-DOS lifecycle, not external Target Project lifecycle requirements, and not implementation authorization.
-
-Every phase must increase AI-DOS capability, produce reusable outcomes, increase evidence, support autonomy, preserve AI-DOS purity, and pass an explicit Human Governance checkpoint before the next maturity claim is accepted.
+Forge AI is the Target Project that governs AI-DOS product evolution. These phases remain Forge AI planning truth and do not become AI-DOS product truth, external Target obligations, implementation authorization, ProjectStatus transition authority, or release approval.
 
 ---
 
-## 2. Strategic Principles
-
-1. **Capability before activity.** A phase is defined by the reusable AI-DOS capability it matures.
-2. **Evidence before maturity claims.** Capability progression requires observable proof, validation output, review findings, blocker handling, and Human Governance acceptance.
-3. **Human Governance remains final.** AI-DOS may assist, execute, validate, review, recover, and recommend, but it does not self-approve maturity.
-4. **Target Context is explicit.** Forge AI supplies bounded Target Context, objectives, constraints, resources, and validation expectations.
-5. **AI-DOS purity is mandatory.** AI-DOS product truth remains reusable, Target-independent, and free of Forge AI project planning truth.
-6. **Autonomy is progressive.** Autonomy increases only through accepted evidence that AI-DOS can preserve boundaries, validate results, escalate blockers, and recover safely.
-7. **Review is not approval.** AI-DOS review findings inform Human Governance; they do not replace governance gates.
-8. **External readiness requires proof.** Self-application is necessary evidence, but independent Target operation is required before multi-Target readiness is accepted.
-
----
-
-## 3. Capability Maturity Philosophy
-
-Development phases are capability maturity levels for AI-DOS as developed and validated by Forge AI.
-
-Each phase defines:
-
-- a capability objective;
-- reusable outcomes that should benefit any authorized Target Project;
-- evidence required to prove the capability;
-- governance gates that determine whether maturity is accepted;
-- explicit non-goals to prevent scope drift; and
-- risks that must be managed before claiming advancement.
-
-A phase may generate artifacts, plans, validations, or changes, but those artifacts are evidence of capability maturity rather than the purpose of the phase.
-
----
-
-## 3.1 Active Capability Advancement Model
-
-The active capability model resolves the Pilot Execution #2 finding that repository activity can be mistaken for capability progress. Capability maturity is demonstrated by reusable capability progress, not by repository activity.
-
-For every active phase capability, work selection must identify all of the following before claiming advancement:
-
-| Required Capability Field | Selection Meaning |
-|:---|:---|
-| Operational outcome | The reusable AI-DOS behavior, decision quality, safety behavior, validation behavior, recovery behavior, portability behavior, or governance-support behavior that should be stronger after the work. |
-| Capability advancement semantics | The specific way the work moves the declared capability toward maturity, such as making invocation more bounded, planning more evidence-grounded, execution more validated, review more auditable, recovery safer, portability less Forge AI-dependent, or improvement more evidence-derived. |
-| Required advancement evidence | The concrete evidence Human Governance can inspect to determine that reusable capability improved, including task input, Target Context used, changed artifacts when applicable, validation output, review findings, blocker handling, reuse proof, purity proof, and governance acceptance boundary. |
-| Non-advancing activities | Repository activity that may support work but does not by itself mature the declared capability unless Human Governance explicitly declares that activity to be the active capability objective. |
-
-Capability advancement requires a direct trace from the active capability to the operational outcome and evidence. A completed work unit that only changes repository organization, readability, navigation, formatting, status freshness, audit presentation, or planning text is not capability advancement unless the authorized objective is specifically to mature that planning, governance-support, evidence, or navigation capability.
-
-Activities that do not constitute capability advancement by themselves include:
-
-- README alignment;
-- repository navigation;
-- formatting;
-- documentation cleanup;
-- planning maintenance;
-- audits;
-- operational evidence reports;
-- ProjectStatus maintenance; and
-- other repository maintenance that does not demonstrate reusable AI-DOS capability progress.
-
-These activities may be valid bounded Target work, supporting evidence, or governance preparation. They shall not be counted as phase maturity evidence unless they are explicitly declared by Human Governance as the active capability objective and the resulting evidence demonstrates reusable capability progress.
-
----
-
-## 4. Autonomy Progression
-
-Autonomy means completing increasingly complex, multi-step, bounded work with less direct intervention while preserving explicit authority, constraints, validation, traceability, escalation, and safe-stop behavior.
-
-The phase program maps onto the Forge AI autonomy ladder:
-
-| Phase | Autonomy Emphasis | Expected Maturity Movement |
-|:---:|:---|:---|
-| 0 | Human-directed boundary discipline | Establishes safe Level 0 operation. |
-| 1 | Context-aware invocation | Enables Level 1 context-aware assistance. |
-| 2 | Bounded reasoning and planning | Enables Level 2 bounded planning. |
-| 3 | Controlled execution and self-validation | Enables Levels 3 through 5. |
-| 4 | Governed self-application | Strengthens Levels 5 through 7 under Forge AI oversight. |
-| 5 | Recovery, replanning, and escalation | Matures Levels 6 through 8. |
-| 6 | Independent Target portability | Proves Level 9 multi-Target operation readiness. |
-| 7 | Sustained governed improvement | Maintains Level 8 continuous improvement without self-authorization. |
-
-No phase completion automatically grants autonomy. Human Governance accepts autonomy only when the required evidence is present.
-
----
-
-## 5. Evidence Model
-
-Every phase must produce traceable evidence sufficient for Human Governance to decide whether AI-DOS has matured.
-
-Minimum evidence categories:
-
-| Evidence Category | Requirement |
-|:---|:---|
-| Input evidence | Objective, authorized scope, constraints, protected areas, and Target Context used. |
-| Capability evidence | Demonstration that the phase capability works in bounded conditions. |
-| Reuse evidence | Proof that outcomes remain reusable and are not hard-coded to Forge AI project truth. |
-| Validation evidence | Commands, checks, outputs, failures, skipped checks, and environment limitations. |
-| Review evidence | Findings, uncertainty, blocker handling, and safety assessment. |
-| Governance evidence | Gate decision, acceptance conditions, rejected claims, or required follow-up. |
-| Autonomy evidence | Reduced intervention, safe-stop behavior, recovery, replanning, or escalation proof where applicable. |
-| Purity evidence | Audit result showing AI-DOS product truth remains Target-independent. |
-
-Evidence is not optional. Missing, failed, or incomplete validation is recorded as evidence and may block phase advancement.
-
----
-
-## 6. Governance Model
-
-Each phase ends at a governance gate. A gate may accept, reject, defer, narrow, or require more evidence.
-
-Gate acceptance requires:
-
-1. the phase capability is demonstrated;
-2. reusable outcomes are identified;
-3. evidence is complete enough for audit;
-4. AI-DOS purity is preserved;
-5. autonomy claims are bounded and evidence-backed;
-6. risks and blockers are reported honestly; and
-7. Human Governance explicitly accepts the gate result.
-
-Gate acceptance does not update ProjectStatus automatically, change the roadmap automatically, certify AI-DOS, or authorize unrelated implementation.
-
----
-
-## 7. Development Flow
+## 2. Governing Product Model
 
 ```text
-Mission
+Private AI-DOS Development Repository
+        ↓
+Build and Packaging
+        ↓
+Signed / Versioned AI-DOS Distribution
+        ↓
+Codex Adapter, CLI, MCP, or Hosted Provider
+        ↓
+Independent Target Repository
+        ↓
+Execution, Validation, Review, Evidence
+        ↓
+Privacy-Safe Evolution Input
+        ↓
+Governed AI-DOS Product Improvement
+        ↓
+New AI-DOS Distribution Release
+```
 
-↓
+AI-DOS development truth and distributable runtime artifacts are separate. AI-DOS is an AI Operating System, not a documentation bundle copied into every Target Repository.
 
-Capability
+---
 
-↓
+## 3. Required Principles
 
-Evidence
+1. AI-DOS is an AI Operating System, not a documentation bundle installed into every Target Repository.
+2. The private AI-DOS development repository is not assumed to be visible to end users.
+3. Independent Target Repositories do not contain AI-DOS internal architecture, workflows, engines, governance documents, or private development state.
+4. Target Repositories expose only Target-owned contracts, resources, constraints, protected areas, validation commands, and execution authority.
+5. Codex or another AI host acts between the Target Repository and the installed or hosted AI-DOS runtime.
+6. AI-DOS development truth and runtime distribution artifacts are separate.
+7. Feedback and improvement opportunities must not require future access to the originating Target Repository.
+8. Private source code, credentials, personal data, proprietary repository content, and unnecessary Target Context must not leave the Target environment by default.
+9. Human Governance remains final for capability acceptance, distribution release, hosted-provider activation, and AI-DOS product evolution.
+10. Passing tests does not automatically authorize release or capability promotion.
 
-↓
+---
 
-Governance Gate
+## 4. Phase Dependency Graph
 
-↓
-
-Next Phase
+```text
+Identity and Purity
+    ↓
+Target Invocation
+    ↓
+Bounded Execution
+    ↓
+Governed Self-Application
+    ↓
+Distribution Foundation
+    ↓
+Local CLI
+    ↓
+System Interface
+    ↓
+Local MCP
+    ↓
+Evolution Transport
+    ↓
+External Target Readiness
+    ↓
+Hosted Provider
+    ↓
+Multi-Target AI Highway
 ```
 
 ```mermaid
 flowchart TD
-    A[Mission] --> B[Capability]
-    B --> C[Evidence]
-    C --> D[Governance Gate]
-    D --> E[Next Phase]
+    P0[Phase 0: Identity and Purity] --> P1[Phase 1: Target Invocation]
+    P1 --> P2[Phase 2: Bounded Execution]
+    P2 --> P3[Phase 3: Governed Self-Application]
+    P3 --> P4[Phase 4: Distribution Foundation]
+    P4 --> P5[Phase 5: Local CLI]
+    P5 --> P6[Phase 6: System Interface]
+    P6 --> P7[Phase 7: Local MCP]
+    P7 --> P8[Phase 8: Evolution Transport]
+    P8 --> P9[Phase 9: External Target Readiness]
+    P9 --> P10[Phase 10: Hosted Provider]
+    P10 --> P11[Phase 11: Multi-Target AI Highway]
 ```
 
----
-
-## 8. Phase Dependency Graph
-
-```mermaid
-flowchart LR
-    P0[Phase 0<br/>Identity, Boundary, Purity] --> P1[Phase 1<br/>Invocation, Context, Execution Contract]
-    P1 --> P2[Phase 2<br/>Knowledge, Planning, Decision]
-    P2 --> P3[Phase 3<br/>Execution, Validation, Review]
-    P3 --> P4[Phase 4<br/>Governed Self-Application]
-    P4 --> P5[Phase 5<br/>Autonomy]
-    P5 --> P6[Phase 6<br/>External Target Readiness]
-    P6 --> P7[Phase 7<br/>Continuous Improvement]
-    P3 --> P5
-    P4 --> P7
-```
+Future phases are maturity targets, not accepted active capabilities. No phase is accepted, released, or activated by planning language alone.
 
 ---
 
-## 9. Capability Dependency Graph
+## 5. Phase Field Contract
 
-```mermaid
-flowchart TD
-    A[AI-DOS / Target Separation] --> B[Target-First Invocation]
-    B --> C[Context Understanding]
-    C --> D[Bounded Planning]
-    D --> E[Bounded Execution]
-    E --> F[Validation and Review]
-    F --> G[Governed Self-Application]
-    G --> H[Recovery and Replanning]
-    H --> I[External Target Portability]
-    I --> J[Evidence-Driven Continuous Improvement]
-```
+Every phase below defines: Purpose, Capability Gain, Reusable Outcome, Dependencies, Required Evidence, Governance Gate, Success Criteria, Exit Criteria, Distribution Impact, Privacy and Security Boundary, Target Independence Requirement, Non-Goals, and Risks.
 
 ---
 
-## 10. Autonomy Progression Diagram
+## 6. Development Phases
 
-```mermaid
-flowchart LR
-    L0[Level 0<br/>Human-Directed Execution] --> L1[Level 1<br/>Context-Aware Assistance]
-    L1 --> L2[Level 2<br/>Bounded Planning]
-    L2 --> L3[Level 3<br/>Bounded Execution]
-    L3 --> L4[Level 4<br/>Self-Validation]
-    L4 --> L5[Level 5<br/>Review and Escalation]
-    L5 --> L6[Level 6<br/>Recovery and Replanning]
-    L6 --> L7[Level 7<br/>Autonomous Workflow Completion]
-    L7 --> L8[Level 8<br/>Governed Continuous Improvement]
-    L8 --> L9[Level 9<br/>Multi-Target Operation]
-```
+### Phase 0 — Product Identity, Boundary, and Purity
 
----
-
-## 11. Phase Matrix
-
-| Phase | Name | Primary Capability Gain | Reusable Outcome | Governance Gate |
-|:---:|:---|:---|:---|:---|
-| 0 | Identity, Boundary, Purity | Separates AI-DOS product truth from Target Project truth. | Purity rules and boundary validation. | Purity accepted. |
-| 1 | Invocation, Context, Execution Contract | Invokes AI-DOS against explicit Target Context. | Reusable invocation and execution contract model. | Invocation contract accepted. |
-| 2 | Knowledge, Planning, Decision | Understands context, plans bounded work, supports decisions. | Reusable planning and decision-support capability. | Planning quality accepted. |
-| 3 | Execution, Validation, Review | Executes bounded work with validation and review. | Reusable execution evidence loop. | Execution evidence accepted. |
-| 4 | Governed Self-Application | Uses AI-DOS to improve AI-DOS under Forge AI governance. | Safe self-application feedback loop. | Self-application accepted. |
-| 5 | Autonomy | Recovers, replans, escalates, and completes bounded workflows. | Progressive autonomy controls. | Autonomy maturity accepted. |
-| 6 | External Target Readiness | Operates across independent Target Contexts without leakage. | Portable multi-Target operation model. | External readiness accepted. |
-| 7 | Continuous Improvement | Evolves capabilities from evidence over time. | Sustainable improvement governance. | Improvement governance accepted. |
-
----
-
-## 12. Phases
-
-### Phase 0 — Identity, Boundary, Purity
-
-**Purpose**
-
-Establish that AI-DOS and Forge AI are distinct: Forge AI is the Target Project developing AI-DOS, while AI-DOS is reusable product truth and capability behavior.
-
-**Capability Advancement Semantics**
-
-Advancement means stronger reusable separation, purity recognition, protected-area discipline, and Target-independence proof. Repository cleanup or boundary wording alone is not advancement unless it produces auditable separation evidence accepted for this phase.
-
-**Capabilities**
-
-- AI-DOS / Target separation.
-- Framework purity.
-- Target independence.
-- Product-project boundary recognition.
-- Protected-area respect.
-
-**Success Criteria**
-
-- AI-DOS product truth is distinguishable from Forge AI project truth.
-- Forge AI planning, status, roadmap, and governance remain outside AI-DOS product truth.
-- Target independence is stated and testable.
-- Protected areas are identified before execution.
-
-**Evidence**
-
-- Purity audit.
-- Boundary validation.
-- Product-project separation findings.
-- Protected-area review.
-
-**Governance Gate**
-
-Purity accepted.
-
-**Exit Criteria**
-
-- Human Governance accepts that AI-DOS purity and Target independence are preserved.
-- No Forge AI project truth is treated as reusable AI-DOS product truth.
-- Boundary violations are remediated or recorded as blockers.
-
-**Dependencies**
-
-- Forge AI mission and autonomy model.
-- Target Project contract.
-- Human Governance decisions on `docs/AI/` and Forge AI identity.
-
-**Non-goals**
-
-- Defining AI-DOS internals.
-- Certifying AI-DOS.
-- Updating live project state.
-- Authorizing implementation.
-
-**Risks**
-
-- Forge AI project-specific assumptions leak into AI-DOS product truth.
-- Self-application is mistaken for identity merger.
-- Boundary language becomes too vague to audit.
-
-### Phase 1 — Invocation, Context, Execution Contract
-
-**Purpose**
-
-Mature AI-DOS from a separated product into an invocable reusable capability provider that operates only against explicit Target Context and bounded execution rules.
-
-**Capability Advancement Semantics**
-
-Advancement means AI-DOS becomes more capable at accepting explicit Target Context, enforcing invocation boundaries, and stopping on missing authority. Navigation or README work is not advancement unless the active objective is to improve invocation reliability and evidence proves that outcome.
-
-**Capabilities**
-
-- Target-first invocation.
-- Target Context intake.
-- Execution boundary recognition.
-- Invocation contract.
-- Blocker reporting for missing context or authority.
-
-**Success Criteria**
-
-- AI-DOS can identify objective, scope, constraints, resources, validation expectations, and protected areas before action.
-- Invocation input and output are traceable.
-- Missing authority or context stops or narrows work.
-- Reusable invocation behavior does not depend on Forge AI-specific paths or state.
-
-**Evidence**
-
-- Invocation records.
-- Resolved Target Context summaries.
-- Execution boundary checks.
-- Blocker reports for absent or unsafe inputs.
-
-**Governance Gate**
-
-Invocation contract accepted.
-
-**Exit Criteria**
-
-- Human Governance accepts that AI-DOS can be invoked through a bounded, Target-first contract.
-- Invocation records show what AI-DOS was allowed to do and what it refused or escalated.
-- Execution boundaries are enforceable before planning or action.
-
-**Dependencies**
-
-- Phase 0 accepted purity boundary.
-- Explicit Target Context supplied by Forge AI or another authorized Target Project.
-
-**Non-goals**
-
-- Performing broad execution.
-- Inferring lifecycle authority.
-- Owning Target Project resources.
-- Becoming a project-resource registry.
-
-**Risks**
-
-- Invocation proceeds on implicit assumptions.
-- Target resources are treated as AI-DOS product truth.
-- Boundary failures appear only after execution has started.
-
-### Phase 2 — Knowledge, Planning, Decision
-
-**Purpose**
-
-Mature AI-DOS capability to understand supplied context, integrate knowledge, produce bounded plans, and support human decisions without replacing Human Governance.
-
-**Capability Advancement Semantics**
-
-Advancement means better evidence-grounded reasoning, bounded planning, explicit assumptions, risk handling, or validation strategy selection. Planning-document maintenance is not advancement unless Human Governance declares the planning capability itself as the objective and evidence shows reusable planning improvement.
-
-**Capabilities**
-
-- Context understanding.
-- Planning.
-- Decision support.
-- Knowledge integration.
-- Risk and dependency identification.
-- Validation strategy selection.
-
-**Success Criteria**
-
-- AI-DOS can ground recommendations in supplied Target Context and cited artifacts.
-- Plans include scope, assumptions, dependencies, risks, validation, and escalation triggers.
-- Decision support distinguishes options, tradeoffs, unknowns, and governance boundaries.
-- Knowledge integration preserves Target isolation.
-
-**Evidence**
-
-- Grounded context analyses.
-- Bounded plans.
-- Decision records or recommendations.
-- Risk and dependency matrices.
-- Validation strategies.
-
-**Governance Gate**
-
-Planning quality accepted.
-
-**Exit Criteria**
-
-- Human Governance accepts that AI-DOS can plan and support decisions within explicit authority.
-- Plans are actionable, bounded, and validation-ready.
-- Uncertainty and blockers are reported rather than hidden.
-
-**Dependencies**
-
-- Phase 1 invocation contract.
-- Available Target resources and validation expectations.
-
-**Non-goals**
-
-- Self-approval of plans.
-- Silent expansion from planning into execution.
-- Replacing roadmap authority or ProjectStatus.
-- Encoding Forge AI planning truth into AI-DOS product truth.
-
-**Risks**
-
-- Plan confidence exceeds available evidence.
-- Decision support is mistaken for approval.
-- Knowledge integration crosses Target boundaries.
-
-### Phase 3 — Execution, Validation, Review
-
-**Purpose**
-
-Mature AI-DOS capability to execute authorized bounded work, validate outcomes, review its own results, and produce certification-ready evidence without granting itself certification.
-
-**Capability Advancement Semantics**
-
-Advancement means stronger bounded execution, validation, review, defect reporting, blocker handling, or evidence packaging. Formatting, cleanup, or evidence-report drafting is not advancement unless it is explicitly the governed execution-evidence objective and improves reusable execution capability.
-
-**Capabilities**
-
-- Bounded execution.
-- Validation.
-- Review.
-- Certification support.
-- Evidence production.
-- Defect and blocker reporting.
-
-**Success Criteria**
-
-- Execution remains inside approved scope and protected-area limits.
-- Validation commands or checks are run, or limitations are reported.
-- Review identifies defects, uncertainties, and residual risks.
-- Evidence supports independent Human Governance evaluation.
-
-**Evidence**
-
-- Authorized scope records.
-- Changed artifact lists.
-- Validation outputs.
-- Review findings.
-- Safety and blocker reports.
-- Certification-support packets where applicable.
-
-**Governance Gate**
-
-Execution evidence accepted.
-
-**Exit Criteria**
-
-- Human Governance accepts that AI-DOS can execute bounded work safely and traceably.
-- Validation and review evidence is complete enough for governance assessment.
-- Certification support is clearly separated from certification approval.
-
-**Dependencies**
-
-- Phase 2 bounded planning.
-- Explicit execution authorization.
-- Applicable validation resources.
-
-**Non-goals**
-
-- Unbounded execution.
-- Bypassing validation.
-- Treating review as approval.
-- Declaring certification without Human Governance.
-
-**Risks**
-
-- Execution exceeds authorized boundaries.
-- Validation is incomplete or environment-limited.
-- Review misses product purity or Target isolation issues.
-
-### Phase 4 — Governed Self-Application
-
-**Purpose**
-
-Mature AI-DOS capability to assist in improving AI-DOS itself while Forge AI remains the governing Target Project and AI-DOS remains reusable product truth.
-
-**Capability Advancement Semantics**
-
-Advancement means observed Forge AI work produces reusable AI-DOS improvement evidence while preserving purity and governance. Self-application activity, audits, or status updates do not advance this phase unless they demonstrate a reusable improvement feedback capability.
-
-**Capabilities**
-
-- AI-DOS improving AI-DOS.
-- Bounded self-application.
-- Evidence-backed evolution.
-- Feedback-loop analysis.
-- Self-application safety enforcement.
-
-**Success Criteria**
-
-- Forge AI defines the AI-DOS development objective and supplies Target Context.
-- AI-DOS performs bounded work that improves reusable capability.
-- Evidence shows why the improvement was needed and how purity was preserved.
-- Self-application does not merge Forge AI project identity with AI-DOS product identity.
-
-**Evidence**
-
-- Self-application task records.
-- Capability gap evidence.
-- Improvement evidence.
-- Validation and review outputs.
-- Purity-preservation audit.
-- Human Governance acceptance or rejection.
-
-**Governance Gate**
-
-Self-application accepted.
-
-**Exit Criteria**
-
-- Human Governance accepts bounded self-application as safe and evidence-backed.
-- Improvements are reusable and not Forge AI shortcuts.
-- Failed or partial self-application attempts are captured as learning evidence.
-
-**Dependencies**
-
-- Phase 3 bounded execution, validation, and review.
-- Explicit Forge AI authorization for AI-DOS improvement work.
-
-**Non-goals**
-
-- AI-DOS self-authorizing changes.
-- Automatic ProjectStatus, roadmap, or phase updates.
-- Treating Forge AI self-hosting evidence as sufficient external readiness.
-- Relaxing protected areas.
-
-**Risks**
-
-- Self-application becomes self-approval.
-- Improvement proposals are speculative rather than evidence-derived.
-- Forge AI-specific behavior contaminates reusable AI-DOS behavior.
-
-### Phase 5 — Autonomy
-
-**Purpose**
-
-Mature AI-DOS capability to complete increasingly complex bounded workflows with recovery, replanning, escalation, and safety controls while Human Governance remains final.
-
-**Capability Advancement Semantics**
-
-Advancement means safer recovery, replanning, escalation, safe-stop behavior, or bounded workflow completion with less intervention and more evidence. Operational reports or ProjectStatus maintenance are not advancement unless the declared objective is an autonomy-control capability and evidence proves it.
-
-**Capabilities**
-
-- Progressive autonomy.
-- Recovery.
-- Replanning.
-- Escalation.
-- Safety.
-- Workflow completion under approved boundaries.
-
-**Success Criteria**
-
-- AI-DOS can detect failures and recover within authorized scope.
-- Replanning does not expand authority or bypass protected areas.
-- Escalation occurs when context, authority, validation, or safety is insufficient.
-- Autonomous workflow claims are supported by repeated evidence.
-
-**Evidence**
-
-- Autonomy run records.
-- Failure and recovery logs.
-- Replanning records.
-- Escalation reports.
-- Validation and review evidence.
-- Human acceptance of autonomy maturity claims.
-
-**Governance Gate**
-
-Autonomy maturity accepted.
-
-**Exit Criteria**
-
-- Human Governance accepts specific autonomy capabilities and boundaries.
-- Recovery and replanning evidence shows no scope expansion.
-- Safety invariants remain intact under multi-step work.
-
-**Dependencies**
-
-- Phase 4 governed self-application evidence.
-- Repeated Phase 3 validation and review performance.
-
-**Non-goals**
-
-- Unrestricted operation.
-- Self-approval.
-- Continuous execution without governance.
-- Automatic lifecycle or state changes.
-
-**Risks**
-
-- Autonomy claims outpace evidence.
-- Recovery masks unresolved defects.
-- Replanning becomes unauthorized expansion.
-
-### Phase 6 — External Target Readiness
-
-**Purpose**
-
-Mature AI-DOS capability to operate as a reusable provider for independent Target Projects without Forge AI context leakage, authority crossover, or Target-specific coupling.
-
-**Capability Advancement Semantics**
-
-Advancement means stronger independent Target operation, isolation, no-leakage proof, portability, or separate-authority handling. Repository navigation, audits, and documentation cleanup are not advancement unless they directly produce accepted portability capability evidence.
-
-**Capabilities**
-
-- Target independence.
-- Reusable operation.
-- Portability.
-- Multiple Target compatibility.
-- Target isolation validation.
-
-**Success Criteria**
-
-- AI-DOS can operate against an independent Target Context supplied by that Target Project.
-- Target-specific resources remain outside AI-DOS product truth.
-- Multiple Target Contexts remain isolated.
-- External operation evidence is accepted by Human Governance.
-
-**Evidence**
-
-- External Target invocation records.
-- Target isolation checks.
-- Portability findings.
-- Reusable-operation validation.
-- Cross-Target leakage audit.
-- Independent acceptance evidence where available.
-
-**Governance Gate**
-
-External readiness accepted.
-
-**Exit Criteria**
-
-- Human Governance accepts that AI-DOS is ready for bounded external Target operation.
-- Multi-Target compatibility is proven by evidence, not assumed from Forge AI self-application.
-- Any limitations are documented as operational boundaries.
-
-**Dependencies**
-
-- Phase 5 autonomy safety and escalation maturity.
-- At least one authorized independent Target Context.
-
-**Non-goals**
-
-- Universal compatibility claims.
-- Commercial productization.
-- Cross-Target execution without separate authority.
-- Importing external Target truth into AI-DOS product truth.
-
-**Risks**
-
-- Forge AI assumptions remain hidden in reusable behavior.
-- External Target resources are under-specified.
-- Multi-Target evidence is too narrow for the claimed readiness.
-
-### Phase 7 — Continuous Improvement
-
-**Purpose**
-
-Mature AI-DOS and Forge AI governance into a sustainable, evidence-driven improvement system that keeps capability, autonomy, safety, and portability advancing over time.
-
-**Capability Advancement Semantics**
-
-Advancement means better evidence-derived improvement selection, regression handling, maturity review, sustainability controls, or reuse-preserving adaptation. Planning maintenance or evidence aggregation alone is not advancement unless declared as the active improvement-governance objective and tied to reusable capability outcomes.
-
-**Capabilities**
-
-- Continuous capability evolution.
-- Evidence-driven improvements.
-- Maturity governance.
-- Long-term sustainability.
-- Regression detection.
-- Reuse-preserving adaptation.
-
-**Success Criteria**
-
-- Improvement proposals are derived from execution evidence, validation failures, review findings, blockers, recovery events, or external Target feedback.
-- Maturity claims remain governed and auditable.
-- Regressions trigger review, remediation, or rollback recommendations.
-- Long-term evolution preserves AI-DOS purity and Target independence.
-
-**Evidence**
-
-- Improvement backlog derived from accepted evidence.
-- Trend analysis across tasks and Targets.
-- Regression and remediation records.
-- Maturity review records.
-- Governance decisions on improvement proposals.
-
-**Governance Gate**
-
-Improvement governance accepted.
-
-**Exit Criteria**
-
-- Human Governance accepts the continuous improvement model as safe, bounded, and sustainable.
-- AI-DOS can recommend improvements without self-authorizing them.
-- Evidence shows capability evolution remains reusable and Target-independent.
-
-**Dependencies**
-
-- Phase 6 external Target readiness evidence.
-- Sustained validation, review, and governance records.
-
-**Non-goals**
-
-- Endless autonomous change.
-- Self-authorized product direction.
-- Bypassing governance for convenience.
-- Treating trend signals as proof without validation.
-
-**Risks**
-
-- Continuous improvement becomes unbounded change.
-- Evidence volume grows without governance clarity.
-- Long-term sustainability is weakened by insufficient regression controls.
-
----
-
-## 13. Capability Matrix
-
-| Capability | Phase 0 | Phase 1 | Phase 2 | Phase 3 | Phase 4 | Phase 5 | Phase 6 | Phase 7 |
-|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| AI-DOS / Target separation | Primary | Reinforced | Reinforced | Reinforced | Critical | Critical | Critical | Sustained |
-| Target-first invocation | Foundation | Primary | Reinforced | Reinforced | Reinforced | Reinforced | Critical | Sustained |
-| Context understanding | Boundary | Foundation | Primary | Reinforced | Reinforced | Reinforced | Critical | Sustained |
-| Planning and decision support | Not claimed | Foundation | Primary | Reinforced | Reinforced | Critical | Reinforced | Sustained |
-| Bounded execution | Not claimed | Boundary | Planned | Primary | Reinforced | Critical | Reinforced | Sustained |
-| Validation and review | Audit only | Boundary | Strategy | Primary | Critical | Critical | Critical | Sustained |
-| Governed self-application | Not claimed | Not claimed | Prepared | Foundation | Primary | Reinforced | Reinforced | Sustained |
-| Recovery and replanning | Not claimed | Not claimed | Risk-aware | Defect-aware | Prepared | Primary | Reinforced | Sustained |
-| External Target operation | Not claimed | Portable contract | Portable plans | Portable evidence | Not sufficient alone | Prepared | Primary | Sustained |
-| Continuous improvement | Not claimed | Not claimed | Insight | Evidence source | Feedback loop | Improvement proposals | External feedback | Primary |
-
----
-
-## 14. Evidence Matrix
-
-| Phase | Required Evidence | Acceptance Signal |
-|:---:|:---|:---|
-| 0 | Purity audit, boundary validation, protected-area review. | Human Governance accepts AI-DOS purity. |
-| 1 | Invocation records, Target Context summaries, execution boundary checks. | Human Governance accepts invocation contract. |
-| 2 | Bounded plans, decision support, risk and dependency analysis, validation strategy. | Human Governance accepts planning quality. |
-| 3 | Changed artifact records, validation output, review findings, blocker handling. | Human Governance accepts execution evidence. |
-| 4 | Self-application records, capability gap proof, improvement validation, purity audit. | Human Governance accepts self-application result. |
-| 5 | Autonomy runs, recovery logs, replanning records, escalation evidence. | Human Governance accepts bounded autonomy maturity. |
-| 6 | External Target invocations, portability checks, leakage audits, independent acceptance evidence. | Human Governance accepts external readiness. |
-| 7 | Evidence-derived improvement proposals, trend analysis, regression records, maturity reviews. | Human Governance accepts improvement governance. |
-
----
-
-## 15. Governance Matrix
-
-| Phase | Governance Question | Gate Decision |
-|:---:|:---|:---|
-| 0 | Is AI-DOS pure, reusable, and separate from Forge AI project truth? | Purity accepted, rejected, or remediation required. |
-| 1 | Can AI-DOS be invoked safely through explicit Target Context and boundaries? | Invocation contract accepted, narrowed, or blocked. |
-| 2 | Can AI-DOS plan and support decisions without replacing governance? | Planning quality accepted or returned for evidence. |
-| 3 | Can AI-DOS execute, validate, and review within authorized limits? | Execution evidence accepted or remediation required. |
-| 4 | Can AI-DOS improve AI-DOS without self-approval or contamination? | Self-application accepted, constrained, or rejected. |
-| 5 | Can AI-DOS operate with bounded autonomy, recovery, and escalation? | Specific autonomy claims accepted or denied. |
-| 6 | Can AI-DOS operate for independent Targets without leakage? | External readiness accepted, limited, or blocked. |
-| 7 | Can AI-DOS continue improving from evidence under governance? | Improvement governance accepted or revised. |
-
----
-
-## 16. Autonomy Matrix
-
-| Phase | Autonomy Level Relationship | Evidence Needed Before Claim |
-|:---:|:---|:---|
-| 0 | Supports Level 0 by enforcing boundary discipline. | Boundary and purity evidence. |
-| 1 | Supports Level 1 context-aware assistance. | Resolved Target Context and invocation evidence. |
-| 2 | Supports Level 2 bounded planning. | Bounded plans and decision-support evidence. |
-| 3 | Supports Levels 3-5 through execution, validation, review, and escalation. | Validation output, review findings, and blocker handling. |
-| 4 | Supports Levels 5-7 in self-application contexts. | Safe self-application evidence and Human Governance acceptance. |
-| 5 | Supports Levels 6-8 through recovery, replanning, and governed improvement proposals. | Recovery, replanning, escalation, and repeated workflow evidence. |
-| 6 | Supports Level 9 multi-Target operation. | Independent Target isolation and portability evidence. |
-| 7 | Sustains Levels 8-9 under long-term governance. | Trend, regression, maturity, and governance evidence. |
-
----
-
-## 17. Risk Matrix
-
-| Risk | Affected Phases | Impact | Required Control |
-|:---|:---|:---|:---|
-| Product-project contamination | 0-7 | AI-DOS loses reusable purity. | Purity audits and protected-area enforcement. |
-| Implicit authority | 1-7 | AI-DOS acts without authorization. | Target-first invocation and safe-stop behavior. |
-| Evidence gaps | 0-7 | Maturity claims cannot be governed. | Mandatory evidence model and validation reporting. |
-| Review treated as approval | 2-7 | Human Governance is bypassed. | Governance gates and explicit approval boundaries. |
-| Autonomy overclaim | 4-7 | Unsafe or unsupported operation. | Level-specific evidence and repeated demonstration. |
-| Target leakage | 4-7 | Context isolation fails. | Isolation checks and external readiness audits. |
-| Recovery expands scope | 5-7 | Autonomy bypasses constraints. | Replanning records and boundary checks. |
-| Improvement loop becomes unbounded | 7 | Continuous change loses governance. | Evidence-derived proposals and Human Governance decisions. |
-
----
-
-## 18. Success Metrics
-
-| Metric | Description |
+| Field | Definition |
 |:---|:---|
-| Capability gain | Each accepted phase demonstrates a new or stronger reusable AI-DOS capability. |
-| Evidence completeness | Each gate has enough evidence to support Human Governance evaluation. |
-| Purity preservation | No accepted phase inserts Forge AI project truth into AI-DOS product truth. |
-| Boundary compliance | Work remains within explicit Target Context, authority, and protected areas. |
-| Validation coverage | Applicable checks are run or limitations are reported honestly. |
-| Review quality | Findings, uncertainty, risks, and blockers are visible to governance. |
-| Autonomy progression | Reduced intervention is supported by safety, recovery, escalation, and repeated evidence. |
-| External portability | AI-DOS can operate against independent Target Contexts without leakage. |
-| Sustainability | Improvements are evidence-driven, governed, and regression-aware. |
+| Expected State | `COMPLETED AS FOUNDATION EVIDENCE` |
+| Purpose | Establish AI-DOS as reusable product truth; separate AI-DOS from Forge AI and all Target Project truth; preserve private-product and Target-owned boundaries. |
+| Capability Gain | AI-DOS can be governed as a reusable product without treating Forge AI planning, Target contracts, or private development state as distributable runtime truth. |
+| Reusable Outcome | Product/project separation rules, Target-owned truth boundary, purity expectations, and protected-area discipline. |
+| Dependencies | Human Governance direction and Forge AI mission authority. |
+| Required Evidence | Boundary audit evidence, accepted self-hosting foundation evidence, proof that Forge AI planning truth is not inserted into `docs/AI/`, and evidence that Target-owned contracts remain separate. |
+| Governance Gate | Human Governance accepts identity and purity as foundation evidence only. |
+| Success Criteria | Stakeholders can distinguish private AI-DOS development truth, Forge AI planning truth, distributable runtime artifacts, and independent Target truth. |
+| Exit Criteria | Boundary evidence is accepted and remains reusable for downstream distribution planning. |
+| Distribution Impact | Establishes that distribution artifacts are not simply a repository documentation copy. |
+| Privacy and Security Boundary | Private AI-DOS source, internal governance, credentials, personal data, and unnecessary Target Context are not exposed by default. |
+| Target Independence Requirement | Independent Targets need only Target-owned contracts and do not require AI-DOS internal documents. |
+| Non-Goals | Does not implement packaging, publish artifacts, update ProjectStatus, or certify product readiness. |
+| Risks | Self-hosting language may blur product and Target truth; repository convenience may encourage copying internals into Targets. |
+
+### Phase 1 — Target-First Invocation and Execution Contract
+
+| Field | Definition |
+|:---|:---|
+| Expected State | `COMPLETED AS SELF-HOSTING FOUNDATION` |
+| Purpose | Accept explicit Target Context; preserve Target-owned authority; stop on missing authority; define bounded execution and evidence expectations. |
+| Capability Gain | AI-DOS can consume a Target-supplied contract without owning Target truth or relying on private development repository visibility. |
+| Reusable Outcome | Target-first invocation contract pattern, bounded execution expectations, validation expectations, and safe-stop behavior. |
+| Dependencies | Phase 0. |
+| Required Evidence | Invocation records, Target Context examples, blocker evidence for missing authority, and proof that Target contracts remain Target-owned. |
+| Governance Gate | Human Governance accepts Target-first invocation as self-hosting foundation, not product distribution readiness. |
+| Success Criteria | AI-DOS work can be traced from authorized Target Context to bounded execution and evidence. |
+| Exit Criteria | Missing authority causes safe stop, not invented context or private-source fallback. |
+| Distribution Impact | Prepares the contract that CLI, MCP, and hosted providers must consume. |
+| Privacy and Security Boundary | Target data is consumed only within authorized boundaries and is minimized by default. |
+| Target Independence Requirement | Target Repositories declare resources, constraints, protected areas, validation, and authority without containing AI-DOS internals. |
+| Non-Goals | Does not create adapters, CLI commands, MCP tools, or hosted APIs. |
+| Risks | Ambiguous Target contracts may be mistaken for authorization; Codex host behavior may be confused with AI-DOS runtime behavior. |
+
+### Phase 2 — Planning, Decision, Execution, Validation, and Review
+
+| Field | Definition |
+|:---|:---|
+| Expected State | `OPERATIONALLY DEMONSTRATED IN SELF-HOSTING` |
+| Purpose | Resolve capability-grounded work; execute exactly bounded tasks; validate, review, and produce evidence; preserve Human Governance approval boundaries. |
+| Capability Gain | AI-DOS can perform bounded planning and execution with validation and review evidence while avoiding self-approval. |
+| Reusable Outcome | Evidence-backed planning, execution, validation, review, blocker, and completion-report patterns. |
+| Dependencies | Phases 0 and 1. |
+| Required Evidence | Bounded task records, changed-artifact evidence, validation command output, review findings, safe-stop evidence, and Human Governance boundary proof. |
+| Governance Gate | Human Governance accepts operational demonstration as self-hosting evidence only. |
+| Success Criteria | Work is completed only within authorized scope and produces traceable evidence sufficient for governance review. |
+| Exit Criteria | Reusable execution and evidence patterns are demonstrated without claiming release readiness. |
+| Distribution Impact | Provides behavior that future runtime distributions must preserve. |
+| Privacy and Security Boundary | Execution evidence excludes unnecessary secrets, personal data, private source, and proprietary Target content. |
+| Target Independence Requirement | Execution depends on explicit Target contracts and validation declarations, not Forge AI fallback. |
+| Non-Goals | Does not certify AI-DOS, activate Axis Suite, implement distribution, or update ProjectStatus automatically. |
+| Risks | Passing tests may be overclaimed as release approval; review may be mistaken for Human Governance acceptance. |
+
+### Phase 3 — Governed Self-Application and Product Learning
+
+| Field | Definition |
+|:---|:---|
+| Expected State | `ACTIVE / EARLY OPERATIONAL DEMONSTRATION` |
+| Purpose | Identify AI-DOS improvement opportunities from real Target execution; separate observation, validation, authorization, correction, regression testing, and capability acceptance; prove AI-DOS can improve itself without self-authorization. |
+| Capability Gain | AI-DOS can turn bounded execution evidence into governed product-learning input without treating the originating Target as the product-development repository. |
+| Reusable Outcome | Governed self-application loop and evidence-derived improvement lifecycle. |
+| Dependencies | Phases 0 through 2. |
+| Required Evidence | Target execution evidence, improvement opportunity record, validation result, Human Governance authorization, bounded correction evidence, regression validation and review, and Human Governance capability acceptance. |
+| Governance Gate | Human Governance authorizes each correction and separately accepts any capability improvement. |
+| Success Criteria | Improvement opportunities are evidence-derived, validated, authorized, corrected within scope, regression-tested, and accepted only by Human Governance. |
+| Exit Criteria | The lifecycle below is demonstrated without requiring future access to the originating Target Repository. |
+| Distribution Impact | Creates product-learning criteria for future distributions without releasing a runtime artifact. |
+| Privacy and Security Boundary | Opportunity records minimize Target data and avoid private code, credentials, personal data, and unnecessary context. |
+| Target Independence Requirement | The originating Target Repository need not remain accessible after execution. |
+| Non-Goals | Does not self-authorize changes, certify releases, create feedback transport implementation, or begin external Target execution. |
+| Risks | Self-application can become circular authority; opportunity evidence may contain too much Target context unless minimized. |
+
+Required lifecycle:
+
+```text
+Target Execution Evidence
+    ↓
+Improvement Opportunity
+    ↓
+Opportunity Validation
+    ↓
+Human Governance Authorization
+    ↓
+Bounded AI-DOS Correction
+    ↓
+Regression Validation and Review
+    ↓
+Human Governance Capability Acceptance
+```
+
+### Phase 4 — Distribution Foundation and Private/Public Product Boundary
+
+| Field | Definition |
+|:---|:---|
+| Purpose | Define what remains private development source; define what becomes distributable runtime; establish build, packaging, versioning, signing, manifest, compatibility, installation, update, rollback, and release boundaries. |
+| Capability Gain | AI-DOS gains a governed distribution boundary answering what exactly is shipped to users and what remains private. |
+| Reusable Outcome | Private repository boundary, artifact boundary, public runtime contract, manifest model, version model, compatibility model, installation/removal model, update/rollback policy, and distribution validation profile. |
+| Dependencies | Phases 0 through 3. |
+| Required Evidence | Accepted private/public boundary, artifact inventory, manifest and versioning plan, signing and integrity criteria, compatibility criteria, install/remove/update/rollback criteria, and release-governance evidence. |
+| Governance Gate | Human Governance accepts distribution architecture and package contract before any implementation or external product claim. |
+| Success Criteria | The boundary clearly states what ships, what remains private, how versions are verified, and how release readiness is governed. |
+| Exit Criteria | Distribution foundation is accepted as planning truth only, with no implementation claimed. |
+| Distribution Impact | Enables Distribution v1 Local CLI planning and blocks external Target product claims until accepted. |
+| Privacy and Security Boundary | Private source, internal development state, credentials, and nonessential Target Context remain outside distributable artifacts. |
+| Target Independence Requirement | Target use requires no private AI-DOS development repository access. |
+| Non-Goals | Does not create package layouts, schemas, CLI, MCP, adapters, hosted services, or RFCs. |
+| Risks | Planning may be mistaken for implementation; distribution artifacts may accidentally expose internal product truth. |
+
+### Phase 5 — Distribution v1: Local CLI Package
+
+| Field | Definition |
+|:---|:---|
+| Purpose | Create the first locally installable and executable AI-DOS distribution; allow AI hosts such as Codex to invoke AI-DOS without access to the private development repository. |
+| Capability Gain | AI-DOS becomes usable through a local runtime entrypoint that can operate against explicit Target paths. |
+| Reusable Outcome | Local installation, runtime resolution, bounded command model, evidence output, local runtime-data storage, offline-first behavior, uninstall, and rollback criteria. |
+| Dependencies | Phase 4. |
+| Required Evidence | Local install validation, explicit provider-root or installed-runtime resolution evidence, Target argument handling, Target contract loading, bounded command evidence, validation/evidence output, local data behavior, offline evidence, uninstall, and rollback evidence. |
+| Governance Gate | Human Governance validates Local CLI package before claiming Distribution v1 readiness. |
+| Success Criteria | Codex or another AI host can invoke the local CLI against a Target Repository without seeing the private development repository. |
+| Exit Criteria | Distribution v1 Local CLI is validated with no mandatory network connection and no private-source exposure. |
+| Distribution Impact | Establishes Distribution v1 as the first maturity stage. |
+| Privacy and Security Boundary | Target content remains local by default; runtime data is stored locally with explicit boundaries. |
+| Target Independence Requirement | CLI consumes Target-owned contracts and does not require AI-DOS internals in the Target. |
+| Non-Goals | This planning document does not authorize interface implementation; no CLI is claimed here. |
+| Risks | Conceptual command examples may be overread as active interfaces; local data may expose sensitive Target context if not controlled. |
+
+Target interaction model:
+
+```text
+Codex
+    ↓
+AI-DOS Local CLI
+    ↓
+Target Repository
+```
+
+Example conceptual interface only:
+
+```text
+ai-dos run --target <path>
+ai-dos continue --target <path>
+ai-dos validate --target <path>
+ai-dos review --target <path>
+```
+
+### Phase 6 — AI-DOS System Interface and Codex Adapter
+
+| Field | Definition |
+|:---|:---|
+| Purpose | Define the stable public contract between Codex or another AI host and AI-DOS; prevent hosts from depending on AI-DOS internal documents or private implementation. |
+| Capability Gain | AI-DOS gains a public host-facing interface distinct from private internal architecture. |
+| Reusable Outcome | Provider discovery, runtime handshake, Target registration, Target Context submission, work request, plan, authorization, validation, review, evidence, waiting, blocker, safe-stop, version, and compatibility negotiation contracts. |
+| Dependencies | Phase 5. |
+| Required Evidence | Public System Interface acceptance evidence, adapter conformance criteria, compatibility negotiation evidence, and proof that Codex is an AI host / adapter consumer rather than AI-DOS itself. |
+| Governance Gate | Human Governance accepts the public System Interface before supported adapters are claimed. |
+| Success Criteria | Hosts can integrate through stable public operations without reading private AI-DOS internal documents. |
+| Exit Criteria | Codex adapter expectations are validated against the public interface boundary. |
+| Distribution Impact | Enables supported adapters and prepares Local MCP provider maturity. |
+| Privacy and Security Boundary | Interface contracts minimize Target Context and return structured evidence without exposing private internals. |
+| Target Independence Requirement | Adapter sessions operate against Target-owned contracts and explicit authority. |
+| Non-Goals | Does not implement adapters, APIs, schemas, or service endpoints. |
+| Risks | Host convenience may couple to internals; adapter behavior may be mistaken for AI-DOS core authority. |
+
+Required boundary:
+
+```text
+Public AI-DOS System Interface
+≠
+Private AI-DOS Internal Architecture
+```
+
+### Phase 7 — Distribution v2: Local MCP Server
+
+| Field | Definition |
+|:---|:---|
+| Purpose | Expose AI-DOS as a local MCP-compatible provider for Codex and other supported AI hosts; keep Target code and sensitive context local by default. |
+| Capability Gain | AI-DOS can operate as a local provider with authenticated sessions and public tools. |
+| Reusable Outcome | Local MCP process, local authorization, public AI-DOS tools, Target-scoped sessions, permission boundaries, context minimization, structured evidence, session isolation, audit logs, installation, and update lifecycle criteria. |
+| Dependencies | Phase 6. |
+| Required Evidence | Local MCP validation, authenticated local connection evidence, tool-surface conformance, Target session isolation evidence, audit logs, update lifecycle evidence, and local-only data behavior. |
+| Governance Gate | Human Governance validates Local MCP server before claiming Distribution v2 readiness. |
+| Success Criteria | Codex can use AI-DOS through a local MCP provider without copying AI-DOS internals into the Target Repository. |
+| Exit Criteria | Distribution v2 Local MCP is validated with local privacy and session isolation evidence. |
+| Distribution Impact | Establishes Distribution v2 as the second maturity stage after Local CLI and System Interface. |
+| Privacy and Security Boundary | Target code and sensitive context stay local by default; connection is authenticated and scoped. |
+| Target Independence Requirement | Each Target session is isolated and relies on Target-owned contracts. |
+| Non-Goals | This planning document does not implement MCP tools or server processes. |
+| Risks | Tool surfaces may overexpose capabilities; session isolation failures could leak Target context. |
+
+Interaction model:
+
+```text
+Codex
+    ↓
+Local AI-DOS MCP Server
+    ↓
+AI-DOS Runtime
+    ↓
+Target Repository
+```
+
+### Phase 8 — Feedback, Experience, and Capability Evolution Transport
+
+| Field | Definition |
+|:---|:---|
+| Purpose | Convert observed AI-DOS deficiencies into portable, privacy-safe product-evolution input; allow opportunities discovered anywhere to reach AI-DOS product development without direct access to the originating Target Repository. |
+| Capability Gain | AI-DOS can produce privacy-reviewed Evolution Capsules that survive loss of access to the originating Target. |
+| Reusable Outcome | Opportunity detection, capability-gap classification, deduplication identifiers, evidence minimization, redaction, privacy classification, consent, local-only mode, manual export, optional approved upload, provenance, integrity checks, and product-development intake criteria. |
+| Dependencies | Phase 7 and validated evidence, privacy, redaction, and consent controls. |
+| Required Evidence | Capsule model acceptance, redaction review, privacy classification, user consent records, local queue/export/upload validation where authorized, provenance, authenticity, and integrity evidence. |
+| Governance Gate | Human Governance accepts Evolution Capsule model and consent-based transport before product-intake use. |
+| Success Criteria | Eligible opportunities become portable, privacy-reviewed, consent-controlled inputs without requiring future Target access. |
+| Exit Criteria | Evolution transport is validated in local-only and approved-transfer modes as applicable. |
+| Distribution Impact | Enables product evolution across distributions while preserving Target privacy. |
+| Privacy and Security Boundary | Private source code, credentials, personal data, proprietary content, and unnecessary Target Context do not leave the Target environment by default. |
+| Target Independence Requirement | AI-DOS never assumes future access to the originating Target Repository. |
+| Non-Goals | Does not create feedback implementation, upload service, or schema in this work unit. |
+| Risks | Overcollection may violate privacy; consent may be ambiguous; deduplication may leak sensitive identifiers if poorly designed. |
+
+Required lifecycle:
+
+```text
+Target Execution
+    ↓
+Execution Evidence
+    ↓
+Potential AI-DOS Capability Deficiency
+    ↓
+Redaction and Privacy Review
+    ↓
+Portable Evolution Capsule
+    ↓
+User Consent
+    ↓
+Local Storage, Manual Export, or Approved Upload
+    ↓
+AI-DOS Product Evolution Intake
+```
+
+### Phase 9 — Independent External Target Readiness
+
+| Field | Definition |
+|:---|:---|
+| Purpose | Prove AI-DOS can operate against a truly independent Target Repository; prove AI-DOS internals are not copied into or exposed through the Target; validate Target isolation and provider portability. |
+| Capability Gain | AI-DOS demonstrates product portability beyond self-hosting. |
+| Reusable Outcome | Independent Target onboarding evidence, no-Forge-fallback proof, no-private-source-exposure proof, complete bounded execution evidence, safe-stop evidence, and privacy-safe opportunity capture where applicable. |
+| Dependencies | Phase 8 and accepted distribution/integration boundaries. |
+| Required Evidence | Independent Target contract, independent Target state, independent source/protected boundaries, Target-declared validation, no Forge AI fallback, no private AI-DOS source exposure, bounded execution, evidence/safe-stop behavior, and privacy-safe opportunity capture. |
+| Governance Gate | Human Governance accepts independent external Target proof before hosted-provider maturity claims. |
+| Success Criteria | AI-DOS operates against an independent Target using distribution/runtime boundaries and Target-owned contracts only. |
+| Exit Criteria | External Target pilot is complete, reviewed, and accepted without activating further external work automatically. |
+| Distribution Impact | Validates provider portability and external product readiness evidence. |
+| Privacy and Security Boundary | Independent Target content remains protected under Target authority and privacy controls. |
+| Target Independence Requirement | Axis Suite may become the first external Target only after required distribution and integration capabilities exist and Human Governance authorizes it. |
+| Non-Goals | Does not begin Axis Suite execution, certify broad readiness, or claim hosted-provider maturity. |
+| Risks | External pilot may rely on hidden Forge AI assumptions; Target evidence may expose proprietary content if not minimized. |
+
+### Phase 10 — Distribution v3: Managed / Hosted AI-DOS Provider
+
+| Field | Definition |
+|:---|:---|
+| Purpose | Provide AI-DOS as a remotely managed runtime without requiring local installation; preserve privacy, consent, Target isolation, and auditable authority. |
+| Capability Gain | AI-DOS can operate through an authenticated managed provider under strict privacy and isolation controls. |
+| Reusable Outcome | Tenant and Target isolation, authentication, authorization, encrypted transport, minimal context transfer, consent controls, regional/retention controls, hosted execution policy, auditability, service versioning, rollback, availability/failure handling, and local/offline fallback strategy. |
+| Dependencies | Phase 9. |
+| Required Evidence | Managed provider architecture acceptance, authentication/authorization evidence, isolation evidence, encryption and retention evidence, consent controls, audit records, rollback evidence, failure handling, and fallback validation. |
+| Governance Gate | Human Governance accepts hosted architecture and separately authorizes any hosted pilot or activation. |
+| Success Criteria | Hosted operation preserves Target authority, minimal context transfer, consent, auditability, rollback, and safe-stop behavior. |
+| Exit Criteria | Distribution v3 hosted pilot is completed and accepted before maturity claims. |
+| Distribution Impact | Establishes Distribution v3 as the managed-provider maturity stage. |
+| Privacy and Security Boundary | No hosted context transfer occurs without explicit policy, consent, encryption, retention, and regional controls. |
+| Target Independence Requirement | Hosted sessions remain Target-scoped and isolated across tenants and Targets. |
+| Non-Goals | Planning language does not activate hosted operation, choose a vendor, choose pricing, or implement a service. |
+| Risks | Hosted convenience may overcollect context; service failure could disrupt Target execution; tenant isolation failures are high impact. |
+
+Interaction model:
+
+```text
+Codex
+    ↓
+Authenticated AI-DOS Provider
+    ↓
+Target-Scoped Session
+    ↓
+Bounded AI-DOS Runtime
+```
+
+### Phase 11 — Multi-Target AI Highway and Product Operations
+
+| Field | Definition |
+|:---|:---|
+| Purpose | Operate AI-DOS across many independent Targets; learn from privacy-safe evidence; release governed capability improvements; sustain distribution and compatibility over time. |
+| Capability Gain | AI-DOS reaches governed multi-Target product operations without unrestricted autonomous evolution. |
+| Reusable Outcome | Multi-Target isolation, distribution channels, release trains, compatibility matrix, migration policy, deprecation policy, telemetry boundaries, privacy-safe aggregate evidence, opportunity deduplication, regression suites, support model, and capability promotion governance. |
+| Dependencies | Phase 10. |
+| Required Evidence | Multi-Target isolation evidence, compatibility and migration evidence, release-train evidence, regression suite results, privacy-safe aggregate evidence, support evidence, and Human Governance capability-promotion decisions. |
+| Governance Gate | Human Governance accepts Multi-Target AI Highway readiness and release-governance operating model. |
+| Success Criteria | AI-DOS can sustain many independent Target relationships, learn only through privacy-safe inputs, and release improvements through governed distribution. |
+| Exit Criteria | Broad multi-Target readiness is accepted after hosted-provider success and operational evidence. |
+| Distribution Impact | Sustains the distribution ecosystem through channels, releases, migrations, deprecations, and compatibility support. |
+| Privacy and Security Boundary | Aggregate learning excludes unnecessary Target Context and preserves consent, retention, provenance, and telemetry limits. |
+| Target Independence Requirement | No Target receives or depends on another Target's private context or AI-DOS private source. |
+| Non-Goals | Does not authorize unrestricted autonomous evolution, automatic promotion, or ungoverned telemetry. |
+| Risks | Scale may weaken privacy controls; compatibility drift may fragment distribution; aggregate evidence may be overclaimed as universal readiness. |
 
 ---
 
-## 19. Validation Rules for This Development Program
-
-Validation of this program requires confirming that:
-
-1. every phase is capability-oriented;
-2. every phase increases AI-DOS capability;
-3. every phase produces reusable outcomes;
-4. every phase increases evidence;
-5. every phase supports autonomy progression;
-6. every phase preserves AI-DOS purity;
-7. every phase contains a governance gate;
-8. every phase contains evidence requirements;
-9. the program does not define AI-DOS implementation details;
-10. the program does not replace ProjectStatus or the roadmap.
-
----
-
-## 20. Version History
+## 7. Version History
 
 | Version | Date | Description |
 |:---|:---|:---|
-| `4.1.0-draft` | 2026-07-10 | Established Forge AI self-hosting Target Repository phase ownership. |
-| `4.2.0-draft` | 2026-07-10 | Completed Phase 8 and activated the definitive repository audit as Phase 9. |
-| `4.3.0-draft` | 2026-07-10 | Removed direct AI-DOS internal path dependencies and bound project resources to root AGENTS declarations. |
-| `5.0.0-draft` | 2026-07-11 | Rebuilt Forge AI Development Phases as the AI-DOS capability and autonomy maturity program. |
-| `5.1.0-draft` | 2026-07-14 | Refined active capability advancement semantics to distinguish reusable capability progress from repository activity after Pilot Execution #2. |
+| `5.1.0-draft` | 2026-07-11 | Prior Forge AI capability maturity planning baseline. |
+| `6.0.0-draft` | 2026-07-15 | Realigned Forge AI around AI-DOS private development, runtime distribution, local CLI, local MCP, hosted provider, independent Target integration, privacy-safe evolution input, and multi-Target AI Highway operations. |
