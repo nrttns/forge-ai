@@ -31,7 +31,7 @@ docs/AI/AIOrchestrator.md
     ↓
 docs/AI/AgentSystemPrompt.md
     ↓
-docs/AI/Runtime/README.md when Runtime or Engine context is required
+docs/AI/Architecture/RFC/Runtime/README.md when Runtime or Engine context is required
     ↓
 docs/AI/Commands/ and docs/AI/Workflows/ when task execution requires them
     ↓
@@ -65,7 +65,7 @@ docs/AI/
 ├── AgentSystemPrompt.md
 ├── Architecture/
 ├── Commands/
-├── Runtime/
+├── Architecture/RFC/
 ├── System/
 ├── Templates/
 └── Workflows/
@@ -86,7 +86,7 @@ docs/AI/
 | System Layer index | `System/README.md` |
 | Orchestration | `AIOrchestrator.md` |
 | Agent behavior contract | `AgentSystemPrompt.md` |
-| Runtime / Engine navigation | `Runtime/README.md` |
+| Runtime / Engine navigation | `Architecture/RFC/Runtime/README.md` |
 | Template Library navigation | `Templates/README.md` |
 | Commands | `Commands/` |
 | Workflows | `Workflows/` |

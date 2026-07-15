@@ -24,7 +24,7 @@
 | Scope | Defines AI-DOS v2 Operational Core orchestration for authority routing, lifecycle coordination, workflow routing, command routing, template routing, Runtime interaction, Engine interaction, blocker management, completion handling, and Target resource modification boundaries. |
 | Out of Scope | Governance redesign, Runtime RFC redesign, Engine RFC redesign, command implementation, workflow implementation, template modification, Target resource modification, file relocation, operational implementation, platform adapter activation, multi-agent runtime activation, swarm runtime activation, certification, and canonical promotion. |
 | Normative Authority | Human Governance; Target invocation contract; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; Invocation Context and Resolved Target Context |
-| Normative References | `docs/AI/AIFramework.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Templates/README.md`; `docs/AI/Architecture/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`; `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md`; `docs/AI/Operational/Operational-Core-Replacement-Matrix.md` |
+| Normative References | `docs/AI/AIFramework.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Templates/README.md`; `docs/AI/Architecture/Constitution/A.1-Constitution.md`; `docs/AI/Meta/M.0-Framework-Meta-Model.md`; `docs/AI/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Architecture/RFC/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Architecture/RFC/EnginePlatform/A.4-Engine-Architecture-RFC.md`; `docs/AI/Architecture/RFC/EngineSpecializations/A.5.0-Engine-Specialization-RFC-Template.md`; `docs/AI/Operational/Operational-Core-Replacement-Matrix.md` |
 | Dependencies | Governance Core; Meta Foundation; Standards Foundation; Runtime Architecture; Engine Platform; Engine Foundation RFC family; Operational Core replacement plan; Invocation Context and Resolved Target Context. |
 | Consumes | Human task instruction, repository boot sequence, governance navigation, governance decision policy, resolved context, Target Constraints, constitutional principles, meta models, terminology, metadata requirements, Runtime Architecture, Engine Architecture, Engine Specialization template, AI Framework entry rules, Agent System Prompt boundaries, template category map, commands, workflows, validation artifacts, and task-specific authorities. |
 | Produces | Operational orchestration lifecycle, routing rules, workflow selection guidance, command selection guidance, template selection guidance, Runtime interaction guidance, Engine interaction guidance, blocker escalation rules, Target resource modification boundaries, and completion-cycle expectations. |
@@ -108,15 +108,15 @@ Applicable Target Resources loaded for the invocation
     ↓
 AI-DOS product architecture reference product architecture context when applicable for AI-DOS self-hosting only
     ↓
-docs/AI/Architecture/A.1-Constitution.md
+docs/AI/Architecture/Constitution/A.1-Constitution.md
     ↓
 docs/AI/Meta/M.0-Framework-Meta-Model.md and docs/AI/Meta/M.1-Artifact-Meta-Model.md
     ↓
 docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md and docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md
     ↓
-docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md
+docs/AI/Architecture/RFC/Runtime/A.3-Runtime-Architecture-RFC.md
     ↓
-docs/AI/Runtime/A.4-Engine-Architecture-RFC.md and Engine Specialization RFC family
+docs/AI/Architecture/RFC/EnginePlatform/A.4-Engine-Architecture-RFC.md and Engine Specialization RFC family
     ↓
 Operational Core
 ├── docs/AI/AIFramework.md
@@ -335,7 +335,7 @@ Template routing rules:
 
 ## 9. Runtime Interaction
 
-The Orchestrator consumes `docs/AI/Runtime/A.3-Runtime-Architecture-RFC.md` to align operational execution with Runtime concepts, lifecycle boundaries, context handling, execution flow, validation, review, certification, runtime state, and memory.
+The Orchestrator consumes `docs/AI/Architecture/RFC/Runtime/A.3-Runtime-Architecture-RFC.md` to align operational execution with Runtime concepts, lifecycle boundaries, context handling, execution flow, validation, review, certification, runtime state, and memory.
 
 Runtime interaction rules:
 
@@ -349,7 +349,7 @@ Runtime interaction rules:
 
 ## 10. Engine Interaction
 
-The Orchestrator consumes `docs/AI/Runtime/A.4-Engine-Architecture-RFC.md`, the Engine Platform RFC family, and `docs/AI/Runtime/A.5.0-Engine-Specialization-RFC-Template.md` to coordinate work against Engine Foundation constraints.
+The Orchestrator consumes `docs/AI/Architecture/RFC/EnginePlatform/A.4-Engine-Architecture-RFC.md`, the Engine Platform RFC family, and `docs/AI/Architecture/RFC/EngineSpecializations/A.5.0-Engine-Specialization-RFC-Template.md` to coordinate work against Engine Foundation constraints.
 
 Engine interaction rules:
 
