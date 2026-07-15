@@ -1,8 +1,8 @@
 # Forge AI
 
-**Forge AI** is the Product Development Target Project for **AI-DOS**.
+Forge AI is the **AI-DOS Product Development Target Project**.
 
-Forge AI uses AI-DOS to develop, validate, evolve, distribute, and continuously improve AI-DOS itself through a governed self-hosting development model.
+It operates as the self-hosting Target Project through which AI-DOS is developed, validated, evolved, and prepared for distribution.
 
 Forge AI is **not** AI-DOS.
 
@@ -12,54 +12,54 @@ AI-DOS is the reusable AI Operating System.
 
 # Purpose
 
-Forge AI exists to enable the governed development of AI-DOS.
+Forge AI exists to enable the governed evolution of AI-DOS.
 
-It provides the operational Target environment in which AI-DOS can:
+It provides the operational environment in which AI-DOS can safely improve itself through evidence-based, capability-driven development.
 
-* develop new capabilities,
-* validate architectural decisions,
-* produce implementation evidence,
-* evolve through Human Governance,
-* prepare future product distributions.
+Forge AI manages the Target Project.
 
-Forge AI owns the Target Project.
-
-AI-DOS owns the reusable product.
+AI-DOS remains the reusable product.
 
 ---
 
 # Objectives
 
-The primary objectives of Forge AI are:
+Forge AI has the following objectives:
 
 * Develop AI-DOS as a reusable AI Operating System.
-* Validate every capability before promotion.
-* Produce evidence for Human Governance decisions.
-* Improve AI-DOS through controlled self-hosting.
-* Protect product architecture through authority-based development.
-* Prevent duplicate authorities and parallel architectural evolution.
-* Keep Target Project concerns separate from AI-DOS product truth.
+* Validate every completed work unit.
+* Produce evidence for Human Governance.
+* Protect authority ownership.
+* Prevent duplicate architectural authorities.
+* Keep Target Project truth separate from AI-DOS product truth.
+* Enable safe self-hosting evolution.
 
 ---
 
 # Self-Hosting Development Model
 
-Forge AI operates as the AI-DOS self-hosting Product Development Target Project.
+Forge AI operates using AI-DOS to develop AI-DOS.
 
-The operational model is:
+The Target Project determines **what** capability is currently active.
+
+AI-DOS determines **how** reusable product authorities evolve.
 
 ```text
 Human Governance
         ↓
 Forge AI Target Project
         ↓
-State-Derived Execution
+ProjectStatus
         ↓
-Capability Selection
+DevelopmentPhases
         ↓
-AI-DOS Product Authority
+Roadmap
+        ↓
+Current Capability
         ↓
 Exactly One Capability-Grounded Work Unit
+        ↓
+AI-DOS Product Authority
         ↓
 Validation
         ↓
@@ -68,9 +68,11 @@ Evidence
 Human Governance
 ```
 
-Forge AI determines **what** should be developed.
+Every execution is capability-driven.
 
-AI-DOS determines **how** reusable product capabilities are evolved.
+Every execution produces evidence.
+
+Every execution stops after exactly one completed work unit.
 
 ---
 
@@ -84,11 +86,11 @@ Forge AI owns:
 * ProjectStatus
 * DevelopmentPhases
 * Roadmap
-* Target planning
+* Operational State
+* Target Planning
 * Validation
 * Evidence
 * Protected Areas
-* Operational State
 
 Forge AI never becomes the owner of AI-DOS product architecture.
 
@@ -107,30 +109,35 @@ AI-DOS owns:
 * Product Truth
 * Reusable Capabilities
 
-AI-DOS remains the reusable product independently of any Target Project.
+AI-DOS remains reusable independently of any Target Project.
 
 ---
 
 # Human Governance
 
-Human Governance provides the operational control of the self-hosting development cycle.
+Human Governance directs the self-hosting development process.
 
-The intended Human Governance interaction model is intentionally minimal.
+The operational interaction model is intentionally minimal.
 
-## Advance
+## Continue
 
 ```text
 HUMAN GOVERNANCE
 
-Advance.
+Continue.
 ```
 
-Advance authorizes AI-DOS to:
+Continue authorizes AI-DOS to:
 
-* derive the next capability-grounded work unit,
-* execute exactly one work unit,
+* resolve the current Target operational state,
+* determine the active capability,
+* derive exactly one capability-grounded work unit,
+* execute that work unit,
 * validate the result,
+* produce evidence,
 * stop.
+
+Continue never advances ProjectStatus or activates the next capability.
 
 ---
 
@@ -144,11 +151,14 @@ Review.
 
 Review authorizes AI-DOS to:
 
-* evaluate the completed work,
-* verify validation,
-* compare against completion criteria,
-* update the operational state when appropriate,
+* review the completed work unit,
+* verify validation results,
+* evaluate completion criteria,
+* update ProjectStatus when operational state has legitimately changed,
+* report remaining completion criteria when applicable,
 * stop.
+
+Review never activates the next capability.
 
 ---
 
@@ -160,14 +170,17 @@ HUMAN GOVERNANCE
 Approve.
 ```
 
-Approve authorizes Human Governance decisions such as:
+Approve authorizes Human Governance to accept the reviewed operational state.
 
-* capability promotion,
+When appropriate, approval may authorize:
+
+* capability completion,
+* transition to the next capability,
 * repository acceptance,
-* release progression,
-* governed product evolution.
+* governed product evolution,
+* release progression.
 
-Approve does not authorize further development work.
+Approval never executes additional development work.
 
 ---
 
@@ -181,11 +194,20 @@ Forge AI follows these principles:
 * Product authority always remains with AI-DOS.
 * Target authority always remains with Forge AI.
 * Every work unit must be capability-grounded.
-* Every architectural change must respect existing authority ownership.
+* Existing authorities are corrected in place whenever possible.
+* Parallel authorities are prohibited.
 * Human Governance remains the final decision authority.
 
 ---
 
 # Vision
 
-Forge AI demonstrates that AI-DOS can safely develop itself through governed, evidence-based, capability-driven evolution without transferring product ownership from AI-DOS to the Target Project.
+Forge AI demonstrates that AI-DOS can safely and repeatedly evolve itself through governed self-hosting.
+
+Human Governance determines **whether** evolution proceeds.
+
+Forge AI determines **what** capability is active.
+
+AI-DOS determines **how** the reusable product evolves.
+
+Together they create a governed, evidence-based AI Operating System capable of continuous self-improvement.
