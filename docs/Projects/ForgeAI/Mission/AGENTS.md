@@ -1,10 +1,10 @@
 <!--
 Identifier: FORGE-AI.TARGET.AGENTS-CONTRACT
 Title: AGENTS.md — Forge AI Target Project Contract
-Version: 1.1.0-draft
+Version: 1.2.0-draft
 Status: Draft
 Owner: Forge AI Target Project Governance
-Updated: 2026-07-14
+Updated: 2026-07-15
 -->
 
 # AGENTS.md — Forge AI Target Project Contract
@@ -15,15 +15,15 @@ Updated: 2026-07-14
 |:---|:---|
 | Identifier | `FORGE-AI.TARGET.AGENTS-CONTRACT` |
 | Title | AGENTS.md — Forge AI Target Project Contract |
-| Version | `1.1.0-draft` |
+| Version | `1.2.0-draft` |
 | Status | Draft |
 | Classification | Forge AI Target Project Contract |
 | Document Type | Target Project Contract |
 | Owner | Forge AI Target Project Governance |
 | Approval Authority | Human Governance |
-| Last Updated | 2026-07-14 |
-| Scope | Forge AI identity, mission, Target Context, Target resources, protected areas, AI-DOS invocation boundary, execution rules, evidence requirements, autonomy safety, and working principles. |
-| Out of Scope | AI-DOS product architecture, internal AI-DOS procedures, AI-DOS governance mechanics, implementation design, automatic state updates, and planning-document redesign. |
+| Last Updated | 2026-07-15 |
+| Scope | Forge AI Target Project identity, declared Target resources, operational entry, protected areas, state-derived work resolution, execution authorization boundaries, validation expectations, evidence expectations, and state-update authority. |
+| Out of Scope | Execution-provider identity, provider discovery, provider startup, provider internal paths, provider architecture, workflow routing, command routing, runtime behavior, implementation design, automatic state updates, and planning-document redesign. |
 | Normative Authority | Human Governance |
 | Mission Source | `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-and-Autonomy-Model.md` |
 | DevelopmentPhases | `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` |
@@ -33,292 +33,231 @@ Updated: 2026-07-14
 
 ---
 
-## 1. Forge AI Identity
+## 1. Target Project Identity
 
-Forge AI is the AI-DOS Development and Autonomy Enablement Target Project.
-
-Forge AI is not AI-DOS. Forge AI owns project truth, project mission, project planning, project state, project evidence, and project authorization. AI-DOS owns reusable framework truth and reusable capability behavior.
-
-Forge AI develops AI-DOS, validates AI-DOS, applies AI-DOS to authorized Forge AI work, improves AI-DOS autonomy through evidence, and prepares AI-DOS for safe reuse by independent Target Projects.
-
----
-
-## 2. Mission
-
-Forge AI exists to develop, validate, self-apply, harden, and progressively autonomize AI-DOS through bounded, evidence-driven, Human-Governed work.
-
-### Mission Summary
-
-| Mission Pillar | Forge AI Meaning |
+| Field | Value |
 |:---|:---|
-| Develop AI-DOS | Advance the reusable system Forge AI is responsible for building. |
-| Preserve product purity | Keep AI-DOS reusable, Target-independent, and free of Forge AI project-specific truth. |
-| Self-apply responsibly | Use AI-DOS on authorized Forge AI work to expose real strengths, weaknesses, and blockers. |
-| Validate with evidence | Treat task inputs, outputs, validation, review, blockers, and acceptance as proof. |
-| Increase autonomy progressively | Mature capability through governed, evidence-backed levels rather than unrestricted execution. |
-| Preserve safety and traceability | Require scope boundaries, protected-area respect, validation, review, escalation, and auditable results. |
-| Prove external readiness | Demonstrate that AI-DOS can operate on independent Target Contexts without leakage or authority crossover. |
-| Improve from observation | Prioritize AI-DOS changes because execution evidence shows a need, not because speculation suggests one. |
+| Target Project | Forge AI |
+| Project Role | Development and autonomy enablement Target Project |
+| Project Truth Root | `docs/Projects/ForgeAI/` |
+| Product / Provider Truth Root | `docs/AI/` |
+| Mission Authority | `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-and-Autonomy-Model.md` |
 
-This contract summarizes the mission. It does not duplicate the full mission and autonomy model.
+Forge AI owns its project mission, planning, operational state, evidence, authorization, protected areas, and Target resources.
 
----
+Provider or product truth is separate from Forge AI Target Project truth.
 
-## 3. Project Scope
-
-Forge AI performs Target Project work that advances AI-DOS capability and safe autonomy.
-
-In scope:
-
-- AI-DOS development authorized by Human Governance.
-- AI-DOS validation through real tasks, tests, reviews, and evidence.
-- AI-DOS self-application against Forge AI Target Context.
-- Autonomy progression through explicit capability evidence.
-- Capability hardening for planning, execution, validation, review, recovery, reporting, and blocker handling.
-- Repository evolution that improves clarity, maintainability, and Target readiness.
-- External Target readiness work that preserves context isolation and reusable behavior.
-
-Out of scope unless separately authorized:
-
-- Automatic project-state updates.
-- Silent phase, roadmap, or lifecycle changes.
-- Unbounded autonomous operation.
-- Cross-Target execution without explicit Target authority.
-- Project shortcuts that contaminate reusable AI-DOS behavior.
+This contract does not identify, select, invoke, or configure an execution provider.
 
 ---
 
-## 4. Target Resources
+## 2. Mission Authority
 
-Forge AI supplies Target resources as task context. These resources are Forge AI project resources, not AI-DOS internal knowledge.
+Forge AI mission and autonomy direction are defined only by:
 
-### Target Responsibilities
+`docs/Projects/ForgeAI/Mission/ForgeAI-Mission-and-Autonomy-Model.md`
 
-| Resource Category | Target Responsibility |
-|:---|:---|
-| Source | Identify authorized code, configuration, scripts, and assets relevant to the task. |
-| Documentation | Provide Forge AI project documentation needed to understand task scope and constraints. |
-| Planning | Provide project planning resources such as active status, development sequencing, roadmap direction, and approved objectives when relevant. |
-| Architecture | Provide Target Project architecture artifacts needed for the authorized change or review. |
-| Tests | Identify applicable tests, checks, fixtures, and validation expectations. |
-| Governance | Provide Human Governance decisions, approval boundaries, protected areas, and review expectations. |
-| Evidence | Preserve task inputs, changed artifacts, validation output, review findings, blockers, and acceptance records. |
+This contract consumes that mission authority but does not duplicate or redefine it.
 
-Target resources must be explicit, task-relevant, and bounded. Missing resources are blockers, not permission to invent context.
+Any task selected or executed for Forge AI must remain consistent with the declared mission, current operational state, active capability, protected areas, and Human Governance decisions.
 
 ---
 
-## 4.1 Target Operational Entry
+## 3. Declared Target Resources
 
-Forge AI exposes exactly one Target Operational Entry.
+Forge AI declares the following Target-owned resources:
 
-The Target Operational Entry identifies the current operational state of the Target Project and the authoritative starting point for bounded execution.
+| Resource | Path | Purpose |
+|:---|:---|:---|
+| Mission | `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-and-Autonomy-Model.md` | Mission, autonomy direction, strategic constraints, and governance intent |
+| ProjectStatus | `docs/Projects/ForgeAI/Planning/ProjectStatus.md` | Live operational state and exactly authorized next action |
+| DevelopmentPhases | `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` | Active capability boundary and maturity progression |
+| Roadmap | `docs/Projects/ForgeAI/Planning/Roadmap.md` | Capability direction, dependencies, advancement evidence, and strategic priority |
+| Reports | `docs/Projects/ForgeAI/Reports/` | Target Project operational evidence and findings |
+| Source / implementation resources | Repository paths declared or authorized by the active task | Task-specific implementation surface |
+| Validation resources | Repository-declared tests, scripts, checks, and task-specific validation requirements | Evidence-backed verification |
 
-For Forge AI, the Target Operational Entry is:
+Target resources must be explicit, task-relevant, and bounded.
+
+Missing, contradictory, inaccessible, or unauthorized resources are blockers. They are not permission to invent context or work.
+
+---
+
+## 4. Target Operational Entry
+
+Forge AI exposes exactly one Target Operational Entry:
 
 `docs/Projects/ForgeAI/Planning/ProjectStatus.md`
 
-The Target Operational Entry belongs to Forge AI Target Project truth.
+The Target Operational Entry identifies the current operational state of Forge AI and the authoritative starting point for Target-side work resolution.
 
-It does not identify or depend on:
+The Target Operational Entry belongs only to Forge AI Target Project truth.
 
-- an AI-DOS provider document;
-- AI-DOS internal navigation;
-- AI-DOS startup procedures;
-- AI-DOS System Layer;
-- AI-DOS Runtime;
-- AI-DOS Engines;
-- AI-DOS Agents;
-- AI-DOS Commands;
-- AI-DOS Workflows;
-- AI-DOS Templates;
-- AI-DOS implementation.
+It does not identify:
 
-Any authorized execution framework, automation system, or capability provider may consume the Target Operational Entry.
+- an execution provider;
+- provider documents;
+- provider internal navigation;
+- provider startup procedures;
+- provider workflows;
+- provider commands;
+- provider runtime components;
+- provider implementation.
 
-The Target Project does not need to know the internal identity, location, or implementation of the execution provider.
-
-### Continuation Resolution
-
-When the invocation intent is `Continue`, `Resume`, or an equivalent continuation request and no more specific task is supplied:
-
-1. Read the declared Target Operational Entry.
-2. Resolve the exactly one active task or exactly one authorized next action.
-3. Validate that action against the declared DevelopmentPhases, Roadmap, protected areas, execution constraints, and available Target resources.
-4. Use the resolved action as Target Context for bounded execution.
-5. If no single authorized action can be resolved, stop and report a blocker.
-6. Do not interpret continuation only as unfinished local version-control changes.
-7. Do not invent a new task.
-8. Do not modify live operational state unless the resolved task explicitly authorizes that update.
+Any authorized execution provider or automation host may consume the Target Operational Entry without requiring Forge AI to know that provider's identity, location, or implementation.
 
 ---
 
-## 5. Protected Areas
+## 5. State-Derived Work Resolution
 
-Protected areas are Forge AI Target Project boundaries. They prevent accidental authority drift, lifecycle mutation, evidence loss, and product-project contamination.
+State-Derived Work Resolution applies when:
 
-### Protected Areas
+1. the invocation requests Forge AI progress, continuation, advancement, next work, or execution; and
+2. no sufficiently bounded executable task has been supplied.
+
+The behavior is triggered by invocation intent, not by any specific word or phrase.
+
+### 5.1 Required Resolution Order
+
+Resolve Target-side work context in this order:
+
+```text
+Target Operational Entry
+    ↓
+ProjectStatus
+    ↓
+DevelopmentPhases
+    ↓
+Roadmap
+    ↓
+Task-specific Target authority, when declared
+```
+
+### 5.2 Resolution Rules
+
+1. Read ProjectStatus and resolve the exactly one active task or exactly one authorized next action.
+2. Read DevelopmentPhases and identify the current capability boundary.
+3. Read Roadmap and identify the applicable capability direction, dependencies, advancement evidence, and strategic priority.
+4. Resolve any task-specific Target authority explicitly declared by the active task.
+5. Preserve protected areas and execution constraints.
+6. Produce Target Context containing the resolved objective, scope, constraints, resources, evidence expectations, and state-update authority.
+7. Do not select work merely because it is easy, nearby, recently modified, already tested, buildable, or a continuation of the last implementation.
+8. Do not treat repository activity as Target progress unless it directly advances the active capability and authorized objective.
+9. Do not invent a task when the authoritative Target state cannot resolve one.
+10. If exactly one bounded authorized action cannot be resolved, stop and report a blocker.
+
+### 5.3 Explicitly Bounded Tasks
+
+When Human Governance supplies an already bounded task with:
+
+- explicit objective;
+- authorized scope;
+- expected artifacts or files;
+- protected boundaries;
+- validation requirements;
+- completion condition;
+
+that task remains the active Target instruction.
+
+It must not be replaced, broadened, or reinterpreted through state-derived work resolution.
+
+---
+
+## 6. Protected Areas
 
 | Protected Area | Protection Rule |
 |:---|:---|
-| Root Target Project contract | Modify only when the active task explicitly authorizes contract changes. |
-| Mission and autonomy model | Treat as mission authority; do not rewrite or duplicate without explicit authorization. |
-| Live project state | Do not update operational state unless the task explicitly authorizes a state update. |
-| Development sequencing | Do not change phase or stage definitions unless the task explicitly authorizes planning realignment. |
-| Roadmap direction | Do not change roadmap direction unless the task explicitly authorizes roadmap work. |
-| Governance decisions | Do not reinterpret, weaken, or override Human Governance decisions. |
-| Evidence records | Preserve evidence provenance; do not delete, obscure, or fabricate completion evidence. |
-| AI-DOS product truth | Do not insert Forge AI project truth into reusable AI-DOS product truth. |
+| Root repository entry | Modify only through an explicitly authorized repository-entry task. |
+| Target Project contract | Modify only through an explicitly authorized Target contract task. |
+| Mission and autonomy model | Read-only unless Human Governance explicitly authorizes mission work. |
+| ProjectStatus | Read-only unless the active task or Human Governance authorizes the exact state transition. |
+| DevelopmentPhases | Read-only unless planning realignment is explicitly authorized. |
+| Roadmap | Read-only unless roadmap work is explicitly authorized. |
+| Evidence records | Preserve provenance; do not delete, obscure, rewrite, or fabricate evidence. |
+| Product / provider truth | Do not insert Forge AI project truth into `docs/AI/` or modify product truth unless the active task explicitly authorizes product work. |
+| External Target scope | Do not activate or modify another Target Project without explicit authority. |
 
-Protected-area conflicts must stop work and be reported as blockers.
-
----
-
-## 6. AI-DOS Invocation
-
-Before invoking any execution capability, the current Target Operational Entry shall be resolved.
-
-The Target Operational Entry supplies Target-side operational context, including:
-
-- current operational state;
-- active task or authorized next action;
-- execution boundaries;
-- applicable planning context;
-- protected-area constraints;
-- validation expectations when declared.
-
-Execution frameworks consume this information as Target Context.
-
-Forge AI invokes AI-DOS as a reusable capability system. Forge AI supplies the Target side of the work and receives bounded results.
-
-```text
-Forge AI Goal
-    ↓
-Target Context
-    ↓
-AI-DOS Invocation
-    ↓
-Result
-    ↓
-Evidence
-    ↓
-Human Governance
-    ↓
-Next Target Objective
-```
-
-```mermaid
-flowchart TD
-    A[Forge AI Goal] --> B[Target Context]
-    B --> C[AI-DOS Invocation]
-    C --> D[Result]
-    D --> E[Evidence]
-    E --> F[Human Governance]
-    F --> G[Next Target Objective]
-```
-
-Forge AI supplies:
-
-- Target Context.
-- Target resources.
-- Objectives.
-- Constraints.
-- Authorized scope.
-- Protected-area boundaries.
-- Validation expectations.
-- Review expectations.
-
-AI-DOS returns:
-
-- Result.
-- Evidence.
-- Review findings when applicable.
-- Validation results when applicable.
-- Blockers, risks, and uncertainty.
-
-This contract describes only Forge AI's Target-side invocation responsibilities. It does not define how AI-DOS works internally.
+A protected-area conflict must stop work and be reported as a blocker.
 
 ---
 
-## 7. Execution Rules
+## 7. Execution Authorization Boundaries
 
-Execution must be bounded, evidence-first, and governed.
-
-### Execution Constraints
+Execution must remain bounded, explicit, evidence-backed, and Human-Governed.
 
 | Constraint | Rule |
 |:---|:---|
-| Bounded work | Execute only the task-authorized scope. |
-| No unauthorized expansion | Do not expand objectives, files, lifecycle state, or authority by implication. |
-| Protected-area respect | Refuse unauthorized protected-area changes and report blockers. |
-| Evidence-first execution | Record what was requested, inspected, changed, validated, and unresolved. |
+| Authorized objective | Execute only the resolved or explicitly supplied objective. |
+| Scope | Modify only task-required files and artifacts. |
+| No expansion | Do not add objectives, files, lifecycle changes, or follow-up work by implication. |
+| Exactly one work unit | When the active state authorizes one work unit, execute only one. |
+| Protected areas | Refuse unauthorized protected-area changes. |
 | Validation | Run applicable checks or report why they could not be run. |
-| Review | Separate review findings from Human Governance approval. |
-| Blocker reporting | Stop, narrow, or escalate when required context, authority, or safety is missing. |
-| Target isolation | Keep Target Context explicit and isolated from other Target Projects. |
-| Product purity | Preserve reusable AI-DOS behavior and avoid Forge AI project-specific contamination. |
-| Continuation | When execution is resumed without an explicitly supplied task, resolve the declared Target Operational Entry and continue only from the exactly one authorized action. |
+| Evidence | Record inputs, inspected resources, changes, validation, blockers, risks, and completion condition. |
+| Review / approval | Review findings do not replace Human Governance approval. |
+| State mutation | Do not update live state without exact authorization. |
+| Provider independence | Do not require Forge AI to know or declare provider internals. |
 
 ---
 
-## 8. Evidence Requirements
+## 8. Validation and Evidence Expectations
 
-Every AI-DOS-assisted Forge AI task must return enough evidence for Human Governance to understand what happened and decide what comes next.
+Every completed Target task must produce enough evidence for Human Governance to determine what occurred and whether the result should be accepted.
 
-### Evidence Requirements
+Minimum evidence:
 
-| Evidence Type | Minimum Requirement |
+| Evidence Type | Requirement |
 |:---|:---|
-| Task input | Identify the objective, constraints, and authorized scope. |
-| Target Context | Identify the resources and assumptions actually used. |
-| Changed artifacts | List files or artifacts changed, or state that none changed. |
-| Validation | Report commands, checks, outputs, failures, skipped checks, and environment limitations. |
-| Review | Report findings, uncertainty, unresolved questions, and approval boundaries. |
-| Blockers | Identify missing context, unsafe requests, protected-area conflicts, or failed validation. |
-| Safety proof | Explain how scope, protected areas, project state, and product purity were preserved. |
-| Completion report | Summarize result, evidence, risks, and exactly authorized next-step recommendations when required. |
+| Objective | State the resolved or explicitly supplied objective. |
+| Target Context | Identify Target resources and authorities actually consumed. |
+| Selected work | Identify the one bounded work unit, when state-derived selection was required. |
+| Selection basis | Explain its direct relation to the active capability and authorized objective. |
+| Changed artifacts | List every modified artifact or state that none changed. |
+| Validation | Report commands, results, warnings, failures, skipped checks, and environment limitations. |
+| Protected-area proof | Confirm no unauthorized protected area changed. |
+| Completion proof | Demonstrate that the declared completion condition was met. |
+| Blockers and risks | Report uncertainty, missing authority, failed validation, or unresolved constraints honestly. |
+| State-update policy | State whether live-state mutation was authorized. |
+| Recommended next step | Provide only an authorized or clearly labeled recommended next step. |
 
-Evidence must be specific, traceable, and honest. A missing or failed check is evidence, not something to hide.
+Evidence must be specific, traceable, and honest.
+
+Repository motion, documentation volume, commits, or passing tests do not by themselves prove Target progress.
 
 ---
 
-## 9. Autonomy Safety
+## 9. Project State Update Authority
 
-Forge AI advances autonomy only through explicit evidence and Human Governance acceptance.
+ProjectStatus may be modified only when:
 
-Autonomy means completing increasingly complex bounded work with less direct intervention while preserving authority, constraints, validation, traceability, escalation, and safe-stop behavior.
+1. Human Governance explicitly authorizes the exact state transition;
+2. the active task is a dedicated ProjectStatus task; or
+3. the active task instruction directly authorizes a specific operational-state update.
 
-Autonomy does not mean unrestricted access, self-approval, silent scope expansion, automatic lifecycle changes, automatic state updates, bypassed governance, bypassed protected areas, or uncontrolled continuous execution.
+Without exact authorization:
 
-Safety invariants:
+- do not modify ProjectStatus;
+- provide only a recommended ProjectStatus update;
+- label it as a recommendation.
 
-- Human Governance remains final.
-- Target Context is explicit.
-- Scope is bounded.
-- Protected areas are enforced.
-- No authority is inferred.
-- No lifecycle change is automatic.
-- No project state is modified without authorization.
-- Validation is mandatory.
-- Review is distinct from approval.
-- Blockers stop or safely redirect execution.
-- Every result is traceable.
-- Target Contexts remain isolated.
-- AI-DOS remains Target-independent.
+No invocation intent grants automatic state-update authority.
 
 ---
 
 ## 10. Working Principles
 
-- Target-first: Forge AI supplies explicit Target Context before expecting useful AI-DOS work.
-- Human Governance authority: Human Governance is final for approvals, scope changes, and autonomy claims.
-- Evidence before assumptions: Missing context must be reported rather than invented.
-- Bounded execution: Work remains inside authorized objectives, files, and constraints.
-- Reusable capability over project shortcuts: Prefer improvements that strengthen reusable AI-DOS behavior.
-- AI-DOS purity preservation: Keep Forge AI project truth out of reusable AI-DOS truth.
-- Review is not approval: Review informs governance; it does not replace governance.
-- Blockers are valid outcomes: Safe stopping is preferable to unsafe completion.
-- External readiness requires proof: Self-application alone does not prove independent Target readiness.
+- Target truth remains Target-owned.
+- Provider truth remains separate.
+- Human Governance remains final.
+- Mission, planning, state, and evidence must remain traceable.
+- State-derived work must come from authoritative Target state.
+- Explicit bounded tasks must not be broadened.
+- Missing authority is a blocker, not permission.
+- Repository activity is not automatically capability progress.
+- Validation is mandatory.
+- Review is not approval.
+- Safe stopping is preferable to unauthorized completion.
+- External Target readiness requires independent evidence.
 
 ---
 
@@ -326,16 +265,17 @@ Safety invariants:
 
 This Target Project contract does not define:
 
-- AI-DOS architecture.
-- AI-DOS runtime behavior.
-- AI-DOS operating layers.
-- AI-DOS governance mechanics.
-- AI-DOS startup procedures.
-- AI-DOS Target-discovery procedures.
-- AI-DOS documentation navigation.
-- AI-DOS implementation design.
-- Universal lifecycle requirements for external Target Projects.
-- Automatic state, roadmap, phase, sprint, milestone, or backlog requirements.
+- execution-provider identity;
+- provider discovery;
+- provider startup;
+- provider internal paths;
+- provider architecture;
+- provider runtime behavior;
+- provider workflow or command routing;
+- provider task-planning implementation;
+- provider state-update implementation;
+- universal lifecycle requirements for other Target Projects;
+- automatic state, roadmap, phase, stage, sprint, milestone, or backlog behavior.
 
 ---
 
@@ -343,5 +283,6 @@ This Target Project contract does not define:
 
 | Version | Date | Description |
 |:---|:---|:---|
-| `1.0.0-draft` | 2026-07-11 | Initial Forge AI Target Project contract realigned around AI-DOS development, validation, self-application, autonomy safety, evidence, and Target-side invocation. |
-| `1.1.0-draft` | 2026-07-14 | Added the Target Operational Entry and evidence-driven continuation resolution rule without introducing AI-DOS internal paths or provider dependencies. |
+| `1.0.0-draft` | 2026-07-11 | Initial Forge AI Target Project contract. |
+| `1.1.0-draft` | 2026-07-14 | Added Target Operational Entry and continuation resolution. |
+| `1.2.0-draft` | 2026-07-15 | Refactored the contract around Target-owned truth, provider independence, intent-based state-derived work resolution, bounded execution, validation, evidence, and authorization-bound state updates; removed provider-specific invocation and internal-path responsibilities. |
