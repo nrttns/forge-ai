@@ -18,7 +18,7 @@
 | Review Authority | Human Governance / Framework Governance |
 | Approval Authority | Human Governance |
 | Created | 2026-07-09 |
-| Last Updated | 2026-07-09 |
+| Last Updated | 2026-07-15 |
 | Lifecycle Phase | Draft Alignment |
 | Traceability ID | `AI-DOS.V2.OP-005` |
 | Scope | Defines sequencing and routing behavior for authorized state-update agents. |
@@ -26,7 +26,7 @@
 | Normative Authority | `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; the ProjectStatus and DevelopmentPhases declared by the active Target Repository |
 | Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/README.md`; `docs/AI/Operational/Operational-Core-Replacement-Matrix.md` |
 | Dependencies | v2 Operational Core; active task instruction; current roadmap and operational state. |
-| Consumes | Human task instruction, authority documents, current ProjectStatus state, roadmap state, applicable templates, validation evidence. |
+| Consumes | Human task instruction, authority documents, current ProjectStatus state, DevelopmentPhases, Roadmap, completed validation evidence, completed review evidence, protected-boundary state, dependency state, and applicable templates. |
 | Produces | ProjectStatus update proposal or authorized update. |
 | Related Specifications | `docs/AI/Commands/AgentTaskCommand.md`; `docs/AI/Workflows/TaskPlanner.md`; `docs/AI/Workflows/TaskGenerationWorkflow.md`; `docs/AI/Workflows/ProjectStateUpdater.md` |
 | Supersedes | Prior in-place content of this document. |
@@ -70,7 +70,10 @@ This document defines sequencing and routing behavior. It consumes the v2 Operat
 - the ProjectStatus declared by the active Target Repository (`<PROJECT_STATUS_PATH>`).
 - the DevelopmentPhases declared by the active Target Repository (`<DEVELOPMENT_PHASES_PATH>`).
 - the Roadmap declared by the active Target Repository (`<ROADMAP_PATH>`).
-- Completed validation and review evidence for the current lifecycle gate.
+- Completed validation evidence for the current lifecycle gate.
+- Completed review evidence for the current lifecycle gate.
+- Protected-boundary state.
+- Dependency state.
 - Applicable task-specific authority documents and templates.
 
 ## 5. Outputs
@@ -102,13 +105,15 @@ This document defines sequencing and routing behavior. It consumes the v2 Operat
 
 ## 8. State Update Sequence
 
-1. Confirm explicit authorization to update ProjectStatus or resolve Human Governance approval intent from authoritative Target state.
-2. Verify completion evidence, validation results, review status, and blockers.
-3. For approval intent, confirm that current capability work is complete, validation passed, review completed without unresolved blocking findings, ProjectStatus records the current capability as accepted or ready for approval, DevelopmentPhases and Roadmap identify exactly one valid next capability, and no protected boundary or unresolved dependency blocks transition.
-4. Identify the exact ProjectStatus fields in scope and derive only the transition required to close the current lifecycle gate, record the current capability as approved, activate the single next capability, update ProjectStatus accordingly, and stop before executing work in the newly activated capability.
-5. Safe-stop without mutation when review has unresolved blocking findings, more than one next capability is possible, no next capability is authorized, a dependency is unmet, a protected boundary would be activated, or the required transition cannot be uniquely derived.
-6. Apply only authorized factual updates, or produce a recommended update if authorization is absent or derivation is not unique.
-7. Report the update, evidence, and next recommended action.
+1. Classify Human Governance approval intent as an approval-decision route, not as capability-grounded repository work selection.
+2. Confirm explicit authorization to update ProjectStatus or resolve Human Governance approval intent from authoritative Target state.
+3. Consume current ProjectStatus, DevelopmentPhases, Roadmap, completed validation evidence, completed review evidence, protected-boundary state, and dependency state before deriving any update.
+4. Verify completion evidence, validation results, review status, blockers, dependencies, and protected-boundary constraints.
+5. For approval intent, confirm that current capability work is complete, validation passed, review completed without unresolved blocking findings, ProjectStatus records the current capability as accepted or ready for approval, DevelopmentPhases and Roadmap identify exactly one valid next capability, and no protected boundary or unresolved dependency blocks transition.
+6. When exactly one valid transition is derivable, identify the exact ProjectStatus fields in scope and perform only the transition required to close the current lifecycle gate, record the current capability as approved, activate the single next capability, update ProjectStatus accordingly, and stop before executing work in the newly activated capability.
+7. Safe-stop without mutation when review has unresolved blocking findings, more than one next capability is possible, no next capability is authorized, a dependency is unmet, a protected boundary would be activated, or the required transition cannot be uniquely derived.
+8. Apply only authorized factual updates, or produce a recommended update if authorization is absent or derivation is not unique.
+9. Report the update, evidence consumed, transition derivation, protected-boundary and dependency result, and next recommended action.
 
 ## 9. Completion Report Expectations
 

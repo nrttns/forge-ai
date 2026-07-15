@@ -21,7 +21,7 @@
 | Normative Authority | Human Governance; `docs/Projects/ForgeAI/Mission/AGENTS.md`; `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-Product-and-Autonomy-Model.md` |
 | Consumes | `docs/Projects/ForgeAI/Mission/AGENTS.md`; `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-Product-and-Autonomy-Model.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`; `docs/Projects/ForgeAI/Planning/Roadmap.md`; current repository evidence; accepted Human Governance decisions |
 | Produces | Live operational context for AI-DOS invocation, work selection, execution authorization, validation, evidence reporting, blockers, ProjectStatus update recommendations, and next-action resolution |
-| Update Rule | Update only through explicit Human Governance authorization or a dedicated ProjectStatus task. |
+| Update Rule | Update only through explicit Human Governance authorization, uniquely derivable Human Governance approval intent, or a dedicated ProjectStatus task. |
 | Certification Status | Not certified; live state record only |
 
 ProjectStatus reports current operational state.
@@ -388,12 +388,13 @@ None identified by the accepted Pilot Execution #2 evidence or the confirmed EP-
 ProjectStatus may be modified only when:
 
 1. Human Governance explicitly authorizes the exact update;
-2. the active task is a dedicated ProjectStatus task; or
-3. the task instruction directly authorizes a specific operational-state transition.
+2. Human Governance approval intent uniquely authorizes the exact operational-state transition after ProjectStateUpdater consumes current ProjectStatus, DevelopmentPhases, Roadmap, completed validation evidence, completed review evidence, and protected-boundary and dependency state;
+3. the active task is a dedicated ProjectStatus task; or
+4. the task instruction directly authorizes a specific operational-state transition.
 
-Human Governance acceptance of D1 Distribution Foundation Architecture authorizes this ProjectStatus update to record the approved D1 operational state only.
+Human Governance acceptance of D1 Distribution Foundation Architecture authorizes the recorded D1 operational state only. Future approval intent may route to ProjectStateUpdater for a D1-to-D2 transition only when that transition is uniquely derivable, review has no unresolved blocking findings, dependencies are met, and no protected boundary would be activated.
 
-When update authority is absent, the completion report must provide:
+When update authority and uniquely derivable Human Governance approval intent are absent, the completion report must provide:
 
 ```text
 Recommended ProjectStatus Update

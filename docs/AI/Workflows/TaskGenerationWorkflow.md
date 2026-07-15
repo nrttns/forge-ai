@@ -85,7 +85,7 @@ This document defines sequencing and routing behavior. It consumes the v2 Operat
 - Do not create parallel replacement files.
 - Do not move, delete, or rename files unless explicitly authorized.
 - Do not modify templates unless explicitly authorized.
-- Do not update the ProjectStatus declared by the active Target Repository (`<PROJECT_STATUS_PATH>`) unless explicitly authorized.
+- Do not update the ProjectStatus declared by the active Target Repository (`<PROJECT_STATUS_PATH>`). Approval decisions and lifecycle state transitions route to ProjectStateUpdater and do not require TaskGenerationWorkflow unless a separate executable repository work unit has been selected.
 
 ## 7. Validation Rules
 
@@ -97,7 +97,7 @@ This document defines sequencing and routing behavior. It consumes the v2 Operat
 
 ## 8. Generation Sequence
 
-Task Generation Workflow converts the completed Task Planner selection record into an executable task statement. It does not own task selection authority and must not substitute, broaden, reinterpret, or replace the selected work unit.
+Task Generation Workflow converts the completed Task Planner selection record into an executable task statement. It is not required for Human Governance approval decisions or lifecycle state transitions unless a separate executable repository work unit is actually selected. It does not own task selection authority and must not substitute, broaden, reinterpret, or replace the selected work unit.
 
 1. Consume the completed Task Planner selection record.
 2. Verify that the record contains a selected work unit, capability trace, roadmap outcome trace, candidate rejection evidence, validation plan, and completion condition.

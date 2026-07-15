@@ -170,7 +170,7 @@ It must not be replaced, broadened, or reinterpreted through state-derived work 
 | Root repository entry | Modify only through an explicitly authorized repository-entry task. |
 | Target Project contract | Modify only through an explicitly authorized Target contract task. |
 | Mission and autonomy model | Read-only unless Human Governance explicitly authorizes mission work. |
-| ProjectStatus | Read-only unless the active task or Human Governance authorizes the exact state transition. |
+| ProjectStatus | Read-only unless the active task authorizes the exact state transition, Human Governance explicitly authorizes the exact state transition, or Human Governance approval intent uniquely derives the exact operational-state transition. |
 | DevelopmentPhases | Read-only unless planning realignment is explicitly authorized. |
 | Roadmap | Read-only unless roadmap work is explicitly authorized. |
 | Evidence records | Preserve provenance; do not delete, obscure, rewrite, or fabricate evidence. |
@@ -231,10 +231,15 @@ Repository motion, documentation volume, commits, or passing tests do not by the
 ProjectStatus may be modified only when:
 
 1. Human Governance explicitly authorizes the exact state transition;
-2. the active task is a dedicated ProjectStatus task; or
-3. the active task instruction directly authorizes a specific operational-state update.
+2. Human Governance approval intent uniquely authorizes the exact operational-state transition after ProjectStateUpdater consumes current ProjectStatus, DevelopmentPhases, Roadmap, completed validation evidence, completed review evidence, and protected-boundary and dependency state;
+3. the active task is a dedicated ProjectStatus task; or
+4. the active task instruction directly authorizes a specific operational-state update.
 
-Without exact authorization:
+Approval intent must route to ProjectStateUpdater when the current lifecycle gate requires an operational-state transition. TaskPlanner must not block, replace, or convert that approval-state transition into repository work selection. TaskGenerationWorkflow is not required for approval decisions or lifecycle state transitions unless a separate executable repository work unit is actually selected.
+
+ProjectStateUpdater must safe-stop without mutation when the transition is not unique, review has unresolved blocking findings, dependencies are unmet, or a protected boundary would be activated.
+
+Without exact authorization or uniquely derivable Human Governance approval intent:
 
 - do not modify ProjectStatus;
 - provide only a recommended ProjectStatus update;
