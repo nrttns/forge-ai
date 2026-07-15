@@ -21,12 +21,22 @@ AI-DOS Development and Autonomy Enablement Target Project
 
 This repository develops, validates, self-applies, and hardens AI-DOS through bounded Forge AI Target Project work.
 
-## 3. Canonical Target Project Contract
+## 3. Repository Loader Declarations
 
 Canonical Target Project Contract:
 `docs/Projects/ForgeAI/Mission/AGENTS.md`
 
+AI-DOS Provider Entry:
+`docs/AI/AIFramework.md`
+
+AI-DOS Tool-Facing Behavior Contract:
+`docs/AI/AgentSystemPrompt.md`
+
 The canonical contract owns Forge AI Target Project mission alignment, execution rules, protected areas, evidence requirements, autonomy safety, Target resources, and AI-DOS invocation responsibilities.
+
+The AI-DOS Provider Entry owns the provider Operational Core entry for this self-hosting repository composition.
+
+The AI-DOS Tool-Facing Behavior Contract is mandatory provider-side behavior context for tool-facing AI-DOS operation.
 
 ## 4. Entry Rule
 
@@ -73,4 +83,9 @@ This repository entry file is not:
 - an AI-DOS internal navigation file;
 - a System Layer procedure;
 - a duplicate Mission document;
-- a duplicate planning document.
+- a duplicate planning document;
+- a new provider document;
+- a new adapter;
+- a new workflow;
+- a new command;
+- a standard, meta model, RFC, runtime, engine, agent, governance model, or planning layer.
