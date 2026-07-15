@@ -1,1 +1,1 @@
-console.log('Happy developing ✨')
+export { bootMessage, getBootMessage } from './boot';

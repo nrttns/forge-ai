@@ -1,1 +1,3 @@
-console.log('Forge AI booted.');
+import { getBootMessage } from './boot';
+
+console.log(getBootMessage());
