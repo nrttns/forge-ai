@@ -1,4 +1,4 @@
 export { bootMessage, getBootMessage, getBootStatus } from './boot';
-export { formatBootOutput, runCli } from './main';
+export { formatBootOutput, getCliStatus, parseCliArgs, runCli } from './main';
 export type { BootStatus } from './boot';
-export type { OutputFormat, RunCliOptions, WriteLine } from './main';
+export type { CliStatus, OutputFormat, RunCliOptions, WriteLine } from './main';

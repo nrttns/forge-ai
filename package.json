@@ -18,5 +18,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "bin": {
+    "forge-ai": "dist/main.js"
+  },
+  "files": [
+    "dist"
+  ]
 }
