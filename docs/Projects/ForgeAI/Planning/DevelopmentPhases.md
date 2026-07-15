@@ -73,6 +73,37 @@ A phase may generate artifacts, plans, validations, or changes, but those artifa
 
 ---
 
+## 3.1 Active Capability Advancement Model
+
+The active capability model resolves the Pilot Execution #2 finding that repository activity can be mistaken for capability progress. Capability maturity is demonstrated by reusable capability progress, not by repository activity.
+
+For every active phase capability, work selection must identify all of the following before claiming advancement:
+
+| Required Capability Field | Selection Meaning |
+|:---|:---|
+| Operational outcome | The reusable AI-DOS behavior, decision quality, safety behavior, validation behavior, recovery behavior, portability behavior, or governance-support behavior that should be stronger after the work. |
+| Capability advancement semantics | The specific way the work moves the declared capability toward maturity, such as making invocation more bounded, planning more evidence-grounded, execution more validated, review more auditable, recovery safer, portability less Forge AI-dependent, or improvement more evidence-derived. |
+| Required advancement evidence | The concrete evidence Human Governance can inspect to determine that reusable capability improved, including task input, Target Context used, changed artifacts when applicable, validation output, review findings, blocker handling, reuse proof, purity proof, and governance acceptance boundary. |
+| Non-advancing activities | Repository activity that may support work but does not by itself mature the declared capability unless Human Governance explicitly declares that activity to be the active capability objective. |
+
+Capability advancement requires a direct trace from the active capability to the operational outcome and evidence. A completed work unit that only changes repository organization, readability, navigation, formatting, status freshness, audit presentation, or planning text is not capability advancement unless the authorized objective is specifically to mature that planning, governance-support, evidence, or navigation capability.
+
+Activities that do not constitute capability advancement by themselves include:
+
+- README alignment;
+- repository navigation;
+- formatting;
+- documentation cleanup;
+- planning maintenance;
+- audits;
+- operational evidence reports;
+- ProjectStatus maintenance; and
+- other repository maintenance that does not demonstrate reusable AI-DOS capability progress.
+
+These activities may be valid bounded Target work, supporting evidence, or governance preparation. They shall not be counted as phase maturity evidence unless they are explicitly declared by Human Governance as the active capability objective and the resulting evidence demonstrates reusable capability progress.
+
+---
+
 ## 4. Autonomy Progression
 
 Autonomy means completing increasingly complex, multi-step, bounded work with less direct intervention while preserving explicit authority, constraints, validation, traceability, escalation, and safe-stop behavior.
@@ -239,6 +270,10 @@ flowchart LR
 
 Establish that AI-DOS and Forge AI are distinct: Forge AI is the Target Project developing AI-DOS, while AI-DOS is reusable product truth and capability behavior.
 
+**Capability Advancement Semantics**
+
+Advancement means stronger reusable separation, purity recognition, protected-area discipline, and Target-independence proof. Repository cleanup or boundary wording alone is not advancement unless it produces auditable separation evidence accepted for this phase.
+
 **Capabilities**
 
 - AI-DOS / Target separation.
@@ -296,6 +331,10 @@ Purity accepted.
 
 Mature AI-DOS from a separated product into an invocable reusable capability provider that operates only against explicit Target Context and bounded execution rules.
 
+**Capability Advancement Semantics**
+
+Advancement means AI-DOS becomes more capable at accepting explicit Target Context, enforcing invocation boundaries, and stopping on missing authority. Navigation or README work is not advancement unless the active objective is to improve invocation reliability and evidence proves that outcome.
+
 **Capabilities**
 
 - Target-first invocation.
@@ -351,6 +390,10 @@ Invocation contract accepted.
 **Purpose**
 
 Mature AI-DOS capability to understand supplied context, integrate knowledge, produce bounded plans, and support human decisions without replacing Human Governance.
+
+**Capability Advancement Semantics**
+
+Advancement means better evidence-grounded reasoning, bounded planning, explicit assumptions, risk handling, or validation strategy selection. Planning-document maintenance is not advancement unless Human Governance declares the planning capability itself as the objective and evidence shows reusable planning improvement.
 
 **Capabilities**
 
@@ -409,6 +452,10 @@ Planning quality accepted.
 **Purpose**
 
 Mature AI-DOS capability to execute authorized bounded work, validate outcomes, review its own results, and produce certification-ready evidence without granting itself certification.
+
+**Capability Advancement Semantics**
+
+Advancement means stronger bounded execution, validation, review, defect reporting, blocker handling, or evidence packaging. Formatting, cleanup, or evidence-report drafting is not advancement unless it is explicitly the governed execution-evidence objective and improves reusable execution capability.
 
 **Capabilities**
 
@@ -470,6 +517,10 @@ Execution evidence accepted.
 
 Mature AI-DOS capability to assist in improving AI-DOS itself while Forge AI remains the governing Target Project and AI-DOS remains reusable product truth.
 
+**Capability Advancement Semantics**
+
+Advancement means observed Forge AI work produces reusable AI-DOS improvement evidence while preserving purity and governance. Self-application activity, audits, or status updates do not advance this phase unless they demonstrate a reusable improvement feedback capability.
+
 **Capabilities**
 
 - AI-DOS improving AI-DOS.
@@ -527,6 +578,10 @@ Self-application accepted.
 **Purpose**
 
 Mature AI-DOS capability to complete increasingly complex bounded workflows with recovery, replanning, escalation, and safety controls while Human Governance remains final.
+
+**Capability Advancement Semantics**
+
+Advancement means safer recovery, replanning, escalation, safe-stop behavior, or bounded workflow completion with less intervention and more evidence. Operational reports or ProjectStatus maintenance are not advancement unless the declared objective is an autonomy-control capability and evidence proves it.
 
 **Capabilities**
 
@@ -587,6 +642,10 @@ Autonomy maturity accepted.
 
 Mature AI-DOS capability to operate as a reusable provider for independent Target Projects without Forge AI context leakage, authority crossover, or Target-specific coupling.
 
+**Capability Advancement Semantics**
+
+Advancement means stronger independent Target operation, isolation, no-leakage proof, portability, or separate-authority handling. Repository navigation, audits, and documentation cleanup are not advancement unless they directly produce accepted portability capability evidence.
+
 **Capabilities**
 
 - Target independence.
@@ -644,6 +703,10 @@ External readiness accepted.
 **Purpose**
 
 Mature AI-DOS and Forge AI governance into a sustainable, evidence-driven improvement system that keeps capability, autonomy, safety, and portability advancing over time.
+
+**Capability Advancement Semantics**
+
+Advancement means better evidence-derived improvement selection, regression handling, maturity review, sustainability controls, or reuse-preserving adaptation. Planning maintenance or evidence aggregation alone is not advancement unless declared as the active improvement-governance objective and tied to reusable capability outcomes.
 
 **Capabilities**
 
@@ -817,52 +880,4 @@ Validation of this program requires confirming that:
 | `4.2.0-draft` | 2026-07-10 | Completed Phase 8 and activated the definitive repository audit as Phase 9. |
 | `4.3.0-draft` | 2026-07-10 | Removed direct AI-DOS internal path dependencies and bound project resources to root AGENTS declarations. |
 | `5.0.0-draft` | 2026-07-11 | Rebuilt Forge AI Development Phases as the AI-DOS capability and autonomy maturity program. |
-
-
----
-
-# Capability Operational Outcome (Normative)
-
-Every Development Phase shall define not only the capability being acquired, but also the operational outcome that AI-DOS is expected to demonstrate while that capability is active.
-
-Each active capability shall therefore be interpreted using the following semantics:
-
-## Operational Outcome
-
-The operational outcome defines the observable Target Repository progress that demonstrates acquisition of the current capability.
-
-Operational outcomes shall always be:
-
-- bounded;
-- independently verifiable;
-- evidence-backed;
-- reusable beyond Forge AI.
-
-## Capability Advancement Evidence
-
-Capability maturity is demonstrated only by repeated successful execution of work that directly advances the declared capability.
-
-Execution evidence shall include, where applicable:
-
-- explicit Target Objective;
-- one bounded work unit;
-- validation results;
-- review evidence;
-- completion evidence.
-
-## Non-Progress Activities
-
-The following activities do not advance a capability by themselves unless they are explicitly declared as the active objective by Human Governance:
-
-- README alignment;
-- repository navigation improvements;
-- documentation cleanup;
-- formatting-only changes;
-- audits;
-- planning maintenance;
-- ProjectStatus maintenance;
-- DevelopmentPhases maintenance;
-- Roadmap maintenance;
-- standalone report generation.
-
-These activities may support capability acquisition but shall not be treated as capability advancement evidence on their own.
+| `5.1.0-draft` | 2026-07-14 | Refined active capability advancement semantics to distinguish reusable capability progress from repository activity after Pilot Execution #2. |

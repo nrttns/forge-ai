@@ -146,6 +146,7 @@ flowchart LR
 |:---|:---|
 | Purpose | Ensure AI-DOS reusable truth remains separate from Forge AI Target Project truth. |
 | Capability Description | AI-DOS can be reasoned about as a reusable capability provider while Forge AI retains project mission, planning, state, evidence, and authorization. |
+| Capability Acquisition Interpretation | Advancement means AI-DOS gains stronger reusable product/project separation, not merely cleaner repository wording or navigation. |
 | Business / Strategic Value | Prevents product contamination, protects reuse, and creates a stable basis for external Target adoption. |
 | Dependencies | Required predecessor capabilities: none; this is the root capability. |
 | Reusable Outcomes | Clear product/project boundary, purity rules, Target-independent capability language, and protected-area discipline. |
@@ -165,6 +166,7 @@ flowchart LR
 |:---|:---|
 | Purpose | Make every AI-DOS use depend on explicit Target Context, bounded objectives, constraints, validation expectations, and protected areas. |
 | Capability Description | AI-DOS can accept a Target-supplied invocation contract and operate without owning Target Project truth or resolving unauthorized resources. |
+| Capability Acquisition Interpretation | Advancement means AI-DOS gains stronger Target-first invocation behavior, explicit boundary handling, or missing-context blocker behavior. |
 | Business / Strategic Value | Enables repeatable Target usage, lowers onboarding ambiguity, and prevents authority drift. |
 | Dependencies | Required predecessor capabilities: C1. |
 | Reusable Outcomes | Invocation contract pattern, Target Context boundary, execution constraints, blocker reporting expectations, and Target resolution safety rule. |
@@ -184,6 +186,7 @@ flowchart LR
 |:---|:---|
 | Purpose | Enable AI-DOS to convert bounded Target Context into scoped plans, decisions, assumptions, risk statements, and validation strategies. |
 | Capability Description | AI-DOS can reason from supplied evidence, identify missing information, avoid unsupported claims, and produce bounded plans that require governance acceptance before maturity claims. |
+| Capability Acquisition Interpretation | Advancement means AI-DOS gains stronger evidence-grounded planning, risk identification, assumption handling, or validation-strategy selection. |
 | Business / Strategic Value | Improves decision quality, reduces rework from unsupported assumptions, and creates auditable planning evidence. |
 | Dependencies | Required predecessor capabilities: C1 and C2. |
 | Reusable Outcomes | Grounded planning model, decision-evidence trace, risk and assumption discipline, and maturity-claim restraint. |
@@ -203,6 +206,7 @@ flowchart LR
 |:---|:---|
 | Purpose | Mature AI-DOS from planning into bounded execution that validates, reviews, reports evidence, and distinguishes review from approval. |
 | Capability Description | AI-DOS can complete authorized work within explicit boundaries, run applicable checks, report failures honestly, review results, and provide certification-ready evidence without self-certifying. |
+| Capability Acquisition Interpretation | Advancement means AI-DOS gains stronger bounded execution, validation, review, transparent failure reporting, or evidence packaging. |
 | Business / Strategic Value | Creates reliable delivery, auditability, quality control, and trust in AI-DOS-assisted outcomes. |
 | Dependencies | Required predecessor capabilities: C1, C2, and C3. |
 | Reusable Outcomes | Execution evidence package, validation report pattern, review finding structure, certification input boundary, and failure transparency rule. |
@@ -222,6 +226,7 @@ flowchart LR
 |:---|:---|
 | Purpose | Use AI-DOS on authorized Forge AI work to improve AI-DOS without merging Forge AI and AI-DOS identities. |
 | Capability Description | AI-DOS can assist in its own development through Forge AI Target Context while preserving product purity, bounded authority, evidence, and Human Governance evaluation. |
+| Capability Acquisition Interpretation | Advancement means self-application produces reusable AI-DOS improvement evidence without self-approval or Forge AI-specific contamination. |
 | Business / Strategic Value | Turns real work into improvement evidence and accelerates hardening without sacrificing independence. |
 | Dependencies | Required predecessor capabilities: C1, C2, C3, and C4. |
 | Reusable Outcomes | Governed self-application loop, evidence-derived improvement proposals, product-purity checks, and governance acceptance records. |
@@ -241,6 +246,7 @@ flowchart LR
 |:---|:---|
 | Purpose | Mature AI-DOS autonomy through bounded recovery, replanning, escalation, safe stop, and continuous-execution boundaries. |
 | Capability Description | AI-DOS can detect failure, preserve scope, replan within authority, escalate blockers, stop safely when authority or evidence is missing, and propose bounded next work without self-authorizing it. |
+| Capability Acquisition Interpretation | Advancement means AI-DOS gains stronger recovery, replanning, escalation, safe-stop, or bounded autonomy-control behavior. |
 | Business / Strategic Value | Reduces human intervention for routine bounded work while preserving safety, traceability, and governance control. |
 | Dependencies | Required predecessor capabilities: C1, C2, C3, C4, and C5 for self-application evidence; C4 alone may support early recovery trials. |
 | Reusable Outcomes | Recovery protocol, escalation evidence, safe-stop standard, autonomy maturity criteria, and continuous-execution boundary. |
@@ -260,6 +266,7 @@ flowchart LR
 |:---|:---|
 | Purpose | Prove AI-DOS can operate against independent Target Contexts without Forge AI leakage or authority crossover. |
 | Capability Description | AI-DOS can consume a separate Target Project's explicit context, perform bounded assistance, validate results, and preserve isolation between Targets. |
+| Capability Acquisition Interpretation | Advancement means AI-DOS gains stronger portability, Target isolation, no-leakage proof, or separate-authority operation. |
 | Business / Strategic Value | Demonstrates market and ecosystem readiness by proving AI-DOS is reusable outside Forge AI. |
 | Dependencies | Required predecessor capabilities: C1 through C6. |
 | Reusable Outcomes | External Target readiness criteria, Target isolation proof, portability evidence, multi-Target safety checks, and onboarding evidence expectations. |
@@ -279,6 +286,7 @@ flowchart LR
 |:---|:---|
 | Purpose | Sustain AI-DOS evolution through evidence-derived improvement, capability governance, and long-term maintainability. |
 | Capability Description | AI-DOS can convert accumulated evidence into bounded improvement proposals, maturity reviews, risk controls, and sustainability decisions without self-authorizing change. |
+| Capability Acquisition Interpretation | Advancement means AI-DOS gains stronger evidence-derived improvement selection, maturity review, regression control, or reuse-preserving adaptation. |
 | Business / Strategic Value | Supports durable product evolution, predictable governance, and scalable reuse across Targets. |
 | Dependencies | Required predecessor capabilities: C1 through C7; C5 may unlock early improvement proposals before external readiness is mature. |
 | Reusable Outcomes | Capability governance model, improvement intake criteria, sustainability metrics, maturity review cadence, and retirement or revision evidence rules. |
@@ -292,7 +300,36 @@ flowchart LR
 
 ---
 
-## 7. Evidence Strategy
+## 7. Capability Acquisition Interpretation
+
+Every capability stream in this roadmap is interpreted as capability acquisition, not repository maintenance. A stream advances only when the work produces reusable AI-DOS capability evidence for the declared milestone.
+
+Roadmap progress requires an explicit trace from the active milestone to:
+
+- the reusable capability being acquired;
+- the operational outcome expected from that capability;
+- the predecessor capability evidence being relied on;
+- the validation, review, blocker, purity, reuse, or governance evidence proving advancement; and
+- the Human Governance boundary for accepting or rejecting the maturity claim.
+
+The following activities do not advance a roadmap capability unless Human Governance explicitly declares one of them to be the active capability objective and the resulting evidence demonstrates reusable capability acquisition:
+
+- README alignment;
+- repository navigation;
+- formatting;
+- documentation cleanup;
+- planning maintenance;
+- audits;
+- operational evidence reports;
+- ProjectStatus maintenance;
+- DevelopmentPhases maintenance; and
+- Roadmap maintenance.
+
+These activities may support governance, clarify evidence, or prepare a future work unit. They are not roadmap progress by themselves because roadmap progress is the acquisition of reusable AI-DOS capability.
+
+---
+
+## 8. Evidence Strategy
 
 Evidence is the proof layer between capability claims and governance decisions. Required evidence must be specific, traceable, honest, and sufficient for review.
 
@@ -309,7 +346,7 @@ Minimum evidence categories:
 
 ---
 
-## 8. Governance Strategy
+## 9. Governance Strategy
 
 Human Governance remains final for maturity acceptance, autonomy progression, external readiness, and continuous improvement authorization.
 
@@ -326,7 +363,7 @@ Governance acceptance does not automatically modify live project state, alter De
 
 ---
 
-## 9. Autonomy Strategy
+## 10. Autonomy Strategy
 
 Autonomy grows only from accepted capability evidence.
 
@@ -347,7 +384,7 @@ Autonomy is invalid if it bypasses scope, protected areas, validation, review, e
 
 ---
 
-## 10. Target Independence Strategy
+## 11. Target Independence Strategy
 
 Target independence is proven when AI-DOS uses explicit Target Context, preserves Target-specific authority outside AI-DOS product truth, validates against Target-provided expectations, and produces evidence without relying on Forge AI project state.
 
@@ -362,7 +399,7 @@ Target independence requires:
 
 ---
 
-## 11. Long-Term Evolution Diagram
+## 12. Long-Term Evolution Diagram
 
 ```text
 Mission
@@ -400,9 +437,9 @@ flowchart TD
 
 ---
 
-## 12. Required Matrices
+## 13. Required Matrices
 
-### 12.1 Capability Matrix
+### 13.1 Capability Matrix
 
 | Capability | Stream | Reusable Outcome | Primary Evidence | Gate |
 |:---|:---|:---|:---|:---|
@@ -415,7 +452,7 @@ flowchart TD
 | C7 | External readiness | Portability and isolation proof | Independent Target evidence | External readiness accepted |
 | C8 | Long-term evolution | Capability governance | Aggregated evidence and improvement decisions | Improvement accepted |
 
-### 12.2 Evidence Matrix
+### 13.2 Evidence Matrix
 
 | Capability | Required Evidence |
 |:---|:---|
@@ -428,7 +465,7 @@ flowchart TD
 | C7 | Independent Target records, isolation audit, no-leakage evidence. |
 | C8 | Aggregated evidence, trend analysis, accepted and rejected proposals. |
 
-### 12.3 Governance Matrix
+### 13.3 Governance Matrix
 
 | Gate | Decision Question | Possible Outcomes |
 |:---|:---|:---|
@@ -441,7 +478,7 @@ flowchart TD
 | G7 | Is external Target readiness proven? | Accept bounded readiness, reject broad claim, require isolation evidence. |
 | G8 | Is improvement warranted by evidence? | Authorize bounded follow-up, reject, defer, narrow. |
 
-### 12.4 Dependency Matrix
+### 13.4 Dependency Matrix
 
 | Capability | Required Predecessors | Unlocks |
 |:---|:---|:---|
@@ -454,7 +491,7 @@ flowchart TD
 | C7 | C1, C2, C3, C4, C5, C6 | C8 and broader Target-readiness decisions. |
 | C8 | C1 through C7 for full maturity; C5 for early proposals | Renewed capability cycles. |
 
-### 12.5 Autonomy Matrix
+### 13.5 Autonomy Matrix
 
 | Capability | Autonomy Contribution | Autonomy Boundary |
 |:---|:---|:---|
@@ -467,7 +504,7 @@ flowchart TD
 | C7 | Multi-Target readiness. | Separate authority per Target Context. |
 | C8 | Governed improvement proposals. | Proposal does not authorize execution. |
 
-### 12.6 Risk Matrix
+### 13.6 Risk Matrix
 
 | Risk | Affected Capabilities | Control |
 |:---|:---|:---|
@@ -479,7 +516,7 @@ flowchart TD
 | External Target leakage | C7 | Isolation evidence and separate authority records. |
 | Metrics incentivize activity | C8 | Capability, evidence, governance, and Target-independence metrics only. |
 
-### 12.7 Target Independence Matrix
+### 13.7 Target Independence Matrix
 
 | Capability | Target Independence Proof |
 |:---|:---|
@@ -492,7 +529,7 @@ flowchart TD
 | C7 | Independent Target operation succeeds without Forge AI leakage. |
 | C8 | Improvement governance tracks portability and isolation trends. |
 
-### 12.8 Success Metrics Matrix
+### 13.8 Success Metrics Matrix
 
 | Metric | Measurement | Desired Signal |
 |:---|:---|:---|
@@ -507,7 +544,7 @@ flowchart TD
 
 ---
 
-## 13. Success Metrics
+## 14. Success Metrics
 
 Success is measured by capability maturity, evidence quality, governance clarity, autonomy safety, and Target independence.
 
@@ -515,7 +552,7 @@ The roadmap explicitly does not measure success by activity throughput, artifact
 
 ---
 
-## 14. Roadmap Lifecycle
+## 15. Roadmap Lifecycle
 
 This roadmap changes only through explicit Human Governance authorization. Updates must preserve the mission, product/project separation, protected areas, DevelopmentPhases alignment, evidence requirements, and Target independence.
 
@@ -523,7 +560,7 @@ A roadmap update may add, split, merge, retire, or reword capabilities only when
 
 ---
 
-## 15. Version History
+## 16. Version History
 
 | Version | Date | Description |
 |:---|:---|:---|
@@ -531,49 +568,4 @@ A roadmap update may add, split, merge, retire, or reword capabilities only when
 | `4.2.0-draft` | 2026-07-10 | Added repository audit direction under prior roadmap model. |
 | `4.3.0-draft` | 2026-07-10 | Removed direct AI-DOS internal references and adopted Target Project planning boundary. |
 | `5.0.0-draft` | 2026-07-11 | Rebuilt roadmap as the Forge AI AI-DOS Capability Evolution Program focused on capability, evidence, governance, dependency, autonomy, and Target independence. |
-
-
----
-
-# Capability Advancement Semantics (Normative)
-
-This roadmap defines capability evolution, not repository activity.
-
-Every capability milestone shall be interpreted using the following advancement semantics.
-
-## Capability Advancement
-
-A capability advances only when the Target Repository demonstrates substantive progress toward the reusable capability declared by the milestone.
-
-Capability advancement shall be supported by evidence rather than repository activity alone.
-
-## Advancement Evidence
-
-Capability advancement should normally demonstrate:
-
-- progress toward the declared reusable capability;
-- completion of one bounded Target work unit;
-- validation evidence;
-- review evidence where applicable;
-- reusable outcomes beyond the immediate Target Project.
-
-## Activities That Do Not Constitute Capability Advancement
-
-Unless explicitly declared as the active capability objective by Human Governance, the following activities do not advance a roadmap capability by themselves:
-
-- README alignment;
-- repository navigation improvements;
-- documentation cleanup;
-- formatting-only changes;
-- planning maintenance;
-- ProjectStatus maintenance;
-- DevelopmentPhases maintenance;
-- Roadmap maintenance;
-- standalone audit reports;
-- standalone operational evidence reports.
-
-These activities may support capability acquisition but shall not be interpreted as evidence that the capability itself has advanced.
-
-## Governance Interpretation
-
-Human Governance evaluates capability advancement based on reusable capability outcomes and evidence, not on repository motion, documentation volume, or maintenance activity.
+| `5.1.0-draft` | 2026-07-14 | Refined capability acquisition semantics to distinguish reusable capability progress from repository maintenance after Pilot Execution #2. |
