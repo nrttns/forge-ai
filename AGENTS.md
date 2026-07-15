@@ -28,11 +28,31 @@ Canonical Target Project Contract:
 
 The canonical contract owns Forge AI Target Project mission alignment, execution rules, protected areas, evidence requirements, autonomy safety, Target resources, and AI-DOS invocation responsibilities.
 
-## 4. Entry Rule
+## 4. Execution Provider Contract
+
+Execution Provider Contract:
+`docs/AI/AGENTS.md`
+
+## 5. Mandatory Reading Order
+
+All AI agents and automation operating in this repository must read and follow these contracts in order:
+
+1. `docs/Projects/ForgeAI/Mission/AGENTS.md`
+2. `docs/AI/AGENTS.md`
+
+The first contract resolves Target Project truth and Target-owned operational context.
+
+The second contract consumes the resolved Target Context as the execution provider.
+
+## 6. Entry Rule
 
 All AI agents and automation operating in this repository must read and follow the canonical Forge AI Target Project Contract before classifying, planning, editing, validating, reviewing, or reporting work.
 
-## 5. File Boundary
+The root `AGENTS.md` does not define provider internals.
+
+The root `AGENTS.md` does not perform task selection, workflow routing, execution, validation, or state updates.
+
+## 7. File Boundary
 
 `docs/AI/`
 : contains AI-DOS product truth.
@@ -40,7 +60,7 @@ All AI agents and automation operating in this repository must read and follow t
 `docs/Projects/ForgeAI/`
 : contains Forge AI Target Project truth.
 
-## 6. Non-Goals
+## 8. Non-Goals
 
 This repository entry file is not:
 
