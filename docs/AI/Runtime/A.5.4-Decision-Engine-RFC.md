@@ -768,7 +768,7 @@ All inputs are versioned. Decision requests carry a request identifier and times
 #### Decision Metadata
 
 | Output | Type | Consumer(s) | Versioning | Validation Criteria |
-|:---|:---|::---|:---|:---|
+|:---|:---|:---|:---|:---|
 | Evaluation Summary | Per-plan per-criterion scores and aggregate scores | Audit systems, explainability, Validation Engine | Immutable per decision version | All plans evaluated with identical criteria; aggregate scores computed correctly |
 | Trade-off Report | Comparative analysis of top candidates with differentiation and conflict identification | Audit systems, Framework Governance | Immutable per decision version | Top candidates identified; differentiation analysis complete; trade-off flags accurate |
 | Risk Assessment Report | Identified risks, classifications, mitigations, composite scores per plan | Execution Engine, audit systems, Framework Governance | Immutable per decision version | All risks classified; mitigations provided; composite risk computed correctly |
@@ -777,7 +777,7 @@ All inputs are versioned. Decision requests carry a request identifier and times
 #### Decision Events
 
 | Output | Type | Consumer(s) | Versioning | Validation Criteria |
-|:---|:---|::---|:---|:---|
+|:---|:---|:---|:---|:---|
 | Decision Proposed | Event emitted when plans pass intake but await evaluation | Audit systems, Decision Engine internal | Event-scoped; references proposed decision | Plans valid; intake record complete |
 | Decision Evaluated | Event emitted when all plans scored and risk-assessed | Execution Engine, Decision Engine, audit systems | Event-scoped; references evaluated decision | Evaluation complete; trade-off report attached |
 | Decision Authorized | Event emitted when decision passes authorization | Execution Engine, audit systems, Framework Governance | Event-scoped; references authorized decision | Authorization complete; no unresolved escalations |
