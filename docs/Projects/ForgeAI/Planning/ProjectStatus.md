@@ -8,13 +8,13 @@
 |:---|:---|
 | Identifier | `FORGE-AI.TARGET.PROJECT-STATUS` |
 | Title | Forge AI Operational State Model |
-| Version | `5.3.0-draft` |
+| Version | `5.4.0-draft` |
 | Status | Live Operational State |
 | Classification | Target Project Operational State |
 | Document Type | ProjectStatus |
 | Owner | Forge AI Target Project Governance |
 | Approval Authority | Human Governance |
-| Last Updated | `2026-07-14` |
+| Last Updated | `2026-07-15` |
 | Lifecycle Phase | Live Operational State |
 | Scope | Current Forge AI Target Project operational position, active capability, active task, execution authorization, evidence state, validation requirements, blockers, protected areas, completion criteria, and exactly one authorized next action. |
 | Out of Scope | Roadmap definition, phase definition, AI-DOS architecture definition, implementation design, backlog management, sprint tracking, document inventory, historical task log, automatic state updates, certification, and Human Governance replacement. |
@@ -55,9 +55,9 @@ AI-DOS owns reusable product truth and reusable capability behavior.
 |:---|:---|
 | Current Phase | Phase 3 — Execution, Validation, Review |
 | Current Capability | Evidence-Backed Execution and Review Capability |
-| Current Autonomy Level | Level 0 proven; Level 1 operationally demonstrated; Level 3 pilot execution passed; EP-2 confirmed; maturity advancement remains pending Human Governance acceptance |
+| Current Autonomy Level | Level 0 proven; Level 1 operationally demonstrated; Level 3 pilot execution passed twice; EP-2 confirmed; maturity advancement remains pending explicit Human Governance maturity acceptance |
 | Current Program | AI-DOS Execution Program |
-| Current Execution Step | EP-4 — Pilot Execution #2 |
+| Current Execution Step | EP-5 — Axis Suite External Target Pilot |
 | Target Repository | Forge AI |
 | Operational Readiness | Passed |
 | Readiness Verdict | `PILOT EXECUTION PASSED` |
@@ -65,7 +65,7 @@ AI-DOS owns reusable product truth and reusable capability behavior.
 | Architecture State | Stable; protected from speculative redesign |
 | Governing Principle | Evidence Before Refactor |
 
-The current operational objective is to execute AI-DOS Pilot Execution #2 as the next bounded verified Target Repository execution because Human Governance confirmed EP-2 and no proven execution blocker activated EP-3.
+The current operational objective is to prepare for the Human-Governed Axis Suite external Target pilot after Human Governance accepted the Pilot Execution #2 evidence.
 
 ---
 
@@ -75,12 +75,12 @@ Exactly one task is active.
 
 | Field | Current State |
 |:---|:---|
-| Active Task ID | `AI-DOS.PILOT.EXECUTION-002` |
-| Active Task Name | Pilot Execution #2 |
-| Task Type | Bounded verified Target Repository execution |
-| Objective | Operate AI-DOS against the Forge AI Target Repository and complete exactly one verified bounded work unit with validation and evidence. |
-| Success Definition | Exactly one bounded work unit is selected, executed, validated, and recorded with completion evidence while preserving protected areas. |
-| Failure Definition | A single bounded executable work unit cannot be resolved, validation fails, protected areas are implicated without authorization, scope expands, or completion evidence is insufficient. |
+| Active Task ID | `AI-DOS.EXTERNAL-TARGET.PILOT-001` |
+| Active Task Name | Axis Suite External Target Pilot Preparation |
+| Task Type | Human-Governed external Target pilot preparation |
+| Objective | Prepare the bounded Axis Suite external Target pilot by resolving explicit external Target authority, scope, validation expectations, protected boundaries, and evidence requirements before any external Target execution. |
+| Success Definition | One bounded external Target pilot preparation package or blocker report is produced with explicit authority, scope, validation plan, protected-area proof, and readiness evidence for Human Governance review. |
+| Failure Definition | External Target authority, scope, validation expectations, protected boundaries, or evidence requirements cannot be resolved; protected areas are implicated without authorization; scope expands; or preparation evidence is insufficient. |
 | Scope Expansion | Prohibited |
 | Second Work Unit | Prohibited |
 | Architecture Redesign | Prohibited |
@@ -94,15 +94,15 @@ Exactly one task is active.
 ### 4.1 Current Objective
 
 ```text
-Execute AI-DOS Pilot Execution #2
-by selecting and completing exactly one verified bounded work unit.
+Prepare AI-DOS Axis Suite External Target Pilot
+by resolving external Target authority, scope, validation, protected boundaries, and evidence expectations before execution.
 ```
 
 ### 4.2 Current Active Work
 
 ```text
-Resolve one bounded executable work unit,
-complete it with validation evidence,
+Resolve one bounded external Target pilot preparation work unit,
+produce readiness evidence or a blocker report,
 and preserve protected-area and ProjectStatus boundaries.
 ```
 
@@ -118,15 +118,16 @@ The exactly one authorized next action is stated in Section 17.
 
 ### 4.5 Completion Criteria
 
-The active pilot execution task is complete only when all of the following are true:
+The active external Target pilot preparation task is complete only when all of the following are true:
 
-1. Exactly one bounded executable work unit is selected from authorized Target Repository context.
-2. The selected work unit is completed without scope expansion.
+1. Exactly one bounded preparation work unit is selected from authorized Target and external Target context.
+2. External Target authority, scope, validation expectations, protected boundaries, and evidence requirements are resolved or an explicit blocker is reported.
 3. Applicable validation is run and recorded.
-4. Completion evidence is produced.
+4. Preparation evidence or blocker evidence is produced.
 5. Protected areas are preserved.
-6. No second work unit is executed.
-7. ProjectStatus is not modified unless explicitly authorized.
+6. No external Target execution occurs unless separately authorized by explicit Human Governance instruction.
+7. No second work unit is executed.
+8. ProjectStatus is not modified unless explicitly authorized.
 
 ---
 
@@ -308,8 +309,8 @@ Human Governance must evaluate the evidence before accepting any maturity claim.
 |:---|:---|:---|
 | Architecture evidence | Available | Blueprint, Meta, Standards, System, Runtime, Engine, Agent, and operational-family consistency reviewed. |
 | Readiness evidence | Complete | Operational Readiness verdict is `READY FOR PILOT`. |
-| Pilot execution evidence | Complete | EP-1 — Pilot Execution #1 is complete; verdict is `PILOT EXECUTION PASSED`; evidence report: `docs/Projects/ForgeAI/Reports/AI-DOS-Pilot-Execution-001-Evidence.md`. |
-| Validation evidence | Complete | Pilot execution validation is recorded in `docs/Projects/ForgeAI/Reports/AI-DOS-Pilot-Execution-001-Evidence.md`. |
+| Pilot execution evidence | Complete | EP-1 — Pilot Execution #1 is complete; verdict is `PILOT EXECUTION PASSED`; evidence report: `docs/Projects/ForgeAI/Reports/AI-DOS-Pilot-Execution-001-Evidence.md`. EP-4 — Pilot Execution #2 evidence was accepted by Human Governance; evidence report: `docs/Projects/ForgeAI/Reports/AI-DOS-Pilot-Execution-002-Evidence.md`. |
+| Validation evidence | Complete | Pilot execution validation is recorded in `docs/Projects/ForgeAI/Reports/AI-DOS-Pilot-Execution-001-Evidence.md` and `docs/Projects/ForgeAI/Reports/AI-DOS-Pilot-Execution-002-Evidence.md`. |
 | Review evidence | Complete | EP-2 — Evidence Review confirmed no proven execution blocker; findings report: `docs/Projects/ForgeAI/Reports/AI-DOS-Evidence-Review-001-Findings.md`. |
 | Blocker evidence | None | EP-2 confirmed no proven execution blocker; EP-3 is not activated. |
 | External Target evidence | Not present | Axis Suite external pilot has not started. |
@@ -325,13 +326,13 @@ Execution Program
 ├── EP-1  Pilot Execution #1                    COMPLETE
 ├── EP-2  Evidence Review                       COMPLETE
 ├── EP-3  Targeted Blocker Resolution           NOT ACTIVATED
-├── EP-4  Pilot Execution #2                    ACTIVE
-└── EP-5  Axis Suite External Target Pilot      PENDING
+├── EP-4  Pilot Execution #2                    COMPLETE
+└── EP-5  Axis Suite External Target Pilot      ACTIVE
 ```
 
 EP-3 did not activate because EP-2 evidence review identified no proven execution blocker.
 
-Pilot Execution #2 is active as the next bounded execution step.
+Pilot Execution #2 is complete because Human Governance accepted the evidence. EP-5 is active as the next Human-Governed external Target pilot preparation step.
 
 ---
 
@@ -340,7 +341,7 @@ Pilot Execution #2 is active as the next bounded execution step.
 ### Blockers
 
 ```text
-None identified by the accepted pilot execution verdict or the confirmed EP-2 evidence review.
+None identified by the accepted Pilot Execution #2 evidence or the confirmed EP-2 evidence review.
 ```
 
 ### Risks
@@ -365,7 +366,7 @@ ProjectStatus may be modified only when:
 2. the active task is a dedicated ProjectStatus task; or
 3. the task instruction directly authorizes a specific operational-state transition.
 
-The accepted Pilot Execution #1 verdict authorizes this specific ProjectStatus update only.
+The accepted Pilot Execution #2 evidence authorizes this specific ProjectStatus update only.
 
 When update authority is absent, the completion report must provide:
 
@@ -379,27 +380,29 @@ as a recommendation only.
 
 ## 16. Final Execution Verdict Model
 
-Pilot execution must end with exactly one verdict:
+External Target pilot preparation must end with exactly one verdict:
 
 ```text
-PILOT EXECUTION PASSED
+EXTERNAL TARGET PILOT PREPARATION READY
 ```
 
 ```text
-PILOT EXECUTION FAILED — BLOCKED
+EXTERNAL TARGET PILOT PREPARATION BLOCKED
 ```
 
 ```text
-PILOT EXECUTION FAILED — VALIDATION FAILED
+EXTERNAL TARGET PILOT PREPARATION FAILED — VALIDATION FAILED
 ```
 
-`PILOT EXECUTION PASSED` requires:
+`EXTERNAL TARGET PILOT PREPARATION READY` requires:
 
-- exactly one work unit completed;
+- exactly one preparation work unit completed;
+- external Target authority, scope, validation expectations, protected boundaries, and evidence requirements are resolved;
 - work remained inside authorized scope;
 - applicable validation passed;
-- completion evidence exists;
+- preparation evidence exists;
 - protected areas were preserved;
+- no external Target execution occurred without separate explicit authorization;
 - no second work unit was executed.
 
 ---
@@ -407,9 +410,8 @@ PILOT EXECUTION FAILED — VALIDATION FAILED
 ## 17. Exactly One Authorized Next Action
 
 ```text
-AI-DOS.PILOT.EXECUTION-002
-— Operate AI-DOS against the Forge AI Target Repository
-and complete exactly one verified bounded work unit with validation and evidence.
+AI-DOS.EXTERNAL-TARGET.PILOT-001
+— Prepare the Axis Suite external Target pilot by resolving explicit external Target authority, scope, validation expectations, protected boundaries, and evidence requirements before any external Target execution.
 ```
 
 No other work is authorized by this ProjectStatus entry.
@@ -444,3 +446,4 @@ ProjectStatus does not:
 | `5.1.0-draft` | 2026-07-14 | Refactored ProjectStatus into an execution-oriented live operational contract for AI-DOS Pilot Execution #1, including active task, execution context, work-selection rules, authorization, protected areas, validation, evidence, completion criteria, and one authorized next action. |
 | `5.2.0-draft` | 2026-07-14 | Recorded Human Governance acceptance of EP-1 Pilot Execution #1 as complete with verdict `PILOT EXECUTION PASSED`, activated EP-2 Evidence Review, preserved EP-3 as conditional on a proven execution blocker, and updated the authorized next action. |
 | `5.3.0-draft` | 2026-07-14 | Recorded Human Governance confirmation of EP-2 Evidence Review, preserved EP-3 as not activated because no proven execution blocker was identified, activated EP-4 Pilot Execution #2, and updated the authorized next action. |
+| `5.4.0-draft` | 2026-07-15 | Recorded Human Governance acceptance of Pilot Execution #2 evidence, marked EP-4 complete, activated EP-5 Axis Suite External Target Pilot preparation, and updated the authorized next action. |
