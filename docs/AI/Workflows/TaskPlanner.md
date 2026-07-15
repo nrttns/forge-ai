@@ -8,7 +8,7 @@
 |:---|:---|
 | Identifier | `AI-DOS.WORKFLOW.TASK-PLANNER` |
 | Title | Task Planner |
-| Version | `2.1.0-draft` |
+| Version | `2.2.0-draft` |
 | Status | Draft |
 | Canonical Status | Aligned with v2 Operational Core; non-canonical until Human Governance approval |
 | Classification | Task Planning Workflow |
@@ -21,7 +21,7 @@
 | Last Updated | 2026-07-15 |
 | Lifecycle Phase | Draft Alignment |
 | Traceability ID | `AI-DOS.V2.OP-005` |
-| Scope | Defines sequencing and routing behavior for planning agents and orchestrators, including candidate discovery, candidate classification, candidate rejection, capability-contribution verification, evidence-based ranking, selection of exactly one capability-grounded work unit, and safe stop when no qualifying work exists. |
+| Scope | Defines sequencing and routing behavior for planning agents and orchestrators, including external Target readiness gating, candidate discovery, candidate classification, candidate rejection, capability-contribution verification, evidence-based ranking, selection of exactly one capability-grounded work unit, and safe stop when no qualifying work exists. |
 | Out of Scope | AGENTS.md, AIFramework, AIOrchestrator, AgentSystemPrompt, governance, ProjectStatus authority, Runtime, Engine RFCs, and templates. |
 | Normative Authority | `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; the ProjectStatus and DevelopmentPhases declared by the active Target Repository |
 | Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/README.md`; `docs/AI/Operational/Operational-Core-Replacement-Matrix.md` |
@@ -43,7 +43,7 @@ This document defines sequencing and routing behavior. It consumes the v2 Operat
 ## 2. Owns
 
 - The sequencing and routing behavior described in this document.
-- Candidate discovery, candidate classification, candidate rejection, capability-contribution verification, evidence-based ranking, selection of exactly one capability-grounded work unit, and safe stop when no qualifying work exists.
+- External Target readiness gating, candidate discovery, candidate classification, candidate rejection, capability-contribution verification, evidence-based ranking, selection of exactly one capability-grounded work unit, and safe stop when no qualifying work exists.
 - The minimum inputs needed to perform that behavior safely.
 - Execution safeguards, validation expectations, and completion-report expectations for this document's scope.
 
@@ -114,16 +114,17 @@ Task Planner shall perform the following sequence in order:
 
 1. Resolve exactly one active task or exactly one authorized next action from the ProjectStatus declared by the active Target Repository (`<PROJECT_STATUS_PATH>`). ProjectStatus remains the live-state authority.
 2. Resolve the active phase and active capability from the DevelopmentPhases declared by the active Target Repository (`<DEVELOPMENT_PHASES_PATH>`). DevelopmentPhases remains the capability-boundary authority.
-3. Resolve the applicable capability advancement interpretation, expected outcomes, dependencies, evidence requirements, and non-progress rules from the active Target Repository Roadmap. Roadmap remains the capability-advancement authority.
-4. Inspect repository evidence only after the ProjectStatus, DevelopmentPhases, and Roadmap constraints above have been resolved.
-5. Produce a bounded candidate set of repository work units that may qualify as Capability Work under Section 8.2 and Section 8.3.
-6. Classify every candidate as Capability Work, Repository Support Work, Unauthorized, Unsupported, Duplicate, or Out of scope.
-7. Reject candidates that are merely repository hygiene, README or navigation alignment, formatting, documentation cleanup, planning maintenance, status maintenance, audit or report generation, or incidental continuation of the nearest existing code surface unless that activity is explicitly the active capability objective.
-8. Reject every non-authorizing candidate and record the required rejection evidence.
-9. Evaluate authorizing candidates against active-capability contribution, roadmap-outcome contribution, dependency relevance, reusable AI-DOS value, evidence value, bounded size, independent verifiability, protected-area safety, and validation availability.
-10. Rank only authorizing candidates by grounded contribution to the active capability and select exactly one highest-grounded candidate. TaskPlanner must not rank non-authorizing candidates as though one of them must be selected.
-11. Do not select a candidate merely because it is easy, is close to recently modified files, extends the last implementation, has tests available, or makes the repository cleaner.
-12. If no candidate can be directly traced to the active capability and roadmap outcome, stop with exactly:
+3. Apply the External Target Readiness Gate in Section 8.1.1 before candidate discovery, repository evidence inspection, preparation work, execution work, evidence generation, or blocker report generation.
+4. Resolve the applicable capability advancement interpretation, expected outcomes, dependencies, evidence requirements, and non-progress rules from the active Target Repository Roadmap. Roadmap remains the capability-advancement authority.
+5. Inspect repository evidence only after the ProjectStatus, DevelopmentPhases, Roadmap, and External Target Readiness Gate constraints above have been resolved.
+6. Produce a bounded candidate set of repository work units that may qualify as Capability Work under Section 8.2 and Section 8.3.
+7. Classify every candidate as Capability Work, Repository Support Work, Unauthorized, Unsupported, Duplicate, or Out of scope.
+8. Reject candidates that are merely repository hygiene, README or navigation alignment, formatting, documentation cleanup, planning maintenance, status maintenance, audit or report generation, or incidental continuation of the nearest existing code surface unless that activity is explicitly the active capability objective.
+9. Reject every non-authorizing candidate and record the required rejection evidence.
+10. Evaluate authorizing candidates against active-capability contribution, roadmap-outcome contribution, dependency relevance, reusable AI-DOS value, evidence value, bounded size, independent verifiability, protected-area safety, and validation availability.
+11. Rank only authorizing candidates by grounded contribution to the active capability and select exactly one highest-grounded candidate. TaskPlanner must not rank non-authorizing candidates as though one of them must be selected.
+12. Do not select a candidate merely because it is easy, is close to recently modified files, extends the last implementation, has tests available, or makes the repository cleaner.
+13. If no candidate can be directly traced to the active capability and roadmap outcome, stop with exactly:
 
 ```text
 NO CAPABILITY-GROUNDED WORK UNIT FOUND
@@ -131,6 +132,35 @@ NO CAPABILITY-GROUNDED WORK UNIT FOUND
 
 Do not invent a useful-looking task.
 
+## 8.1.1 External Target Readiness Gate
+
+Before candidate discovery, TaskPlanner must determine whether the active capability belongs to an External Target Pilot.
+
+If the active capability belongs to an External Target Pilot, TaskPlanner shall first determine whether Human Governance has supplied an External Target Package. The package must minimally identify:
+
+- repository root;
+- Target contract;
+- operational state;
+- planning authority;
+- protected areas;
+- source scope;
+- validation commands.
+
+If the External Target Package is absent, TaskPlanner shall perform no candidate discovery, no repository inspection, no preparation work, no execution work, no evidence generation, and no blocker report generation.
+
+Instead, TaskPlanner shall return exactly:
+
+```text
+WAITING FOR EXTERNAL TARGET PACKAGE
+```
+
+This waiting result is not failure, not a blocker, not a warning, and not a rejection. It is the required synchronization point between Human Governance and AI-DOS.
+
+AI-DOS must never infer an External Target from Forge AI state.
+
+AI-DOS must never generate preparation artifacts before an External Target Package exists.
+
+After a valid External Target Package exists, TaskPlanner resumes normal capability-grounded selection under Section 8.1, including capability-grounded candidate discovery, classification, verification, ranking, selection, and the existing safe-stop behavior.
 
 ## 8.2 Work Classification Model
 
@@ -401,3 +431,4 @@ Every completion report must include:
 | Version | Date | Description |
 |:---|:---|:---|
 | `2.1.0-draft` | 2026-07-15 | Strengthened capability-grounded selection to distinguish reusable behavioral capability work from repository support activity. |
+| `2.2.0-draft` | 2026-07-15 | Added the External Target Readiness Gate so External Target Pilot capability activation waits for a supplied External Target Package before repository inspection, preparation, execution, evidence generation, or blocker reporting. |
