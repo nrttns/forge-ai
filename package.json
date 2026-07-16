@@ -10,7 +10,8 @@
     "test": "tsx test/boot.test.ts",
     "test:install": "npm run build && node scripts/validate-local-install.mjs",
     "test:execution": "npm run build && node scripts/validate-local-execution.mjs",
-    "test:offline": "npm run build && node scripts/validate-offline.mjs"
+    "test:offline": "npm run build && node scripts/validate-offline.mjs",
+    "test:uninstall": "npm run build && node scripts/validate-uninstall.mjs"
   },
   "devDependencies": {
     "@types/node": "^26.1.0",
