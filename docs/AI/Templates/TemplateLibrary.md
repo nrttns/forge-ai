@@ -5,13 +5,13 @@
 | Field | Value |
 |:---|:---|
 | Identifier | `AI-DOS.TEMPLATES.LIBRARY` |
-| Version | `1.1.0-draft` |
-| Status | Draft |
+| Version | `1.2.0-draft` |
+| Status | Draft — Integrity Gate Active |
 | Classification | AI-DOS Template Library Contract |
 | Owner | AI-DOS Template Library |
 | Approval Authority | Human Governance |
 | Last Updated | 2026-07-16 |
-| Scope | Reusable template authority, semantic entry convention, family model, selection, produced-artifact semantics, lifecycle, validation, and safe stop. |
+| Scope | Reusable template authority, semantic entry convention, family model, selection, produced-artifact semantics, lifecycle, validation, integrity gating, and safe stop. |
 | Out of Scope | Human Governance decisions, architecture authority, execution, workflow routing, Target planning/state, approval, certification decisions, promotion, release, and generated-artifact canonicalization. |
 
 ## 1. Purpose
@@ -64,21 +64,38 @@ The library must not require Forge AI paths, ProjectStatus, DevelopmentPhases, R
 
 ## 7. Extension Rules
 
-A new family or template requires a proven gap, one semantic owner, declared purpose, explicit authority boundary, TPL-000 conformance, metadata conformance when applicable, no Target-specific defaults, and explicit task authority.
+A new family or template requires a proven gap, one semantic owner, declared purpose, explicit authority boundary, TPL-000 conformance after the active TPL-000 rebase gate is closed, metadata conformance when applicable, no Target-specific defaults, and explicit task authority.
 
-## 8. Safe Stop
+## 8. Integrity Gate
 
-Stop when purpose, owner, family, authority, lifecycle, provenance, protected boundary, applicable standard, or Target-provided input is missing, conflicting, or ambiguous.
+The normalized family contracts and components may be used only within their declared bounded scopes.
 
-## 9. Validation
+Repository-wide Template Library certification is blocked until `Standards/TPL-000-Template-Standard.md` is materially rebased to:
+
+- remove Forge AI planning and Target-state dependencies;
+- align ownership and approval semantics with current Governance;
+- adopt the semantic entry convention;
+- remove duplicate metadata, taxonomy, lifecycle, package, registry, and capability definitions;
+- separate template structure from validation, review, certification, approval, promotion, persistence, execution, and Target-state authority;
+- reconcile TPL-000 with `TemplateLibrary.md`, `TemplateIndex.md`, and the normalized family contracts.
+
+Until that rebase is accepted, TPL-000 remains a required legacy standard under correction, not proof that the whole library is aligned or certified.
+
+## 9. Safe Stop
+
+Stop when purpose, owner, family, authority, lifecycle, provenance, protected boundary, applicable standard, Target-provided input, or TPL-000 compatibility is missing, conflicting, or ambiguous.
+
+## 10. Validation
 
 Validate at minimum:
 
 - semantic entry filenames and valid navigation;
 - one clear family and purpose;
 - no duplicate semantic owner;
-- TPL-000 and applicable metadata conformance;
+- current Template Library contract conformance;
+- TPL-000 compatibility or an explicit integrity-gate exception;
+- applicable metadata conformance;
 - bounded placeholder resolution;
 - correct ownership and lifecycle classification;
-- no execution, planning, state, approval, certification-decision, promotion, or release contamination;
+- no execution, planning, state, approval, certification-decision, promotion, persistence, or release contamination;
 - no obsolete README entry path or Forge AI fallback.
