@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { existsSync, readFileSync, statSync } from 'node:fs';
-import { join, resolve } from 'node:path';
+import { existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
+import { isAbsolute, join, relative, resolve } from 'node:path';
 import { getBootMessage, getBootStatus } from './boot';
 
 export type WriteLine = (message: string) => void;
@@ -9,6 +9,7 @@ export type CliCommand = 'validate';
 
 export interface RunCliOptions {
   readonly command?: CliCommand;
+  readonly dataDirectory?: string;
   readonly format?: OutputFormat;
   readonly targetPath?: string;
 }
@@ -32,6 +33,7 @@ export interface TargetValidationStatus {
   readonly ok: true;
   readonly targetPath: string;
   readonly targetContractPath: string;
+  readonly runtimeDataPath?: string;
 }
 
 export function loadTargetContract(targetPath: string): TargetContract {
@@ -106,21 +108,68 @@ export function getTargetValidationStatus(targetPath: string): TargetValidationS
   };
 }
 
+function pathsOverlap(firstPath: string, secondPath: string): boolean {
+  const firstToSecond = relative(firstPath, secondPath);
+  const secondToFirst = relative(secondPath, firstPath);
+  const isWithin = (path: string): boolean =>
+    path === '' || (!path.startsWith('..') && !isAbsolute(path));
+
+  return isWithin(firstToSecond) || isWithin(secondToFirst);
+}
+
+export function storeTargetValidationStatus(
+  status: TargetValidationStatus,
+  dataDirectory: string,
+): TargetValidationStatus {
+  const resolvedDataDirectory = resolve(dataDirectory);
+
+  if (pathsOverlap(status.targetPath, resolvedDataDirectory)) {
+    throw new Error(
+      `Runtime data directory must not overlap the Target path: ${resolvedDataDirectory}`,
+    );
+  }
+
+  if (existsSync(resolvedDataDirectory) && !statSync(resolvedDataDirectory).isDirectory()) {
+    throw new Error(`Runtime data path is not a directory: ${resolvedDataDirectory}`);
+  }
+
+  mkdirSync(resolvedDataDirectory, { recursive: true, mode: 0o700 });
+
+  const runtimeDataPath = join(resolvedDataDirectory, 'target-validation.json');
+  const storedStatus = { ...status, runtimeDataPath };
+
+  writeFileSync(runtimeDataPath, `${JSON.stringify(storedStatus, null, 2)}\n`, {
+    encoding: 'utf8',
+    mode: 0o600,
+  });
+
+  return storedStatus;
+}
+
 export function formatTargetValidationOutput(
   targetPath: string,
   format: OutputFormat = 'text',
+  dataDirectory?: string,
 ): string {
-  const status = getTargetValidationStatus(targetPath);
+  const validationStatus = getTargetValidationStatus(targetPath);
+  const status = dataDirectory === undefined
+    ? validationStatus
+    : storeTargetValidationStatus(validationStatus, dataDirectory);
 
   if (format === 'json') {
     return JSON.stringify(status);
   }
 
-  return `${status.message} Target: ${status.targetPath} Contract: ${status.targetContractPath}`;
+  const runtimeDataOutput = status.runtimeDataPath === undefined
+    ? ''
+    : ` Runtime data: ${status.runtimeDataPath}`;
+
+  return `${status.message} Target: ${status.targetPath} Contract: ${status.targetContractPath}${runtimeDataOutput}`;
 }
 
 export function parseCliArgs(args: readonly string[]): RunCliOptions {
   let command: CliCommand | undefined;
+  let dataDirectory: string | undefined;
   let format: OutputFormat = 'text';
   let targetPath: string | undefined;
 
@@ -142,6 +191,19 @@ export function parseCliArgs(args: readonly string[]): RunCliOptions {
       continue;
     }
 
+    if (arg === '--data-dir') {
+      const value = args[index + 1];
+      if (value === undefined || value.startsWith('--')) {
+        throw new Error('Missing value for --data-dir');
+      }
+      if (dataDirectory !== undefined) {
+        throw new Error('Multiple --data-dir values are not supported');
+      }
+      dataDirectory = value;
+      index += 1;
+      continue;
+    }
+
     if (arg === 'validate') {
       if (command !== undefined) {
         throw new Error(`Multiple commands are not supported: ${command}, ${arg}`);
@@ -157,8 +219,13 @@ export function parseCliArgs(args: readonly string[]): RunCliOptions {
     throw new Error('The validate command requires --target <path>');
   }
 
+  if (dataDirectory !== undefined && command !== 'validate') {
+    throw new Error('--data-dir is supported only by the validate command');
+  }
+
   return {
     ...(command === undefined ? {} : { command }),
+    ...(dataDirectory === undefined ? {} : { dataDirectory }),
     format,
     ...(targetPath === undefined ? {} : { targetPath }),
   };
@@ -172,7 +239,11 @@ export function runCli(writeLine: WriteLine = console.log, options: RunCliOption
       throw new Error('The validate command requires --target <path>');
     }
 
-    message = formatTargetValidationOutput(options.targetPath, options.format);
+    message = formatTargetValidationOutput(
+      options.targetPath,
+      options.format,
+      options.dataDirectory,
+    );
   } else {
     message = formatBootOutput(options.format, options);
   }
