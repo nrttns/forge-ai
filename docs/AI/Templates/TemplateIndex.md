@@ -18,7 +18,7 @@ Applicable <FamilyName>Family.md
 Narrowest matching template
 ```
 
-`TPL-000` remains under an active material-rebase gate. Its legacy requirements must not override the narrower authority and Target-independence boundaries in `TemplateLibrary.md` and normalized family contracts.
+TPL-000 `0.2.0-draft` contains the material rebase and is pending Human Governance review. It must not be used as proof that the whole library is aligned, certified, frozen, or promoted.
 
 ## Active Normalized Families
 
@@ -41,8 +41,9 @@ Other template directories remain catalog families and must receive semantic ent
 Normalized family scope
     bounded use permitted
 
-TPL-000
-    material rebase required
+TPL-000 material rebase
+    implemented
+    pending Human Governance review
 
 Whole Template Library
     not yet certified or frozen
@@ -52,7 +53,7 @@ Whole Template Library
 
 1. Resolve the authorized artifact purpose and owning domain.
 2. Consult `TemplateLibrary.md` and the active integrity gate.
-3. Consult TPL-000 only where its rule does not conflict with the current library contract or normalized family boundary.
+3. Consult the rebased TPL-000 for shared authoring constraints.
 4. Open the semantic family entry.
 5. Select the narrowest matching template.
 6. Return the produced artifact to its owning authority.

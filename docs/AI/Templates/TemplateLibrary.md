@@ -5,8 +5,8 @@
 | Field | Value |
 |:---|:---|
 | Identifier | `AI-DOS.TEMPLATES.LIBRARY` |
-| Version | `1.2.0-draft` |
-| Status | Draft — Integrity Gate Active |
+| Version | `1.3.0-draft` |
+| Status | Draft — TPL-000 Rebase Review Pending |
 | Classification | AI-DOS Template Library Contract |
 | Owner | AI-DOS Template Library |
 | Approval Authority | Human Governance |
@@ -64,22 +64,22 @@ The library must not require Forge AI paths, ProjectStatus, DevelopmentPhases, R
 
 ## 7. Extension Rules
 
-A new family or template requires a proven gap, one semantic owner, declared purpose, explicit authority boundary, TPL-000 conformance after the active TPL-000 rebase gate is closed, metadata conformance when applicable, no Target-specific defaults, and explicit task authority.
+A new family or template requires a proven gap, one semantic owner, declared purpose, explicit authority boundary, applicable TPL-000 conformance after the active rebase gate is accepted, metadata conformance when applicable, no Target-specific defaults, and explicit task authority.
 
 ## 8. Integrity Gate
 
-The normalized family contracts and components may be used only within their declared bounded scopes.
+The TPL-000 material rebase is implemented in version `0.2.0-draft` and is pending Human Governance review.
 
-Repository-wide Template Library certification is blocked until `Standards/TPL-000-Template-Standard.md` is materially rebased to:
+The normalized family contracts and components may continue to be used only within their declared bounded scopes.
 
-- remove Forge AI planning and Target-state dependencies;
-- align ownership and approval semantics with current Governance;
-- adopt the semantic entry convention;
-- remove duplicate metadata, taxonomy, lifecycle, package, registry, and capability definitions;
-- separate template structure from validation, review, certification, approval, promotion, persistence, execution, and Target-state authority;
-- reconcile TPL-000 with `TemplateLibrary.md`, `TemplateIndex.md`, and the normalized family contracts.
+Repository-wide Template Library certification and freeze remain blocked until the rebased `Standards/TPL-000-Template-Standard.md` is reviewed and accepted. Until acceptance:
 
-Until that rebase is accepted, TPL-000 remains a required legacy standard under correction, not proof that the whole library is aligned or certified.
+- `TemplateLibrary.md` remains the library-level authority boundary;
+- normalized family contracts remain the narrow family boundaries;
+- rebased TPL-000 is a review candidate, not certification evidence;
+- no artifact may claim the whole Template Library is aligned, certified, frozen, or ready for promotion.
+
+This is a temporary acceptance gate, not a dual-authority model.
 
 ## 9. Safe Stop
 
@@ -93,8 +93,7 @@ Validate at minimum:
 - one clear family and purpose;
 - no duplicate semantic owner;
 - current Template Library contract conformance;
-- TPL-000 compatibility or an explicit integrity-gate exception;
-- applicable metadata conformance;
+- applicable TPL-000 and metadata conformance;
 - bounded placeholder resolution;
 - correct ownership and lifecycle classification;
 - no execution, planning, state, approval, certification-decision, promotion, persistence, or release contamination;
