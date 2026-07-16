@@ -6,9 +6,9 @@
 |:---|:---|
 | Identifier | `AI-DOS-TPL-001` |
 | Title | TPL-001 — RFC Template Authoring Standard |
-| Version | `0.2.0-draft` |
-| Status | Draft — Material Rebase Implemented |
-| Canonical Status | Non-canonical; pending Human Governance review and acceptance |
+| Version | `0.2.1-draft` |
+| Status | Draft — Material Rebase Accepted |
+| Canonical Status | Non-canonical; material rebase accepted by Human Governance |
 | Classification | AI-DOS RFC Template Standard |
 | Document Type | Standard |
 | Artifact Family | Standard Artifact |
@@ -31,13 +31,13 @@
 | Supersedes | TPL-001 `0.1.0-draft` legacy model |
 | Superseded By | None |
 | Validation Profile | TPL-001 RFC structural conformance profile; TPL-000 and STD-010 conformance when applicable |
-| Validation Status | Material rebase validation completed; Human Governance review required |
-| Review Status | Review Required |
+| Validation Status | Material rebase validation completed and accepted within its declared scope |
+| Review Status | Human Governance Accepted |
 | Certification Status | Not certified |
 | Compatibility Declaration | Breaking material rebase of the legacy Framework-era TPL-001 model |
 | Compatibility Classification | Breaking for consumers that depend on legacy RFC taxonomy, lifecycle, approval, certification, promotion, compliance, or inheritance rules |
 | Migration Obligation | RFC templates must adopt the bounded structural profile without inheriting authority or Target planning state. Existing RFC documents are not automatically invalidated. |
-| Evidence References | `docs/AI/Architecture/Reports/AI-DOS-TPL-001-Material-Rebase-Validation.md` |
+| Evidence References | `docs/AI/Architecture/Reports/AI-DOS-TPL-001-Material-Rebase-Validation.md`; Forge AI PR #211 |
 
 ## 1. Purpose
 
@@ -349,6 +349,6 @@ Do not invent values to bypass safe stop.
 
 ## 18. Review Position
 
-This material rebase and the reconciled Architecture RFC catalog component are ready for Human Governance review.
+Human Governance reviewed and accepted this bounded material rebase through Forge AI PR #211. The reconciled Architecture RFC template remains a catalog component pending a separate Architecture family normalization decision.
 
 This document does not normalize the Architecture family, approve or canonicalize an RFC, activate implementation, certify or freeze the Template Library, release anything, execute work, persist state, or mutate a Target.
