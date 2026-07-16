@@ -19,7 +19,7 @@ This README does not define review authority, validation authority, certificatio
     ↓
 Review/README.md
     ↓
-applicable Review template
+ReviewTemplate.md
 ```
 
 Use STD-010 when a produced review artifact is governed Markdown and the applicable authority requires that metadata model.
@@ -30,16 +30,16 @@ The Review family provides reusable structures for evaluating a bounded subject 
 
 A Review template is an authoring structure only. It does not perform review by itself, validate evidence, certify a claim, approve an artifact, promote content, release a product, authorize execution, or mutate Target-owned state.
 
-## Current Inventory
+## Template Index
 
-No Review template component is declared by this entry PR.
-
-The next bounded change may introduce a `ReviewTemplate.md` only after confirming that its purpose is not already covered by the Validation or Certification families.
+| Template | Intended output |
+|:---|:---|
+| `ReviewTemplate.md` | A bounded review artifact containing subject, authority, criteria, evidence inputs, observations, findings, objections, rationale, unresolved matters, result, risks, and a recommendation. |
 
 ## Selection Rules
 
 1. Use this family only when the invocation or applicable authority explicitly requests a review artifact.
-2. Identify the review subject, scope, review authority, criteria, evidence inputs, decision vocabulary, and intended consumer before selecting a template.
+2. Identify the review subject, scope, review authority, criteria, evidence inputs, result vocabulary, and intended consumer before selecting the template.
 3. Treat validation artifacts as inputs when supplied; do not convert validation results into review conclusions automatically.
 4. Separate observations, findings, objections, rationale, recommendation, and unresolved matters.
 5. Do not translate a favorable review into certification, approval, promotion, release, execution authorization, or Target-state mutation.
@@ -101,7 +101,7 @@ Target-owned review inputs may be consumed only when explicitly supplied for the
 
 ## Safe Stop
 
-Stop template selection when any required subject, scope, review authority, criteria, evidence source, provenance, result vocabulary, protected boundary, or intended consumer is missing or ambiguous.
+Stop template selection when any required subject, scope, review authority, reviewer identity, criteria, evidence source, provenance, result vocabulary, protected boundary, or intended consumer is missing or ambiguous.
 
 Do not invent review criteria or treat missing evidence as favorable review evidence.
 
@@ -109,7 +109,7 @@ Do not invent review criteria or treat missing evidence as favorable review evid
 
 - [ ] `TemplateLibrary.md` and TPL-000 were consulted.
 - [ ] The review subject and scope are explicit.
-- [ ] Review authority, criteria, evidence sources, and provenance are declared.
+- [ ] Review authority, reviewers, criteria, evidence sources, and provenance are declared.
 - [ ] Validation findings are treated as inputs rather than automatic review conclusions.
 - [ ] Findings, objections, rationale, recommendation, and unresolved matters are separated.
 - [ ] Review does not claim certification, approval, promotion, release, execution, or mutation authority.
