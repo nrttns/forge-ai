@@ -11,7 +11,8 @@
     "test:install": "npm run build && node scripts/validate-local-install.mjs",
     "test:execution": "npm run build && node scripts/validate-local-execution.mjs",
     "test:offline": "npm run build && node scripts/validate-offline.mjs",
-    "test:uninstall": "npm run build && node scripts/validate-uninstall.mjs"
+    "test:uninstall": "npm run build && node scripts/validate-uninstall.mjs",
+    "test:rollback": "npm run build && node scripts/validate-rollback.mjs"
   },
   "devDependencies": {
     "@types/node": "^26.1.0",

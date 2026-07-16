@@ -57,6 +57,7 @@ npm run test:install
 npm run test:execution
 npm run test:offline
 npm run test:uninstall
+npm run test:rollback
 ```
 
 Expected results:
@@ -68,6 +69,7 @@ Expected results:
 - the compiled CLI runs as a separate local process, returns deterministic success and failure results, and leaves the Target unchanged.
 - the local package installs from its archive with npm offline mode and the installed CLI validates the Target while common Node network APIs are blocked.
 - uninstall removes the installed `forge-ai` package and binary while preserving Target content, opt-in runtime data, and unrelated consumer-owned files.
+- rollback restores the prior local package version from its preserved archive while retaining Target content, runtime data, and unrelated consumer-owned files.
 
 The local-install validation creates its package archive, npm cache, logs, and installation under a temporary directory. It removes that directory after the check and does not install Forge AI globally or modify the Target Repository.
 
@@ -76,6 +78,8 @@ The local-execution validation creates temporary valid and invalid Target fixtur
 The offline validation uses an empty npm cache for `npm install --offline`, preloads a network-denial guard for the installed CLI process, and removes its package, caches, logs, guard, and installation afterward.
 
 The uninstall validation operates only in a temporary installation prefix. It verifies the AI-DOS-owned package boundary and removes the entire temporary workspace after checking preservation rules.
+
+The rollback validation creates current and candidate local package archives, preserves and verifies the current archive before restoring it after an isolated update, and removes the entire temporary workspace afterward.
 
 ## Run in Development Mode
 
@@ -177,6 +181,7 @@ npm run test:install
 npm run test:execution
 npm run test:offline
 npm run test:uninstall
+npm run test:rollback
 ```
 
 Run `npm ci` again whenever `package-lock.json` changes.
