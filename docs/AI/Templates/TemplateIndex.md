@@ -9,8 +9,6 @@ The canonical library contract is `TemplateLibrary.md`. This index does not defi
 ```text
 TemplateLibrary.md
     ↓
-Integrity Gate Status
-    ↓
 Standards/TPL-000-Template-Standard.md
     ↓
 Applicable <FamilyName>Family.md
@@ -18,7 +16,7 @@ Applicable <FamilyName>Family.md
 Narrowest matching template
 ```
 
-TPL-000 `0.2.0-draft` contains the material rebase and is pending Human Governance review. It must not be used as proof that the whole library is aligned, certified, frozen, or promoted.
+TPL-000 `0.2.1-draft` records Human Governance acceptance of the bounded material rebase. Acceptance does not establish whole-library certification, freeze, or promotion.
 
 ## Active Normalized Families
 
@@ -42,8 +40,10 @@ Normalized family scope
     bounded use permitted
 
 TPL-000 material rebase
-    implemented
-    pending Human Governance review
+    accepted
+
+Temporary integrity gate
+    closed
 
 Whole Template Library
     not yet certified or frozen
@@ -52,7 +52,7 @@ Whole Template Library
 ## Selection Rules
 
 1. Resolve the authorized artifact purpose and owning domain.
-2. Consult `TemplateLibrary.md` and the active integrity gate.
+2. Consult `TemplateLibrary.md` and the current integrity status.
 3. Consult the rebased TPL-000 for shared authoring constraints.
 4. Open the semantic family entry.
 5. Select the narrowest matching template.

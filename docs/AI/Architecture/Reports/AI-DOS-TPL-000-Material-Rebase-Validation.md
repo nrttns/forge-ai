@@ -2,11 +2,11 @@
 
 ## Review Status
 
-READY FOR HUMAN GOVERNANCE REVIEW
+HUMAN GOVERNANCE ACCEPTED
 
 ## Subject
 
-`docs/AI/Templates/Standards/TPL-000-Template-Standard.md` version `0.2.0-draft`.
+`docs/AI/Templates/Standards/TPL-000-Template-Standard.md` material rebase, accepted and recorded as version `0.2.1-draft`.
 
 ## Objective
 
@@ -26,7 +26,8 @@ Validate that the material rebase removes the blocking legacy model identified b
 | Validation/review/certification separation | PASS |
 | Duplicate section removal | PASS |
 | Safe-stop behavior | PASS |
-| Whole-library certification | BLOCKED PENDING HUMAN GOVERNANCE REVIEW |
+| Human Governance acceptance | PASS — PR #208 REVIEWED AND MERGED |
+| Whole-library certification | NOT CLAIMED |
 
 ## Corrected Findings
 
@@ -88,11 +89,17 @@ Existing produced documents are not automatically invalidated. Consumers must re
 - No repository-wide filesystem inventory or whole-library certification is claimed.
 - No Runtime, Engine, System Layer, workflow, execution, registry, persistence, package, or provider implementation is activated.
 
+## Acceptance Evidence
+
+Forge AI PR #208 was reviewed by Human Governance and merged into `master` with merge commit `ed8713503725c50bccb35dd8d34be31ca9ea7e7b`.
+
+This acceptance closes the temporary TPL-000 material-rebase gate only. It does not certify or freeze the whole Template Library.
+
 ## Final Determination
 
 ```text
 TPL-000 MATERIAL REBASE
-    IMPLEMENTED
+    HUMAN GOVERNANCE ACCEPTED
 
 LEGACY BLOCKERS
     CORRECTED WITHIN AUTHORIZED SCOPE
@@ -101,8 +108,7 @@ NORMALIZED FAMILY ALIGNMENT
     RETAINED
 
 WHOLE TEMPLATE LIBRARY
-    INTEGRITY GATE ACTIVE
-    HUMAN GOVERNANCE REVIEW REQUIRED
+    TPL-000 INTEGRITY GATE CLOSED
     NOT CERTIFIED
     NOT FROZEN
 ```

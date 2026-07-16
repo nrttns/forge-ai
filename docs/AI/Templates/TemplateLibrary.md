@@ -5,8 +5,8 @@
 | Field | Value |
 |:---|:---|
 | Identifier | `AI-DOS.TEMPLATES.LIBRARY` |
-| Version | `1.3.0-draft` |
-| Status | Draft — TPL-000 Rebase Review Pending |
+| Version | `1.4.0-draft` |
+| Status | Draft — TPL-000 Rebase Accepted; Integrity Gate Closed |
 | Classification | AI-DOS Template Library Contract |
 | Owner | AI-DOS Template Library |
 | Approval Authority | Human Governance |
@@ -64,22 +64,23 @@ The library must not require Forge AI paths, ProjectStatus, DevelopmentPhases, R
 
 ## 7. Extension Rules
 
-A new family or template requires a proven gap, one semantic owner, declared purpose, explicit authority boundary, applicable TPL-000 conformance after the active rebase gate is accepted, metadata conformance when applicable, no Target-specific defaults, and explicit task authority.
+A new family or template requires a proven gap, one semantic owner, declared purpose, explicit authority boundary, applicable TPL-000 conformance, metadata conformance when applicable, no Target-specific defaults, and explicit task authority.
 
-## 8. Integrity Gate
+## 8. Integrity Status
 
-The TPL-000 material rebase is implemented in version `0.2.0-draft` and is pending Human Governance review.
+Human Governance reviewed and accepted the bounded TPL-000 material rebase through Forge AI PR #208. The temporary TPL-000 integrity gate is closed.
 
-The normalized family contracts and components may continue to be used only within their declared bounded scopes.
+The accepted authority position is:
 
-Repository-wide Template Library certification and freeze remain blocked until the rebased `Standards/TPL-000-Template-Standard.md` is reviewed and accepted. Until acceptance:
+- `TemplateLibrary.md` owns the library-level authority boundary and semantic entry convention;
+- TPL-000 owns shared bounded authoring constraints;
+- normalized family contracts own their narrow family structure and non-authority rules;
+- component templates own only their declared reusable structure;
+- produced artifacts return to their owning domains.
 
-- `TemplateLibrary.md` remains the library-level authority boundary;
-- normalized family contracts remain the narrow family boundaries;
-- rebased TPL-000 is a review candidate, not certification evidence;
-- no artifact may claim the whole Template Library is aligned, certified, frozen, or ready for promotion.
+The normalized family contracts and components may be used only within their declared bounded scopes.
 
-This is a temporary acceptance gate, not a dual-authority model.
+Gate closure does not certify or freeze the whole Template Library. Unnormalized catalog families remain outside normalized-family status, and no repository-wide certification or promotion claim is created.
 
 ## 9. Safe Stop
 

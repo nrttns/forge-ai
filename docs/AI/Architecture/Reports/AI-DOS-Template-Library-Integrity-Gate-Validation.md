@@ -2,7 +2,7 @@
 
 ## Review Status
 
-HUMAN GOVERNANCE REVIEW COMPLETED — BOUNDED CORRECTION REQUIRED
+GATE CLOSED — TPL-000 MATERIAL REBASE ACCEPTED
 
 ## Scope
 
@@ -23,25 +23,24 @@ The review confirmed that legacy TPL-000 required bounded material correction be
 
 Result: REVIEW PASSED — BOUNDED CORRECTION REQUIRED.
 
-## Correction Status
+## Correction and Acceptance Status
 
-The TPL-000 `0.2.0-draft` material rebase is implemented on a review branch. Acceptance is not implied.
+The TPL-000 material rebase was implemented in PR #208, reviewed by Human Governance, and merged into `master`.
 
 The new validation evidence is:
 
 - `docs/AI/Architecture/Reports/AI-DOS-TPL-000-Material-Rebase-Validation.md`.
 
-The integrity gate remains active until Human Governance reviews and accepts the material rebase.
+Human Governance acceptance is recorded. The temporary integrity gate is closed.
 
-## Authority Position During the Gate
-
-Until acceptance:
+## Accepted Authority Position
 
 - `TemplateLibrary.md` owns the current library-level authority boundary and semantic entry convention;
 - normalized family contracts own their bounded family structure and non-authority rules;
-- rebased TPL-000 is a review candidate;
-- no artifact may cite the rebase as proof that the whole Template Library is aligned, certified, frozen, or ready for promotion;
-- conflicting requirements require safe stop and Human Governance review.
+- rebased TPL-000 owns shared bounded authoring constraints;
+- component templates remain bounded reusable structures returned to their owning domains;
+- gate closure is not proof that the whole Template Library is certified, frozen, or promoted;
+- conflicting requirements still require safe stop and Human Governance review.
 
 ## Active Normalized Family Result
 
@@ -60,14 +59,13 @@ Until acceptance:
 
 ```text
 INTEGRITY GATE
-    ACCEPTED AS NECESSARY
+    CLOSED
 
 NORMALIZED FAMILIES
     BOUNDED ALIGNMENT RETAINED
 
 TPL-000 MATERIAL REBASE
-    IMPLEMENTED
-    HUMAN GOVERNANCE REVIEW REQUIRED
+    HUMAN GOVERNANCE ACCEPTED
 
 WHOLE TEMPLATE LIBRARY
     NOT CERTIFIED

@@ -6,9 +6,9 @@
 |:---|:---|
 | Identifier | `AI-DOS-TPL-000` |
 | Title | TPL-000 — Template Authoring Standard |
-| Version | `0.2.0-draft` |
-| Status | Draft — Material Rebase Implemented |
-| Canonical Status | Non-canonical; pending Human Governance review and acceptance |
+| Version | `0.2.1-draft` |
+| Status | Draft — Material Rebase Accepted |
+| Canonical Status | Non-canonical; material rebase accepted by Human Governance |
 | Classification | AI-DOS Template Standard |
 | Document Type | Standard |
 | Artifact Family | Standard Artifact |
@@ -31,13 +31,13 @@
 | Supersedes | TPL-000 `0.1.0-draft` legacy model |
 | Superseded By | None |
 | Validation Profile | TPL-000 structural conformance profile; STD-010 metadata conformance when applicable |
-| Validation Status | Material rebase validation completed; Human Governance review required |
-| Review Status | Review Required |
+| Validation Status | Material rebase validation completed and accepted within its declared scope |
+| Review Status | Human Governance Accepted |
 | Certification Status | Not certified |
 | Compatibility Declaration | Breaking material rebase of the legacy Framework-era TPL-000 model |
 | Compatibility Classification | Breaking for consumers that depend on legacy directory, package, registry, lifecycle, approval, certification, or inheritance assumptions |
 | Migration Obligation | Consumers must resolve through `TemplateLibrary.md`, `TemplateIndex.md`, and the applicable semantic family contract; legacy assumptions are not retained as authority. |
-| Evidence References | `docs/AI/Architecture/Reports/AI-DOS-TPL-000-Material-Rebase-Validation.md` |
+| Evidence References | `docs/AI/Architecture/Reports/AI-DOS-TPL-000-Material-Rebase-Validation.md`; Forge AI PR #208 |
 
 ## 1. Purpose
 
@@ -105,7 +105,7 @@ Structure must never be interpreted as authority.
 
 ### 5.1 Library Contract
 
-`TemplateLibrary.md` defines the reusable library boundary, selection model, produced-artifact semantics, extension constraints, and gate state.
+`TemplateLibrary.md` defines the reusable library boundary, selection model, produced-artifact semantics, extension constraints, and integrity status.
 
 ### 5.2 Semantic Index
 
@@ -340,6 +340,8 @@ Do not invent a value to bypass safe stop.
 - [ ] Compatibility and migration obligations are declared when triggered.
 - [ ] Missing or conflicting inputs trigger safe stop.
 
-## 21. Review Position
+## 21. Acceptance Position
 
-This material rebase is ready for Human Governance review. It does not certify, approve, promote, freeze, release, execute, persist, or mutate any AI-DOS or Target artifact.
+Human Governance reviewed and accepted the bounded material rebase through Forge AI PR #208. Acceptance applies to the TPL-000 authoring boundary defined in this document.
+
+Acceptance does not certify or freeze the whole Template Library and does not approve, promote, release, execute, persist, or mutate any AI-DOS or Target artifact.
