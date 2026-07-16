@@ -1,56 +1,51 @@
-# Workflow Template
-
----
+# AI-DOS Workflow Template
 
 ## Template Metadata
 
 | Field | Value |
 |:---|:---|
-| Identifier | `TPL-WF-WORKFLOW` |
-| Title | Workflow Template |
-| Version | 0.2.0-draft |
+| Identifier | `AI-DOS.TEMPLATES.WORKFLOW.WORKFLOW` |
+| Title | AI-DOS Workflow Template |
+| Version | `1.0.0-draft` |
 | Status | Draft |
-| Canonical Status | Non-canonical until reviewed, approved, and promoted through Framework Governance |
 | Classification | Workflow Template |
 | Document Type | Template |
-| Owner | Template System |
-| Maintainers | Framework Architecture Team |
-| Review Authority | Human Governance / Framework Governance |
-| Approval Authority | Human Governance |
-| Created | 2026-07-09 |
-| Last Updated | 2026-07-09 |
-| Lifecycle Phase | Draft |
-| Traceability ID | AI-DOS.TEMPLATES.WORKFLOW.WORKFLOW |
-| Scope | Reusable template for workflow documents in the Workflow template family |
-| Out of Scope | Architecture decisions, code implementation, certification, or project-state update authority by itself |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
-| Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/README.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md` |
-| Dependencies | STD-010 metadata schema; TPL-000 template governance;AI-DOS template routing; Operational Core workflow, command, and orchestration authorities |
-| Consumes | STD-010 mandatory metadata fields; TPL-000 placeholder grammar, lifecycle, taxonomy, compliance model, and validation requirements; existing workflow, command, and orchestration routing authority |
-| Produces | Workflow document |
-| Related Specifications | Workflow template family files under `docs/AI/Templates/Workflow/` |
-| Supersedes | Earlier in-place draft of this template |
-| Superseded By | None |
-| Promotion Requirements | Template family review, STD-010 validation, TPL-000 validation, stale authority reference validation, and explicit Human Governance approval |
-| Certification Status | Not certified |
-
----
+| Owner | AI-DOS Template Library |
+| Scope | Reusable structure for documenting a bounded workflow model. |
+| Out of Scope | Executable workflow routing, task planning, command selection, execution authorization, provider dispatch, approval, certification, release, or Target-state mutation. |
+| Dependencies | `docs/AI/Templates/TemplateLibrary.md`; `docs/AI/Templates/TemplateIndex.md`; `docs/AI/Templates/Workflow/WorkflowFamily.md`; TPL-000; STD-010 when applicable; declared owning authority. |
+| Produces | A draft workflow-document structure returned to its owning authority. |
 
 ## 1. Purpose
 
-This template defines the required structure for producing a governed workflow document. It is an output contract only: it consumes existing workflow, command, and orchestration authorities without redefining them.
+Use this template to document a bounded workflow supplied by an explicit owning authority.
 
-## 2. When To Use This Template
+The template describes workflow structure. It does not execute the workflow, select work, resolve authority, create an Execution Contract, dispatch a provider, or mutate state.
 
-Use this template only when the artifact being authored matches this template's workflow document type. Use the smallest Workflow template that fits the artifact, and use Architecture or Validation templates when the output is outside workflow routing.
+## 2. Required Inputs
 
-## 3. Authority and Ownership
+Before instantiation, resolve:
 
-The template consumes STD-010, TPL-000, `docs/AI/Templates/README.md`, `docs/AI/AIFramework.md`, `docs/AI/AIOrchestrator.md`, and `docs/AI/AgentSystemPrompt.md`. The produced document must declare its own Owner, Maintainers, Review Authority, Approval Authority, Normative Authority, and Normative References. Template ownership remains with Template System and does not become workflow execution authority.
+- workflow name, purpose, subject, and scope;
+- owner and intended consumer;
+- governing authority and provenance;
+- inputs and outputs;
+- states or milestones, when the workflow uses them;
+- transition and decision conditions;
+- participating roles and responsibility boundaries;
+- allowed and forbidden actions;
+- failure, retry, recovery, escalation, and safe-stop rules;
+- validation and evidence requirements;
+- any explicit state-impact or execution handoff authority.
 
-## 4. Produced-Document Metadata Guidance
+Do not infer missing values from AI-DOS, Forge AI, repository layout, ProjectStatus, DevelopmentPhases, Roadmap, or continuation intent.
 
-Every document produced from this template must begin with a STD-010-compliant `## Document Metadata` section using TPL-000 placeholders until values are resolved. Do not add template-specific metadata fields that compete with STD-010.
+## 3. Produced-Document Metadata
+
+Use STD-010 metadata when the produced workflow document is governed Markdown and the owning authority requires it.
+
+```markdown
+## Document Metadata
 
 | Field | Value |
 |:---|:---|
@@ -58,105 +53,123 @@ Every document produced from this template must begin with a STD-010-compliant `
 | Title | {{TITLE}} |
 | Version | {{VERSION}} |
 | Status | {{STATUS}} |
-| Canonical Status | {{CANONICAL_STATUS}} |
 | Classification | {{CLASSIFICATION}} |
-| Document Type | {{DOCUMENT_TYPE}} |
+| Document Type | Workflow Document |
 | Owner | {{OWNER}} |
 | Maintainers | {{MAINTAINERS}} |
 | Review Authority | {{REVIEW_AUTHORITY}} |
 | Approval Authority | {{APPROVAL_AUTHORITY}} |
-| Created | {{CREATED}} |
-| Last Updated | {{LAST_UPDATED}} |
-| Lifecycle Phase | {{LIFECYCLE_PHASE}} |
-| Traceability ID | {{TRACEABILITY_ID}} |
 | Scope | {{SCOPE}} |
 | Out of Scope | {{OUT_OF_SCOPE}} |
 | Normative Authority | {{NORMATIVE_AUTHORITY}} |
-| Normative References | {{NORMATIVE_REFERENCES}} |
 | Dependencies | {{DEPENDENCIES}} |
-| Consumes | {{CONSUMES}} |
-| Produces | {{PRODUCES}} |
+| Inputs | {{INPUTS}} |
+| Outputs | {{OUTPUTS}} |
 | Related Specifications | {{RELATED_SPECIFICATIONS}} |
-| Supersedes | {{SUPERSEDES}} |
-| Superseded By | {{SUPERSEDED_BY}} |
-| Promotion Requirements | {{PROMOTION_REQUIREMENTS}} |
-| Certification Status | {{CERTIFICATION_STATUS}} |
-
-## 5. Required Structure
-
-1. Document Metadata
-2. Workflow Identity
-3. Purpose
-4. Authority
-5. Inputs
-6. Outputs
-7. Lifecycle
-8. Roles and Responsibilities
-9. Allowed Actions
-10. Forbidden Actions
-11. Decision Points
-12. Validation Requirements
-13. Review Requirements
-14. Certification Boundary
-15. Project State Impact
-16. Failure Handling
-17. Related Templates
-18. Completion Criteria
-19. Completion Checklist
-
-## 6. Section Requirements
-
-A workflow routes work through a governed lifecycle. It does not decide architecture, implement code, certify work, or update project state by itself.
-
-```text
-State
-    ↓
-Context
-    ↓
-Planning
-    ↓
-Command Selection
-    ↓
-Execution
-    ↓
-Validation
-    ↓
-Review
-    ↓
-Certification
-    ↓
-State Update, only when permitted
 ```
 
-Roles and responsibilities must identify workflow owner, executor, reviewer, certifier, and human authority when applicable without creating duplicate authority.
+The owner, reviewers, approvers, lifecycle, and normative authority are supplied values. The template defines no fixed defaults for them.
 
-## 7. Allowed Content
+## 4. Workflow Body
 
-- Workflow identity, purpose, authority, inputs, outputs, lifecycle, roles, allowed and forbidden actions, decision points, validation, review, certification boundary, project-state impact, failure handling, related templates, and completion criteria.
+```markdown
+## 1. Workflow Identity
 
-## 8. Forbidden Content
+{{WORKFLOW_IDENTITY}}
 
-- Architecture decisions, implementation scope, certification claims, ProjectStatus updates by the workflow itself, or duplicate workflow/command/orchestration authority.
+## 2. Purpose and Scope
 
-## 9. Validation Requirements
+{{PURPOSE_AND_SCOPE}}
 
-- Confirm STD-010 metadata is complete.
-- Confirm workflow authority consumes existing workflow, command, and orchestration authorities.
-- Confirm lifecycle, roles, decision points, failure handling, validation, and review are defined.
-- Confirm Project State Impact is bounded by the dedicated state workflow and Human Governance approval rules.
+## 3. Authority and Ownership
 
-## 10. Completion Checklist
+{{AUTHORITY_AND_OWNERSHIP}}
 
-- [ ] Metadata complete
-- [ ] Purpose clear
-- [ ] Authority chain documented
-- [ ] Inputs and outputs defined
-- [ ] Lifecycle ordered
-- [ ] Decision points documented
-- [ ] Allowed and forbidden actions clear
-- [ ] Validation requirements defined
-- [ ] Review requirements defined
-- [ ] Certification boundary defined
-- [ ] Project state impact defined
-- [ ] Failure handling documented
-- [ ] References verified
+## 4. Inputs and Preconditions
+
+{{INPUTS_AND_PRECONDITIONS}}
+
+## 5. Outputs and Completion Conditions
+
+{{OUTPUTS_AND_COMPLETION_CONDITIONS}}
+
+## 6. Roles and Responsibility Boundaries
+
+{{ROLES_AND_RESPONSIBILITIES}}
+
+## 7. States or Milestones
+
+{{STATES_OR_MILESTONES}}
+
+## 8. Transitions and Decision Conditions
+
+{{TRANSITIONS_AND_DECISION_CONDITIONS}}
+
+## 9. Allowed and Forbidden Actions
+
+{{ALLOWED_AND_FORBIDDEN_ACTIONS}}
+
+## 10. Execution and Handoff Boundaries
+
+{{EXECUTION_AND_HANDOFF_BOUNDARIES}}
+
+## 11. Validation and Evidence
+
+{{VALIDATION_AND_EVIDENCE}}
+
+## 12. Failure, Recovery, Escalation, and Safe Stop
+
+{{FAILURE_RECOVERY_ESCALATION_SAFE_STOP}}
+
+## 13. Risks, Assumptions, and Unresolved Matters
+
+{{RISKS_ASSUMPTIONS_UNRESOLVED}}
+```
+
+## 5. Workflow Semantics
+
+A workflow document may describe states, transitions, decisions, roles, commands, providers, or state effects only when those semantics are explicitly supplied by the applicable owning authority.
+
+There is no universal AI-DOS workflow sequence. In particular, this template does not require:
+
+```text
+State → Context → Planning → Command Selection → Execution
+→ Validation → Review → Certification → State Update
+```
+
+Those stages may appear only when the bounded workflow authority explicitly owns and declares them.
+
+## 6. Authority Separation
+
+```text
+Workflow Template
+    reusable authoring structure
+
+Workflow Document
+    bounded description owned by its declared authority
+
+Executable Workflow
+    runtime routing governed elsewhere
+
+Execution Contract
+    explicit authorization governed by the System Layer
+```
+
+None inherits authority automatically from another.
+
+## 7. Validation Requirements
+
+A produced workflow document is complete only when:
+
+- owner, authority, scope, inputs, outputs, and consumer are explicit;
+- states and transitions, when used, have declared provenance;
+- decision conditions are testable and non-invented;
+- roles do not duplicate existing authority;
+- execution and state-impact boundaries are explicit;
+- failure, recovery, escalation, and safe-stop behavior are recorded;
+- no fixed Forge AI path, planning model, state model, command, provider, reviewer, approver, or lifecycle is required by default;
+- the document does not claim execution, approval, certification, release, or mutation authority merely because the template was completed.
+
+## 8. Non-Authority Statement
+
+This template and documents produced from it do not plan work, route executable workflows, select commands, authorize execution, dispatch providers, validate results, approve, certify, promote, release, or mutate product or Target state.
