@@ -9,6 +9,8 @@ The canonical library contract is `TemplateLibrary.md`. This index does not defi
 ```text
 TemplateLibrary.md
     ↓
+Integrity Gate Status
+    ↓
 Standards/TPL-000-Template-Standard.md
     ↓
 Applicable <FamilyName>Family.md
@@ -16,7 +18,9 @@ Applicable <FamilyName>Family.md
 Narrowest matching template
 ```
 
-## Active Families
+`TPL-000` remains under an active material-rebase gate. Its legacy requirements must not override the narrower authority and Target-independence boundaries in `TemplateLibrary.md` and normalized family contracts.
+
+## Active Normalized Families
 
 | Family | Semantic entry | Purpose |
 |:---|:---|:---|
@@ -29,17 +33,31 @@ Narrowest matching template
 | Knowledge | `Knowledge/KnowledgeFamily.md` | Bounded knowledge-claim structures with provenance and epistemic status; not truth, canonicalization, Knowledge Engine, or persistence authority. |
 | Memory | `Memory/MemoryFamily.md` | Bounded memory-record structures with retention, retrieval, expiry, correction, and forgetting semantics; not Memory Engine or persistence authority. |
 
-Other template directories remain catalog families and must receive semantic entry documents before they are normalized as family contracts.
+Other template directories remain catalog families and must receive semantic entry documents before they are treated as normalized family contracts.
+
+## Integrity Status
+
+```text
+Normalized family scope
+    bounded use permitted
+
+TPL-000
+    material rebase required
+
+Whole Template Library
+    not yet certified or frozen
+```
 
 ## Selection Rules
 
 1. Resolve the authorized artifact purpose and owning domain.
-2. Consult `TemplateLibrary.md` and TPL-000.
-3. Open the semantic family entry.
-4. Select the narrowest matching template.
-5. Return the produced artifact to its owning authority.
+2. Consult `TemplateLibrary.md` and the active integrity gate.
+3. Consult TPL-000 only where its rule does not conflict with the current library contract or normalized family boundary.
+4. Open the semantic family entry.
+5. Select the narrowest matching template.
+6. Return the produced artifact to its owning authority.
 
-Template selection is not task planning, workflow routing, command selection, execution authorization, approval, certification, promotion, release, or Target-state mutation.
+Template selection is not task planning, workflow routing, command selection, execution authorization, approval, certification, promotion, release, persistence, or Target-state mutation.
 
 ## Entry Naming Convention
 
