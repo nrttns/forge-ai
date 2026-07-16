@@ -1,47 +1,65 @@
-<!--
-Identifier: AI-DOS.SYSTEM.README
-Title: AI-DOS System Layer
-Version: 2.0.0
-Status: Active
-Owner: AI-DOS System Layer
-Updated: 2026-07-13
--->
+# AI-DOS System Layer Navigation
 
-# AI-DOS System Layer
+This README is the navigation index for `docs/AI/System/`.
 
-## Document Metadata
-
-| Field | Value |
-|:---|:---|
-| Identifier | `AI-DOS.SYSTEM.README` |
-| Title | AI-DOS System Layer |
-| Version | `2.0.0` |
-| Status | Active |
-| Classification | AI-DOS System Layer |
-| Document Type | System Procedure |
-| Owner | AI-DOS System Layer |
-| Approval Authority | Human Governance |
-| Last Updated | 2026-07-13 |
-| Scope | System Layer architecture and startup boundaries. |
-| Out of Scope | Target operation design, target-owned management models, Runtime implementation, Engine implementation, command definitions, workflow definitions, template definitions, certification, and implementation changes. |
-| Normative Authority | Human Governance; AI-DOS System Layer documents. |
-| Dependencies | `docs/AI/System/TargetRepositoryResolution.md`, `docs/AI/System/BootSequence.md`, `docs/AI/System/ContextAssembly.md`, `docs/AI/System/AuthorityModel.md`; generic Target Context supplied by invocation. |
-| Inputs | Invocation Context; Resolved Target Context; Target Objectives; Target Constraints; Target Authority Inputs; Target Execution Boundaries; Target Validation Requirements. |
-| Outputs | System Layer handoff evidence; authority or blocker findings; prepared execution boundary. |
-| Related Specifications | `docs/AI/System/TargetRepositoryResolution.md`, `docs/AI/System/BootSequence.md`, `docs/AI/System/ContextAssembly.md`, `docs/AI/System/AuthorityModel.md`, `docs/AI/System/SourceOfTruth.md`, `docs/AI/System/DecisionModel.md`, `docs/AI/System/ExecutionSequence.md`, `docs/AI/System/SystemLayerFreeze.md`. |
-
----
-
-## 1. Purpose
-
-AI-DOS System Layer maps the documentation set and canonical startup flow. It is part of the AI-DOS startup path and remains independent of any target-owned management, sequencing, or status model.
-
-This document describes how AI-DOS starts and prepares capability execution. It does not prescribe how any target operates.
-
-## 2. Canonical System Flow
+The canonical System Layer contract is:
 
 ```text
-Repository Entry
+docs/AI/System/SystemLayer.md
+```
+
+This README does not define System Layer authority, execution procedure, Target methodology, product truth, Target truth, Runtime behavior, Engine behavior, distribution policy, or governance decisions.
+
+## Start Here
+
+Read in this order for a full System Layer review:
+
+```text
+SystemLayer.md
+    ↓
+TargetRepositoryResolution.md
+    ↓
+BootSequence.md
+    ↓
+ContextAssembly.md
+    ↓
+SourceOfTruth.md
+    ↓
+AuthorityModel.md
+    ↓
+AuthorityResolution.md
+    ↓
+DecisionModel.md
+    ↓
+ExecutionSequence.md
+```
+
+Read only the components required by a bounded task when a full review is not necessary.
+
+## Canonical Contract
+
+| Document | Role |
+|:---|:---|
+| `SystemLayer.md` | Canonical layer contract: purpose, authority, boundaries, consumes, produces, canonical flow, safe stop, and Operational Core handoff. |
+
+## Component Index
+
+| Component | Responsibility |
+|:---|:---|
+| `TargetRepositoryResolution.md` | Resolve and validate the active Target Repository boundary. |
+| `BootSequence.md` | Load resolved Framework and Target context. |
+| `ContextAssembly.md` | Assemble minimum sufficient task context. |
+| `SourceOfTruth.md` | Classify applicable truth domains and evidence. |
+| `AuthorityModel.md` | Define authority categories and precedence constraints. |
+| `AuthorityResolution.md` | Resolve applicable authority and conflicts. |
+| `DecisionModel.md` | Prepare a bounded safe decision. |
+| `ExecutionSequence.md` | Prepare and hand off authorized execution. |
+| `SystemLayerFreeze.md` | Historical freeze evidence; not the current layer contract. |
+
+## Canonical Flow
+
+```text
+Provider Invocation Contract
         ↓
 Invocation Context
         ↓
@@ -49,7 +67,11 @@ Target Repository Resolution
         ↓
 Resolved Target Context
         ↓
+Boot / Context Loading
+        ↓
 Context Assembly
+        ↓
+Source-of-Truth Classification
         ↓
 Authority Resolution
         ↓
@@ -60,79 +82,16 @@ Execution Sequence
 Operational Core
 ```
 
-| Step | System Meaning |
-|:---|:---|
-| Repository Entry | The entry point that hands control to AI-DOS startup rules. |
-| Invocation Context | The explicit request, scope, constraints, and supplied target inputs. |
-| Target Repository Resolution | The procedure that identifies the active Target Repository and creates Resolved Target Context. |
-| Resolved Target Context | The normalized target-supplied context accepted by AI-DOS. |
-| Context Assembly | The procedure that assembles temporary execution context from accepted inputs. |
-| Authority Resolution | The procedure that orders applicable authority inputs and detects conflicts. |
-| Decision Model | The procedure that chooses the safe next decision. |
-| Execution Sequence | The procedure that prepares bounded capability execution. |
-| Operational Core | The downstream AI-DOS capability area receiving prepared work. |
+The authoritative meaning and boundaries of this flow are defined in `SystemLayer.md` and the individual component contracts.
 
-## 3. Accepted Context Model
+## Related Navigation
 
-AI-DOS accepts only the following target concepts in the System Layer:
+- Product navigation: `docs/AI/README.md`
+- Governance Atlas: `docs/AI/GOVERNANCE.md`
+- Governance policy: `docs/AI/FrameworkGovernance.md`
+- Architecture navigation: `docs/AI/Architecture/README.md`
+- Operational Core entry: `docs/AI/AIFramework.md`
 
-| Concept | Meaning |
-|:---|:---|
-| Invocation Context | The explicit invocation request and supplied work boundary. |
-| Resolved Target Context | The normalized target context produced by Target Repository Resolution. |
-| Applicable Target Resources | Target-supplied resources needed for the authorized work. |
-| Target Objectives | The requested outcomes within the invocation. |
-| Target Constraints | Limits, exclusions, safety rules, and environmental restrictions. |
-| Target Authority Inputs | Authority-bearing inputs supplied or identified for the target. |
-| Target Execution Boundaries | File, artifact, scope, and action boundaries for execution. |
-| Target Validation Requirements | Checks or evidence expected for the work. |
+## Navigation Boundary
 
-No additional target-owned planning, status, sequencing, or management construct is required by this System Layer document.
-
-## 4. Responsibilities
-
-AI-DOS System Layer shall:
-
-1. Preserve AI-DOS as a reusable provider.
-2. Consume only `Invocation Context, Resolved Target Context, Applicable Target Resources, Target Objectives, Target Constraints, Target Authority Inputs, Target Execution Boundaries, and Target Validation Requirements`.
-3. Treat missing required input as a blocker.
-4. Keep target-owned operating models outside the System Layer.
-5. Produce clear handoff evidence for the next System Layer procedure.
-
-## 5. Procedure
-
-| Order | Action | Output |
-|:---|:---|:---|
-| 1 | Confirm the current step in the canonical flow. | Flow position known. |
-| 2 | Read only applicable System Layer inputs and accepted Target Context. | Input set known. |
-| 3 | Validate that required target inputs are present and bounded. | Context readiness or blocker. |
-| 4 | Identify authority conflicts or missing validation requirements. | Conflict report or cleared handoff. |
-| 5 | Hand off to the next canonical System Layer step. | Prepared System Layer output. |
-
-## 6. Boundaries
-
-This document must not require, infer, update, or depend on target-owned management artifacts. It must remain valid when a target supplies only the accepted context model and no other operating structure.
-
-## 7. Blockers
-
-Report a blocker when:
-
-- Invocation Context is absent or ambiguous.
-- Resolved Target Context is unavailable when required.
-- Target Authority Inputs conflict.
-- Target Execution Boundaries are missing for requested changes.
-- Target Validation Requirements are required but unavailable.
-
-## 8. Validation Checklist
-
-| Check | Required Result |
-|:---|:---|
-| Canonical flow preserved | Yes |
-| Accepted context model only | Yes |
-| Target-owned management models required | No |
-| Runtime or Engine implementation introduced | No |
-| System Layer handoff clear | Yes |
-
-## 9. Handoff
-
-The output of this document is a bounded System Layer handoff to the next canonical step. The handoff contains only the accepted context model, authority findings, blockers, validation expectations, and execution boundary evidence.
+This README is not a second `SystemLayer.md`. Any authority, ownership, dependency, safe-stop, or execution-handoff rule belongs in the canonical layer contract or the owning component document.
