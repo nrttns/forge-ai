@@ -24,6 +24,7 @@ Narrowest matching template
 | Validation | `Validation/ValidationFamily.md` | Evidence and finding structures. |
 | Review | `Review/ReviewFamily.md` | Evaluation, rationale, objections, unresolved matters, and recommendation. |
 | Certification | `Certification/CertificationFamily.md` | Formal bounded claim structures under declared certification authority. |
+| Workflow | `Workflow/WorkflowFamily.md` | Reusable workflow-document structures; not executable workflow or routing authority. |
 
 Other template directories remain catalog families and must receive semantic entry documents before they are normalized as family contracts.
 
