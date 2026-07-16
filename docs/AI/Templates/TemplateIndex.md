@@ -16,7 +16,7 @@ Applicable <FamilyName>Family.md
 Narrowest matching template
 ```
 
-TPL-000 `0.2.1-draft` records Human Governance acceptance of the bounded material rebase. Acceptance does not establish whole-library certification, freeze, or promotion.
+TPL-000 `0.2.1-draft` records Human Governance acceptance of its bounded material rebase. TPL-001 `0.2.1-draft` records Human Governance acceptance of the bounded RFC authoring rebase. These acceptances do not establish whole-library certification, freeze, or promotion.
 
 ## Active Normalized Families
 
@@ -44,12 +44,12 @@ The verified filesystem inventory and disposition is recorded in:
 | Agents, Architecture, Integration, Migration, Platform, Project | Keep and normalize candidates |
 | MultiAgent, Runtime, Swarm | Ownership review required |
 | Unregistered Context, Knowledge, Memory, Workflow components | Hold; not active normalized components |
-| TPL-001 | Material rebase implemented; Human Governance review required |
+| TPL-001 | Bounded material rebase accepted; Architecture family remains unnormalized |
 | Reports under Templates | Relocation or historical classification required |
 
 This register is a disposition boundary only. It does not normalize, activate, approve, certify, or freeze the listed artifacts.
 
-The TPL-001 rebase validation is recorded in `docs/AI/Architecture/Reports/AI-DOS-TPL-001-Material-Rebase-Validation.md`. The reconciled Architecture RFC template remains a catalog component until Architecture family normalization is accepted.
+The accepted TPL-001 rebase validation is recorded in `docs/AI/Architecture/Reports/AI-DOS-TPL-001-Material-Rebase-Validation.md`. The reconciled Architecture RFC template remains a catalog component until Architecture family normalization is separately reviewed and accepted.
 
 ## Integrity Status
 
@@ -59,6 +59,12 @@ Normalized family scope
 
 TPL-000 material rebase
     accepted
+
+TPL-001 material rebase
+    accepted
+
+Architecture family
+    not normalized
 
 Temporary integrity gate
     closed
