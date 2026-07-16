@@ -55,6 +55,7 @@ npm run typecheck
 npm run build
 npm run test:install
 npm run test:execution
+npm run test:offline
 ```
 
 Expected results:
@@ -64,10 +65,13 @@ Expected results:
 - compiled CommonJS output is written to `dist/`.
 - the packed CLI installs into an isolated temporary directory and its installed `forge-ai` binary validates the repository Target contract.
 - the compiled CLI runs as a separate local process, returns deterministic success and failure results, and leaves the Target unchanged.
+- the local package installs from its archive with npm offline mode and the installed CLI validates the Target while common Node network APIs are blocked.
 
 The local-install validation creates its package archive, npm cache, logs, and installation under a temporary directory. It removes that directory after the check and does not install Forge AI globally or modify the Target Repository.
 
 The local-execution validation creates temporary valid and invalid Target fixtures, verifies process exit codes and output channels, confirms the valid Target contract is unchanged, and removes both fixtures afterward.
+
+The offline validation uses an empty npm cache for `npm install --offline`, preloads a network-denial guard for the installed CLI process, and removes its package, caches, logs, guard, and installation afterward.
 
 ## Run in Development Mode
 
@@ -167,6 +171,7 @@ npm run typecheck
 npm run build
 npm run test:install
 npm run test:execution
+npm run test:offline
 ```
 
 Run `npm ci` again whenever `package-lock.json` changes.
