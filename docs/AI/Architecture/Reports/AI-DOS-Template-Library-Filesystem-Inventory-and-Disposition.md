@@ -35,7 +35,7 @@ This method covers every Template path observable in the complete Forge AI PR hi
 | Unnormalized catalog candidates | Agents, Architecture, Integration, Migration, Platform, Project | 34 | KEEP AND NORMALIZE CANDIDATE |
 | Boundary-conflict catalog candidates | MultiAgent, Runtime, Swarm | 10 | HOLD FOR OWNERSHIP REVIEW |
 | Unregistered components inside normalized directories | Context, Knowledge, Memory, Workflow | 16 | HOLD; DO NOT ACTIVATE |
-| Standards | TPL-000, TPL-001 | 2 | TPL-000 RETAIN; TPL-001 MATERIAL REBASE REQUIRED |
+| Standards | TPL-000, TPL-001 | 2 | RETAIN ACCEPTED BOUNDED REBASES |
 | Reports stored inside Templates | Global Audit, Freeze Review, Freeze | 3 | RELOCATE / HISTORICAL EVIDENCE CANDIDATE |
 | **Total** |  | **87** |  |
 
@@ -59,7 +59,7 @@ This method covers every Template path observable in the complete Forge AI PR hi
 | Reports | 3 | Not applicable | Evidence stored inside Template product tree | RELOCATE OR MARK HISTORICAL |
 | Review | 2 | `ReviewFamily.md` | Active normalized family | RETAIN |
 | Runtime | 2 | Missing | Likely overlap with Context and Runtime authority | HOLD; OWNERSHIP AND REHOME REVIEW |
-| Standards | 2 | Not a family | Template standards | TPL-000 RETAIN; TPL-001 REBASE |
+| Standards | 2 | Not a family | Template standards | RETAIN TPL-000 AND TPL-001 ACCEPTED BOUNDED REBASES |
 | Swarm | 5 | Missing | Boundary-conflict catalog family | HOLD; RESOLVE AGAINST AGENTS AND MULTIAGENT |
 | Validation | 2 | `ValidationFamily.md` | Active normalized family | RETAIN |
 | Workflow | 9 | `WorkflowFamily.md` | 2 active files plus 7 unregistered files | RETAIN FAMILY; HOLD UNREGISTERED FILES |
@@ -238,13 +238,11 @@ Current family contracts do not register:
 
 These files must not inherit normalized status from their parent directories.
 
-### F-004 — TPL-001 Is Incompatible with Accepted TPL-000
+### F-004 — TPL-001 Legacy Incompatibility Corrected
 
-TPL-001 still depends on the removed TPL-000 lifecycle, taxonomy, compliance, directory, certification, approval, promotion, and inheritance model. It also contains Forge AI planning references and stale Framework-era authority.
+The inventoried TPL-001 version depended on the removed TPL-000 lifecycle, taxonomy, compliance, directory, certification, approval, promotion, and inheritance model. It also contained Forge AI planning references and stale Framework-era authority.
 
-TPL-001 requires material rebase before `Architecture/RFCTemplate.md` can be normalized.
-
-Correction status: the bounded TPL-001 material rebase and RFC component reconciliation are implemented in a review branch. Human Governance acceptance and Architecture family normalization remain required.
+The bounded TPL-001 material rebase and RFC component reconciliation were reviewed by Human Governance and accepted through Forge AI PR #211. Architecture family normalization remains a separate required action.
 
 ### F-005 — README Entry Semantics Remain in Architecture and Project
 
@@ -277,13 +275,13 @@ No automatic normalization is permitted until these overlaps are resolved.
 | Unregistered Knowledge components | HOLD | Review each against Knowledge Engine, Registry, truth, and persistence owners. |
 | Unregistered Memory components | HOLD | Review each against Memory Engine, Registry, retention, and persistence owners. |
 | Unregistered Workflow components | HOLD | Review for merge, rehome, or retirement against Planning, Review, Validation, Commands, and Human Governance. |
-| TPL-001 | MATERIAL REBASE IMPLEMENTED — REVIEW REQUIRED | Review the bounded rebase and reconciled Architecture RFC catalog component. |
+| TPL-001 | RETAIN ACCEPTED BOUNDED REBASE | Preserve the accepted authoring boundary; normalize Architecture separately. |
 | Template Reports | RELOCATE / HISTORICAL | Move evidence outside Template product tree or mark historical and superseded. |
 
 ## Recommended Execution Order
 
 1. Accept this inventory and disposition as the horizontal baseline.
-2. Materially rebase TPL-001 and reconcile `Architecture/RFCTemplate.md`.
+2. Retain the accepted TPL-001 material rebase and reconciled RFC catalog component without treating Architecture as normalized.
 3. Normalize Architecture with a semantic family entry and remove README authority semantics.
 4. Normalize Agents.
 5. Jointly review MultiAgent and Swarm ownership before either family is activated.
@@ -312,6 +310,7 @@ LIBRARY CONTROL
 
 STANDARDS
     2 FILES
+    TPL-000 AND TPL-001 BOUNDED REBASES ACCEPTED
 
 STALE TEMPLATE REPORTS
     3 FILES

@@ -2,7 +2,7 @@
 
 ## Review Status
 
-READY FOR HUMAN GOVERNANCE REVIEW
+HUMAN GOVERNANCE ACCEPTED
 
 ## Scope
 
@@ -33,6 +33,7 @@ Determine whether legacy TPL-001 can be replaced by a bounded RFC authoring stan
 | Compatibility and migration disclosure | PASS |
 | Existing RFC non-mutation | PASS |
 | Architecture family normalization | NOT ACTIVATED |
+| Human Governance acceptance | PASS — PR #211 REVIEWED AND MERGED |
 | Whole-library certification or freeze | NOT CLAIMED |
 
 ## Corrected Findings
@@ -79,19 +80,23 @@ The RFC concern profile remains structurally recognizable, but consumers must st
 
 ## Residual Work
 
-- Human Governance review and acceptance of this bounded rebase;
 - creation and review of `ArchitectureFamily.md`;
 - normalization of remaining Architecture components;
 - removal of Architecture README authority semantics;
 - re-validation of RFC references after Architecture normalization;
 - later review of actual RFC families remains outside this change.
 
+## Acceptance Evidence
+
+Forge AI PR #211 was reviewed by Human Governance and merged into `master` with merge commit `110b214494bde76c1f9ba243d8d02c93e0519140`.
+
+This acceptance closes the TPL-001 material-rebase review only. It does not normalize the Architecture family, activate the reconciled RFC component as a normalized family component, approve any RFC, or certify or freeze the whole Template Library.
+
 ## Final Determination
 
 ```text
 TPL-001 MATERIAL REBASE
-    IMPLEMENTED
-    HUMAN GOVERNANCE REVIEW REQUIRED
+    HUMAN GOVERNANCE ACCEPTED
 
 ARCHITECTURE RFC COMPONENT
     RECONCILED
@@ -107,7 +112,7 @@ WHOLE TEMPLATE LIBRARY
     NOT CERTIFIED
     NOT FROZEN
 
-READY FOR HUMAN GOVERNANCE REVIEW
+HUMAN GOVERNANCE ACCEPTED
 ```
 
 This validation does not approve or canonicalize an RFC, activate implementation, normalize Architecture, certify or freeze the Template Library, release anything, execute work, persist state, or mutate a Target.
