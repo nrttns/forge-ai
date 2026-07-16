@@ -1,4 +1,20 @@
 export { bootMessage, getBootMessage, getBootStatus } from './boot';
-export { formatBootOutput, getCliStatus, loadTargetContract, parseCliArgs, runCli } from './main';
+export {
+  formatBootOutput,
+  formatTargetValidationOutput,
+  getCliStatus,
+  getTargetValidationStatus,
+  loadTargetContract,
+  parseCliArgs,
+  runCli,
+} from './main';
 export type { BootStatus } from './boot';
-export type { CliStatus, OutputFormat, RunCliOptions, TargetContract, WriteLine } from './main';
+export type {
+  CliCommand,
+  CliStatus,
+  OutputFormat,
+  RunCliOptions,
+  TargetContract,
+  TargetValidationStatus,
+  WriteLine,
+} from './main';

@@ -5,8 +5,10 @@ import { getBootMessage, getBootStatus } from './boot';
 
 export type WriteLine = (message: string) => void;
 export type OutputFormat = 'text' | 'json';
+export type CliCommand = 'validate';
 
 export interface RunCliOptions {
+  readonly command?: CliCommand;
   readonly format?: OutputFormat;
   readonly targetPath?: string;
 }
@@ -22,6 +24,14 @@ export interface CliStatus {
   readonly ok: true;
   readonly targetPath?: string;
   readonly targetContractPath?: string;
+}
+
+export interface TargetValidationStatus {
+  readonly command: 'validate';
+  readonly message: 'Target contract valid.';
+  readonly ok: true;
+  readonly targetPath: string;
+  readonly targetContractPath: string;
 }
 
 export function loadTargetContract(targetPath: string): TargetContract {
@@ -84,7 +94,33 @@ export function formatBootOutput(format: OutputFormat = 'text', options: RunCliO
     : `${getBootMessage()} Target: ${status.targetPath} Contract: ${status.targetContractPath}`;
 }
 
+export function getTargetValidationStatus(targetPath: string): TargetValidationStatus {
+  const targetContract = loadTargetContract(targetPath);
+
+  return {
+    command: 'validate',
+    message: 'Target contract valid.',
+    ok: true,
+    targetPath: targetContract.targetPath,
+    targetContractPath: targetContract.contractPath,
+  };
+}
+
+export function formatTargetValidationOutput(
+  targetPath: string,
+  format: OutputFormat = 'text',
+): string {
+  const status = getTargetValidationStatus(targetPath);
+
+  if (format === 'json') {
+    return JSON.stringify(status);
+  }
+
+  return `${status.message} Target: ${status.targetPath} Contract: ${status.targetContractPath}`;
+}
+
 export function parseCliArgs(args: readonly string[]): RunCliOptions {
+  let command: CliCommand | undefined;
   let format: OutputFormat = 'text';
   let targetPath: string | undefined;
 
@@ -106,14 +142,41 @@ export function parseCliArgs(args: readonly string[]): RunCliOptions {
       continue;
     }
 
+    if (arg === 'validate') {
+      if (command !== undefined) {
+        throw new Error(`Multiple commands are not supported: ${command}, ${arg}`);
+      }
+      command = 'validate';
+      continue;
+    }
+
     throw new Error(`Unsupported argument: ${arg}`);
   }
 
-  return targetPath === undefined ? { format } : { format, targetPath };
+  if (command === 'validate' && targetPath === undefined) {
+    throw new Error('The validate command requires --target <path>');
+  }
+
+  return {
+    ...(command === undefined ? {} : { command }),
+    format,
+    ...(targetPath === undefined ? {} : { targetPath }),
+  };
 }
 
 export function runCli(writeLine: WriteLine = console.log, options: RunCliOptions = {}): string {
-  const message = formatBootOutput(options.format, options);
+  let message: string;
+
+  if (options.command === 'validate') {
+    if (options.targetPath === undefined) {
+      throw new Error('The validate command requires --target <path>');
+    }
+
+    message = formatTargetValidationOutput(options.targetPath, options.format);
+  } else {
+    message = formatBootOutput(options.format, options);
+  }
+
   writeLine(message);
   return message;
 }

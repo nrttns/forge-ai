@@ -6,7 +6,7 @@ This guide prepares a local source checkout of Forge AI for inspection, developm
 
 Forge AI is the self-hosting Target Project used to develop and validate AI-DOS. It is not the reusable AI-DOS product, and this repository is not an AI-DOS installation package.
 
-The current CLI is an early local interface. It verifies that Forge AI boots and, when supplied, that a Target path exists. It does not yet install AI-DOS, execute the full governed runtime, modify a Target repository, or activate roadmap capabilities.
+The current CLI is an early local interface. It verifies that Forge AI boots, loads a Target Repository's root `AGENTS.md` contract, and exposes one bounded `validate` command for Target-contract validation. It does not yet install AI-DOS, execute the full governed runtime, modify a Target repository, or activate roadmap capabilities.
 
 ## Prerequisites
 
@@ -87,7 +87,14 @@ Request machine-readable output:
 npm run dev -- --target . --json
 ```
 
-The `--target` value may be an absolute or relative path. Forge AI resolves it to an absolute path and stops with an error if the path does not exist.
+Run the bounded Target-contract validation command:
+
+```bash
+npm run dev -- validate --target .
+npm run dev -- validate --target . --json
+```
+
+The `--target` value may be an absolute or relative path. Forge AI resolves it to an absolute path and stops with an error if the path is not a directory or its root `AGENTS.md` contract is missing, is not a file, or is empty.
 
 ## Run the Built CLI
 
@@ -103,16 +110,19 @@ Then run the compiled entry point:
 node dist/main.js
 node dist/main.js --target .
 node dist/main.js --target . --json
+node dist/main.js validate --target .
+node dist/main.js validate --target . --json
 ```
 
-Current options:
+Current command and options:
 
-| Option | Purpose |
+| Command or option | Purpose |
 |:---|:---|
-| `--target <path>` | Resolve and verify an existing Target path. |
+| `validate` | Validate the root `AGENTS.md` contract of exactly one Target Repository without modifying it. |
+| `--target <path>` | Resolve the Target directory and load its root `AGENTS.md` contract. Required by `validate`. |
 | `--json` | Return the boot status as JSON. |
 
-Unsupported options, a missing `--target` value, and nonexistent Target paths return an error and a nonzero process exit status.
+Unsupported commands or options, multiple commands, a missing `--target` value, and invalid Target contracts return an error and a nonzero process exit status.
 
 ## Governed Repository Use
 
@@ -169,7 +179,7 @@ npm run build
 
 ### Unsupported argument
 
-The current CLI accepts only `--target <path>` and `--json`. Remove any other option.
+The current CLI accepts the bounded `validate` command plus `--target <path>` and `--json`. Remove any other command or option.
 
 ## License and Public-Preview Boundaries
 
