@@ -244,6 +244,8 @@ TPL-001 still depends on the removed TPL-000 lifecycle, taxonomy, compliance, di
 
 TPL-001 requires material rebase before `Architecture/RFCTemplate.md` can be normalized.
 
+Correction status: the bounded TPL-001 material rebase and RFC component reconciliation are implemented in a review branch. Human Governance acceptance and Architecture family normalization remain required.
+
 ### F-005 — README Entry Semantics Remain in Architecture and Project
 
 `Architecture/README.md` and `Project/README.md` still act as family navigation or authority artifacts. They conflict with the accepted semantic-entry convention.
@@ -275,7 +277,7 @@ No automatic normalization is permitted until these overlaps are resolved.
 | Unregistered Knowledge components | HOLD | Review each against Knowledge Engine, Registry, truth, and persistence owners. |
 | Unregistered Memory components | HOLD | Review each against Memory Engine, Registry, retention, and persistence owners. |
 | Unregistered Workflow components | HOLD | Review for merge, rehome, or retirement against Planning, Review, Validation, Commands, and Human Governance. |
-| TPL-001 | MATERIAL REBASE REQUIRED | Remove legacy TPL-000 and Target dependencies; reconcile with Architecture RFC component. |
+| TPL-001 | MATERIAL REBASE IMPLEMENTED — REVIEW REQUIRED | Review the bounded rebase and reconciled Architecture RFC catalog component. |
 | Template Reports | RELOCATE / HISTORICAL | Move evidence outside Template product tree or mark historical and superseded. |
 
 ## Recommended Execution Order

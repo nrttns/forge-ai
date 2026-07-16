@@ -1,174 +1,194 @@
-# RFC Template
-
----
+# AI-DOS RFC Template
 
 ## Template Metadata
 
 | Field | Value |
 |:---|:---|
-| Identifier | `TPL-ARCH-RFC` |
-| Title | RFC Template |
-| Version | 0.2.0-draft |
-| Status | Draft |
-| Canonical Status | Non-canonical until reviewed, approved, and promoted through Framework Governance |
-| Classification | Architecture Template |
+| Identifier | `AI-DOS.TEMPLATES.ARCHITECTURE.RFC` |
+| Title | AI-DOS RFC Template |
+| Version | `0.3.0-draft` |
+| Status | Draft — Catalog Component Reconciled with TPL-001 Rebase |
+| Canonical Status | Non-canonical; Architecture family normalization and Human Governance review required |
+| Classification | Architecture RFC Template |
 | Document Type | Template |
-| Owner | Framework Architecture Team |
-| Maintainers | Framework Architecture Team |
-| Review Authority | Human Governance / Framework Governance |
+| Artifact Family | Template Artifact |
+| Artifact Type | RFC Component Template |
+| Owner | AI-DOS Template Library |
+| Maintainers | AI-DOS Template Library |
+| Review Authority | Human Governance |
 | Approval Authority | Human Governance |
 | Created | 2026-07-09 |
-| Last Updated | 2026-07-09 |
-| Lifecycle Phase | Draft |
-| Traceability ID | AI-DOS.TEMPLATES.ARCHITECTURE.RFC |
-| Scope | Reusable template for TPL-001-compliant RFC documents in the Architecture template family |
-| Out of Scope | Runtime RFC or Engine RFC specialization; use domain-specific RFC templates where provided |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
-| Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/Standards/TPL-001-RFC-Template-Standard.md` |
-| Dependencies | STD-010 metadata schema; TPL-000 template governance; TPL-001 RFC template standard; Architecture template family index |
-| Consumes | STD-010 mandatory metadata fields; TPL-000 placeholder grammar, lifecycle, taxonomy, compliance model, and validation requirements; TPL-001 RFC section order, lifecycle, and validation requirements |
-| Produces | RFC document |
-| Related Specifications | `docs/AI/Templates/Architecture/README.md` |
-| Supersedes | Earlier in-place draft of this template |
+| Last Updated | 2026-07-16 |
+| Lifecycle State | Draft |
+| Traceability ID | `AI-DOS.TEMPLATES.ARCHITECTURE.RFC` |
+| Scope | Reusable provider-neutral structure for a bounded architecture RFC document. |
+| Out of Scope | Architecture authority, RFC acceptance, implementation authorization, review or approval decisions, certification, canonicalization, release, execution, persistence, or Target-state mutation. |
+| Normative References | `docs/AI/Templates/TemplateLibrary.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/Standards/TPL-001-RFC-Template-Standard.md`; `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
+| Consumes | TPL-000 shared authoring constraints; TPL-001 RFC structural profile; applicable STD-010 metadata requirements; architecture authority supplied for the RFC subject. |
+| Produces | Bounded architecture RFC document structure. |
+| Depends On | Future accepted `ArchitectureFamily.md`; owning architecture authority; TPL-000; TPL-001. |
+| Supersedes | RFC Template `0.2.0-draft` legacy component |
 | Superseded By | None |
-| Promotion Requirements | Template family review, STD-010 validation, TPL-000 validation, TPL-001 validation, and explicit Human Governance approval |
+| Validation Profile | TPL-001 RFC structural conformance profile |
+| Validation Status | Reconciled with TPL-001 material rebase; Architecture family normalization required |
+| Review Status | Review Required |
 | Certification Status | Not certified |
-
----
+| Compatibility Declaration | Breaking metadata and authority-boundary rebase; RFC concern coverage retained |
+| Migration Obligation | Existing RFC documents are not automatically rewritten or invalidated. |
+| Evidence References | `docs/AI/Architecture/Reports/AI-DOS-TPL-001-Material-Rebase-Validation.md` |
 
 ## 1. Purpose
 
-This template defines the required structure for producing a governed RFC document. It is an output contract only: it preserves purpose and ownership for the produced document without becoming architectural authority itself.
+Use this template to author a bounded architecture RFC when an authorized owning domain explicitly requires an RFC artifact.
 
-## 2. When To Use This Template
+This component is a catalog candidate until `ArchitectureFamily.md` is created, reviewed, and accepted. Reconciliation with TPL-001 does not activate or normalize the Architecture family.
 
-Use this template when the artifact being authored matches the document type described below. Use another Architecture template when the work is a proposal, accepted decision, governance policy, broad architecture description, or contract-bearing specification outside this template's stated scope.
+## 2. Required Inputs
 
-## 3. Authority and Ownership
+Resolve before instantiation:
 
-The template consumes STD-010 and TPL-000. The produced document must declare its own Owner, Maintainers, Review Authority, Approval Authority, Normative Authority, and Normative References. Template ownership never transfers ownership of the produced document or the domain it describes.
+- RFC title, purpose, subject, and bounded scope;
+- owning architecture or domain authority;
+- accountable owner and intended consumers;
+- normative authorities, references, dependencies, and evidence;
+- current context, constraints, assumptions, and protected boundaries;
+- proposed architecture, contracts, interfaces, and responsibilities;
+- compatibility, migration, security, and safety impacts;
+- validation, review, decision, adoption, and implementation routes;
+- risks, alternatives, and open questions.
 
-## 4. Produced-Document Metadata Guidance
+Do not infer these values from repository layout, Forge AI, ProjectStatus, DevelopmentPhases, Roadmap, merge status, or continuation intent.
 
-Every document produced from this template must begin with a STD-010-compliant `## Document Metadata` section using TPL-000 placeholders until values are resolved. Do not add template-specific metadata fields that compete with STD-010.
+## 3. Produced-Document Metadata
+
+The RFC instance must declare its own applicable STD-010 metadata. Template metadata does not transfer into the RFC.
+
+```markdown
+## Document Metadata
 
 | Field | Value |
 |:---|:---|
-| Identifier | `{{IDENTIFIER}}` |
+| Identifier | {{IDENTIFIER}} |
 | Title | {{TITLE}} |
 | Version | {{VERSION}} |
 | Status | {{STATUS}} |
 | Canonical Status | {{CANONICAL_STATUS}} |
 | Classification | {{CLASSIFICATION}} |
-| Document Type | {{DOCUMENT_TYPE}} |
+| Document Type | RFC |
+| Artifact Family | {{ARTIFACT_FAMILY}} |
+| Artifact Type | {{ARTIFACT_TYPE}} |
 | Owner | {{OWNER}} |
 | Maintainers | {{MAINTAINERS}} |
 | Review Authority | {{REVIEW_AUTHORITY}} |
 | Approval Authority | {{APPROVAL_AUTHORITY}} |
-| Created | {{CREATED}} |
-| Last Updated | {{LAST_UPDATED}} |
-| Lifecycle Phase | {{LIFECYCLE_PHASE}} |
-| Traceability ID | {{TRACEABILITY_ID}} |
-| Scope | {{SCOPE}} |
-| Out of Scope | {{OUT_OF_SCOPE}} |
 | Normative Authority | {{NORMATIVE_AUTHORITY}} |
 | Normative References | {{NORMATIVE_REFERENCES}} |
-| Dependencies | {{DEPENDENCIES}} |
+| Scope | {{SCOPE}} |
+| Out of Scope | {{OUT_OF_SCOPE}} |
 | Consumes | {{CONSUMES}} |
 | Produces | {{PRODUCES}} |
-| Related Specifications | {{RELATED_SPECIFICATIONS}} |
-| Supersedes | {{SUPERSEDES}} |
-| Superseded By | {{SUPERSEDED_BY}} |
-| Promotion Requirements | {{PROMOTION_REQUIREMENTS}} |
+| Depends On | {{DEPENDS_ON}} |
+| Lifecycle State | {{LIFECYCLE_STATE}} |
+| Traceability ID | {{TRACEABILITY_ID}} |
+| Validation Profile | {{VALIDATION_PROFILE}} |
+| Validation Status | {{VALIDATION_STATUS}} |
+| Review Status | {{REVIEW_STATUS}} |
 | Certification Status | {{CERTIFICATION_STATUS}} |
+| Compatibility Declaration | {{COMPATIBILITY_DECLARATION}} |
+| Evidence References | {{EVIDENCE_REFERENCES}} |
+| Last Updated | {{LAST_UPDATED}} |
+```
 
-## 5. Relationship to TPL-001
+Every semantic value must come from the owning context. No approval, certification, canonical, implementation, compatibility, or release value has a template default.
 
-This RFC template specializes `docs/AI/Templates/Standards/TPL-001-RFC-Template-Standard.md` for the Architecture template family. It must generate every TPL-001 mandatory RFC section in order and must not remove, rename, merge, or reorder those sections.
+## 4. RFC Body
 
-## 6. Required RFC Output Structure
+### 1. Executive Summary
 
-1. Document Metadata
-2. Executive Summary
-3. Purpose
-4. Scope
-5. Out of Scope
-6. Normative Authority
-7. Normative References
-8. Dependencies
-9. Architecture
-10. Design Decisions
-11. Ownership
-12. Responsibilities
-13. Non Responsibilities
-14. Interfaces
-15. Lifecycle
-16. Validation
-17. Risks
-18. Open Questions
-19. Completion Criteria
-20. Version History
+Summarize the proposal, motivation, bounded effect, and current decision posture.
 
-## 7. Section Requirements
+### 2. Purpose
 
-### 7.1 Executive Summary
-Provide 3-5 sentences describing what the RFC does, why it exists, and what it produces.
+Explain why an RFC is required and what decision or contract needs governed treatment.
 
-### 7.2 Purpose
-Explain the problem the RFC solves and why an RFC is required.
+### 3. Scope and Out of Scope
 
-### 7.3 Scope and Out of Scope
-List in-scope and out-of-scope items as complementary, non-overlapping boundaries.
+Declare exact included and excluded concerns.
 
-### 7.4 Normative Authority, References, and Dependencies
-List governing authorities, normative design inputs, and upstream dependencies separately. Do not move authority documents into related references to weaken review requirements.
+### 4. Normative Authority, References, and Dependencies
 
-### 7.5 Architecture
-Describe the architectural model, structure, or change proposed by the RFC.
+Separate governing authority, normative references, consumed inputs, dependencies, informative context, and evidence.
 
-### 7.6 Design Decisions
+### 5. Problem or Context
 
-| Decision | Context | Options Considered | Rationale |
-|:---|:---|:---|:---|
-| `{{DECISION}}` | `{{CONTEXT}}` | `{{OPTIONS}}` | `{{RATIONALE}}` |
+Record the current condition, gap, constraints, assumptions, and provenance.
 
-### 7.7 Ownership, Responsibilities, and Non Responsibilities
-Declare Owner, Maintainers, Review Authority, Approval Authority, owned responsibilities, and explicit non-responsibilities. The RFC Owner owns the RFC document, not every architectural domain the RFC mentions.
+### 6. Proposed Architecture or Contract
 
-### 7.8 Interfaces and Lifecycle
-Describe interfaces, contracts, boundaries, lifecycle states, transitions, and rules the RFC defines or consumes.
+Describe the proposal without presenting it as accepted or implemented.
 
-### 7.9 Validation, Risks, and Open Questions
-List validation methods, required evidence, risks, mitigations, and unresolved questions requiring governance or design resolution.
+### 7. Design Decisions and Rationale
 
-### 7.10 Completion Criteria and Version History
-Completion criteria must be testable. Version history must remain chronological and final.
+Record proposed or accepted decisions with actual status, alternatives, and rationale.
 
-## 8. Allowed Content
+### 8. Ownership and Responsibility Boundaries
 
-- RFC proposal content, architectural rationale, authority consumption, interfaces, lifecycle, validation, risks, open questions, and completion criteria.
+Declare owner, responsibilities, non-responsibilities, consumers, and escalation routes.
 
-## 9. Forbidden Content
+### 9. Interfaces and Integration Boundaries
 
-- Implementation approval, canonical promotion claims, certification claims, ProjectStatus updates, removed TPL-001 mandatory sections, or redefinition of STD-010 / TPL-000 / TPL-001.
+Describe interfaces, inputs, outputs, dependencies, failure boundaries, and protected handoffs.
 
-## 10. Validation Requirements
+### 10. Lifecycle or State Semantics
 
-- Confirm STD-010 metadata is complete.
-- Confirm every TPL-001 mandatory section is present and in order.
-- Confirm authority, references, dependencies, consumes, and related specifications are not conflated.
-- Confirm Open Questions is not empty while the RFC remains Draft.
-- Confirm Version History is final and chronological.
+Include only when applicable and only from the owning domain.
 
-## 11. Completion Checklist
+### 11. Compatibility and Migration Impact
 
-- [ ] STD-010 metadata complete
-- [ ] TPL-001 section order preserved
-- [ ] Authority hierarchy declared
-- [ ] Scope and out-of-scope boundaries non-overlapping
-- [ ] Ownership and non-responsibilities explicit
-- [ ] Interfaces and lifecycle documented
-- [ ] Validation evidence defined
-- [ ] Risks and open questions documented
-- [ ] Completion criteria testable
-- [ ] Version history complete
+Record affected consumers, breaking effects, compatibility direction, migration obligations, rollback concerns, and unresolved risks.
+
+### 12. Security, Safety, and Protected Boundaries
+
+Record applicable security, privacy, safety, access, destructive-action, and boundary constraints.
+
+### 13. Validation and Evidence Plan
+
+Declare criteria, evidence, owner, coverage, limitations, and result semantics. A plan is not a passing validation.
+
+### 14. Risks, Alternatives, and Open Questions
+
+Keep unresolved matters visible and distinguish them from decisions.
+
+### 15. Adoption or Implementation Boundary
+
+State the separate authority and work required after an RFC decision. RFC completion does not activate implementation.
+
+### 16. Completion Criteria
+
+Define document completeness separately from approval, implementation, release, or Target-state completion.
+
+### 17. Version History
+
+Record material document changes without rewriting decision history.
+
+## 5. Structural Validation
+
+- [ ] RFC purpose, owner, subject, and consumers are explicit.
+- [ ] Required TPL-001 concerns are present or traceably mapped.
+- [ ] Proposal, decision, implementation, and release postures are distinct.
+- [ ] Template and RFC-instance metadata are separate.
+- [ ] Authorities, references, dependencies, evidence, and assumptions are classified.
+- [ ] Compatibility, migration, risks, alternatives, and open questions are explicit.
+- [ ] No Target-specific default or stale Framework authority is required.
+- [ ] Structural completion is not represented as RFC acceptance.
+- [ ] Missing or conflicting inputs trigger safe stop.
+
+## 6. Safe Stop
+
+Stop when purpose, owner, decision authority, applicable family status, normative authority, evidence, protected boundary, compatibility impact, decision posture, or required input is missing, conflicting, stale, or ambiguous.
+
+Return unresolved matters to the owning architecture or domain authority. Do not invent values to complete the RFC.
+
+## 7. Non-Authority Statement
+
+This template does not decide architecture, accept an RFC, authorize implementation, approve, certify, promote, canonicalize, release, execute, persist, or mutate product or Target state.
