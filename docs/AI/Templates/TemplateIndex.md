@@ -33,6 +33,22 @@ TPL-000 `0.2.1-draft` records Human Governance acceptance of the bounded materia
 
 Other template directories remain catalog families and must receive semantic entry documents before they are treated as normalized family contracts.
 
+## Catalog Inventory Status
+
+The verified filesystem inventory and disposition is recorded in:
+
+- `docs/AI/Architecture/Reports/AI-DOS-Template-Library-Filesystem-Inventory-and-Disposition.md`.
+
+| Scope | Current status |
+|:---|:---|
+| Agents, Architecture, Integration, Migration, Platform, Project | Keep and normalize candidates |
+| MultiAgent, Runtime, Swarm | Ownership review required |
+| Unregistered Context, Knowledge, Memory, Workflow components | Hold; not active normalized components |
+| TPL-001 | Material rebase required |
+| Reports under Templates | Relocation or historical classification required |
+
+This register is a disposition boundary only. It does not normalize, activate, approve, certify, or freeze the listed artifacts.
+
 ## Integrity Status
 
 ```text

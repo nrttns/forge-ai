@@ -5,7 +5,7 @@
 | Field | Value |
 |:---|:---|
 | Identifier | `AI-DOS.TEMPLATES.LIBRARY` |
-| Version | `1.4.0-draft` |
+| Version | `1.4.1-draft` |
 | Status | Draft — TPL-000 Rebase Accepted; Integrity Gate Closed |
 | Classification | AI-DOS Template Library Contract |
 | Owner | AI-DOS Template Library |
@@ -81,6 +81,8 @@ The accepted authority position is:
 The normalized family contracts and components may be used only within their declared bounded scopes.
 
 Gate closure does not certify or freeze the whole Template Library. Unnormalized catalog families remain outside normalized-family status, and no repository-wide certification or promotion claim is created.
+
+The current verified catalog inventory and disposition is recorded in `docs/AI/Architecture/Reports/AI-DOS-Template-Library-Filesystem-Inventory-and-Disposition.md`. Catalog presence does not imply normalized-family or active-component status.
 
 ## 9. Safe Stop
 
