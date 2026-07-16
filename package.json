@@ -17,7 +17,7 @@
   "private": true,
   "keywords": [],
   "author": "",
-  "license": "UNLICENSED",
+  "license": "Apache-2.0",
   "type": "commonjs",
   "bin": {
     "forge-ai": "dist/main.js"
