@@ -76,6 +76,8 @@ docs/AI/
 ├── Commands/
 ├── Workflows/
 └── Templates/
+    ├── README.md
+    └── TemplateLibrary.md
 ```
 
 ## Core Navigation Targets
@@ -99,7 +101,8 @@ docs/AI/
 | Operational Core | `AIFramework.md`, `AIOrchestrator.md`, `AgentSystemPrompt.md` |
 | Commands | `Commands/` |
 | Workflows | `Workflows/` |
-| Template Library | `Templates/README.md` |
+| Template Library navigation | `Templates/README.md` |
+| Template Library contract | `Templates/TemplateLibrary.md` |
 
 ## Consumption Rules
 
@@ -109,4 +112,5 @@ docs/AI/
 - A.6 Distribution is a sibling branch to Runtime and Engine architecture under A.2.
 - Discovery and report artifacts are evidence unless explicitly promoted by Human Governance.
 - Runtime state, Engine state, workflow state, memory, and Target Project state remain distinct.
+- Template selection is not task planning, workflow routing, execution authorization, or Target-state mutation.
 - Execution participants may draft, edit, execute, validate, and recommend only within explicit authority. They may not approve, certify, promote, release, or mutate Target-owned truth without the required Human Governance or Target authority.
