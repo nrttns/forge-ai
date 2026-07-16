@@ -48,10 +48,11 @@ The narrowest matching template
 | Planning | `Planning/` | Generic planning-document structures; not Target planning authority. |
 | Platform | `Platform/` | Platform and provider-boundary structures. |
 | Project | `Project/` | Generic project-document structures. |
+| Review | `Review/` | Review evaluation and recommendation structures; not validation, certification, or approval authority. |
 | Runtime | `Runtime/` | Runtime-facing documentation structures. |
 | Standards | `Standards/` | Template standards, including TPL-000 and TPL-001. |
 | Swarm | `Swarm/` | Swarm documentation structures. |
-| Validation | `Validation/` | Validation, review, and evidence structures. |
+| Validation | `Validation/` | Validation evidence and finding structures; not review or certification authority. |
 | Workflow | `Workflow/` | Workflow-document structures; not executable workflow authority. |
 
 ## Selection Navigation
