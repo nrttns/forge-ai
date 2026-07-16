@@ -71,6 +71,8 @@ docs/AI/
 │   └── Standards/
 ├── Meta/
 ├── System/
+│   ├── README.md
+│   └── SystemLayer.md
 ├── Commands/
 ├── Workflows/
 └── Templates/
@@ -92,7 +94,8 @@ docs/AI/
 | Distribution family | `Architecture/RFC/Distribution/` |
 | Agent Architecture | `Architecture/Agents/` |
 | Meta Models | `Meta/` |
-| System Layer | `System/README.md` |
+| System Layer navigation | `System/README.md` |
+| System Layer contract | `System/SystemLayer.md` |
 | Operational Core | `AIFramework.md`, `AIOrchestrator.md`, `AgentSystemPrompt.md` |
 | Commands | `Commands/` |
 | Workflows | `Workflows/` |
