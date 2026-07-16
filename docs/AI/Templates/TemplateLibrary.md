@@ -5,8 +5,8 @@
 | Field | Value |
 |:---|:---|
 | Identifier | `AI-DOS.TEMPLATES.LIBRARY` |
-| Version | `1.4.1-draft` |
-| Status | Draft — TPL-000 Rebase Accepted; Integrity Gate Closed |
+| Version | `1.4.2-draft` |
+| Status | Draft — TPL-000 and TPL-001 Rebases Accepted; Integrity Gate Closed |
 | Classification | AI-DOS Template Library Contract |
 | Owner | AI-DOS Template Library |
 | Approval Authority | Human Governance |
@@ -68,7 +68,9 @@ A new family or template requires a proven gap, one semantic owner, declared pur
 
 ## 8. Integrity Status
 
-Human Governance reviewed and accepted the bounded TPL-000 material rebase through Forge AI PR #208. The temporary TPL-000 integrity gate is closed.
+Human Governance reviewed and accepted the bounded TPL-000 material rebase through Forge AI PR #208. Human Governance reviewed and accepted the bounded TPL-001 RFC authoring rebase through Forge AI PR #211.
+
+The temporary TPL-000 integrity gate is closed. TPL-001 acceptance does not normalize the Architecture family or activate its reconciled RFC catalog component as a normalized family component.
 
 The accepted authority position is:
 
