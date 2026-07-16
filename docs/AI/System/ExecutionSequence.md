@@ -1,138 +1,80 @@
-<!--
-Identifier: AI-DOS.SYSTEM.EXECUTIONSEQUENCE
-Title: Execution Sequence
-Version: 2.0.0
-Status: Active
-Owner: AI-DOS System Layer
-Updated: 2026-07-13
--->
-
 # Execution Sequence
 
 ## Document Metadata
 
 | Field | Value |
 |:---|:---|
-| Identifier | `AI-DOS.SYSTEM.EXECUTIONSEQUENCE` |
-| Title | Execution Sequence |
-| Version | `2.0.0` |
-| Status | Active |
-| Classification | AI-DOS System Layer |
-| Document Type | System Procedure |
+| Identifier | `AI-DOS.SYSTEM.EXECUTION-SEQUENCE` |
+| Version | `3.0.0-draft` |
+| Status | Draft |
+| Classification | System Layer Component Contract |
 | Owner | AI-DOS System Layer |
+| Review Authority | Framework Governance |
 | Approval Authority | Human Governance |
-| Last Updated | 2026-07-13 |
-| Scope | bounded AI-DOS capability execution preparation. |
-| Out of Scope | Target operation design, target-owned management models, Runtime implementation, Engine implementation, command definitions, workflow definitions, template definitions, certification, and implementation changes. |
-| Normative Authority | Human Governance; AI-DOS System Layer documents. |
-| Dependencies | `docs/AI/System/README.md`, `docs/AI/System/TargetRepositoryResolution.md`, `docs/AI/System/BootSequence.md`, `docs/AI/System/ContextAssembly.md`; generic Target Context supplied by invocation. |
-| Inputs | Invocation Context; Resolved Target Context; Target Objectives; Target Constraints; Target Authority Inputs; Target Execution Boundaries; Target Validation Requirements. |
-| Outputs | System Layer handoff evidence; authority or blocker findings; prepared execution boundary. |
-| Related Specifications | `docs/AI/System/README.md`, `docs/AI/System/TargetRepositoryResolution.md`, `docs/AI/System/BootSequence.md`, `docs/AI/System/ContextAssembly.md`, `docs/AI/System/AuthorityModel.md`, `docs/AI/System/SourceOfTruth.md`, `docs/AI/System/DecisionModel.md`, `docs/AI/System/SystemLayerFreeze.md`. |
-
----
+| Parent Contract | `docs/AI/System/SystemLayer.md` |
+| Scope | Preparation and handoff of one authorized Execution Contract. |
+| Inputs | Valid `PROCEED` Decision Result; provider capability declaration; execution and validation boundaries. |
+| Outputs | Execution Contract or safe-stop result; Operational Core handoff evidence. |
 
 ## 1. Purpose
 
-Execution Sequence hands prepared work to the Operational Core. It is part of the AI-DOS startup path and remains independent of any target-owned management, sequencing, or status model.
+Execution Sequence converts one valid `PROCEED` decision into a bounded Execution Contract and hands it to the Operational Core and selected Execution Provider.
 
-This document describes how AI-DOS starts and prepares capability execution. It does not prescribe how any target operates.
+It does not execute the mutation itself, select a different work unit, broaden scope, approve completion, or update Target state.
 
-## 2. Canonical System Flow
+## 2. Execution Contract
 
-```text
-Repository Entry
-        ↓
-Invocation Context
-        ↓
-Target Repository Resolution
-        ↓
-Resolved Target Context
-        ↓
-Context Assembly
-        ↓
-Authority Resolution
-        ↓
-Decision Model
-        ↓
-Execution Sequence
-        ↓
-Operational Core
-```
+A valid contract contains:
 
-| Step | System Meaning |
-|:---|:---|
-| Repository Entry | The entry point that hands control to AI-DOS startup rules. |
-| Invocation Context | The explicit request, scope, constraints, and supplied target inputs. |
-| Target Repository Resolution | The procedure that identifies the active Target Repository and creates Resolved Target Context. |
-| Resolved Target Context | The normalized target-supplied context accepted by AI-DOS. |
-| Context Assembly | The procedure that assembles temporary execution context from accepted inputs. |
-| Authority Resolution | The procedure that orders applicable authority inputs and detects conflicts. |
-| Decision Model | The procedure that chooses the safe next decision. |
-| Execution Sequence | The procedure that prepares bounded capability execution. |
-| Operational Core | The downstream AI-DOS capability area receiving prepared work. |
+- exact objective and authorized action;
+- Target Repository and affected artifact boundary;
+- applicable authority trace;
+- selected provider and required capability;
+- allowed and prohibited mutations;
+- validation requirements;
+- evidence requirements;
+- stop and rollback conditions;
+- completion condition.
 
-## 3. Accepted Context Model
-
-AI-DOS accepts only the following target concepts in the System Layer:
-
-| Concept | Meaning |
-|:---|:---|
-| Invocation Context | The explicit invocation request and supplied work boundary. |
-| Resolved Target Context | The normalized target context produced by Target Repository Resolution. |
-| Applicable Target Resources | Target-supplied resources needed for the authorized work. |
-| Target Objectives | The requested outcomes within the invocation. |
-| Target Constraints | Limits, exclusions, safety rules, and environmental restrictions. |
-| Target Authority Inputs | Authority-bearing inputs supplied or identified for the target. |
-| Target Execution Boundaries | File, artifact, scope, and action boundaries for execution. |
-| Target Validation Requirements | Checks or evidence expected for the work. |
-
-No additional target-owned planning, status, sequencing, or management construct is required by this System Layer document.
-
-## 4. Responsibilities
+## 3. Preparation Rules
 
 Execution Sequence shall:
 
-1. Preserve AI-DOS as a reusable provider.
-2. Consume only `Invocation Context, Resolved Target Context, Applicable Target Resources, Target Objectives, Target Constraints, Target Authority Inputs, Target Execution Boundaries, and Target Validation Requirements`.
-3. Treat missing required input as a blocker.
-4. Keep target-owned operating models outside the System Layer.
-5. Produce clear handoff evidence for the next System Layer procedure.
+1. accept only a valid `PROCEED` Decision Result;
+2. verify provider capability separately from provider availability;
+3. preserve the exact authorized scope;
+4. reject implicit mutation authority derived from continuation intent, installation, registry presence, or completion;
+5. define validation before handoff;
+6. produce a traceable handoff without assuming successful execution.
 
-## 5. Procedure
+## 4. Non-Ownership
 
-| Order | Action | Output |
-|:---|:---|:---|
-| 1 | Confirm the current step in the canonical flow. | Flow position known. |
-| 2 | Read only applicable System Layer inputs and accepted Target Context. | Input set known. |
-| 3 | Validate that required target inputs are present and bounded. | Context readiness or blocker. |
-| 4 | Identify authority conflicts or missing validation requirements. | Conflict report or cleared handoff. |
-| 5 | Hand off to the next canonical System Layer step. | Prepared System Layer output. |
+Execution Sequence does not own work selection, Target planning, authority resolution, provider implementation, Runtime or Engine outcomes, validation verdicts, certification, release, ProjectStatus updates, or Human Governance approval.
 
-## 6. Boundaries
+## 5. Safe Stop
 
-This document must not require, infer, update, or depend on target-owned management artifacts. It must remain valid when a target supplies only the accepted context model and no other operating structure.
+Stop when the decision is not `PROCEED`, the provider capability is missing or incompatible, mutation scope is ambiguous, validation cannot be performed, integrity is uncertain, or a protected boundary lacks explicit authorization.
 
-## 7. Blockers
+## 6. Handoff
 
-Report a blocker when:
+```text
+Valid PROCEED Decision Result
+    ↓
+Execution Contract
+    ↓
+Operational Core
+    ↓
+Selected Execution Provider
+    ↓
+Validation and Evidence
+```
 
-- Invocation Context is absent or ambiguous.
-- Resolved Target Context is unavailable when required.
-- Target Authority Inputs conflict.
-- Target Execution Boundaries are missing for requested changes.
-- Target Validation Requirements are required but unavailable.
+ProjectStateUpdater may be considered only after execution and evidence, and only when the exact Target-state transition is explicitly authorized.
 
-## 8. Validation Checklist
+## 7. Validation
 
-| Check | Required Result |
-|:---|:---|
-| Canonical flow preserved | Yes |
-| Accepted context model only | Yes |
-| Target-owned management models required | No |
-| Runtime or Engine implementation introduced | No |
-| System Layer handoff clear | Yes |
-
-## 9. Handoff
-
-The output of this document is a bounded System Layer handoff to the next canonical step. The handoff contains only the accepted context model, authority findings, blockers, validation expectations, and execution boundary evidence.
+- one bounded contract produced;
+- provider capability verified;
+- allowed and prohibited mutations explicit;
+- validation and evidence defined before execution;
+- no automatic state, approval, certification, promotion, or release transition.
