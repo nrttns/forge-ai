@@ -8,7 +8,7 @@
 |:---|:---|
 | Identifier | `FORGE-AI.TARGET.PROJECT-STATUS` |
 | Title | Forge AI Operational State Model |
-| Version | `5.10.0-draft` |
+| Version | `5.11.0-draft` |
 | Status | Live Operational State |
 | Classification | Target Project Operational State |
 | Document Type | ProjectStatus |
@@ -54,18 +54,18 @@ AI-DOS owns reusable product truth and reusable capability behavior.
 | Field | Current State |
 |:---|:---|
 | Current Phase | Distribution v1 Local CLI Active |
-| Current Capability | D2 Local CLI Package — Work Unit 1 Accepted |
+| Current Capability | D2 Local CLI Package — Work Units 1 and 2 Accepted |
 | Current Autonomy Level | Level 0 proven; Level 1 operationally demonstrated; Level 3 pilot execution passed twice; maturity advancement remains pending explicit Human Governance maturity acceptance |
 | Current Program | AI-DOS Distribution-Oriented Development Program |
 | Current Execution Step | D2 — Local CLI Package |
 | Target Repository | Forge AI |
 | Operational Readiness | Passed |
-| Readiness Verdict | `D2 WORK UNIT 1 ACCEPTED — D2 REMAINS ACTIVE` |
+| Readiness Verdict | `D2 WORK UNITS 1 AND 2 ACCEPTED — D2 REMAINS ACTIVE` |
 | Pilot Blockers | None |
 | Architecture State | Stable; protected from speculative redesign |
 | Governing Principle | Evidence Before Refactor |
 
-Human Governance accepted the first bounded D2 Local CLI work unit on 2026-07-16 after reviewing the merged implementation and validation evidence in PR #214. The accepted unit loads and validates a Target Repository's root `AGENTS.md` contract through the local CLI. This acceptance does not complete D2. It authorizes selection and execution of exactly one next bounded D2 work unit while MCP, hosted-provider, Axis Suite, feedback transport, D3 and later work remain inactive.
+Human Governance accepted the second bounded D2 Local CLI work unit on 2026-07-16 after reviewing the merged implementation and validation evidence in PR #218. The accepted unit exposes Target-contract validation through the single bounded `validate --target <path>` command with deterministic text and JSON results. This acceptance does not complete D2. It authorizes selection and execution of exactly one next bounded D2 work unit while MCP, hosted-provider, Axis Suite, feedback transport, D3 and later work remain inactive.
 
 ---
 
@@ -80,12 +80,12 @@ Exactly one task is active.
 | Task Type | Human Governance approval-state transition; bounded D2 work selection pending |
 | Objective | Select and execute exactly one next bounded D2 Local CLI package work unit that advances the remaining D2 evidence requirements without private repository access or mandatory network connection. |
 | Success Definition | Exactly one next D2 work unit is selected from authoritative state, executed within scope, validated, and evidenced without claiming D2 completion or activating D3 or later distribution work. |
-| Failure Definition | Work modifies approved D1 architecture unnecessarily, mutates unrelated planning without authorization, executes more than one next work unit, repeats the accepted PR #214 unit without need, or activates MCP, hosted-provider, Axis Suite, feedback transport, D3, or later distribution work. |
+| Failure Definition | Work modifies approved D1 architecture unnecessarily, mutates unrelated planning without authorization, executes more than one next work unit, repeats accepted PR #214 or PR #218 scope without need, or activates MCP, hosted-provider, Axis Suite, feedback transport, D3, or later distribution work. |
 | Scope Expansion | Prohibited |
 | Concurrent or Additional Work Unit | Prohibited |
 | Architecture Redesign | Prohibited unless the selected D2 work unit proves a blocking architecture defect and Human Governance separately authorizes correction |
 | Repository-Wide Alignment | Prohibited |
-| ProjectStatus Update | Authorized only for recording Human Governance acceptance of PR #214 and activating selection of one next bounded D2 work unit |
+| ProjectStatus Update | Authorized only for recording Human Governance acceptance of PR #218 and activating selection of one next bounded D2 work unit |
 
 ---
 
@@ -94,7 +94,7 @@ Exactly one task is active.
 ### 4.1 Current Objective
 
 ```text
-D2 WORK UNIT 1 ACCEPTED — SELECT ONE NEXT BOUNDED D2 WORK UNIT
+D2 WORK UNITS 1 AND 2 ACCEPTED — SELECT ONE NEXT BOUNDED D2 WORK UNIT
 ```
 
 ### 4.2 Current Active Work
@@ -115,15 +115,21 @@ The exactly one authorized next action is stated in Section 17.
 
 ### 4.5 Completion Criteria
 
-The first bounded D2 work unit is complete and accepted because PR #214:
+The first bounded D2 work unit is complete and accepted through PR #214:
 
-- loads the root `AGENTS.md` contract from the explicit Target path;
-- rejects missing paths, non-directory Targets, missing contracts, non-file contracts, and empty contracts;
-- exposes the resolved Target path and Target contract path in CLI status output;
-- passed typecheck, build, compiled test execution, and built CLI JSON validation;
-- preserved protected planning, architecture, governance, Mission, and live-state files.
+- explicit Target path resolution;
+- root `AGENTS.md` Target contract loading and structural validation;
+- deterministic Target and contract path reporting.
 
-D2 remains active because its required evidence also includes local installation, bounded command behavior, local execution, validation and evidence output, local runtime-data behavior, offline operation, uninstall, and rollback. The next execution must select exactly one independently verifiable remaining D2 work unit before editing.
+The second bounded D2 work unit is complete and accepted through PR #218:
+
+- one explicit `validate --target <path>` command;
+- rejection of missing Target input, multiple commands, unsupported commands, and invalid Target contracts;
+- deterministic text and JSON validation results;
+- preserved boot and implicit Target-status compatibility;
+- passing typecheck, build, compiled test execution, built CLI validation, and package dry-run evidence.
+
+D2 remains active because required evidence also includes local installation, local execution, local runtime-data behavior, offline operation, uninstall, and rollback. The next execution must select exactly one independently verifiable remaining D2 work unit before editing.
 
 ---
 
@@ -165,7 +171,7 @@ The current task may:
 - read declared Target Repository resources;
 - resolve current operational context;
 - inspect D2-relevant implementation and validation files;
-- compare remaining D2 evidence requirements against implemented behavior;
+- compare remaining D2 evidence requirements against accepted behavior;
 - select exactly one next bounded executable D2 work unit;
 - modify only files required by that work unit;
 - run applicable validation;
@@ -179,7 +185,7 @@ The current task may not:
 - create a new Standard, Meta Model, Blueprint, RFC family, Governance model, Runtime family, Engine family, Agent family, Command family, Workflow family, Template family, Knowledge model, Memory model, Validation model, Review model, Certification model, Testing model, or Operational Core model;
 - perform repository-wide alignment;
 - fix unrelated findings;
-- repeat the accepted PR #214 work unit without a proven need;
+- repeat accepted PR #214 or PR #218 scope without a proven need;
 - claim D2 completion;
 - activate or begin MCP, hosted-provider, Axis Suite, feedback transport, D3, or later work;
 - execute more than one next D2 work unit;
@@ -315,8 +321,9 @@ Human Governance must evaluate the evidence before accepting any maturity claim.
 | Planning Realignment | Accepted | Human Governance accepted the AI-DOS distribution-oriented DevelopmentPhases and Roadmap realignment on 2026-07-15. |
 | D1 Distribution Foundation Architecture | Accepted | Human Governance accepted D1 Distribution Foundation Architecture as complete on 2026-07-15; approved architecture remains unchanged in `docs/AI/Architecture/RFC/A.6-AI-DOS-Distribution-Foundation-RFC.md`. |
 | D2 Local CLI Activation | Active | D2 remains the only active distribution capability. |
-| D2 Work Unit 1 | Accepted | Human Governance accepted PR #214 on 2026-07-16. Target path handling and root Target contract loading/validation are implemented and evidenced. |
-| D2 Remaining Evidence | Incomplete | Local installation, bounded command behavior, local execution, validation/evidence output, local runtime-data behavior, offline operation, uninstall, and rollback remain subject to bounded work selection and validation. |
+| D2 Work Unit 1 | Accepted | Human Governance accepted PR #214 on 2026-07-16. Target path handling and root Target-contract loading/validation are implemented and evidenced. |
+| D2 Work Unit 2 | Accepted | Human Governance accepted PR #218 on 2026-07-16. Bounded `validate` command behavior and deterministic text/JSON validation results are implemented and evidenced. |
+| D2 Remaining Evidence | Incomplete | Local installation, local execution, local runtime-data behavior, offline operation, uninstall, and rollback remain subject to bounded work selection and validation. |
 | External Target evidence | Not present | Axis Suite and external Target preparation/execution have not started and are not authorized by the active D2 Local CLI package state. |
 
 ---
@@ -328,7 +335,7 @@ Distribution-Oriented Development Program
 │
 ├── D0  Private/Public Boundary                  ACCEPTED PLANNING DIRECTION
 ├── D1  Distribution Foundation Architecture     ACCEPTED
-├── D2  Local CLI Package                        ACTIVE — WORK UNIT 1 ACCEPTED
+├── D2  Local CLI Package                        ACTIVE — WORK UNITS 1 AND 2 ACCEPTED
 ├── D3  Public System Interface                  NOT ACTIVATED
 ├── D4  Codex CLI Adapter                        NOT ACTIVATED
 ├── D5  Local MCP Provider                       NOT ACTIVATED
@@ -340,18 +347,18 @@ Distribution-Oriented Development Program
 └── D11 Multi-Target AI Highway                  NOT ACTIVATED
 ```
 
-Human Governance accepted PR #214 as the first bounded D2 work unit on 2026-07-16. D2 remains active and incomplete.
+Human Governance accepted PR #214 and PR #218 as the first two bounded D2 work units. D2 remains active and incomplete.
 
 Current State
 
 ```text
-D2 WORK UNIT 1 ACCEPTED — D2 REMAINS ACTIVE
+D2 WORK UNITS 1 AND 2 ACCEPTED — D2 REMAINS ACTIVE
 ```
 
 Accepted D2 evidence:
 
 ```text
-Explicit Target path handling and root Target contract loading/validation.
+Explicit Target path handling, root Target-contract loading/validation, and one bounded validate command with text and JSON results.
 ```
 
 Authorized activation:
@@ -381,7 +388,7 @@ None identified for selecting one next bounded D2 Local CLI package work unit.
 | Risk | Current Control |
 |:---|:---|
 | D2 work expands beyond one next bounded work unit | Current state authorizes exactly one next work unit. |
-| Accepted PR #214 scope is repeated or reinterpreted | PR #214 evidence is recorded as accepted and must be treated as completed. |
+| Accepted PR #214 or PR #218 scope is repeated or reinterpreted | Both accepted work units are recorded as completed and must not be repeated without a proven need. |
 | Existing active task is replaced by a newly invented task | ProjectStatus remains the live operational-state authority. |
 | Scope expands after execution begins | The selected work unit must be declared before editing. |
 | D2 is falsely reported complete | D2 completion requires the full Roadmap and DevelopmentPhases evidence set plus Human Governance validation. |
@@ -400,7 +407,7 @@ ProjectStatus may be modified only when:
 3. the active task is a dedicated ProjectStatus task; or
 4. the task instruction directly authorizes a specific operational-state transition.
 
-Human Governance approval intent on 2026-07-16 uniquely accepted PR #214 as the first bounded D2 work unit and authorized selection and execution of exactly one next bounded D2 work unit. This authorization does not approve D2 as complete and does not activate D3 or later work.
+Human Governance approval intent on 2026-07-16 uniquely accepted PR #218 as the second bounded D2 work unit and authorized selection and execution of exactly one next bounded D2 work unit. This authorization does not approve D2 as complete and does not activate D3 or later work.
 
 When update authority and uniquely derivable Human Governance approval intent are absent, the completion report must provide:
 
@@ -446,7 +453,7 @@ D2 NEXT WORK UNIT FAILED — VALIDATION FAILED
 SELECT AND EXECUTE EXACTLY ONE NEXT BOUNDED D2 LOCAL CLI PACKAGE WORK UNIT
 ```
 
-The selected unit must advance one remaining D2 evidence requirement and must not repeat the accepted PR #214 scope without a proven need. D2 completion, MCP, hosted-provider, Axis Suite, feedback transport, D3 and later distribution work, and more than one next D2 work unit remain unauthorized.
+The selected unit must advance one remaining D2 evidence requirement and must not repeat accepted PR #214 or PR #218 scope without a proven need. D2 completion, MCP, hosted-provider, Axis Suite, feedback transport, D3 and later distribution work, and more than one next D2 work unit remain unauthorized.
 
 ---
 
@@ -486,3 +493,4 @@ ProjectStatus does not:
 | `5.8.0-draft` | 2026-07-15 | Recorded Human Governance acceptance of D1 Distribution Foundation Architecture as complete, aligned the operational state with the approved D1 outcome, preserved the approved architecture unchanged, and kept D2 implementation and all later distribution steps inactive. |
 | `5.9.0-draft` | 2026-07-15 | Recorded uniquely derivable Human Governance approval intent for the D1-to-D2 operational-state transition, activated D2 Local CLI package work selection, and kept MCP, hosted-provider, Axis Suite, feedback transport, D3 and later work inactive. |
 | `5.10.0-draft` | 2026-07-16 | Recorded Human Governance acceptance of PR #214 as the first bounded D2 work unit, preserved D2 as active and incomplete, authorized exactly one next bounded D2 work unit, and kept D3 and later capabilities inactive. |
+| `5.11.0-draft` | 2026-07-16 | Recorded Human Governance acceptance of PR #218 as the second bounded D2 work unit, preserved D2 as active and incomplete, authorized exactly one next bounded D2 work unit, and kept D3 and later capabilities inactive. |
