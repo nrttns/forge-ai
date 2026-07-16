@@ -220,12 +220,14 @@ For prerequisites, local installation, validation commands, CLI usage, governed 
 
 ---
 
-# Publication and Use
+# Open Source License
 
-This repository is being prepared for public visibility as the Forge AI self-hosting Target Project.
+Forge AI is open-source software licensed under the [Apache License 2.0](LICENSE).
 
-Public availability does not make Forge AI or AI-DOS open source and does not grant permission to use, copy, modify, redistribute, sublicense, or commercialize repository content. The package is intentionally marked `UNLICENSED` until Human Governance adopts an explicit license.
+Unless a file states otherwise, the license applies to the source code, documentation, configuration, and other repository content. Copyright and attribution information is recorded in [NOTICE](NOTICE).
 
-Forge AI Target Project truth and AI-DOS product truth remain separate even when they are stored in the same development repository. Public visibility does not create a runtime, build, package, workspace, submodule, or release dependency between independently distributed repositories.
+The package remains marked `"private": true` to prevent accidental npm publication. This packaging safeguard does not limit the Apache-2.0 license grant.
 
-Before reporting a vulnerability, read [SECURITY.md](SECURITY.md). External code contributions are not accepted during the current public-preview stage; see [CONTRIBUTING.md](CONTRIBUTING.md). Publication readiness and the remaining visibility gate are recorded in [PUBLIC_RELEASE_READINESS.md](PUBLIC_RELEASE_READINESS.md).
+Forge AI Target Project truth and AI-DOS product truth remain separate even when they are stored in the same development repository. Open-source availability does not create a runtime, build, package, workspace, submodule, or release dependency between independently distributed repositories.
+
+Before reporting a vulnerability, read [SECURITY.md](SECURITY.md). External contributions are not currently accepted; see [CONTRIBUTING.md](CONTRIBUTING.md). Publication readiness and the remaining visibility gate are recorded in [PUBLIC_RELEASE_READINESS.md](PUBLIC_RELEASE_READINESS.md).
