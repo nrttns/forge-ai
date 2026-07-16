@@ -1,125 +1,90 @@
 # Planning Templates
 
----
+This README is the navigation index for `docs/AI/Templates/Planning/`.
 
-## Document Metadata
-
-| Field | Value |
-|:---|:---|
-| Identifier | `AI-DOS-TPL-PLANNING-README` |
-| Title | Planning Templates |
-| Version | `0.2.0-draft` |
-| Status | Draft |
-| Canonical Status | Non-canonical until reviewed, approved, and promoted through Framework Governance |
-| Classification | Template Family Index |
-| Document Type | Directory README |
-| Owner | Framework Architecture Team |
-| Maintainers | Framework Architecture Team |
-| Review Authority | Framework Governance |
-| Approval Authority | Human Governance |
-| Created | 2026-07-10 |
-| Last Updated | 2026-07-10 |
-| Lifecycle Phase | Draft |
-| Traceability ID | `AI-DOS.TEMPLATES.PLANNING.README` |
-| Scope | Index and usage guide for theAI-DOS Planning template family. |
-| Out of Scope | Planning logic implementation, roadmap execution, phase advancement, stage transition execution, automated planning, certification decisions, registry updates, runtime behavior, or ProjectStatus updates. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI/GOVERNANCE.md`; `docs/AI/FrameworkGovernance.md` |
-| Normative References | `docs/AI/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`; `docs/AI/Templates/README.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Roadmap/AI-DOS-Program-Architecture-Master-Roadmap-v4.md`; `docs/AI/Architecture/Constitution/A.1-Constitution.md`; `docs/AI/Architecture/RFC/Runtime/A.3-Runtime-Architecture-RFC.md`; `docs/AI/Architecture/RFC/EnginePlatform/A.4-Engine-Architecture-RFC.md` |
-| Dependencies | STD-010 metadata schema; TPL-000 template governance; DevelopmentPhases roadmap; ProjectStatus operational state; Master Roadmap; applicable planning, runtime, architecture, standards, and governance authorities |
-| Consumes | Existing Planning, Governance, DevelopmentPhases, Runtime, Architecture, Standards, and roadmap authorities without redefining them |
-| Produces | Planning template family index and usage guide |
-| Related Specifications | Vision Template; Roadmap Template; Phase Template; Stage Template; Historical Capability Template;AI-DOS template library |
-| Supersedes | None |
-| Superseded By | None |
-| Promotion Requirements | Planning template family review, README alignment validation, STD-010 validation, TPL-000 validation, authority-reference validation, and explicit Human Governance approval |
-| Certification Status | Not certified |
-
----
-
-## 1. Purpose
-
-The Planning template family defines reusable output structures for planning artifacts inAI-DOS and AI Framework adopters.
-
-Planning artifacts define why work exists, where it belongs, what it may change, what it must not change, how it is validated, and when it can be reviewed for advancement.
-
-Planning templates do not implement planning logic, execute roadmap work, advance phases, transition stages, certify completion, create governance authority, update registries, alter runtime behavior, or update ProjectStatus.
-
-## 2. Authority Boundary
-
-Planning templates consume existing Planning, Governance, DevelopmentPhases, Runtime, Architecture, Standards, and applicable roadmap authorities without redefining them.
-
-Use these templates as document structures only. Produced documents must still receive the required review and approval from the appropriate authority before any roadmap, phase, stage, certification, registry, runtime, or ProjectStatus action occurs.
-
-## 3. Planning Hierarchy
+The canonical Template Library contract is:
 
 ```text
-Vision
-    ↓
-Roadmap
-    ↓
-Phase
-    ↓
-Stage
-    ↓
-Historical Capability
-    ↓
-Generated Task
+docs/AI/Templates/TemplateLibrary.md
 ```
 
-Lower levels refine higher levels. Lower levels must not redefine higher authority, duplicate roadmap ownership, change governance ownership, certify themselves, or update ProjectStatus.
+This README does not define Target planning authority, planning methodology, lifecycle order, roadmap ownership, operational state, task selection, execution authorization, review, certification, approval, promotion, or Target-state mutation.
 
-## 4. Template Map
+## Start Here
 
-| Template | Purpose | Produced Document Type | RFC Template Standard Applies |
-|:---|:---|:---|:---|
-| `VisionTemplate.md` | Defines long-range direction, mission, principles, and strategic outcomes. | Vision Specification | No |
-| `RoadmapTemplate.md` | Converts vision into sequenced phases, milestones, dependencies, and validation strategy. | Roadmap Specification | No |
-| `PhaseTemplate.md` | Defines a major architectural capability, stage roadmap, boundaries, dependencies, and validation expectations. | Phase Specification | No |
-| `StageTemplate.md` | Defines a measurable milestone within a phase. | Stage Specification | No |
-| `HistoricalCapabilityTemplate.md` | Defines immutable implementation history under a stage. | Historical Capability Specification | No |
+Read the library contract and baseline standard before using this family:
 
-No RFC-style Planning template exists in this family; the RFC template standard is therefore not applied.
+```text
+../TemplateLibrary.md
+    ↓
+../Standards/TPL-000-Template-Standard.md
+    ↓
+Planning/README.md
+    ↓
+selected Planning template
+```
 
-## 5. Usage Guide
+## Family Purpose
 
-1. Select the template matching the planning level.
-2. Resolve all placeholders in the produced document before treating the document as complete.
-3. Preserve the authority chain declared in the produced document metadata.
-4. Link to ProjectStatus or DevelopmentPhases when live state is needed; do not duplicate or update live state from a template.
-5. Validate scope, ownership, dependencies, roadmap order, and frozen-area boundaries before review.
-6. Route certification, roadmap advancement, phase advancement, stage transition, and ProjectStatus changes to the applicable Human Governance process.
+The Planning family provides reusable document structures for planning artifacts supplied or owned by a Target, product program, project, or other bounded authority domain.
 
-## 6. Naming Rule
+A Planning template is an authoring structure only. It does not create planning authority, establish a mandatory planning hierarchy, select work, advance lifecycle state, authorize execution, approve an artifact, certify completion, or mutate Target-owned truth.
 
-Use `HistoricalCapabilityTemplate.md` instead of `SprintTemplate.md`.
+## Template Index
 
-Sprint is a delivery cadence term.AI-DOS uses Historical Capability as the immutable implementation history unit.
+| Template | Intended output |
+|:---|:---|
+| `VisionTemplate.md` | Long-range direction, mission, principles, outcomes, and boundaries. |
+| `RoadmapTemplate.md` | A bounded sequencing and milestone structure owned by the produced document's declared authority. |
+| `PhaseTemplate.md` | A major planning boundary when the consuming Target uses a phase model. |
+| `StageTemplate.md` | A bounded milestone when the consuming Target uses a stage model. |
+| `HistoricalCapabilityTemplate.md` | Historical capability or implementation record when explicitly required by the consuming authority. |
 
-## 7. Planning Invariants
+These templates are peers. Their filenames do not establish a mandatory `Vision → Roadmap → Phase → Stage → Historical Capability` authority chain.
 
-- Vision defines direction.
-- Roadmap sequences direction.
-- Phase owns architectural capability planning within higher authority.
-- Stage owns milestone planning within a phase.
-- Historical Capability records implementation history under a stage.
-- Task is generated execution scope.
-- Lower levels refine higher levels.
-- Lower levels must not redefine higher authority.
-- Historical identifiers must not be renumbered after certification.
-- Templates must not update ProjectStatus.
+## Selection Rules
 
-## 8. Validation Requirements
+1. Use a Planning template only when the invocation or applicable Target authority explicitly requires a planning artifact.
+2. Select the narrowest template matching the intended output.
+3. Do not infer a Roadmap, DevelopmentPhases, ProjectStatus, phase, stage, capability, sprint, or generated-task model when the consuming Target does not provide one.
+4. Treat Target-owned planning and state artifacts as explicit inputs, not AI-DOS defaults.
+5. Resolve all placeholders before treating a produced artifact as complete.
+6. Validate the produced artifact against TPL-000, STD-010 when applicable, and the authority supplied for that artifact.
 
-Before this family is treated as review-ready, validate:
+## Authority Boundary
 
-- scoped-only file changes;
-- STD-010 metadata coverage;
-- TPL-000 placeholder alignment;
-- RFC template standard absence because no RFC-style Planning template exists;
-- placeholder manifest correctness;
-- stale authority references;
-- unresolved placeholder handling;
-- empty table cells;
-- README alignment with family contents;
-- markdown diff integrity;
-- no duplicate planning authority, governance ownership, roadmap ownership, certification authority, registry authority, runtime authority, or ProjectStatus authority.
+The Planning family owns reusable document structure only.
+
+It does not own:
+
+- Target vision, roadmap, planning, state, lifecycle, source, evidence, or protected areas;
+- AI-DOS architecture, Runtime, Engine, System Layer, Operational Core, Commands, or Workflows;
+- task discovery, work selection, workflow routing, execution contracts, provider dispatch, or mutation;
+- review, certification, approval, promotion, canonicalization, or release authority.
+
+A produced artifact gains authority only through its declared owner, provenance, lifecycle, applicable governance, and explicit approval or promotion route.
+
+## Target Independence
+
+No Forge AI path, ProjectStatus path, DevelopmentPhases path, Roadmap path, phase model, stage model, capability model, or self-hosting convention is required by this family.
+
+Target-owned inputs may be referenced only when explicitly supplied for the bounded produced artifact. Forge AI examples must remain examples and must not become reusable AI-DOS defaults.
+
+## Safe Stop
+
+Stop template use when any required purpose, owner, authority, provenance, lifecycle, Target planning source, protected boundary, or validation requirement is missing or ambiguous.
+
+Do not invent planning structure to make a template applicable.
+
+## Related Navigation
+
+- Template Library navigation: `docs/AI/Templates/README.md`
+- Template Library contract: `docs/AI/Templates/TemplateLibrary.md`
+- Baseline template standard: `docs/AI/Templates/Standards/TPL-000-Template-Standard.md`
+- Product navigation: `docs/AI/README.md`
+- Governance navigation: `docs/AI/GOVERNANCE.md`
+- Governance decision policy: `docs/AI/FrameworkGovernance.md`
+
+## Current Alignment Status
+
+This README is aligned as the Planning family navigation and boundary index. The five template bodies remain subject to a separate bounded component-normalization review before the family can be declared fully aligned.
