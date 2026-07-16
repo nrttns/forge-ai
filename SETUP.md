@@ -171,8 +171,10 @@ npm run build
 
 The current CLI accepts only `--target <path>` and `--json`. Remove any other option.
 
-## Public-Preview Boundaries
+## License and Public-Preview Boundaries
 
-The repository is `UNLICENSED`. Public visibility does not grant permission to use, copy, modify, redistribute, sublicense, or commercialize its contents.
+Forge AI is licensed under the [Apache License 2.0](LICENSE). Copyright and attribution information is recorded in [NOTICE](NOTICE).
+
+The package remains marked `"private": true` only to prevent accidental npm publication. It does not change the repository's open-source license.
 
 External pull requests are not currently accepted. See [CONTRIBUTING.md](CONTRIBUTING.md). Report vulnerabilities privately as described in [SECURITY.md](SECURITY.md). Publication status and remaining administrative checks are tracked in [PUBLIC_RELEASE_READINESS.md](PUBLIC_RELEASE_READINESS.md).
