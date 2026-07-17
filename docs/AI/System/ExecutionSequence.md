@@ -5,7 +5,7 @@
 | Field | Value |
 |:---|:---|
 | Identifier | `AI-DOS.SYSTEM.EXECUTION-SEQUENCE` |
-| Version | `3.0.0-draft` |
+| Version | `3.0.1-draft` |
 | Status | Draft |
 | Classification | System Layer Component Contract |
 | Owner | AI-DOS System Layer |
@@ -34,7 +34,8 @@ A valid contract contains:
 - validation requirements;
 - evidence requirements;
 - stop and rollback conditions;
-- completion condition.
+- completion condition;
+- source-control continuation target when the authorized work corrects review findings for an existing open pull request.
 
 ## 3. Preparation Rules
 
@@ -43,9 +44,10 @@ Execution Sequence shall:
 1. accept only a valid `PROCEED` Decision Result;
 2. verify provider capability separately from provider availability;
 3. preserve the exact authorized scope;
-4. reject implicit mutation authority derived from continuation intent, installation, registry presence, or completion;
-5. define validation before handoff;
-6. produce a traceable handoff without assuming successful execution.
+4. preserve the existing pull request head branch as the canonical continuation target for review-finding corrections unless Human Governance explicitly authorizes a replacement pull request;
+5. reject implicit mutation authority derived from continuation intent, installation, registry presence, or completion;
+6. define validation before handoff;
+7. produce a traceable handoff without assuming successful execution.
 
 ## 4. Non-Ownership
 

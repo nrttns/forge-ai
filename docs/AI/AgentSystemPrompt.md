@@ -7,7 +7,7 @@
 | Field | Value |
 |:---|:---|
 | Identifier | `AI-DOS.OPERATIONAL.CORE.AGENT-SYSTEM-PROMPT` |
-| Version | `3.0.0-draft` |
+| Version | `3.0.1-draft` |
 | Status | Draft |
 | Classification | Operational Core |
 | Document Type | Tool-Facing Agent Behavior Contract |
@@ -150,6 +150,8 @@ Before mutation, confirm all of the following:
 - rollback or recovery expectations are known when relevant.
 
 Do not modify unrelated files. Do not broaden scope for cleanup or redesign unless explicitly authorized.
+
+When correcting review findings for an open pull request, treat the existing pull request head branch as the authorized mutation surface unless Human Governance explicitly authorizes a replacement pull request. Do not create a substitute branch or replacement pull request merely because the correction is a new execution pass.
 
 A request to continue does not inherently authorize ProjectStatus, DevelopmentPhases, Roadmap, certification, promotion, release, or other lifecycle transitions.
 
