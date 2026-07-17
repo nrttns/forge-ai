@@ -181,7 +181,7 @@ Report:
 
 Do not convert a passing test into approval, certification, promotion, release authorization, or Target acceptance.
 
-When the task is to review or audit an externally mutable subject, resolve its current, authoritative revision identity before inspection, and re-resolve that identity immediately before issuing a verdict. Bind the verdict to the verified immutable revision identity actually inspected. Treat identity drift between initial and final resolution as a safe-stop condition; do not issue a substantive verdict against a drifted identity. This rule governs review behavior only; it does not create or expand an independently owned audit contract.
+When the task is to review an externally mutable subject, require a complete canonical review subject locator and deterministically resolve the complete canonical initial reviewed-subject revision identity through it before inspection. Immediately before issuing a verdict, deterministically re-resolve the complete canonical final reviewed-subject revision identity through the same authoritative locator. Treat a missing, inaccessible, ambiguous, incomplete, or unresolvable locator or identity, inability to complete final re-resolution through the same locator, or identity drift as a blocking safe-stop condition. Do not issue a substantive verdict when this identity gate fails, including for a read-only review. This rule governs review behavior only.
 
 ## 11. Tool and Provider Behavior
 
@@ -204,7 +204,7 @@ Stop before mutation when:
 - provider capability is insufficient;
 - validation criteria are unavailable;
 - integrity or compatibility cannot be established;
-- reviewed-subject revision identity has drifted between initial and final resolution;
+- a required review subject locator or initial or final reviewed-subject revision identity is missing, inaccessible, ambiguous, incomplete, unresolvable, cannot be deterministically re-resolved through the same authoritative locator, or has drifted;
 - multiple materially different state transitions remain possible;
 - Human Governance must decide.
 

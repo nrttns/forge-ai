@@ -124,11 +124,12 @@ Verify:
 
 Verify when the reviewed subject is an externally mutable artifact (identified by a review subject locator and revision identity rather than fixed, immutable local content):
 
-- [ ] Initial reviewed-subject revision identity evidence recorded before inspection began
-- [ ] Final reviewed-subject revision identity evidence recorded immediately before verdict issuance
+- [ ] Complete canonical review subject locator recorded, identifying exactly one subject and authoritative resolution path without truncation, inference, or ambiguity
+- [ ] Complete canonical initial reviewed-subject revision identity deterministically resolved through that locator and recorded before inspection began
+- [ ] Complete canonical final reviewed-subject revision identity deterministically re-resolved through the same authoritative locator and recorded immediately before verdict issuance
 - [ ] Initial and final revision identities match
 
-If the initial and final revision identities do not match, return `STALE REVIEW` instead of a Review Verdict below, and do not issue a substantive review verdict. Restart the review against the newly resolved revision identity, or report `STALE REVIEW` as a bounded blocking result.
+If the locator or either identity is missing, inaccessible, ambiguous, incomplete, or unresolvable, or deterministic final re-resolution through the same authoritative locator cannot be completed, stop and return a bounded blocking result instead of a Review Verdict below. If the initial and final revision identities do not match, return `STALE REVIEW` as that bounded blocking result. Do not issue a substantive review verdict when any part of this gate fails, including for a read-only review. Restart only against complete, canonical locator and identity evidence.
 
 ---
 
