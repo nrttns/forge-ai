@@ -1,10 +1,10 @@
 <!--
 Identifier: FORGE-AI.REPOSITORY-ENTRY
 Title: AGENTS.md — Forge AI Repository Entry and Target Contract Discovery File
-Version: 1.0.0
+Version: 1.1.0
 Status: Active
 Owner: Forge AI Target Project Governance
-Updated: 2026-07-11
+Updated: 2026-07-17
 -->
 
 # AGENTS.md — Forge AI Repository Entry
@@ -52,7 +52,15 @@ The root `AGENTS.md` does not define provider internals.
 
 The root `AGENTS.md` does not perform task selection, workflow routing, execution, validation, or state updates.
 
-## 7. File Boundary
+## 7. Canonical Skill Discovery
+
+The single canonical Forge AI governance skill is:
+
+`docs/Projects/ForgeAI/Skills/forge-ai-governance/SKILL.md`
+
+Tool-specific skill adapters — for example under `.agents/skills/` or `.claude/skills/` — exist only to help a specific AI host discover this canonical skill. Adapters are non-authoritative: they must not restate, duplicate, or diverge from it.
+
+## 8. File Boundary
 
 `docs/AI/`
 : contains AI-DOS product truth.
@@ -60,7 +68,7 @@ The root `AGENTS.md` does not perform task selection, workflow routing, executio
 `docs/Projects/ForgeAI/`
 : contains Forge AI Target Project truth.
 
-## 8. Non-Goals
+## 9. Non-Goals
 
 This repository entry file is not:
 
@@ -71,4 +79,5 @@ This repository entry file is not:
 - an AI-DOS internal navigation file;
 - a System Layer procedure;
 - a duplicate Mission document;
-- a duplicate planning document.
+- a duplicate planning document;
+- a duplicate skill authority.
