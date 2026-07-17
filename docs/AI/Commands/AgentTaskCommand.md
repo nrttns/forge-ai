@@ -5,7 +5,7 @@
 | Field | Value |
 |:---|:---|
 | Identifier | `AI-DOS.COMMAND.AGENT-TASK` |
-| Version | `3.0.0-draft` |
+| Version | `3.0.1-draft` |
 | Status | Draft |
 | Classification | Base Execution Command |
 | Owner | AI-DOS Operational Core |
@@ -23,6 +23,7 @@ This command is the base execution contract for task-oriented work. It consumes 
 ## 2. Owns
 
 - Generic command execution safeguards.
+- Consumption and verification of source-control continuation targets declared by the Execution Contract.
 - Verification that the requested action matches the Execution Contract.
 - Provider dispatch preconditions.
 - Result, evidence, and completion-report requirements.
@@ -46,11 +47,14 @@ This command is the base execution contract for task-oriented work. It consumes 
 ## 5. Execution Rules
 
 1. Confirm the Execution Contract identity, scope, owner, allowed actions, forbidden actions, target boundary, validation requirements, and stop conditions.
-2. Select a specialized command when one applies.
-3. Execute only the authorized mutation or read action.
-4. Do not broaden scope from repository proximity, continuation intent, capability availability, or convenience.
-5. Stop when authority, ownership, provider capability, compatibility, integrity, mutation scope, or protected boundaries are ambiguous.
-6. Never mutate Target-owned planning or operational state unless that exact mutation is explicitly authorized by the Execution Contract.
+2. When the Execution Contract supplies an existing pull request head branch as its source-control continuation target, verify and preserve that branch as the command execution surface.
+3. Do not allow a specialized command to substitute another branch or create a replacement pull request for that correction.
+4. Permit a replacement pull request only when Human Governance explicitly authorizes it.
+5. Select a specialized command when one applies.
+6. Execute only the authorized mutation or read action.
+7. Do not broaden scope from repository proximity, continuation intent, capability availability, or convenience.
+8. Stop when authority, ownership, provider capability, compatibility, integrity, mutation scope, or protected boundaries are ambiguous.
+9. Never mutate Target-owned planning or operational state unless that exact mutation is explicitly authorized by the Execution Contract.
 
 ## 6. Outputs
 
