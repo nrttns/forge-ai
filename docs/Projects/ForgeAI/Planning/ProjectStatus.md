@@ -96,19 +96,19 @@ Exactly one task is active.
 ### 4.1 Current Objective
 
 ```text
-D2 WORK UNITS 1 THROUGH 6 ACCEPTED — SELECT ONE NEXT BOUNDED D2 WORK UNIT
+D2 WORK UNITS 1 THROUGH 8 ACCEPTED — AWAIT HUMAN GOVERNANCE D2 COMPLETION DECISION
 ```
 
 ### 4.2 Current Active Work
 
 ```text
-D2 — select and execute exactly one next bounded Local CLI package work unit
+D2 — no new work-unit selection authorized pending explicit Human Governance completion decision
 ```
 
 ### 4.3 Execution Status
 
 ```text
-D2 ACTIVE — NEXT WORK UNIT SELECTION AUTHORIZED
+D2 ACTIVE — COMPLETION DECISION PENDING; NO NEW WORK UNIT AUTHORIZED
 ```
 
 ### 4.4 Authorized Next Action
@@ -215,17 +215,16 @@ Rules:
 
 ## 6. Authorized Scope
 
-The current task may:
+While the active task is the D2 completion-decision hold, the current task may:
 
 - read declared Target Repository resources;
 - resolve current operational context;
 - inspect D2-relevant implementation and validation files;
-- compare remaining D2 evidence requirements against accepted behavior;
-- select exactly one next bounded executable D2 work unit;
-- modify only files required by that work unit;
-- run applicable validation;
-- produce evidence;
+- review the accepted D2 evidence set against Roadmap Stream 3 / Milestone D2 requirements;
+- produce evidence supporting the pending Human Governance completion decision;
 - recommend exactly one next step.
+
+Selecting, executing, or modifying files for a next bounded D2 work unit is not authorized while the active task is the D2 completion-decision hold. That permission resumes only after Human Governance issues an explicit D2 completion decision that identifies a specific remaining D2 evidence requirement.
 
 The current task may not:
 
@@ -478,29 +477,32 @@ as a recommendation only.
 
 ## 16. Final Execution Verdict Model
 
-The next bounded D2 Local CLI package work unit must end with exactly one verdict:
+While the active task is the D2 completion-decision hold, review of the accepted D2 evidence set must end with exactly one verdict:
 
 ```text
-D2 NEXT WORK UNIT READY FOR HUMAN GOVERNANCE REVIEW
+D2 EVIDENCE-SET COMPLETION DECISION READY FOR HUMAN GOVERNANCE
 ```
 
 ```text
-D2 NEXT WORK UNIT BLOCKED
+D2 EVIDENCE-SET COMPLETION DECISION BLOCKED
 ```
 
 ```text
-D2 NEXT WORK UNIT FAILED — VALIDATION FAILED
+D2 EVIDENCE-SET COMPLETION DECISION FAILED — REQUIRED EVIDENCE INCONSISTENT
 ```
 
-`D2 NEXT WORK UNIT READY FOR HUMAN GOVERNANCE REVIEW` requires:
+`D2 EVIDENCE-SET COMPLETION DECISION READY FOR HUMAN GOVERNANCE` requires:
 
 - PR #214 remains recorded as accepted;
-- exactly one next D2 work unit was selected before editing;
-- the unit advances a remaining D2 evidence requirement;
+- work units 1 through 8 remain recorded as accepted with no unresolved inconsistency;
+- the accepted evidence set is compared against Roadmap Stream 3 / Milestone D2 requirements without selecting or executing a new D2 work unit;
 - applicable validation passed or limitations are reported transparently;
+- D2 completion is not declared and no new D2 work unit is authorized by this verdict alone;
 - MCP, hosted-provider, Axis Suite, feedback transport, D3 and later work remain inactive;
 - ProjectStatus was not automatically advanced;
 - protected areas were preserved.
+
+This verdict model governs only the pending completion-decision review. It does not itself approve D2 completion, authorize a new D2 work unit, or activate D3 or later work — those remain separate, explicit Human Governance decisions.
 
 ---
 
