@@ -37,19 +37,102 @@ This component shall:
 
 ### 3.0 Deterministic Declaration Resolution Profile
 
-Target Repository Resolution shall evaluate declaration coherence through the deterministic profile below before applying the category-specific criteria in Sections 3.1 through 3.6. The profile defines recognition and resolution mechanics only; it does not change the required information, blocker conditions, or success evidence for any category.
+Target Repository Resolution shall evaluate declaration coherence through the structural profile below before applying the category-specific criteria in Sections 3.1 through 3.6. The profile defines recognition and result mechanics only; it does not change the required information, blocker conditions, or success evidence for any category.
 
-1. **Boundary-limited input set:** consider only declaration evidence located inside the resolved Target Repository boundary and supplied by the invocation or by Target-owned declaration resources discovered inside that boundary.
-2. **Markdown-compatible recognition:** recognize declarations in Markdown headings, lists, tables, definition lists, fenced text blocks, and inline path references when their text explicitly maps to one of the six existing declaration-coherence categories or to a category-specific synonym already used by the Target's own declaration surface.
-3. **Category assignment:** assign each recognized declaration fragment to exactly one of the six categories in Sections 3.1 through 3.6 based on its explicit label, heading context, table column meaning, or immediately enclosing declaration section. If one fragment appears to satisfy more than one category and the Target does not state a precedence rule, treat the category assignment as ambiguous under Section 3.6.
-4. **Path and resource normalization:** resolve relative locations against the declaration document containing them, then normalize the result against the resolved Target Repository boundary without following the reference outside that boundary. A normalized reference that cannot be located within the boundary is unresolvable under the applicable category.
-5. **Precedence handling:** when multiple declaration fragments address the same category, apply only an explicit Target-owned precedence statement found in the declaration set. Absent that statement, non-equivalent fragments remain ambiguous or conflicting under Section 3.6.
-6. **Completeness check:** for each of Sections 3.1 through 3.5, determine whether the minimum resolvable information is present, accessible, non-empty, and non-conflicting. Do not infer missing information from repository layout, file names, common conventions, Forge AI documents, AI-DOS product defaults, previous runs, or provider memory.
-7. **Resolution output:** produce either category-specific success evidence for every category in Sections 3.1 through 3.5 plus the combined result required by Section 3.6, or one or more blockers identifying the failed category and failed condition. There is no warning-only or best-effort declaration-coherence outcome.
+#### 3.0.1 Exact Profile Marker
 
-This section defines, for the "declaration coherence" duty in Responsibility 2.3, the minimum semantic categories a Target Repository's declarations must resolve for Target Repository Resolution to treat them as coherent.
+A declaration set is recognized only when it contains the exact Markdown heading:
 
-These criteria describe only the semantic information that must be resolvable. A Target Repository may satisfy them through any declaration form it owns, expressed however that Target Repository chooses.
+```markdown
+## AI-DOS Target Declaration Profile
+```
+
+The heading text must match exactly, including capitalization and hyphenation. Text before or after that heading may provide Target-owned context, but it does not satisfy a declaration category unless it appears inside the required structures defined in this profile.
+
+#### 3.0.2 Supported Markdown Structures
+
+Only the following Markdown structures are supported for declaration recognition:
+
+1. the exact profile heading in Section 3.0.1;
+2. exact category headings listed in Section 3.0.3;
+3. pipe tables with an exact header row required by the applicable category;
+4. fenced `text` blocks used only for literal multiline field values inside a table cell reference, when the cell contains an exact local anchor to that fenced block.
+
+Inline declarations are not allowed. Cross-file references are allowed only when a supported table field explicitly contains a repository-relative Markdown file path plus an optional heading anchor inside the resolved Target Repository boundary. Any cross-file target must contain the exact profile heading and supported structures required by this section.
+
+Any attempted declaration outside the supported structures above, including bullets, prose paragraphs, inferred headings, code comments, front matter, HTML comments, YAML, JSON, TOML, XML, or unconstrained text, shall produce an `unsupported-syntax` blocker for the affected category when it is presented as declaration evidence. Unsupported syntax is an existing blocker condition within this resolution profile, not an additional declaration-coherence category.
+
+#### 3.0.3 Exact Category Headings and Required Fields
+
+Each declaration category is recognized only by the exact heading shown below, nested under the exact profile heading. Each category heading must be followed by exactly one pipe table whose header cells exactly match the listed field names in the listed order. Field types are provider-neutral specification types, not implementation-language types.
+
+| Category identifier | Exact heading | Required table fields and types |
+|:---|:---|:---|
+| `target-resources` | `### target-resources` | `resource_id: token`; `location: repository-relative-path`; `purpose: non-empty-text` |
+| `source-scope` | `### source-scope` | `scope_id: token`; `path: repository-relative-path`; `scope: enum(in-scope,out-of-scope)`; `precedence: integer-or-empty` |
+| `protected-areas` | `### protected-areas` | `area_id: token`; `path: repository-relative-path`; `protection: enum(protected,unrestricted)`; `authorization_required: enum(true,false)`; `precedence: integer-or-empty` |
+| `validation` | `### validation` | `validation_id: token`; `requirement: non-empty-text`; `locator: repository-relative-path-or-empty`; `applies_to: repository-relative-path-or-token` |
+| `permissions-execution-authority` | `### permissions-execution-authority` | `authority_id: token`; `action_class: token`; `final_authority: non-empty-text`; `proceed_without_confirmation: enum(true,false)`; `condition: non-empty-text` |
+| `safe-stop-behavior` | `### safe-stop-behavior` | `condition: enum(missing,inaccessible,empty,ambiguous,conflicting,unsupported-syntax,unresolvable-reference,out-of-boundary)`; `behavior: enum(blocker)`; `detail: non-empty-text` |
+
+A `token` is non-empty text containing only ASCII letters, digits, `.`, `_`, or `-`. A `repository-relative-path` is a non-empty relative path that normalizes inside the resolved Target Repository boundary. `integer-or-empty` is either empty or a base-10 integer. `non-empty-text` is text with at least one non-whitespace character.
+
+#### 3.0.4 Recognition Behavior
+
+Target Repository Resolution shall recognize declaration evidence by syntax and structure alone:
+
+1. find the exact profile heading;
+2. find the exact category headings under that profile heading;
+3. validate the exact required table header for each category;
+4. validate every required field value against its declared type;
+5. normalize every path field against the resolved Target Repository boundary;
+6. apply explicit numeric precedence only where the required category table provides a `precedence` field;
+7. return success evidence or blocker evidence using the result shapes in Section 3.0.6.
+
+If the exact profile heading is absent, every category result is a `missing` blocker. If a category heading or required table is absent, that category result is a `missing` blocker. If a required field is empty, malformed, inaccessible, outside the resolved Target Repository boundary, or points to an unresolvable reference, the affected category result is the corresponding blocker. Text that resembles a declaration but does not use the exact structures in this profile is not interpreted and cannot satisfy any category.
+
+#### 3.0.5 Blocker Codes
+
+Permitted blocker codes are limited to the already-authorized failure conditions below:
+
+- `missing`
+- `inaccessible`
+- `empty`
+- `ambiguous`
+- `conflicting`
+- `unsupported-syntax`
+- `unresolvable-reference`
+- `out-of-boundary`
+
+No other blocker code is valid for this profile.
+
+#### 3.0.6 Evidence Shapes
+
+Category-level result shape:
+
+| Field | Type | Required behavior |
+|:---|:---|:---|
+| `category_identifier` | enum(`target-resources`,`source-scope`,`protected-areas`,`validation`,`permissions-execution-authority`,`safe-stop-behavior`) | Identifies exactly one existing declaration-coherence category. |
+| `outcome` | enum(`success`,`blocker`) | Contains no third outcome. |
+| `declaration_locator` | repository-relative-path plus heading anchor | Identifies the exact supported Markdown structure used for the category, or the nearest inspected locator when blocked before category recognition. |
+| `resolved_evidence_entries` | list of records | Required and non-empty when `outcome` is `success`; empty when `outcome` is `blocker`. Each record uses the field names and value types required for the category in Section 3.0.3 after path normalization. |
+| `blocker_code` | enum listed in Section 3.0.5 or empty | Empty when `outcome` is `success`; required when `outcome` is `blocker`. |
+| `blocker_detail` | non-empty-text or empty | Empty when `outcome` is `success`; required when `outcome` is `blocker` and must identify the failed required structure, field, path, or condition. |
+
+Combined result shape:
+
+| Field | Type | Required behavior |
+|:---|:---|:---|
+| `overall_outcome` | enum(`success`,`blocker`) | `success` only when every category result outcome is `success`; otherwise `blocker`. |
+| `category_results` | fixed list of category-level result records | Contains exactly one result for each category identifier listed in Section 3.0.6, with no duplicates and no omissions. |
+| `blocker_count` | integer | Count of category results whose `outcome` is `blocker`. |
+| `summary` | non-empty-text | Deterministic summary of the overall outcome and blocker count. |
+
+Any category blocker makes the combined result a blocker.
+
+#### 3.0.7 Semantic-Inference Prohibition
+
+Unconstrained prose, equivalent wording, inferred headings, repository conventions, provider preference, common project layout, file names, prior runs, and AI-DOS or Forge AI defaults must not satisfy a declaration category. The only recognized declaration evidence is the exact Markdown profile structure defined in Sections 3.0.1 through 3.0.6.
 
 ### 3.1 Target Resource Declarations
 
