@@ -36,7 +36,7 @@ The agent must not select:
 
 ```text
 docs/AI/Commands/AgentAuditCommand.md
-docs/AI/Templates/AuditTemplate.md
+docs/AI/Templates/Reports/Template-Library-Global-Audit.md
 ```
 
 which validate readiness/architecture audits over accepted internal evidence, not the reviewed-subject identity mechanics for an externally mutable subject under active correction.
@@ -57,7 +57,7 @@ docs/AI/System/ExecutionSequence.md
 docs/AI/Commands/AgentTaskCommand.md
 docs/AI/Checklists/AgentReviewChecklist.md
 docs/AI/Architecture/RFC/EngineSpecializations/A.5.7-Review-Engine-RFC.md
-docs/ProjectStatus.md
+docs/Projects/ForgeAI/Planning/ProjectStatus.md
 ```
 
 ---
@@ -129,9 +129,9 @@ Do not advance ProjectStatus or certify from a blocked or STALE REVIEW result
 - Returning `STALE REVIEW` for missing, inaccessible, ambiguous, incomplete, or unresolvable evidence instead of a precise blocker (confusing Case 3 with Case 2).
 - Returning a blocker for genuine identity drift instead of `STALE REVIEW` (confusing Case 2 with Case 3).
 - Carrying forward findings produced against a superseded or unresolved identity.
-- Routing this scenario through `docs/AI/Commands/AgentAuditCommand.md` or `docs/AI/Templates/AuditTemplate.md`.
+- Routing this scenario through `docs/AI/Commands/AgentAuditCommand.md` or `docs/AI/Templates/Reports/Template-Library-Global-Audit.md`.
 - Requiring Git, GitHub, branch, pull-request, or SHA-specific semantics for the gate to function.
-- Advancing `docs/ProjectStatus.md` from any of the four cases.
+- Advancing `docs/Projects/ForgeAI/Planning/ProjectStatus.md` from any of the four cases.
 
 ---
 
@@ -143,4 +143,4 @@ Do not advance ProjectStatus or certify from a blocked or STALE REVIEW result
 - Case 3 produces a precise identity-resolution/provider-capability blocker, distinct from `STALE REVIEW`, and no substantive verdict.
 - Case 4 demonstrates identical safe-stop behavior for a read-only review.
 - No case requires provider-specific (Git/GitHub) semantics to pass.
-- `docs/ProjectStatus.md` is not advanced by any case.
+- `docs/Projects/ForgeAI/Planning/ProjectStatus.md` is not advanced by any case.
