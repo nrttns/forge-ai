@@ -5,7 +5,7 @@
 | Field | Value |
 |:---|:---|
 | Identifier | `AI-DOS.SYSTEM.TARGET-REPOSITORY-RESOLUTION` |
-| Version | `3.1.0-draft` |
+| Version | `3.2.0-draft` |
 | Status | Draft |
 | Classification | System Layer Component Contract |
 | Owner | AI-DOS System Layer |
@@ -33,6 +33,19 @@ This component shall:
 5. return either one unambiguous resolution result or a blocker.
 
 ## 3. Minimum Declaration Coherence Criteria
+
+
+### 3.0 Deterministic Declaration Resolution Profile
+
+Target Repository Resolution shall evaluate declaration coherence through the deterministic profile below before applying the category-specific criteria in Sections 3.1 through 3.6. The profile defines recognition and resolution mechanics only; it does not change the required information, blocker conditions, or success evidence for any category.
+
+1. **Boundary-limited input set:** consider only declaration evidence located inside the resolved Target Repository boundary and supplied by the invocation or by Target-owned declaration resources discovered inside that boundary.
+2. **Markdown-compatible recognition:** recognize declarations in Markdown headings, lists, tables, definition lists, fenced text blocks, and inline path references when their text explicitly maps to one of the six existing declaration-coherence categories or to a category-specific synonym already used by the Target's own declaration surface.
+3. **Category assignment:** assign each recognized declaration fragment to exactly one of the six categories in Sections 3.1 through 3.6 based on its explicit label, heading context, table column meaning, or immediately enclosing declaration section. If one fragment appears to satisfy more than one category and the Target does not state a precedence rule, treat the category assignment as ambiguous under Section 3.6.
+4. **Path and resource normalization:** resolve relative locations against the declaration document containing them, then normalize the result against the resolved Target Repository boundary without following the reference outside that boundary. A normalized reference that cannot be located within the boundary is unresolvable under the applicable category.
+5. **Precedence handling:** when multiple declaration fragments address the same category, apply only an explicit Target-owned precedence statement found in the declaration set. Absent that statement, non-equivalent fragments remain ambiguous or conflicting under Section 3.6.
+6. **Completeness check:** for each of Sections 3.1 through 3.5, determine whether the minimum resolvable information is present, accessible, non-empty, and non-conflicting. Do not infer missing information from repository layout, file names, common conventions, Forge AI documents, AI-DOS product defaults, previous runs, or provider memory.
+7. **Resolution output:** produce either category-specific success evidence for every category in Sections 3.1 through 3.5 plus the combined result required by Section 3.6, or one or more blockers identifying the failed category and failed condition. There is no warning-only or best-effort declaration-coherence outcome.
 
 This section defines, for the "declaration coherence" duty in Responsibility 2.3, the minimum semantic categories a Target Repository's declarations must resolve for Target Repository Resolution to treat them as coherent.
 
@@ -131,3 +144,10 @@ BootSequence.md
 - no execution or mutation authority inferred;
 - blocker emitted for ambiguity;
 - each of the six minimum declaration-coherence categories in Section 3 resolves to a blocker or to success evidence, with no third outcome.
+
+## 9. Version History
+
+| Version | Date | Description |
+|:---|:---|:---|
+| `3.1.0-draft` | 2026-07-18 | Defined the six minimum declaration-coherence categories and their blocker-or-success evidence model. |
+| `3.2.0-draft` | 2026-07-18 | Added a provider-neutral deterministic Markdown-compatible declaration recognition and resolution profile for the existing six declaration-coherence categories. |
