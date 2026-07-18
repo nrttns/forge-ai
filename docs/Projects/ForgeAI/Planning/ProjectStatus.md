@@ -8,7 +8,7 @@
 |:---|:---|
 | Identifier | `FORGE-AI.TARGET.PROJECT-STATUS` |
 | Title | Forge AI Operational State Model |
-| Version | `5.20.0-draft` |
+| Version | `5.21.0-draft` |
 | Status | Live Operational State |
 | Classification | Target Project Operational State |
 | Document Type | ProjectStatus |
@@ -57,10 +57,10 @@ AI-DOS owns reusable product truth and reusable capability behavior.
 | Current Capability | D2 Local CLI Package — Complete; Work Units 1 through 8 Accepted; Forge AI Target Skill Mechanism Foundation — Accepted; Audit Template Family Foundation — Accepted |
 | Current Autonomy Level | Level 0 proven; Level 1 operationally demonstrated; Level 3 pilot execution passed twice; maturity advancement remains pending explicit Human Governance maturity acceptance |
 | Current Program | AI-DOS Distribution-Oriented Development Program |
-| Current Execution Step | Post-Audit-Template-Family-Foundation — Awaiting Human Governance selection of the next Target Project step |
+| Current Execution Step | Stream-4-Work-Unit-2-Specification-Authorized — Deterministic Target Declaration Resolution Profile specification authorized for execution; not yet started |
 | Target Repository | Forge AI |
 | Operational Readiness | Passed |
-| Readiness Verdict | `D2 COMPLETE — AUDIT TEMPLATE FAMILY FOUNDATION ACCEPTED — AWAITING NEXT-STEP AUTHORIZATION` |
+| Readiness Verdict | `D2 COMPLETE — AUDIT TEMPLATE FAMILY FOUNDATION ACCEPTED — STREAM 4 WORK UNIT 2 SPECIFICATION AUTHORIZED — AWAITING EXECUTION` |
 | Pilot Blockers | None |
 | Architecture State | Stable; protected from speculative redesign |
 | Governing Principle | Evidence Before Refactor |
@@ -77,6 +77,8 @@ On 2026-07-18, Human Governance explicitly authorized one bounded AI-DOS work un
 
 On 2026-07-18, PR #241 merged the Audit Template Family Foundation implementation, and an independent review confirmed the merged commit changed exactly the three authorized paths, preserved every other catalog family and the existing `TemplateIndex.md` catalog-inventory and integrity-status language unchanged, produced a TPL-000-conformant family entry and component template, and did not touch `ProjectStatus.md`, `TemplateLibrary.md`, TPL-000/TPL-001, DevelopmentPhases, Roadmap, or any D3-or-later surface. That review returned verdict `ACCEPTANCE READY`. Human Governance reviewed that verdict and explicitly accepted PR #241 as the Audit Template Family Foundation and Active-Normalized-Library Integrity Validation work unit (`HUMAN GOVERNANCE — Approve`). This acceptance is scoped to this work unit only. It does not activate, normalize, certify, freeze, or relocate any other catalog family; does not select or authorize a next Target Project step; and does not activate D3 Public System Interface, MCP, hosted-provider, Axis Suite, feedback transport, or any later capability. The active task returns to awaiting explicit Human Governance selection of the next Target Project step.
 
+On 2026-07-18, Human Governance explicitly authorized exactly one bounded next Target Project step: Stream 4 Work Unit 2 — Deterministic Target Declaration Resolution Profile (`HUMAN GOVERNANCE — Authorize exactly one bounded ProjectStatus transition for Stream 4 Work Unit 2: Deterministic Target Declaration Resolution Profile`). This work unit's future implementation scope is limited to exactly one file, `docs/AI/System/TargetRepositoryResolution.md`, and its objective is to define a provider-neutral, deterministic, Markdown-compatible declaration recognition and resolution profile for the six existing Target declaration-coherence categories defined in that document's v3.1.0-draft §3 (merged via PR #235, Stream 4 Work Unit 1), without redefining or expanding those categories' semantics. This authorization does not implement the profile, does not modify `docs/AI/System/TargetRepositoryResolution.md` itself, does not introduce `stale` as a new blocker category, does not implement CLI behavior, does not mark the work unit accepted or complete, and does not activate D3, D4, MCP, hosted-provider, Axis Suite, feedback transport, or any later capability. This ProjectStatus update records only the authorization and its exact bounded scope.
+
 ---
 
 ## 3. Active Task
@@ -85,17 +87,17 @@ Exactly one task is active.
 
 | Field | Current State |
 |:---|:---|
-| Active Task ID | AWAIT-HUMAN-GOVERNANCE-NEXT-STEP-POST-AUDIT-TEMPLATE-FAMILY-FOUNDATION |
-| Active Task Name | Await Human Governance Direction Following Audit Template Family Foundation Acceptance |
-| Task Type | Human Governance next-step selection pending; no Target Project execution authorized |
-| Objective | Hold all Target Project execution until Human Governance selects and explicitly authorizes the next Target Project step. |
-| Success Definition | Human Governance issues explicit authorization identifying and bounding a specific next Target Project step. |
-| Failure Definition | Work activates D3, MCP, hosted-provider, Axis Suite, feedback transport, or any later distribution step without explicit authorization; work invents or selects new work from Roadmap or DevelopmentPhases without an explicit Human Governance decision; work claims progress beyond the accepted Audit Template Family Foundation work unit. |
+| Active Task ID | STREAM-4-WORK-UNIT-2-DETERMINISTIC-DECLARATION-RESOLUTION-PROFILE |
+| Active Task Name | Stream 4 Work Unit 2 — Deterministic Target Declaration Resolution Profile |
+| Task Type | Human-Governance-authorized bounded specification work unit; execution authorized, not yet performed |
+| Objective | Define, within `docs/AI/System/TargetRepositoryResolution.md` only, a provider-neutral, deterministic, Markdown-compatible declaration recognition and resolution profile for the six existing Target declaration-coherence categories (§3.1–§3.6 of v3.1.0-draft), without redefining or expanding their semantics. |
+| Success Definition | Exactly one file, `docs/AI/System/TargetRepositoryResolution.md`, is updated to define declaration locator and structural recognition rules, deterministic Markdown representation, repository-relative cross-file resolution, precedence and duplicate/conflict handling, missing/inaccessible/empty/ambiguous/conflicting/out-of-boundary/unsupported-syntax/unresolvable-reference behavior, exact category-level and combined success/blocker evidence shapes, and an explicit prohibition on semantic inference from unconstrained prose, while preserving the six categories' existing semantics unchanged. |
+| Failure Definition | Any file other than `docs/AI/System/TargetRepositoryResolution.md` is modified; the six categories' semantics are redefined or expanded; `stale` or any other unauthorized blocker category is introduced; CLI or validator behavior, fixtures, or tests are implemented; D3, D4, MCP, hosted-provider, Axis Suite, or feedback transport is activated; or the work unit is claimed accepted or complete without separate Human Governance acceptance. |
 | Scope Expansion | Prohibited |
 | Concurrent or Additional Work Unit | Prohibited |
 | Architecture Redesign | Prohibited unless separately authorized |
 | Repository-Wide Alignment | Prohibited |
-| ProjectStatus Update | Authorized only for recording Human Governance acceptance of PR #241 as the Audit Template Family Foundation work unit and preserving the post-acceptance next-step hold |
+| ProjectStatus Update | Authorized now for recording this exact authorization; a further ProjectStatus update recording acceptance or completion requires separate explicit Human Governance authorization after implementation and review |
 
 ---
 
@@ -104,19 +106,19 @@ Exactly one task is active.
 ### 4.1 Current Objective
 
 ```text
-D2 COMPLETE — AUDIT TEMPLATE FAMILY FOUNDATION ACCEPTED — AWAIT HUMAN GOVERNANCE NEXT-STEP AUTHORIZATION
+STREAM 4 WORK UNIT 2 AUTHORIZED — DETERMINISTIC TARGET DECLARATION RESOLUTION PROFILE SPECIFICATION PENDING EXECUTION
 ```
 
 ### 4.2 Current Active Work
 
 ```text
-None — D2 Local CLI Package, the Target Skill Mechanism Foundation, and the Audit Template Family Foundation are accepted; no further Target Project execution is authorized
+Stream 4 Work Unit 2 (Deterministic Target Declaration Resolution Profile) is authorized for execution, scoped to docs/AI/System/TargetRepositoryResolution.md only; implementation has not started
 ```
 
 ### 4.3 Execution Status
 
 ```text
-D2 COMPLETE; AUDIT TEMPLATE FAMILY FOUNDATION ACCEPTED; NO NEXT STEP AUTHORIZED
+D2 COMPLETE; AUDIT TEMPLATE FAMILY FOUNDATION ACCEPTED; STREAM 4 WORK UNIT 2 SPECIFICATION AUTHORIZED, NOT YET EXECUTED
 ```
 
 ### 4.4 Authorized Next Action
@@ -200,6 +202,16 @@ The Audit Template Family Foundation and Active-Normalized-Library Integrity Val
 
 No further Audit Template Family work unit is authorized.
 
+Stream 4 Work Unit 2 (Deterministic Target Declaration Resolution Profile) is authorized but not complete. Its completion criteria, to be demonstrated by its future implementation, are:
+
+- a single-file change to `docs/AI/System/TargetRepositoryResolution.md` defining declaration locator and structural recognition rules, deterministic Markdown representation, repository-relative cross-file resolution, precedence and duplicate/conflict handling, missing/inaccessible/empty/ambiguous/conflicting/out-of-boundary/unsupported-syntax/unresolvable-reference behavior, exact category-level and combined success/blocker evidence shapes, and an explicit prohibition on semantic inference from unconstrained prose;
+- no redefinition or expansion of the six existing declaration-coherence categories in §3.1–§3.6;
+- no introduction of `stale` as a new blocker category;
+- no CLI or validator implementation, fixtures, or tests;
+- no activation of D3, D4, MCP, hosted-provider, Axis Suite, or feedback transport.
+
+No further Stream 4 work unit is authorized beyond Work Unit 2.
+
 ---
 
 ## 5. Work Selection Rules
@@ -235,24 +247,30 @@ Rules:
 
 ## 6. Authorized Scope
 
-While the active task is the post-Audit-Template-Family-Foundation next-step hold, the current task may:
+While the active task is Stream 4 Work Unit 2, the current task may:
 
 - read declared Target Repository resources;
 - resolve current operational context;
-- report the Human Governance Audit Template Family Foundation acceptance decision;
-- recommend, but not select or execute, a next Target Project step.
+- modify exactly one file, `docs/AI/System/TargetRepositoryResolution.md`, to define the authorized declaration recognition and resolution profile;
+- validate the change against the completion criteria in Section 4.5;
+- report objective, scope, changed artifacts, validation results, protected-area confirmation, blockers, and exactly one recommended next step.
 
 The current task may not:
 
+- modify any file other than `docs/AI/System/TargetRepositoryResolution.md`;
+- redefine, narrow, or expand the six existing Target declaration-coherence categories' semantics;
+- introduce `stale` or any other new blocker category not already defined;
+- implement CLI, validator, fixture, or test behavior;
 - redesign AI-DOS;
 - create a new architectural layer;
 - create a new Standard, Meta Model, Blueprint, RFC family, Governance model, Runtime family, Engine family, Agent family, Command family, Workflow family, Template family, Knowledge model, Memory model, Validation model, Review model, Certification model, Testing model, or Operational Core model;
 - perform repository-wide alignment;
 - fix unrelated findings;
-- repeat accepted PR #214, PR #218, PR #220, PR #222, PR #224, PR #226, PR #228, PR #229, or PR #241 scope without a proven need;
-- select or execute a new Target Project work unit, including any D3 or later distribution step, without explicit Human Governance authorization of that specific next step;
-- activate or begin MCP, hosted-provider, Axis Suite, feedback transport, D3, or later work;
-- automatically update ProjectStatus.
+- repeat accepted PR #214, PR #218, PR #220, PR #222, PR #224, PR #226, PR #228, PR #229, or PR #241 scope, or the already-merged PR #235 (Stream 4 Work Unit 1) scope, without a proven need;
+- select or execute a new Target Project work unit beyond Stream 4 Work Unit 2, including any D3 or later distribution step, without explicit Human Governance authorization of that specific next step;
+- activate or begin MCP, hosted-provider, Axis Suite, feedback transport, D3, D4, or later work;
+- mark Stream 4 Work Unit 2 accepted or complete;
+- automatically update ProjectStatus beyond this authorization record.
 
 ---
 
@@ -396,6 +414,7 @@ Human Governance must evaluate the evidence before accepting any maturity claim.
 | D2 Remaining Evidence | None | All D2 evidence items identified in Roadmap Stream 3 / Milestone D2 (install, execution, offline, runtime data, uninstall, rollback, Target path handling, validate command) have accepted implementation and passing validation. Human Governance approved D2 completion on 2026-07-17. |
 | D2 Completion Decision | Accepted | Human Governance explicitly approved D2 Local CLI Package (Distribution v1) as complete on 2026-07-17 (`HUMAN GOVERNANCE — Approve D2 Completion`). This approval does not activate D3 or later distribution work. |
 | Audit Template Family Foundation | Accepted | Human Governance accepted PR #241 on 2026-07-18 after independent review confirmed the merged implementation preserved the exactly authorized three-file scope recorded by PR #242, added a TPL-000-conformant Audit family entry and component template, and registered the family in `TemplateIndex.md` without modifying any other catalog family, `TemplateLibrary.md`, TPL-000/TPL-001, or the existing catalog-inventory/integrity-status language. Review verdict: `ACCEPTANCE READY`. |
+| Stream 4 Work Unit 2 (Deterministic Target Declaration Resolution Profile) | Authorized — Not Executed | Human Governance explicitly authorized this bounded specification work unit on 2026-07-18 (`HUMAN GOVERNANCE — Authorize exactly one bounded ProjectStatus transition for Stream 4 Work Unit 2: Deterministic Target Declaration Resolution Profile`), scoped to exactly one file, `docs/AI/System/TargetRepositoryResolution.md`. It builds on the already-merged PR #235 (Stream 4 Work Unit 1, v3.1.0-draft §3). Not yet implemented, reviewed, or accepted. |
 | External Target evidence | Not present | Axis Suite and external Target preparation/execution have not started and are not authorized by the active D2 Local CLI package state. |
 
 ---
@@ -424,7 +443,7 @@ Human Governance accepted PR #214, PR #218, PR #220, PR #222, PR #224, and PR #2
 Current State
 
 ```text
-D2 COMPLETE — DISTRIBUTION V1 LOCAL CLI ACCEPTED — AWAITING NEXT-STEP AUTHORIZATION
+D2 COMPLETE — DISTRIBUTION V1 LOCAL CLI ACCEPTED — STREAM 4 WORK UNIT 2 SPECIFICATION AUTHORIZED
 ```
 
 Accepted D2 evidence:
@@ -436,13 +455,13 @@ Explicit Target path handling, root Target-contract loading/validation, one boun
 Authorized activation:
 
 ```text
-None. Awaiting Human Governance selection and explicit authorization of the next Target Project step (for example, D3 Public System Interface activation).
+Stream 4 Work Unit 2 (Deterministic Target Declaration Resolution Profile) only, scoped to exactly one file, docs/AI/System/TargetRepositoryResolution.md. This does not correspond to a D0-D11 distribution milestone and does not activate D3 Public System Interface.
 ```
 
 Prohibited activations:
 
 ```text
-Local MCP, hosted provider, Axis Suite, feedback transport, D3 and later distribution work, and any new Target Project work unit remain unauthorized absent explicit Human Governance direction.
+Local MCP, hosted provider, Axis Suite, feedback transport, D3 and later distribution work, and any Target Project work unit beyond Stream 4 Work Unit 2 remain unauthorized absent explicit Human Governance direction.
 ```
 
 ---
@@ -452,14 +471,14 @@ Local MCP, hosted provider, Axis Suite, feedback transport, D3 and later distrib
 ### Blockers
 
 ```text
-None identified. Target Project execution is held pending Human Governance selection of the next step following Audit Template Family Foundation acceptance.
+None identified. Human Governance has authorized exactly one bounded specification work unit, Stream 4 Work Unit 2, scoped to docs/AI/System/TargetRepositoryResolution.md only; execution has not yet begun.
 ```
 
 ### Risks
 
 | Risk | Current Control |
 |:---|:---|
-| D3 or a later distribution step is activated without explicit authorization | Current state authorizes no next step until Human Governance explicitly selects and bounds one. |
+| D3 or a later distribution step is activated without explicit authorization | Stream 4 Work Unit 2 does not correspond to a D-milestone and does not activate D3; D3 and later remain unauthorized until Human Governance explicitly selects and bounds that step. |
 | Accepted PR #214, PR #218, PR #220, PR #222, PR #224, PR #226, PR #228, PR #229, or PR #241 scope is repeated or reinterpreted | All nine accepted work units are recorded as completed and must not be repeated without a proven need. |
 | Existing active task is replaced by a newly invented task | ProjectStatus remains the live operational-state authority. |
 | Scope expands after execution begins | The selected work unit must be declared before editing. |
@@ -469,6 +488,9 @@ None identified. Target Project execution is held pending Human Governance selec
 | ProjectStatus changes automatically | Exact update authorization is required. |
 | Non-blocking findings trigger refactor | Only proven blockers may activate targeted correction; the pre-existing README/link-check findings surfaced by PR #241 remain unfixed pending a separate, authorized cleanup work unit. |
 | A single-unit authorization is silently exceeded again | The PR #228/PR #229 deviation was recorded rather than concealed; future deviations must be reported the same way. |
+| Stream 4 Work Unit 2 implementation scope expands beyond `docs/AI/System/TargetRepositoryResolution.md` | This authorization is limited to exactly one file; any other file change is out of scope and unauthorized. |
+| `stale` or another unauthorized blocker category is introduced during Stream 4 Work Unit 2 specification | Not authorized by this work unit; introducing `stale` or any other new category requires separate explicit Human Governance authorization. |
+| Stream 4 Work Unit 2 specification work is mistaken for CLI implementation or is claimed accepted/complete | This authorization covers specification only; CLI implementation and work-unit acceptance each require separate explicit Human Governance authorization. |
 
 ---
 
@@ -486,6 +508,8 @@ Human Governance approval intent on 2026-07-16 uniquely accepted PR #226 as the 
 Human Governance's decision to merge PR #232 after an independent `READY FOR HUMAN GOVERNANCE APPROVAL` verdict uniquely accepted the Forge AI Target Skill Mechanism Foundation and authorized this bounded ProjectStatus record. That acceptance does not select a next Target Project step or activate AGENTS v2, multi-agent, swarm, D3, or later work.
 
 On 2026-07-18, Human Governance explicitly authorized the bounded Audit Template Family Foundation and Active-Normalized-Library Integrity Validation work unit and its exact three-file scope, and separately authorized the ProjectStatus update recording that authorization (PR #242). After PR #241 merged and an independent review verdict of `ACCEPTANCE READY` confirmed the merged implementation matched the recorded authorization and preserved the three-file scope and Template Library integrity, the instruction `HUMAN GOVERNANCE — Approve` directly and uniquely authorized the specific operational-state transition recording PR #241's acceptance, and explicitly authorized this ProjectStatus update recording that decision. This authorization is scoped to the Audit Template Family Foundation work unit only; it does not select or authorize a next Target Project step and does not activate any other catalog family, D3, MCP, hosted-provider, Axis Suite, or feedback transport.
+
+On 2026-07-18, the task instruction `HUMAN GOVERNANCE — Authorize exactly one bounded ProjectStatus transition for Stream 4 Work Unit 2: Deterministic Target Declaration Resolution Profile` directly and uniquely authorized recording exactly one bounded work unit — Stream 4 Work Unit 2, scoped to `docs/AI/System/TargetRepositoryResolution.md` only — and explicitly authorized this ProjectStatus update recording that authorization. This authorization is scoped to recording the work-unit authorization only; it does not implement the specification, does not modify `docs/AI/System/TargetRepositoryResolution.md`, does not mark the work unit accepted or complete, and does not activate D3, D4, MCP, hosted-provider, Axis Suite, or feedback transport.
 
 When update authority and uniquely derivable Human Governance approval intent are absent, the completion report must provide:
 
@@ -520,10 +544,10 @@ Human Governance reviewed that verdict and explicitly accepted PR #241 as the Au
 ## 17. Exactly One Authorized Next Action
 
 ```text
-AWAIT HUMAN GOVERNANCE SELECTION AND AUTHORIZATION OF THE NEXT TARGET PROJECT STEP
+EXECUTE STREAM 4 WORK UNIT 2 — DETERMINISTIC TARGET DECLARATION RESOLUTION PROFILE
 ```
 
-D2 Local CLI Package (Distribution v1) is complete, and the Audit Template Family Foundation and Active-Normalized-Library Integrity Validation work unit is complete, both accepted by Human Governance. No new Target Project work unit, including D3 Public System Interface or any later distribution step, or any additional catalog family, may be selected or executed until Human Governance explicitly identifies and authorizes that specific next step. MCP, hosted-provider, Axis Suite, feedback transport, D3 and later distribution work remain unauthorized.
+Human Governance has authorized exactly one bounded specification work unit: modify only `docs/AI/System/TargetRepositoryResolution.md` to define a provider-neutral, deterministic, Markdown-compatible declaration recognition and resolution profile for the six existing Target declaration-coherence categories, without redefining or expanding their semantics, without introducing `stale` as a new blocker category, and without implementing CLI behavior. No other file may change. D3, D4, MCP, hosted-provider, Axis Suite, and feedback transport remain unauthorized. The work unit must not be marked accepted or complete by this authorization; completion requires separate Human Governance review and acceptance.
 
 ---
 
@@ -573,3 +597,4 @@ ProjectStatus does not:
 | `5.18.0-draft` | 2026-07-17 | Recorded Human Governance acceptance of PR #232 as the Forge AI Target Skill Mechanism Foundation after independent review, preserved ProjectStatus as the sole current-state authority, kept AGENTS v2, multi-agent, swarm, D3, and later work inactive, and retained the post-D2 hold pending explicit authorization of the next Target Project step. |
 | `5.19.0-draft` | 2026-07-18 | Recorded explicit Human Governance authorization of the bounded Audit Template Family Foundation and Active-Normalized-Library Integrity Validation work unit, limited to the Audit family entry, Audit template, and TemplateIndex registration; preserved all other catalog families, ProjectStatus advancement, D3, and later capabilities as unauthorized. |
 | `5.20.0-draft` | 2026-07-18 | Recorded Human Governance's explicit acceptance of PR #241 as the Audit Template Family Foundation and Active-Normalized-Library Integrity Validation work unit, based on an independent `ACCEPTANCE READY` review confirming the merged implementation preserved the authorized three-file scope and Template Library integrity; closed the work-unit acceptance, reinstated the post-acceptance next-step hold, and kept every other catalog family, D3, MCP, hosted-provider, Axis Suite, and feedback transport inactive pending separate explicit authorization. |
+| `5.21.0-draft` | 2026-07-18 | Recorded explicit Human Governance authorization of exactly one bounded specification work unit, Stream 4 Work Unit 2 (Deterministic Target Declaration Resolution Profile), scoped to `docs/AI/System/TargetRepositoryResolution.md` only; excluded CLI implementation, redefinition/expansion of the six declaration-coherence categories, introduction of `stale` as a new blocker category, and activation of D3, D4, MCP, hosted-provider, Axis Suite, or feedback transport; did not mark the work unit accepted or complete. |
