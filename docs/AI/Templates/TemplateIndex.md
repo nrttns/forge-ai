@@ -23,6 +23,7 @@ TPL-000 `0.2.1-draft` records Human Governance acceptance of its bounded materia
 | Family | Semantic entry | Purpose |
 |:---|:---|:---|
 | Planning | `Planning/PlanningFamily.md` | Reusable planning-document structures; not Target planning authority. |
+| Audit | `Audit/AuditFamily.md` | Reusable audit-evidence, findings, control-gap, and recommendation structure. |
 | Validation | `Validation/ValidationFamily.md` | Evidence and finding structures. |
 | Review | `Review/ReviewFamily.md` | Evaluation, rationale, objections, unresolved matters, and recommendation. |
 | Certification | `Certification/CertificationFamily.md` | Formal bounded claim structures under declared certification authority. |
