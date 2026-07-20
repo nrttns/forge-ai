@@ -8,7 +8,7 @@
 |:---|:---|
 | Identifier | `FORGE-AI.TARGET.PROJECT-STATUS` |
 | Title | Forge AI Operational State Model |
-| Version | `5.26.0-draft` |
+| Version | `5.27.0-draft` |
 | Status | Live Operational State |
 | Classification | Target Project Operational State |
 | Document Type | ProjectStatus |
@@ -54,13 +54,13 @@ AI-DOS owns reusable product truth and reusable capability behavior.
 | Field | Current State |
 |:---|:---|
 | Current Phase | Distribution v1 Local CLI Complete |
-| Current Capability | D2 Local CLI Package — Complete; Work Units 1 through 8 Accepted; Forge AI Target Skill Mechanism Foundation — Accepted; Audit Template Family Foundation — Accepted; Stream 4 Work Unit 2 — Accepted; Command Routing v2 — Merged and Human Governance Accepted |
+| Current Capability | D2 Local CLI Package — Complete; Work Units 1 through 8 Accepted; Forge AI Target Skill Mechanism Foundation — Accepted; Audit Template Family Foundation — Accepted; Stream 4 Work Unit 2 — Accepted; Command Routing v2 — Accepted; Command Routing v3 Candidate Generation Correction — Authorized |
 | Current Autonomy Level | Level 0 proven; Level 1 operationally demonstrated; Level 3 pilot execution passed twice; maturity advancement remains pending explicit Human Governance maturity acceptance |
 | Current Program | AI-DOS Distribution-Oriented Development Program |
-| Current Execution Step | Post-Command-Routing-v2 acceptance hold — awaiting a later Human Governance continuation or explicit next-step invocation |
+| Current Execution Step | Implement bounded Command Routing v3 deterministic candidate-generation correction; await independent review and Human Governance acceptance |
 | Target Repository | Forge AI |
 | Operational Readiness | Passed |
-| Readiness Verdict | `COMMAND ROUTING V2 ACCEPTED — NO EXECUTABLE TASK ACTIVE — AWAITING HUMAN GOVERNANCE CONTINUATION OR EXPLICIT NEXT-STEP SELECTION` |
+| Readiness Verdict | `COMMAND ROUTING V3 CANDIDATE GENERATION CORRECTION AUTHORIZED — IMPLEMENTATION AND REVIEW PENDING` |
 | Pilot Blockers | None |
 | Architecture State | Stable; protected from speculative redesign |
 | Governing Principle | Evidence Before Refactor |
@@ -85,25 +85,27 @@ On 2026-07-20, Human Governance explicitly authorized the bounded Command Routin
 
 On 2026-07-20, independent review of PR #247 at head `8ef274e8e5e99aabc9496ea5176796e1bc743577` found no blocking findings, Pull Request Validation run #24 passed, Human Governance recorded acceptance in [PR #247 comment #5022012633](https://github.com/doallon/forge-ai/pull/247#issuecomment-5022012633), and PR #247 merged as `b6fc6bda305784dc6e3ec1fad9c88db7d02a0922`. The instruction `Human Governance → Approve PR #247 at reviewed head 8ef274e. Record acceptance only; do not select or activate the next task, and do not merge.` uniquely authorizes this ProjectStatus acceptance transition only. It does not select or activate a next work unit or protected capability.
 
+On 2026-07-20, after a live `Next` invocation correctly identified Stream 4 `onboarding validation` as the earliest `Pending` evidence item but safe-stopped because no predeclared bounded candidate existed, Human Governance authorized the Command Routing v3 correction: `Continue/Next Task authorizes deterministic generation of the smallest capability-grounded bounded candidate when none is predeclared; safe-stop only when no unique bounded candidate can be generated.` This authorization is limited to candidate-generation, routing, Target-contract, governance-skill, and ProjectStatus documents. It does not modify Roadmap or DevelopmentPhases, generate or activate the onboarding candidate in this correction invocation, execute repository work, or activate D3, D4, MCP, hosted-provider, Axis Suite, feedback transport, or another protected capability.
+
 ---
 
 ## 3. Active Task
 
-Exactly one operational hold is active; no executable work unit is active.
+Exactly one task is active.
 
 | Field | Current State |
 |:---|:---|
-| Active Task ID | POST-COMMAND-ROUTING-V2-ACCEPTANCE-HOLD |
-| Active Task Name | Await Human Governance Continuation or Explicit Next-Step Selection |
-| Task Type | Post-acceptance hold; no executable repository work authorized |
-| Objective | Preserve the accepted Command Routing v2 state until a later Human Governance `Continue`, `Next Task`, or `Next Step: X` invocation resolves a permitted transition. |
-| Success Definition | ProjectStatus remains stable until a later invocation deterministically selects and activates exactly one eligible bounded candidate, or safe-stops under the accepted routing rules. |
-| Failure Definition | Repository work begins without a later invocation; approval itself selects a task; more than one candidate is activated; a blocked, ineligible, or protected candidate is activated; or activation and execution occur in the same invocation. |
+| Active Task ID | COMMAND-ROUTING-V3-CANDIDATE-GENERATION-CORRECTION |
+| Active Task Name | Deterministic Generation of the Smallest Capability-Grounded Bounded Candidate |
+| Task Type | Human-Governance-authorized bounded governance-policy correction |
+| Objective | Make `Continue` / `Next Task` generate and validate the unique smallest capability-grounded bounded candidate through TaskGenerationWorkflow when no predeclared eligible candidate exists, while preserving priority, protected boundaries, activation/execution separation, and deterministic safe-stop. |
+| Success Definition | All authorized routing and governance documents define the same generation ownership, complete candidate shape, strict artifact-set minimality rule, Task Planner revalidation, one-candidate activation path, and zero/non-unique safe-stop behavior. |
+| Failure Definition | Candidate generation chooses objective priority, relies on convenience or unconstrained judgment, accepts inexact artifact scope, bypasses authority or protected boundaries, activates more than one candidate, executes in the activation invocation, changes Roadmap/DevelopmentPhases, or expands beyond the authorized documents. |
 | Scope Expansion | Prohibited |
 | Concurrent or Additional Work Unit | Prohibited |
-| Architecture Redesign | Prohibited unless separately authorized |
+| Architecture Redesign | Prohibited |
 | Repository-Wide Alignment | Prohibited |
-| ProjectStatus Update | Authorized only when a later Human Governance invocation uniquely derives an acceptance, activation, or other exact transition under the canonical Target contract |
+| ProjectStatus Update | Authorized only for recording this bounded Command Routing v3 correction; it does not generate, select, activate, or execute the onboarding work unit |
 
 ---
 
@@ -112,19 +114,19 @@ Exactly one operational hold is active; no executable work unit is active.
 ### 4.1 Current Objective
 
 ```text
-COMMAND ROUTING V2 ACCEPTED — AWAIT A LATER HUMAN GOVERNANCE CONTINUATION OR EXPLICIT NEXT-STEP INVOCATION
+IMPLEMENT COMMAND ROUTING V3 DETERMINISTIC CANDIDATE GENERATION
 ```
 
 ### 4.2 Current Active Work
 
 ```text
-None — post-acceptance hold; no executable work unit active
+Bounded nine-document routing/governance correction; no generated work unit activation or execution
 ```
 
 ### 4.3 Execution Status
 
 ```text
-PR #247 MERGED AND ACCEPTED — COMMAND ROUTING V2 ACTIVE — NO NEXT TASK SELECTED
+AUTHORIZED — IMPLEMENTATION IN DRAFT PR REQUIRED — INDEPENDENT REVIEW PENDING
 ```
 
 ### 4.4 Authorized Next Action
@@ -233,6 +235,23 @@ Command Routing v2 is merged and accepted through PR #247. Its accepted evidence
 - PR #247 merged as `b6fc6bda305784dc6e3ec1fad9c88db7d02a0922`;
 - acceptance did not select or activate a next work unit.
 
+Command Routing v3 Candidate Generation Correction is complete only when independent review confirms:
+
+- `Continue` / `Next Task` first resolves priority and eligible predeclared candidates;
+- when none is eligible for the fixed controlling objective, the invocation authorizes exactly one TaskGenerationWorkflow candidate-generation request;
+- every generation request contains one finite Target-owned Candidate Generation Source Profile exactly bound to the controlling objective;
+- the profile declares ordered exact artifact options, total path expansions, validation profiles, mandatory/choice groups, compatibility/exclusion rules, and maximum artifact count;
+- TaskGenerationWorkflow exhaustively constructs only profile-permitted combinations and records profile identity and enumeration trace;
+- repository search, invented options, omitted combinations, or free-form objective-satisfaction judgment cannot define the candidate set;
+- every generated candidate has authority provenance, owner, exact mutation-artifact set, allowed/forbidden mutations, dependencies, validation, evidence, completion, and stop conditions;
+- strict artifact-set subset is the only minimality relation; strict supersets are removed and incomparable minima do not receive an inferred tie-break;
+- Task Planner revalidates a generated candidate exactly as a predeclared candidate;
+- exactly one minimal eligible candidate may be routed to ProjectStateUpdater for activation, and execution stops until a later invocation;
+- zero generated candidates, missing grounding, or multiple incomparable minima produce deterministic safe-stop evidence;
+- `Next Step: X` may use generation to become bounded but bypasses ranking only;
+- scope is limited to the nine authorized documents and excludes Roadmap, DevelopmentPhases, implementation behavior, and protected capabilities.
+
+
 ---
 
 ## 5. Work Selection Rules
@@ -268,24 +287,31 @@ Rules:
 
 ## 6. Authorized Scope
 
-While the post-acceptance hold is active, the current invocation may:
+The Command Routing v3 correction may modify exactly these nine files:
 
-- read ProjectStatus, DevelopmentPhases, Roadmap, Target contracts, and required evidence;
-- report the current no-executable-task state;
-- on a later Human Governance `Continue` or `Next Task` invocation, run eligibility and priority resolution under the accepted Command Routing v2 rules;
-- on a later `Next Step: X` invocation, validate `X` as exactly one eligible bounded candidate without bypassing any protected boundary;
-- route exactly one uniquely derived activation transition to ProjectStateUpdater and stop before execution;
-- safe-stop with deterministic blocker evidence when selection or activation is not unique and permitted.
+- `docs/AI/AGENTS.md`;
+- `docs/AI/AIOrchestrator.md`;
+- `docs/AI/AgentSystemPrompt.md`;
+- `docs/AI/Workflows/TaskPlanner.md`;
+- `docs/AI/Workflows/TaskGenerationWorkflow.md`;
+- `docs/AI/Workflows/ProjectStateUpdater.md`;
+- `docs/Projects/ForgeAI/Mission/AGENTS.md`;
+- `docs/Projects/ForgeAI/Planning/ProjectStatus.md`;
+- `docs/Projects/ForgeAI/Skills/forge-ai-governance/SKILL.md`.
 
-The hold itself may not:
+Within those files, the task may define candidate-generation authority, ownership, input/output records, exact grounding, deterministic minimality, revalidation, activation routing, safe-stop evidence, and the corresponding active-state record.
 
-- modify repository files;
-- select, rank, authorize, activate, or execute a next work unit without a later Human Governance invocation;
-- treat approval of PR #247 as continuation intent;
-- bypass eligibility, dependencies, validation, ownership, scope, evidence status, or protected boundaries;
-- activate and execute a work unit in the same invocation;
-- modify Roadmap, DevelopmentPhases, Mission, provider routing, workflows, or the governance skill by implication;
-- activate D3, D4, MCP, hosted-provider, Axis Suite, feedback transport, or another protected capability without independently sufficient current authority.
+The current task may not:
+
+- modify any file outside the nine paths, including Roadmap and DevelopmentPhases;
+- generate, select, activate, or execute the actual onboarding-validation work unit;
+- let TaskGenerationWorkflow choose capability, stream, evidence-item, or objective priority;
+- accept directory, glob, inferred path, “related files,” convenience, effort, or model preference as exact scope or tie-break authority;
+- bypass eligibility, dependencies, validation, ownership, evidence status, or protected boundaries;
+- activate and execute work in the same invocation;
+- implement CLI, validator, fixture, test, D3, D4, MCP, hosted-provider, Axis Suite, feedback-transport, or other capability behavior;
+- perform repository-wide alignment, architecture redesign, or unrelated cleanup;
+- claim completion, acceptance, or merge before independent review and Human Governance decision.
 
 ---
 
@@ -431,6 +457,7 @@ Human Governance must evaluate the evidence before accepting any maturity claim.
 | Audit Template Family Foundation | Accepted | Human Governance accepted PR #241 on 2026-07-18 after independent review confirmed the merged implementation preserved the exactly authorized three-file scope recorded by PR #242, added a TPL-000-conformant Audit family entry and component template, and registered the family in `TemplateIndex.md` without modifying any other catalog family, `TemplateLibrary.md`, TPL-000/TPL-001, or the existing catalog-inventory/integrity-status language. Review verdict: `ACCEPTANCE READY`. |
 | Stream 4 Work Unit 2 (Deterministic Target Declaration Resolution Profile) | Accepted | Human Governance accepted PR #245 on 2026-07-20 after iterative independent review confirmed the specification remained within its single-file scope and closed the recorded determinism defects. |
 | Command Routing v2 | Accepted | Independent review at head `8ef274e8e5e99aabc9496ea5176796e1bc743577` found no blocking findings; Pull Request Validation run #24 passed; Human Governance acceptance is recorded in PR #247 comment #5022012633; PR #247 merged as `b6fc6bda305784dc6e3ec1fad9c88db7d02a0922`. Acceptance did not select or activate the next task. |
+| Command Routing v3 Candidate Generation Correction | Authorized — Not Accepted | Human Governance authorized deterministic generation of the smallest capability-grounded bounded candidate when no predeclared candidate is eligible. This correction does not itself generate, select, activate, or execute the onboarding-validation work unit. |
 | External Target evidence | Not present | Axis Suite and external Target preparation/execution have not started and remain outside current authority. |
 
 
@@ -471,24 +498,22 @@ Distribution-Oriented Development Program
 └── D11 Multi-Target AI Highway                  NOT ACTIVATED
 ```
 
-Human Governance accepted D2, the Forge AI Target Skill Mechanism Foundation, the Audit Template Family Foundation, Stream 4 Work Unit 2, and Command Routing v2 through their recorded PRs.
-
 Current State
 
 ```text
-COMMAND ROUTING V2 ACCEPTED — POST-ACCEPTANCE HOLD — NO EXECUTABLE TASK ACTIVE
+COMMAND ROUTING V3 CANDIDATE GENERATION CORRECTION AUTHORIZED — NOT YET ACCEPTED
 ```
 
 Authorized activation:
 
 ```text
-None from approval alone. A later Human Governance continuation or explicit next-step invocation may activate exactly one eligible bounded candidate through TaskPlanner and ProjectStateUpdater.
+The nine-document Command Routing v3 governance-policy correction only.
 ```
 
 Prohibited activations:
 
 ```text
-D3 or later distribution work, Local MCP, hosted provider, Axis Suite, feedback transport, implementation behavior, validator, fixture, test, or any other candidate lacking independently sufficient current authority remains inactive. Activation never authorizes same-invocation execution.
+The onboarding-validation work unit, D3 or later distribution work, Local MCP, hosted provider, Axis Suite, feedback transport, implementation behavior, validator, fixture, test, and every other protected capability remain inactive. This correction invocation defines generation mechanics but does not run them to activate work.
 ```
 
 ---
@@ -498,21 +523,23 @@ D3 or later distribution work, Local MCP, hosted provider, Axis Suite, feedback 
 ### Blockers
 
 ```text
-None. No executable task is active. A later continuation or explicit next-step invocation must either produce exactly one permitted activation or safe-stop.
+Command Routing v2 cannot generate a missing bounded candidate. Command Routing v3 is authorized to correct that governance gap; independent review and Human Governance acceptance remain pending.
 ```
 
 ### Risks
 
 | Risk | Current Control |
 |:---|:---|
-| Approval is treated as continuation | PR #247 acceptance records no next-task selection; continuation requires a later invocation. |
-| A repository statement is confused with GitHub review approval | Human Governance lifecycle acceptance, independent technical review, and GitHub merge identity are recorded separately. |
-| Roadmap prose requires inferred evidence status | Section 12.1 is the exact status source; missing or mismatched data safe-stops. |
-| `next` selects a convenient but lower-priority task | Eligibility is filtered first and the earliest `Pending` Roadmap evidence item controls ranking. |
-| Multiple candidates are silently resolved by model judgment | A highest-priority tie safe-stops and reports candidates. |
-| `Next Step: X` bypasses safety boundaries | Explicit selection bypasses ranking only. |
-| Activation silently becomes execution | ProjectStateUpdater must stop after activation; execution requires a later invocation. |
-| D3 or another protected capability is activated by implication | Candidate eligibility must independently satisfy current capability and protected-boundary authority. |
+| Candidate generation chooses the objective | ProjectStatus/Roadmap priority fixes the controlling objective before generation. |
+| Candidate enumeration differs between model invocations | Only a finite Target-owned Candidate Generation Source Profile supplies options and combination rules; exhaustive enumeration trace is required and repository/model-generated options are prohibited. |
+| “Smallest” becomes model preference | Only strict mutation-artifact-set inclusion defines smaller; incomparable minima safe-stop. |
+| Generated scope is vague | Every artifact must be exact and authority-grounded; directory, glob, inferred path, and “related files” are rejected unless explicitly declared. |
+| Generation bypasses eligibility | Task Planner revalidates every generated candidate exactly as a predeclared candidate. |
+| `Next Step: X` bypasses safety | It bypasses ranking only and uses the same generation and eligibility rules when unbounded. |
+| Activation becomes execution | ProjectStateUpdater stops after one activation; execution requires a later invocation. |
+| The current correction activates onboarding work | Section 6 explicitly prohibits generation or activation of the actual onboarding candidate in this task. |
+| Scope expands beyond governance documents | Exactly nine files are authorized; Roadmap, DevelopmentPhases, and implementation are protected. |
+| No unique candidate exists | Zero candidates, missing grounding, or incomparable minima produce deterministic safe-stop evidence. |
 
 ---
 
@@ -538,6 +565,8 @@ On 2026-07-20, the instruction `Human Governance → Approve` directly and uniqu
 On 2026-07-20, the instruction `Human Governance → Authorize the bounded Command Routing v2 correction in PR #247: Approve routes to ProjectStateUpdater; Continue/Next Task selects and activates the unique highest-priority authorized candidate; Next Step: X selects X subject to all protected boundaries; ties or no eligible candidate safe-stop.` was recorded by Human Governance in [PR #247 top-level comment #5021510475](https://github.com/doallon/forge-ai/pull/247#issuecomment-5021510475) and directly and uniquely authorized this bounded routing-policy correction and the corresponding ProjectStatus record. It does not approve or merge PR #247, execute any newly activated work, select a current next work unit, or activate D3, D4, MCP, hosted-provider, Axis Suite, feedback transport, or another protected capability.
 
 On 2026-07-20, after independent review found no blocking findings at head `8ef274e8e5e99aabc9496ea5176796e1bc743577`, validation passed, Human Governance recorded acceptance in PR #247 comment #5022012633, and PR #247 merged as `b6fc6bda305784dc6e3ec1fad9c88db7d02a0922`, the instruction `Human Governance → Approve PR #247 at reviewed head 8ef274e. Record acceptance only; do not select or activate the next task, and do not merge.` directly and uniquely authorized this ProjectStatus acceptance transition. It does not select, activate, or execute a subsequent work unit.
+
+On 2026-07-20, the Human Governance instruction `Continue/Next Task authorizes deterministic generation of the smallest capability-grounded bounded candidate when none is predeclared; safe-stop only when no unique bounded candidate can be generated.` directly and uniquely authorized the bounded Command Routing v3 correction and this ProjectStatus record. It does not authorize the correction to generate, select, activate, or execute the onboarding work unit, and it does not modify Roadmap, DevelopmentPhases, or protected capabilities.
 
 When update authority and uniquely derivable Human Governance approval intent are absent, the completion report must provide:
 
@@ -572,14 +601,12 @@ Human Governance reviewed that verdict and explicitly accepted PR #241 as the Au
 ## 17. Exactly One Authorized Next Action
 
 ```text
-AWAIT HUMAN GOVERNANCE CONTINUATION OR EXPLICIT NEXT-STEP SELECTION
+IMPLEMENT AND INDEPENDENTLY REVIEW THE COMMAND ROUTING V3 CANDIDATE GENERATION CORRECTION
 ```
 
-No executable work unit is active. PR #247 approval and merge did not select or activate the next task.
+The current task is limited to the nine governance/routing documents in Section 6. It must define and validate deterministic missing-candidate generation, but must not invoke the new mechanism to generate, select, activate, or execute onboarding work.
 
-On a later `Human Governance → Continue` or `Next Task` invocation, TaskPlanner shall use the accepted Command Routing v2 rules: validate the exact Roadmap-to-ProjectStatus evidence-status mapping, filter eligibility before ranking, select only the unique highest-priority eligible candidate for the earliest `Pending` item, route one activation through ProjectStateUpdater, and stop before execution. A blocked earliest item, missing or mismatched priority data, a highest-priority tie, or no eligible candidate requires safe-stop without fall-through.
-
-On a later `Next Step: X` invocation, `X` bypasses ranking only and must still resolve to exactly one eligible bounded candidate satisfying all dependencies and protected boundaries.
+After the correction is independently reviewed and separately accepted by Human Governance, ProjectStatus may return to a no-executable-task hold. A later `Next` invocation will then test generation against the earliest `Pending` Roadmap evidence item.
 
 ---
 
@@ -635,3 +662,4 @@ ProjectStatus does not:
 | `5.24.0-draft` | 2026-07-20 | Corrected the current operational state and exact eight-file scope for PR #247; replaced narrative-inferred Required Evidence completion with an explicit Roadmap-aligned status table; recorded PR #245 as accepted; and made independent review and separate Human Governance acceptance the only authorized next action. |
 | `5.25.0-draft` | 2026-07-20 | Recorded independent review, passing validation, Human Governance acceptance, and merge identities for PR #247; closed Command Routing v2 as accepted; activated only the dedicated single-file acceptance-state transition; and explicitly did not select or activate the next task. |
 | `5.26.0-draft` | 2026-07-20 | Closed the self-referential PR #247 acceptance-state update left active by merged PR #248; established the post-acceptance no-executable-task hold; and required a later continuation or explicit next-step invocation before any selection or activation. |
+| `5.27.0-draft` | 2026-07-20 | Authorized the bounded Command Routing v3 candidate-generation correction after a live `Next` invocation exposed that v2 could not construct a missing candidate; defined the nine-file scope, finite-profile enumeration boundary, and preserved onboarding, implementation, Roadmap, DevelopmentPhases, and protected capabilities as inactive. |

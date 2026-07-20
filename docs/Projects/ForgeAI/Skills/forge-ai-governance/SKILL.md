@@ -64,14 +64,16 @@ Task-specific Target authority, when declared
 5. Run applicable validation and produce evidence.
 6. Report objective, scope, changed artifacts, validation results, protected-area confirmation, blockers, and exactly one recommended next step.
 7. Do not mutate ProjectStatus, Roadmap, DevelopmentPhases, or Mission documents without exact Human Governance authorization, uniquely derivable Human Governance approval intent, or uniquely derivable continuation/next-task activation authority as defined by the canonical Target Project contract.
-8. For continuation-driven selection, reject ineligible candidates before ranking. Without an explicit selection, Task Planner selects only the unique highest-priority eligible candidate under Target-owned priority semantics.
-9. `Next Step: X` bypasses ranking only; `X` must resolve to exactly one eligible bounded candidate and remains subject to every dependency, validation, scope, ownership, and protected-boundary rule.
-10. ProjectStateUpdater may activate the selected candidate only when exactly one transition follows, and execution must stop until a later invocation.
-11. For Forge AI, resolve priority through Section 5.3 of the canonical Target contract: Roadmap supplies the exact `Required Evidence` item order and ProjectStatus supplies the exact status of each item in a matching `Roadmap Required Evidence Status` table.
-12. Never infer evidence status from narrative history, repository activity, merge state, nearby implementation, or model judgment. Missing, duplicate, reordered, text-mismatched, or unsupported status rows require safe stop.
-13. The earliest non-`Accepted` item controls selection. `Blocked` safe-stops without ranking or fall-through. For `Pending`, exactly one eligible candidate must directly advance that item.
-14. Multiple eligible candidates for that item are a tie. No eligible candidate for it is a blocker; do not fall through to later evidence, streams, phases, or capabilities.
-15. A highest-priority tie, missing priority semantics, a blocked item, no eligible candidate, or non-unique or ineligible `X` requires safe stop with considered candidates, rejection or tie reasons, and non-authorizing possible next steps.
+8. For continuation-driven selection, reject ineligible candidates before ranking. Without explicit selection, Task Planner selects only the unique highest-priority eligible predeclared candidate under Target-owned priority semantics.
+9. If no predeclared candidate is eligible for the controlling objective, continuation or next-task intent authorizes TaskGenerationWorkflow to derive candidates only from one finite Target-owned Candidate Generation Source Profile bound to that objective.
+10. The profile must declare exact artifact options, total path expansions, validation profiles, mandatory/choice groups, compatibility/exclusion rules, and maximum artifact count. TaskGenerationWorkflow exhaustively applies only those records; repository search, invented options, omitted combinations, and free-form objective-satisfaction judgment are prohibited.
+11. Generated candidates require profile identity, exhaustive enumeration trace, exact authority, owner, mutation-artifact set, allowed/forbidden mutations, dependencies, validation, evidence, completion, stop, and strict-subset minimality evidence. Task Planner revalidates them exactly as predeclared candidates.
+12. Exactly one minimal candidate must remain after strict artifact-set supersets are removed. Zero candidates or multiple incomparable minima safe-stop; convenience or model judgment cannot break the tie.
+13. `Next Step: X` bypasses ranking only. If `X` is not bounded, the same deterministic generation rules may bound it; every dependency, validation, scope, ownership, and protected-boundary rule remains.
+14. ProjectStateUpdater may activate one validated predeclared or generated candidate only when exactly one transition follows, and execution stops until a later invocation.
+15. For Forge AI, Roadmap supplies exact `Required Evidence` order and ProjectStatus supplies exact status in the matching table. Never infer status from narrative or repository activity.
+16. The earliest non-`Accepted` item controls selection. `Blocked` safe-stops. For `Pending`, use a predeclared candidate or generate one; do not fall through.
+17. A priority tie, missing semantics, blocked item, non-unique generation result, missing grounding, no generatable candidate, or non-unique/ineligible `X` requires safe stop with considered candidates, minimality comparisons, reasons, and non-authorizing possible next steps.
 
 ## 6. Protected Areas
 

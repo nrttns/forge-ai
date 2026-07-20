@@ -5,7 +5,7 @@
 | Field | Value |
 |:---|:---|
 | Identifier | `AI-DOS.WORKFLOW.TASK-PLANNER` |
-| Version | `3.1.0-draft` |
+| Version | `3.2.0-draft` |
 | Status | Draft |
 | Classification | Task Routing Workflow |
 | Owner | AI-DOS Operational Core |
@@ -13,18 +13,20 @@
 | Approval Authority | Human Governance |
 | Normative Authority | `docs/AI/System/DecisionModel.md`; `docs/AI/System/ExecutionSequence.md`; `docs/AI/AIOrchestrator.md` |
 | Consumes | Invocation-specific planning request; Resolved Target Context subset; explicit Target planning authorities; Decision Result |
-| Produces | Bounded work-selection record or safe-stop result |
+| Produces | Bounded work-selection record, candidate-generation request, or safe-stop result |
 | Certification Status | Not certified |
 
 ## 1. Purpose
 
-Task Planner routes an invocation to at most one bounded candidate work unit when planning is explicitly authorized. Human Governance continuation, advancement, or next-task intent counts as planning authorization when AIOrchestrator and the Target-owned contract route that intent here. Task Planner does not own Target planning, ProjectStatus, DevelopmentPhases, Roadmap, capability progression, lifecycle transition, or state mutation.
+Task Planner routes an invocation to at most one bounded candidate work unit when planning is explicitly authorized. Human Governance continuation, advancement, or next-task intent counts as planning and deterministic candidate-generation authorization when AIOrchestrator and the Target-owned contract route that intent here. Task Planner owns candidate discovery, priority, and final selection; TaskGenerationWorkflow owns bounded candidate construction when no predeclared eligible candidate exists. Task Planner does not own Target planning truth, ProjectStatus, DevelopmentPhases, Roadmap, capability progression, lifecycle transition, or state mutation.
 
 ## 2. Owns
 
-- Invocation-specific candidate normalization, classification, comparison, and selection.
+- Invocation-specific candidate discovery, normalization, classification, comparison, and selection.
+- Issuance of exactly one candidate-generation request when no predeclared candidate is eligible for the controlling objective.
+- Validation of generated-candidate authority, completeness, minimality, and eligibility.
 - Traceability from the selected candidate to explicit Target authority and requested outcome.
-- Safe stop when no candidate is authorized or sufficiently grounded.
+- Safe stop when no unique minimal candidate is authorized and sufficiently grounded.
 
 ## 3. Does Not Own
 
@@ -49,18 +51,20 @@ AI-DOS shall not infer missing planning inputs from Forge AI or from nearby repo
 
 ## 5. Planning Sequence
 
-1. Verify that planning is explicitly authorized.
-2. Resolve only the Target planning resources declared applicable by Resolved Target Context.
-3. Normalize candidate work units without changing their Target-owned meaning.
-4. Reject candidates lacking authority, ownership, bounded scope, validation path, or direct outcome trace.
-5. Reject duplicate, already-complete, prohibited, incompatible, or protected-boundary-crossing candidates.
-6. If the invocation supplies `Next Step: X`, resolve `X` to exactly one eligible bounded candidate and bypass ranking only.
-7. Otherwise, compare eligible candidates only through priority semantics explicitly supplied by the Target-owned planning authority.
-8. Select the unique highest-priority eligible candidate.
-9. Safe-stop when the highest priority is tied, priority semantics are absent or non-deterministic, `X` is missing, non-unique, or ineligible, or no eligible candidate remains.
-10. When no executable work unit is active and Target-owned rules permit continuation-driven activation, include the exact activation precondition and selected candidate in the bounded selection record and route it to ProjectStateUpdater.
-11. Otherwise, produce a bounded selection record for review or safe stop.
-12. Never activate or execute the selected work unit directly.
+1. Verify planning authority from resolved invocation intent and Target-owned rules.
+2. Resolve the controlling capability, Roadmap evidence item, dependencies, protected boundaries, and priority semantics.
+3. Discover and normalize predeclared candidate work units without changing their Target-owned meaning.
+4. Reject predeclared candidates lacking authority, ownership, bounded scope, validation path, direct outcome trace, or protected-boundary compliance.
+5. If the invocation supplies `Next Step: X`, resolve `X` to a predeclared eligible candidate; when `X` is not already bounded, issue one generation request scoped to `X`. Explicit selection bypasses ranking only.
+6. Otherwise, rank eligible predeclared candidates through Target-owned priority semantics and select the unique highest-priority candidate when one exists.
+7. When no predeclared candidate is eligible for the controlling objective, issue exactly one TaskGenerationWorkflow request containing the objective, Target authority, one finite Target-owned Candidate Generation Source Profile bound to that objective, allowed resource boundary, dependencies, protected areas, validation sources, evidence requirement, and completion condition.
+8. Require TaskGenerationWorkflow to return either one unique minimal capability-grounded bounded candidate or a generation safe-stop record.
+9. Validate the generation record before the candidate: reject a missing, non-finite, open-ended, duplicate, contradictory, or objective-mismatched Candidate Generation Source Profile; a non-total path expansion; any omitted profile-permitted combination; or any model-proposed option not present in the profile. Then validate a generated candidate exactly as a predeclared candidate.
+10. Verify minimality evidence: no returned candidate may remain when another valid candidate has a strict subset of its mutation-artifact set for the same objective; more than one incomparable minimum is non-unique.
+11. Select exactly one validated candidate and include whether it was predeclared or generated plus full provenance and minimality evidence.
+12. When no executable work unit is active and Target-owned rules permit continuation-driven activation, include the exact activation precondition and candidate in the selection record and route it to ProjectStateUpdater.
+13. Safe-stop on a priority tie, non-unique minimal generation result, missing grounding, non-unique or ineligible `X`, or no generatable eligible candidate.
+14. Never activate or execute the selected work unit directly.
 
 ## 6. Selection Record
 
@@ -82,9 +86,9 @@ The record is not an Execution Contract and does not authorize mutation.
 
 ### 6.1 Priority and Explicit Selection
 
-Eligibility is evaluated before priority. An explicit `Next Step: X` selection overrides ranking only; it never converts an unauthorized, unbounded, dependency-blocked, incompatible, or protected-boundary-crossing candidate into an eligible candidate.
+Eligibility is evaluated before priority. An explicit `Next Step: X` selection overrides ranking only; when `X` is not already bounded, TaskGenerationWorkflow may construct its bounded specification under the same grounding and minimality rules. Explicit selection never converts an unauthorized, ungrounded, dependency-blocked, incompatible, or protected-boundary-crossing candidate into an eligible candidate.
 
-Without `Next Step: X`, priority must come from an explicit Target-owned priority value or an unambiguous Target-owned ordering rule whose direction and tie behavior are declared. Repository proximity, recency, implementation convenience, provider preference, or model judgment are not priority. Exactly one candidate must have the highest priority. A highest-priority tie or missing priority semantics is non-deterministic and requires safe stop.
+Without `Next Step: X`, priority must come from an explicit Target-owned priority value or an unambiguous Target-owned ordering rule whose direction and tie behavior are declared. Repository proximity, recency, implementation convenience, provider preference, or model judgment are not priority. Candidate generation occurs only after the controlling objective is fixed and no predeclared candidate is eligible; it must not change objective priority. Exactly one predeclared highest-priority candidate or one unique minimal generated candidate may be selected.
 
 ## 7. Safe-Stop Results
 
@@ -93,7 +97,10 @@ Return a non-mutating stop result when:
 - planning authorization is absent;
 - Target planning authority is absent or ambiguous;
 - an external Target package is required but missing;
-- no candidate is eligible;
+- no predeclared candidate is eligible and no unique minimal candidate can be generated;
+- the Candidate Generation Source Profile is missing, non-finite, open-ended, contradictory, objective-mismatched, or not exhaustively enumerated;
+- generated candidates lack complete authority, artifact-scope, validation, completion, profile-identity, enumeration, or minimality evidence;
+- more than one incomparable minimal generated candidate remains;
 - more than one candidate shares the highest Target-owned priority;
 - Target-owned priority semantics or tie behavior are missing;
 - `Next Step: X` does not resolve to exactly one eligible candidate;
@@ -101,11 +108,11 @@ Return a non-mutating stop result when:
 
 Do not invent useful-looking repository work.
 
-A no-eligible-candidate result shall begin with `NO CAPABILITY-GROUNDED WORK UNIT FOUND` and report the candidates considered, their rejection reasons, the smallest missing authority or dependency, and possible next steps labeled as non-authorizing recommendations. A priority tie shall report the tied candidates and the missing Target-owned tie-break decision.
+A no-eligible-candidate result shall begin with `NO CAPABILITY-GROUNDED WORK UNIT FOUND` and report predeclared and generated candidates considered, their rejection or non-uniqueness reasons, artifact-set minimality comparisons, the smallest missing grounding, authority, validation, or dependency, and possible next steps labeled as non-authorizing recommendations. A priority tie shall report the tied candidates and the missing Target-owned tie-break decision.
 
 ## 8. Human Governance Intent
 
-Review, approval, continuation, and completion language is classified by `AIOrchestrator` and the System Layer. Approval and completion intent route to the owning lifecycle and do not become work selection. Continuation, advancement, or next-task intent may authorize bounded candidate selection when the Target-owned contract permits it. Task Planner never mutates Target state itself; when exactly one selected candidate and exactly one activation transition are authorized, it routes the selection record to ProjectStateUpdater. Otherwise it returns a recommendation or safe-stop result.
+Review, approval, continuation, and completion language is classified by `AIOrchestrator` and the System Layer. Approval and completion intent route to the owning lifecycle and do not become work selection. Continuation, advancement, or next-task intent may authorize deterministic bounded candidate generation and selection when the Target-owned contract permits it. Task Planner never mutates Target state itself; when exactly one selected candidate and exactly one activation transition are authorized, it routes the selection record to ProjectStateUpdater. Otherwise it returns a recommendation or safe-stop result.
 
 ## 9. Outputs
 
