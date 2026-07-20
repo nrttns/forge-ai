@@ -5,13 +5,13 @@
 | Field | Value |
 |:---|:---|
 | Identifier | `AI-DOS.WORKFLOW.TASK-GENERATION` |
-| Version | `3.1.0-draft` |
+| Version | `3.2.0-draft` |
 | Status | Draft |
 | Classification | Candidate Generation and Execution-Contract Preparation Workflow |
 | Owner | AI-DOS Operational Core |
 | Review Authority | Framework Governance |
 | Approval Authority | Human Governance |
-| Normative Authority | `docs/AI/Workflows/TaskPlanner.md`; `docs/AI/System/ExecutionSequence.md`; `docs/AI/AIOrchestrator.md` |
+| Normative Authority | `docs/AI/System/SourceOfTruth.md`; `docs/AI/System/ExecutionSequence.md`; `docs/AI/AIOrchestrator.md` |
 | Consumes | Candidate-generation request or valid work-selection record; applicable Target authority; provider and validation constraints |
 | Produces | Generated bounded candidate, proposed bounded task specification, or generation safe-stop record |
 | Certification Status | Not certified |

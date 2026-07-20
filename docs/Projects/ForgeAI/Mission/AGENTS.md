@@ -1,7 +1,7 @@
 <!--
 Identifier: FORGE-AI.TARGET.AGENTS-CONTRACT
 Title: AGENTS.md — Forge AI Target Project Contract
-Version: 1.5.0-draft
+Version: 1.6.0-draft
 Status: Draft
 Owner: Forge AI Target Project Governance
 Updated: 2026-07-20
@@ -15,7 +15,7 @@ Updated: 2026-07-20
 |:---|:---|
 | Identifier | `FORGE-AI.TARGET.AGENTS-CONTRACT` |
 | Title | AGENTS.md — Forge AI Target Project Contract |
-| Version | `1.5.0-draft` |
+| Version | `1.6.0-draft` |
 | Status | Draft |
 | Classification | Forge AI Target Project Contract |
 | Document Type | Target Project Contract |
@@ -144,38 +144,26 @@ Task-specific Target authority, when declared
 7. Do not select work merely because it is easy, nearby, recently modified, already tested, buildable, or a continuation of the last implementation.
 8. Do not treat repository activity as Target progress unless it directly advances the active capability and authorized objective.
 9. Do not invent a task when the authoritative Target state cannot resolve one.
-10. When Human Governance expresses continuation, advancement, or next-task intent and no executable work unit is active, treat that intent as authorization to run state-derived work selection.
-11. Reject unauthorized, insufficiently bounded, dependency-blocked, incompatible, or protected-boundary-crossing candidates before ranking.
-12. When Human Governance supplies `Next Step: X`, resolve `X` to exactly one eligible bounded candidate and bypass ranking only. The explicit selection does not override any protected boundary or eligibility rule.
-13. Otherwise, Task Planner shall select the unique highest-priority eligible predeclared candidate using only explicit priority semantics or an unambiguous ordering rule from the declared Target authorities.
-14. When no predeclared candidate is eligible for the controlling objective, continuation or next-task intent authorizes Task Planner to request deterministic generation from exactly one finite Target-owned Candidate Generation Source Profile bound to that objective.
-15. The profile must finitely declare exact artifact options, total path expansions, validation profiles, mandatory/choice groups, compatibility/exclusion rules, and maximum artifact count. TaskGenerationWorkflow exhaustively applies those rules and must not search the repository, invent options, or omit combinations.
-16. Generated candidates must contain profile identity, exhaustive enumeration trace, exact authority provenance, owner, mutation-artifact set, allowed and forbidden mutations, dependencies, validation, evidence, completion, stop conditions, and strict-subset minimality evidence. Task Planner revalidates them exactly as predeclared candidates.
-17. Exactly one minimal generated candidate must remain. A missing/non-finite/contradictory profile, incomplete enumeration, zero candidates, missing grounding, or multiple incomparable minima requires safe stop; convenience or model judgment must not break the tie.
-18. A highest-priority tie, missing priority semantics, no eligible or uniquely generatable candidate, or non-unique or ineligible `X` requires safe stop. The report shall identify predeclared and generated candidates, rejection or non-uniqueness reasons, minimality comparisons, and non-authorizing possible next steps.
-19. When exactly one predeclared or generated candidate is selected and exactly one ProjectStatus activation transition follows, route that transition to ProjectStateUpdater, activate the selected work unit, and stop before executing it.
+10. When Human Governance expresses continuation, advancement, or next-task intent and no executable work unit is active, authorize provider-side work selection only under the Forge AI policy in Section 5.3.
+11. When Human Governance supplies `Next Step: X`, treat `X` as an explicit Target selection that bypasses Target priority ranking only. It does not waive eligibility, dependency, validation, ownership, scope, or protected-area policy.
+12. Supply Target-owned objectives, candidate declarations, priority data, protected boundaries, validation sources, and any Candidate Generation Source Profile instance through Resolved Target Context. Do not reproduce the product-owned profile schema or provider algorithms here.
+13. Consume provider results only through their owning contracts: `TaskPlanner.md` for selection, `TaskGenerationWorkflow.md` for candidate construction, and `ProjectStateUpdater.md` for state mutation.
+14. Missing Target-owned inputs, non-unique Target policy results, or provider safe-stop results do not authorize this contract to invent work or reinterpret product behavior.
 
 ### 5.3 Forge AI Priority and Candidate Generation Resolution
 
-For Forge AI state-derived selection, the Target-owned rule is:
+For Forge AI state-derived selection, the Target-owned policy is:
 
-1. Scope work to the current active capability and its applicable Roadmap stream after ProjectStatus and DevelopmentPhases gates are applied.
-2. Read that Roadmap stream's `Required Evidence` items in declared left-to-right order.
-3. Read the matching ProjectStatus `Roadmap Required Evidence Status` table. It must reproduce every item exactly once, with exact text and order, and assign `Accepted`, `Pending`, or `Blocked`.
-4. Roadmap owns evidence-item identity and order. ProjectStatus owns status. Narrative history, repository activity, nearby implementation, merge state, or model judgment must not infer status.
-5. Missing, duplicate, reordered, text-mismatched, unsupported, or absent status data requires safe-stop.
-6. The earliest non-`Accepted` item controls selection. `Blocked` reports its blocker without ranking or fall-through.
-7. For `Pending`, filter and rank predeclared candidates first. Exactly one eligible highest-priority predeclared candidate may be selected.
-8. If no predeclared candidate is eligible, the continuation or next-task invocation authorizes TaskGenerationWorkflow to derive candidates for that fixed `Pending` item only from one finite Target-owned Candidate Generation Source Profile.
-9. The profile must be exactly bound to the item and finitely declare ordered artifact options, total exact-path expansions, validation profiles, mandatory/choice groups, compatibility/exclusion rules, and maximum artifact count. Missing, open-ended, duplicate, contradictory, or objective-mismatched profiles require safe-stop.
-10. TaskGenerationWorkflow must exhaustively construct all profile-permitted combinations; it may not search the repository, invent options, omit combinations, or use free-form judgment to decide objective satisfaction.
-11. Candidate A is smaller than candidate B only when A's mutation-artifact set is a strict subset of B's and A independently satisfies the same objective, validation, evidence, and completion conditions. Remove strict supersets.
-12. Exactly one minimal generated candidate may be returned to Task Planner. Zero candidates or more than one incomparable minimum requires safe-stop without fall-through.
-13. Directory, glob, inferred new path, “related files,” effort estimate, convenience, alphabetical order, repository proximity, or model preference cannot establish exact scope or break a tie unless a Target-owned rule explicitly authorizes it.
-14. Roadmap stream and DevelopmentPhases order are boundaries, not permission to activate another stream or phase.
-15. `Next Step: X` bypasses ranking only. If `X` is not already bounded, it may be constructed through the same generation rules, but it never waives authority, capability, dependency, validation, ownership, exact-scope, or protected-area requirements.
+1. ProjectStatus identifies the active capability and its applicable Roadmap stream; DevelopmentPhases bounds the capability.
+2. Roadmap owns stable Required Evidence identifiers and their declared order.
+3. ProjectStatus owns only the current `Accepted`, `Pending`, or `Blocked` value and evidence reference for each identifier. It must not copy the Roadmap item's normative text.
+4. The earliest non-`Accepted` identifier controls the Target objective. `Blocked` prohibits fall-through; `Pending` permits provider-side candidate resolution.
+5. Narrative history, repository activity, merge state, proximity, convenience, or model judgment cannot establish an evidence status, priority, candidate, or tie-break.
+6. Roadmap stream and DevelopmentPhases order are boundaries, not authority to activate another stream or phase.
+7. A Candidate Generation Source Profile, when used, is a Target-owned data instance bound to the controlling evidence identifier. Its schema and processing remain owned exclusively by `docs/AI/Workflows/TaskGenerationWorkflow.md`.
+8. Provider selection, generation, minimality, safe-stop, and activation mechanics are consumed by reference from their AI-DOS owners and are not Target truth.
 
-This rule supplies deterministic priority and candidate-generation semantics without modifying Roadmap or DevelopmentPhases planning truth.
+This section supplies only Forge AI's Target-owned policy and bindings. It does not define provider workflow behavior.
 
 ### 5.4 Explicitly Bounded Tasks
 
@@ -266,9 +254,7 @@ ProjectStatus may be modified only when:
 3. the active task is a dedicated ProjectStatus task; or
 4. the active task instruction directly authorizes a specific operational-state update.
 
-Approval intent must route to ProjectStateUpdater when the current lifecycle gate requires an operational-state transition. TaskPlanner must not block, replace, or convert that approval-state transition into repository work selection. When no executable work unit is active, Human Governance continuation, advancement, or next-task intent must route through TaskPlanner. TaskPlanner selects the unique highest-priority eligible predeclared candidate or, when none exists, requests and validates the unique smallest capability-grounded candidate from TaskGenerationWorkflow. It may also validate an explicit `Next Step: X` candidate without bypassing eligibility or protected boundaries. If exactly one bounded candidate and one activation transition are resolved, ProjectStateUpdater activates that candidate and stops before execution. TaskGenerationWorkflow is not used for approval decisions; it is required when continuation must generate a missing bounded candidate.
-
-ProjectStateUpdater must safe-stop without mutation when the transition is not unique, review has unresolved blocking findings, dependencies are unmet, or a protected boundary would be activated.
+Approval intent and continuation intent must be passed to the applicable AI-DOS owner with this contract's Target-owned transition policy and current state. `ProjectStateUpdater.md` exclusively owns mutation procedure; `TaskPlanner.md` exclusively owns candidate selection; `TaskGenerationWorkflow.md` exclusively owns generated-candidate construction. This contract neither restates nor overrides those procedures.
 
 Without exact authorization or uniquely derivable Human Governance approval intent:
 
@@ -325,3 +311,4 @@ This Target Project contract does not define:
 | `1.3.0-draft` | 2026-07-20 | Restored Human Governance continuation and next-task intent as authorization for deterministic selection and activation of exactly one bounded work unit when no executable task is active; defined Forge AI priority as the earliest unmet Required Evidence item in the current Roadmap stream, ranking-only `Next Step: X` selection, tie/no-candidate safe-stop evidence, protected-boundary preservation, and separation between activation and execution. |
 | `1.4.0-draft` | 2026-07-20 | Made Forge AI priority status explicit: Roadmap owns exact Required Evidence order, ProjectStatus owns an exact item-by-item status table, and missing/mismatched status or any narrative inference requires safe-stop. |
 | `1.5.0-draft` | 2026-07-20 | Authorized continuation-driven deterministic generation of the smallest capability-grounded bounded candidate when no predeclared candidate is eligible; defined finite Target-owned generation profiles, exhaustive mechanical enumeration, exact grounding, artifact-set minimality, revalidation, activation, and non-unique safe-stop rules. |
+| `1.6.0-draft` | 2026-07-20 | Restored single semantic ownership: retained only Forge AI Target policy and bindings, replaced copied provider algorithms with references to their AI-DOS owners, and changed Roadmap evidence matching to stable Target-owned identifiers. |

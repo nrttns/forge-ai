@@ -7,7 +7,7 @@
 | Field | Value |
 |:---|:---|
 | Identifier | `AI-DOS.OPERATIONAL.CORE.AI-ORCHESTRATOR` |
-| Version | `3.2.0-draft` |
+| Version | `3.3.0-draft` |
 | Status | Draft |
 | Classification | Operational Core |
 | Document Type | Orchestration Contract |
@@ -87,12 +87,12 @@ Each step is conditional on relevance, but authority, ownership, mutation scope,
 | Read, explain, compare, inspect, audit, or review | Evidence-only path; no mutation unless separately authorized |
 | Correct a bounded defect | Exact authorized correction path |
 | Implement a bounded capability | Implementation path within explicit Target authority and validation contract |
-| Continue, advance, or request the next task without a bounded task | Resolve predeclared candidates first. If none is eligible for the controlling objective, route to TaskGenerationWorkflow to derive the unique smallest capability-grounded bounded candidate. Route one validated candidate to ProjectStateUpdater and stop before execution. |
+| Continue, advance, or request the next task without a bounded task | Route Resolved Target Context to TaskPlanner; consume its selection or safe-stop record without reproducing its algorithm. |
 | Approve, certify, promote, release, or accept | Route to the owning governance lifecycle; do not reinterpret as ordinary completion |
 | Install, update, rollback, uninstall, or package AI-DOS | Consume A.6 and preserve product/Target ownership boundaries |
 | Pause, halt, or unresolved authority | Safe stop |
 
-Continuation intent authorizes work discovery and, when no predeclared eligible candidate exists, deterministic generation of the smallest capability-grounded bounded candidate. It authorizes exactly one Target-state activation only when the Target-owned contract defines continuation or next-task intent as selection authority, no executable work unit is active, Task Planner validates exactly one predeclared or generated bounded candidate, and the resulting transition is unique. It never authorizes DevelopmentPhases, Roadmap, certification, promotion, release, capability-boundary expansion, or execution of the newly activated work by implication.
+Continuation intent authorizes only the routes and effects declared by the applicable Target policy and the owning workflow contracts. Intent classification does not itself select a candidate, construct a candidate, or mutate Target state.
 
 ## 6. Work-Unit Selection
 
@@ -100,18 +100,13 @@ When the user supplies a bounded executable task, use that task directly after a
 
 When the user requests progress but supplies no bounded task:
 
-1. read the Target-owned state and planning authorities available in Resolved Target Context;
-2. identify the controlling objective and predeclared candidate work units;
-3. reject candidates outside active scope, unmet dependencies, or protected boundaries;
-4. when the invocation supplies `Next Step: X`, resolve `X` to a predeclared candidate or route `X` to TaskGenerationWorkflow for deterministic bounding; explicit selection bypasses ranking only;
-5. otherwise, rank eligible predeclared candidates by Target-owned priority semantics;
-6. if no predeclared candidate is eligible for the controlling objective, route one generation request to TaskGenerationWorkflow;
-7. require one finite Target-owned Candidate Generation Source Profile bound to the controlling objective; TaskGenerationWorkflow exhaustively applies only its artifact options and combination rules, completes every bounded-task field, removes strict supersets, and returns exactly one unique minimal candidate or a generation safe-stop;
-8. return the generated candidate to TaskPlanner for the same authority, eligibility, dependency, validation, ownership, priority, and protected-boundary checks applied to predeclared candidates;
-9. safe-stop on a priority tie, missing/non-finite/contradictory generation profile, incomplete enumeration, more than one incomparable minimal generated candidate, absent grounding or validation, a non-unique or ineligible `X`, or no generatable eligible candidate;
-10. include considered and generated candidates, rejection reasons, minimality evidence, and non-authorizing possible next steps in the blocker record;
-11. when Target-owned rules permit continuation-driven activation, route the one validated bounded selection record to ProjectStateUpdater;
-12. stop before executing work activated by that state transition.
+1. confirm that Resolved Target Context contains Target-owned planning authority and any policy required for selection;
+2. route the context and invocation intent to `docs/AI/Workflows/TaskPlanner.md`;
+3. accept only a conforming Task Planner selection or safe-stop record;
+4. when the selection record requests an authorized Target-state activation, route it unchanged to `docs/AI/Workflows/ProjectStateUpdater.md`;
+5. stop before executing work activated by that state transition.
+
+Candidate eligibility, priority, explicit selection, generation delegation, and selection safe stops belong only to `TaskPlanner.md`. Candidate construction, source-profile validation, enumeration, and minimality belong only to `TaskGenerationWorkflow.md`. Target-state mutation belongs only to `ProjectStateUpdater.md`.
 
 AI-DOS does not prescribe that every Target must have ProjectStatus, DevelopmentPhases, or Roadmap artifacts. Those names belong only to Targets that choose them.
 

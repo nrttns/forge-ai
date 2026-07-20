@@ -8,14 +8,14 @@
 |:---|:---|
 | Identifier | `FORGE-AI.V2.ROADMAP.V4` |
 | Title | Forge AI AI-DOS Product Delivery, Distribution, Integration, Feedback, Evolution, External Target Readiness, and AI Highway Operations Roadmap |
-| Version | `6.0.0-draft` |
+| Version | `6.1.0-draft` |
 | Status | Draft |
 | Canonical Status | Active Forge AI Target Project product-delivery roadmap; not AI-DOS product truth and not authority for external Target Projects |
 | Classification | Target Project Strategic Product Delivery Roadmap |
 | Document Type | Product Capability, Distribution, and Evolution Roadmap |
 | Owner | Forge AI Target Project Governance |
 | Approval Authority | Human Governance |
-| Last Updated | 2026-07-15 |
+| Last Updated | 2026-07-20 |
 | Lifecycle Phase | Active Target Project Planning |
 | Traceability ID | `FORGE-AI.V2.ROADMAP-REALIGNMENT-001` |
 | Scope | AI-DOS product capability acquisition, private/public boundary, distribution build and release foundation, Local CLI, Target onboarding, public System Interface, Codex adapter, Local MCP provider, Evolution Capsules, governed product evolution, external Target proof, managed provider maturity, and Multi-Target AI Highway operations directed by Forge AI. |
@@ -166,7 +166,7 @@ Evolution input must be portable, privacy-reviewed, consent-controlled, provenan
 | Owns | Minimal Target contract; Target resource declaration; protected-area declaration; validation declaration; source-scope declaration; permissions; onboarding validation; missing-context safe stops. |
 | Next Capability | Enable independent Target onboarding without copying AI-DOS private internals into the Target. |
 | Dependencies | Streams 1 through 3. |
-| Required Evidence | Minimal Target contract criteria, onboarding validation, protected-area proof, validation declaration proof, permissions proof, and missing-context safe-stop evidence. |
+| Required Evidence | `S4-E1` Minimal Target contract criteria, `S4-E2` onboarding validation, `S4-E3` protected-area proof, `S4-E4` validation declaration proof, `S4-E5` permissions proof, and `S4-E6` missing-context safe-stop evidence. |
 | Governance Decision | Human Governance accepts Target onboarding boundary before external Target product claims. |
 
 Target repositories must not include AI-DOS internal documentation.
@@ -308,3 +308,4 @@ This roadmap does not:
 |:---|:---|:---|
 | `5.1.0-draft` | 2026-07-11 | Prior Forge AI capability roadmap baseline. |
 | `6.0.0-draft` | 2026-07-15 | Realigned Forge AI around AI-DOS private development, runtime distribution, local CLI, local MCP, hosted provider, independent Target integration, privacy-safe evolution input, and multi-Target AI Highway operations. |
+| `6.1.0-draft` | 2026-07-20 | Added stable Stream 4 Required Evidence identifiers so ProjectStatus can record status by identity without duplicating Roadmap descriptions. |

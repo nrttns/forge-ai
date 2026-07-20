@@ -5,7 +5,7 @@
 | Field | Value |
 |:---|:---|
 | Identifier | `AI-DOS.SYSTEM.SOURCE-OF-TRUTH` |
-| Version | `3.0.0-draft` |
+| Version | `3.1.0-draft` |
 | Status | Draft |
 | Classification | System Layer Component Contract |
 | Owner | AI-DOS System Layer |
@@ -34,6 +34,26 @@ It does not determine authority precedence, convert evidence into authority, mer
 | Engine state | Engine Platform contract |
 | Provider state | Execution Provider |
 | Evidence | Producing artifact or process; non-authoritative unless promoted |
+
+### 2.1 Operational Contract Ownership
+
+Operational behavior has exactly one semantic owner. Entry contracts, Target contracts,
+skills, prompts, state records, and evidence may reference the owner but must not restate
+its algorithm or schema.
+
+| Concern | Semantic Owner | Consumers May Supply |
+|:---|:---|:---|
+| Intent classification and provider routing | `docs/AI/AIOrchestrator.md` | Invocation and Resolved Target Context |
+| Candidate eligibility, priority, and selection record | `docs/AI/Workflows/TaskPlanner.md` | Target-owned objective, policy, candidates, priority values, and boundaries |
+| Candidate Generation Source Profile schema, enumeration, and minimality | `docs/AI/Workflows/TaskGenerationWorkflow.md` | A finite Target-owned profile instance bound to one objective |
+| Target-state mutation procedure | `docs/AI/Workflows/ProjectStateUpdater.md` | Target-owned state schema, transition policy, current values, and mutation authority |
+| Target mission, planning policy, protected boundaries, and resource bindings | The active Target Project contract and Target-owned resources | References to applicable AI-DOS contracts |
+| Current Target operational values | The active Target-owned state artifact | Current values and references to evidence; no reusable AI-DOS algorithm |
+| Tool discovery | Tool adapter or Target-owned skill | Pointers and reading order only; no duplicated product or Target semantics |
+
+If two artifacts prescribe the same algorithm, schema, or transition procedure, Source of
+Truth shall report duplicate semantic ownership even when their current wording agrees.
+Agreement is not a substitute for single ownership.
 
 ## 3. Responsibilities
 
