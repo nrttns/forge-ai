@@ -56,7 +56,7 @@ docs/AI/System/ExecutionSequence.md
 docs/AI/Commands/AgentTaskCommand.md
 docs/AI/Checklists/AgentReviewChecklist.md
 docs/AI/Architecture/RFC/EngineSpecializations/A.5.7-Review-Engine-RFC.md
-docs/Projects/ForgeAI/Planning/ProjectStatus.md
+docs/ProjectStatus.md
 ```
 
 ---
@@ -130,7 +130,7 @@ Do not advance ProjectStatus or certify from a blocked or STALE REVIEW result
 - Carrying forward findings produced against a superseded or unresolved identity.
 - Routing this scenario through `docs/AI/Commands/AgentAuditCommand.md`.
 - Requiring Git, GitHub, branch, pull-request, or SHA-specific semantics for the gate to function.
-- Advancing `docs/Projects/ForgeAI/Planning/ProjectStatus.md` from any of the four cases.
+- Advancing `docs/ProjectStatus.md` from any of the four cases.
 
 ---
 
@@ -142,4 +142,4 @@ Do not advance ProjectStatus or certify from a blocked or STALE REVIEW result
 - Case 3 produces a precise identity-resolution/provider-capability blocker, distinct from `STALE REVIEW`, and no substantive verdict.
 - Case 4 demonstrates identical safe-stop behavior for a read-only review.
 - No case requires provider-specific (Git/GitHub) semantics to pass.
-- `docs/Projects/ForgeAI/Planning/ProjectStatus.md` is not advanced by any case.
+- `docs/ProjectStatus.md` is not advanced by any case.
