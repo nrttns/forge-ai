@@ -8,7 +8,7 @@
 |:---|:---|
 | Identifier | `FORGE-AI.TARGET.PROJECT-STATUS` |
 | Title | Forge AI Operational State Model |
-| Version | `5.25.0-draft` |
+| Version | `5.26.0-draft` |
 | Status | Live Operational State |
 | Classification | Target Project Operational State |
 | Document Type | ProjectStatus |
@@ -54,13 +54,13 @@ AI-DOS owns reusable product truth and reusable capability behavior.
 | Field | Current State |
 |:---|:---|
 | Current Phase | Distribution v1 Local CLI Complete |
-| Current Capability | D2 Local CLI Package — Complete; Work Units 1 through 8 Accepted; Forge AI Target Skill Mechanism Foundation — Accepted; Audit Template Family Foundation — Accepted; Stream 4 Work Unit 2 — Accepted; Command Routing v2 — Merged and Human Governance Accepted; acceptance-state record pending |
+| Current Capability | D2 Local CLI Package — Complete; Work Units 1 through 8 Accepted; Forge AI Target Skill Mechanism Foundation — Accepted; Audit Template Family Foundation — Accepted; Stream 4 Work Unit 2 — Accepted; Command Routing v2 — Merged and Human Governance Accepted |
 | Current Autonomy Level | Level 0 proven; Level 1 operationally demonstrated; Level 3 pilot execution passed twice; maturity advancement remains pending explicit Human Governance maturity acceptance |
 | Current Program | AI-DOS Distribution-Oriented Development Program |
-| Current Execution Step | Record Human Governance acceptance of merged PR #247 in ProjectStatus; do not select or activate the next task |
+| Current Execution Step | Post-Command-Routing-v2 acceptance hold — awaiting a later Human Governance continuation or explicit next-step invocation |
 | Target Repository | Forge AI |
 | Operational Readiness | Passed |
-| Readiness Verdict | `COMMAND ROUTING V2 MERGED AND HUMAN GOVERNANCE ACCEPTED — PROJECTSTATUS ACCEPTANCE RECORD PENDING` |
+| Readiness Verdict | `COMMAND ROUTING V2 ACCEPTED — NO EXECUTABLE TASK ACTIVE — AWAITING HUMAN GOVERNANCE CONTINUATION OR EXPLICIT NEXT-STEP SELECTION` |
 | Pilot Blockers | None |
 | Architecture State | Stable; protected from speculative redesign |
 | Governing Principle | Evidence Before Refactor |
@@ -89,21 +89,21 @@ On 2026-07-20, independent review of PR #247 at head `8ef274e8e5e99aabc9496ea517
 
 ## 3. Active Task
 
-Exactly one task is active.
+Exactly one operational hold is active; no executable work unit is active.
 
 | Field | Current State |
 |:---|:---|
-| Active Task ID | PR-247-ACCEPTANCE-STATE-UPDATE |
-| Active Task Name | Record Human Governance Acceptance of Command Routing v2 |
-| Task Type | Dedicated ProjectStatus acceptance transition |
-| Objective | Record acceptance of merged PR #247 at reviewed head `8ef274e8e5e99aabc9496ea5176796e1bc743577` and merge commit `b6fc6bda305784dc6e3ec1fad9c88db7d02a0922`. |
-| Success Definition | ProjectStatus records the independent review, passing validation, Human Governance acceptance, merge identity, closed Command Routing v2 correction, and a no-executable-task hold without selecting or activating the next task. |
-| Failure Definition | Any file other than ProjectStatus is modified; a next task or protected capability is selected or activated; execution begins; PR #247's reviewed or merge identity is altered; or acceptance is broadened beyond Command Routing v2. |
+| Active Task ID | POST-COMMAND-ROUTING-V2-ACCEPTANCE-HOLD |
+| Active Task Name | Await Human Governance Continuation or Explicit Next-Step Selection |
+| Task Type | Post-acceptance hold; no executable repository work authorized |
+| Objective | Preserve the accepted Command Routing v2 state until a later Human Governance `Continue`, `Next Task`, or `Next Step: X` invocation resolves a permitted transition. |
+| Success Definition | ProjectStatus remains stable until a later invocation deterministically selects and activates exactly one eligible bounded candidate, or safe-stops under the accepted routing rules. |
+| Failure Definition | Repository work begins without a later invocation; approval itself selects a task; more than one candidate is activated; a blocked, ineligible, or protected candidate is activated; or activation and execution occur in the same invocation. |
 | Scope Expansion | Prohibited |
 | Concurrent or Additional Work Unit | Prohibited |
-| Architecture Redesign | Prohibited |
+| Architecture Redesign | Prohibited unless separately authorized |
 | Repository-Wide Alignment | Prohibited |
-| ProjectStatus Update | Authorized only for this exact PR #247 acceptance transition |
+| ProjectStatus Update | Authorized only when a later Human Governance invocation uniquely derives an acceptance, activation, or other exact transition under the canonical Target contract |
 
 ---
 
@@ -112,19 +112,19 @@ Exactly one task is active.
 ### 4.1 Current Objective
 
 ```text
-RECORD HUMAN GOVERNANCE ACCEPTANCE OF MERGED PR #247
+COMMAND ROUTING V2 ACCEPTED — AWAIT A LATER HUMAN GOVERNANCE CONTINUATION OR EXPLICIT NEXT-STEP INVOCATION
 ```
 
 ### 4.2 Current Active Work
 
 ```text
-Dedicated single-file ProjectStatus acceptance transition; no next-task selection or activation
+None — post-acceptance hold; no executable work unit active
 ```
 
 ### 4.3 Execution Status
 
 ```text
-PR #247 MERGED AND ACCEPTED — PROJECTSTATUS ACCEPTANCE RECORD IN PROGRESS
+PR #247 MERGED AND ACCEPTED — COMMAND ROUTING V2 ACTIVE — NO NEXT TASK SELECTED
 ```
 
 ### 4.4 Authorized Next Action
@@ -268,25 +268,24 @@ Rules:
 
 ## 6. Authorized Scope
 
-While the active task is the PR #247 acceptance-state update, the current task may:
+While the post-acceptance hold is active, the current invocation may:
 
-- read the merged PR #247 identity, independent review verdict, validation result, and Human Governance acceptance record;
-- modify exactly one file, `docs/Projects/ForgeAI/Planning/ProjectStatus.md`;
-- record acceptance of Command Routing v2 and close its correction task;
-- establish a no-executable-task hold awaiting a later Human Governance `Continue`, `Next Task`, or `Next Step: X` invocation;
-- validate the single-file scope and exact commit identities;
-- create one draft PR containing only this state transition.
+- read ProjectStatus, DevelopmentPhases, Roadmap, Target contracts, and required evidence;
+- report the current no-executable-task state;
+- on a later Human Governance `Continue` or `Next Task` invocation, run eligibility and priority resolution under the accepted Command Routing v2 rules;
+- on a later `Next Step: X` invocation, validate `X` as exactly one eligible bounded candidate without bypassing any protected boundary;
+- route exactly one uniquely derived activation transition to ProjectStateUpdater and stop before execution;
+- safe-stop with deterministic blocker evidence when selection or activation is not unique and permitted.
 
-The current task may not:
+The hold itself may not:
 
-- modify any file other than `docs/Projects/ForgeAI/Planning/ProjectStatus.md`;
-- select, rank, authorize, activate, or execute a next Target Project work unit;
-- modify Roadmap, DevelopmentPhases, Mission, provider routing, workflows, or the governance skill;
-- merge the acceptance-state PR;
-- redesign AI-DOS or create a new architectural layer or artifact family;
-- implement CLI, validator, fixture, test, D3, D4, MCP, hosted-provider, Axis Suite, feedback-transport, or other capability behavior;
-- perform repository-wide alignment or fix unrelated findings;
-- reinterpret acceptance of PR #247 as permission for another task.
+- modify repository files;
+- select, rank, authorize, activate, or execute a next work unit without a later Human Governance invocation;
+- treat approval of PR #247 as continuation intent;
+- bypass eligibility, dependencies, validation, ownership, scope, evidence status, or protected boundaries;
+- activate and execute a work unit in the same invocation;
+- modify Roadmap, DevelopmentPhases, Mission, provider routing, workflows, or the governance skill by implication;
+- activate D3, D4, MCP, hosted-provider, Axis Suite, feedback transport, or another protected capability without independently sufficient current authority.
 
 ---
 
@@ -472,24 +471,24 @@ Distribution-Oriented Development Program
 └── D11 Multi-Target AI Highway                  NOT ACTIVATED
 ```
 
-Human Governance accepted D2, the Forge AI Target Skill Mechanism Foundation, the Audit Template Family Foundation, Stream 4 Work Unit 2, and Command Routing v2 through their recorded PRs. The only active task is the dedicated PR #247 ProjectStatus acceptance transition.
+Human Governance accepted D2, the Forge AI Target Skill Mechanism Foundation, the Audit Template Family Foundation, Stream 4 Work Unit 2, and Command Routing v2 through their recorded PRs.
 
 Current State
 
 ```text
-COMMAND ROUTING V2 MERGED AND HUMAN GOVERNANCE ACCEPTED — ACCEPTANCE-STATE UPDATE ACTIVE
+COMMAND ROUTING V2 ACCEPTED — POST-ACCEPTANCE HOLD — NO EXECUTABLE TASK ACTIVE
 ```
 
 Authorized activation:
 
 ```text
-The PR #247 ProjectStatus acceptance transition only, scoped to docs/Projects/ForgeAI/Planning/ProjectStatus.md.
+None from approval alone. A later Human Governance continuation or explicit next-step invocation may activate exactly one eligible bounded candidate through TaskPlanner and ProjectStateUpdater.
 ```
 
 Prohibited activations:
 
 ```text
-Any next Target Project work unit, D3 or later distribution work, Local MCP, hosted provider, Axis Suite, feedback transport, implementation behavior, validator, fixture, or test remains inactive. A later Human Governance continuation or explicit-selection invocation is required after this acceptance-state transition is merged.
+D3 or later distribution work, Local MCP, hosted provider, Axis Suite, feedback transport, implementation behavior, validator, fixture, test, or any other candidate lacking independently sufficient current authority remains inactive. Activation never authorizes same-invocation execution.
 ```
 
 ---
@@ -499,20 +498,21 @@ Any next Target Project work unit, D3 or later distribution work, Local MCP, hos
 ### Blockers
 
 ```text
-None inside the authorized acceptance transition. The next Target Project work unit is intentionally not selected or activated.
+None. No executable task is active. A later continuation or explicit next-step invocation must either produce exactly one permitted activation or safe-stop.
 ```
 
 ### Risks
 
 | Risk | Current Control |
 |:---|:---|
-| Acceptance is confused with GitHub review approval | Human Governance acceptance is a Target lifecycle decision; the independently reviewed SHA, acceptance comment, and merge commit are recorded separately. |
-| Acceptance selects or activates the next task | The instruction and this transition explicitly prohibit next-task selection and activation. |
-| The acceptance record expands beyond one file | Section 6 permits only ProjectStatus. |
-| A stale PR head is accepted | The reviewed and accepted head is fixed to `8ef274e8e5e99aabc9496ea5176796e1bc743577`, matching merged PR #247. |
-| Activation silently becomes execution | No activation occurs in this transition. |
-| D3 or another protected capability is activated by implication | Command Routing v2 acceptance grants no protected-capability authority. |
-| Evidence status is inferred from prose | Section 12.1 remains the explicit Roadmap-aligned status source after this transition. |
+| Approval is treated as continuation | PR #247 acceptance records no next-task selection; continuation requires a later invocation. |
+| A repository statement is confused with GitHub review approval | Human Governance lifecycle acceptance, independent technical review, and GitHub merge identity are recorded separately. |
+| Roadmap prose requires inferred evidence status | Section 12.1 is the exact status source; missing or mismatched data safe-stops. |
+| `next` selects a convenient but lower-priority task | Eligibility is filtered first and the earliest `Pending` Roadmap evidence item controls ranking. |
+| Multiple candidates are silently resolved by model judgment | A highest-priority tie safe-stops and reports candidates. |
+| `Next Step: X` bypasses safety boundaries | Explicit selection bypasses ranking only. |
+| Activation silently becomes execution | ProjectStateUpdater must stop after activation; execution requires a later invocation. |
+| D3 or another protected capability is activated by implication | Candidate eligibility must independently satisfy current capability and protected-boundary authority. |
 
 ---
 
@@ -572,12 +572,14 @@ Human Governance reviewed that verdict and explicitly accepted PR #241 as the Au
 ## 17. Exactly One Authorized Next Action
 
 ```text
-COMPLETE THE PR #247 PROJECTSTATUS ACCEPTANCE TRANSITION; DO NOT SELECT OR ACTIVATE THE NEXT TASK
+AWAIT HUMAN GOVERNANCE CONTINUATION OR EXPLICIT NEXT-STEP SELECTION
 ```
 
-This dedicated state update records acceptance only. It must remain a single-file ProjectStatus change and must not select, rank, authorize, activate, or execute another work unit.
+No executable work unit is active. PR #247 approval and merge did not select or activate the next task.
 
-After this acceptance transition is reviewed and merged, ProjectStatus returns to a no-executable-task state. A later, separate `Human Governance → Continue`, `Next Task`, or `Next Step: X` invocation may then apply the accepted Command Routing v2 rules. Approval itself does not perform that selection.
+On a later `Human Governance → Continue` or `Next Task` invocation, TaskPlanner shall use the accepted Command Routing v2 rules: validate the exact Roadmap-to-ProjectStatus evidence-status mapping, filter eligibility before ranking, select only the unique highest-priority eligible candidate for the earliest `Pending` item, route one activation through ProjectStateUpdater, and stop before execution. A blocked earliest item, missing or mismatched priority data, a highest-priority tie, or no eligible candidate requires safe-stop without fall-through.
+
+On a later `Next Step: X` invocation, `X` bypasses ranking only and must still resolve to exactly one eligible bounded candidate satisfying all dependencies and protected boundaries.
 
 ---
 
@@ -632,3 +634,4 @@ ProjectStatus does not:
 | `5.23.0-draft` | 2026-07-20 | Recorded the Human Governance authorization of the bounded Command Routing v2 correction in PR #247; restored `Approve`, `Continue` / `Next Task`, and ranking-only `Next Step: X` routing; defined Forge AI priority as the earliest unmet Required Evidence item in the current Roadmap stream; and required tie/no-candidate safe-stop evidence, protected-boundary preservation, and separation between activation and execution. |
 | `5.24.0-draft` | 2026-07-20 | Corrected the current operational state and exact eight-file scope for PR #247; replaced narrative-inferred Required Evidence completion with an explicit Roadmap-aligned status table; recorded PR #245 as accepted; and made independent review and separate Human Governance acceptance the only authorized next action. |
 | `5.25.0-draft` | 2026-07-20 | Recorded independent review, passing validation, Human Governance acceptance, and merge identities for PR #247; closed Command Routing v2 as accepted; activated only the dedicated single-file acceptance-state transition; and explicitly did not select or activate the next task. |
+| `5.26.0-draft` | 2026-07-20 | Closed the self-referential PR #247 acceptance-state update left active by merged PR #248; established the post-acceptance no-executable-task hold; and required a later continuation or explicit next-step invocation before any selection or activation. |
