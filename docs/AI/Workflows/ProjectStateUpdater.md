@@ -5,7 +5,7 @@
 | Field | Value |
 |:---|:---|
 | Identifier | `AI-DOS.WORKFLOW.PROJECT-STATE-UPDATER` |
-| Version | `3.0.0-draft` |
+| Version | `3.1.0-draft` |
 | Status | Draft |
 | Classification | Target-State Mutation Workflow |
 | Owner | AI-DOS Operational Core |
@@ -29,20 +29,21 @@ This workflow applies one explicitly authorized mutation to a Target-owned opera
 ## 3. Does Not Own
 
 - Target operational state, planning model, lifecycle schema, or transition policy.
-- Derivation of approval intent from informal language.
-- Selection of a next phase, stage, capability, milestone, or task.
+- Classification of Human Governance intent; it consumes intent resolved by AIOrchestrator and applicable Target-owned rules.
+- Selection of a next phase, stage, capability, milestone, or task; it consumes a bounded Task Planner selection record when activation is authorized.
 - Architecture, Governance, release, certification, or promotion authority.
 
 ## 4. Required Inputs
 
 A mutation requires:
 
-- an explicit state-update Execution Contract;
+- an explicit state-update Execution Contract, assembled from direct Human Governance instruction or from uniquely resolved Human Governance approval or continuation intent under Target-owned rules;
 - exact Target-owned artifact identity and owner;
 - current state and expected precondition;
 - exact fields or records allowed to change;
 - Target-owned transition rule or direct Human Governance instruction;
 - evidence required by that rule;
+- for continuation-driven activation, a Task Planner selection record containing exactly one bounded candidate and its activation precondition;
 - validation, rollback, and stop conditions.
 
 Without these inputs, the workflow may only produce a recommendation.
@@ -54,21 +55,23 @@ Without these inputs, the workflow may only produce a recommendation.
 3. Verify the requested transition against Target-owned transition rules or direct Human Governance instruction.
 4. Verify required validation, review, dependency, and protected-boundary evidence.
 5. Confirm exactly one mutation result is authorized.
-6. Apply only the named fields or records.
-7. Validate the resulting artifact and report the before/after state.
-8. Stop before selecting or executing subsequent work.
+6. For approval intent, apply only the uniquely derivable acceptance or gate-closing transition and do not select subsequent work.
+7. For continuation or next-task intent with no active executable work unit, activate only the single Task Planner-selected bounded candidate and do not execute it. When the invocation supplies `Next Step: X`, require the selection record to prove that `X` resolved to exactly one eligible bounded candidate; explicit selection bypasses ranking only.
+8. Apply only the named fields or records.
+9. Validate the resulting artifact and report the before/after state.
+10. Stop before selecting or executing subsequent work.
 
 ## 6. Prohibited Inference
 
 The following do not authorize state mutation:
 
-- `continue`, `advance`, `approve`, `next`, or similar language by itself;
+- literal command words considered without resolved Human Governance intent, Target-owned transition rules, and required evidence;
 - merge, completion, review, validation, or certification status;
 - registry presence, capability availability, installation, or provider availability;
 - a nearby Roadmap, ProjectStatus, DevelopmentPhases, or Forge AI convention;
 - the existence of exactly one convenient next task.
 
-Intent classification may route a request here, but only an explicit and uniquely bounded state-update authority permits mutation.
+Intent classification may route a request here. Human Governance approval intent may authorize a uniquely derivable acceptance or gate-closing transition. Human Governance continuation, advancement, or next-task intent may authorize activation only when Target-owned rules permit state-derived selection, no executable work unit is active, Task Planner resolves exactly one unique highest-priority eligible candidate or validates one explicit `Next Step: X` candidate, and exactly one activation transition follows. `Next Step: X` never overrides eligibility, dependency, scope, validation, ownership, or protected-boundary rules. Approval and continuation transitions remain separate unless the Target-owned contract explicitly combines them.
 
 ## 7. Safe Stop
 

@@ -1,10 +1,10 @@
 <!--
 Identifier: FORGE-AI.TARGET.AGENTS-CONTRACT
 Title: AGENTS.md — Forge AI Target Project Contract
-Version: 1.2.0-draft
+Version: 1.4.0-draft
 Status: Draft
 Owner: Forge AI Target Project Governance
-Updated: 2026-07-15
+Updated: 2026-07-20
 -->
 
 # AGENTS.md — Forge AI Target Project Contract
@@ -15,13 +15,13 @@ Updated: 2026-07-15
 |:---|:---|
 | Identifier | `FORGE-AI.TARGET.AGENTS-CONTRACT` |
 | Title | AGENTS.md — Forge AI Target Project Contract |
-| Version | `1.2.0-draft` |
+| Version | `1.4.0-draft` |
 | Status | Draft |
 | Classification | Forge AI Target Project Contract |
 | Document Type | Target Project Contract |
 | Owner | Forge AI Target Project Governance |
 | Approval Authority | Human Governance |
-| Last Updated | 2026-07-15 |
+| Last Updated | 2026-07-20 |
 | Scope | Forge AI Target Project identity, declared Target resources, operational entry, protected areas, state-derived work resolution, execution authorization boundaries, validation expectations, evidence expectations, and state-update authority. |
 | Out of Scope | Execution-provider identity, provider discovery, provider startup, provider internal paths, provider architecture, workflow routing, command routing, runtime behavior, implementation design, automatic state updates, and planning-document redesign. |
 | Normative Authority | Human Governance |
@@ -144,9 +144,32 @@ Task-specific Target authority, when declared
 7. Do not select work merely because it is easy, nearby, recently modified, already tested, buildable, or a continuation of the last implementation.
 8. Do not treat repository activity as Target progress unless it directly advances the active capability and authorized objective.
 9. Do not invent a task when the authoritative Target state cannot resolve one.
-10. If exactly one bounded authorized action cannot be resolved, stop and report a blocker.
+10. When Human Governance expresses continuation, advancement, or next-task intent and no executable work unit is active, treat that intent as authorization to run state-derived work selection.
+11. Reject unauthorized, insufficiently bounded, dependency-blocked, incompatible, or protected-boundary-crossing candidates before ranking.
+12. When Human Governance supplies `Next Step: X`, resolve `X` to exactly one eligible bounded candidate and bypass ranking only. The explicit selection does not override any protected boundary or eligibility rule.
+13. Otherwise, Task Planner shall select the unique highest-priority eligible candidate using only explicit priority semantics or an unambiguous ordering rule from the declared Target authorities.
+14. A highest-priority tie, missing priority semantics, no eligible candidate, or non-unique or ineligible `X` requires safe stop. The report shall identify considered candidates, rejection reasons, tied candidates when applicable, and non-authorizing possible next steps.
+15. When exactly one candidate is selected and exactly one ProjectStatus activation transition follows, route that transition to ProjectStateUpdater, activate the selected work unit, and stop before executing it.
 
-### 5.3 Explicitly Bounded Tasks
+### 5.3 Forge AI Priority Resolution
+
+For Forge AI state-derived selection, the Target-owned priority rule is:
+
+1. Scope candidates to the current active capability and its applicable Roadmap stream after ProjectStatus and DevelopmentPhases gates are applied.
+2. Read that Roadmap stream's `Required Evidence` items in their declared left-to-right order.
+3. Read the matching ProjectStatus `Roadmap Required Evidence Status` table. The table must reproduce every Required Evidence item exactly once, with exact text and order, and assign one allowed status: `Accepted`, `Pending`, or `Blocked`.
+4. Roadmap owns evidence-item identity and order. ProjectStatus owns current evidence status. Narrative history, repository activity, nearby implementation, merge state, or model judgment must not be used to infer status.
+5. Missing, duplicate, reordered, or text-mismatched rows, an unsupported status, or absence of the status table is missing or non-deterministic priority semantics and requires safe-stop.
+6. The earliest non-`Accepted` item controls selection. If its status is `Blocked`, report the recorded blocker and do not rank candidates or fall through.
+7. If the earliest non-`Accepted` item is `Pending`, eligible candidates directly advancing it share its priority. Exactly one such candidate must remain after eligibility filtering.
+8. More than one eligible candidate for that item is a highest-priority tie and requires Human Governance selection or `Next Step: X`.
+9. If no eligible candidate can advance that item, safe-stop with the missing authority, dependency, or evidence; do not fall through to a later item.
+10. Roadmap stream order and DevelopmentPhases order are dependency and capability boundaries, not permission to activate the next stream or phase. Crossing them requires separate Human Governance authority.
+11. An explicit `Next Step: X` may select a different eligible bounded candidate within current authority, but it does not waive any capability boundary, dependency, validation, ownership, or protected-area rule.
+
+This rule supplies deterministic Forge AI priority semantics without modifying Roadmap or DevelopmentPhases planning truth and without inferring completion from prose.
+
+### 5.4 Explicitly Bounded Tasks
 
 When Human Governance supplies an already bounded task with:
 
@@ -170,7 +193,7 @@ It must not be replaced, broadened, or reinterpreted through state-derived work 
 | Root repository entry | Modify only through an explicitly authorized repository-entry task. |
 | Target Project contract | Modify only through an explicitly authorized Target contract task. |
 | Mission and autonomy model | Read-only unless Human Governance explicitly authorizes mission work. |
-| ProjectStatus | Read-only unless the active task authorizes the exact state transition, Human Governance explicitly authorizes the exact state transition, or Human Governance approval intent uniquely derives the exact operational-state transition. |
+| ProjectStatus | Read-only unless the active task authorizes the exact state transition, Human Governance explicitly authorizes it, Human Governance approval intent uniquely derives the exact acceptance transition, or Human Governance continuation/next-task intent uniquely derives activation of one Task Planner-selected bounded work unit under Section 5. |
 | DevelopmentPhases | Read-only unless planning realignment is explicitly authorized. |
 | Roadmap | Read-only unless roadmap work is explicitly authorized. |
 | Evidence records | Preserve provenance; do not delete, obscure, rewrite, or fabricate evidence. |
@@ -235,7 +258,7 @@ ProjectStatus may be modified only when:
 3. the active task is a dedicated ProjectStatus task; or
 4. the active task instruction directly authorizes a specific operational-state update.
 
-Approval intent must route to ProjectStateUpdater when the current lifecycle gate requires an operational-state transition. TaskPlanner must not block, replace, or convert that approval-state transition into repository work selection. TaskGenerationWorkflow is not required for approval decisions or lifecycle state transitions unless a separate executable repository work unit is actually selected.
+Approval intent must route to ProjectStateUpdater when the current lifecycle gate requires an operational-state transition. TaskPlanner must not block, replace, or convert that approval-state transition into repository work selection. When no executable work unit is active, Human Governance continuation, advancement, or next-task intent must route through TaskPlanner. TaskPlanner selects the unique highest-priority eligible candidate under Target-owned priority semantics, or validates the explicitly selected `Next Step: X` candidate without bypassing eligibility or protected boundaries. If exactly one bounded candidate and one activation transition are resolved, ProjectStateUpdater activates that candidate and stops before execution. TaskGenerationWorkflow is not required for approval decisions or lifecycle state transitions unless a separate executable repository work unit is actually selected.
 
 ProjectStateUpdater must safe-stop without mutation when the transition is not unique, review has unresolved blocking findings, dependencies are unmet, or a protected boundary would be activated.
 
@@ -291,3 +314,5 @@ This Target Project contract does not define:
 | `1.0.0-draft` | 2026-07-11 | Initial Forge AI Target Project contract. |
 | `1.1.0-draft` | 2026-07-14 | Added Target Operational Entry and continuation resolution. |
 | `1.2.0-draft` | 2026-07-15 | Refactored the contract around Target-owned truth, provider independence, intent-based state-derived work resolution, bounded execution, validation, evidence, and authorization-bound state updates; removed provider-specific invocation and internal-path responsibilities. |
+| `1.3.0-draft` | 2026-07-20 | Restored Human Governance continuation and next-task intent as authorization for deterministic selection and activation of exactly one bounded work unit when no executable task is active; defined Forge AI priority as the earliest unmet Required Evidence item in the current Roadmap stream, ranking-only `Next Step: X` selection, tie/no-candidate safe-stop evidence, protected-boundary preservation, and separation between activation and execution. |
+| `1.4.0-draft` | 2026-07-20 | Made Forge AI priority status explicit: Roadmap owns exact Required Evidence order, ProjectStatus owns an exact item-by-item status table, and missing/mismatched status or any narrative inference requires safe-stop. |

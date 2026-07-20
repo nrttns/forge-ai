@@ -7,7 +7,7 @@
 | Field | Value |
 |:---|:---|
 | Identifier | `AI-DOS.OPERATIONAL.CORE.AI-ORCHESTRATOR` |
-| Version | `3.0.0-draft` |
+| Version | `3.1.0-draft` |
 | Status | Draft |
 | Classification | Operational Core |
 | Document Type | Orchestration Contract |
@@ -87,12 +87,12 @@ Each step is conditional on relevance, but authority, ownership, mutation scope,
 | Read, explain, compare, inspect, audit, or review | Evidence-only path; no mutation unless separately authorized |
 | Correct a bounded defect | Exact authorized correction path |
 | Implement a bounded capability | Implementation path within explicit Target authority and validation contract |
-| Continue or advance work without a bounded task | Route through Target-owned planning/state authorities to derive one candidate work unit; do not auto-transition Target state |
+| Continue, advance, or request the next task without a bounded task | Route through Target-owned planning/state authorities to derive at most one bounded candidate. When Target-owned rules make activation uniquely derivable, route the selected candidate to ProjectStateUpdater; do not execute the newly activated work in the same transition. |
 | Approve, certify, promote, release, or accept | Route to the owning governance lifecycle; do not reinterpret as ordinary completion |
 | Install, update, rollback, uninstall, or package AI-DOS | Consume A.6 and preserve product/Target ownership boundaries |
 | Pause, halt, or unresolved authority | Safe stop |
 
-Continuation intent authorizes work discovery, not an automatic ProjectStatus, DevelopmentPhases, Roadmap, certification, promotion, or release transition.
+Continuation intent authorizes work discovery. It authorizes exactly one Target-state activation only when the Target-owned contract defines continuation or next-task intent as selection authority, no executable work unit is active, Task Planner resolves exactly one bounded candidate, and the resulting transition is unique. It never authorizes DevelopmentPhases, Roadmap, certification, promotion, release, capability-boundary expansion, or execution of the newly activated work by implication.
 
 ## 6. Work-Unit Selection
 
@@ -103,9 +103,14 @@ When the user requests progress but supplies no bounded task:
 1. read the Target-owned state and planning authorities that are available in Resolved Target Context;
 2. identify candidate work units;
 3. reject candidates outside active scope, unmet dependencies, or protected boundaries;
-4. select one bounded candidate only when the result is uniquely supportable;
-5. safe-stop when multiple materially different candidates remain;
-6. do not mutate Target state merely because a candidate was selected.
+4. reject every candidate that is unauthorized, insufficiently bounded, dependency-blocked, or protected-boundary-crossing before ranking;
+5. when the invocation supplies `Next Step: X`, resolve `X` to exactly one eligible bounded candidate and bypass ranking only;
+6. otherwise, rank eligible candidates only by Target-owned priority semantics and select the unique highest-priority candidate;
+7. safe-stop on a highest-priority tie, absent or non-deterministic priority semantics, a non-unique or ineligible `X`, or no eligible candidate;
+8. include considered candidates, rejection reasons, and non-authorizing possible next steps in a no-candidate blocker report;
+9. when no executable work unit is active and Target-owned rules explicitly permit continuation-driven activation, route the single bounded selection record to ProjectStateUpdater for the exact activation transition;
+10. otherwise, do not mutate Target state merely because a candidate was selected;
+11. stop before executing work activated by that state transition.
 
 AI-DOS does not prescribe that every Target must have ProjectStatus, DevelopmentPhases, or Roadmap artifacts. Those names belong only to Targets that choose them.
 

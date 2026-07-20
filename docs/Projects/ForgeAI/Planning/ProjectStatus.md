@@ -8,7 +8,7 @@
 |:---|:---|
 | Identifier | `FORGE-AI.TARGET.PROJECT-STATUS` |
 | Title | Forge AI Operational State Model |
-| Version | `5.22.0-draft` |
+| Version | `5.24.0-draft` |
 | Status | Live Operational State |
 | Classification | Target Project Operational State |
 | Document Type | ProjectStatus |
@@ -54,13 +54,13 @@ AI-DOS owns reusable product truth and reusable capability behavior.
 | Field | Current State |
 |:---|:---|
 | Current Phase | Distribution v1 Local CLI Complete |
-| Current Capability | D2 Local CLI Package — Complete; Work Units 1 through 8 Accepted; Forge AI Target Skill Mechanism Foundation — Accepted; Audit Template Family Foundation — Accepted; Stream 4 Work Unit 2 — Accepted |
+| Current Capability | D2 Local CLI Package — Complete; Work Units 1 through 8 Accepted; Forge AI Target Skill Mechanism Foundation — Accepted; Audit Template Family Foundation — Accepted; Stream 4 Work Unit 2 — Accepted; Command Routing v2 Correction — Authorized and under independent review in PR #247 |
 | Current Autonomy Level | Level 0 proven; Level 1 operationally demonstrated; Level 3 pilot execution passed twice; maturity advancement remains pending explicit Human Governance maturity acceptance |
 | Current Program | AI-DOS Distribution-Oriented Development Program |
-| Current Execution Step | Post-Stream-4-Work-Unit-2 acceptance hold — awaiting explicit Human Governance selection of the next Target Project step |
+| Current Execution Step | Command Routing v2 correction — close independent review findings in draft PR #247; await Human Governance acceptance |
 | Target Repository | Forge AI |
 | Operational Readiness | Passed |
-| Readiness Verdict | `D2 COMPLETE — AUDIT TEMPLATE FAMILY FOUNDATION ACCEPTED — STREAM 4 WORK UNIT 2 ACCEPTED — AWAITING HUMAN GOVERNANCE NEXT-STEP SELECTION` |
+| Readiness Verdict | `COMMAND ROUTING V2 CORRECTION AUTHORIZED — PR #247 UNDER INDEPENDENT REVIEW — NOT YET ACCEPTED` |
 | Pilot Blockers | None |
 | Architecture State | Stable; protected from speculative redesign |
 | Governing Principle | Evidence Before Refactor |
@@ -81,6 +81,8 @@ On 2026-07-18, Human Governance explicitly authorized exactly one bounded next T
 
 On 2026-07-20, after PR #245's Deterministic Target Declaration Resolution Profile specification was iteratively corrected through independent review findings and remained scoped to `docs/AI/System/TargetRepositoryResolution.md`, Human Governance approved the work unit (`Human Governance → Approve`). This approval records acceptance of Stream 4 Work Unit 2 only. It does not authorize implementation behavior, CLI changes, validators, fixtures, tests, D3, D4, MCP, hosted-provider, Axis Suite, feedback transport, or any later capability. The active state returns to awaiting explicit Human Governance selection of the next Target Project step.
 
+On 2026-07-20, Human Governance explicitly authorized the bounded Command Routing v2 correction in PR #247, recorded by Human Governance in [PR #247 top-level comment #5021510475](https://github.com/doallon/forge-ai/pull/247#issuecomment-5021510475): `Approve` routes to ProjectStateUpdater; `Continue` or `Next Task` selects and activates the unique highest-priority authorized candidate; `Next Step: X` selects `X` subject to all protected boundaries; and highest-priority ties or no eligible candidate safe-stop. This authorization is limited to the routing and Target-contract documents changed by PR #247, does not itself activate a next work unit, and does not activate D3, D4, MCP, hosted-provider, Axis Suite, feedback transport, or any other protected capability.
+
 ---
 
 ## 3. Active Task
@@ -89,17 +91,17 @@ Exactly one task is active.
 
 | Field | Current State |
 |:---|:---|
-| Active Task ID | POST-STREAM-4-WORK-UNIT-2-ACCEPTANCE-HOLD |
-| Active Task Name | Await Human Governance Next-Step Selection After Stream 4 Work Unit 2 Acceptance |
-| Task Type | Post-acceptance hold; no executable work unit currently authorized |
-| Objective | Await explicit Human Governance selection of the next Target Project step after acceptance of Stream 4 Work Unit 2. |
-| Success Definition | Human Governance explicitly selects and bounds exactly one next Target Project step, or ProjectStatus remains in the post-acceptance hold. |
-| Failure Definition | Any next work unit, D3, D4, MCP, hosted-provider, Axis Suite, feedback transport, implementation behavior, validator, fixture, or test work is activated without separate explicit Human Governance authorization. |
+| Active Task ID | COMMAND-ROUTING-V2-CORRECTION |
+| Active Task Name | Restore Human Governance Command Routing v2 |
+| Task Type | Human-Governance-authorized bounded governance-policy correction; implementation in draft PR #247 under independent review |
+| Objective | Align approval routing, continuation/next-task selection and activation, ranking-only explicit selection, deterministic priority evidence, and safe-stop behavior across the exactly authorized eight documents. |
+| Success Definition | Independent review confirms that the eight-file correction is internally consistent; `Approve` routes only to ProjectStateUpdater; `Continue` / `Next Task` selects and activates only one unique highest-priority eligible candidate; `Next Step: X` bypasses ranking only; priority status is explicit rather than inferred; ties and no eligible candidate safe-stop; activation and execution remain separate. |
+| Failure Definition | Scope exceeds the eight authorized files; stale current-state rules remain; priority or evidence status requires narrative inference; approval selects next work; continuation executes newly activated work; explicit selection bypasses eligibility or a protected boundary; ambiguity does not safe-stop; or the correction claims acceptance or merge without Human Governance. |
 | Scope Expansion | Prohibited |
 | Concurrent or Additional Work Unit | Prohibited |
 | Architecture Redesign | Prohibited unless separately authorized |
 | Repository-Wide Alignment | Prohibited |
-| ProjectStatus Update | Authorized now only for recording Human Governance acceptance of Stream 4 Work Unit 2 and reinstating the post-acceptance next-step hold |
+| ProjectStatus Update | Authorized only as part of the bounded Command Routing v2 correction in PR #247; this update does not accept or merge the PR, activate a next work unit, or execute repository work |
 
 ---
 
@@ -108,19 +110,19 @@ Exactly one task is active.
 ### 4.1 Current Objective
 
 ```text
-STREAM 4 WORK UNIT 2 ACCEPTED — AWAITING HUMAN GOVERNANCE NEXT-STEP SELECTION
+COMMAND ROUTING V2 CORRECTION AUTHORIZED — CLOSE REVIEW FINDINGS IN PR #247
 ```
 
 ### 4.2 Current Active Work
 
 ```text
-Stream 4 Work Unit 2 (Deterministic Target Declaration Resolution Profile) is accepted; no next work unit is authorized
+Bounded eight-document governance-policy correction in draft PR #247; independent review pending
 ```
 
 ### 4.3 Execution Status
 
 ```text
-D2 COMPLETE; AUDIT TEMPLATE FAMILY FOUNDATION ACCEPTED; STREAM 4 WORK UNIT 2 ACCEPTED; POST-ACCEPTANCE HOLD ACTIVE
+IMPLEMENTED IN DRAFT — REVIEW FINDINGS UNDER CORRECTION — NOT ACCEPTED OR MERGED
 ```
 
 ### 4.4 Authorized Next Action
@@ -212,7 +214,18 @@ Stream 4 Work Unit 2 (Deterministic Target Declaration Resolution Profile) is co
 - no CLI or validator implementation, fixtures, or tests;
 - no activation of D3, D4, MCP, hosted-provider, Axis Suite, or feedback transport.
 
-No further Stream 4 work unit is authorized after Work Unit 2.
+Acceptance of Stream 4 Work Unit 2 did not activate a further Stream 4 work unit. A later work unit may be selected only through an accepted Command Routing v2 invocation or a separate explicit Human Governance instruction.
+
+The Command Routing v2 correction is complete only when independent review confirms:
+
+- the diff is limited to `docs/AI/AGENTS.md`, `docs/AI/AIOrchestrator.md`, `docs/AI/AgentSystemPrompt.md`, `docs/AI/Workflows/TaskPlanner.md`, `docs/AI/Workflows/ProjectStateUpdater.md`, `docs/Projects/ForgeAI/Mission/AGENTS.md`, `docs/Projects/ForgeAI/Planning/ProjectStatus.md`, and `docs/Projects/ForgeAI/Skills/forge-ai-governance/SKILL.md`;
+- `Approve` routes to ProjectStateUpdater and applies only the uniquely derivable acceptance or gate-closing transition without selecting a next task;
+- `Continue` / `Next Task` filters eligibility before ranking, selects only the unique highest-priority eligible candidate, routes activation through ProjectStateUpdater, and stops before execution;
+- `Next Step: X` bypasses ranking only and never bypasses eligibility, dependencies, validation, ownership, scope, or protected boundaries;
+- Roadmap supplies evidence-item order while ProjectStatus supplies an explicit, exact, reviewable status for every item; status is never inferred from narrative history or repository proximity;
+- missing or mismatched priority evidence, a blocked earliest item, a highest-priority tie, no eligible candidate, or a non-unique or ineligible `X` safe-stops with deterministic blocker evidence;
+- no next Target Project work unit or protected capability is activated by this correction itself;
+- the PR remains unaccepted until a separate Human Governance decision.
 
 ---
 
@@ -249,30 +262,35 @@ Rules:
 
 ## 6. Authorized Scope
 
-While the active task is Stream 4 Work Unit 2, the current task may:
+While the active task is the Command Routing v2 correction, the current task may:
 
-- read declared Target Repository resources;
-- resolve current operational context;
-- modify exactly one file, `docs/AI/System/TargetRepositoryResolution.md`, to define the authorized declaration recognition and resolution profile;
-- validate the change against the completion criteria in Section 4.5;
+- read Target-owned planning, operational-state, contract, and provider-routing resources needed to validate the correction;
+- modify exactly these eight files:
+  - `docs/AI/AGENTS.md`;
+  - `docs/AI/AIOrchestrator.md`;
+  - `docs/AI/AgentSystemPrompt.md`;
+  - `docs/AI/Workflows/TaskPlanner.md`;
+  - `docs/AI/Workflows/ProjectStateUpdater.md`;
+  - `docs/Projects/ForgeAI/Mission/AGENTS.md`;
+  - `docs/Projects/ForgeAI/Planning/ProjectStatus.md`;
+  - `docs/Projects/ForgeAI/Skills/forge-ai-governance/SKILL.md`;
+- correct independent review findings within those eight files;
+- validate scope, cross-document consistency, deterministic selection, safe-stop behavior, and protected boundaries;
+- update the existing draft PR #247 branch and description;
 - report objective, scope, changed artifacts, validation results, protected-area confirmation, blockers, and exactly one recommended next step.
 
 The current task may not:
 
-- modify any file other than `docs/AI/System/TargetRepositoryResolution.md`;
-- redefine, narrow, or expand the six existing Target declaration-coherence categories' semantics;
-- introduce `stale` or any other new blocker category not already defined;
-- implement CLI, validator, fixture, or test behavior;
-- redesign AI-DOS;
-- create a new architectural layer;
-- create a new Standard, Meta Model, Blueprint, RFC family, Governance model, Runtime family, Engine family, Agent family, Command family, Workflow family, Template family, Knowledge model, Memory model, Validation model, Review model, Certification model, Testing model, or Operational Core model;
-- perform repository-wide alignment;
-- fix unrelated findings;
-- repeat accepted PR #214, PR #218, PR #220, PR #222, PR #224, PR #226, PR #228, PR #229, or PR #241 scope, or the already-merged PR #235 (Stream 4 Work Unit 1) scope, without a proven need;
-- select or execute a new Target Project work unit beyond Stream 4 Work Unit 2, including any D3 or later distribution step, without explicit Human Governance authorization of that specific next step;
-- activate or begin MCP, hosted-provider, Axis Suite, feedback transport, D3, D4, or later work;
-- mark Stream 4 Work Unit 2 accepted or complete;
-- automatically update ProjectStatus beyond this authorization record.
+- modify any file outside the eight paths listed above, including `Roadmap.md` and `DevelopmentPhases.md`;
+- approve, merge, or mark PR #247 accepted;
+- activate or execute a next Target Project work unit;
+- infer Required Evidence completion from prose history, repository activity, or model judgment;
+- allow `Next Step: X` to bypass eligibility, dependencies, validation, ownership, scope, or protected boundaries;
+- redesign AI-DOS or create a new architectural layer or artifact family;
+- implement CLI, validator, fixture, test, D3, D4, MCP, hosted-provider, Axis Suite, feedback-transport, or other capability behavior;
+- perform repository-wide alignment or fix unrelated findings;
+- repeat or reinterpret accepted work-unit scope without a proven need;
+- automatically update ProjectStatus beyond this authorized correction record.
 
 ---
 
@@ -416,10 +434,28 @@ Human Governance must evaluate the evidence before accepting any maturity claim.
 | D2 Remaining Evidence | None | All D2 evidence items identified in Roadmap Stream 3 / Milestone D2 (install, execution, offline, runtime data, uninstall, rollback, Target path handling, validate command) have accepted implementation and passing validation. Human Governance approved D2 completion on 2026-07-17. |
 | D2 Completion Decision | Accepted | Human Governance explicitly approved D2 Local CLI Package (Distribution v1) as complete on 2026-07-17 (`HUMAN GOVERNANCE — Approve D2 Completion`). This approval does not activate D3 or later distribution work. |
 | Audit Template Family Foundation | Accepted | Human Governance accepted PR #241 on 2026-07-18 after independent review confirmed the merged implementation preserved the exactly authorized three-file scope recorded by PR #242, added a TPL-000-conformant Audit family entry and component template, and registered the family in `TemplateIndex.md` without modifying any other catalog family, `TemplateLibrary.md`, TPL-000/TPL-001, or the existing catalog-inventory/integrity-status language. Review verdict: `ACCEPTANCE READY`. |
-| Stream 4 Work Unit 2 (Deterministic Target Declaration Resolution Profile) | Authorized — Not Executed | Human Governance explicitly authorized this bounded specification work unit on 2026-07-18 (`HUMAN GOVERNANCE — Authorize exactly one bounded ProjectStatus transition for Stream 4 Work Unit 2: Deterministic Target Declaration Resolution Profile`), scoped to exactly one file, `docs/AI/System/TargetRepositoryResolution.md`. It builds on the already-merged PR #235 (Stream 4 Work Unit 1, v3.1.0-draft §3). Not yet implemented, reviewed, or accepted. |
-| External Target evidence | Not present | Axis Suite and external Target preparation/execution have not started and are not authorized by the active D2 Local CLI package state. |
+| Stream 4 Work Unit 2 (Deterministic Target Declaration Resolution Profile) | Accepted | Human Governance accepted PR #245 on 2026-07-20 after iterative independent review confirmed the specification remained within its single-file scope and closed the recorded determinism defects. |
+| Command Routing v2 Correction | Authorized — Under Independent Review | Human Governance authorized the bounded correction recorded in PR #247 top-level comment #5021510475. The draft implementation is not accepted or merged and does not activate or execute a next work unit. |
+| External Target evidence | Not present | Axis Suite and external Target preparation/execution have not started and remain outside current authority. |
+
+
+### 12.1 Stream 4 Roadmap Required Evidence Status
+
+This table is the sole Target-owned status input for Forge AI priority resolution within Roadmap Stream 4. Its item text and order must exactly match Stream 4's `Required Evidence` cell in `Roadmap.md`. Roadmap defines the ordered items; this table defines their current status. An agent must not infer status from narrative history, repository activity, or model judgment.
+
+| Priority | Exact Roadmap Required Evidence Item | Status | Accepted Evidence or Current Gap |
+|:---:|:---|:---|:---|
+| 1 | Minimal Target contract criteria | Accepted | Stream 4 Work Unit 1 (PR #235) and the accepted deterministic declaration profile in PR #245 establish the current Target contract and declaration criteria. |
+| 2 | onboarding validation | Pending | No Human-Governance-accepted onboarding validation implementation or evidence is recorded. |
+| 3 | protected-area proof | Pending | Declaration criteria exist, but no Human-Governance-accepted protected-area proof is recorded. |
+| 4 | validation declaration proof | Pending | Declaration criteria exist, but no Human-Governance-accepted validation-declaration proof is recorded. |
+| 5 | permissions proof | Pending | Declaration criteria exist, but no Human-Governance-accepted permissions proof is recorded. |
+| 6 | missing-context safe-stop evidence | Pending | Specification behavior exists, but no Human-Governance-accepted execution evidence is recorded. |
+
+Allowed status values are `Accepted`, `Pending`, and `Blocked`. Only explicit Human Governance acceptance evidence may set `Accepted`. `Pending` identifies an unmet item eligible for candidate resolution. `Blocked` requires safe-stop at that item and prohibits fall-through. Missing rows, duplicate rows, reordered rows, text mismatches against Roadmap, or any other status value require safe-stop as missing or non-deterministic priority semantics.
 
 ---
+
 
 ## 13. Execution Program State
 
@@ -440,30 +476,24 @@ Distribution-Oriented Development Program
 └── D11 Multi-Target AI Highway                  NOT ACTIVATED
 ```
 
-Human Governance accepted PR #214, PR #218, PR #220, PR #222, PR #224, and PR #226 as the first six bounded D2 work units, then retroactively accepted PR #228 and PR #229 on 2026-07-17 as the seventh and eighth bounded D2 work units after re-running validation, with the single-unit deviation explicitly recorded. On 2026-07-17, Human Governance explicitly approved D2 Local CLI Package (Distribution v1) as complete. D2 is closed.
+Human Governance accepted D2, the Forge AI Target Skill Mechanism Foundation, the Audit Template Family Foundation, and Stream 4 Work Unit 2 through their recorded PRs. The only active bounded task is the Command Routing v2 governance-policy correction in draft PR #247.
 
 Current State
 
 ```text
-D2 COMPLETE — DISTRIBUTION V1 LOCAL CLI ACCEPTED — STREAM 4 WORK UNIT 2 SPECIFICATION AUTHORIZED
-```
-
-Accepted D2 evidence:
-
-```text
-Explicit Target path handling, root Target-contract loading/validation, one bounded validate command, isolated local package installation, separate-process local execution, opt-in Target-separated runtime-data persistence, network-denied offline installation and execution, uninstall boundary validation, and rollback boundary validation.
+COMMAND ROUTING V2 CORRECTION AUTHORIZED — DRAFT PR #247 UNDER INDEPENDENT REVIEW
 ```
 
 Authorized activation:
 
 ```text
-Stream 4 Work Unit 2 (Deterministic Target Declaration Resolution Profile) only, scoped to exactly one file, docs/AI/System/TargetRepositoryResolution.md. This does not correspond to a D0-D11 distribution milestone and does not activate D3 Public System Interface.
+The Command Routing v2 correction only, scoped to the eight files listed in Section 6. This correction is a governance-policy task and does not activate a D0-D11 milestone or a subsequent Target Project work unit.
 ```
 
 Prohibited activations:
 
 ```text
-Local MCP, hosted provider, Axis Suite, feedback transport, D3 and later distribution work, and any Target Project work unit beyond Stream 4 Work Unit 2 remain unauthorized absent explicit Human Governance direction.
+Any next Target Project work unit, D3 or later distribution work, Local MCP, hosted provider, Axis Suite, feedback transport, implementation behavior, validator, fixture, or test remains inactive until PR #247 is independently reviewed and separately accepted, after which Command Routing v2 may process a later Human Governance continuation or explicit-selection invocation.
 ```
 
 ---
@@ -473,26 +503,22 @@ Local MCP, hosted provider, Axis Suite, feedback transport, D3 and later distrib
 ### Blockers
 
 ```text
-None identified. Stream 4 Work Unit 2 has been accepted; no next Target Project work unit is currently authorized.
+PR #247 cannot be accepted until independent review confirms that stale current-scope language and narrative-inferred priority semantics are removed. No next Target Project work unit may be selected or activated while this correction task is active.
 ```
 
 ### Risks
 
 | Risk | Current Control |
 |:---|:---|
-| D3 or a later distribution step is activated without explicit authorization | Stream 4 Work Unit 2 does not correspond to a D-milestone and does not activate D3; D3 and later remain unauthorized until Human Governance explicitly selects and bounds that step. |
-| Accepted PR #214, PR #218, PR #220, PR #222, PR #224, PR #226, PR #228, PR #229, PR #241, or PR #245 scope is repeated or reinterpreted | All ten accepted work units are recorded as completed and must not be repeated without a proven need. |
-| Existing active task is replaced by a newly invented task | ProjectStatus remains the live operational-state authority. |
-| Scope expands after execution begins | The selected work unit must be declared before editing. |
-| D2 completion approval is read as extending to D3 or later | The 2026-07-17 approval is explicit and scoped to D2 only; D3 and later require separate, explicit Human Governance authorization. |
-| Audit Template Family Foundation acceptance is read as activating another catalog family, normalization, certification, or ProjectStatus advancement | The 2026-07-18 acceptance is explicit and scoped to the three authorized paths only; no other catalog family, certification, or advancement is activated. |
-| A later distribution step is activated | D3 and later capabilities remain inactive. |
-| ProjectStatus changes automatically | Exact update authorization is required. |
-| Non-blocking findings trigger refactor | Only proven blockers may activate targeted correction; the pre-existing README/link-check findings surfaced by PR #241 remain unfixed pending a separate, authorized cleanup work unit. |
-| A single-unit authorization is silently exceeded again | The PR #228/PR #229 deviation was recorded rather than concealed; future deviations must be reported the same way. |
-| Stream 4 Work Unit 2 acceptance is read as authorizing implementation beyond `docs/AI/System/TargetRepositoryResolution.md` | Stream 4 Work Unit 2 is accepted as specification only; implementation behavior, validators, fixtures, tests, and any other file changes require separate explicit authorization. |
-| `stale` or another unauthorized blocker category is introduced during Stream 4 Work Unit 2 specification | Not authorized by this work unit; introducing `stale` or any other new category requires separate explicit Human Governance authorization. |
-| Stream 4 Work Unit 2 acceptance is mistaken for CLI implementation or next-work authorization | PR #245 acceptance covers specification only; CLI implementation and any next work unit require separate explicit Human Governance authorization. |
+| PR #247 is treated as self-approving or self-merging | The Human Governance authorization permits correction and review only; acceptance and merge remain separate Human Governance decisions. |
+| A repository statement is mistaken for independent authorization evidence | The top-level comment records the Human Governance instruction; the PR text does not claim the author is an independent reviewer. Independent technical review remains separately required. |
+| Roadmap prose requires an agent to infer whether an item is unmet | Section 12.1 provides exact item-by-item status; mismatch, missing status, or narrative inference safe-stops. |
+| Stale Work Unit 2 scope overrides the current correction | Sections 2, 3, 4, 6, 12, 13, 14, and 17 identify Command Routing v2 as the sole current task and its exact eight-file scope. |
+| `Continue` activates an arbitrary convenient task | Eligibility is filtered first; explicit status and ordering govern priority; ties, missing semantics, or no candidate safe-stop. |
+| `Next Step: X` bypasses safety boundaries | Explicit selection bypasses ranking only. |
+| Activation silently becomes execution | ProjectStateUpdater must stop after activation; execution requires a later invocation. |
+| D3 or another protected capability is activated by implication | Current authority is limited to the eight-document correction; protected capabilities remain inactive. |
+| Scope expands during review correction | The exact eight paths in Section 6 are the complete mutation boundary. |
 
 ---
 
@@ -514,6 +540,8 @@ On 2026-07-18, Human Governance explicitly authorized the bounded Audit Template
 On 2026-07-18, the task instruction `HUMAN GOVERNANCE — Authorize exactly one bounded ProjectStatus transition for Stream 4 Work Unit 2: Deterministic Target Declaration Resolution Profile` directly and uniquely authorized recording exactly one bounded work unit — Stream 4 Work Unit 2, scoped to `docs/AI/System/TargetRepositoryResolution.md` only — and explicitly authorized this ProjectStatus update recording that authorization. This authorization is scoped to recording the work-unit authorization only; it does not implement the specification, does not modify `docs/AI/System/TargetRepositoryResolution.md`, does not mark the work unit accepted or complete, and does not activate D3, D4, MCP, hosted-provider, Axis Suite, or feedback transport.
 
 On 2026-07-20, the instruction `Human Governance → Approve` directly and uniquely authorized recording acceptance of PR #245 as Stream 4 Work Unit 2 and reinstating the post-acceptance next-step hold. This authorization is scoped to acceptance of Stream 4 Work Unit 2 only; it does not select or authorize any next Target Project work unit and does not activate D3, D4, MCP, hosted-provider, Axis Suite, feedback transport, implementation behavior, validators, fixtures, or tests.
+
+On 2026-07-20, the instruction `Human Governance → Authorize the bounded Command Routing v2 correction in PR #247: Approve routes to ProjectStateUpdater; Continue/Next Task selects and activates the unique highest-priority authorized candidate; Next Step: X selects X subject to all protected boundaries; ties or no eligible candidate safe-stop.` was recorded by Human Governance in [PR #247 top-level comment #5021510475](https://github.com/doallon/forge-ai/pull/247#issuecomment-5021510475) and directly and uniquely authorized this bounded routing-policy correction and the corresponding ProjectStatus record. It does not approve or merge PR #247, execute any newly activated work, select a current next work unit, or activate D3, D4, MCP, hosted-provider, Axis Suite, feedback transport, or another protected capability.
 
 When update authority and uniquely derivable Human Governance approval intent are absent, the completion report must provide:
 
@@ -548,10 +576,12 @@ Human Governance reviewed that verdict and explicitly accepted PR #241 as the Au
 ## 17. Exactly One Authorized Next Action
 
 ```text
-AWAIT HUMAN GOVERNANCE SELECTION OF THE NEXT TARGET PROJECT STEP
+CLOSE INDEPENDENT REVIEW FINDINGS FOR PR #247, THEN AWAIT HUMAN GOVERNANCE ACCEPTANCE
 ```
 
-Human Governance has accepted Stream 4 Work Unit 2 through PR #245. No next Target Project work unit is currently authorized. D3, D4, MCP, hosted-provider, Axis Suite, feedback transport, implementation behavior, validators, fixtures, and tests remain unauthorized unless Human Governance explicitly selects and bounds a new work unit.
+The current invocation authorizes only the bounded Command Routing v2 correction and review cycle. It does not authorize acceptance, merge, selection of a subsequent work unit, or execution. Until PR #247 is independently reviewed and Human Governance separately accepts it, `Continue`, `Next Task`, and `Next Step: X` must not replace this active correction task.
+
+After acceptance returns ProjectStatus to a no-executable-task state, Forge AI continuation routing shall use Roadmap Stream 4 item order together with the exact status table in Section 12.1. The earliest `Pending` item is highest priority; an earliest `Blocked` item, a missing or mismatched table, multiple top eligible candidates, or no eligible candidate requires safe-stop without fall-through. A later `Next Step: X` invocation bypasses ranking only and remains subject to all eligibility and protected-boundary rules.
 
 ---
 
@@ -603,3 +633,5 @@ ProjectStatus does not:
 | `5.20.0-draft` | 2026-07-18 | Recorded Human Governance's explicit acceptance of PR #241 as the Audit Template Family Foundation and Active-Normalized-Library Integrity Validation work unit, based on an independent `ACCEPTANCE READY` review confirming the merged implementation preserved the authorized three-file scope and Template Library integrity; closed the work-unit acceptance, reinstated the post-acceptance next-step hold, and kept every other catalog family, D3, MCP, hosted-provider, Axis Suite, and feedback transport inactive pending separate explicit authorization. |
 | `5.21.0-draft` | 2026-07-18 | Recorded explicit Human Governance authorization of exactly one bounded specification work unit, Stream 4 Work Unit 2 (Deterministic Target Declaration Resolution Profile), scoped to `docs/AI/System/TargetRepositoryResolution.md` only; excluded CLI implementation, redefinition/expansion of the six declaration-coherence categories, introduction of `stale` as a new blocker category, and activation of D3, D4, MCP, hosted-provider, Axis Suite, or feedback transport; did not mark the work unit accepted or complete. |
 | `5.22.0-draft` | 2026-07-20 | Recorded Human Governance acceptance of PR #245 as Stream 4 Work Unit 2 (Deterministic Target Declaration Resolution Profile), reinstated the post-acceptance next-step hold, and kept D3, D4, MCP, hosted-provider, Axis Suite, feedback transport, implementation behavior, validators, fixtures, and tests unauthorized pending separate explicit Human Governance selection. |
+| `5.23.0-draft` | 2026-07-20 | Recorded the Human Governance authorization of the bounded Command Routing v2 correction in PR #247; restored `Approve`, `Continue` / `Next Task`, and ranking-only `Next Step: X` routing; defined Forge AI priority as the earliest unmet Required Evidence item in the current Roadmap stream; and required tie/no-candidate safe-stop evidence, protected-boundary preservation, and separation between activation and execution. |
+| `5.24.0-draft` | 2026-07-20 | Corrected the current operational state and exact eight-file scope for PR #247; replaced narrative-inferred Required Evidence completion with an explicit Roadmap-aligned status table; recorded PR #245 as accepted; and made independent review and separate Human Governance acceptance the only authorized next action. |

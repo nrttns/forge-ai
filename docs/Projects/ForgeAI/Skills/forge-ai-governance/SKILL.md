@@ -57,14 +57,21 @@ Task-specific Target authority, when declared
 
 ## 5. Bounded-Work Procedure
 
-1. Resolve the exactly one active task, or exactly one authorized next action, from ProjectStatus.
+1. Resolve the exactly one active task or exactly one authorized next action from ProjectStatus. When no executable task is active and Human Governance expresses continuation, advancement, or next-task intent, run the canonical Target contract's state-derived selection procedure.
 2. Confirm the requested or resolved work does not exceed that authorization.
 3. Preserve every protected area declared by the canonical Target Project contract and by ProjectStatus.
 4. Execute only the authorized scope; do not expand objectives, files, or follow-up work by implication.
 5. Run applicable validation and produce evidence.
 6. Report objective, scope, changed artifacts, validation results, protected-area confirmation, blockers, and exactly one recommended next step.
-7. Do not mutate ProjectStatus, Roadmap, DevelopmentPhases, or Mission documents without exact Human Governance authorization, or uniquely derivable Human Governance approval intent, as defined by the canonical Target Project contract.
-8. If exactly one bounded authorized action cannot be resolved, stop and report a blocker rather than inventing work.
+7. Do not mutate ProjectStatus, Roadmap, DevelopmentPhases, or Mission documents without exact Human Governance authorization, uniquely derivable Human Governance approval intent, or uniquely derivable continuation/next-task activation authority as defined by the canonical Target Project contract.
+8. For continuation-driven selection, reject ineligible candidates before ranking. Without an explicit selection, Task Planner selects only the unique highest-priority eligible candidate under Target-owned priority semantics.
+9. `Next Step: X` bypasses ranking only; `X` must resolve to exactly one eligible bounded candidate and remains subject to every dependency, validation, scope, ownership, and protected-boundary rule.
+10. ProjectStateUpdater may activate the selected candidate only when exactly one transition follows, and execution must stop until a later invocation.
+11. For Forge AI, resolve priority through Section 5.3 of the canonical Target contract: Roadmap supplies the exact `Required Evidence` item order and ProjectStatus supplies the exact status of each item in a matching `Roadmap Required Evidence Status` table.
+12. Never infer evidence status from narrative history, repository activity, merge state, nearby implementation, or model judgment. Missing, duplicate, reordered, text-mismatched, or unsupported status rows require safe stop.
+13. The earliest non-`Accepted` item controls selection. `Blocked` safe-stops without ranking or fall-through. For `Pending`, exactly one eligible candidate must directly advance that item.
+14. Multiple eligible candidates for that item are a tie. No eligible candidate for it is a blocker; do not fall through to later evidence, streams, phases, or capabilities.
+15. A highest-priority tie, missing priority semantics, a blocked item, no eligible candidate, or non-unique or ineligible `X` requires safe stop with considered candidates, rejection or tie reasons, and non-authorizing possible next steps.
 
 ## 6. Protected Areas
 

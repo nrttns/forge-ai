@@ -1,7 +1,7 @@
 <!--
 Identifier: AI-DOS.PROVIDER-ENTRY
 Title: AGENTS.md — AI-DOS Provider Entry Contract
-Version: 1.0.0
+Version: 1.1.0
 Status: Active
 Owner: AI-DOS Governance
 -->
@@ -44,6 +44,8 @@ docs/AI/System/ExecutionSequence.md
 
 TaskPlanner must run before repository-derived work selection or editing.
 
+When Human Governance expresses continuation, advancement, or next-task intent and no executable work unit is active, TaskPlanner shall resolve eligible candidates from the Target-owned planning sources in Resolved Target Context. It shall select the unique highest-priority eligible candidate under Target-owned priority semantics. A `Next Step: X` selection bypasses ranking only: `X` must still resolve to exactly one eligible bounded candidate and satisfy dependencies and protected boundaries. Tied highest priority, missing priority semantics, no eligible candidate, or a non-unique `X` requires safe stop.
+
 If TaskPlanner returns:
 
 ```text
@@ -60,7 +62,9 @@ When Human Governance supplies a sufficiently bounded task, route it through the
 
 After execution, validation, and evidence, consume `docs/AI/Workflows/ProjectStateUpdater.md` when the exact Target state update is authorized.
 
-Human Governance approval intent that reaches a current lifecycle gate requiring an operational-state transition must route to `docs/AI/Workflows/ProjectStateUpdater.md` for derivation. TaskPlanner must not safe-stop, replace, or convert a uniquely derivable approval-state transition into capability-grounded repository work selection. TaskGenerationWorkflow is not required unless a separate executable repository work unit is actually selected.
+Human Governance approval intent that reaches a current lifecycle gate requiring an operational-state transition must route to `docs/AI/Workflows/ProjectStateUpdater.md` for derivation. TaskPlanner must not safe-stop, replace, or convert a uniquely derivable approval-state transition into capability-grounded repository work selection.
+
+When Human Governance continuation or next-task intent produces one uniquely selected bounded candidate and the Target-owned contract authorizes activation, route the selection record to ProjectStateUpdater. ProjectStateUpdater may activate only that candidate and must stop before execution. A `Next Step: X` selection overrides candidate ranking, not eligibility, dependency, scope, validation, or protected-boundary checks. TaskGenerationWorkflow is not required for approval or activation transitions.
 
 Otherwise, produce only a recommended state update.
 
