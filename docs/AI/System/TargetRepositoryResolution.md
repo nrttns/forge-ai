@@ -91,6 +91,17 @@ The exact Target-authored category structures are:
 
 A `token` is non-empty text containing only ASCII letters, digits, `.`, `_`, or `-`. A `repository-relative-path` is a non-empty relative path, optionally expressed as a Markdown link in the exact form allowed by Section 3.0.2, that normalizes inside the resolved Target Repository boundary. `repository-relative-path-or-empty` is either empty or a `repository-relative-path`. `repository-relative-path-or-token` is either a `repository-relative-path` or a `token`. `integer-or-empty` is either empty or a base-10 integer. `non-empty-text` is text with at least one non-whitespace character.
 
+Malformed typed field values map deterministically to blocker codes as follows:
+
+- an empty value for `token`, `repository-relative-path`, `repository-relative-path-or-token`, enum fields, or `non-empty-text` maps to `empty`; empty values are valid for `repository-relative-path-or-empty` and `integer-or-empty`;
+- a value containing characters outside the `token` character set maps to `unsupported-syntax`;
+- a value outside a declared enum maps to `unsupported-syntax`;
+- a populated `integer-or-empty` value that is not a base-10 integer maps to `unsupported-syntax`;
+- a Markdown link that does not match `[label](relative/path.md#optional-heading-anchor)` maps to `unsupported-syntax`;
+- a path value that normalizes outside the resolved Target Repository boundary maps to `out-of-boundary`;
+- a path value that normalizes inside the boundary but cannot be resolved to an existing referenced location maps to `unresolvable-reference`;
+- a referenced location that exists but cannot be read maps to `inaccessible`.
+
 #### 3.0.4 Recognition Behavior
 
 Target Repository Resolution shall recognize declaration evidence by syntax and structure alone:
@@ -104,7 +115,17 @@ Target Repository Resolution shall recognize declaration evidence by syntax and 
 7. apply explicit numeric precedence only where the required Target-authored category table provides a `precedence` field, including the `target-resources` table;
 8. return success evidence or blocker evidence using the result shapes in Section 3.0.6.
 
-If the exact profile heading is absent, every Target-authored category result is a `missing` blocker and the resolver-owned safe-stop result reports the combined missing-profile blocker. If a Target-authored category heading or required table is absent, that category result is a `missing` blocker. If a Target-authored category heading is followed by any attempted declaration structure other than the required table, that category result is an `unsupported-syntax` blocker. If a required field is empty, malformed, inaccessible, outside the resolved Target Repository boundary, or points to an unresolvable reference, the affected category result is the corresponding blocker. Text that resembles a declaration but does not use the exact structures in this profile is not interpreted and cannot satisfy any category.
+If the exact profile heading is absent, every Target-authored category result is a `missing` blocker and the resolver-owned safe-stop result reports the combined missing-profile blocker. If a Target-authored category heading or required table is absent, that category result is a `missing` blocker. If a Target-authored category heading is followed by any attempted declaration structure other than the required table, that category result is an `unsupported-syntax` blocker. If a required field is empty, malformed, inaccessible, outside the resolved Target Repository boundary, or points to an unresolvable reference, the affected category result is the corresponding blocker from the mapping in Section 3.0.3. Text that resembles a declaration but does not use the exact structures in this profile is not interpreted and cannot satisfy any category.
+
+Precedence fields are evaluated deterministically after field validation and path normalization:
+
+1. rows are grouped by category and normalized location or path, as applicable to the category;
+2. an empty `precedence` value is lower priority than any populated integer value;
+3. populated integer precedence values are ordered from lowest number to highest priority, so `0` outranks `1`, and `1` outranks `2`;
+4. when all rows in a group have empty `precedence`, the group has no stated precedence and non-equivalent rows for the same normalized location or path are `ambiguous` or `conflicting` under the applicable category;
+5. when exactly one row has the highest priority, that row supplies the resolved evidence entry for the group;
+6. when two or more rows tie for highest priority and are equivalent after normalization, one resolved evidence entry is emitted for the group with duplicate locators preserved in detail;
+7. when two or more rows tie for highest priority and are non-equivalent after normalization, the category result is a `conflicting` blocker.
 
 #### 3.0.5 Blocker Codes
 
@@ -130,7 +151,7 @@ Category-level result shape:
 | `category_identifier` | enum(`target-resources`,`source-scope`,`protected-areas`,`validation`,`permissions-execution-authority`,`safe-stop-behavior`) | Identifies exactly one existing declaration-coherence category. |
 | `outcome` | enum(`success`,`blocker`) | Contains no third outcome. |
 | `declaration_locator` | repository-relative-path plus heading anchor or `resolver-owned` | Identifies the exact supported Markdown structure used for a Target-authored category, the nearest inspected locator when blocked before Target-authored category recognition, or `resolver-owned` for the Section 3.6 safe-stop result. |
-| `resolved_evidence_entries` | list of records | Required and non-empty when `outcome` is `success`; empty when `outcome` is `blocker`. For Target-authored categories, each record uses the field names and value types required for the category in Section 3.0.3 after path normalization. For the resolver-owned Section 3.6 result, entries use `condition: blocker-code`, `behavior: enum(blocker)`, and `detail: non-empty-text` derived from resolver findings. |
+| `resolved_evidence_entries` | list of records | Required and non-empty when `outcome` is `success`; empty when `outcome` is `blocker`. For Target-authored categories, each record uses the field names and value types required for the category in Section 3.0.3 after path normalization. For the resolver-owned Section 3.6 result, success uses exactly one entry with `condition: enum(none)`, `behavior: enum(no-blocker)`, and `detail: non-empty-text`; blocker follows the category-level blocker rule by leaving this list empty and placing detected safe-stop conditions in `blocker_detail`. |
 | `blocker_code` | enum listed in Section 3.0.5 or empty | Empty when `outcome` is `success`; required when `outcome` is `blocker`. |
 | `blocker_detail` | non-empty-text or empty | Empty when `outcome` is `success`; required when `outcome` is `blocker` and must identify the failed required structure, field, path, or condition. |
 
@@ -143,7 +164,13 @@ Combined result shape:
 | `blocker_count` | integer | Count of category results whose `outcome` is `blocker`. |
 | `summary` | non-empty-text | Deterministic summary of the overall outcome and blocker count. |
 
-Any category blocker makes the combined result a blocker.
+The resolver-owned `safe-stop-behavior` category result is constructed after the five Target-authored category results are known:
+
+1. if all five Target-authored category results are `success`, the safe-stop result is `success`, `declaration_locator` is `resolver-owned`, `resolved_evidence_entries` contains exactly one `none` / `no-blocker` entry, and `blocker_code` and `blocker_detail` are empty;
+2. if any Target-authored category result is `blocker`, the safe-stop result is `blocker`, `declaration_locator` is `resolver-owned`, `resolved_evidence_entries` is empty, `blocker_code` is the first blocker code in category order, and `blocker_detail` summarizes the category identifiers and blocker codes that caused safe stop;
+3. category order for the safe-stop summary is `target-resources`, `source-scope`, `protected-areas`, `validation`, then `permissions-execution-authority`.
+
+Any category blocker, including the constructed resolver-owned safe-stop blocker, makes the combined result a blocker.
 
 #### 3.0.7 Semantic-Inference Prohibition
 
