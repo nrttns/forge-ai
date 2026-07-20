@@ -122,7 +122,7 @@ Precedence fields are evaluated deterministically after field validation and pat
 1. rows are grouped by category and normalized location or path, as applicable to the category;
 2. an empty `precedence` value is lower priority than any populated integer value;
 3. populated integer precedence values are ordered from lowest number to highest priority, so `0` outranks `1`, and `1` outranks `2`;
-4. when all rows in a group have empty `precedence`, the group has no stated precedence and non-equivalent rows for the same normalized location or path produce exactly one deterministic outcome: `blocker_code: conflicting`;
+4. when all rows in a group have empty `precedence`, the group has no stated precedence and directly incompatible non-equivalent rows for the same normalized location or path produce exactly one deterministic outcome: `blocker_code: conflicting`;
 5. when exactly one row has the highest priority, that row supplies the resolved evidence entry for the group;
 6. when two or more rows tie for highest priority and are equivalent after normalization, one resolved evidence entry is emitted for the group with duplicate locators preserved in detail;
 7. when two or more rows tie for highest priority and are non-equivalent after normalization, the category result is a `conflicting` blocker.
@@ -140,7 +140,7 @@ Permitted blocker codes are limited to the already-authorized failure conditions
 - `unresolvable-reference`
 - `out-of-boundary`
 
-No other blocker code is valid for this profile. Section 3.6 safe-stop behavior is produced by the resolver from these blocker codes and from the success or blocker outcomes of Sections 3.1 through 3.5; a Target-authored `safe-stop-behavior` heading or table must not be recognized as declaration evidence.
+No other blocker code is valid for this profile. `conflicting` applies only to direct incompatible declarations for the same normalized location or category. `ambiguous` applies only when multiple interpretations remain after structural resolution without direct incompatible assignments. This classification deterministically represents the existing Section 3.1 blocker condition for an ambiguous authoritative resource set and does not change the semantics of Section 3.1. Section 3.6 safe-stop behavior is produced by the resolver from these blocker codes and from the success or blocker outcomes of Sections 3.1 through 3.5; a Target-authored `safe-stop-behavior` heading or table must not be recognized as declaration evidence.
 
 #### 3.0.6 Evidence Shapes
 
