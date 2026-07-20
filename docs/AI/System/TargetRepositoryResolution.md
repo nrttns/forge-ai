@@ -122,7 +122,7 @@ Precedence fields are evaluated deterministically after field validation and pat
 1. rows are grouped by category and normalized location or path, as applicable to the category;
 2. an empty `precedence` value is lower priority than any populated integer value;
 3. populated integer precedence values are ordered from lowest number to highest priority, so `0` outranks `1`, and `1` outranks `2`;
-4. when all rows in a group have empty `precedence`, the group has no stated precedence and non-equivalent rows for the same normalized location or path are `ambiguous` or `conflicting` under the applicable category;
+4. when all rows in a group have empty `precedence`, the group has no stated precedence and non-equivalent rows for the same normalized location or path produce exactly one deterministic outcome: `blocker_code: conflicting`;
 5. when exactly one row has the highest priority, that row supplies the resolved evidence entry for the group;
 6. when two or more rows tie for highest priority and are equivalent after normalization, one resolved evidence entry is emitted for the group with duplicate locators preserved in detail;
 7. when two or more rows tie for highest priority and are non-equivalent after normalization, the category result is a `conflicting` blocker.
