@@ -1,7 +1,7 @@
 <!--
 Identifier: AI-DOS.PROVIDER-ENTRY
 Title: AGENTS.md — AI-DOS Provider Entry Contract
-Version: 1.4.0
+Version: 1.5.0
 Status: Active
 Owner: AI-DOS Governance
 -->
@@ -45,6 +45,8 @@ docs/AI/System/ExecutionSequence.md
 TaskPlanner must run before repository-derived work selection or editing.
 
 When continuation, advancement, or next-task intent reaches this entry, route the Resolved Target Context to `TaskPlanner.md`. `TaskPlanner.md` exclusively owns candidate eligibility, priority, selection, and its safe-stop record. When candidate construction is required, it delegates to `TaskGenerationWorkflow.md`, which exclusively owns the Target-owned generation-input schema, enumeration, minimality, and generation safe stops. This entry contract does not restate either workflow.
+
+When the resolved Target state's exactly one authorized next action is to await Human Governance continuation or an explicit next-step selection, a continuation or advancement invocation is itself the awaited signal for that wait. This entry contract shall consume that signal once and continue the route above; it shall not request a duplicate continuation confirmation solely because the invocation does not itself name an executable work unit. Consuming the signal does not by itself authorize candidate generation, candidate selection, state-transition activation, or execution; those remain owned respectively by `TaskGenerationWorkflow.md`, `TaskPlanner.md`, `ProjectStateUpdater.md`, and the applicable Execution Provider.
 
 If TaskPlanner returns:
 
