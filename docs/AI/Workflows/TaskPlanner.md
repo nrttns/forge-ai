@@ -5,7 +5,7 @@
 | Field | Value |
 |:---|:---|
 | Identifier | `AI-DOS.WORKFLOW.TASK-PLANNER` |
-| Version | `3.3.0-draft` |
+| Version | `3.4.0-draft` |
 | Status | Draft |
 | Classification | Task Routing Workflow |
 | Owner | AI-DOS Operational Core |
@@ -57,7 +57,7 @@ AI-DOS shall not infer missing planning inputs from Forge AI or from nearby repo
 4. Reject predeclared candidates lacking authority, ownership, bounded scope, validation path, direct outcome trace, or protected-boundary compliance.
 5. If the invocation supplies `Next Step: X`, resolve `X` to a predeclared eligible candidate; when `X` is not already bounded, issue one generation request scoped to `X`. Explicit selection bypasses ranking only.
 6. Otherwise, rank eligible predeclared candidates through Target-owned priority semantics and select the unique highest-priority candidate when one exists.
-7. When no predeclared candidate is eligible for the controlling objective, issue exactly one request conforming to `TaskGenerationWorkflow.md`; do not reinterpret or duplicate its source-profile schema.
+7. When no predeclared candidate is eligible for the controlling objective, issue exactly one request conforming to `TaskGenerationWorkflow.md`; do not reinterpret or duplicate its generation-input schema.
 8. Accept only its conforming generated-candidate record or generation safe-stop record. Validate record provenance and integrity, then validate a returned candidate exactly as a predeclared candidate.
 9. Treat generation uniqueness and minimality evidence as owned by `TaskGenerationWorkflow.md`; Task Planner verifies that the required evidence is present and conforming but does not recompute it through a second algorithm.
 10. Select exactly one validated candidate and include whether it was predeclared or generated plus full provenance and applicable generation evidence.

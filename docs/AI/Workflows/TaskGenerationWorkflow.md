@@ -5,7 +5,7 @@
 | Field | Value |
 |:---|:---|
 | Identifier | `AI-DOS.WORKFLOW.TASK-GENERATION` |
-| Version | `3.2.0-draft` |
+| Version | `3.3.0-draft` |
 | Status | Draft |
 | Classification | Candidate Generation and Execution-Contract Preparation Workflow |
 | Owner | AI-DOS Operational Core |
@@ -49,7 +49,7 @@ Generation requires one request containing:
 - Human Governance continuation, next-task, or explicit-selection authority;
 - one fixed controlling objective and its Target-owned source;
 - current capability and dependency boundary;
-- one finite Target-owned `Candidate Generation Source Profile` for the fixed objective;
+- one finite Target-owned generation input for the fixed objective;
 - permitted Target resource boundary and owner declarations;
 - protected areas and prohibited capabilities;
 - available validation authorities and evidence requirement;
@@ -57,7 +57,7 @@ Generation requires one request containing:
 
 The request must not ask this workflow to choose among objectives or cross a capability boundary.
 
-The Candidate Generation Source Profile is required and contains only finite records:
+The Target-owned generation input is required and contains only finite records:
 
 - `objective_id`: exact controlling objective identifier;
 - `artifact_options`: ordered records of `option_id`, exact existing path or exact Target-rule expansion, owner, mutation kind, mandatory flag, optional `choice_group`, and validation-profile identifier;
@@ -86,7 +86,7 @@ A directory, glob, inferred new path, or open-ended “related files” scope is
 
 For one fixed objective:
 
-1. Validate that the Candidate Generation Source Profile is finite, exact, internally consistent, and bound to the fixed objective.
+1. Validate that the Target-owned generation input is finite, exact, internally consistent, and bound to the fixed objective.
 2. Expand every total placement/naming rule to its exact path; reject any expansion with zero, multiple, or unresolved results.
 3. Construct the complete candidate set mechanically: include every mandatory option, choose exactly one option from each declared choice group, include only combinations permitted by compatibility/exclusion rules, and reject combinations exceeding the declared maximum artifact count.
 4. Attach only the validation profiles referenced by the selected artifact options; reject a combination whose profiles conflict or do not jointly define one observable completion predicate.
@@ -94,7 +94,7 @@ For one fixed objective:
 6. Remove exact duplicates.
 7. Candidate A is smaller than candidate B only when A's mutation-artifact set is a strict subset of B's and A has the same objective, validation, evidence, and completion conditions.
 8. Remove every strict superset.
-9. If exactly one candidate remains, return it with the source-profile hash or identity, full enumeration trace, and comparison evidence.
+9. If exactly one candidate remains, return it with the generation-input hash or identity, full enumeration trace, and comparison evidence.
 10. If zero candidates remain, safe-stop for missing or inconsistent grounding.
 11. If more than one incomparable candidate remains, safe-stop as a non-unique minimal generation result.
 
@@ -105,7 +105,7 @@ Line count, estimated effort, implementation ease, alphabetical order, repositor
 ## 7. Generation Sequence
 
 1. Verify request provenance, fixed objective, authority, and boundaries.
-2. Validate and freeze the finite Candidate Generation Source Profile.
+2. Validate and freeze the finite Target-owned generation input.
 3. Exhaustively enumerate candidates by the profile's combination rules without repository search or model-proposed options.
 4. Complete every bounded-candidate field from profile records.
 5. Apply deterministic minimality.
@@ -155,4 +155,4 @@ A generation safe-stop record contains the fixed objective, candidates attempted
 
 ## 11. Safe Stop
 
-Do not generate or translate when authority provenance is missing, the objective is not fixed, the Candidate Generation Source Profile is missing, non-finite, open-ended, contradictory, or not exactly bound to the objective, a path rule does not expand to exactly one path, exhaustive combination enumeration is impossible, scope is not exact, owner or validation is unavailable, completion is not observable, a protected boundary would be crossed, or more than one incomparable minimal candidate remains.
+Do not generate or translate when authority provenance is missing, the objective is not fixed, the Target-owned generation input is missing, non-finite, open-ended, contradictory, or not exactly bound to the objective, a path rule does not expand to exactly one path, exhaustive combination enumeration is impossible, scope is not exact, owner or validation is unavailable, completion is not observable, a protected boundary would be crossed, or more than one incomparable minimal candidate remains.

@@ -50,7 +50,7 @@ The canonical Target Project contract owns the authority-resolution order. Read 
 3. Pass the resolved Target Context to `docs/AI/AGENTS.md` for provider routing.
 4. Report the consumed authorities, actions, validation, evidence, blockers, and result.
 
-This skill supplies discovery and reading order only. It does not own or restate Target policy, provider behavior, selection, generation, mutation, or safe-stop semantics.
+This skill requires consumption and application of the owning Target and provider contracts identified above, in the order given; it does not itself own or restate their Target policy, provider behavior, selection, generation, mutation, or safe-stop semantics.
 
 ## 6. Protected Areas
 

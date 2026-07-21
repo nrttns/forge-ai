@@ -1,7 +1,7 @@
 <!--
 Identifier: AI-DOS.PROVIDER-ENTRY
 Title: AGENTS.md — AI-DOS Provider Entry Contract
-Version: 1.3.0
+Version: 1.4.0
 Status: Active
 Owner: AI-DOS Governance
 -->
@@ -44,7 +44,7 @@ docs/AI/System/ExecutionSequence.md
 
 TaskPlanner must run before repository-derived work selection or editing.
 
-When continuation, advancement, or next-task intent reaches this entry, route the Resolved Target Context to `TaskPlanner.md`. `TaskPlanner.md` exclusively owns candidate eligibility, priority, selection, and its safe-stop record. When candidate construction is required, it delegates to `TaskGenerationWorkflow.md`, which exclusively owns the Candidate Generation Source Profile schema, enumeration, minimality, and generation safe stops. This entry contract does not restate either workflow.
+When continuation, advancement, or next-task intent reaches this entry, route the Resolved Target Context to `TaskPlanner.md`. `TaskPlanner.md` exclusively owns candidate eligibility, priority, selection, and its safe-stop record. When candidate construction is required, it delegates to `TaskGenerationWorkflow.md`, which exclusively owns the Target-owned generation-input schema, enumeration, minimality, and generation safe stops. This entry contract does not restate either workflow.
 
 If TaskPlanner returns:
 
