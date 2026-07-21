@@ -8,7 +8,7 @@
 |:---|:---|
 | Identifier | `FORGE-AI.TARGET.CGSP.S4-E2` |
 | Title | Candidate Generation Source Profile Instance — Stream 4 Target Onboarding Validation (`S4-E2`) |
-| Version | `1.1.0` |
+| Version | `1.1.1` |
 | Status | Declared |
 | Classification | Target-Owned Candidate Generation Source Profile Instance |
 | Document Type | Candidate and Transition Input |
@@ -69,7 +69,7 @@ Notes on exactness and provenance:
 
 | Case ID | Declared Onboarding Condition | Accepted `S4-E1` Contract Element Tested | Expected Observable Outcome |
 |:---|:---|:---|:---|
-| `CASE-1` | Target Context supplies every resource declared by `Mission/AGENTS.md` §3 (Mission, ProjectStatus, DevelopmentPhases, Roadmap, Reports, Source/implementation resources, Validation resources), and root `AGENTS.md` §5's Mandatory Reading Order is followed in full | Root `AGENTS.md` §5 Mandatory Reading Order; `Mission/AGENTS.md` §3 Declared Target Resources | `Success` — Target Context resolves completely; bounded execution may proceed |
+| `CASE-1` | The canonical Target Operational Entry (`ProjectStatus.md`, per `Mission/AGENTS.md` §4) is resolvable; root `AGENTS.md` §5's Mandatory Reading Order resolves in full; and the Target-owned authorities needed for the requested resolution (e.g. Mission, DevelopmentPhases, Roadmap, as applicable to the invocation) are accessible. Reports, Source/implementation resources, and Validation resources (`Mission/AGENTS.md` §3) are required only when the resolved task declares them and are not treated as unconditional onboarding prerequisites | Root `AGENTS.md` §5 Mandatory Reading Order; `Mission/AGENTS.md` §3 Declared Target Resources; `Mission/AGENTS.md` §4 Target Operational Entry | `Success` — Target Context resolves completely for a minimal valid onboarding invocation; bounded execution may proceed without requiring task-specific source or validation resources absent a resolved task |
 | `CASE-2` | Target Context cannot resolve `ProjectStatus.md`, the sole Target Operational Entry | `Mission/AGENTS.md` §4 Target Operational Entry | `Blocker` — missing Target Operational Entry; onboarding stops |
 | `CASE-3` | Invocation requests modification of a Protected Area listed in `Mission/AGENTS.md` §6 without explicit authorization | `Mission/AGENTS.md` §6 Protected Areas | `Blocker` — protected-area conflict; work stops and is reported |
 | `CASE-4` | Invocation expresses continuation or advancement intent while no executable work unit is active and no Candidate Generation Source Profile instance is declared for the controlling objective | `Mission/AGENTS.md` §5.2 rules 9 and 14; `ProjectStatus.md` §12 | `Blocker` — safe stop; no work is invented |
@@ -132,3 +132,4 @@ This profile instance does not:
 |:---|:---|:---|
 | `1.0.0` | 2026-07-21 | Initial declared Candidate Generation Source Profile instance bound to `S4-E2`, derived solely from `ProjectStatus.md`, `DevelopmentPhases.md`, `Roadmap.md`, and `Mission/AGENTS.md`. |
 | `1.1.0` | 2026-07-21 | Corrected in place per Human Governance review: replaced `VP-1`'s reuse of `S4-E1`/Phase 1 evidence categories with four finite onboarding-declaration evaluation cases producing observable `Success`/`Blocker` outcomes against the accepted `S4-E1` contract boundary; reclassified `OPT-1`'s exact path and filename as a Human-Governance-authorized profile-design decision rather than a repository-derived naming rule, and removed the claim that no other artifact option exists. No artifact other than this file changed; binding, exact path, finite records, and one-candidate cardinality preserved. |
+| `1.1.1` | 2026-07-21 | Corrected `CASE-1` in place per Human Governance review: success now requires only that the canonical Target Operational Entry resolves, the Mandatory Reading Order resolves, and the Target-owned authorities needed for the requested resolution are accessible; Reports, Source/implementation resources, and Validation resources are required only when the resolved task declares them, removing the prior unconditional requirement for all `Mission/AGENTS.md` §3 resource categories. `CASE-2`–`CASE-4`, the artifact path, candidate cardinality, and combination rules are unchanged. |
