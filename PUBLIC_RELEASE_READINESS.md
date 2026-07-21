@@ -10,7 +10,7 @@ Public visibility is a repository-administration action. It does not approve, ce
 
 - [x] Forge AI and AI-DOS identities are stated separately in the repository README.
 - [x] The npm package remains protected from accidental publication with `"private": true`.
-- [x] Apache License 2.0 is adopted with `Copyright 2026 nrttns`, and package metadata is aligned to `Apache-2.0`.
+- [x] Apache License 2.0 is adopted with `Copyright 2026 doallon`, and package metadata is aligned to `Apache-2.0`.
 - [x] Security reporting boundaries are documented.
 - [x] External contributions are explicitly closed during public preview.
 - [x] Common local credentials, certificates, environment files, editor state, build output, dependencies, and coverage output are ignored.
