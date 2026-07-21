@@ -57,9 +57,15 @@ Execute `AI-DOS.PILOT.EXECUTION-002` by operating AI-DOS against the Forge AI Ta
 | `docs/AI/Workflows/TaskGenerationWorkflow.md` | Executable task generation boundary from the selected work unit. |
 | `docs/AI/System/ExecutionSequence.md` | Bounded execution handoff and validation boundary. |
 
-## 4. TaskPlanner Work-Selection Record
+## 4. Forge AI Pilot Selection Evidence (Target-Owned)
 
-| Required Field | Record |
+The canonical Selection Record schema is owned exclusively by `docs/AI/Workflows/TaskPlanner.md` §6 (Selection Record) and is not restated, redefined, or extended by this section.
+
+The table below is unmodified historical evidence recorded for this pilot. Some rows correspond in substance to concepts named in the canonical Selection Record (for example: selected objective, source authority, scope, protected boundaries, expected outcome, validation requirements, completion condition, and rejected alternatives), captured here under this pilot's own descriptive labels rather than the canonical schema's field names. The remaining rows — including Repository Evidence Inspected, Candidate Work Units Considered, Candidate Classifications, Capability Limitation Before Work, Capability State After Work, Observable Behavioral Difference, Direct Capability Contribution, Reusable AI-DOS Contribution, Reusable Beyond Forge AI, Advancement Evidence, Support-Work Exclusion, and Authorization Threshold Result — are Forge AI Target-owned evidence and explanatory fields recorded for this pilot's audit trail and have no counterpart in the canonical schema.
+
+Non-authority statement: these Target-owned evidence and explanatory fields do not amend, extend, define, or replace the AI-DOS TaskPlanner Selection Record contract. That contract remains solely owned and defined by `docs/AI/Workflows/TaskPlanner.md` §6.
+
+| Recorded Field | Record |
 |:---|:---|
 | Active ProjectStatus Task | `AI-DOS.PILOT.EXECUTION-002` |
 | Active Phase | Phase 3 — Execution, Validation, Review |
