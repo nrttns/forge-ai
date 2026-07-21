@@ -8,7 +8,7 @@
 |:---|:---|
 | Identifier | `FORGE-AI.TARGET.CGSP.S4-E2` |
 | Title | Candidate Generation Source Profile Instance — Stream 4 Target Onboarding Validation (`S4-E2`) |
-| Version | `1.0.0` |
+| Version | `1.1.0` |
 | Status | Declared |
 | Classification | Target-Owned Candidate Generation Source Profile Instance |
 | Document Type | Candidate and Transition Input |
@@ -37,8 +37,8 @@ Grounding for the objective binding:
 
 - `Roadmap.md` §6 Stream 4 declares `S4-E2` = "onboarding validation" and lists it as the second Required Evidence identifier for Stream 4 — Target Contract and Onboarding.
 - `ProjectStatus.md` §1, §2, and §6 record `S4-E2` as the current Controlling Objective ID: `S4-E1` is `Accepted`; `S4-E2` is the earliest `Pending` identifier and therefore controls priority under `Mission/AGENTS.md` §5.3 rule 4.
-- `DevelopmentPhases.md` Phase 1 ("Target-First Invocation and Execution Contract") declares the applicable Required Evidence category this profile draws its validation predicate from: "Invocation records, Target Context examples, blocker evidence for missing authority, and proof that Target contracts remain Target-owned."
-- `Mission/AGENTS.md` §3 declares `docs/Projects/ForgeAI/Reports/` as the Target-owned resource for "Target Project operational evidence and findings," which is the only declared resource category capable of holding new onboarding-validation evidence.
+- `DevelopmentPhases.md` Phase 1 ("Target-First Invocation and Execution Contract") establishes the maturity boundary this stream operates within — "Invocation records, Target Context examples, blocker evidence for missing authority, and proof that Target contracts remain Target-owned" — but is consumed here only as boundary context; `VP-1` (§3) defines its own `S4-E2`-specific evaluation cases rather than restating Phase 1's evidence categories as its completion predicate.
+- `Mission/AGENTS.md` §3 declares `docs/Projects/ForgeAI/Reports/` as the Target-owned resource whose stated purpose — "Target Project operational evidence and findings" — matches onboarding-validation evidence.
 
 No other Target-owned document declares `S4-E2` content; no repository-wide scan, RC2 finding, or recent-commit inspection was used to derive this binding or the artifact option below.
 
@@ -50,23 +50,39 @@ No other Target-owned document declares `S4-E2` content; no repository-wide scan
 |:---|:---|:---|:---|:---|:---|:---|
 | `OPT-1` | `docs/Projects/ForgeAI/Reports/AI-DOS-Target-Onboarding-Validation-001-Evidence.md` | Forge AI Target Project Governance | Create | `true` | — (none) | `VP-1` |
 
-Notes on exactness:
+Notes on exactness and provenance:
 
 - `OPT-1`'s path is declared as an exact, literal repository-relative path fixed by this profile — not a directory, glob, or open-ended "related files" scope, and not an expansion rule requiring runtime resolution.
-- The path sits inside `docs/Projects/ForgeAI/Reports/`, the Target resource that `Mission/AGENTS.md` §3 declares for Target Project operational evidence and findings — the only declared resource category matching "onboarding validation" evidence.
-- The filename follows the existing literal naming pattern already present in that directory (`AI-DOS-<Topic>-<NNN>-<Kind>.md`, e.g. `AI-DOS-Pilot-Execution-002-Evidence.md`) solely to avoid a path collision and preserve directory-naming consistency; this is an administrative naming choice made by this authorized profile-creation task, not a derivation of candidate substance from repository scanning.
+- The path sits inside `docs/Projects/ForgeAI/Reports/`, the Target-owned resource whose stated purpose (`Mission/AGENTS.md` §3: "Target Project operational evidence and findings") matches onboarding-validation evidence.
+- The exact path and filename are a **Human-Governance-authorized profile-design decision made within this bounded planning work unit** — they are not a naming rule derived from, mandated by, or enumerated out of repository convention. Consulting the existing filenames already present in `docs/Projects/ForgeAI/Reports/` (e.g. `AI-DOS-Pilot-Execution-002-Evidence.md`) served only as a non-binding stylistic reference to keep directory listings readable; it is not a Target-owned placement/naming rule and is not offered as authority for the chosen path.
+- This profile does not claim that no other legitimate artifact option exists under Target authority. It declares exactly one artifact option because Human Governance authorized exactly one bounded artifact for `S4-E2` in this work unit, not because any other path, filename, or location is asserted to be foreclosed by `Roadmap.md`, `DevelopmentPhases.md`, `ProjectStatus.md`, or `Mission/AGENTS.md`.
 - No path collision exists: `docs/Projects/ForgeAI/Reports/AI-DOS-Target-Onboarding-Validation-001-Evidence.md` does not currently exist in the repository.
-- There is exactly one artifact option. No `choice_group` is declared because no legitimate exclusive alternative exists within the bound derivation authority; declaring an artificial second option would violate deterministic minimality (`TaskGenerationWorkflow.md` §6) without evidentiary basis.
+- No `choice_group` is declared because this bounded work unit authorizes exactly one artifact, not because alternatives are impossible.
 
 ---
 
 ## 3. Validation Profiles
 
+`S4-E2` is onboarding **validation** evidence, distinct from the `S4-E1` invocation-foundation evidence it is evaluated against. `VP-1` therefore does not restate the `S4-E1` / Phase 1 evidence categories as its own completion predicate; it defines finite cases that exercise the accepted `S4-E1` contract boundary (root `AGENTS.md` and `Mission/AGENTS.md`, per `ProjectStatus.md` §9 accepted evidence for `S4-E1`: PR #235, PR #245) and requires each case to resolve to an observed `Success` or `Blocker` outcome. This section defines only the finite evidence artifact and its validation requirements; it does not execute any case.
+
+### 3.1 Finite Onboarding-Declaration Evaluation Cases
+
+| Case ID | Declared Onboarding Condition | Accepted `S4-E1` Contract Element Tested | Expected Observable Outcome |
+|:---|:---|:---|:---|
+| `CASE-1` | Target Context supplies every resource declared by `Mission/AGENTS.md` §3 (Mission, ProjectStatus, DevelopmentPhases, Roadmap, Reports, Source/implementation resources, Validation resources), and root `AGENTS.md` §5's Mandatory Reading Order is followed in full | Root `AGENTS.md` §5 Mandatory Reading Order; `Mission/AGENTS.md` §3 Declared Target Resources | `Success` — Target Context resolves completely; bounded execution may proceed |
+| `CASE-2` | Target Context cannot resolve `ProjectStatus.md`, the sole Target Operational Entry | `Mission/AGENTS.md` §4 Target Operational Entry | `Blocker` — missing Target Operational Entry; onboarding stops |
+| `CASE-3` | Invocation requests modification of a Protected Area listed in `Mission/AGENTS.md` §6 without explicit authorization | `Mission/AGENTS.md` §6 Protected Areas | `Blocker` — protected-area conflict; work stops and is reported |
+| `CASE-4` | Invocation expresses continuation or advancement intent while no executable work unit is active and no Candidate Generation Source Profile instance is declared for the controlling objective | `Mission/AGENTS.md` §5.2 rules 9 and 14; `ProjectStatus.md` §12 | `Blocker` — safe stop; no work is invented |
+
+These four cases are finite and exhaustively declared here; no additional case may be added or substituted during execution of the resulting candidate without a new authorized profile revision.
+
+### 3.2 Validation Profile Record
+
 | `validation_profile_id` | Check | Evidence Shape | Observable Completion Predicate |
 |:---|:---|:---|:---|
-| `VP-1` | Document-completeness review of `OPT-1`'s artifact against the four Phase 1 Required Evidence categories (`DevelopmentPhases.md` Phase 1) | A single Markdown evidence report under `docs/Projects/ForgeAI/Reports/` containing a Document Metadata table and four explicitly labeled subsections: (1) Invocation Record, (2) Target Context Example, (3) Missing-Authority Blocker Evidence, (4) No-AI-DOS-Internals-Exposure Proof | The artifact exists at the exact `OPT-1` path; all four subsections are present and non-empty; each subsection cites at least one concrete Target-owned resource actually consulted (e.g. root `AGENTS.md`, `forge-ai-governance/SKILL.md`, `Mission/AGENTS.md`, `ProjectStatus.md`); the report states an explicit pass/fail conclusion for onboarding resolution. |
+| `VP-1` | Evaluate each of `CASE-1` through `CASE-4` against the accepted `S4-E1` contract boundary and record the actually observed outcome for each | A single Markdown evidence report under `docs/Projects/ForgeAI/Reports/` containing a Document Metadata table and exactly four labeled subsections, one per case, each stating: the declared condition, the exact `S4-E1` contract element cited (file and section), the observed outcome (`Success` or `Blocker`), and, for a `Blocker` outcome, the exact blocking rule invoked | The artifact exists at the exact `OPT-1` path; it contains exactly four case subsections matching `CASE-1`–`CASE-4`; each subsection states an explicit observed-outcome value; each observed outcome is compared against that case's expected outcome; the report concludes with a single aggregate pass/fail statement, where pass requires all four observed outcomes to match their expected outcomes |
 
-No automated command is declared because no Target-declared executable test or script currently exists for onboarding-validation evidence; the check is a declared document-completeness review, consistent with `Mission/AGENTS.md` §3's "Validation resources" category, which permits task-specific validation requirements in addition to executable checks.
+No automated command is declared because no Target-declared executable test or script currently exists for onboarding-declaration evaluation; the check is a declared case-by-case evaluation record, consistent with `Mission/AGENTS.md` §3's "Validation resources" category, which permits task-specific validation requirements in addition to executable checks. Producing the evidence report itself — i.e. actually running these four cases — is onboarding-validation execution and is out of scope for this profile-declaration work unit.
 
 ---
 
@@ -103,6 +119,7 @@ This profile instance does not:
 - modify AI-DOS workflow semantics, `Roadmap.md`, or `DevelopmentPhases.md`;
 - begin the `docs/AI` → `docs/AI-DOS` migration;
 - activate Stream 5, `D3`, `D4`, MCP, Axis Suite, hosted-provider, or any later capability;
+- assert that the declared artifact path or filename is the exclusive Target-authorized option for `S4-E2`;
 - mutate `ProjectStatus.md`.
 
 `ProjectStatus.md` §6 still records "Candidate Generation Source Profile Instance: None recorded." Recording a reference to this instance there requires a separately authorized `ProjectStatus.md` transition and is not performed by this document.
@@ -114,3 +131,4 @@ This profile instance does not:
 | Version | Date | Description |
 |:---|:---|:---|
 | `1.0.0` | 2026-07-21 | Initial declared Candidate Generation Source Profile instance bound to `S4-E2`, derived solely from `ProjectStatus.md`, `DevelopmentPhases.md`, `Roadmap.md`, and `Mission/AGENTS.md`. |
+| `1.1.0` | 2026-07-21 | Corrected in place per Human Governance review: replaced `VP-1`'s reuse of `S4-E1`/Phase 1 evidence categories with four finite onboarding-declaration evaluation cases producing observable `Success`/`Blocker` outcomes against the accepted `S4-E1` contract boundary; reclassified `OPT-1`'s exact path and filename as a Human-Governance-authorized profile-design decision rather than a repository-derived naming rule, and removed the claim that no other artifact option exists. No artifact other than this file changed; binding, exact path, finite records, and one-candidate cardinality preserved. |
