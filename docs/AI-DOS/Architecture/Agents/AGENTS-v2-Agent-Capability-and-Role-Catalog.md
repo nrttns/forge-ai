@@ -23,7 +23,7 @@
 | Traceability ID | `AI-DOS.ARCHITECTURE.AGENTS.V2.CAPABILITY-ROLE-CATALOG` |
 | Scope | Documentation-level AGENTS v2 capability model, role catalog, core role families, capability-to-role mapping, role assignment rules, validation expectations, and deferred boundaries. |
 | Out of Scope | Routing implementation, runtime execution, swarm behavior, platform adapters, Engine RFC work, Runtime redefinition, Engine Platform redefinition, Governance redefinition, Standards redefinition, M.0 redefinition, M.1 redefinition, STD-010 redefinition, and ProjectStatus updates. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI-DOS/GOVERNANCE.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Architecture.md` |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI-DOS/GOVERNANCE.md`; the invoking Target's Resolved Target Context (operational-state and roadmap authority); `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Architecture.md` |
 | Normative References | `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Architecture.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Identity-and-Registry.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v1-draft.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Capability-Evolution-Model.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Capability-Maturity-Model.md`; `docs/AI-DOS/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
 | Dependencies | AGENTS v2 Architecture Foundation; AGENTS v2 Agent Identity and Registry; Governance Atlas v2 navigation; ProjectStatus operational state and frozen-area constraints; Development Phases roadmap; AGENTS v1 operating architecture; AGENTS v2 planning inputs; STD-010 metadata requirements. |
 | Consumes | AGENTS v2 foundation boundaries; AGENTS v2 identity, registry, role-reference, capability-link, lifecycle, ownership, governance, and validation models; repository bootloader rules; governance navigation; roadmap state; frozen-area constraints; AGENTS v1; AGENTS v2 roadmap and development phases; STD-010 metadata requirements. |
@@ -113,12 +113,11 @@ Authority rules:
 1. Human Governance remains final.
 2. `AGENTS.md` remains the repository bootloader.
 3. `docs/AI-DOS/GOVERNANCE.md` remains the governance navigation authority.
-4. `docs/Projects/ForgeAI/Planning/ProjectStatus.md` remains the operational state and frozen-area authority.
-5. `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` remains the roadmap authority.
-6. `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Architecture.md` is the parent foundation for this document.
-7. `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Identity-and-Registry.md` provides identity, registry, role-reference, capability-link, lifecycle, ownership, governance, and validation inputs.
-8. STD-010 governs this document's metadata requirements.
-9. Runtime, Engine Platform, Governance, Standards, M.0, M.1, and STD-010 retain authority over their own domains.
+4. The invoking Target's Resolved Target Context supplies operational-state, frozen-area, and roadmap authority; this document does not hard-code a Target-specific path for it.
+5. `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Architecture.md` is the parent foundation for this document.
+6. `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Identity-and-Registry.md` provides identity, registry, role-reference, capability-link, lifecycle, ownership, governance, and validation inputs.
+7. STD-010 governs this document's metadata requirements.
+8. Runtime, Engine Platform, Governance, Standards, M.0, M.1, and STD-010 retain authority over their own domains.
 
 This document shall not reinterpret AGENTS v2 planning documents as activation authority. AGENTS v2 roadmap and development phase documents remain planning inputs until Human Governance and roadmap state explicitly authorize later work.
 

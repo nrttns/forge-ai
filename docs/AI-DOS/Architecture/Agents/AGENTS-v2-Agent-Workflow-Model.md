@@ -23,7 +23,7 @@
 | Traceability ID | `AI-DOS.ARCHITECTURE.AGENTS.V2.WORKFLOW` |
 | Scope | Documentation-level AGENTS v2 agent workflow model, workflow philosophy, participants, stages, state, inputs, outputs, handoffs, validation rules, review rules, and governance boundaries. |
 | Out of Scope | Workflow runtime implementation, task execution, scheduling, queues, dispatch, routing, orchestration, APIs, storage, CLI, UI, swarm behavior, platform adapters, Engine RFC work, Runtime redefinition, Engine Platform redefinition, Governance redefinition, Standards redefinition, M.0 redefinition, M.1 redefinition, STD-010 redefinition, and ProjectStatus updates. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI-DOS/GOVERNANCE.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Architecture.md` |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI-DOS/GOVERNANCE.md`; the invoking Target's Resolved Target Context (operational-state and roadmap authority); `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Architecture.md` |
 | Normative References | `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Architecture.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Identity-and-Registry.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Capability-and-Role-Catalog.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Lifecycle-and-Governance-Boundaries.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Communication-and-Coordination.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Validation-and-Review-Model.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v1-draft.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Capability-Evolution-Model.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Capability-Maturity-Model.md`; `docs/AI-DOS/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
 | Dependencies | AGENTS v2 Architecture Foundation; AGENTS v2 Agent Identity and Registry; AGENTS v2 Agent Capability and Role Catalog; AGENTS v2 Agent Lifecycle and Governance Boundaries; AGENTS v2 Agent Communication and Coordination; AGENTS v2 Agent Validation and Review Model; Governance Atlas v2 navigation; ProjectStatus operational state and frozen-area constraints; Development Phases roadmap; STD-010 metadata requirements. |
 | Consumes | AGENTS v2 foundation boundaries; identity, registry, role, capability, lifecycle, communication, coordination, validation, review, reporting, escalation, and deferred-scope models; repository bootloader rules; governance navigation; roadmap state; frozen-area constraints; AGENTS v1; AGENTS v2 roadmap and development phases; STD-010 metadata requirements. |
@@ -137,12 +137,11 @@ Authority rules:
 1. Human Governance remains final.
 2. `AGENTS.md` remains the repository bootloader.
 3. `docs/AI-DOS/GOVERNANCE.md` remains the governance navigation authority.
-4. `docs/Projects/ForgeAI/Planning/ProjectStatus.md` remains the operational state and frozen-area authority.
-5. `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` remains the roadmap authority.
-6. `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Architecture.md` is the parent foundation for this document.
-7. Identity and registry inputs define the traceable participant identities and registry references consumed by workflow participants.
-8. Capability and role inputs define the role and capability constraints consumed by workflow stages.
-9. Lifecycle and governance inputs define lifecycle state, activation, suspension, deactivation, approval, certification, ProjectStatus, frozen-area, and AI decision boundaries consumed by workflow state.
+4. The invoking Target's Resolved Target Context supplies operational-state, frozen-area, and roadmap authority; this document does not hard-code a Target-specific path for it.
+5. `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Architecture.md` is the parent foundation for this document.
+6. Identity and registry inputs define the traceable participant identities and registry references consumed by workflow participants.
+7. Capability and role inputs define the role and capability constraints consumed by workflow stages.
+8. Lifecycle and governance inputs define lifecycle state, activation, suspension, deactivation, approval, certification, ProjectStatus, frozen-area, and AI decision boundaries consumed by workflow state.
 10. Communication and coordination inputs define participant interaction, context exchange, coordination principles, and communication validation inputs consumed by workflow handoffs.
 11. Validation and review inputs define validation categories, review responsibilities, review outcomes, and prohibited implications consumed by workflow validation and review rules.
 12. STD-010 governs this document's metadata requirements.
