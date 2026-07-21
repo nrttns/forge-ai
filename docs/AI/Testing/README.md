@@ -98,6 +98,7 @@ Before using scenario tests, read:
 | Scenario 04 | `Scenario-04-DocumentationTask.md` | Validate documentation task routing. |
 | Scenario 05 | `Scenario-05-BugFixTask.md` | Validate bug fix task routing. |
 | Scenario 07 | `Scenario-07-ApprovalSubjectResolution.md` | Validate bare and explicit Human Governance approval-intent resolution against the Pending Human Governance Approval Subject record. |
+| Scenario 08 | `Scenario-08-ApprovalSubjectRecording.md` | Validate the producer-side procedure that records exactly one eligible reviewed completion subject into the Pending Human Governance Approval Subject record. |
 
 ---
 
