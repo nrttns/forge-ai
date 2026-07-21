@@ -1,7 +1,7 @@
 {
   "name": "forge-ai",
   "version": "1.0.0",
-  "description": "Self-hosting AI-DOS product development and autonomy enablement Target Project",
+  "description": "Bounded TypeScript distribution and bootstrap surface for the MD-first Forge AI Target Project; not the AI-DOS architectural or normative system definition",
   "main": "dist/main.js",
   "scripts": {
     "dev": "tsx src/main.ts",
@@ -20,7 +20,13 @@
     "typescript": "^5.9.3"
   },
   "private": true,
-  "keywords": [],
+  "keywords": [
+    "ai-dos",
+    "md-first",
+    "target-project",
+    "governed-ai",
+    "cli-bootstrap"
+  ],
   "author": "",
   "license": "Apache-2.0",
   "type": "commonjs",

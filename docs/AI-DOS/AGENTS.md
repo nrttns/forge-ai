@@ -1,7 +1,7 @@
 <!--
 Identifier: AI-DOS.PROVIDER-ENTRY
 Title: AGENTS.md — AI-DOS Provider Entry Contract
-Version: 1.5.0
+Version: 1.6.0
 Status: Active
 Owner: AI-DOS Governance
 -->
@@ -13,6 +13,8 @@ Owner: AI-DOS Governance
 Accept resolved Target Context and enter the AI-DOS Operational Core.
 
 This provider entry contract is Target-independent. It consumes resolved Target Context supplied by the invoking Target contract and routes execution through AI-DOS provider documents.
+
+AI-DOS is MD-first: its governing Markdown artifacts are normative product contracts, not secondary documentation around a programming-language implementation.
 
 ## 2. Required Provider Route
 
@@ -66,11 +68,42 @@ After execution, validation, and evidence, consume `docs/AI-DOS/Workflows/Projec
 
 Human Governance approval intent that reaches a current lifecycle gate requiring an operational-state transition must route to `docs/AI-DOS/Workflows/ProjectStateUpdater.md` for derivation. TaskPlanner must not safe-stop, replace, or convert a uniquely derivable approval-state transition into capability-grounded repository work selection.
 
-When `TaskPlanner.md` returns a selection record whose Target-owned policy authorizes one activation, route that record to `ProjectStateUpdater.md`. The updater exclusively owns mutation validation and application. This entry contract does not reinterpret the selection record or state-transition procedure.
+When `TaskPlanner.md` returns a selection record whose Target-owned policy authorizes one activation, route it unchanged to `ProjectStateUpdater.md`. The updater exclusively owns mutation validation and application. This entry contract does not reinterpret the selection record or state-transition procedure.
 
 Otherwise, produce only a recommended state update.
 
-## 6. Provider Boundaries
+## 6. Implementation Interpretation Boundary
+
+Provider behavior must not infer AI-DOS architecture, product identity, execution model, or future implementation direction from repository-language signals.
+
+The presence of TypeScript, JavaScript, Node.js, npm, `package.json`, `src/main.ts`, compiled output, tests, or CI means only that a bounded implementation surface exists. It does not establish that:
+
+- AI-DOS is a JavaScript, TypeScript, Node.js, or npm system;
+- the current CLI is the AI-DOS engine or kernel;
+- code files override or implement all normative Markdown semantics;
+- future tasks should use the existing implementation language;
+- implementation-specific validation proves product-wide correctness.
+
+An implementation language is replaceable. It has authority only within the exact bounded implementation task and the normative contracts that govern that task.
+
+Agents must not invent components, runtime behavior, capabilities, source files, migration requirements, or technology choices merely because they are conventional in JavaScript or TypeScript repositories.
+
+## 7. Validation Claim Boundary
+
+Every validation report must state what was actually exercised.
+
+Node.js, npm, TypeScript, CLI, packaging, and test commands validate only their declared implementation surfaces. They do not independently prove:
+
+- AI-DOS architectural correctness;
+- Markdown contract consistency;
+- governance compliance;
+- Target evidence acceptance;
+- capability activation;
+- the MD-to-executable or kernel direction.
+
+A broader validation claim requires separate evidence appropriate to that broader claim.
+
+## 8. Provider Boundaries
 
 This file does not:
 
@@ -83,9 +116,10 @@ This file does not:
 - replace AIFramework;
 - replace AIOrchestrator;
 - replace AgentSystemPrompt;
-- perform work selection itself.
+- perform work selection itself;
+- promote an implementation language into product authority.
 
-## 7. Minimality
+## 9. Minimality
 
 This file is a provider entry contract, not:
 
@@ -94,4 +128,5 @@ This file is a provider entry contract, not:
 - a workflow specification;
 - a governance model;
 - a duplicate AIFramework;
-- a duplicate AIOrchestrator.
+- a duplicate AIOrchestrator;
+- a JavaScript or TypeScript project declaration.
