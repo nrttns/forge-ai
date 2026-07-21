@@ -27,7 +27,7 @@ docs/AI/Commands/AgentAuditCommand.md
 The agent must use:
 
 ```text
-docs/AI/Templates/AuditTemplate.md
+docs/AI/Templates/Audit/AuditTemplate.md
 ```
 
 ---
@@ -47,13 +47,13 @@ docs/AI/System/DecisionModel.md
 docs/AI/System/ExecutionSequence.md
 docs/AI/Commands/AgentTaskCommand.md
 docs/AI/Commands/AgentAuditCommand.md
-docs/AI/Templates/AuditTemplate.md
+docs/AI/Templates/Audit/AuditTemplate.md
 docs/AI/Validation/README.md
 docs/AI/Validation/ValidationLifecycle.md
 docs/AI/Validation/ValidationLevels.md
 docs/AI/Validation/ValidationCertification.md
 docs/AI/Checklists/AgentReviewChecklist.md
-docs/ProjectStatus.md
+docs/Projects/ForgeAI/Planning/ProjectStatus.md
 Current phase, stage, historical capability scope, related RFCs, previous audits, and validation results when available
 ```
 

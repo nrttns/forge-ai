@@ -34,8 +34,8 @@ AGENTS.md
 docs/AI/README.md
 docs/AI/AgentSystemPrompt.md
 docs/AI/AIFramework.md
-docs/AI/Specification/Constitution.md
-docs/AI/Specification/Terminology.md
+docs/AI/Architecture/Constitution/A.1-Constitution.md
+docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md
 docs/AI/AIOrchestrator.md
 docs/AI/System/BootSequence.md
 docs/AI/System/ContextAssembly.md
@@ -47,7 +47,7 @@ docs/AI/Validation/ValidationLifecycle.md
 docs/AI/Validation/ValidationLevels.md
 docs/AI/Validation/ValidationCertification.md
 docs/AI/Checklists/AgentReviewChecklist.md
-docs/ProjectStatus.md
+docs/Projects/ForgeAI/Planning/ProjectStatus.md
 Relevant template when applicable
 ```
 
@@ -57,10 +57,10 @@ Relevant template when applicable
 
 | Documentation Target | Template |
 | --- | --- |
-| Phase document | `docs/AI/Templates/PhaseTemplate.md` |
-| Stage document | `docs/AI/Templates/StageTemplate.md` |
-| Historical Capability document | `docs/AI/Templates/SprintTemplate.md` |
-| Audit report | `docs/AI/Templates/AuditTemplate.md` |
+| Phase document | `docs/AI/Templates/Planning/PhaseTemplate.md` |
+| Stage document | `docs/AI/Templates/Planning/StageTemplate.md` |
+| Historical Capability document | `docs/AI/Templates/Planning/HistoricalCapabilityTemplate.md` |
+| Audit report | `docs/AI/Templates/Audit/AuditTemplate.md` |
 | No template applies | Follow AI Framework structure and document the deviation. |
 
 ---
@@ -69,13 +69,13 @@ Relevant template when applicable
 
 The agent must verify:
 
-- terminology aligns with `docs/AI/Specification/Terminology.md`;
+- terminology aligns with `docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md`;
 - authority hierarchy is preserved;
 - cross references resolve to existing paths;
 - related framework documents remain synchronized;
 - documentation does not duplicate or redefine higher authority;
 - historical capability identifiers are unchanged;
-- `docs/ProjectStatus.md` remains the only live operational Source of Truth.
+- `docs/Projects/ForgeAI/Planning/ProjectStatus.md` remains the only live operational Source of Truth.
 
 ---
 

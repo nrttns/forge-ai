@@ -24,11 +24,10 @@ AGENTS.md
 docs/AI/README.md
 docs/AI/AgentSystemPrompt.md
 docs/AI/AIFramework.md
-docs/AI/Specification/Constitution.md
-docs/AI/Specification/FrameworkSpecification.md
-docs/AI/Specification/RuntimeModel.md
-docs/AI/Specification/GovernanceModel.md
-docs/AI/Specification/Terminology.md
+docs/AI/Architecture/Constitution/A.1-Constitution.md
+docs/AI/Architecture/RFC/Runtime/A.3-Runtime-Architecture-RFC.md
+docs/AI/GOVERNANCE.md
+docs/AI/Architecture/Standards/STD-003-Terminology-Standard.md
 docs/AI/AIOrchestrator.md
 docs/AI/System/README.md
 docs/AI/System/BootSequence.md
@@ -38,13 +37,13 @@ docs/AI/Workflows/TaskPlanner.md
 docs/AI/Workflows/TaskGenerationWorkflow.md
 docs/AI/Commands/AgentTaskCommand.md
 docs/AI/Commands/AgentImplementationCommand.md
-docs/AI/Templates/SprintTemplate.md
+docs/AI/Templates/Planning/HistoricalCapabilityTemplate.md
 docs/AI/Validation/README.md
 docs/AI/Validation/ValidationLifecycle.md
 docs/AI/Validation/ValidationLevels.md
 docs/AI/Validation/ValidationCertification.md
 docs/AI/Checklists/AgentReviewChecklist.md
-docs/ProjectStatus.md
+docs/Projects/ForgeAI/Planning/ProjectStatus.md
 Current phase, stage, and historical capability documents where present
 ```
 
@@ -71,9 +70,9 @@ Implementation may begin only after verifying:
 
 ---
 
-# Expected Use of SprintTemplate or Completion Report
+# Expected Use of HistoricalCapabilityTemplate or Completion Report
 
-Use `docs/AI/Templates/SprintTemplate.md` when producing or maintaining capability documentation.
+Use `docs/AI/Templates/Planning/HistoricalCapabilityTemplate.md` when producing or maintaining capability documentation.
 
 If the task does not create or update capability documentation, produce a completion report containing:
 
@@ -126,4 +125,4 @@ Validation must be followed by review readiness and certification assessment bef
 - Implementation remains bounded to the active task.
 - Validation evidence is recorded.
 - Review and certification are not skipped.
-- `docs/ProjectStatus.md` is not advanced before certification.
+- `docs/Projects/ForgeAI/Planning/ProjectStatus.md` is not advanced before certification.

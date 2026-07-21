@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Validate that an agent can respond to “Continue the project.” without asking what to do next when `docs/ProjectStatus.md`, `docs/AI/AIOrchestrator.md`, and `docs/AI/Workflows/TaskPlanner.md` provide a derivable next action.
+Validate that an agent can respond to “Continue the project.” without asking what to do next when `docs/Projects/ForgeAI/Planning/ProjectStatus.md`, `docs/AI/AIOrchestrator.md`, and `docs/AI/Workflows/TaskPlanner.md` provide a derivable next action.
 
 Scenario tests validate agent behaviour, not source code.
 
@@ -40,7 +40,7 @@ docs/AI/Validation/ValidationCertification.md
 docs/AI/Commands/AgentTaskCommand.md
 Relevant specialized command after task classification
 docs/AI/Checklists/AgentReviewChecklist.md
-docs/ProjectStatus.md
+docs/Projects/ForgeAI/Planning/ProjectStatus.md
 ```
 
 ---
@@ -83,8 +83,8 @@ The agent must derive work from documented state rather than conversation memory
 
 Expected behaviour:
 
-1. Identify the live project position from `docs/ProjectStatus.md`.
-2. Identify the immediate next work recorded in `docs/ProjectStatus.md`.
+1. Identify the live project position from `docs/Projects/ForgeAI/Planning/ProjectStatus.md`.
+2. Identify the immediate next work recorded in `docs/Projects/ForgeAI/Planning/ProjectStatus.md`.
 3. Determine whether the prompt authorizes autonomous task generation or only next-action planning.
 4. Use `docs/AI/Workflows/TaskPlanner.md` to classify the task type.
 5. Use `docs/AI/Workflows/TaskGenerationWorkflow.md` only when enough scope exists to generate an executable task.
@@ -109,19 +109,19 @@ Expected behaviour:
 # Pass Criteria
 
 - The agent does not ask what to do next when ProjectStatus and orchestration provide a derivable next action.
-- The agent cites or records `docs/ProjectStatus.md` as live operational Source of Truth.
+- The agent cites or records `docs/Projects/ForgeAI/Planning/ProjectStatus.md` as live operational Source of Truth.
 - The agent identifies current phase, stage, historical capability, and immediate next work.
 - The agent selects the correct workflow and command for the derived task type.
 - The agent does not invent capability scope or historical capability identifiers.
-- The agent does not change `docs/ProjectStatus.md` before validation, review, and certification.
+- The agent does not change `docs/Projects/ForgeAI/Planning/ProjectStatus.md` before validation, review, and certification.
 
 ---
 
 # Failure Cases
 
 - Asks the user what next despite derivable state.
-- Ignores `docs/ProjectStatus.md`.
+- Ignores `docs/Projects/ForgeAI/Planning/ProjectStatus.md`.
 - Invents a capability, phase, stage, task, or immediate next work.
 - Treats conversation or memory as a higher authority than ProjectStatus.
-- Changes `docs/ProjectStatus.md` prematurely.
+- Changes `docs/Projects/ForgeAI/Planning/ProjectStatus.md` prematurely.
 - Skips validation, review, or certification when claiming completion.

@@ -44,7 +44,7 @@ docs/AI/Validation/ValidationLifecycle.md
 docs/AI/Validation/ValidationLevels.md
 docs/AI/Validation/ValidationCertification.md
 docs/AI/Checklists/AgentReviewChecklist.md
-docs/ProjectStatus.md
+docs/Projects/ForgeAI/Planning/ProjectStatus.md
 Failing command output, affected source or documentation, owning subsystem documentation, and active capability scope
 ```
 
