@@ -8,7 +8,7 @@
 |:---|:---|
 | Identifier | `FORGE-AI.TARGET.PROJECT-STATUS` |
 | Title | Forge AI Operational State Model |
-| Version | `6.3.0-draft` |
+| Version | `6.4.0-draft` |
 | Status | Live Operational State |
 | Classification | Target Project Operational State |
 | Document Type | ProjectStatus |
@@ -189,6 +189,7 @@ Completion evidence must identify changed artifacts, validation results, blocker
 | Stream 4 Work Unit 2 — Deterministic Target Declaration Resolution Profile | Accepted | PR #245 |
 | Command Routing v2 | Accepted | PR #247; reviewed head `8ef274e8e5e99aabc9496ea5176796e1bc743577`; validation run #24 |
 | Command Routing v3 Candidate Generation | Accepted | PR #250; reviewed head `02c072232d96dc247a411ca58ea092cff2ac064a`; validation run #28; merge `7218e0bf07cea00a905dadd08264b62afb4f1920` |
+| Pending Human Governance Approval Subject Recording Foundation | Accepted | PR #268; reviewed head `3916f7d84fc1169af21a2620e11095f27eb6a959`; independent review verdict `APPROVE` |
 
 Detailed implementation and review evidence remains in the referenced PRs, repository reports, and immutable Git history. This summary is current-state evidence indexing, not a historical narrative or a second workflow specification.
 
@@ -274,3 +275,4 @@ This clarification is Target-owned governance policy recording a Human Governanc
 | `6.1.0-draft` | 2026-07-21 | Recorded completion of the RC2 Legacy Surface Classification Audit and the Human Governance RC2 freeze-scope clarification: M.1 Rule 13 remains protective but no longer blocks separately authorized bounded correction, archival classification, historical marking, or root-migration movement; no RC2 artifact changed; no follow-up work selected or activated. |
 | `6.2.0-draft` | 2026-07-21 | Removed stale Candidate Generation Source Profile references superseded by Roadmap's `S4-E2` generation-grade declaration (Roadmap v6.2.0-draft): cleared the missing-CGSP blocker and the `Candidate Generation Source Profile Instance` input row. `S4-E2` remains `Pending`; no executable work unit is active; no candidate was selected, generated, or activated; no evidence was accepted. |
 | `6.3.0-draft` | 2026-07-21 | Added Section 6.1 Pending Human Governance Approval Subject: a single-slot, provider-neutral Target-owned record (`None recorded` by default) that bare Human Governance approval intent may resolve only when exactly one eligible subject is canonically recorded, per Mission `AGENTS.md` §5.5. No subject was recorded, accepted, or invalidated by this addition; the field is initialized to `None recorded`; no historical pull request was retroactively classified; no current phase, roadmap, capability status, accepted evidence, or next-step selection changed. |
+| `6.4.0-draft` | 2026-07-21 | Recorded Human Governance acceptance of the Pending Human Governance Approval Subject Recording Foundation in PR #268 at reviewed head `3916f7d84fc1169af21a2620e11095f27eb6a959`. Section 6.1 remains `None recorded`; no pending approval subject was created; no continuation, candidate generation, candidate selection, capability activation, or execution was authorized. |
