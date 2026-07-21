@@ -7,7 +7,7 @@
 | Field | Value |
 |:---|:---|
 | Identifier | `AI-DOS.OPERATIONAL.CORE.AI-ORCHESTRATOR` |
-| Version | `3.3.0-draft` |
+| Version | `3.4.0-draft` |
 | Status | Draft |
 | Classification | Operational Core |
 | Document Type | Orchestration Contract |
@@ -106,7 +106,7 @@ When the user requests progress but supplies no bounded task:
 4. when the selection record requests an authorized Target-state activation, route it unchanged to `docs/AI/Workflows/ProjectStateUpdater.md`;
 5. stop before executing work activated by that state transition.
 
-Candidate eligibility, priority, explicit selection, generation delegation, and selection safe stops belong only to `TaskPlanner.md`. Candidate construction, source-profile validation, enumeration, and minimality belong only to `TaskGenerationWorkflow.md`. Target-state mutation belongs only to `ProjectStateUpdater.md`.
+Candidate eligibility, priority, explicit selection, generation delegation, and selection safe stops belong only to `TaskPlanner.md`. Candidate construction, generation-input validation, enumeration, and minimality belong only to `TaskGenerationWorkflow.md`. Target-state mutation belongs only to `ProjectStateUpdater.md`.
 
 AI-DOS does not prescribe that every Target must have ProjectStatus, DevelopmentPhases, or Roadmap artifacts. Those names belong only to Targets that choose them.
 
