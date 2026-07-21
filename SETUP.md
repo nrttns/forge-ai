@@ -162,9 +162,9 @@ Before an AI agent or automation classifies, plans, edits, validates, reviews, o
 
 1. `AGENTS.md`;
 2. `docs/Projects/ForgeAI/Mission/AGENTS.md`;
-3. `docs/AI/AGENTS.md`.
+3. `docs/AI-DOS/AGENTS.md`.
 
-The root contract separates Forge AI Target Project truth under `docs/Projects/ForgeAI/` from AI-DOS product truth under `docs/AI/`. Local setup does not authorize capability advancement, ProjectStatus mutation, implementation, release, or any other governed state transition.
+The root contract separates Forge AI Target Project truth under `docs/Projects/ForgeAI/` from AI-DOS product truth under `docs/AI-DOS/`. Local setup does not authorize capability advancement, ProjectStatus mutation, implementation, release, or any other governed state transition.
 
 ## Updating a Local Checkout
 

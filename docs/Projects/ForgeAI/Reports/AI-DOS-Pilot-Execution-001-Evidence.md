@@ -43,7 +43,7 @@ PILOT EXECUTION PASSED
 | Roadmap | `docs/Projects/ForgeAI/Planning/Roadmap.md` |
 | Forge AI Target Project index | `docs/Projects/ForgeAI/README.md` |
 | Forge AI operational reports boundary | `docs/Projects/ForgeAI/Reports/README.md` |
-| Source root: AI-DOS product truth | `docs/AI/` |
+| Source root: AI-DOS product truth | `docs/AI-DOS/` |
 | Source root: Forge AI Target Project truth | `docs/Projects/ForgeAI/` |
 | Repository package configuration | `package.json` |
 

@@ -19,7 +19,7 @@
 | Lifecycle Phase | Active Target Project Planning |
 | Traceability ID | `FORGE-AI.V2.ROADMAP-REALIGNMENT-001` |
 | Scope | AI-DOS product capability acquisition, private/public boundary, distribution build and release foundation, Local CLI, Target onboarding, public System Interface, Codex adapter, Local MCP provider, Evolution Capsules, governed product evolution, external Target proof, managed provider maturity, and Multi-Target AI Highway operations directed by Forge AI. |
-| Out of Scope | AI-DOS internal architecture changes, `docs/AI/` changes, implementation tasks, CLI/MCP/API/service/adapter/package/schema/feedback implementation, RFC creation, live ProjectStatus updates, Axis Suite activation, certification, vendor selection, pricing, and automatic maturity advancement. |
+| Out of Scope | AI-DOS internal architecture changes, `docs/AI-DOS/` changes, implementation tasks, CLI/MCP/API/service/adapter/package/schema/feedback implementation, RFC creation, live ProjectStatus updates, Axis Suite activation, certification, vendor selection, pricing, and automatic maturity advancement. |
 | Normative Authority | Human Governance; canonical Target Project contract `docs/Projects/ForgeAI/Mission/AGENTS.md`; `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-Product-and-Autonomy-Model.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` |
 | Read-Only Context | `docs/Projects/ForgeAI/Planning/ProjectStatus.md` |
 | Consumes | Forge AI mission, Target Project contract, DevelopmentPhases product capability program, live-state evidence as read-only context, Human Governance decisions, distribution-readiness evidence, Target integration evidence, privacy evidence, and completed execution evidence. |
@@ -314,8 +314,8 @@ Axis Suite remains future and inactive until Human Governance authorizes it afte
 
 This roadmap does not:
 
-- create AI-DOS ProjectStatus under `docs/AI/`;
-- create an AI-DOS Roadmap under `docs/AI/`;
+- create AI-DOS ProjectStatus under `docs/AI-DOS/`;
+- create an AI-DOS Roadmap under `docs/AI-DOS/`;
 - insert Forge AI planning truth into AI-DOS product truth;
 - claim distribution implementation exists;
 - claim CLI, MCP, or hosted provider readiness;

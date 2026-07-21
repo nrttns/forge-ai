@@ -27,7 +27,7 @@
 | Last Updated | 2026-07-15 |
 | File Path | `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-and-Autonomy-Model.md` |
 | Scope | Forge AI mission; AI-DOS product development responsibility; private development and public distribution boundaries; product lifecycle; distribution maturity; provider integration; independent Target operation; evidence-driven product evolution; governed self-application; autonomy development; AI Highway operations; and planning alignment. |
-| Out of Scope | AI-DOS implementation definition, CLI command definition, MCP tool definition, hosted-provider API definition, feedback schema definition, distribution package layout, RFC creation, implementation activation, ProjectStatus update, DevelopmentPhases update, Roadmap update, `docs/AI/` modification, Axis Suite activation, commercial release authorization, pricing, and unrestricted autonomous evolution. |
+| Out of Scope | AI-DOS implementation definition, CLI command definition, MCP tool definition, hosted-provider API definition, feedback schema definition, distribution package layout, RFC creation, implementation activation, ProjectStatus update, DevelopmentPhases update, Roadmap update, `docs/AI-DOS/` modification, Axis Suite activation, commercial release authorization, pricing, and unrestricted autonomous evolution. |
 | Normative Authority | Human Governance |
 | Consumes | Human Governance decisions, resolved Forge AI Target Project context, Forge AI planning authorities, distribution maturity direction, product evidence, Target execution evidence, and repository evidence. |
 | Produces | Forge AI Target Project mission model, AI-DOS product-development direction, distribution and product-lifecycle constraints, autonomy-development direction, safety invariants, evidence expectations, decision rules, and planning alignment requirements. |
@@ -561,7 +561,7 @@ This mission document must not:
 - define unrestricted autonomous evolution;
 - imply Forge AI is the only AI-DOS evidence source;
 - imply self-application alone drives product evolution;
-- imply AI-DOS is consumed directly from `docs/AI/`;
+- imply AI-DOS is consumed directly from `docs/AI-DOS/`;
 - require Target Projects to know AI-DOS internal paths;
 - imply external Target readiness precedes distribution foundations;
 - treat productization as branding or late-stage packaging;

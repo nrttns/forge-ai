@@ -25,8 +25,8 @@
 | Traceability ID | `FORGE-AI.GOVERNED-SELF-APPLICATION.PILOT-001` |
 | Scope | One bounded Governed Self-Application discovery cycle that reviews previously validated execution evidence, accepted Pilot Execution evidence, accepted Human Governance decisions, and accepted execution traces to determine whether one proven reusable AI-DOS capability-improvement opportunity exists. |
 | Out of Scope | AI-DOS correction, AI-DOS implementation, ProjectStatus mutation, DevelopmentPhases mutation, Roadmap mutation, repository cleanup, documentation cleanup, formatting cleanup, convenience improvements, certification, approval, or authorization of implementation. |
-| Normative Authority | Human Governance instruction for Governed Self-Application Pilot #1; `docs/Projects/ForgeAI/Mission/AGENTS.md`; `docs/AI/AGENTS.md` |
-| Normative References | `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`; `docs/Projects/ForgeAI/Planning/Roadmap.md`; `docs/AI/AIFramework.md`; `docs/AI/AIOrchestrator.md`; `docs/AI/AgentSystemPrompt.md`; `docs/AI/Commands/AgentDocumentationCommand.md`; `docs/AI/System/ExecutionSequence.md` |
+| Normative Authority | Human Governance instruction for Governed Self-Application Pilot #1; `docs/Projects/ForgeAI/Mission/AGENTS.md`; `docs/AI-DOS/AGENTS.md` |
+| Normative References | `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`; `docs/Projects/ForgeAI/Planning/Roadmap.md`; `docs/AI-DOS/AIFramework.md`; `docs/AI-DOS/AIOrchestrator.md`; `docs/AI-DOS/AgentSystemPrompt.md`; `docs/AI-DOS/Commands/AgentDocumentationCommand.md`; `docs/AI-DOS/System/ExecutionSequence.md` |
 | Consumes | Previously accepted pilot evidence, accepted evidence-review findings, accepted ProjectStatus version history, current Target operational state, and provider execution contracts. |
 | Produces | One opportunity report for Human Governance decision. |
 | Depends On | Human Governance review and decision before any correction may be authorized. |

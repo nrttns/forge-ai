@@ -31,14 +31,14 @@ The canonical contract owns Forge AI Target Project mission alignment, execution
 ## 4. Execution Provider Contract
 
 Execution Provider Contract:
-`docs/AI/AGENTS.md`
+`docs/AI-DOS/AGENTS.md`
 
 ## 5. Mandatory Reading Order
 
 All AI agents and automation operating in this repository must read and follow these contracts in order:
 
 1. `docs/Projects/ForgeAI/Mission/AGENTS.md`
-2. `docs/AI/AGENTS.md`
+2. `docs/AI-DOS/AGENTS.md`
 
 The first contract resolves Target Project truth and Target-owned operational context.
 
@@ -62,7 +62,7 @@ Tool-specific skill adapters — for example under `.agents/skills/` or `.claude
 
 ## 8. File Boundary
 
-`docs/AI/`
+`docs/AI-DOS/`
 : contains AI-DOS product truth.
 
 `docs/Projects/ForgeAI/`

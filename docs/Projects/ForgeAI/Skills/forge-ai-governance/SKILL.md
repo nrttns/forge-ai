@@ -27,7 +27,7 @@ Before classifying, planning, editing, validating, reviewing, or reporting any w
 
 1. Root `AGENTS.md` — repository entry and contract discovery.
 2. `docs/Projects/ForgeAI/Mission/AGENTS.md` — canonical Forge AI Target Project contract.
-3. `docs/AI/AGENTS.md` — AI-DOS provider entry contract.
+3. `docs/AI-DOS/AGENTS.md` — AI-DOS provider entry contract.
 
 Root `AGENTS.md` is the authoritative source for this order and for any future contract changes. If this skill and root `AGENTS.md` ever disagree, root `AGENTS.md` governs.
 
@@ -47,7 +47,7 @@ The canonical Target Project contract owns the authority-resolution order. Read 
 
 1. Read current operational values from ProjectStatus.
 2. Resolve Forge AI policy and protected boundaries from the canonical Target Project contract and the Target resources it declares.
-3. Pass the resolved Target Context to `docs/AI/AGENTS.md` for provider routing.
+3. Pass the resolved Target Context to `docs/AI-DOS/AGENTS.md` for provider routing.
 4. Report the consumed authorities, actions, validation, evidence, blockers, and result.
 
 This skill requires consumption and application of the owning Target and provider contracts identified above, in the order given; it does not itself own or restate their Target policy, provider behavior, selection, generation, mutation, or safe-stop semantics.
@@ -58,7 +58,7 @@ Protected areas are declared by the canonical Target Project contract (`docs/Pro
 
 ## 7. Product / Project Boundary
 
-`docs/AI/` contains AI-DOS product truth only. Forge AI Target Project truth — mission, planning, operational state, evidence, and this skill itself — lives under `docs/Projects/ForgeAI/`. Do not insert Forge AI Target Project truth into `docs/AI/`, and do not insert AI-DOS product truth into `docs/Projects/ForgeAI/`.
+`docs/AI-DOS/` contains AI-DOS product truth only. Forge AI Target Project truth — mission, planning, operational state, evidence, and this skill itself — lives under `docs/Projects/ForgeAI/`. Do not insert Forge AI Target Project truth into `docs/AI-DOS/`, and do not insert AI-DOS product truth into `docs/Projects/ForgeAI/`.
 
 ## 8. Tool Adapters
 

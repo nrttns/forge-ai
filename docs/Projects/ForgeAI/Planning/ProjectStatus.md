@@ -116,9 +116,9 @@ Allowed status values are `Accepted`, `Pending`, and `Blocked`. Status changes r
 | Controlling Objective ID | `S4-E2` |
 | Predeclared Eligible Candidate | None recorded |
 | Target Priority Policy | `docs/Projects/ForgeAI/Mission/AGENTS.md` §5.3 |
-| Candidate Selection Contract | `docs/AI/Workflows/TaskPlanner.md` |
-| Candidate Construction Contract | `docs/AI/Workflows/TaskGenerationWorkflow.md` |
-| State Mutation Contract | `docs/AI/Workflows/ProjectStateUpdater.md` |
+| Candidate Selection Contract | `docs/AI-DOS/Workflows/TaskPlanner.md` |
+| Candidate Construction Contract | `docs/AI-DOS/Workflows/TaskGenerationWorkflow.md` |
+| State Mutation Contract | `docs/AI-DOS/Workflows/ProjectStateUpdater.md` |
 
 The three AI-DOS references are consumed contracts. Their algorithms, schemas, and safe-stop rules are not Target state and are not repeated here.
 
@@ -142,7 +142,7 @@ Allowed `Approval Subject State` values: `None recorded`, `Awaiting Human Govern
 
 This record is a single slot, not a list: at most one subject may occupy `Awaiting Human Governance Approval` at a time. A structurally duplicated or contradictory record renders this section invalid and requires safe-stop rather than arbitrary selection.
 
-Entry into `Awaiting Human Governance Approval` requires an explicitly authorized dedicated recording task under Section 11, supplying without truncation or ambiguity: a complete canonical Review Subject Locator and Reviewed-Subject Revision Identity per `docs/AI/Architecture/RFC/EngineSpecializations/A.5.7-Review-Engine-RFC.md` §5 and `docs/AI/Checklists/AgentReviewChecklist.md` §7; an approval-eligible Review Outcome; Required Validation Evidence; Required Completion/Integration Evidence; and confirmation that no unresolved blocker invalidates the subject. `docs/AI/Workflows/ProjectStateUpdater.md` owns re-resolution, eligibility, and safe-stop mechanics for consuming this record; this section states only the Target-owned schema and current value.
+Entry into `Awaiting Human Governance Approval` requires an explicitly authorized dedicated recording task under Section 11, supplying without truncation or ambiguity: a complete canonical Review Subject Locator and Reviewed-Subject Revision Identity per `docs/AI-DOS/Architecture/RFC/EngineSpecializations/A.5.7-Review-Engine-RFC.md` §5 and `docs/AI-DOS/Checklists/AgentReviewChecklist.md` §7; an approval-eligible Review Outcome; Required Validation Evidence; Required Completion/Integration Evidence; and confirmation that no unresolved blocker invalidates the subject. `docs/AI-DOS/Workflows/ProjectStateUpdater.md` owns re-resolution, eligibility, and safe-stop mechanics for consuming this record; this section states only the Target-owned schema and current value.
 
 The Review Subject Locator and Reviewed-Subject Revision Identity are provider-neutral per A.5.7 §5: a GitHub PR number, branch, or commit SHA may serve as evidence realizing these fields for this repository's current provider, but is not the universal schema, and no field name here is GitHub-specific.
 
@@ -255,7 +255,7 @@ ProjectStatus does not:
 | Field | Current Value |
 |:---|:---|
 | Prior Work | AI-DOS RC2 Legacy Surface Classification Audit (read-only; no repository mutation performed) |
-| Threshold Blocker Identified | `docs/AI/Meta/M.1-Artifact-Meta-Model.md` Rule 13 — Legacy / Historical / RC2 artifacts shall not be moved, rewritten, deleted, or promoted absent future governance permission |
+| Threshold Blocker Identified | `docs/AI-DOS/Meta/M.1-Artifact-Meta-Model.md` Rule 13 — Legacy / Historical / RC2 artifacts shall not be moved, rewritten, deleted, or promoted absent future governance permission |
 | Human Governance Decision | Rule 13 protection remains in force against uncontrolled mutation. Human Governance explicitly permits future, separately authorized bounded work units to: add an explicit Historical or Archived classification marker; correct stale live references in artifacts that remain active; move an artifact as part of an explicitly authorized canonical root migration; archive an artifact whose live authority has been explicitly superseded; split a mixed-current/mixed-legacy artifact when the current and legacy sections can be deterministically separated; preserve immutable historical evidence unchanged; and use RC2 content as non-authoritative input to a separately authorized replacement artifact. |
 | Not Authorized By This Decision | Bulk rewriting, deletion, replacement, migration, archival, normalization, capability activation, Validation Engine implementation, Certification Engine implementation, Distribution Foundation implementation, changes to A.5.6, A.5.8, or A.6, and the `docs/AI` → `docs/AI-DOS` migration. |
 | RC2 Artifacts Changed By This Work Unit | None |

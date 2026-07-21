@@ -46,24 +46,24 @@ Execute `AI-DOS.PILOT.EXECUTION-002` by operating AI-DOS against the Forge AI Ta
 |:---|:---|
 | `AGENTS.md` | Repository entry and required contract discovery. |
 | `docs/Projects/ForgeAI/Mission/AGENTS.md` | Target Project contract, protected areas, state-derived work rules, evidence expectations, and state-update boundary. |
-| `docs/AI/AGENTS.md` | Provider entry route and TaskPlanner requirement for unbounded continuation. |
+| `docs/AI-DOS/AGENTS.md` | Provider entry route and TaskPlanner requirement for unbounded continuation. |
 | `docs/Projects/ForgeAI/Planning/ProjectStatus.md` | Active task, exactly one authorized next action, completion criteria, protected areas, and validation expectations. |
 | `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` | Active Phase 3 capability boundary. |
 | `docs/Projects/ForgeAI/Planning/Roadmap.md` | C4 execution, validation, review, and evidence capability direction. |
-| `docs/AI/AIFramework.md` | Provider framework entry context. |
-| `docs/AI/AIOrchestrator.md` | Provider orchestration context. |
-| `docs/AI/AgentSystemPrompt.md` | State-derived execution behavior and completion reporting behavior. |
-| `docs/AI/Workflows/TaskPlanner.md` | Capability-grounded work selection threshold and safe-stop rules. |
-| `docs/AI/Workflows/TaskGenerationWorkflow.md` | Executable task generation boundary from the selected work unit. |
-| `docs/AI/System/ExecutionSequence.md` | Bounded execution handoff and validation boundary. |
+| `docs/AI-DOS/AIFramework.md` | Provider framework entry context. |
+| `docs/AI-DOS/AIOrchestrator.md` | Provider orchestration context. |
+| `docs/AI-DOS/AgentSystemPrompt.md` | State-derived execution behavior and completion reporting behavior. |
+| `docs/AI-DOS/Workflows/TaskPlanner.md` | Capability-grounded work selection threshold and safe-stop rules. |
+| `docs/AI-DOS/Workflows/TaskGenerationWorkflow.md` | Executable task generation boundary from the selected work unit. |
+| `docs/AI-DOS/System/ExecutionSequence.md` | Bounded execution handoff and validation boundary. |
 
 ## 4. Forge AI Pilot Selection Evidence (Target-Owned)
 
-The canonical Selection Record schema is owned exclusively by `docs/AI/Workflows/TaskPlanner.md` §6 (Selection Record) and is not restated, redefined, or extended by this section.
+The canonical Selection Record schema is owned exclusively by `docs/AI-DOS/Workflows/TaskPlanner.md` §6 (Selection Record) and is not restated, redefined, or extended by this section.
 
 The table below is unmodified historical evidence recorded for this pilot. Some rows correspond in substance to concepts named in the canonical Selection Record (for example: selected objective, source authority, scope, protected boundaries, expected outcome, validation requirements, completion condition, and rejected alternatives), captured here under this pilot's own descriptive labels rather than the canonical schema's field names. The remaining rows — including Repository Evidence Inspected, Candidate Work Units Considered, Candidate Classifications, Capability Limitation Before Work, Capability State After Work, Observable Behavioral Difference, Direct Capability Contribution, Reusable AI-DOS Contribution, Reusable Beyond Forge AI, Advancement Evidence, Support-Work Exclusion, and Authorization Threshold Result — are Forge AI Target-owned evidence and explanatory fields recorded for this pilot's audit trail and have no counterpart in the canonical schema.
 
-Non-authority statement: these Target-owned evidence and explanatory fields do not amend, extend, define, or replace the AI-DOS TaskPlanner Selection Record contract. That contract remains solely owned and defined by `docs/AI/Workflows/TaskPlanner.md` §6.
+Non-authority statement: these Target-owned evidence and explanatory fields do not amend, extend, define, or replace the AI-DOS TaskPlanner Selection Record contract. That contract remains solely owned and defined by `docs/AI-DOS/Workflows/TaskPlanner.md` §6.
 
 | Recorded Field | Record |
 |:---|:---|
@@ -109,7 +109,7 @@ No source implementation, product truth, planning state, roadmap, phase, mission
 | Validation Area | Command | Result | Evidence |
 |:---|:---|:---|:---|
 | Repository status before edit | `git status --short` | PASS | No pre-existing modified tracked files were reported. |
-| Authority and context discovery | `cat AGENTS.md ...`; `cat docs/Projects/ForgeAI/Planning/ProjectStatus.md ...`; `cat docs/AI/Workflows/TaskPlanner.md ...` | PASS | Required Target and provider authorities were read before editing. |
+| Authority and context discovery | `cat AGENTS.md ...`; `cat docs/Projects/ForgeAI/Planning/ProjectStatus.md ...`; `cat docs/AI-DOS/Workflows/TaskPlanner.md ...` | PASS | Required Target and provider authorities were read before editing. |
 | TypeScript typecheck | `npm run typecheck` | PASS | Completed successfully; npm emitted a non-blocking environment warning for unknown `http-proxy` config. |
 | Package tests | `npm test` | PASS | Completed successfully; npm emitted a non-blocking environment warning for unknown `http-proxy` config. |
 | Changed-file boundary | `git status --short` | PASS | Only `docs/Projects/ForgeAI/Reports/AI-DOS-Pilot-Execution-002-Evidence.md` was reported as untracked before staging. |

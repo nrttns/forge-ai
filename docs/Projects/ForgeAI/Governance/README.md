@@ -6,6 +6,6 @@ Human Governance remains the final authority for Forge AI approvals, scope chang
 
 Future records may include decision logs, approval records, review dispositions, protected-area exception records, and autonomy acceptance evidence.
 
-AI-DOS governance truth remains under the appropriate `docs/AI/` authority. This directory must not redefine AI-DOS governance.
+AI-DOS governance truth remains under the appropriate `docs/AI-DOS/` authority. This directory must not redefine AI-DOS governance.
 
 This migration creates no new governance policy.

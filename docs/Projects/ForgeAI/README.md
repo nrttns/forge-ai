@@ -39,4 +39,4 @@ ProjectStatus
 
 `docs/Projects/ForgeAI/` contains Forge AI Target Project truth.
 
-`docs/AI/` contains AI-DOS product truth and remains outside this Target Project index.
+`docs/AI-DOS/` contains AI-DOS product truth and remains outside this Target Project index.

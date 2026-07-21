@@ -16,7 +16,7 @@
 | Intended Repository Domain | `docs/Projects/ForgeAI/Planning/` |
 | Companion Roadmap | `Forge-AI-Future-Roadmap-v3-to-v8.md` |
 
-> This document is Target-owned future planning. It must not be placed in AI-DOS product truth under `docs/AI/`. It does not activate a phase, authorize implementation, update ProjectStatus, approve a release, or replace the current DevelopmentPhases.
+> This document is Target-owned future planning. It must not be placed in AI-DOS product truth under `docs/AI-DOS/`. It does not activate a phase, authorize implementation, update ProjectStatus, approve a release, or replace the current DevelopmentPhases.
 
 ## 1. Purpose
 

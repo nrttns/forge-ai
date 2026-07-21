@@ -15,7 +15,7 @@
 | Intended Repository Domain | `docs/Projects/ForgeAI/Planning/` |
 | Governing Phase Model | `Forge-AI-Future-Development-Phases-v3-to-v8.md` |
 
-> This Roadmap is Target-owned future direction. It must not be placed in AI-DOS product truth under `docs/AI/`. It does not activate a milestone, authorize implementation, update ProjectStatus, approve a release, or replace the current Roadmap.
+> This Roadmap is Target-owned future direction. It must not be placed in AI-DOS product truth under `docs/AI-DOS/`. It does not activate a milestone, authorize implementation, update ProjectStatus, approve a release, or replace the current Roadmap.
 
 ## 1. Purpose
 

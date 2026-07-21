@@ -18,7 +18,7 @@
 | Last Updated | 2026-07-15 |
 | Traceability ID | `FORGE-AI.TARGET.DEVELOPMENT-PHASES` |
 | Scope | AI-DOS product capability maturity, private/public product boundary, runtime distribution, provider integration, independent Target operation, privacy-safe product evolution input, governed release progression, and multi-Target AI Highway operations as directed by Forge AI. |
-| Out of Scope | Distribution implementation, CLI implementation, MCP implementation, hosted-provider implementation, adapter implementation, API design, package layout creation, RFC creation, `docs/AI/` changes, live ProjectStatus updates, Axis Suite activation, certification, pricing, vendor selection, and automatic phase advancement. |
+| Out of Scope | Distribution implementation, CLI implementation, MCP implementation, hosted-provider implementation, adapter implementation, API design, package layout creation, RFC creation, `docs/AI-DOS/` changes, live ProjectStatus updates, Axis Suite activation, certification, pricing, vendor selection, and automatic phase advancement. |
 | Normative Authority | Human Governance; Forge AI Target Project contract; `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-Product-and-Autonomy-Model.md` |
 | Primary Authority | `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-Product-and-Autonomy-Model.md` |
 | Consumes | Forge AI mission, Human Governance decisions, resolved Target Context, ProjectStatus evidence as read-only context, roadmap direction, execution evidence, distribution-readiness evidence, privacy evidence, and release-governance decisions. |
@@ -150,7 +150,7 @@ Every phase below defines: Purpose, Capability Gain, Reusable Outcome, Dependenc
 | Capability Gain | AI-DOS can be governed as a reusable product without treating Forge AI planning, Target contracts, or private development state as distributable runtime truth. |
 | Reusable Outcome | Product/project separation rules, Target-owned truth boundary, purity expectations, and protected-area discipline. |
 | Dependencies | Human Governance direction and Forge AI mission authority. |
-| Required Evidence | Boundary audit evidence, accepted self-hosting foundation evidence, proof that Forge AI planning truth is not inserted into `docs/AI/`, and evidence that Target-owned contracts remain separate. |
+| Required Evidence | Boundary audit evidence, accepted self-hosting foundation evidence, proof that Forge AI planning truth is not inserted into `docs/AI-DOS/`, and evidence that Target-owned contracts remain separate. |
 | Governance Gate | Human Governance accepts identity and purity as foundation evidence only. |
 | Success Criteria | Stakeholders can distinguish private AI-DOS development truth, Forge AI planning truth, distributable runtime artifacts, and independent Target truth. |
 | Exit Criteria | Boundary evidence is accepted and remains reusable for downstream distribution planning. |
