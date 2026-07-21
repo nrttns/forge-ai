@@ -8,13 +8,13 @@
 |:---|:---|
 | Identifier | `FORGE-AI.TARGET.PROJECT-STATUS` |
 | Title | Forge AI Operational State Model |
-| Version | `6.0.0-draft` |
+| Version | `6.1.0-draft` |
 | Status | Live Operational State |
 | Classification | Target Project Operational State |
 | Document Type | ProjectStatus |
 | Owner | Forge AI Target Project Governance |
 | Approval Authority | Human Governance |
-| Last Updated | `2026-07-20` |
+| Last Updated | `2026-07-21` |
 | Scope | Current Forge AI operational values, evidence status, blockers, protected boundaries, and exactly one authorized next action. |
 | Out of Scope | AI-DOS algorithms or schemas, provider routing, workflow procedure, Roadmap or DevelopmentPhases definitions, implementation design, backlog or sprint management, detailed historical task logs, certification, and automatic state updates. |
 | Normative Authority | Human Governance; `docs/Projects/ForgeAI/Mission/AGENTS.md`; `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-Product-and-Autonomy-Model.md` |
@@ -226,9 +226,26 @@ ProjectStatus does not:
 
 ---
 
-## 14. Version History
+## 14. RC2 Legacy Governance Clarification
+
+| Field | Current Value |
+|:---|:---|
+| Prior Work | AI-DOS RC2 Legacy Surface Classification Audit (read-only; no repository mutation performed) |
+| Threshold Blocker Identified | `docs/AI/Meta/M.1-Artifact-Meta-Model.md` Rule 13 — Legacy / Historical / RC2 artifacts shall not be moved, rewritten, deleted, or promoted absent future governance permission |
+| Human Governance Decision | Rule 13 protection remains in force against uncontrolled mutation. Human Governance explicitly permits future, separately authorized bounded work units to: add an explicit Historical or Archived classification marker; correct stale live references in artifacts that remain active; move an artifact as part of an explicitly authorized canonical root migration; archive an artifact whose live authority has been explicitly superseded; split a mixed-current/mixed-legacy artifact when the current and legacy sections can be deterministically separated; preserve immutable historical evidence unchanged; and use RC2 content as non-authoritative input to a separately authorized replacement artifact. |
+| Not Authorized By This Decision | Bulk rewriting, deletion, replacement, migration, archival, normalization, capability activation, Validation Engine implementation, Certification Engine implementation, Distribution Foundation implementation, changes to A.5.6, A.5.8, or A.6, and the `docs/AI` → `docs/AI-DOS` migration. |
+| RC2 Artifacts Changed By This Work Unit | None |
+| Follow-Up Work Selected or Activated | None |
+| Current State | Repository remains on hold awaiting explicit Human Governance selection of the first bounded RC2 correction work unit. |
+
+This clarification is Target-owned governance policy recording a Human Governance decision. It does not import, redefine, or restate an AI-DOS algorithm, schema, or engine implementation.
+
+---
+
+## 15. Version History
 
 | Version | Date | Description |
 |:---|:---|:---|
 | `5.28.0-draft` | 2026-07-20 | Recorded Command Routing v3 acceptance and reinstated the post-acceptance hold. |
 | `6.0.0-draft` | 2026-07-20 | Restored ProjectStatus as a live Target-state record: removed duplicated product algorithms and historical narrative, introduced stable Roadmap evidence identifiers, retained current values and evidence references, and made product contracts reference-only inputs. |
+| `6.1.0-draft` | 2026-07-21 | Recorded completion of the RC2 Legacy Surface Classification Audit and the Human Governance RC2 freeze-scope clarification: M.1 Rule 13 remains protective but no longer blocks separately authorized bounded correction, archival classification, historical marking, or root-migration movement; no RC2 artifact changed; no follow-up work selected or activated. |
