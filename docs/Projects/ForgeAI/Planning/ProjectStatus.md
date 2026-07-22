@@ -8,7 +8,7 @@
 |:---|:---|
 | Identifier | `FORGE-AI.TARGET.PROJECT-STATUS` |
 | Title | Forge AI Operational State Model |
-| Version | `6.7.0-draft` |
+| Version | `6.8.0-draft` |
 | Status | Live Operational State |
 | Classification | Target Project Operational State |
 | Document Type | ProjectStatus |
@@ -58,6 +58,8 @@ Forge AI owns these Target values. AI-DOS owns reusable product contracts and wo
 | Current Blocker | None recorded   |
 | Protected Future Capabilities | D3, D4, MCP, hosted provider, Axis Suite, feedback transport, and external Target execution remain inactive |
 
+`Executable Work Unit` and `Current State`, together with Section 3's Active Task record, are the canonical Target-owned Active Work Unit record bound by `Mission/AGENTS.md` §5.6. They change only through the same continuation-driven activation transition, or the corresponding Human Governance approval gate-closing transition, that section and Section 11 authorize — never through review completion, merge state, or repository activity alone.
+
 ---
 
 ## 3. Active Task
@@ -73,6 +75,8 @@ Forge AI owns these Target values. AI-DOS owns reusable product contracts and wo
 | Completion Condition | An exact authorized transition replaces this hold, or the state remains unchanged. |
 
 The hold contains no provider algorithm and grants no implicit implementation authority.
+
+When continuation-driven activation replaces this hold, this record's identity is the exact reviewed-subject identity that execution, validation, evidence, and review must remain bound to under `Mission/AGENTS.md` §5.6, until Human Governance approval gate-closes the corresponding Section 6.1 subject and this record reverts to a non-executable hold.
 
 ---
 
@@ -145,6 +149,8 @@ This record is a single slot, not a list: at most one subject may occupy `Awaiti
 Entry into `Awaiting Human Governance Approval` requires an explicitly authorized dedicated recording task under Section 11, supplying without truncation or ambiguity: a complete canonical Review Subject Locator and Reviewed-Subject Revision Identity per `docs/AI-DOS/Architecture/RFC/EngineSpecializations/A.5.7-Review-Engine-RFC.md` §5 and `docs/AI-DOS/Checklists/AgentReviewChecklist.md` §7; an approval-eligible Review Outcome; Required Validation Evidence; Required Completion/Integration Evidence; and confirmation that no unresolved blocker invalidates the subject. `docs/AI-DOS/Workflows/ProjectStateUpdater.md` owns re-resolution, eligibility, and safe-stop mechanics for consuming this record; this section states only the Target-owned schema and current value.
 
 The Review Subject Locator and Reviewed-Subject Revision Identity are provider-neutral per A.5.7 §5: a GitHub PR number, branch, or commit SHA may serve as evidence realizing these fields for this repository's current provider, but is not the universal schema, and no field name here is GitHub-specific.
+
+When Section 2/3's Active Work Unit record is present, the subject recorded here must share its exact reviewed-subject identity per `Mission/AGENTS.md` §5.6; an identity mismatch is a safe-stop condition for the recording task, not a tie-break. Human Governance approval that resolves this subject also clears the Section 2/3 record and Section 12's next action per the same policy.
 
 ---
 
@@ -236,6 +242,8 @@ AWAIT HUMAN GOVERNANCE CONTINUATION OR EXPLICIT NEXT-STEP SELECTION
 
 No executable work unit is active. A later invocation must consume the current Target inputs in Sections 5 and 6 — now controlled by `S4-E3`, the earliest non-`Accepted` Stream 4 evidence identifier under `Mission/AGENTS.md` §5.3 — through their owning AI-DOS contracts. Roadmap's `S4-E2` generation-grade declaration (`Roadmap.md` §6) is bound exclusively to `S4-E2` and is not valid generation input for `S4-E3` or any other identifier; no `S4-E3` generation-grade declaration is currently recorded.
 
+Continuation-driven activation writes the selected work unit into Section 2/3's Active Work Unit record and supersedes this action for that work unit's duration; Human Governance approval that gate-closes the resulting Section 6.1 subject clears that record and re-establishes this exact next action, per `Mission/AGENTS.md` §5.6. Neither transition is performed by this statement alone.
+
 ---
 
 ## 13. Non-Goals
@@ -282,3 +290,4 @@ This clarification is Target-owned governance policy recording a Human Governanc
 | `6.5.0-draft` | 2026-07-22 | Recorded Human Governance acceptance of PR #279 at reviewed head `ef5fae3b0c97588f63b85cd70a505ada82d34cd6`, resolved from its merged content as the `S4-E2` onboarding-declaration evaluation evidence report. Section 5 changed `S4-E2` from `Pending` to `Accepted`; Section 9 gained one corresponding evidence row. Re-resolved the resulting live Target state from the canonical authority chain per `Mission/AGENTS.md` §5.3: Section 6 Controlling Objective ID changed from `S4-E2` to `S4-E3`, the earliest non-`Accepted` Stream 4 evidence identifier; Section 12's explanatory reference was corrected to name `S4-E3` and to state that Roadmap's `S4-E2` generation-grade declaration does not supply `S4-E3` generation input. No other Stream 4 evidence item, Current State, Active Task, Current Capability Boundary, Section 12 authorized next action, Section 6.1 Pending Approval Subject, Roadmap, DevelopmentPhases, Mission, or AI-DOS product artifact changed; no `S4-E3` work unit was generated, selected, activated, or executed. |
 | `6.6.0-draft` | 2026-07-22 | Recorded Human Governance acceptance of the AI-DOS / Forge AI architectural-boundary coupling clarification in PR #276 (reviewed head `bfa009b0944f81d75750aae75ef6f35687974db3`, merge `4729060a965c0e6fd1e78e4cb359ceb218c71fbd`, independent review verdict `APPROVE`), resolved under explicit named-identity approval intent per Mission `AGENTS.md` §5.5 rule 5 (Section 6.1 held `None recorded`, so no existing-record conflict applied). Added one new Section 9 row for PR #276 alongside, not in place of, the existing `S4-E2` / PR #279 row and the immutable `6.5.0-draft` history entry, both restored verbatim. Section 6.1 remains `None recorded`; Roadmap, DevelopmentPhases, Mission, Stream 4 evidence status (Section 5), Section 6, and the Section 12 next action were not touched; no candidate was generated, selected, or activated; the repository remains on the existing hold awaiting Human Governance continuation or explicit next-step selection. |
 | `6.7.0-draft` | 2026-07-22 | Recorded Human Governance acceptance of the Stream 4 `S4-E3` Generation-Grade Declaration to Roadmap in PR #290 (reviewed head `5761b67069f3562478d41bac721123fae0e1bd2f`, merge `a95a38b04b3646f811b4df25b039543eaae2d219`), resolved under explicit named-identity approval intent per Mission `AGENTS.md` §5.5 rule 5 (Section 6.1 held `None recorded`, so no existing-record conflict applied; reviewed head re-resolved and confirmed identical via the GitHub pull request record before recording). Added one new Section 9 row for PR #290. This PR recorded only the `S4-E3` generation-grade declaration precondition in Roadmap, not protected-area-proof evidence itself, so Section 5 leaves `S4-E3` `Pending`. Section 6, Section 6.1 (`None recorded`), the Section 12 next action, Roadmap, DevelopmentPhases, Mission, and AI-DOS product artifacts were not touched; no candidate was generated, selected, activated, or executed; the repository remains on the existing hold awaiting Human Governance continuation or explicit next-step selection. |
+| `6.8.0-draft` | 2026-07-22 | Added cross-references binding Section 2 (`Executable Work Unit`, `Current State`), Section 3 (Active Task), Section 6.1, and Section 12 to the new `Mission/AGENTS.md` §5.6 Forge AI Active Work Unit Policy: documents that continuation-driven activation writes the selected work unit into Section 2/3, that this identity is the exact reviewed-subject identity execution/validation/evidence/review remain bound to, that review completion alone does not close it, and that Human Governance approval gate-closing a Section 6.1 subject also clears Section 2/3 and re-establishes the Section 12 next action. No live value changed: `Executable Work Unit` remains `None`, the Active Task record remains the existing hold, Section 6.1 remains `None recorded`, Section 12's authorized next action remains unchanged, and no Stream 4 evidence status, Roadmap, DevelopmentPhases, or Section 9 evidence row was touched; no work unit was generated, selected, activated, executed, reviewed, recorded, or accepted by this correction. |

@@ -1,10 +1,10 @@
 <!--
 Identifier: FORGE-AI.TARGET.AGENTS-CONTRACT
 Title: AGENTS.md — Forge AI Target Project Contract
-Version: 1.7.0-draft
+Version: 1.9.0-draft
 Status: Draft
 Owner: Forge AI Target Project Governance
-Updated: 2026-07-21
+Updated: 2026-07-22
 -->
 
 # AGENTS.md — Forge AI Target Project Contract
@@ -15,13 +15,13 @@ Updated: 2026-07-21
 |:---|:---|
 | Identifier | `FORGE-AI.TARGET.AGENTS-CONTRACT` |
 | Title | AGENTS.md — Forge AI Target Project Contract |
-| Version | `1.8.0-draft` |
+| Version | `1.9.0-draft` |
 | Status | Draft |
 | Classification | Forge AI Target Project Contract |
 | Document Type | Target Project Contract |
 | Owner | Forge AI Target Project Governance |
 | Approval Authority | Human Governance |
-| Last Updated | 2026-07-21 (Pending Human Governance Approval Subject Policy added) |
+| Last Updated | 2026-07-22 (Active Work Unit Policy added) |
 | Scope | Forge AI Target Project identity, declared Target resources, operational entry, protected areas, state-derived work resolution, execution authorization boundaries, validation expectations, evidence expectations, and state-update authority. |
 | Out of Scope | Execution-provider identity, provider discovery, provider startup, provider internal paths, provider architecture, workflow routing, command routing, runtime behavior, implementation design, automatic state updates, and planning-document redesign. |
 | Normative Authority | Human Governance |
@@ -192,6 +192,18 @@ This subsection supplies Forge AI's Target-owned schema binding and resolution p
 7. Approval accepted under this policy authorizes only the resolved subject's gate-closing ProjectStatus transition. It must never be interpreted as GitHub pull request review submission, merge authorization, continuation, candidate generation, candidate selection, capability activation, or execution of the approved or any other work unit. GitHub self-approval or branch-protection restrictions have no bearing on this Target-owned approval semantics.
 8. This policy does not itself record, generate, select, or activate a subject, and does not retroactively classify any historical pull request as pending or accepted.
 
+### 5.6 Forge AI Active Work Unit Policy
+
+This subsection supplies Forge AI's Target-owned schema binding for the work unit currently executing under Human Governance continuation. It does not restate `docs/AI-DOS/Workflows/TaskPlanner.md` selection mechanics or `docs/AI-DOS/Workflows/ProjectStateUpdater.md` mutation mechanics; it binds their outputs to a single Target-owned record and to Section 5.5.
+
+1. The canonical Target-owned location of the current active work unit is `docs/Projects/ForgeAI/Planning/ProjectStatus.md` §2 (`Executable Work Unit`, `Current State`) and §3 (`Active Task`). No other artifact, and no external provider state (including GitHub pull request or branch state), is Target-owned truth for this purpose.
+2. At most one work unit may be recorded active at a time. A work unit becomes active only through the same activation authority Section 5.2 Rule 10 and Section 5.3 already grant: `TaskPlanner.md` selects exactly one eligible bounded candidate and routes it, unchanged, to `ProjectStateUpdater.md`, which writes that candidate's identity, owner, scope, and completion condition into the §2/§3 record — replacing any non-executable hold value — as part of the same authorized activation mutation, before execution begins.
+3. The identity recorded under Rule 2 is the exact reviewed-subject identity that execution, validation, evidence collection, and review for that work unit must remain bound to for its duration. Substituting a different subject during execution, validation, or review is a scope violation, not a new selection, and is not authorized by this policy.
+4. Review of the active work unit remains non-mutating and does not itself close, clear, or advance the §2/§3 record. A review that reaches an approval-eligible outcome with complete validation evidence, complete completion/integration evidence, the active work unit's exact reviewed-subject identity, and no unresolved blocker produces the complete deterministic handoff Section 5.5 Rule 2 requires for a dedicated recording task. It does not itself invoke that task, record a Section 6.1 subject, or close the active work unit.
+5. Human Governance approval accepted under Section 5.5 additionally closes the active work unit: applying the gate-closing transition for the resolved Section 6.1 subject also clears the §2/§3 record for that same reviewed-subject identity and resets ProjectStatus Section 12's exactly one authorized next action to await Human Governance continuation, as part of the same authorized mutation. Approval must not select, generate, activate, or execute a further work unit as part of, or immediately following, this closure.
+6. A §2/§3 record that does not match the reviewed-subject identity resolved for a Section 6.1 subject is an identity conflict requiring safe stop, not a tie-break, consistent with Section 5.5 Rule 4's re-resolution discipline.
+7. This policy does not itself activate, execute, review, record, or close any work unit, and does not retroactively mark any historical task active or closed.
+
 ---
 
 ## 6. Protected Areas
@@ -326,3 +338,4 @@ This Target Project contract does not define:
 | `1.6.0-draft` | 2026-07-20 | Restored single semantic ownership: retained only Forge AI Target policy and bindings, replaced copied provider algorithms with references to their AI-DOS owners, and changed Roadmap evidence matching to stable Target-owned identifiers. |
 | `1.7.0-draft` | 2026-07-21 | Removed the obsolete named candidate-generation source-profile mechanism from the Target contract: replaced the profile-specific input language in §5.2 Rule 12 with provider-neutral Target-owned generation inputs resolved from ProjectStatus, DevelopmentPhases, Roadmap, and declared task-specific Target authority, and removed the §5.3 rule defining that profile as a Target-owned data instance. Roadmap remains the sole Target-owned source of generation-grade capability detail; no replacement profile artifact or new planning layer was introduced. |
 | `1.8.0-draft` | 2026-07-21 | Added §5.5 Forge AI Pending Human Governance Approval Subject Policy: binds `ProjectStatus.md` §6.1 as the sole Target-owned, provider-neutral location for a subject awaiting Human Governance approval; states cardinality, recording eligibility, bare-approval and explicit-approval resolution rules, mandatory re-resolution before applying approval, non-reinterpretation as GitHub review/merge/continuation/generation/selection/activation/execution, and irrelevance of GitHub self-approval restrictions. Consumes but does not restate `ProjectStateUpdater.md`, `ExecutionSequence.md` §3, `A.5.7-Review-Engine-RFC.md` §5, and `AgentReviewChecklist.md` §7. No candidate was recorded, selected, generated, activated, or accepted; no historical pull request was retroactively classified. |
+| `1.9.0-draft` | 2026-07-22 | Added §5.6 Forge AI Active Work Unit Policy correcting the gap where completed reviewed work could leave `ProjectStatus.md` with no active executable work unit and `Approval Subject State: None recorded`: binds `ProjectStatus.md` §2/§3 as the sole Target-owned record of the current active work unit; requires the same activation authority already granted by §5.2 Rule 10 and §5.3 to write the selected candidate's identity into that record before execution begins; binds that identity as the exact reviewed-subject identity execution, validation, evidence, and review must remain bound to; confirms review completion alone does not close the record and produces only the deterministic handoff §5.5 Rule 2 requires for a separately authorized recording task; and requires Human Governance approval under §5.5 to additionally clear that record and reset ProjectStatus §12's exactly one authorized next action to await continuation, as part of the same gate-closing mutation, without selecting, generating, activating, or executing a further work unit. No work unit was activated, closed, or retroactively marked by this addition; `ProjectStateUpdater.md` continues to exclusively own mutation mechanics. |

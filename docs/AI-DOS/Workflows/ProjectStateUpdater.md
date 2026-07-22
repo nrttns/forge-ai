@@ -5,7 +5,7 @@
 | Field | Value |
 |:---|:---|
 | Identifier | `AI-DOS.WORKFLOW.PROJECT-STATE-UPDATER` |
-| Version | `3.5.0-draft` |
+| Version | `3.6.0-draft` |
 | Status | Draft |
 | Classification | Target-State Mutation Workflow |
 | Owner | AI-DOS Operational Core |
@@ -43,8 +43,8 @@ A mutation requires:
 - exact fields or records allowed to change;
 - Target-owned transition rule or direct Human Governance instruction;
 - evidence required by that rule;
-- for continuation-driven activation, one conforming Task Planner selection record with exactly one bounded candidate and its activation precondition;
-- for bare Human Governance approval intent (approval that does not repeat the subject's identity), exactly one canonically recorded Target-owned Pending Approval Subject in the Target-owned eligible-for-approval state, including its review subject locator and reviewed-subject revision identity;
+- for continuation-driven activation, one conforming Task Planner selection record with exactly one bounded candidate and its activation precondition, plus the Target-owned active-work-unit record identity and schema, when the Target-owned contract declares one, so the selected candidate's identity can be written into it before execution begins;
+- for bare Human Governance approval intent (approval that does not repeat the subject's identity), exactly one canonically recorded Target-owned Pending Approval Subject in the Target-owned eligible-for-approval state, including its review subject locator and reviewed-subject revision identity, plus the Target-owned active-work-unit record and next-action field identity and schema, when the Target-owned contract binds them to the resolved subject, so their closure can be applied as part of the same authorized mutation;
 - for producer-side recording of a new Target-owned Pending Approval Subject, an explicitly authorized dedicated recording task supplying a complete canonical review subject locator, a complete canonical reviewed-subject revision identity, an approval-eligible Review Outcome, Required Validation Evidence, and Required Completion/Integration Evidence, with each evidence item confirmed to reference that same exact reviewed-subject revision identity, and confirmation that no unresolved blocker applies;
 - validation, rollback, and stop conditions.
 
@@ -66,8 +66,8 @@ Without these inputs, the workflow may only produce a recommendation.
 12. For approval intent naming an exact subject identity, verify that identity against any canonically recorded Target-owned Pending Approval Subject; treat a conflict between the named identity and a recorded subject as a safe stop, not a tie-break.
 13. For bare approval intent that does not name a subject, consume the Target-owned Pending Approval Subject record and require exactly one subject in the Target-owned eligible-for-approval state; treat zero, more than one, or a structurally invalid record as a safe stop.
 14. Immediately before applying approval to any subject resolved under rule 12 or 13, deterministically re-resolve its reviewed-subject revision identity through its recorded review subject locator; treat identity drift, an already-closed-lifecycle subject (already accepted or invalidated), or an unresolvable locator or identity as invalidating the subject and requiring safe stop.
-15. Apply only the uniquely derivable acceptance or gate-closing transition for the resolved subject and do not select subsequent work.
-16. For continuation or next-task intent with no active executable work unit, validate the selection record's integrity and activation precondition, then activate only its single Task Planner-selected bounded candidate and do not execute it. Do not re-run or reinterpret candidate selection, generation, priority, or minimality.
+15. Apply only the uniquely derivable acceptance or gate-closing transition for the resolved subject and do not select subsequent work. When the Target-owned contract binds the resolved subject to a Target-owned active-work-unit record, clear that record for the same reviewed-subject identity and reset the Target-owned next-action field to its await-continuation value as part of the same mutation; do not select, generate, activate, or execute a further work unit as part of, or immediately following, this closure.
+16. For continuation or next-task intent with no active executable work unit, validate the selection record's integrity and activation precondition, then activate only its single Task Planner-selected bounded candidate and do not execute it. When the Target-owned contract declares an active-work-unit record, write the activated candidate's identity, owner, scope, and completion condition into that record as part of the same mutation, replacing any non-executable hold value. Do not re-run or reinterpret candidate selection, generation, priority, or minimality.
 17. Apply only the named fields or records.
 18. Validate the resulting artifact and report the before/after state.
 19. Stop before selecting or executing subsequent work.
@@ -106,4 +106,5 @@ A recording request for the exact same candidate (identical locator and re-resol
 - Authorized before/after state and validation evidence; or
 - a newly recorded Target-owned Pending Approval Subject in `Awaiting Human Governance Approval` state, or an idempotent no-op confirmation for an identical repeat recording request; or
 - non-mutating recommended update with missing authority and evidence; and
-- confirmation that no subsequent work was activated or executed, and that recording did not itself apply approval, mark a subject `Accepted`, or select a next task.
+- confirmation that no subsequent work was activated or executed, and that recording did not itself apply approval, mark a subject `Accepted`, or select a next task; and
+- confirmation of any Target-owned active-work-unit record written on activation or cleared, together with the next-action field, on approval gate-closing, when the Target-owned contract declares one.
