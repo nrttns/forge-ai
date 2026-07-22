@@ -36,19 +36,22 @@ Read:
 2. [Authority Model](Concepts/AuthorityModel.md)
 3. [Context Resolution](ContextResolution.md)
 4. [Execution Model](ExecutionModel.md)
-5. [Terminology](Concepts/Terminology.md)
+5. [Security](Security.md)
+6. [Terminology](Concepts/Terminology.md)
 
-This path explains how Human Governance, Target-owned authority, protected areas, bounded delegation, validation, and evidence fit together.
+This path explains how Human Governance, Target-owned authority, protected areas, bounded delegation, validation, evidence, and security boundaries fit together.
 
 ### I am implementing an Execution Provider
 
 Read:
 
 1. [Provider Model](ProviderModel.md)
-2. [Context Resolution](ContextResolution.md)
-3. [Execution Model](ExecutionModel.md)
-4. [Authority Model](Concepts/AuthorityModel.md)
-5. [Reference](Reference/README.md)
+2. [Implementation Surfaces](Implementation.md)
+3. [Security](Security.md)
+4. [Context Resolution](ContextResolution.md)
+5. [Execution Model](ExecutionModel.md)
+6. [Authority Model](Concepts/AuthorityModel.md)
+7. [Reference](Reference/README.md)
 
 Then consult the normative provider entry and task-specific contracts under `docs/AI-DOS/`.
 
@@ -58,11 +61,13 @@ Read:
 
 1. [Authority Model](Concepts/AuthorityModel.md)
 2. [Execution Model](ExecutionModel.md)
-3. [Human Governance](Concepts/HumanGovernance.md)
-4. [Terminology](Concepts/Terminology.md)
-5. [Reference](Reference/README.md)
+3. [Security](Security.md)
+4. [Implementation Surfaces](Implementation.md)
+5. [Human Governance](Concepts/HumanGovernance.md)
+6. [Terminology](Concepts/Terminology.md)
+7. [Reference](Reference/README.md)
 
-This path emphasizes subject identity, authority, lifecycle separation, validation claims, evidence, and safe-stop behavior.
+This path emphasizes subject identity, authority, lifecycle separation, validation claims, implementation limits, evidence integrity, and safe-stop behavior.
 
 ## Product map
 
@@ -93,6 +98,8 @@ AI-DOS sits between Target-owned authority and provider execution. It does not r
 - [Execution Model](ExecutionModel.md) — the end-to-end path from instruction to evidence.
 - [Context Resolution](ContextResolution.md) — how Target identity, authority, resources, and blockers are resolved.
 - [Provider Model](ProviderModel.md) — how AI-DOS remains independent of any single model, agent host, or tool provider.
+- [Security](Security.md) — how authority, Target isolation, provider containment, evidence integrity, and safe-stop behavior shape the product security posture.
+- [Implementation Surfaces](Implementation.md) — how current executable, package, CLI, runtime-data, test, and distribution surfaces relate to the MD-first contract system.
 
 ### Concepts
 
@@ -124,7 +131,7 @@ Concise reference material for product surfaces, terminology, and contract navig
 
 ### [Community](Community/README.md)
 
-Public participation, contribution, and community-oriented guidance.
+Public participation, contribution, and product-direction guidance.
 
 ## What this documentation is
 
@@ -134,6 +141,8 @@ The Product directory is intended to:
 - provide stable learning paths for different readers;
 - make product and Target boundaries visible;
 - connect concepts to the normative contracts that own behavior;
+- explain the limits of current implementation surfaces;
+- surface security, evidence-integrity, and provider-containment concerns;
 - support adoption without requiring readers to begin inside architecture or workflow specifications.
 
 ## What this documentation is not
@@ -145,13 +154,15 @@ The Product directory does not:
 - authorize repository mutation, capability activation, approval, certification, promotion, or release;
 - make explanatory examples universally normative;
 - elevate a current implementation language or tool into product architecture;
+- claim that current executable surfaces implement every AI-DOS contract;
+- replace repository security policy, Target-owned security boundaries, or incident-response authority;
 - turn Forge AI project state into reusable AI-DOS product truth.
 
 ## Authority boundary
 
 These pages explain AI-DOS; they do not redefine it. When explanatory text and a normative AI-DOS contract differ, the normative contract governs.
 
-AI-DOS reusable product truth lives under `docs/AI-DOS/`. A Target Project owns its own mission, planning, operational state, resources, permissions, protected areas, and evidence through its Target-owned authority.
+AI-DOS reusable product truth lives under `docs/AI-DOS/`. A Target Project owns its own mission, planning, operational state, resources, permissions, protected areas, security boundaries, and evidence through its Target-owned authority.
 
 Forge AI is one Target Project that develops and self-applies AI-DOS. Forge AI project truth remains under `docs/Projects/ForgeAI/` and is not reusable AI-DOS product truth.
 
@@ -167,7 +178,13 @@ Current TypeScript, JavaScript, Node.js, npm, CLI, test, packaging, and CI artif
 - future implementation direction;
 - product-wide validation status.
 
-Implementation technology is replaceable and remains subordinate to the applicable contracts and bounded task.
+Implementation technology is replaceable and remains subordinate to the applicable contracts and bounded task. See [Implementation Surfaces](Implementation.md) for the public map of this relationship.
+
+## Security boundary
+
+AI-DOS security begins with correct authority, bounded scope, Target isolation, provider containment, evidence integrity, and safe-stop behavior. Public documentation can explain these concerns but cannot create credentials, grant permissions, authorize incident response, certify a control, or replace repository and Target security policy.
+
+See [Security](Security.md) for the public security model and the boundaries of its claims.
 
 ## Normative entry points
 
@@ -177,7 +194,7 @@ Readers who need execution authority rather than product explanation should begi
 - `docs/AI-DOS/AIFramework.md` — framework-level product contract;
 - `docs/AI-DOS/AIOrchestrator.md` — orchestration contract;
 - `docs/AI-DOS/AgentSystemPrompt.md` — provider execution discipline;
-- the applicable command, workflow, validation, review, and system contracts.
+- the applicable command, workflow, validation, review, security, and system contracts.
 
 Product documentation helps readers understand these surfaces. It does not grant permission to invoke or modify them.
 
@@ -187,5 +204,6 @@ Product documentation helps readers understand these surfaces. It does not grant
 Read Product documentation to understand AI-DOS.
 Read normative contracts to execute AI-DOS behavior.
 Read Target-owned authorities to understand the project being operated on.
+Read Security and Implementation to understand bounded risk and executable-surface limits.
 Use Human Governance for final authority and lifecycle decisions.
 ```
