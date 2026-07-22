@@ -23,7 +23,7 @@
 | Traceability ID | `AI-DOS.ARCHITECTURE.AGENTS.V2.RUNTIME-CONSUMPTION` |
 | Scope | Documentation-level AGENTS v2 agent runtime consumption model, including agent/runtime/engine boundary rules, capability consumption, context consumption, workflow consumption, delegation consumption, validation consumption, governance boundaries, ProjectStatus boundaries, forbidden content, and deferred scope. |
 | Out of Scope | Runtime implementation, runtime execution, scheduling, queues, dispatch, routing, orchestration, APIs, storage, CLI, UI, transport, messaging runtime, swarm behavior, platform adapters, Engine RFC continuation, Runtime redefinition, Engine Platform redefinition, Governance redefinition, Standards redefinition, M.0 redefinition, M.1 redefinition, STD-010 redefinition, and ProjectStatus updates. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI-DOS/GOVERNANCE.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Architecture.md` |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI-DOS/GOVERNANCE.md`; the invoking Target's Resolved Target Context (operational-state and roadmap authority); `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Architecture.md` |
 | Normative References | `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Architecture.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Identity-and-Registry.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Capability-and-Role-Catalog.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Lifecycle-and-Governance-Boundaries.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Communication-and-Coordination.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Validation-and-Review-Model.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Workflow-Model.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Delegation-and-Escalation-Model.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v1-draft.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Capability-Evolution-Model.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Capability-Maturity-Model.md`; `docs/AI-DOS/Architecture/Standards/STD-010-Document-Metadata-Standard.md`; `docs/AI-DOS/Architecture/RFC/Runtime/A.3-Runtime-Architecture-RFC.md`; Engine Platform RFC family |
 | Dependencies | AGENTS v2 Architecture Foundation; AGENTS v2 identity and registry model; AGENTS v2 capability and role catalog; AGENTS v2 lifecycle and governance boundaries; AGENTS v2 communication and coordination model; AGENTS v2 validation and review model; AGENTS v2 workflow model; AGENTS v2 delegation and escalation model; Runtime Architecture; Engine Platform; Governance Atlas v2 navigation; ProjectStatus operational state and frozen-area constraints; Development Phases roadmap; STD-010 metadata requirements. |
 | Consumes | AGENTS v2 foundation boundaries; identity, registry, role, capability, lifecycle, communication, coordination, validation, review, workflow, delegation, escalation, and deferred-scope models; Runtime Architecture as an external authority; Engine Platform capabilities through Runtime or approved contracts; repository bootloader rules; governance navigation; roadmap state; frozen-area constraints; AGENTS v1; AGENTS v2 roadmap and development phases; STD-010 metadata requirements. |
@@ -139,12 +139,11 @@ Authority rules:
 1. Human Governance remains final.
 2. `AGENTS.md` remains the repository bootloader.
 3. `docs/AI-DOS/GOVERNANCE.md` remains the governance navigation authority.
-4. `docs/Projects/ForgeAI/Planning/ProjectStatus.md` remains the operational state and frozen-area authority.
-5. `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` remains the roadmap authority.
-6. `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Architecture.md` is the parent foundation for this document.
-7. Prior AGENTS v2 documents define agent identity, registry, roles, capabilities, lifecycle, communication, coordination, validation, review, workflow, delegation, and escalation concepts consumed by this document.
-8. Runtime Architecture remains authoritative for runtime concepts and execution-environment boundaries.
-9. Engine Platform remains authoritative for engine capabilities and engine platform concepts.
+4. The invoking Target's Resolved Target Context supplies operational-state, frozen-area, and roadmap authority; this document does not hard-code a Target-specific path for it.
+5. `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Architecture.md` is the parent foundation for this document.
+6. Prior AGENTS v2 documents define agent identity, registry, roles, capabilities, lifecycle, communication, coordination, validation, review, workflow, delegation, and escalation concepts consumed by this document.
+7. Runtime Architecture remains authoritative for runtime concepts and execution-environment boundaries.
+8. Engine Platform remains authoritative for engine capabilities and engine platform concepts.
 10. STD-010 governs this document's metadata requirements.
 11. Governance, Standards, M.0, M.1, Runtime, Engine Platform, and ProjectStatus retain authority over their own domains.
 
@@ -363,7 +362,7 @@ This document preserves the following governance boundaries:
 
 ## 16. ProjectStatus Boundaries
 
-`docs/Projects/ForgeAI/Planning/ProjectStatus.md` remains the operational state and frozen-area authority.
+The invoking Target's Resolved Target Context remains the operational-state and frozen-area authority; this document does not hard-code a Target-specific path for it.
 
 ProjectStatus boundary rules:
 

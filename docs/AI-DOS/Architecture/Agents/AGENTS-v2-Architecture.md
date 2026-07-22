@@ -23,7 +23,7 @@
 | Traceability ID | `AI-DOS.ARCHITECTURE.AGENTS.V2.FOUNDATION` |
 | Scope | Foundational AGENTS v2 architecture boundaries for agent identity, roles, registries, metadata, lifecycle, governance boundaries, AI execution rules, and validation expectations. |
 | Out of Scope | Implementation, swarm runtime, multi-agent runtime activation, platform adapters, Engine RFC continuation, Runtime redefinition, Engine Platform redefinition, governance redefinition, standards redefinition, meta-model redefinition, and ProjectStatus updates. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI-DOS/GOVERNANCE.md`; `docs/AI-DOS/FrameworkGovernance.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI-DOS/GOVERNANCE.md`; `docs/AI-DOS/FrameworkGovernance.md`; the invoking Target's Resolved Target Context (operational-state and roadmap authority) |
 | Normative References | `docs/AI-DOS/Architecture/Agents/AGENTS-v1-draft.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Capability-Evolution-Model.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Capability-Maturity-Model.md`; `docs/AI-DOS/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
 | Dependencies | Governance Atlas v2 navigation; Framework Governance decision policy; ProjectStatus operational state; Development Phases roadmap; AGENTS v1 operating architecture; AGENTS v2 roadmap and development phases. |
 | Consumes | Repository bootloader rules; governance navigation; governance decision policy; roadmap state; frozen-area constraints; AGENTS v1; AGENTS v2 planning inputs; STD-010 metadata requirements. |
@@ -103,12 +103,11 @@ Authority and consumption rules:
 2. `AGENTS.md` is the repository bootloader only.
 3. `docs/AI-DOS/GOVERNANCE.md` is the Governance Atlas v2 navigation authority.
 4. `docs/AI-DOS/FrameworkGovernance.md` is governance decision policy.
-5. `docs/Projects/ForgeAI/Planning/ProjectStatus.md` is operational state and frozen-area authority.
-6. `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` is roadmap authority.
-7. STD-010 governs this document's metadata requirements.
-8. AGENTS v1 is consumed as the existing single-agent operating architecture.
-9. AGENTS v2 roadmap and development phases are planning inputs, not activation authority.
-10. Runtime and Engine documents remain authoritative for their own domains.
+5. The invoking Target's Resolved Target Context supplies operational-state, frozen-area, and roadmap authority; this document does not hard-code a Target-specific path for it.
+6. STD-010 governs this document's metadata requirements.
+7. AGENTS v1 is consumed as the existing single-agent operating architecture.
+8. AGENTS v2 roadmap and development phases are planning inputs, not activation authority.
+9. Runtime and Engine documents remain authoritative for their own domains.
 
 AGENTS v2 may define agent-specific architecture only within the agent layer. It shall not redefine runtime, engine, governance, standard, or meta-model concepts.
 

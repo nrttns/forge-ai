@@ -23,7 +23,7 @@
 | Traceability ID | `AI-DOS.ARCHITECTURE.AGENTS.V2.VALIDATION-REVIEW` |
 | Scope | Documentation-level AGENTS v2 agent validation and review model, validation philosophy, validation categories, identity validation, capability validation, lifecycle validation, communication validation, review responsibilities, review outcomes, validation rules, and governance boundaries. |
 | Out of Scope | Runtime validation, implementation validation, CI/CD validation, execution validation, scheduling, orchestration, runtime review, approval workflow, certification workflow, automation, APIs, storage, platform adapters, Engine RFC work, Runtime redefinition, Engine Platform redefinition, Governance redefinition, Standards redefinition, M.0 redefinition, M.1 redefinition, STD-010 redefinition, and ProjectStatus updates. |
-| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI-DOS/GOVERNANCE.md`; `docs/Projects/ForgeAI/Planning/ProjectStatus.md`; `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Architecture.md` |
+| Normative Authority | Human Governance; `AGENTS.md`; `docs/AI-DOS/GOVERNANCE.md`; the invoking Target's Resolved Target Context (operational-state and roadmap authority); `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Architecture.md` |
 | Normative References | `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Architecture.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Identity-and-Registry.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Capability-and-Role-Catalog.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Lifecycle-and-Governance-Boundaries.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Communication-and-Coordination.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v1-draft.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Capability-Evolution-Model.md`; `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Capability-Maturity-Model.md`; `docs/AI-DOS/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
 | Dependencies | AGENTS v2 Architecture Foundation; AGENTS v2 Agent Identity and Registry; AGENTS v2 Agent Capability and Role Catalog; AGENTS v2 Agent Lifecycle and Governance Boundaries; AGENTS v2 Agent Communication and Coordination; Governance Atlas v2 navigation; ProjectStatus operational state and frozen-area constraints; Development Phases roadmap; AGENTS v1 operating architecture; AGENTS v2 planning inputs; STD-010 metadata requirements. |
 | Consumes | AGENTS v2 foundation boundaries; AGENTS v2 identity, registry, role-reference, capability-link, lifecycle, governance-boundary, communication, coordination, validation, reporting, escalation, and deferred-scope models; repository bootloader rules; governance navigation; roadmap state; frozen-area constraints; AGENTS v1; AGENTS v2 roadmap and development phases; STD-010 metadata requirements. |
@@ -145,12 +145,11 @@ Authority rules:
 1. Human Governance remains final.
 2. `AGENTS.md` remains the repository bootloader.
 3. `docs/AI-DOS/GOVERNANCE.md` remains the governance navigation authority.
-4. `docs/Projects/ForgeAI/Planning/ProjectStatus.md` remains the operational state and frozen-area authority.
-5. `docs/Projects/ForgeAI/Planning/DevelopmentPhases.md` remains the roadmap authority.
-6. `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Architecture.md` is the parent foundation for this document.
-7. `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Identity-and-Registry.md` provides identity, registry, role-reference, capability-link, lifecycle, ownership, governance, and validation inputs.
-8. `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Capability-and-Role-Catalog.md` provides capability, role, permitted-task, prohibited-task, validation, reporting, and escalation inputs.
-9. `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Lifecycle-and-Governance-Boundaries.md` provides lifecycle-state, transition, activation, suspension, deactivation, approval, certification, ProjectStatus, frozen-area, and AI decision boundaries.
+4. The invoking Target's Resolved Target Context supplies operational-state, frozen-area, and roadmap authority; this document does not hard-code a Target-specific path for it.
+5. `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Architecture.md` is the parent foundation for this document.
+6. `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Identity-and-Registry.md` provides identity, registry, role-reference, capability-link, lifecycle, ownership, governance, and validation inputs.
+7. `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Capability-and-Role-Catalog.md` provides capability, role, permitted-task, prohibited-task, validation, reporting, and escalation inputs.
+8. `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Lifecycle-and-Governance-Boundaries.md` provides lifecycle-state, transition, activation, suspension, deactivation, approval, certification, ProjectStatus, frozen-area, and AI decision boundaries.
 10. `docs/AI-DOS/Architecture/Agents/AGENTS-v2-Agent-Communication-and-Coordination.md` provides communication participant, communication contract, logical message, context exchange, coordination, validation, and governance-boundary inputs.
 11. STD-010 governs this document's metadata requirements.
 12. Runtime, Engine Platform, Governance, Standards, M.0, M.1, and STD-010 retain authority over their own domains.
