@@ -8,7 +8,7 @@
 |:---|:---|
 | Identifier | `FORGE-AI.TARGET.PROJECT-STATUS` |
 | Title | Forge AI Operational State Model |
-| Version | `6.9.0-draft` |
+| Version | `6.10.0-draft` |
 | Status | Live Operational State |
 | Classification | Target Project Operational State |
 | Document Type | ProjectStatus |
@@ -55,7 +55,7 @@ Forge AI owns these Target values. AI-DOS owns reusable product contracts and wo
 | Operational Readiness | Passed |
 | Executable Work Unit | None |
 | Current State | `POST-COMMAND-ROUTING-V3-ACCEPTANCE-HOLD` |
-| Current Blocker | None recorded   |
+| Current Blocker | See Section 10 — PR #301 lifecycle-gap correction; S4-E3 evidence isolated pending Human Governance disposition |
 | Protected Future Capabilities | D3, D4, MCP, hosted provider, Axis Suite, feedback transport, and external Target execution remain inactive |
 
 `Executable Work Unit` and `Current State`, together with Section 3's Active Task record, are the canonical Target-owned Active Work Unit record bound by `Mission/AGENTS.md` §5.6. They change only through the same continuation-driven activation transition, or the corresponding Human Governance approval gate-closing transition, that section and Section 11 authorize — never through review completion, merge state, or repository activity alone.
@@ -134,13 +134,13 @@ This section records at most one reviewed completion subject currently awaiting 
 
 | Field | Current Value |
 |:---|:---|
-| Approval Subject State | `None recorded` |
-| Review Subject Locator | Not applicable |
-| Reviewed-Subject Revision Identity | Not applicable |
-| Review Outcome | Not applicable |
-| Required Validation Evidence | Not applicable |
-| Required Completion/Integration Evidence | Not applicable |
-| Recorded Blocker | Not applicable |
+| Approval Subject State | `Awaiting Human Governance Approval` |
+| Review Subject Locator | GitHub pull request `doallon/forge-ai#301` ("Record Human Governance acceptance of PR #298 lifecycle gap correction"), branch `claude/approve-pr-298-pxr84c` |
+| Reviewed-Subject Revision Identity | `0b58eb76532b5cd264a5c7b1a2f424018cad112d` (PR #301's sole commit; re-resolved and confirmed identical via the GitHub pull request record immediately before this recording; merged into `master` as commit `341d4e6a2fdf85bb2ed4f415b3422ff3c3c2f800`) |
+| Review Outcome | `PASS` — bounded scope-exact review: PR #301 changed exactly one file (`ProjectStatus.md`, +3/-1) and recorded exactly the Section 9 evidence row and Version History entry for the previously explicit Human Governance approval of PR #298 at reviewed head `8d34cb03723b4545d441d6dfd2b22bd2b3b91697`; `AgentReviewChecklist.md` §7 Reviewed-Subject Identity Gate satisfied (locator and revision identity resolved, initial/final match); no protected-area or scope-expansion violation found |
+| Required Validation Evidence | `git diff --stat` for commit `0b58eb7` shows exactly one file changed; written content matches the authorized PR #298 acceptance transition verbatim; no other ProjectStatus field, Roadmap, DevelopmentPhases, Mission, or AI-DOS artifact touched |
+| Required Completion/Integration Evidence | Merged into `master` via GitHub PR #301, merge commit `341d4e6a2fdf85bb2ed4f415b3422ff3c3c2f800`, confirmed present in current `origin/master` history |
+| Recorded Blocker | None invalidating this subject. PR #301 was merged on GitHub without a preceding explicit Human Governance approval instruction naming it (unlike PR #298, #276, and #290); this record exists so Human Governance can now explicitly review and approve or invalidate it, consistent with `Mission/AGENTS.md` §5.5. GitHub's merge of PR #301 is Required Completion/Integration Evidence only; per `ProjectStateUpdater.md` §6 it is not itself substituted for this approval. See Section 10 for the separate, unrelated S4-E3 isolation finding. |
 
 Allowed `Approval Subject State` values: `None recorded`, `Awaiting Human Governance Approval`, `Accepted`, `Invalidated`. Only `Awaiting Human Governance Approval` is eligible for approval resolution.
 
@@ -209,7 +209,11 @@ Detailed implementation and review evidence remains in the referenced PRs, repos
 
 ### Blocker
 
-None recorded.
+PR #301 (`doallon/forge-ai`, branch `claude/approve-pr-298-pxr84c`, commit `0b58eb76532b5cd264a5c7b1a2f424018cad112d`, merged into `master` as `341d4e6a2fdf85bb2ed4f415b3422ff3c3c2f800`) recorded Human Governance acceptance of PR #298 and was then merged on GitHub without a preceding explicit Human Governance approval instruction naming PR #301 itself. That recording's content remains correct and is preserved (Section 5, Section 9, and this Version History remain accurate for PR #298's acceptance); Section 6.1 now records PR #301 as `Awaiting Human Governance Approval` so it can be explicitly reviewed and approved (or invalidated) going forward.
+
+A subsequent `HUMAN GOVERNANCE — Continue` invocation in the same session, after PR #301 had already merged, proceeded to generate and execute the `S4-E3` protected-area-proof evidence report (`docs/Projects/ForgeAI/Reports/AI-DOS-Target-Protected-Area-Proof-001-Evidence.md`, commit `199ae07` on branch `claude/approve-pr-298-pxr84c`) without first writing a `Mission/AGENTS.md` §5.6 Active Work Unit activation record into Section 2/3, as that section requires once §5.6 took effect via PR #298/#301. Verified via `git merge-base --is-ancestor 199ae07 origin/master` (result: not an ancestor) that commit was never merged into `master` and carries no live effect. It is hereby identified and isolated: it must not be merged, must not be cited as `S4-E3` evidence, and must not be treated as valid Stream 4 evidence — `S4-E3` remains `Pending` in Section 5, unchanged by this correction — until a separately authorized, properly `Mission/AGENTS.md` §5.6-activated re-execution occurs or Human Governance otherwise dispositions it.
+
+No Roadmap, DevelopmentPhases, Mission, or AI-DOS product artifact was touched by this correction. Section 2/3 (existing hold) and Section 12 (next action) are unchanged; no work unit was activated.
 
 ### Risks
 
@@ -293,3 +297,4 @@ This clarification is Target-owned governance policy recording a Human Governanc
 | `6.7.0-draft` | 2026-07-22 | Recorded Human Governance acceptance of the Stream 4 `S4-E3` Generation-Grade Declaration to Roadmap in PR #290 (reviewed head `5761b67069f3562478d41bac721123fae0e1bd2f`, merge `a95a38b04b3646f811b4df25b039543eaae2d219`), resolved under explicit named-identity approval intent per Mission `AGENTS.md` §5.5 rule 5 (Section 6.1 held `None recorded`, so no existing-record conflict applied; reviewed head re-resolved and confirmed identical via the GitHub pull request record before recording). Added one new Section 9 row for PR #290. This PR recorded only the `S4-E3` generation-grade declaration precondition in Roadmap, not protected-area-proof evidence itself, so Section 5 leaves `S4-E3` `Pending`. Section 6, Section 6.1 (`None recorded`), the Section 12 next action, Roadmap, DevelopmentPhases, Mission, and AI-DOS product artifacts were not touched; no candidate was generated, selected, activated, or executed; the repository remains on the existing hold awaiting Human Governance continuation or explicit next-step selection. |
 | `6.8.0-draft` | 2026-07-22 | Added cross-references binding Section 2 (`Executable Work Unit`, `Current State`), Section 3 (Active Task), Section 6.1, and Section 12 to the new `Mission/AGENTS.md` §5.6 Forge AI Active Work Unit Policy: documents that continuation-driven activation writes the selected work unit into Section 2/3, that this identity is the exact reviewed-subject identity execution/validation/evidence/review remain bound to, that review completion alone does not close it, and that Human Governance approval gate-closing a Section 6.1 subject also clears Section 2/3 and re-establishes the Section 12 next action. No live value changed: `Executable Work Unit` remains `None`, the Active Task record remains the existing hold, Section 6.1 remains `None recorded`, Section 12's authorized next action remains unchanged, and no Stream 4 evidence status, Roadmap, DevelopmentPhases, or Section 9 evidence row was touched; no work unit was generated, selected, activated, executed, reviewed, recorded, or accepted by this correction. |
 | `6.9.0-draft` | 2026-07-22 | Recorded Human Governance acceptance of PR #298 (Correct Human Governance active-work/pending-approval lifecycle gap; reviewed head `8d34cb03723b4545d441d6dfd2b22bd2b3b91697`, merge `b6581507856d1498f88cf679efa15d452874c9c1`), resolved under explicit named-identity approval intent per Mission `AGENTS.md` §5.5 rule 5 (Section 6.1 held `None recorded`, so no existing-record conflict applied; reviewed head re-resolved and confirmed identical via the GitHub pull request head-commit record before recording). Added one new Section 9 row for PR #298. Section 2/3 (existing hold), Section 6.1 (`None recorded`), the Section 12 next action, Roadmap, DevelopmentPhases, Mission, Stream 4 evidence status (Section 5), and AI-DOS product artifacts were not touched; no candidate was generated, selected, activated, or executed; the repository remains on the existing hold awaiting Human Governance continuation or explicit next-step selection. |
+| `6.10.0-draft` | 2026-07-22 | Corrective work unit under explicit Human Governance instruction: recorded PR #301 (the vehicle that carried the `6.9.0-draft` PR #298 acceptance recording) as a Section 6.1 `Awaiting Human Governance Approval` subject, because it was merged into `master` (commit `341d4e6a2fdf85bb2ed4f415b3422ff3c3c2f800`) without a preceding explicit Human Governance approval instruction naming PR #301 itself; its recorded content (Section 5, Section 9, and the `6.9.0-draft` entry) is preserved and remains correct. Set Section 2 and Section 10's Current Blocker to identify and isolate the `S4-E3` protected-area-proof evidence report generated on branch `claude/approve-pr-298-pxr84c` (commit `199ae07`) by a later `Continue` invocation without a valid `Mission/AGENTS.md` §5.6 Active Work Unit activation; confirmed via `git merge-base --is-ancestor` that this commit was never merged into `master` and carries no live effect. `S4-E3` remains `Pending`; no Stream 4 evidence status changed; Section 2/3 (existing hold) and Section 12 (next action) are unchanged; no work unit was activated, generated, selected, or executed by this correction; Roadmap, DevelopmentPhases, Mission, and AI-DOS product artifacts were not touched. |

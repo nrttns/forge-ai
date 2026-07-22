@@ -2,6 +2,11 @@
 
 ---
 
+> **ISOLATION NOTICE (added 2026-07-22 by Human-Governance-directed lifecycle correction):**
+> This artifact was generated and executed by a `Continue` invocation without first writing a `Mission/AGENTS.md` §5.6 Active Work Unit activation record into `ProjectStatus.md` §2/§3, as required once §5.6 took effect. It has never been merged into `master` (verified via `git merge-base --is-ancestor`). It is **not valid `S4-E3` evidence**, must not be cited, merged, or accepted as Stream 4 evidence, and does not advance `S4-E3` from `Pending`, pending a properly activated re-execution or explicit Human Governance disposition. See `ProjectStatus.md` §10 Current Blocker.
+
+---
+
 ## Document Metadata
 
 | Field | Value |
