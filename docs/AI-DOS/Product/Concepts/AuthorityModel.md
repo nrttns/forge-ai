@@ -48,7 +48,7 @@ Human Governance is the final decision authority.
 It may supply or withhold:
 
 - strategic direction;
--- explicit mutation authorization;
+- explicit mutation authorization;
 - approval or rejection;
 - protected-capability activation;
 - acceptance of evidence;
