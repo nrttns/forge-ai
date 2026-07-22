@@ -8,13 +8,13 @@
 |:---|:---|
 | Identifier | `FORGE-AI.TARGET.PROJECT-STATUS` |
 | Title | Forge AI Operational State Model |
-| Version | `6.4.0-draft` |
+| Version | `6.5.0-draft` |
 | Status | Live Operational State |
 | Classification | Target Project Operational State |
 | Document Type | ProjectStatus |
 | Owner | Forge AI Target Project Governance |
 | Approval Authority | Human Governance |
-| Last Updated | `2026-07-21` |
+| Last Updated | `2026-07-22` |
 | Scope | Current Forge AI operational values, evidence status, blockers, protected boundaries, and exactly one authorized next action. |
 | Out of Scope | AI-DOS algorithms or schemas, provider routing, workflow procedure, Roadmap or DevelopmentPhases definitions, implementation design, backlog or sprint management, detailed historical task logs, certification, and automatic state updates. |
 | Normative Authority | Human Governance; `docs/Projects/ForgeAI/Mission/AGENTS.md`; `docs/Projects/ForgeAI/Mission/ForgeAI-Mission-Product-and-Autonomy-Model.md` |
@@ -99,7 +99,7 @@ Roadmap owns the identifiers, descriptions, and order. ProjectStatus owns only c
 | Evidence ID | Status | Accepted Evidence or Current Gap |
 |:---|:---|:---|
 | `S4-E1` | Accepted | Minimal Target contract foundation: PR #235; deterministic declaration profile: PR #245 |
-| `S4-E2` | Pending | No accepted onboarding-validation implementation or evidence |
+| `S4-E2` | Accepted | Onboarding-declaration evaluation evidence (`CASE-1`–`CASE-4`, aggregate `PASS`): PR #279; reviewed head `ef5fae3b0c97588f63b85cd70a505ada82d34cd6`; report `docs/Projects/ForgeAI/Reports/AI-DOS-Target-Onboarding-Validation-001-Evidence.md` |
 | `S4-E3` | Pending | No accepted protected-area proof |
 | `S4-E4` | Pending | No accepted validation-declaration proof |
 | `S4-E5` | Pending | No accepted permissions proof |
@@ -113,7 +113,7 @@ Allowed status values are `Accepted`, `Pending`, and `Blocked`. Status changes r
 
 | Input | Current Value |
 |:---|:---|
-| Controlling Objective ID | `S4-E2` |
+| Controlling Objective ID | `S4-E3` |
 | Predeclared Eligible Candidate | None recorded |
 | Target Priority Policy | `docs/Projects/ForgeAI/Mission/AGENTS.md` §5.3 |
 | Candidate Selection Contract | `docs/AI-DOS/Workflows/TaskPlanner.md` |
@@ -190,6 +190,7 @@ Completion evidence must identify changed artifacts, validation results, blocker
 | Command Routing v2 | Accepted | PR #247; reviewed head `8ef274e8e5e99aabc9496ea5176796e1bc743577`; validation run #24 |
 | Command Routing v3 Candidate Generation | Accepted | PR #250; reviewed head `02c072232d96dc247a411ca58ea092cff2ac064a`; validation run #28; merge `7218e0bf07cea00a905dadd08264b62afb4f1920` |
 | Pending Human Governance Approval Subject Recording Foundation | Accepted | PR #268; reviewed head `3916f7d84fc1169af21a2620e11095f27eb6a959`; independent review verdict `APPROVE` |
+| Stream 4 Evidence `S4-E2` — Target Onboarding Validation | Accepted | PR #279; reviewed head `ef5fae3b0c97588f63b85cd70a505ada82d34cd6`; evidence report `docs/Projects/ForgeAI/Reports/AI-DOS-Target-Onboarding-Validation-001-Evidence.md` |
 
 Detailed implementation and review evidence remains in the referenced PRs, repository reports, and immutable Git history. This summary is current-state evidence indexing, not a historical narrative or a second workflow specification.
 
@@ -231,7 +232,7 @@ The update must preserve owner attribution and may change only the named Target 
 AWAIT HUMAN GOVERNANCE CONTINUATION OR EXPLICIT NEXT-STEP SELECTION
 ```
 
-No executable work unit is active. A later invocation must consume the current Target inputs in Sections 5 and 6, together with Roadmap's `S4-E2` generation-grade declaration, through their owning AI-DOS contracts.
+No executable work unit is active. A later invocation must consume the current Target inputs in Sections 5 and 6 — now controlled by `S4-E3`, the earliest non-`Accepted` Stream 4 evidence identifier under `Mission/AGENTS.md` §5.3 — through their owning AI-DOS contracts. Roadmap's `S4-E2` generation-grade declaration (`Roadmap.md` §6) is bound exclusively to `S4-E2` and is not valid generation input for `S4-E3` or any other identifier; no `S4-E3` generation-grade declaration is currently recorded.
 
 ---
 
@@ -276,3 +277,4 @@ This clarification is Target-owned governance policy recording a Human Governanc
 | `6.2.0-draft` | 2026-07-21 | Removed stale Candidate Generation Source Profile references superseded by Roadmap's `S4-E2` generation-grade declaration (Roadmap v6.2.0-draft): cleared the missing-CGSP blocker and the `Candidate Generation Source Profile Instance` input row. `S4-E2` remains `Pending`; no executable work unit is active; no candidate was selected, generated, or activated; no evidence was accepted. |
 | `6.3.0-draft` | 2026-07-21 | Added Section 6.1 Pending Human Governance Approval Subject: a single-slot, provider-neutral Target-owned record (`None recorded` by default) that bare Human Governance approval intent may resolve only when exactly one eligible subject is canonically recorded, per Mission `AGENTS.md` §5.5. No subject was recorded, accepted, or invalidated by this addition; the field is initialized to `None recorded`; no historical pull request was retroactively classified; no current phase, roadmap, capability status, accepted evidence, or next-step selection changed. |
 | `6.4.0-draft` | 2026-07-21 | Recorded Human Governance acceptance of the Pending Human Governance Approval Subject Recording Foundation in PR #268 at reviewed head `3916f7d84fc1169af21a2620e11095f27eb6a959`. Section 6.1 remains `None recorded`; no pending approval subject was created; no continuation, candidate generation, candidate selection, capability activation, or execution was authorized. |
+| `6.5.0-draft` | 2026-07-22 | Recorded Human Governance acceptance of PR #279 at reviewed head `ef5fae3b0c97588f63b85cd70a505ada82d34cd6`, resolved from its merged content as the `S4-E2` onboarding-declaration evaluation evidence report. Section 5 changed `S4-E2` from `Pending` to `Accepted`; Section 9 gained one corresponding evidence row. Re-resolved the resulting live Target state from the canonical authority chain per `Mission/AGENTS.md` §5.3: Section 6 Controlling Objective ID changed from `S4-E2` to `S4-E3`, the earliest non-`Accepted` Stream 4 evidence identifier; Section 12's explanatory reference was corrected to name `S4-E3` and to state that Roadmap's `S4-E2` generation-grade declaration does not supply `S4-E3` generation input. No other Stream 4 evidence item, Current State, Active Task, Current Capability Boundary, Section 12 authorized next action, Section 6.1 Pending Approval Subject, Roadmap, DevelopmentPhases, Mission, or AI-DOS product artifact changed; no `S4-E3` work unit was generated, selected, activated, or executed. |
