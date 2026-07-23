@@ -10,7 +10,7 @@
 |:---|:---|
 | Identifier | `AI-DOS-STD-011-TARGET-PROJECT-CONFORMANCE-PROFILE` |
 | Title | STD-011 — Target Project Conformance Profile |
-| Version | `0.1.0-draft` |
+| Version | `0.1.1-draft` |
 | Status | Draft |
 | Canonical Status | Non-canonical draft; not approved, accepted, certified, promoted, or operational |
 | Classification | Target Project Conformance Profile |
@@ -78,25 +78,43 @@ Logical artifact identity is evaluated from metadata and declarations. Physical 
 
 ## 4. Result Semantics and Aggregation
 
-This profile uses M.9 result semantics only:
+This profile uses only the four canonical M.9 validation-result types. Every completed validation assertion assigns exactly one of these results:
 
-| Profile Outcome | M.9 Basis | Exact Condition |
+| M.9 Result Type | Conformance Effect | Evidence Requirement |
 |:---|:---|:---|
-| Conformance / Pass | Validation Result — Pass | Every applicable criterion has result Pass, all required evidence is present, no blocker remains, and no required Human Governance judgment is unresolved. |
-| Non-Conformance / Fail | Validation Result — Fail | At least one applicable criterion fails within scope and the failure is supported by required evidence. |
-| Warning | Validation Result — Warning | The criterion is satisfied but a non-blocking concern with evidence remains. Warning cannot be aggregated into false conformance unless all mandatory criteria otherwise pass. |
-| Waived Finding | Validation Result — Waived Finding | A criterion is not satisfied but an explicit governance waiver with evidence is supplied. Waiver does not equal approval, certification, promotion, or operational activation. |
-| Indeterminate / Blocking Safe-Stop | M.9 completeness rule plus AI-DOS safe-stop semantics | A required input, authority, identity, evidence item, resolver outcome, or Human Governance decision is absent, ambiguous, conflicting, stale, drifted, or insufficient. This profile records the condition as a blocker and does not convert it to Pass or Fail unless canonical authority supports that conversion. |
+| Pass | Positive conformance contribution. | Optional; may include an audit trace. |
+| Fail | Blocks conformance. | Mandatory: violated rule, deficiency, and expected state. |
+| Warning | Positive but annotated. | Mandatory: concern, non-blocking rationale, and recommended resolution. |
+| Waived Finding | Positive but conditional. | Mandatory: deficiency, waiving authority, rationale, and waiver scope. |
 
-Safe-stop is distinct from non-conformance when the assessed material cannot be evaluated deterministically. A safe-stop records missing authority or evidence; it does not mutate Target state.
+### Assessment Aggregation
+
+After every applicable required criterion has completed, the complete M.9 result set is aggregated in this order:
+
+| Complete Result Set | M.9 Overall Outcome |
+|:---|:---|
+| Any unwaived Fail | Non-conformant. |
+| Otherwise, any Waived Finding | Conformant with conditions. |
+| Otherwise, one or more results, all Pass or Warning | Conformant. |
+| No results | Inconclusive — not a conformance claim. |
+
+A Warning does not override a Fail. A Waived Finding does not equal approval, certification, promotion, migration, or operational activation.
+
+Aggregation must not be applied to an incomplete required evaluation set. If an applicable required criterion remains unevaluated because of a safe-stop, unresolved blocker, missing canonically required evidence, or missing required Human Governance decision, the assessment records a blocked safe-stop disposition and makes no aggregate conformance claim. Completed results for other criteria may be retained, but they do not cure the incomplete assessment.
+
+### Safe-Stop Disposition
+
+Safe-stop is evaluation behavior under STD-011 §19, not an M.9 validation-result type or an additional aggregate outcome. When a safe-stop condition prevents deterministic evaluation of a rule-target pair, the evaluator does not complete the M.9 assertion and does not assign Pass, Fail, Warning, or Waived Finding to that blocked pair. The safe-stop is recorded separately with the blocker, owning authority, affected artifact role, evidence inspected, and next required human decision or correction.
+
+Missing optional Pass audit evidence does not trigger safe-stop. Missing evidence triggers safe-stop only when canonical authority or the applicable criterion requires that evidence. A safe-stop does not mutate Target state.
 
 This draft does not invent a severity taxonomy. Where a finding format is needed, use existing review terms only as applicable: `INFO`, `WARNING`, `BLOCKER`, and M.9 Pass, Fail, Warning, and Waived Finding. If a requested severity cannot be mapped to those existing terms, record the gap without assigning a new severity.
 
 ## 5. Evidence Contract
 
-Each criterion result must produce an M.9-compatible validation evidence record with M.5 evidence binding:
+Each completed criterion assertion produces an M.9-compatible validation record. Evidence obligations follow M.9: evidence is optional for Pass and mandatory for Fail, Warning, and Waived Finding. When a record includes an M.5-governed evidence item or claim binding, that evidence must satisfy the applicable M.5 properties; the profile does not require an otherwise absent optional Pass audit trace.
 
-| Evidence Field | Requirement |
+| Validation Record Field | Requirement |
 |:---|:---|
 | Assessed Target identity | Required. |
 | Reviewed-subject locator | Required; must identify one subject without inference. |
@@ -105,14 +123,25 @@ Each criterion result must produce an M.9-compatible validation evidence record 
 | Applicable profile revision | Required path plus version and immutable revision. |
 | Criterion identifier | Required stable `STD011-TPC-*` identifier. |
 | Evaluated inputs | Required list of declarations, artifact identities, evidence locators, and resolver outcomes consumed. |
-| Result | Required M.9-aligned result or blocking safe-stop. |
-| Evidence source | Required source path, locator, decision record, or resolver output. |
-| Provenance | Required origin, collector, and derivation chain where applicable. |
+| Result | Required; exactly one of Pass, Fail, Warning, or Waived Finding. |
+| Evidence source | Mandatory for Fail, Warning, and Waived Finding; optional for Pass. When supplied, record the source path, locator, decision record, or resolver output. |
+| Provenance | Required for every included M.5-governed evidence item or derivation. |
+| Evidence freshness | Required for every included M.5-governed evidence item: creation timestamp, assessment timestamp, freshness classification, and any Timeless justification. Not applicable when a Pass record has no optional audit evidence. |
+| Evidence confidence | Required for every included M.5-governed claim binding, with level and justification. Not applicable when a Pass record has no optional audit evidence. |
 | Evaluator identity or role | Required. |
 | Evaluation timestamp or event identity | Required. |
 | Human Governance decision reference | Required when the criterion depends on approval, acceptance, waiver, equivalence, supersession, replacement, migration, or promotion. |
-| Unresolved blockers | Required when any blocker exists; otherwise `None`. |
 | Invalidation or staleness conditions | Required; at minimum subject revision drift, STD-011 revision change, profile revision change, role mapping change, evidence corpus change, declaration-set change, or Human Governance decision change. |
+
+A safe-stop is not stored in the Result field. It is a separate disposition record containing, at minimum:
+
+| Safe-Stop Field | Requirement |
+|:---|:---|
+| Blocker | Required condition that prevented deterministic evaluation. |
+| Owning authority | Required authority capable of resolving the blocker. |
+| Affected artifact role | Required. |
+| Evidence inspected | Required; may state that required evidence was absent. |
+| Next required human decision or correction | Required. |
 
 Evidence of evaluation is not evidence of approval, certification, canonical promotion, migration, operational activation, Target acceptance, or permission to mutate Target artifacts.
 
@@ -451,21 +480,23 @@ Prose similarity, AI judgment, provider preference, implementation convention, r
 | Human Governance judgment | Required for migration authorization and overwrites. |
 | Automation boundary | Machine-evaluable after authoritative input is supplied. |
 
-### STD011-TPC-021 — Non-Goals and Forge AI Boundary
+### STD011-TPC-021 — Non-Goals and Product/Target Boundary
 
 | Field | Value |
 |:---|:---|
-| STD-011 source section | §22, §23 |
+| STD-011 source section | §23 |
 | Conformance subject | Assessment scope and report. |
-| Required condition | Assessment does not use Forge AI as reusable design baseline, does not assert Forge AI conformance, does not migrate Forge AI, and does not perform prohibited STD-011 non-goals. |
+| Required condition | Assessment does not perform the STD-011 §23 non-goals, including encoding Forge AI-specific operational truth as reusable product truth, deriving reusable standards from current Target planning, or aligning or migrating an existing Target Project. |
 | Required inputs | Assessment report; changed-file list; claims. |
-| Evaluation method | Inspect scope, claims, and repository diff. |
-| Success condition | No Forge AI operational truth or prohibited expansion is included. |
-| Failure condition | Assessment encodes Forge AI operational truth as reusable product truth or performs prohibited action. |
+| Evaluation method | Inspect scope, claims, and repository diff against every §23 non-goal. |
+| Success condition | No §23-prohibited claim, authority expansion, implementation, alignment, or migration is included. |
+| Failure condition | Assessment performs or claims any §23-prohibited action. |
 | Indeterminate/blocker | Scope evidence is incomplete. |
 | Required evidence | Changed-file list; scope statement; claim review. |
-| Human Governance judgment | Required for any future Forge AI assessment/migration authorization. |
+| Human Governance judgment | Required for any separately authorized future Target assessment or migration. |
 | Automation boundary | Deterministic machine-evaluable for changed files and claim text. |
+
+STD-011 §22 may be consulted as informative Forge AI migration context only. It is non-normative and is not a mandatory source for this criterion.
 
 ### STD011-TPC-022 — STD-011 Draft Promotion Boundary
 
@@ -524,7 +555,7 @@ This first draft can coherently profile STD-011, but records these unsatisfied o
 
 | Gap ID | Source | Condition | Profile Handling |
 |:---|:---|:---|:---|
-| GAP-001 | M.9 / safe-stop authorities | M.9 has Pass, Fail, Warning, and Waived Finding result types, while AI-DOS safe-stop semantics are blocker behavior rather than a fifth M.9 result. | Represent unresolved safe-stop as an indeterminate/blocking assessment condition, not as a new result type. |
+| GAP-001 | M.9 / safe-stop authorities | M.9 has Pass, Fail, Warning, and Waived Finding result types, while AI-DOS safe-stop semantics are blocker behavior rather than a fifth M.9 result. | Record safe-stop as a separate blocked-evaluation disposition; do not complete the affected assertion or assign an M.9 result, and do not make an aggregate conformance claim while a required evaluation remains blocked. |
 | GAP-002 | Severity taxonomy | Existing authorities provide M.9 results and review severities `INFO`, `WARNING`, `BLOCKER`; no universal failure/blocker/warning/observation/safe-stop taxonomy is canonically defined for this profile. | Do not invent severity. Use supported terms only and record unmapped requests as unsupported. |
 | GAP-003 | Target Declaration Profile equivalence approval | STD-011 requires Target approval for equivalent declaration sets but no universal approval-record schema is defined in STD-011. | Require a Human Governance or delegated Target approval reference; safe-stop when absent or ambiguous. |
 | GAP-004 | Deterministic semantic conflict detection | STD-011 requires lower artifacts not to contradict higher artifacts, but full semantic contradiction detection can require governed interpretation. | Machine-check explicit identifiers and traces; route semantic conflict resolution to Human Governance when deterministic rules are insufficient. |
@@ -540,3 +571,4 @@ Promotion remains blocked until every metadata Promotion Requirements item in Se
 | Version | Date | Description |
 |:---|:---|:---|
 | `0.1.0-draft` | 2026-07-23 | Initial provider-neutral draft conformance profile foundation for STD-011 Target Project Standard. |
+| `0.1.1-draft` | 2026-07-23 | Corrected M.9 result and aggregation semantics, separated safe-stop dispositions from results, scoped M.5 evidence obligations, and removed non-normative §22 from mandatory criterion sourcing. |
