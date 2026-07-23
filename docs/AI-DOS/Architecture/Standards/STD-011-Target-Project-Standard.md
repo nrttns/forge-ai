@@ -10,7 +10,7 @@
 |:---|:---|
 | Identifier | `AI-DOS-STD-011` |
 | Title | STD-011 — Target Project Standard |
-| Version | `0.1.2-draft` |
+| Version | `0.1.3-draft` |
 | Status | Draft |
 | Canonical Status | Non-canonical draft; not approved, accepted, certified, promoted, or operational |
 | Classification | Target Project Architecture Standard |
@@ -254,7 +254,7 @@ Conformance validators SHALL test role identity and relationship coherence befor
 
 ## 17. Target Declaration Profile Integration
 
-A conforming Target Project SHALL expose a Target Declaration Profile or equivalent approved declaration set consumable by TargetRepositoryResolution.
+A conforming Target Project SHALL expose a Target Declaration Profile or an equivalent declaration set consumable by TargetRepositoryResolution. An equivalent declaration set SHALL satisfy the normative declaration-input and resolution-compatibility requirements in this section and SHALL be approved by the Target's Human Governance or an explicitly delegated Target approval authority. A provider or resolver MUST NOT self-approve this equivalence. Neither STD-011 nor this draft grants any current declaration-set equivalence approval.
 
 The Target-authored declaration set SHALL provide declaration inputs for at least:
 
@@ -369,7 +369,7 @@ STD-011 SHALL NOT be promoted, approved, canonicalized, certified, or operationa
 1. Successful conformance review against STD-000 Standards-family requirements and applicable STD-010 metadata requirements.
 2. Consistency review against M.0-M.9 with no invented Meta types or semantic redefinitions.
 3. Product/Target boundary review confirming preservation of AI-DOS Product truth and Target Project truth separation.
-4. Normative authority-direction review confirming Human Governance → Constitution → Meta / Standards → A.2 boundary → System Layer direction and no circular dependency on A.2 or TargetRepositoryResolution.
+4. Normative authority-direction review confirming Human Governance → A.1 Constitution → Framework Governance / applicable approved Meta Models and Standards → A.2 boundary → System Layer direction and no circular dependency on A.2 or TargetRepositoryResolution.
 5. Deterministic derivation and safe-stop review covering Mission, DevelopmentPhases, Roadmap, ProjectStatus, Target Declaration Profile input compatibility, and resolver-produced outcomes.
 6. Internal heading, terminology, and reference consistency review.
 7. Recorded review evidence and explicit Human Governance approval for promotion.
@@ -395,3 +395,4 @@ Before any approval or promotion consideration, STD-011 SHALL also be reviewed f
 | `0.1.0-draft` | 2026-07-23 | Initial standalone draft Target Project Standard foundation. |
 | `0.1.1-draft` | 2026-07-23 | Corrected authority-direction metadata and body text; added concrete promotion requirements; clarified ProjectStatus maintenance/ownership, resolver-owned safe-stop outcomes, and deterministic Roadmap derivation followed by governance acceptance. |
 | `0.1.2-draft` | 2026-07-23 | Corrected domain-scoped Normative Authority metadata; added Required Meta Authorities and Required Standard Dependencies; resolved specialization wording as consumption/application rather than a formal SPECIALIZES relationship; clarified Target approval authority for equivalent mandatory artifact role mappings. |
+| `0.1.3-draft` | 2026-07-23 | Clarified declaration-set equivalence criteria and Target approval authority in Section 17; aligned the Section 24 promotion-review authority chain with A.2 Section 5 by including Framework Governance and applicable approved Meta Models and Standards. |
