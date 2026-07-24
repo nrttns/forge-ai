@@ -10,7 +10,7 @@
 |:---|:---|
 | Identifier | `AI-DOS.ARCH.CONSTITUTION.A.1` |
 | Title | A.1 — AI-DOS Constitution |
-| Version | `4.0.1-draft` |
+| Version | `4.0.2-draft` |
 | Status | Draft |
 | Canonical Status | Non-canonical until explicitly promoted by Human Governance |
 | Classification | Constitutional Architecture |
@@ -20,17 +20,18 @@
 | Review Authority | Framework Governance |
 | Approval Authority | Human Governance |
 | Created | 2026-07-04 |
-| Last Updated | 2026-07-15 |
+| Last Updated | 2026-07-24 |
 | Scope | Permanent constitutional principles, authority boundaries, product/Target separation, source-of-truth rules, evolution constraints, and amendment rules for AI-DOS. |
 | Out of Scope | Target Project planning, implementation design, runtime details, engine details, distribution mechanisms, commands, workflows, and operational state mutation. |
 | Normative Authority | Human Governance |
-| Normative References | `docs/AI-DOS/GOVERNANCE.md`; `docs/AI-DOS/FrameworkGovernance.md`; `docs/AI-DOS/Meta/M.0-Framework-Meta-Model.md`; `docs/AI-DOS/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI-DOS/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI-DOS/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI-DOS/Architecture/Standards/STD-010-Document-Metadata-Standard.md` |
+| Normative References | None; this Constitution is governed directly by Human Governance. |
+| Informative References | `docs/AI-DOS/GOVERNANCE.md`; `docs/AI-DOS/FrameworkGovernance.md`; `docs/AI-DOS/Meta/M.0-Framework-Meta-Model.md`; `docs/AI-DOS/Meta/M.1-Artifact-Meta-Model.md`; `docs/AI-DOS/Architecture/Standards/STD-000-Framework-Standards.md`; `docs/AI-DOS/Architecture/Standards/STD-003-Terminology-Standard.md`; `docs/AI-DOS/Architecture/Standards/STD-010-Document-Metadata-Standard.md`. These downstream artifacts provide implementation and navigation context only; they do not govern this Constitution or become its promotion prerequisites. |
 | Historical Evidence | `docs/AI-DOS/Architecture/Discovery/A.0-Framework-Audit.md` |
-| Dependencies | Human Governance authority and approved governance policy |
-| Consumes | Human Governance decisions and approved governance principles |
+| Dependencies | Human Governance authority only. |
+| Consumes | Human Governance decisions applicable to the constitutional scope. |
 | Produces | Constitutional invariants and boundaries consumed by all AI-DOS authorities and product artifacts |
 | Related Specifications | `docs/AI-DOS/Architecture/RFC/README.md`; `docs/AI-DOS/Architecture/RFC/Boundary/A.2-AI-DOS-Target-Repository-Operational-Boundary-RFC.md` |
-| Promotion Requirements | Framework Governance review, constitutional consistency validation, Human Governance approval, and explicit canonical promotion |
+| Promotion Requirements | Constitutional consistency review by the declared Review Authority, Human Governance approval, and explicit canonical promotion. No downstream artifact is an upstream promotion prerequisite. |
 | Certification Status | Not certified |
 
 ---

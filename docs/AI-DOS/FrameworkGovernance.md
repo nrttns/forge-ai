@@ -8,7 +8,7 @@
 |:---|:---|
 | Identifier | `AI-DOS.GOVERNANCE.POLICY` |
 | Title | AI-DOS Framework Governance |
-| Version | `1.0.0-draft` |
+| Version | `1.0.1-draft` |
 | Status | Draft |
 | Classification | Governance Policy |
 | Document Type | Governance Decision Policy |
@@ -16,8 +16,11 @@
 | Review Authority | Framework Governance |
 | Approval Authority | Human Governance |
 | Normative Authority | Human Governance; `docs/AI-DOS/Architecture/Constitution/A.1-Constitution.md` |
-| Normative References | `docs/AI-DOS/GOVERNANCE.md`; `docs/AI-DOS/Architecture/RFC/Boundary/A.2-AI-DOS-Target-Project-Operational-Boundary-RFC.md`; applicable Meta Models and Standards |
-| Dependencies | A.1 Constitution, A.2 Product / Target Operational Boundary, Governance Atlas navigation |
+| Normative References | `docs/AI-DOS/Architecture/Constitution/A.1-Constitution.md` |
+| Dependencies | Human Governance authority and A.1 Constitution only. |
+| Consumes | A.1 constitutional authority and Human Governance decisions applicable to governance policy. |
+| Informative References | `docs/AI-DOS/GOVERNANCE.md`; `docs/AI-DOS/Architecture/RFC/Boundary/A.2-AI-DOS-Target-Repository-Operational-Boundary-RFC.md`; applicable Meta Models and Standards. These downstream artifacts may be inspected as governed decision subjects or context; they do not govern this policy or become its promotion prerequisites. |
+| Last Updated | 2026-07-24 |
 | Produces | Governance decision rules, lifecycle gates, approval policy, release policy, exception policy, escalation policy |
 | Certification Status | Not certified |
 
@@ -66,7 +69,9 @@ Framework Governance does not own:
 
 ## 3. Authority Basis
 
-Governance decisions consume the canonical architecture graph:
+Framework Governance is governed by Human Governance and the A.1 Constitution. When applying this policy to a downstream artifact, governance decisions may inspect that artifact and its position in the canonical architecture graph as a decision subject or context. Such inspection does not reverse authority direction and does not make a downstream artifact an upstream dependency or promotion prerequisite of this policy.
+
+The canonical architecture graph is:
 
 ```text
 Human Governance
@@ -490,3 +495,4 @@ A governance-policy task is complete when:
 |:---|:---|:---|
 | pre-1.0 | Historical | Earlier policy mixed navigation, boot sequence, Target resolution, frozen areas, and operational compatibility into governance policy. |
 | `1.0.0-draft` | Draft | Rebased as the dedicated AI-DOS governance decision policy aligned with A.1–A.6, Product/Target separation, Distribution governance, Operational Core boundaries, and Forge AI as Product Development Target Project. |
+| `1.0.1-draft` | Draft | Corrected bootstrap dependency direction so only Human Governance and A.1 are upstream; downstream Architecture, Meta, Standards, and navigation artifacts remain governed decision subjects or informative context. |
